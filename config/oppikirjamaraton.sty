@@ -1,0 +1,19 @@
+%--------------------------------------------------
+% Oppikirjamaraton -paketti
+%
+% Janne Cederberg
+%--------------------------------------------------
+
+\ProvidesPackage{config/oppikirjamaraton}
+
+\newcommand{\pikkulaatikko}[1]{
+    \begin{tabular}{|p{\marginparwidth}|}
+        \hline
+    	\footnotesize #1\\ 
+    	\hline
+    \end{tabular}
+}
+
+\newcommand{\sivulaatikko}[1]{
+    \marginpar{\par\pikkulaatikko{#1}}
+}
