@@ -1,2 +1,2 @@
-Kuvat tehd‰‰n TikZill‰.
-Pictures will be made with TikZ.
+Kuvat tehd‰‰n TikZill‰. Valokuvat ovat asia erikseen.
+Pictures will be made with TikZ. This does not include photographs.
