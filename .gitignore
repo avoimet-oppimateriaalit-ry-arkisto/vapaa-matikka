@@ -27,7 +27,6 @@
 *.toc
 *.vrb
 .DS_Store
-kirja.pdf
 *~
 ans1.tex
 book.pdf
