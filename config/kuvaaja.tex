@@ -1,0 +1,31 @@
+% Ympäristö kuvaajan plottaamiseen. Käytä jos riittää jotta on helppo päivittää.
+% Käyttö:
+% \begin{kuvaajapohja}{2}{-3.14}{3.14}{-1.25}{1.25}
+% 	\kuvaaja{sin(x)}{hassu kuvaaja}{red}
+% 	\kuvaaja{cos(x)}{hassumpi kuvaaja}{blue}
+% \end{kuvaajapohja}
+% piirtää punaisen sinin ja sinisen kosinin välille -3.14 .. 3.14,
+% y-koordinaatti välillä -1.25 .. 1.25, sinin nimenä hassu kuvaaja
+% ja kosinin nimenä hassumpi kuvaaja, skaalattuna kertoimella 2.
+
+
+% kuvaajapohja-ympäristön parametrit: skaala minx maxx miny maxy
+\newenvironment{kuvaajapohja}[5]
+{
+	\begin{tikzpicture}
+		\draw[color=black!10!white, step=#1*0.25] (#1*#2, #1*#4) grid (#1*#3, #1*#5);
+		\draw[color=black!40!white] (#1*#2, #1*#4) grid (#1*#3, #1*#5);
+		\draw[arrows=-triangle 45] (#1*#2,0) -- (#1*#3,0);
+		\draw[arrows=-triangle 45] (0,#1*#4) -- (0,#1*#5);
+		\providecommand\kuvaajascale{#1}
+		\providecommand\kuvaajaminx{#2}
+		\providecommand\kuvaajamaxx{#3}
+}
+{
+	\end{tikzpicture}
+}
+
+% kuvaaja-komennon parametrit: funktio(x) nimi väri
+\newcommand{\kuvaaja}[3]{
+\draw[smooth,color=#3,thick,domain=\kuvaajaminx:\kuvaajamaxx,scale=\kuvaajascale,samples=300] plot function{#1} node[right] {#2};
+}
