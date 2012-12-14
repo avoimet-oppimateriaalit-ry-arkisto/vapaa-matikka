@@ -1,18 +1,8 @@
 \chapter{Tulon nollasääntö ja tulon merkkisääntö}
 
-\section{Tulon nollasääntö}
-
-Tulon nollasääntönä tunnetaan seuraava tulos:
-
-\laatikko{
-    \emph{Tulon nollasääntö}\\
-    Tulo on 0, jos ainakin yksi tulon tekijöistä on 0.
-    Jos yksikin tulon tekijöistä on 0, tulo on 0.
-}
-
 \section{Tulon merkkisääntö}
 
-Tulon merkkisäännöksi kutsutaan seuraavaa tulosta:
+Pitkän matematiikan 1. kurssilta muistetaan seuraava sääntö kahden luvun tulolle:
 
 \laatikko{
     \emph{Tulon merkkisääntö kahdelle tulontekijälle}
@@ -20,6 +10,68 @@ Tulon merkkisäännöksi kutsutaan seuraavaa tulosta:
     Jos tulon tekijät ovat erimerkkisiä, tulo on negatiivinen.
 }
 
+\textbf{Esimerkki 1}
+\begin{itemize}
+  \item Esim. $2\cdot 3 = 6$ (Kahden positiivisen luvun tulo on aina positiivinen.)
+  \item Esim. $(-2)\cdot (-3) = 6$ (Kahden negatiivisen luvun tulo on aina positiivinen.)
+  \item Esim. $(-2)\cdot 3 = 2\cdot (-3) = -6$ (Positiivisen ja negatiivisen luvun tulo on aina negatiivinen.)
+\end{itemize}
+
 Tärkeä sovellus merkkisäännölle on, että $x^2 \geq 0$.
 
+\section{Tulon nollasääntö}
+
+Merkkisäännöstä on helppoa huomata, että positiivisten tai negatiivisten
+lukujen tulot ovat aina positiivisia tai negatiivisia. Näin ollen $0$ ei siis koskaan
+voi syntyä tulokseksi positiivisten tai negatiivisten lukujen kertolaskusta. Jos siis kahden luvun
+kertolaskusta saadaan tulokseksi $0$, ei jää mitään muuta vaihtoehtoa kuin että vähintään toinen tekijä on $0$.
+
+\laatikko{
+    \emph{Tulon nollasääntö}\\
+    Tulo on 0, jos ainakin yksi tulon tekijöistä on 0.
+    Jos yksikin tulon tekijöistä on 0, tulo on 0.
+}
+
+Tämä säänön todistus sivuutetaan, mutta kun merkkisäännöt muistetaan, se
+on helppo hahmottaa intuitiivisesti. Tietysti on myös mahdollista, että molemmat
+tekijät ovat nollia, koska $0\cdot 0=0$.
+
+Seuraavassa on pari esimerkkiä tulon nollasäännön soveltamisesta.
+
+\textbf{Esimerkki 1}
+\[(x+5)x=0\]
+Nyt tulon nollasäännö perusteella tiedetään, että $x+5=0$ tai $x=0$. Yhtälön ratkaisu on siis $x=-5$ tai $x=0$.
+
+\textbf{Esimerkki 2}
+\[2(x+5)=0\]
+Nyt tulon nollasäännö perusteella tiedetään, että $2=0$ tai $x+5=0$.
+Koska selvästi $2\neq 0$, jää ainoaksi ratkaisuksi $x+5=0$ eli $x=-5$.
+
+\textbf{Esimerkki 3}
+\[0\cdot(x+5+\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x)=y\]
+Koska toinen tulon tekijöistä on $0$, tiedätään, että myös niiden tulo on $0$.
+Vaikka meillä ei olisi aavistustakaan siitä, mitä suluissa oleva integraalilauseke tarkoittaa,
+pystymme siitä huolimatta päättelemään, että $y=0$
+
+\textbf{Esimerkki 4}
+\[xyzw=0\]
+Nyt tulon nollasäännö perusteella tiedetään, että $x=0$ tai $yzw=0$. Jos $yzw=0$, niin tulon nollasäännön mukaan
+$y=0$ tai $zw=0$. Samoin jos $zw=0$, niin $z=0$ tai $w=0$. Näin voidaan päätellä, että
+vähintään yhden tekijöistä $x$, $y$, $z$ tai $w$ on oltava $0$.
+
 \section{Harjoitustehtäviä}
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt tulon nollasääntöä hyödyntäen.
+    \begin{enumerate}
+        \item $(\smiley{}+1)\cdot (t+1)=0$
+        \item $x(x-5)=0$
+        \item $(2w+2)^2=0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $\smiley{}=-1$ tai $t=-1$
+            \item $x=0$ tai $x=5$
+            \item $(2w+2)^2=0 \Leftrightarrow 2w+2=0 \Leftrightarrow w=-1$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
