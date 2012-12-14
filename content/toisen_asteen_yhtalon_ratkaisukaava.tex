@@ -1,19 +1,40 @@
 \chapter{Toisen asteen yhtälön ratkaisukaava}
+Edellisessä kappaleessa opittiin, että toisen asteen yhtälö voidaan aina ratkaista täydentämällä se neliöksi. Tätä menetelmää ei kuitenkaan yleensä käytetä, sillä menetelmän voi ilmaista valmiina kaavana. Seuraavaksi johdetaan toisen asteen yhtälön ratkaisukaava. \\ \\
 
-Yleensä toisen asteen yhtälöitä ei ratkaista täydentämällä neliöksi, sillä menetelmän voi ilmaista valmiina kaavana.
-Johdetaan seuraavaksi toisen asteen yhtälön ratkaisukaava.
+Lähdetään liikkeelle täydellisestä toisen asteen yhtälöstä $ax^2+bx+c=0$.
+\begin{align*}
+ax^2+bx+c&=0 \ \ \ \ \ &&|| \text{kerrotaan molemmat puolet vakiolla }4a \\
+4a \cdot ax^2+4a \cdot bx + 4a \cdot c&=0 \\
+4a^2x^2+4abx+4ac&=0 \ \ \ \ \ &&|| \text{vähennetään puolittain termi }4ac  \\
+4a^2x^2+4abx&=-4ac
+\end{align*}
+Täydennetään vasen puoli binomin neliöksi
+\begin{align*}
+4a^2x^2+4abx&=-4ac \ \ \ \ \ &&|| \text{lisätään puolittain termi } b^2 \\
+4a^2x^2+4abx+b^2&=b^2-4ac \ \ \ \ \ &&||(2ax+b)^2=4a^2x^2+4abx+b^2 \\
+(2ax+b)^2&=b^2-4ac  \ \ \ \ \ &&||\text{Otetaan puolittain neliöjuuri } \\
+2ax+b&= \pm \sqrt[]{b^2-4ac} \ \ \ \ \ &&||\text{Vähennetään puolittain termi } b \\
+2ax&=-b \pm \sqrt[]{b^2-4ac} \ \ \ \ \ &&||\text{Jaetaan puolittain termillä } 2a \\
+x&= \frac{-b \pm \sqrt[]{b^2-4ac}}{2a} 
+\end{align*}
+Saimme johdettua toisen asteen yhtälön ratkaisukaavan. \\ 
+\laatikko{\textbf{Toisen asteen yhtälön ratkaisukaava}
+\begin{align*}
+ax^2+bx+c=0, \ a \neq 0 \\
+x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a}
+\end{align*}
+}
 
-\begin{enumerate}
-    \item Yleinen toisen asteen yhtälö on muotoa $ax^2+bx+c=0$.
-    \item Kerrotaan yhtälön molemmat puolet vakiolla $4a$: $4a^2x^2+4abx+4ac=0$.
-    \item Siirretään termi $4ac$ toiselle puolelle: $4a^2x^2+4abx=-4ac$.
-    \item Pyritään täydentämään vasen puoli neliöksi.
-    \item Lisätään puolittain termi $b^2$: $4a^2x^2+4abx+b^2=b^2-4ac$.
-    \item Havaitaan vasemmalla puolella neliö: $(2ax+b)^2=b^2-4ac$.
-    \item Otetaan puolittain neliöjuuri: $2ax+b=\pm\sqrt{b^2-4ac}$.
-    \item Vähennetään puolittain termi $b$: $2ax=-b\pm\sqrt{b^2-4ac}$.
-    \item Jaetaan puolittain vakiolla $2a$: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
-\end{enumerate}
+Yleinen toisen asteen yhtälö on muotoa $ax^2+bx+c=0$.
+%Kerrotaan yhtälön molemmat puolet vakiolla $4a$: $4a^2x^2+4abx+4ac=0$.
+%Siirretään termi $4ac$ toiselle puolelle: $4a^2x^2+4abx=-4ac$.
+%Pyritään täydentämään vasen puoli neliöksi.
+%Lisätään puolittain termi $b^2$: $4a^2x^2+4abx+b^2=b^2-4ac$.
+%Havaitaan vasemmalla puolella neliö: $(2ax+b)^2=b^2-4ac$.
+%Otetaan puolittain neliöjuuri: $2ax+b=\pm\sqrt{b^2-4ac}$.
+%Vähennetään puolittain termi $b$: $2ax=-b\pm\sqrt{b^2-4ac}$.
+%Jaetaan puolittain vakiolla $2a$: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
+
 
 \section{Harjoitustehtäviä}
 
@@ -62,3 +83,4 @@ Johdetaan seuraavaksi toisen asteen yhtälön ratkaisukaava.
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
+
