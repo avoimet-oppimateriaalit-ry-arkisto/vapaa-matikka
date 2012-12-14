@@ -20,6 +20,8 @@
 		\providecommand\kuvaajascale{#1}
 		\providecommand\kuvaajaminx{#2}
 		\providecommand\kuvaajamaxx{#3}
+		\providecommand\kuvaajaminy{#4}
+		\providecommand\kuvaajamaxy{#5}
 }
 {
 	\end{tikzpicture}
@@ -27,5 +29,5 @@
 
 % kuvaaja-komennon parametrit: funktio(x) nimi väri
 \newcommand{\kuvaaja}[3]{
-\draw[smooth,color=#3,thick,domain=\kuvaajaminx:\kuvaajamaxx,scale=\kuvaajascale,samples=300] plot function{#1} node[right] {#2};
+\draw[smooth,color=#3,thick,domain=\kuvaajaminx:\kuvaajamaxx,scale=\kuvaajascale,samples=300] plot function{(#1) < \kuvaajamaxy ? ((#1) > \kuvaajaminy ? (#1) : NaN) : NaN} node[right] {#2};
 }
