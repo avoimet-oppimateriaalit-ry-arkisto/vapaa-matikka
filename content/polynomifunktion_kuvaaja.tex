@@ -9,6 +9,36 @@ $P$ kuvaaja on siis sama asia kuin käyrän $y = P(x)$ kuvaaja.
 \kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{green}
 \end{kuvaajapohja}
 
+\section{Taylorin sarja}
+Eräs mielenkiintoinen ja hyvin tunnettu potenssisarja on Taylorin sarja.
+Se on päättymätön potenssisarja, jolla voidaan aproksimoida muiden funktioiden arvoja.
+
+Yleisesti Taylorin sarjalla saadaan (rajatta derivoituvan) funktion $f$ arvo pisteessä $x_0$:
+
+\begin{align*}
+	f(x_0) = \sum\limits_{n=0}^\infty a_n(x-x_0)^n
+\end{align*}
+
+missä
+
+\begin{align*}
+a_n = \frac{f^n(x_0)}{n!}
+\end{align*}
+
+Koska sarja on äärettömän pitkä, sarjan arvoja edelleen arvioidaan Taylorin polynomilla, joka on muotoa
+
+\begin{align*}
+	P_k(x) = \sum\limits_{n=0}^k a_k(x-x_0)^k
+\end{align*}
+
+Polynomin avulla voidaan laskea esimerkiksi likiarvo funktiolle
+$(1-x)^-1 = \frac{1}{1-x}$ pisteen a ympäristössä:
+
+\begin{align*}
+	\frac{1}{1-x} \approx \frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} + \frac{(x-a)^3}{(1-a)^4} ...
+\end{align*}
+
+
 \section{Harjoitustehtäviä}
 \begin{tehtava}
 	Piirrä polynomien kuvaajat.
@@ -18,7 +48,7 @@ $P$ kuvaaja on siis sama asia kuin käyrän $y = P(x)$ kuvaaja.
 		\item $x^2+x-2$
 		\item $x^3-x+3$
 	\end{enumerate}
-	
+
 	\begin{vastaus}
 		\todo[inline]{laitetaanko piirtotehtäviin vastaukset tänne}
 	\end{vastaus}
