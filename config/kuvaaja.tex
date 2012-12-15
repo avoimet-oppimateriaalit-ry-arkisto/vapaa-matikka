@@ -17,11 +17,11 @@
 		\draw[color=black!40!white, step=#1] (#1*#2, #1*#4) grid (#1*#3, #1*#5);
 		\draw[arrows=-triangle 45] (#1*#2,0) -- (#1*#3,0);
 		\draw[arrows=-triangle 45] (0,#1*#4) -- (0,#1*#5);
-		\providecommand\kuvaajascale{#1}
-		\providecommand\kuvaajaminx{#2}
-		\providecommand\kuvaajamaxx{#3}
-		\providecommand\kuvaajaminy{#4}
-		\providecommand\kuvaajamaxy{#5}
+		\newcommand\kuvaajascale{#1}
+		\newcommand\kuvaajaminx{#2}
+		\newcommand\kuvaajamaxx{#3}
+		\newcommand\kuvaajaminy{#4}
+		\newcommand\kuvaajamaxy{#5}
 }
 {
 	\end{tikzpicture}

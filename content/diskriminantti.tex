@@ -1,5 +1,21 @@
 \chapter{Diskriminantti}
+\begin{esimerkki}
+Ratkaise toisen asteen yhtälö $3x^2-5x+10=0$.
 
+\begin{align*}
+\underbrace{3}_{=a}x^2\underbrace{-5}_{=b}x+\underbrace{10}_{=c}=0
+\end{align*}
+Sijoitetaan vakiot $a=3$, $b=-5$ ja $c=10$ toisen asteen yhtälön ratkaisukaavaan $x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a}$. 
+\begin{align*}
+x=\frac{-(-5) \pm \sqrt[]{(-5)^2-4\cdot 3 \cdot 10}}{2 \cdot 3} \\
+x=-\frac{5 \pm \sqrt[]{25-120}}{6}
+\end{align*}
+Koska juurrettava on negatiivinen 
+\begin{align*}
+b^2-4ac=(-5)^2-4 \cdot 3 \cdot 10=25-120=-95<0
+\end{align*}
+niin toisen asteen yhtälöllä ei ole ratkaisuja.
+\end{esimerkki}
 %
 %Marginaaliin tai kuvaksi 2. asteen yhtälön ratkaisukaava (tai tekstin sekaan)
 %
@@ -15,7 +31,7 @@ Jos $D=0$, on tasan yksi ratkaisu.
 Jos $D>0$, on 2 ratkaisua.
 \end{itemize}
 }
-
+\missingfigure{kuvaajat eri tapauksista}
 \begin{esimerkki}
 Selvitä onko yhtälöllä $x^2+x+2=0$ ratkaisuja.
 
@@ -43,3 +59,28 @@ Yhtälöllä on täsmälleen yksi ratkaisu, jos $a=-6$ tai $a=6$.
 
 
 \section{Harjoitustehtäviä}
+
+\begin{tehtava}
+	Kuinka monta ratkaisua yhtälöllä $5x^2+4x-10$ on?
+	\begin{vastaus}
+		$D=4^2-4\cdot 5 \cdot (-10)>0$, joten kaksi.
+	\end{vastaus}
+\end{tehtava}
+\begin{tehtava}
+	Kuinka monta reaalijuurta yhtälöllä $9x^2+12x-4$ on?
+	\begin{vastaus}
+		$D=12^2-4 \cdot 9 \cdot (-4) >0$, joten kaksi.
+	\end{vastaus}
+\end{tehtava}
+\begin{tehtava}
+	Millä vakion $k$ arvoilla yhtälöllä $-x^2-x-k$ ei ole ratkaisua?
+	\begin{vastaus}
+		Pitää olla $D=(-1)^2-4 \cdot (-1) \cdot (-k)<0$. Siis $k>\frac{1}{4}$.
+	\end{vastaus}
+\begin{tehtava}
+	Millä vakion $t$ arvoilla yhtälöllä $6x^2+2tx+2t=0$ on kaksoisjuuri?
+	\begin{vastaus}
+		Jos kaksoisjuuri, niin pitää päteä $D=4t^2-48t>0$. Joka toteutuu, kun $-12 < t < 0$. 
+	\end{vastaus}
+\end{tehtava}
+\end{tehtava}

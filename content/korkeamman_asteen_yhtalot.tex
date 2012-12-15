@@ -1,5 +1,16 @@
 \chapter{Korkeamman asteen yhtälöt}
 
+Kun polynomiyhtälön aste on suurempi kuin kaksi, yhtälöä kutsutaan korkeamman asteen yhtälöksi. Sovelluksissa näitäkin tarvitsee ratkaista usein.
+
+Kolmannen ja neljännen asteen yhtälöille keksittiin ratkaisukaava 1500-luvulla, mutta
+ne ovat kovin monimutkaisia verrattuna toisen asteen yhtälön ratkaisukaavaan. 
+Vuonna 1823 Niels Abel osoitti, ettei viidennen tai sitä korkeamman asteen yhtälöille ole olemassa ratkaisukaavoja lainkaan.
+
+Tyypillisesti korkeamman asteen yhtälöt ratkaistaan numeerisesti, eli likimääräisesti tietokoneen avulla. (Myös 3. ja 4. asteen yhtälöt ratkaistaan numeerisesti, koska ratkaisukaavat ovat niin monimutkaisia.) Numeerisista menetelmistä kerrotaan lisää kurssissa 12.
+
+Tässä luvussa
+käsitellään joitakin korkeamman asteen yhtälön erikoistapauksia, jotka ratkeavat käsin. 
+
 \section{Sijoituksen avulla ratkeavat yhtälöt}
 
 Malliesimerkki sijoituksen avulla ratkeavasta yhtälöstä on ns. bikvadraattinen yhtälö.
@@ -37,17 +48,17 @@ Joillakin yhtälöillä saattaa olla muuttuja tai jokin muuttujan potenssi yhtä
 
 \begin{tehtava}
     Ratkaise yhtälöt.
-    \begin{enumerate}
+    \begin{enumerate}[a)]
         \item $x^4 - 16 = 0$
         \item $2x^4 = 8x^2$
-        \item $x^6 - 2x^3 = -3$
+        \item $x^6 - 2x^3 = 3$
         \item $x^{100} - 2x^{50} + 1 = 0$
     \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
-            \item $x = \pm3$
-            \item $x= 0 tai x=\pm2$
-            \item $x = \sqrt[3]{3} tai x= -1$
+        \begin{enumerate}[a)]
+            \item $x = \pm2$
+            \item $x = 0$ tai $x=\pm2$
+            \item $x = \sqrt[3]{3}$ tai $x= -1$
             \item $x = \pm1$
         \end{enumerate}
     \end{vastaus}
@@ -55,17 +66,17 @@ Joillakin yhtälöillä saattaa olla muuttuja tai jokin muuttujan potenssi yhtä
 
 \begin{tehtava}
     Ratkaise yhtälöt.
-    \begin{enumerate}
+    \begin{enumerate}[a)]
         \item $x^4 + 7x^3 = 0$
         \item $2x^3 - 16x^2 + 32x = 0$
         \item $x^6 + 6x^5 = -9x^4$
         \item $x^3 - 2x^5 = 0$      
     \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
+        \begin{enumerate}[a)]
         	\item $x = 0$ tai $x = -7$
         	\item $x = 0$ tai $x = 4$
-        	\item $x = 0$ tai $x = 3$
+        	\item $x = 0$ tai $x = -3$
             \item $x = 0$ tai $x = \pm\dfrac{1}{\sqrt{2}}$
         \end{enumerate}
     \end{vastaus}
@@ -73,14 +84,35 @@ Joillakin yhtälöillä saattaa olla muuttuja tai jokin muuttujan potenssi yhtä
 
 \begin{tehtava}
     Ratkaise yhtälöt.
-    \begin{enumerate}
-        \item $x^5 + 2x^3 + x = 0$
-        \item $x^8 - 4x^4 = 5x^6$       
+    \begin{enumerate}[a)]
+        \item $x^5 - 2x^3 + x = 0$
+        \item $x^8 + 4x^4 = 5x^6$       
     \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
-        	\item $x = 0$ tai $x = -1$
+        \begin{enumerate}[a)]
+        	\item $x = 0$ tai $x = \pm1$
         	\item $x = 0$ tai $x = \pm1$ tai $x = \pm2$
         \end{enumerate}
     \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Ratkaise yhtälö $x^{627} - 6x^{514} + 5x^{401} = 0$.
+	\begin{vastaus}
+		$x = 0$, $x = 1$ tai $x = \sqrt[113]{5}$
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	(K02/T2b) Ratkaise yhtälö $e^{x^3+4x^2+1}=1$
+	\begin{vastaus}
+	$x=0$ tai $x=-2 + \sqrt[]{3}$ tai $x=-2 - \sqrt[]{3}$
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	$[ \star ]$ Ratkaise yhtälö $2^x-1=\frac{12}{2^x}$
+	\begin{vastaus}
+	$x=2$
+	\end{vastaus}
 \end{tehtava}

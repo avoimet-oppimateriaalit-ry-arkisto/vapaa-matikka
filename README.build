@@ -1,0 +1,4 @@
+Varmista, että sinulla on 'gnuplot' asennettuna (esim. which gnuplot)
+
+sitten vain 'make' tai suoraan 'pdflatex book.tex'. 
+

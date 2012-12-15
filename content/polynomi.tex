@@ -1,12 +1,17 @@
 \chapter{Polynomi}
 Usein hyödyllinen lauseketyyppi on sellainen joka koostuu muuttujan $x$ ja
 vakioiden yhteen- ja kertolaskuista. Tällaisia lausekkeita kutsutaan muuttujan
-$x$ polynomeiksi. Esimerkiksi seuraavat lausekkeet ovat polynomeja:
+$x$ polynomeiksi. Esimerkiksi seuraavat lausekkeet ovat muuttujan $x$ polynomeja:
 \begin{itemize}
 \item $24x + 5 - 6x$
 \item $5x^2+7$
 \item $x^4-6x^3+2x^2-x$
 \end{itemize}
+
+Yleisin muuttujakirjain on $x$, mutta myös muita kirjaimia voidaan käyttää
+muuttujina. Esimerkiksi $2y^5+y^4-1$ on muuttujan $y$ polynomi ja
+$-\epsilon^3+2\epsilon^2-1$ on muuttujan $\epsilon$ polynomi.
+
 
 \laatikko{
 Polynomien käsitteitä
@@ -16,24 +21,20 @@ Polynomien käsitteitä
 \item Termin \emph{aste} on sen muuttujan eksponentti. Esimerkiksi termin 
 	$2x^4$ aste on 4.
 \item Termin aste voi myös olla 0. Tällaista termiä kutsutaan \emph{vakiotermiksi}.
-	Esimerkiksi $-7x^0$ voidaan kirjoittaa $-7$, sillä $x^0 = 1$.
+%	Esimerkiksi $-7x^0$ voidaan kirjoittaa $-7$, sillä $x^0 = 1$. %vältetään tapaus 0^0
 \item \emph{Polynomi} on termien summa.
-\item Polynomin \emph{asteluku} on sen termien suurin asteluku. Esimerkiksi $2x^4 + 3x - 7$ on siis 4. asteen polynomi.
+\item Polynomin \emph{asteluku} on sen termien suurin asteluku. Esimerkiksi $2x^4 + 3x - 7$ on 4. asteen polynomi.
 \item Yksitermistä polynomia kutsutaan myös \emph{monomiksi}.
 \item Kaksitermistä polynomia kutsutaan myös \emph{binomiksi}.
-\todo[inline]{Onko pakko olla samanmuotoisia termejä tai trinomeja jne?}
+\item Polynomit ovat samat, mikäli ne voidaan sieventää toisikseen. Siis
+esimerkiksi polynomit $x+3x$ ja $4x$ ovat samat polynomit esitettynä
+erilaisilla lausekkeilla.
 \end{itemize}
-}
-
-\todo{
-	Miten selitetään että polynomit $x+3x$ ja $4x$ ovat samoja vaikka niissä on
-	eri määrä termejä ja apua? Halutaanko määritellä polynomit suoraa tietyssä
-	esitystavassa?
 }
 
 Polynomeja merkitään usein kirjaimilla $P$, $Q$, \ldots. Merkintä $P(a)$
 tarkoittaa polynomin arvoa kun muuttujan paikalle sijoitetaan $a$. Esimerkiksi
-jos polynomi $P$ on muotoa $P(x) = 5x^2-3x+2$,
+jos polynomi $P$ on $P(x) = 5x^2-3x+2$,
 \begin{align*}
 &P(-3) = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56 \\
 &P(-1) = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
@@ -86,23 +87,38 @@ missä $a_0, a_1, \ldots, a_n$ ovat vakioita ja $a_n \neq 0$.
 	\end{vastaus}
 \end{tehtava}
 
-\begin{tehtava}
-	Sievennä.
-	\begin{enumerate}[a)]
-		\item $2 + x$
-		\item $3x - 1 + 2x^2$
-		\item $x^3 - \dfrac{2}{3}x^5 + 2x^4 $
-		\item $1 - 15x + \pi x^{10} + 2$
-		\item $-2x + 3 + 5x - 5x^2 - 5$
-	\end{enumerate}
+% Hämäävä tehtävä
+% \begin{tehtava}
+% 	Sievennä.
+% 	\begin{enumerate}[a)]
+% 		\item $2 + x$
+% 		\item $3x - 1 + 2x^2$
+% 		\item $x^3 - \dfrac{2}{3}x^5 + 2x^4 $
+% 		\item $1 - 15x + \pi x^{10} + 2$
+% 		\item $-2x + 3 + 5x - 5x^2 - 5$
+% 	\end{enumerate}
+% 
+% 	\begin{vastaus}
+% 		\begin{enumerate}[a)]
+% 			\item $x + 2$
+% 			\item $2x^2 + 3x - 1$
+% 			\item $-\dfrac{2}{3}x^5 + 2x^4 + x^3 $
+% 			\item $\pi x^10 - 15x + 3$
+% 			\item $-5x^2 + 3x - 2$
+% 		\end{enumerate}
+% 	\end{vastaus}
+% \end{tehtava}
 
+\begin{tehtava}
+	Mitkä seuraavista polynomilausekkeista esittävät samaa polynomia kuin
+	$x^3+2x+1$?
+	\begin{enumerate}[a)]
+		\item $2x+x^3+1$
+		\item $x^2+2x+1$
+		\item $x+2x^3+1$
+		\item $15+x^4+2x+x^3-x^4-14$
+	\end{enumerate}
 	\begin{vastaus}
-		\begin{enumerate}[a)]
-			\item $x + 2$
-			\item $2x^2 + 3x - 1$
-			\item $-\dfrac{2}{3}x^5 + 2x^4 + x^3 $
-			\item $\pi x^10 - 15x + 3$
-			\item $-5x^2 + 3x - 2$
-		\end{enumerate}
+		a) ja d)
 	\end{vastaus}
 \end{tehtava}

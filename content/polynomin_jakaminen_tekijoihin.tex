@@ -27,4 +27,158 @@ voimme helposti päätellä, että polynomi saa arvon $0$ jos ja vain jos $x-3=0
 Polynomin jakaminen tekijöihin on siis varsin hyödyllistä. Tekijöihin jakaminen ei aina ole helppoa,
 mutta tässä luvussa käsitellään tapoja, joilla tekijöihin jakaminen monissa tilanteissa onnistuu.
 
+\subsection*{Polynomien jakolause}
+
+Polynomin $P(x)=(x-2)\cdot(x-3)$ nollakohdat ovat tulon nollasäännön nojalla $x=2$ ja $x=3$. Nollakohdat siis näkee suoraan tekijöihin jaetusta polynomista. Tämä tekijöiden ja nollakohtien välinen yhteys toimii myös toisin päin: nollakohtien avulla voi selvittää tekijät. Jos luku $b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.
+
+%Esimerkiksi polynomin $P(x)=x²-3x+2$ nollakohdat ovat
+%\begin{align*}
+%x^2-3x+2&=0 \\
+%x&=\frac{-(-3) \pm \sqrt[]{(-3)^2-4 \cdot 1 \cdot 2}}{2 \cdot 1} \\
+%x&=\frac{3 \pm \sqrt[]{9-8}}{2} \\
+%x&=\frac{3 \pm 1}{2} \\
+%x&=1 \textrm{ tai } x = 2.
+%\end{align*}
+%Tämän perusteella voidaan päätellä, että $x-1$ ja $x-2$ ovat polynomin $P(x)$ tekijöitä. Toden %totta: sulut auki kertomalla voidaan tarkistaa, että $(x-1)(x-2)=x^2-3x+2$.
+
+\laatikko{\textbf{Polynomien jakolause} \\
+Jos $x=b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.}
+
+\textbf{Todistus.} Jakolauseen todistus perustuu polynomien jakoyhtälöön, josta tarkemmin kurssilla 12. Vaikka lauseke $x-b$ ei olisi polynomin $P(x)$ tekijä, niin lähelle päästään: jos polynomin $Q(x)$ kertoimet valitaan sopivasti, voidaan kirjoittaa
+\begin{align*}
+P(x)&=(x-b)Q(x)+r,
+\end{align*}
+missä $r$ on jokin vakio, niin sanottu jakojäännös. Jos nyt $b$ on polynomin $P$ nollakohta, sijoitetaan edelliseen yhtälöön $x=b$, jolloin
+\begin{align*}
+P(b)&=(b-b)Q(b)+r \quad || \ \ P(b)=0 \\
+0&=0+r,
+\end{align*}
+eli $r=0$, joten $x-b$ on polynomin $P(x)$ tekijä. Jos siis $x=b$ on polynomin $P(x)$ nollakohta, $x-b$ on sen tekijä. $_\Box$
+
+\textbf{Esimerkki.} \\
+Jaa polynomi $-2x^2-x+1$ tekijöihinsä.\\
+Ratkaistaan ensin nollakohdat:
+\begin{align*}
+-2x^2-x+1&=0 \\
+x&=\frac{-(-1) \pm \sqrt[]{(-1)^2-4 \cdot (-2) \cdot 1}}{2 \cdot (-2)} \\
+x&=\frac{1 \pm \sqrt[]{1+8}}{-4} \\
+x&=\frac{1 \pm 3}{-4} \\
+x&=-1 \textrm{ tai } x = \frac{1}{2}.
+\end{align*}
+Jakolauseen mukaan $(x-\frac{1}{2})$ ja $(x-(-1))$ ovat kyseisen polynomin tekijöitä.
+Ne keskenään kertomalla ei kuitenkaan saada oikeaa tulosta:
+$$\left(x-\frac{1}{2}\right)(x-(-1))=\left(x-\frac{1}{2}\right)(x+1)=x^2+\frac{1}{2}x-\frac{1}{2}.$$
+Puuttuu vielä korkeimman asteen termin kerroin $-2$. Sillä kertomalla saadaan alkuperäinen polynomi:
+$-2(x^2+\frac{1}{2}x-\frac{1}{2})=-2x^2-x+1$.
+
+Vastaus: $-2x^2-x+1 = -2(x-\frac{1}{2})(x+1)$.
+
+\subsection*{Toisen asteen polynomin tekijöihin jako}
+
+Polynomien jakolauseen mukaan
+
+\laatikko{Jos toisen asteen polynomin $ax^2+bx+c$ nollakohdat ovat $x_1$ ja $x_2$,
+$ax^2+bx+c=a(x-x_1)(x-x_2)$.}
+Huomaa, että kerroin $a$ on edellisessä yhtälössä kummallakin puolella sama.
+(Muuten korkeimman asteen termit eivät täsmää.)
+
+\textbf{Esimerkki.}
+Jaetaan tekijöihin $P(x)=2x^2 + 4x-30$. \\
+Ratkaistaan nollakohdat yhtälöstä $$2x^2 + 4x-30=0$$ toisen asteen yhtälön ratkaisukaavalla.
+Nollakohdat ovat $x_1=3$ ja $x_2=-5$. Saadaan siis
+$$P(x)= 2(x-3)(x-(-5)) = 2(x-3)(x+5).$$
+
+\subsubsection*{Kun nollakohtia on vain yksi tai ei lainkaan}
+Jos toisen asteen polynomilla on vain yksi nollakohta, kyseessä on niin sanottu kaksikertainen juuri. Voidaan tulkita, että nollakohdat $x_1$ ja $x_2$ ovat yhtäsuuret. Tällöin tekijöiksi saadaan $a(x-x_1)(x-x_1)=a(x-x_1)^2$.
+
+Esimerkiksi polynomin $P(x)=2x^2-4x+2$ ainoa nollakohta on $x=1$. Polynomi voidaan siis jakaa tekijöihin seuraavasti: \\ $P(x)=2(x-1)(x-1)=2(x-1)^2$. \\
+
+Jos toisen asteen polynomilla ei ole nollakohtia, sitä ei voi jakaa ensimmäisen asteen tekijöihin. (Sillä ensimmäisen asteen tekijällä on aika nollakohta.)
+
+\subsection*{Joitakin yleistyksiä}
+
+Polynomeille voidaan todistaa seuraavat tulokset:
+
+\laatikko{
+\begin{itemize}
+\item Kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
+\item Paritonasteisilla polynomeilla on vähintään yksi nollakohta
+\item $n$. asteen polynomilla on korkeintaan $n$ nollakohtaa
+\end{itemize}}
+Todistetaan näistä viimeinen: \\
+Jos $n$. asteen polynomilla $P$ olisi yli $n$ nollakohtaa, sillä olisi yli $n$ ensimmäisen asteen
+tekijää. Polynomin $P$ aste olisi siis yli $n$, mikä on ristiriita. Nollakohtia on siis
+korkeintaan $n$. $_\Box$
+
+Tämä tulos kertoo paljon siitä, millaisia polynomien kuvaajat voivat olla. 
+
+\textbf{Esimerkki 1.} Kolmannen asteen polynomilla on 1 - 3 nollakohtaa.
+\todo{asemoi esimerkit}
+
+\begin{lukusuora}{-2.5}{3}{3}
+\lukusuorakuvaaja{(x**3-x-1)/2}
+\lukusuorapienipiste{1.32472}{}
+\end{lukusuora}
+\begin{lukusuora}{-2.8}{2.5}{3}
+\lukusuorakuvaaja{(x**3-x+0.3849)/2}
+\lukusuorapienipiste{-1.1547}{}
+\lukusuorapienipiste{0.577028}{}
+\end{lukusuora}
+\begin{lukusuora}{-2}{2}{3}
+\lukusuorakuvaaja{1.4*(x**3-x)}
+\lukusuorapienipiste{-1}{}
+\lukusuorapienipiste{0}{}
+\lukusuorapienipiste{1}{}
+\end{lukusuora}
+
+\textbf{Esimerkki 2.} Neljännen asteen polynomilla on 0 - 4 nollakohtaa.
+
+\begin{lukusuora}{-4}{4}{3}
+\lukusuorakuvaaja{(x**4-5*x**2+12)/14}
+\end{lukusuora}
+\begin{lukusuora}{-4}{4}{3}
+\lukusuorakuvaaja{(x**4-5*x**2+3*x+11.2)/14}
+\lukusuorapienipiste{-1.71394}{}
+\end{lukusuora}
+\begin{lukusuora}{-4}{4}{3}
+\lukusuorakuvaaja{(x**4-5*x**2-3)/14}
+\lukusuorapienipiste{2.354}{}
+\lukusuorapienipiste{-2.354}{}
+\end{lukusuora}
+
+\begin{lukusuora}{-4}{4}{3}
+\lukusuorakuvaaja{(x**4-5*x**2+3*x+1.75842)/14}
+\lukusuorapienipiste{-2.43622}{}
+\lukusuorapienipiste{-0.367327}{}
+\lukusuorapienipiste{1.402}{}
+\end{lukusuora}
+\begin{lukusuora}{-2.8}{2.8}{3}
+\lukusuorakuvaaja{0.6*(x+1.5)*(x+0.5)*(x-0.5)*(x-1.5)}
+\lukusuorapienipiste{1.5}{}
+\lukusuorapienipiste{0.5}{}
+\lukusuorapienipiste{-1.5}{}
+\lukusuorapienipiste{-0.5}{}
+\end{lukusuora}
+
 \section{Harjoitustehtäviä}
+
+\begin{tehtava}
+  Jaa tekijöihin
+  \begin{enumerate}[a)]
+    \item $-10x^2+5x+5$
+    \item $8x^4-12x^2+4x$
+  \end{enumerate}
+
+  \begin{vastaus}
+    \item $(-5)\cdot(2x^2-x-1)$
+    \item $(4x)\cdot(2x^2-3x+1)$
+  \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+  Kolmanen asteen polynomille $P$ pätee $P(-1)=P(2)=P(3)=0$ ja $P(1)=-8$. Ratkaise $P(x)$.
+
+  \begin{vastaus}
+    $P(x)=-2(x+1)(x-2)(x-3)=-2x^3+8x^2-2x-2.$
+  \end{vastaus}
+\end{tehtava}
