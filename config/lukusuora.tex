@@ -1,0 +1,62 @@
+% Ympäristö välien kuvaamiseen lukusuoralla.
+% Käyttö:
+% \begin{lukusuora}{-1}{1}{10}
+% \lukusuoravalisa{0.2}{0.8}{x}{y}
+% \lukusuoravaliaa{-0.5}{-0.3}{a}{b}
+% \end{lukusuora}
+% 
+% luo lukusuoran joka piirretään 10 pituisena, käyttää sisäisesti
+% koordinaatteja -1..1, ja jolla näytetään väli [0.2, 0.8[ ja
+% väli ]-0.5, -0.3[ nimillä [x, y[ ja ]a, b[.
+
+
+
+% lukusuora-ympäristön parametrit:
+% alkux loppux viivanpituus
+\newenvironment{lukusuora}[3]
+{
+	\begin{tikzpicture}
+		\draw[arrows=-triangle 45,line width=0.2mm] (0, 0) -- (#3, 0);
+		\pgfmathsetmacro{\LSax}{#1}
+		\pgfmathsetmacro{\LSdx}{#2-#1}
+		\pgfmathsetmacro{\LSpituus}{#3}
+}
+{
+	\end{tikzpicture}
+}
+
+% lukusuoravali??-komennon parametrit:
+% alkux loppux alkunimi loppunimi
+
+% avoimet ja suljetut välit:
+% lukusuoravaliss [a, b]
+% lukusuoravalisa [a, b[
+% lukusuoravalias ]a, b]
+% lukusuoravaliaa ]a, b[
+
+\newcommand{\lukusuoravaliss}[4]{
+	\lukusuoravali{#1}{#2}{#3}{#4}{black}{black}
+}
+\newcommand{\lukusuoravalisa}[4]{
+	\lukusuoravali{#1}{#2}{#3}{#4}{black}{white}
+}
+\newcommand{\lukusuoravalias}[4]{
+	\lukusuoravali{#1}{#2}{#3}{#4}{white}{black}
+}
+\newcommand{\lukusuoravaliaa}[4]{
+	\lukusuoravali{#1}{#2}{#3}{#4}{white}{white}
+}
+
+\newcommand{\lukusuoravali}[6]{
+	\pgfmathsetmacro{\LSxa}{\LSpituus*(#1-\LSax)/\LSdx}
+	\pgfmathsetmacro{\LSxb}{\LSpituus*(#2-\LSax)/\LSdx}
+	\draw[line width=0.6mm] (\LSxa,0) -- (\LSxb,0);
+	\fill (\LSxa,0) circle (0.1);
+	\fill (\LSxb,0) circle (0.1);
+	\fill[color=#5] (\LSxa,0) circle (0.08);
+	\fill[color=#6] (\LSxb,0) circle (0.08);
+	% Integraalimerkit ovat riittävän korkeita saamaan bounding boxit saman
+	% kokoisiksi.
+	\draw (\LSxa,0) node[above] {\phantom{$\int$}#3\phantom{$\int$}};
+	\draw (\LSxb,0) node[above] {\phantom{$\int$}#4\phantom{$\int$}};
+}
