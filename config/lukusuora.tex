@@ -6,13 +6,16 @@
 % \lukusuoravalisa{0.2}{0.8}{x}{y}
 % \lukusuoravaliaa{-0.5}{-0.3}{a}{b}
 % \lukusuorapiste{0}{$x^2+y^2$}
+% \lukusuoranimi{0.5}{$+$}
+% \lukusuoraalanimi{0.05}{$-$}
 % \end{lukusuora}
 % 
 % luo lukusuoran joka piirretään 10 pituisena, käyttää sisäisesti
 % koordinaatteja -1..1, ja jolla näytetään väli [0.2, 0.8[ ja
 % väli ]-0.5, -0.3[ nimillä [x, y[ ja ]a, b[. Näyttää pisteen
 % 0 nimellä $x^2+y^2$ ja piirtää paraabelin jonka nollakohdat ovat
-% 0.2 ja 0.8 ja huippu 1.
+% 0.2 ja 0.8 ja huippu 1. Lisäksi se laittaa +-merkin suoran yläpuolelle
+% kohtaan 0.5 ja --merkin suoran alapuolelle kohtaan 0.05.
 
 
 
@@ -72,6 +75,20 @@
 	\pgfmathsetmacro{\LSx}{\LSpituus*(#1-\LSax)/\LSdx}
 	\fill (\LSx,0) circle (0.1);
 	\draw (\LSx,0) node[above] {\phantom{$\int$}#2\phantom{$\int$}};
+}
+
+% lukusuoranimi-komennon parametrit:
+% x nimi
+\newcommand{\lukusuoranimi}[2]{
+	\pgfmathsetmacro{\LSx}{\LSpituus*(#1-\LSax)/\LSdx}
+	\draw (\LSx,0) node[above] {\phantom{$\int$}#2\phantom{$\int$}};
+}
+
+% lukusuoraalanimi-komennon parametrit:
+% x nimi
+\newcommand{\lukusuoraalanimi}[2]{
+	\pgfmathsetmacro{\LSx}{\LSpituus*(#1-\LSax)/\LSdx}
+	\draw (\LSx,0) node[below] {\phantom{$\int$}#2\phantom{$\int$}};
 }
 
 % lukusuoraparaabeli-komennon parametrit:
