@@ -8,9 +8,9 @@ Olemme yhtälöiden yhteydessä käyttäneet merkintää = osoittamaan, että ka
 
 \begin{tabular}{ll}
 lukujen välinen yhteys & lausumistapa \\
-$a<b$ &  "$a$ on pienempi kuin $b$"\\
-$a>b$ & "$a$ on suurempi kuin $b$"\\
-$a \leq b$ & "$a$ on pienempi tai yhtä suuri kuin $b$" \\
+$a<b$ &  "$a$ on pienempi kuin $b$"\\ 
+$a>b$ & "$a$ on suurempi kuin $b$"\\ 
+$a \leq b$ & "$a$ on pienempi tai yhtä suuri kuin $b$" \\ 
 $a \geq b$ & "$a$ on suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
 
@@ -18,19 +18,27 @@ Tutut yhteydet voidaan aina esittää myös kielteisessä muodossa:
 
 \begin{tabular}{ll}
 $a\neq b$ & "$a$ ei ole yhtä suuri kuin $b$" \\
-$a \nless b$ &  "$a$ ei ole on pienempi kuin $b$"\\
-$a \ngtr b$ & "$a$ ei ole suurempi kuin $b$"\\
-$a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
+$a \nless b$ &  "$a$ ei ole pienempi kuin $b$"\\ 
+$a \ngtr b$ & "$a$ ei ole suurempi kuin $b$"\\ 
+$a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\ 
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
-\end{tabular}
+\end{tabular} 
 
 Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita.
 
 \section{Epäyhtälöiden teoriaa}
 
-Yhtälöt voivat olla aina tosia (esimerkiksi $\pi=\pi$), joskus tosia (yhtälö $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$) tai aina epätosia (esimerkiksi $-1=3$). Yhtälön totuusarvo säilyy aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus– toisin sanoen käytetään samaa funktiota.
+Yhtälö voi olla:
 
-Myös jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan epäyhtälöä $2<3$, joka tiedetään todeksi. Mitä epäyhtälön puolille voidaan tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy? Testaatan ensin peruslaskutoimituksia:
+\begin{enumerate}
+\item Aina tosi. Tällöin yhtälö esittää väitteen, joka pitää aina paikkansa jokaisessa tilanteessa. Esimerkiksi $\pi=\pi$ on aina tosi.
+\item Joskus tosi. Yhtälö pätee vain tietyissä tilanteissa, yleensä vain tietyillä jonkun muuttujan arvoilla. Esimerkiksi $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$.
+\item Aina epätosi. Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ on ain epätosi.
+\end{enumerate}
+
+Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota.
+
+Myös jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy. Testataan ensin peruslaskutoimituksia:
 
 Lisätään molemmille puolille jokin positiivinen luku, 4
 
@@ -94,14 +102,10 @@ jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
 
 Yleisesti pätee seuraava
 	Kasvava/vähenevä funktio
+	
+	\missingfigure{Funktion f(x)=2x kuvaaja}
+	\missingfigure{Funktion f(x)=-x+1 kuvaaja}
 
-    \begin{kuvaajapohja}{2}{-1}{1}{-1}{1}
-      \kuvaaja{2*x}{$f(x) = 2x$}{red}
-    \end{kuvaajapohja}
-
-    \begin{kuvaajapohja}{0.5}{-4}{4}{-4}{4}
-      \kuvaaja{x+1}{$f(x) = x+1$}{red}
-    \end{kuvaajapohja}
 
 
 Potenssiin korottamisen, juurenottoon ja muiden funktioiden käyttöön epäyhtälöiden ratkaisemisessa palataan myöhemmissä luvuissa ja myöhemmillä kursseilla.
