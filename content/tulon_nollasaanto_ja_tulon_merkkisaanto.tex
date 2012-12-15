@@ -20,47 +20,50 @@ Pitkän matematiikan 1. kurssilta muistetaan seuraava sääntö kahden luvun tul
 \end{itemize}
 \end{esimerkki}
 
+Useasti käytetty merkkisäännöistä saatava tulos on $x^2 \geq 0$.
+
 \section{Tulon nollasääntö}
 
-Merkkisäännöstä on helppoa huomata, että positiivisten tai negatiivisten
-lukujen tulot ovat aina positiivisia tai negatiivisia. Näin ollen $0$ ei siis koskaan
-voi syntyä tulokseksi positiivisten tai negatiivisten lukujen kertolaskusta. Jos siis kahden luvun
-kertolaskusta saadaan tulokseksi $0$, ei jää mitään muuta vaihtoehtoa kuin että vähintään toinen tekijä on $0$.
+Tulon merkkisäännöstä seuraa, että positiivisten ja negatiivisten lukujen tulo on aina positiivista tai negatiivista, ei koskaan nolla.
+
+Jos siis tulo on 0, tulon tekijöistä ainakin yhden täytyy olla 0. Toisaalta
+$0\cdot x = 0$ kaikilla reaaliluvuilla $x$. \todo{Lisää todistus liiteeksi.}
+Nämä tiedot yhdistämällä saadaan tulon nollasääntö:
+
+%Merkkisäännöstä on helppoa huomata, että positiivisten tai negatiivisten
+%lukujen tulot ovat aina positiivisia tai negatiivisia. Näin ollen $0$ ei siis koskaan
+%voi syntyä tulokseksi positiivisten tai negatiivisten lukujen kertolaskusta. Jos siis kahden %luvun
+%kertolaskusta saadaan tulokseksi $0$, ei jää mitään muuta vaihtoehtoa kuin että vähintään %toinen tekijä on $0$.
 
 \laatikko{
     \emph{Tulon nollasääntö}
     \begin{itemize}
-   		\item Tulo on 0, jos ainakin yksi tulon tekijöistä on 0.
-	    \item Jos yksikin tulon tekijöistä on 0, tulo on 0.    
+   		\item Jos jokin tulon tekijöistä on 0, tulo on 0.    
+   		\item Jos tulo on 0, ainakin yksi tulon tekijöistä on 0.
     \end{itemize}
-
 }
 
-Tämä säänön todistus sivuutetaan, mutta kun merkkisäännöt muistetaan, se
-on helppo hahmottaa intuitiivisesti. Tietysti on myös mahdollista, että molemmat
-tekijät ovat nollia, koska $0\cdot 0=0$.
+Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
 
-Useasti käytetty merkkisäännöistä saatava tulos on $x^2 \geq 0$.
-
-Seuraavassa on pari esimerkkiä tulon nollasäännön soveltamisesta.
-
-\begin{esimerkki}
-	\[(x+5)x=0\]
-	Nyt tulon nollasäännö perusteella tiedetään, että $x+5=0$ tai $x=0$.
-	Yhtälön ratkaisu on siis $x=-5$ tai $x=0$.
+\begin{esimerkki} Ratkaistaan yhtälö $(x+5) \cdot x =0 $.
+	\begin{align*}
+	(x+5)\cdot x &=0 \quad || \text{ tulon nollasääntö} \\
+	x +5= 0 \text{ tai } x &=0 \\
+	x= -5 \text{ tai } x &=0.
+	\end{align*}
+	Ratkaisuja oli siis kaksi.
 \end{esimerkki}
 
-\begin{esimerkki}
-	\[2(x+5)=0\]
-	Nyt tulon nollasäännö perusteella tiedetään, että $2=0$ tai $x+5=0$.
-	Koska selvästi $2\neq 0$, jää ainoaksi ratkaisuksi $x+5=0$ eli $x=-5$.
-\end{esimerkki}
+%\begin{esimerkki}
+%	\[2(x+5)=0\]
+%	Nyt tulon nollasäännön perusteella tiedetään, että $2=0$ tai $x+5=0$.
+%	Koska selvästi $2\neq 0$, jää ainoaksi ratkaisuksi $x+5=0$ eli $x=-5$.
+%\end{esimerkki}
 
-\begin{esimerkki}
-	\[0\cdot(x+5+\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x)=y\]
+\begin{esimerkki} Ratkaistaan $y$ yhtälöstä
+	\[x^{1+a^2}\cdot 0\cdot\left(x+5+\sqrt[3]{\frac{x}{1+2^a}}\right)=y\]
 	Koska toinen tulon tekijöistä on $0$, tiedätään, että myös niiden tulo on $0$.
-	Vaikka meillä ei olisi aavistustakaan siitä, mitä suluissa oleva integraalilauseke tarkoittaa,
-	pystymme siitä huolimatta päättelemään, että $y=0$
+	Siis $y=0$.
 \end{esimerkki}
 
 \todo{Esitetäänkö tulon nollasääntö ainoastaan kahdelle tulon tekijälle vai usemmalle kuten nyt. Ehdotan nykyisen säännön jättämistä. Seuraava esimerkki vaikuttaa siltä kuin tiedettäisiin ainoastaan sääntö 2 tekijälle. Annetaanko sen kuitenkin olla noin?}
