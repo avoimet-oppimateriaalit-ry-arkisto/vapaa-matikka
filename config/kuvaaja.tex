@@ -29,5 +29,11 @@
 
 % kuvaaja-komennon parametrit: funktio(x) nimi väri
 \newcommand{\kuvaaja}[3]{
-\draw[smooth,color=#3,thick,domain=\kuvaajaminx:\kuvaajamaxx,scale=\kuvaajascale,samples=300] plot function{(#1) < \kuvaajamaxy ? ((#1) > \kuvaajaminy ? (#1) : NaN) : NaN} node[right] {#2};
+	\draw[smooth,color=#3,thick,domain=\kuvaajaminx:\kuvaajamaxx,scale=\kuvaajascale,samples=300] plot function{(#1) < \kuvaajamaxy ? ((#1) > \kuvaajaminy ? (#1) : NaN) : NaN} node[right] {#2};
+}
+
+% Piirtää pisteen kuvaajaan. Parametrit:
+% x y
+\newcommand{\kuvaajapiste}[2]{
+	\fill (#1, #2) circle (0.07);
 }

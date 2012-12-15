@@ -8,21 +8,25 @@ Olemme yhtälöiden yhteydessä käyttäneet merkintää = osoittamaan, että ka
 
 \begin{tabular}{ll}
 lukujen välinen yhteys & lausumistapa \\
-$a<b$ &  "$a$ on pienempi kuin $b$"\\ 
-$a>b$ & "$a$ on suurempi kuin $b$"\\ 
-$a \leq b$ & "$a$ on pienempi tai yhtä suuri kuin $b$" \\ 
+$a<b$ &  "$a$ on pienempi kuin $b$"\\
+$a>b$ & "$a$ on suurempi kuin $b$"\\
+$a \leq b$ & "$a$ on pienempi tai yhtä suuri kuin $b$" \\
 $a \geq b$ & "$a$ on suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
+
+Luonnollisen kielen ilmaisu "suurempi tai yhtä suuri kuin" voidaan myös ilmaista
+"vähintään yhtä suuri kuin" ja vastaavasti "pienempi tai yhtä suuri kuin"
+voidaan sanoa "korkeintaan yhtä suuri kuin".
 
 Tutut yhteydet voidaan aina esittää myös kielteisessä muodossa:
 
 \begin{tabular}{ll}
 $a\neq b$ & "$a$ ei ole yhtä suuri kuin $b$" \\
-$a \nless b$ &  "$a$ ei ole pienempi kuin $b$"\\ 
-$a \ngtr b$ & "$a$ ei ole suurempi kuin $b$"\\ 
-$a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\ 
+$a \nless b$ &  "$a$ ei ole pienempi kuin $b$"\\
+$a \ngtr b$ & "$a$ ei ole suurempi kuin $b$"\\
+$a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
-\end{tabular} 
+\end{tabular}
 
 Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita.
 
@@ -33,12 +37,18 @@ Yhtälö voi olla:
 \begin{enumerate}
 \item Aina tosi. Tällöin yhtälö esittää väitteen, joka pitää aina paikkansa jokaisessa tilanteessa. Esimerkiksi $\pi=\pi$ on aina tosi.
 \item Joskus tosi. Yhtälö pätee vain tietyissä tilanteissa, yleensä vain tietyillä jonkun muuttujan arvoilla. Esimerkiksi $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$.
-\item Aina epätosi. Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ on ain epätosi.
+\item Aina epätosi. Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ on aina epätosi.
 \end{enumerate}
 
-Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota.
+Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaa, että epäyhtälöissä sama ei täysin päde, koska esimerkiksi $-1$:llä kertominen edellyttää epäyhtälön suuruusvertailumerkin kääntämistä.
 
-Myös jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy. Testataan ensin peruslaskutoimituksia:
+Intuitiivisesti tämä on ymmärrettävissä helposti vaaka-esimerkin avulla: jos
+vaaka on tasapainossa, niin se pysyy edelleen tasapainossa, jos molemmille
+puolille laitetaan samansuuruinen paino, tai poistetaan molemmilta puolilta
+yhtä paljon. Tämä siis täysin riippumatta siitä, kuinka erilaisia eri
+vaakakupeissa olevat kuormat ovat, kunhan ne painavat yhtä paljon.
+
+Jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy. Testataan ensin peruslaskutoimituksia:
 
 Lisätään molemmille puolille jokin positiivinen luku, 4
 
@@ -62,12 +72,15 @@ kertominen positiivisella luvulla
 -60&>-75
 \end{align*}
 
-Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö säilyy aivan kuin yhtälökin, kun sama toimitus tehdään
-epäyhtälön kummallekin puolelle. Viimeisessä vaiheessa huomataan kuitenkin, että negatiivisella luvulla kerrottaessa
-epähtälön keskellä oleva merkki pitää kääntää toisin päin, että epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat
-kerrotaan $-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhälö kääntyykin toisin päin.
+Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö säilyy aivan kuin
+yhtälökin, kun sama toimitus tehdään epäyhtälön kummallekin puolelle.
+Viimeisessä vaiheessa huomataan kuitenkin, että negatiivisella luvulla
+kerrottaessa epähtälön keskellä oleva merkki pitää kääntää toisin päin, että
+epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat kerrotaan
+$-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhälö kääntyykin toisin päin.
 
 Esimerkki
+
 Toteuttaako luku epäyhtälön...
 
 \section{Reaalilukuvälit}
@@ -102,7 +115,7 @@ jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
 
 Yleisesti pätee seuraava
 	Kasvava/vähenevä funktio
-	
+
 	\missingfigure{Funktion f(x)=2x kuvaaja}
 	\missingfigure{Funktion f(x)=-x+1 kuvaaja}
 

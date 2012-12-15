@@ -29,12 +29,43 @@ $x-3>0$ & kun $x > 3$\\
 $x>0$ & kun $x > 0$.
 \end{tabular}
 
-Kootaan tulokset merkkikaavioon:
+Kootaan tulokset merkkikaavioon, jonka jakainen ruutu vastaa
+yhtä reaalilukuväliä lukusuoralla:
 
-\missingfigure{Tähän merkkikaavio, jossa x-akselilla -2, 0 ja 3,
-rivejä neljä: termit x, (x+2), (x-3) ja tulo x(x+2)(x-3) }
+\begin{merkkikaavio}{3}
+\merkkikaavioKohta{$-2$}
+\merkkikaavioKohta{$0$}
+\merkkikaavioKohta{$3$}
 
-Merkkikaaviosta voidaan lukea vastaus: $x^3-x^2 -6 \leq 0$, kun
+	\merkkikaavioFunktio{$x+2$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+
+\merkkikaavioUusirivi
+	\merkkikaavioFunktio{$x-3$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+
+\merkkikaavioUusirivi
+	\merkkikaavioFunktio{$x$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+
+\merkkikaavioUusiriviKaksoisviiva
+	\merkkikaavioFunktio{$x(x+2)(x-3)$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+\end{merkkikaavio}
+
+Merkkikaaviosta voidaan lukea vastaus: $x^3-x^2 -6 \leq 0$, \\ kun
 $x\leq -2$ tai $0\leq x \leq 3$.
 
 \textbf{Tapa 2:} Testipisteet\\

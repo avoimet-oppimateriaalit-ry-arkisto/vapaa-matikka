@@ -51,38 +51,37 @@ $3$ & $4$ \\
 
 \end{esimerkki}
 
-
-\section{Taylorin sarja}
-Eräs mielenkiintoinen ja hyvin tunnettu potenssisarja on Taylorin sarja.
-Se on päättymätön potenssisarja, jolla voidaan aproksimoida muiden funktioiden arvoja.
-
-Yleisesti Taylorin sarjalla saadaan (rajatta derivoituvan) funktion $f$ arvo pisteessä $x_0$:
-
-\begin{align*}
-	f(x_0) = \sum\limits_{n=0}^\infty a_n(x-x_0)^n
-\end{align*}
-
-missä
-
-\begin{align*}
-a_n = \frac{f^n(x_0)}{n!}
-\end{align*}
-
-Koska sarja on äärettömän pitkä, sarjan arvoja edelleen arvioidaan Taylorin polynomilla, joka on muotoa
-
-\begin{align*}
-	P_k(x) = \sum\limits_{n=0}^k a_k(x-x_0)^k
-\end{align*}
-
-Polynomin avulla voidaan laskea esimerkiksi likiarvo funktiolle
-$(1-x)^-1 = \frac{1}{1-x}$ pisteen a ympäristössä, kun $a \neg 1$:
-
-\begin{align*}
-	\frac{1}{1-x} \approx \frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} + \frac{(x-a)^3}{(1-a)^4} ...
-\end{align*}
-
-\missingfigure{Funktion $(x-1)^-1$ kuvaaja}
-\missingfigure{Funktion $\frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} +$ kuvaaja}
+%\section{Taylorin sarja}
+%Eräs mielenkiintoinen ja hyvin tunnettu potenssisarja on Taylorin sarja.
+%Se on päättymätön potenssisarja, jolla voidaan aproksimoida muiden funktioiden arvoja.
+%
+%Yleisesti Taylorin sarjalla saadaan (rajatta derivoituvan) funktion $f$ arvo pisteessä $x_0$:
+%
+%\begin{align*}
+%	f(x_0) = \sum\limits_{n=0}^\infty a_n(x-x_0)^n
+%\end{align*}
+%
+%missä
+%
+%\begin{align*}
+%a_n = \frac{f^n(x_0)}{n!}
+%\end{align*}
+%
+%Koska sarja on äärettömän pitkä, sarjan arvoja edelleen arvioidaan Taylorin polynomilla, joka on muotoa
+%
+%\begin{align*}
+%	P_k(x) = \sum\limits_{n=0}^k a_k(x-x_0)^k
+%\end{align*}
+%
+%Polynomin avulla voidaan laskea esimerkiksi likiarvo funktiolle
+%$(1-x)^{-1} = \frac{1}{1-x}$ pisteen a ympäristössä, kun $a \neg 1$:
+%
+%\begin{align*}
+%	\frac{1}{1-x} \approx \frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} + \frac{(x-a)^3}{(1-a)^4} ...
+%\end{align*}
+%
+%\missingfigure{Funktion $(x-1)^-1$ kuvaaja}
+%\missingfigure{Funktion $\frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} +$ kuvaaja}
 
 \section{Harjoitustehtäviä}
 \begin{tehtava}
@@ -96,5 +95,21 @@ $(1-x)^-1 = \frac{1}{1-x}$ pisteen a ympäristössä, kun $a \neg 1$:
 
 	\begin{vastaus}
 		\todo[inline]{laitetaanko piirtotehtäviin vastaukset tänne}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Monia funktioita voidaan esittää likimääräisesti polynomeina (ns. Taylorin polynomi).  	Esimerkiksi
+	
+	\begin{tabular}{lcll}
+	$\frac{1}{1+x^2}$ &$\approx$ & $1-x^2+x^4-x^6+x^8-x^{10}$, & kun $-1<x<1$ \\
+	$\sqrt{1+x}$ & $\approx $ & $ 1+\frac{x}{2}
+	-\frac{x^2}{8}+\frac{x^3}{16}-\frac{5x^4}{128}$, & kun $-1<x<1$
+	\end{tabular}
+	
+	Piirrä alkuperäinen funktio ja polynomi samaan kuvaajaan tietokoneella tai graafisella laskimella. Kokeile, kuinka polynomin viimeisten termien pois jättäminen vaikuttaa tarkkuuteen. (Termejä voi laskea lisääkin, mutta siihen ei puututa tässä.)
+
+	\begin{vastaus}
+		Mitä enemän termejä, sitä parempi vastaavuus.
 	\end{vastaus}
 \end{tehtava}
