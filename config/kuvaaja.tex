@@ -35,5 +35,5 @@
 % Piirtää pisteen kuvaajaan. Parametrit:
 % x y
 \newcommand{\kuvaajapiste}[2]{
-	\fill (#1, #2) circle (0.07);
+	\fill (#1*\kuvaajascale, #2*\kuvaajascale) circle (0.07);
 }
