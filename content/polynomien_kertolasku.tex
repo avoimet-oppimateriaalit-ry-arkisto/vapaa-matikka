@@ -23,22 +23,64 @@ Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kerrotaan termeit
 \end{itemize}
 
 \subsection*{Yleinen kertolasku}
-Kahden polynomin tulo saadaan osittelulailla muotoon jossa kerrotaan polynomia
-monomilla.
-\begin{esimerkki}
-\begin{align*}
-&\hspace{0.5cm}(x^4-3x^3+3)(x^3-2x^2+1) \\
-&= x^4 (x^3-2x^2+1) - 3x^3 (x^3-2x^2+1) + 3 (x^3-2x^2+1) \\
-&= x^4\cdot x^3 + x^4\cdot (-2x^2)+x^4\cdot 1-3x^3\cdot x^3-3x^3(-2x^2)-3x^3\cdot1+3x^3+3(-2x^2)+3\cdot 1 \\
-&= x^7-2x^6+x^4-3x^6+6x^5-3x^3+3x^3-6x^2+3 \\
-&= x^7-5x^6+6x^5+x^4-6x^2+3
-\end{align*}
-\end{esimerkki}
+Osittelulain nojalla kahden polynomin tulo saadaan laskemalla yhteen kaikki
+termit, jotka saadaan kertomalla termi ensimmäisestä ja toinen termi toisesta
+polynomista.
 
-Siis kahden polynomin tulo saadaan laskemalla yhteen kaikki monomit, jotka
-saadaan kertomalla termi ensimmäisestä ja toinen termi toisesta polynomista.
+\newcommand{\pbezier}[4]{
+	\pgfmathsetmacro{\PBxa}{#1}
+	\pgfmathsetmacro{\PBxb}{#2}
+	\pgfmathsetmacro{\PBya}{#3}
+	\pgfmathsetmacro{\PByb}{#3+#4}
+	\pgfmathsetmacro{\PBca}{0.8 * \PBxa + 0.2 * \PBxb}
+	\pgfmathsetmacro{\PBcb}{0.2 * \PBxa + 0.8 * \PBxb}
+	\draw[color=red] (\PBxa, \PBya) .. controls (\PBca, \PByb) and (\PBcb, \PByb) .. (\PBxb, \PBya);
+}
 
-\missingfigure{Kuva jossa visualisoidaan kivasti termiparien valintaa.}
+\begin{tikzpicture}
+\draw node[right] {\large$(a+b)(c+d+e) = ac+ad+ae+bc+bd+be$};
+
+\pgfmathsetmacro{\klAx}{0.48}
+\pgfmathsetmacro{\klBx}{1.33}
+\pgfmathsetmacro{\klCx}{1.94}
+\pgfmathsetmacro{\klDx}{2.77}
+\pgfmathsetmacro{\klEx}{3.63}
+\pgfmathsetmacro{\klLo}{-0.22}
+\pgfmathsetmacro{\klHi}{0.26}
+
+\pbezier{\klAx}{\klCx}{\klHi}{0.3}
+\pbezier{\klAx}{\klDx}{\klHi}{0.48}
+\pbezier{\klAx}{\klEx}{\klHi}{0.7}
+
+\pbezier{\klBx}{\klCx}{\klLo}{-0.15}
+\pbezier{\klBx}{\klDx}{\klLo}{-0.3}
+\pbezier{\klBx}{\klEx}{\klLo}{-0.5}
+\end{tikzpicture}
+
+Esimerkiksi polynomien $x-3$ ja $x^2-4x+3$ tulo voidaan laskea vastaavasti:
+
+\begin{tikzpicture}
+\draw node[right] {\large$(x-3)(x^2-4x+3) = x^3-4x^2+3x-3x^2+12x-9$};
+
+\pgfmathsetmacro{\klAx}{0.48}
+\pgfmathsetmacro{\klBx}{1.34}
+\pgfmathsetmacro{\klCx}{2.04}
+\pgfmathsetmacro{\klDx}{3.21}
+\pgfmathsetmacro{\klEx}{4.25}
+\pgfmathsetmacro{\klLo}{-0.22}
+\pgfmathsetmacro{\klHi}{0.26}
+
+\pbezier{\klAx}{\klCx}{\klHi}{0.3}
+\pbezier{\klAx}{\klDx}{\klHi}{0.48}
+\pbezier{\klAx}{\klEx}{\klHi}{0.7}
+
+\pbezier{\klBx}{\klCx}{\klLo}{-0.15}
+\pbezier{\klBx}{\klDx}{\klLo}{-0.3}
+\pbezier{\klBx}{\klEx}{\klLo}{-0.5}
+\end{tikzpicture}
+
+Sievennetyksi vastaukseksi saadaan siis $x^3-7x^2+15x-9$.
+
 
 \subsection*{Polynomin tekijät}
 
