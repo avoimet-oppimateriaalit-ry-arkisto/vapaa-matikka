@@ -1,13 +1,18 @@
-% Ympäristö välien kuvaamiseen lukusuoralla.
+% Ympäristö välien, pisteiden ja käyrien käyttäytymisen kuvaamiseen
+% lukusuoralla.
 % Käyttö:
 % \begin{lukusuora}{-1}{1}{10}
+% \lukusuoraparaabeli{0.2}{0.8}{1}
 % \lukusuoravalisa{0.2}{0.8}{x}{y}
 % \lukusuoravaliaa{-0.5}{-0.3}{a}{b}
+% \lukusuorapiste{0}{$x^2+y^2$}
 % \end{lukusuora}
 % 
 % luo lukusuoran joka piirretään 10 pituisena, käyttää sisäisesti
 % koordinaatteja -1..1, ja jolla näytetään väli [0.2, 0.8[ ja
-% väli ]-0.5, -0.3[ nimillä [x, y[ ja ]a, b[.
+% väli ]-0.5, -0.3[ nimillä [x, y[ ja ]a, b[. Näyttää pisteen
+% 0 nimellä $x^2+y^2$ ja piirtää paraabelin jonka nollakohdat ovat
+% 0.2 ja 0.8 ja huippu 1.
 
 
 
@@ -59,4 +64,22 @@
 	% kokoisiksi.
 	\draw (\LSxa,0) node[above] {\phantom{$\int$}#3\phantom{$\int$}};
 	\draw (\LSxb,0) node[above] {\phantom{$\int$}#4\phantom{$\int$}};
+}
+
+% lukusuorapiste-komennon parametrit:
+% x nimi
+\newcommand{\lukusuorapiste}[2]{
+	\pgfmathsetmacro{\LSx}{\LSpituus*(#1-\LSax)/\LSdx}
+	\fill (\LSx,0) circle (0.1);
+	\draw (\LSx,0) node[above] {\phantom{$\int$}#2\phantom{$\int$}};
+}
+
+% lukusuoraparaabeli-komennon parametrit:
+% nollakohta1 nollakohta2 huippuy
+% kannattaa olla huippuy = -1 tai 1
+\newcommand{\lukusuoraparaabeli}[3]{
+	\pgfmathsetmacro{\LSxa}{\LSpituus*(#1-\LSax)/\LSdx}
+	\pgfmathsetmacro{\LSxb}{\LSpituus*(#2-\LSax)/\LSdx}
+	\providecommand{\LSkaava}{-4*(#3)*(x-\LSxa)*(x-\LSxb)/((\LSxa-\LSxb)**2)}
+	\draw[smooth,thick,domain=0:\LSpituus,samples=300] plot function{\LSkaava > -1.5 ? (\LSkaava < 1.5 ? \LSkaava : NaN) : NaN};
 }
