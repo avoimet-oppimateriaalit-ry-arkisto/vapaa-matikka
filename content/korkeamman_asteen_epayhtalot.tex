@@ -1,3 +1,43 @@
 \chapter{Korkeamman asteen epäyhtälöt}
 
+Ville työstää tätä nyt (la klo 14.34 alkaen)!
+
+Korkeamman asteen epäyhtälö, kuten epäyhtälö 
+$$x^3 -6 \leq x^2 $$
+ratkaistaan siirtämällä kaikki termit epäyhtälön toiselle puolelle ja tutkimalla
+syntyvän polynomin merkkiä:
+\begin{align*}
+x^3 -6x &\leq x^2 \quad || \ \ -x^2 \\
+\underbrace{x^3-x^2 -6}_{P(x)} &\leq 0.
+\end{align*}
+Polynomin merkin selvittämiseksi rakaistaan sen nollakohdat:
+\begin{align*}
+x^3 - x^2-6x &= 0 \quad || \ \ \textrm{yhteinen tekijä} \\
+x(x^2 -x -6) &= 0 \quad || \ \ \textrm{tulon nollasääntö} \\
+x = 0 \textrm{ tai } x^2 -x -6 &= 0 \quad|| \ \ \textrm{ratkaisukaava} \\
+x &=\frac{-(-1) \pm \sqrt{(-1)^2-4\cdot 1 \cdot (-6)}}{2\cdot 1} \\
+x &= -2 \textrm{ tai } x = 3.
+\end{align*}
+Polynomin $P$ nollakohdat ovat siis $0$, $2$ ja $3$. Tästä voidaan jatkaa kahdella eri tavalla.
+
+\textbf{Tapa 1:} Tekijöihin jako
+
+Jaetaan polynomi tekijöihin nollakohtien avulla: 
+$$P(x) = x^3 - x^2-6x = x(x^2-x-6) = x(x+2)(x-3).$$
+Tutkitaan kunkin tulon tekijän merkkiä:\\
+\begin{tabular}{ll} 
+$x+2>0$ & kun $x > -2$\\
+$x-3>0$ & kun $x > 3$\\
+$x>0$ & kun $x > 0$.
+\end{tabular}
+Kootaan tulokset merkkikaavioon:
+
+\missingfigure{Tähän merkkikaavio, jossa x-akselilla -2, 0 ja 3,
+rivejä neljä: termit x, (x+2), (x-3) ja tulo x(x+2)(x-3) }
+
+Merkkikaaviosta voidaan lukea vastaus: $x^3-x^2 -6 \leq 0$, kun
+$x\leq -2$ tai $0\leq x \leq 3$.
+
+\textbf{Tapa 2:} Testipisteet
+
 \section{Harjoitustehtäviä}
