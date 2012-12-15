@@ -27,9 +27,9 @@ voimme helposti päätellä, että ainoat mahdolliset ratkaisut saadaan yhtälö
 Polynomin jakaminen tekijöihin on siis varsin hyödyllistä. Tekijöihin jakaminen ei aina ole helppoa,
 mutta tässä luvussa käsitellään tapoja, joilla tekijöihin jakaminen monissa tilanteissa onnistuu.
 
-\section{Polynomien jakolause}
+\subsection{Polynomien jakolause}
 
-Polynomin $P(x)=(x-2)\cdot(x-3)$ nollakohdat ovat tulon nollasäännön nojalla $x=2$ ja $x=3$. Nollakohdat siis näkee suoraan tekijöihin jaetusta polynomista. Tämä tekijöiden ja nollakohtien välinen yhteys toimii myös toisin päin: jos luku $b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.
+Polynomin $P(x)=(x-2)\cdot(x-3)$ nollakohdat ovat tulon nollasäännön nojalla $x=2$ ja $x=3$. Nollakohdat siis näkee suoraan tekijöihin jaetusta polynomista. Tämä tekijöiden ja nollakohtien välinen yhteys toimii myös toisin päin: nollakohtien avulla voi selvittä tekijät. Jos luku $b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.
 
 Esimerkiksi polynomin $P(x)=x²-3x+2$ nollakohdat ovat
 \begin{align*}
@@ -39,7 +39,7 @@ x&=\frac{3 \pm \sqrt[]{9-8}}{2} \\
 x&=\frac{3 \pm 1}{2} \\
 x&=1 \textrm{ tai } x = 2.
 \end{align*}
-Tämän perusteella voidaan olettaa, että $x-1$ ja $x-2$ ovat polynomin $P$ tekijöitä. Toden totta: sulut auki kertomalla voidaan tarkistaa, että $(x-1)(x-2)=x²-3x+2$.
+Tämän perusteella voidaan päätellä, että $x-1$ ja $x-2$ ovat polynomin $P()$ tekijöitä. Toden totta: sulut auki kertomalla voidaan tarkistaa, että $(x-1)(x-2)=x^2-3x+2$.
 
 \laatikko{\textbf{Polynomien jakolause} \\
 Jos $x=b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.}
@@ -56,5 +56,27 @@ P(b)&=(b-b)Q(b)+r \quad || \ \ P(b)=0 \\
 eli $r=0$, joten $x-b$ on polynomin $P(x)$ tekijä. Jos siis $x=b$ on polynomin $P(x)$ nollakohta, $x-b$ on sen tekijä.
 
 \textbf{Esimerkki 1.} \\
+Jaa polynomi $-2x^2-x+1$ tekijöihinsä.\\
+Ratkaistaan ensin nollakohdat:
+\begin{align*}
+-2x^2-x+1&=0 \\
+x&=\frac{-(-1) \pm \sqrt[]{(-1)^2-4 \cdot (-2) \cdot 1}}{2 \cdot (-2)} \\
+x&=\frac{1 \pm \sqrt[]{1+8}}{-4} \\
+x&=\frac{1 \pm 3}{-4} \\
+x&=-1 \textrm{ tai } x = \frac{1}{2}.
+\end{align*}
+Jakolauseen mukaan $(x-\frac{1}{2})$ ja $(x-(-1))$ ovat kyseisen polynomin tekijöitä.
+Ne keskenään kertomalla ei kuitenkaan saada oikeaa tulosta:
+$$\left(x-\frac{1}{2}\right)(x-(-1))=\left(x-\frac{1}{2}\right)(x+1)=x^2+\frac{1}{2}x-\frac{1}{2}.$$
+Puuttuu vielä korkeimman asteen termin kerroin $-2$. Sillä kertomalla saadaan oikea tulos:
+$-2(x^2+\frac{1}{2}x-\frac{1}{2})=-2x^2-x+1$.
+
+Vastaus: $-2x^2-x+1 = -2(x-\frac{1}{2})(x+1)$.
+
+\subsection{Toisen asteen polynomin tekijöihin jako}
+
+
+
+\subsection{Polynomien kuvaajista}
 
 \section{Harjoitustehtäviä}
