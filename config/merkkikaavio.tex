@@ -44,9 +44,26 @@
 \newcommand{\merkkikaavioUusirivi}[0]{
 	\pgfmathsetmacro{\MKposx}{0}
 	\pgfmathsetmacro{\MKposy}{\MKposy-\MKruutuh}
+	\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
 	\foreach \sarake in {0,...,\MKvikaviiva}
 	{
-		\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
+		\draw (\sarake * \MKruutuw, \MKposy) -- ++(0, -\MKruutuh);
+	}
+}
+
+% Aloittaa uuden rivin merkkikaaviossa käyttäen kaksoisviivaa.
+\newcommand{\merkkikaavioUusiriviKaksoisviiva}[0]{
+	\pgfmathsetmacro{\MKposx}{0}
+	\pgfmathsetmacro{\MKposy}{\MKposy-\MKruutuh}
+	\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
+	\foreach \sarake in {0,...,\MKvikaviiva}
+	{
+		\draw (\sarake * \MKruutuw, \MKposy) -- ++(0, -\MKruutuh);
+	}
+	\pgfmathsetmacro{\MKposy}{\MKposy-0.06}
+	\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
+	\foreach \sarake in {0,...,\MKvikaviiva}
+	{
 		\draw (\sarake * \MKruutuw, \MKposy) -- ++(0, -\MKruutuh);
 	}
 }
