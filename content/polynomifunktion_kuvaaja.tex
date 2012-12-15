@@ -17,6 +17,41 @@ Nollakohta tarkoittaa sitä annetun polynomin muuttujan arvoa, jolla koko
 polynomi saa arvon nolla. Kuvaajasta sen voi helposti lukea niistä kohdista,
 joissa kuvaaja leikkaa x-akselia.
 
+\section{Kuvaajan piirtäminen}
+
+Funktion kuvaajien piirtäminen käsin onnistuu yleensä helpoiten laskemalla funktion arvoja muutamilla x:n arvoilla, ja merkitsemällä pisteet $(x,y)$-koordinaatistoon ja hahmottamalla pisteiden läpi kulkeva kuvaaja.
+
+\begin{esimerkki}
+Lasketaan ensin funktion $f(x) = x^2 - x - 2$ arvoja, kartoitetaan ne koordinaatistoon ja piirretään niiden läpi kulkeva kuvaaja.\\
+
+\todo{Koordinaatistoon pitäisi lisätä lasketut pisteet, joiden kautta kuvaaja hahmotellaan}
+
+\begin{tabular}[t]{l r}
+
+\begin{tabular}{|c|c|}
+$x$ & $y=f(x)$ \\
+\hline
+$-3$ & $10$ \\
+$-2$ & $4$ \\
+$-1$ & $0$ \\
+$0$ & $-2$ \\
+$1$ & $-2$ \\
+$2$ & $0$ \\
+$3$ & $4$ \\
+\end{tabular}
+
+&
+
+\begin{kuvaajapohja}{0.75}{-4}{4}{-3}{11}
+\kuvaaja{x**2-x-2}{$f(x) = x^2 - x - 2$}{red}
+\
+\end{kuvaajapohja}
+
+\end{tabular}
+
+\end{esimerkki}
+
+
 \section{Taylorin sarja}
 Eräs mielenkiintoinen ja hyvin tunnettu potenssisarja on Taylorin sarja.
 Se on päättymätön potenssisarja, jolla voidaan aproksimoida muiden funktioiden arvoja.
