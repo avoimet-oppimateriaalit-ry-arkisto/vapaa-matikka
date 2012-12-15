@@ -16,6 +16,8 @@
 % 0 nimellä $x^2+y^2$ ja piirtää paraabelin jonka nollakohdat ovat
 % 0.2 ja 0.8 ja huippu 1. Lisäksi se laittaa +-merkin suoran yläpuolelle
 % kohtaan 0.5 ja --merkin suoran alapuolelle kohtaan 0.05.
+%
+% Mielivaltaisia kuvaajia saa lukusuoralle lukusuorakuvaaja-komennolla.
 
 
 
@@ -77,6 +79,14 @@
 	\draw (\LSx,0) node[above] {\phantom{$\int$}#2\phantom{$\int$}};
 }
 
+% lukusuorapienipiste-komennon parametrit:
+% x nimi
+\newcommand{\lukusuorapienipiste}[2]{
+	\pgfmathsetmacro{\LSx}{\LSpituus*(#1-\LSax)/\LSdx}
+	\fill (\LSx,0) circle (0.07);
+	\draw (\LSx,0) node[above] {\phantom{$\int$}#2\phantom{$\int$}};
+}
+
 % lukusuoranimi-komennon parametrit:
 % x nimi
 \newcommand{\lukusuoranimi}[2]{
@@ -98,5 +108,14 @@
 	\pgfmathsetmacro{\LSxa}{\LSpituus*(#1-\LSax)/\LSdx}
 	\pgfmathsetmacro{\LSxb}{\LSpituus*(#2-\LSax)/\LSdx}
 	\providecommand{\LSkaava}{-4*(#3)*(x-\LSxa)*(x-\LSxb)/((\LSxa-\LSxb)**2)}
-	\draw[smooth,thick,domain=0:\LSpituus,samples=300] plot function{\LSkaava > -1.5 ? (\LSkaava < 1.5 ? \LSkaava : NaN) : NaN};
+	\draw[smooth,samples=300,thick,domain=0:\LSpituus,samples=300] plot function{\LSkaava > -1.5 ? (\LSkaava < 1.5 ? \LSkaava : NaN) : NaN};
+}
+
+% lukusuorakuvaaja-komennon parametrit:
+% kaava
+\newcommand{\lukusuorakuvaaja}[1]{
+	\pgfmathsetmacro{\LSxa}{-\LSpituus*\LSax/\LSdx}
+	\begin{scope}[shift={(\LSxa, 0)}]
+		\draw[smooth,samples=300,thick,domain=\LSax:\LSax+\LSdx,xscale=\LSpituus/\LSdx] plot function{(#1) > -1.5 ? ((#1) < 1.5 ? (#1) : NaN) : NaN};
+	\end{scope}
 }
