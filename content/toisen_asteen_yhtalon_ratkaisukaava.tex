@@ -1,5 +1,5 @@
 \chapter{Toisen asteen yhtälön ratkaisukaava}
-Edellisessä kappaleessa opittiin, että toisen asteen yhtälö voidaan aina ratkaista täydentämällä se neliöksi. Tätä menetelmää ei kuitenkaan yleensä käytetä, sillä menetelmän voi ilmaista valmiina kaavana. Seuraavaksi johdetaan toisen asteen yhtälön ratkaisukaava. \\ \\
+Edellisessä kappaleessa opittiin, että toisen asteen yhtälö voidaan aina ratkaista täydentämällä se neliöksi. Tätä menetelmää ei kuitenkaan yleensä käytetä, sillä menetelmän voi ilmaista valmiina kaavana. Seuraavaksi johdetaan tämä toisen asteen yhtälön ratkaisukaava. \\ \\
 
 Lähdetään liikkeelle täydellisestä toisen asteen yhtälöstä $ax^2+bx+c=0$.
 \begin{align*}
@@ -12,9 +12,9 @@ Täydennetään vasen puoli binomin neliöksi
 \begin{align*}
 4a^2x^2+4abx&=-4ac \ \ \ \ \ &&|| \text{lisätään puolittain termi } b^2 \\
 4a^2x^2+4abx+b^2&=b^2-4ac \ \ \ \ \ &&||(2ax+b)^2=4a^2x^2+4abx+b^2 \\
-(2ax+b)^2&=b^2-4ac  \ \ \ \ \ &&||\text{Otetaan puolittain neliöjuuri } \\
-2ax+b&= \pm \sqrt[]{b^2-4ac} \ \ \ \ \ &&||\text{Vähennetään puolittain termi } b \\
-2ax&=-b \pm \sqrt[]{b^2-4ac} \ \ \ \ \ &&||\text{Jaetaan puolittain termillä } 2a \\
+(2ax+b)^2&=b^2-4ac  \ \ \ \ \ &&||\text{otetaan puolittain neliöjuuri } \\
+2ax+b&= \pm \sqrt[]{b^2-4ac} \ \ \ \ \ &&||\text{vähennetään puolittain termi } b \\
+2ax&=-b \pm \sqrt[]{b^2-4ac} \ \ \ \ \ &&||\text{jaetaan puolittain termillä } 2a \\
 x&= \frac{-b \pm \sqrt[]{b^2-4ac}}{2a} 
 \end{align*}
 Saimme johdettua toisen asteen yhtälön ratkaisukaavan. \\ 
@@ -25,16 +25,16 @@ x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a}
 \end{align*}
 }
 \textbf{Esimerkki 1.}  \\
-Ratkaise yhtälö $4x^2-8x+4=0$.
+Ratkaise yhtälö $x^2-8x+16=0$.
 \begin{align*}
-\underbrace{4}_{=a}x^2 \underbrace{-8}_{=b}x+\underbrace{4}_{=c}=0
+\underbrace{1}_{=a}x^2 +\underbrace{(-8)}_{=b}x+\underbrace{16}_{=c}=0
 \end{align*}
-Sijoitetaan vakioiden $a=4$, $b=-8$ ja $c=4$ arvot toisen asteen yhtälön ratkaisukaavaan.
+Sijoitetaan vakioiden $a=1$, $b=-8$ ja $c=16$ arvot toisen asteen yhtälön ratkaisukaavaan.
 \begin{align*}
-x&=\frac{-(-8)\pm \sqrt[]{(-8)^2-4\cdot 4 \cdot 4}}{2 \cdot 4} \\
-x&=\frac{8 \pm \sqrt[]{64- 64}}{8} \\
-x&=\frac{8 \pm 0}{8} \\
-x&=1
+x&=\frac{-(-8)\pm \sqrt[]{(-8)^2-4\cdot 1 \cdot 16}}{2 \cdot 1} \\
+x&=\frac{8 \pm \sqrt{64- 64}}{2} \\
+x&=\frac{8 \pm 0}{2} \\
+x&=4
 \end{align*}
 \textbf{Esimerkki 2.} \\
 Ratkaise yhtälö $15x^2+24x+10=0$.
@@ -77,7 +77,7 @@ x&=1 \text{ tai } x=-3 \\
 
 \begin{tehtava}
     Ratkaise
-    \begin{enumerate}
+    \begin{enumerate}[a)]
         \item $x^2 - 2x - 3 = 0$
         \item $-x^2 - 6x - 5 = 0$
         \item $9x^2 - 12x + 4 = 0$
@@ -85,7 +85,7 @@ x&=1 \text{ tai } x=-3 \\
         \item $1 + x + 3x^2= 0$
     \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
+        \begin{enumerate}[a)]
             \item $x = 3 tai x = -1$
             \item $x = -5 tai x = -1$
             \item $x = \dfrac{2}{3}$
@@ -97,15 +97,15 @@ x&=1 \text{ tai } x=-3 \\
 
 \begin{tehtava}
     Ratkaise
-    \begin{enumerate}
+    \begin{enumerate}[a)]
         \item $x^2 + 2x = -4$
         \item $4x^2 = 12x - 8$
         \item $3x^2 - 13x + 50 = -2x^2 + 17x + 5$
     \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
+        \begin{enumerate}[a)]
             \item $x = -2$
-            \item $x = 1 tai x = 2$
+            \item $x = 1$ tai $x = 2$
             \item $x = 3$
         \end{enumerate}
     \end{vastaus}
@@ -113,14 +113,14 @@ x&=1 \text{ tai } x=-3 \\
 
 \begin{tehtava}
     Tasaisesti kiihtyvässä liikkeessä on voimassa kaavat $v = v_0 + at$ ja $s = v_0t + \dfrac{1}{2}at^2$, missä $v$ on loppunopeus, $v_0$ alkunopeus, $a$ kiihtyvyys, $t$ aika ja $s$ siirtymä. 
-		\begin{enumerate}
-            \item Auton nopeus on 72 km/h. Auto pysäytetään jarruttamalla tasaisesti. Se pysähtyy 10 sekunnissa. Laske jarrutusmatka.
-            \item Kivi heitetään suoraan alas 50 metriä syvään rotkoon 3,0 m/s- Kuinka monen sekunnin kuluttua se kohtaa rotkon pohjan?
+		\begin{enumerate}[a)]
+            \item Auton nopeus on 72~km/h. Auto pysäytetään jarruttamalla tasaisesti. Se pysähtyy 10 sekunnissa. Laske jarrutusmatka.
+            \item Kivi heitetään suoraan alas 50 metriä syvään rotkoon nopeudella 3,0~m/s. Kuinka monen sekunnin kuluttua se kohtaa rotkon pohjan?
         \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
+        \begin{enumerate}[a)]
             \item 100 metriä
-            \item Noin 2.9 sekuntia
+            \item Noin 2,9 sekuntia
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
@@ -133,21 +133,21 @@ x&=1 \text{ tai } x=-3 \\
 \end{tehtava}
 
 \begin{tehtava}
-    Suorakulmaisen muotoisen alueen piiri on 34 m ja pinta-ala 60$m^2$. Selvitä alueen mitat. 
+    Suorakulmaisen muotoisen alueen piiri on 34~m ja pinta-ala 60~m$^2$. Selvitä alueen mitat. 
     \begin{vastaus}
-		12m ja 5m
+		12 m ja 5 m
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
-    Kultaisessa leikkauksessa jana on jaettu siten, että pidemmän osan suhde lyhyempään on sama kuin koko janan suhde pitempään osaan. Tällaista suhdetta (merkitään yleensä kreikkalaisella aakkosella phi $\phi$) on taiteessa kautta aikojen pidetty "jumalallisena suhteena".
-		\begin{enumerate}
-            \item Laske kultaiseen suhteen $\phi$ tarkka arvo ja likiarvo.
-            \item Napa jakaa ihmisvartalon pituussuunnassa kultaisen leikkauksen suhteessa. Millä korkeudella napa on 170 cm pitkällä ihmisellä?
+    Kultaisessa leikkauksessa jana on jaettu siten, että pidemmän osan suhde lyhyempään on sama kuin koko janan suhde pitempään osaan. Tällaista suhdetta (merkitään yleensä kreikkalaisella aakkosella fii $\varphi$) on taiteessa kautta aikojen pidetty ''jumalallisena suhteena''.
+		\begin{enumerate}[a)]
+            \item Laske kultaiseen suhteen $\varphi$ tarkka arvo ja likiarvo.
+            \item Napa jakaa ihmisvartalon pituussuunnassa kultaisen leikkauksen suhteessa. Millä korkeudella napa on 170~cm pitkällä ihmisellä?
         \end{enumerate}
     \begin{vastaus}
-        \begin{enumerate}
-            \item $ \phi = \dfrac{sqrt{5}-1}{2} \approx 0,618$
+        \begin{enumerate}[a)]
+            \item $ \varphi = \dfrac{\sqrt{5}-1}{2} \approx 0,618$
             \item Noin 105,1 cm
         \end{enumerate}
     \end{vastaus}
