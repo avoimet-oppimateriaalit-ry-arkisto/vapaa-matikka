@@ -1,4 +1,5 @@
 \chapter{Epäyhtälöt}
+(Joonas kirjoittaa aamuyöllä loppuun)
 
 \section{Epäyhtälömerkit}
 
@@ -23,16 +24,54 @@ $a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular} 
 
-Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkien ja niiden vastineiden käyttöön.
+Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita.
 
-awsdyiGDIAYSGF
+\section{Epäyhtälöiden teoriaa}
 
+Yhtälöt voivat olla aina tosia (esimerkiksi $\pi=\pi$), joskus tosia (yhtälö $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$) tai aina epätosia (esimerkiksi $-1=3$). Yhtälön totuusarvo säilyy aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus– toisin sanoen käytetään samaa funktiota.
+
+Myös jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan epäyhtälöä $2<3$, joka tiedetään todeksi. Mitä epäyhtälön puolille voidaan tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy? Testaatan ensin peruslaskutoimituksia:
+
+Lisätään molemmille puolille jokin positiivinen luku, 4
+
+Havainnollistetaan lukusuoralla:
+\missingfigure{2 ja 3 lukusuoralla ja 2+4 sekä 3+4 lukusuoralla (nuolet kuvaamaan hyppyjä?}
+
+vähennyslasku
+
+\missingfigure{lukusuoralla lukujen 2 ja 3 siirtyminen vasemmalle}
+
+kertominen positiivisella luvulla
+
+\missingfigure{ja näitä tulee lisää...}
+
+\textbf{Esimerkki 2}
+\begin{align*}
+4&<6  \ \ \ \ \ &&|| +4 \\
+8&<10 &&|| \cdot 5 \\
+40&<50 &&|| :2 \\
+20&<25 &&|| \cdot (-3) \\
+-60&>-75
+\end{align*}
+
+Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö säilyy aivan kuin yhtälökin, kun sama toimitus tehdään
+epäyhtälön kummallekin puolelle. Viimeisessä vaiheessa huomataan kuitenkin, että negatiivisella luvulla kerrottaessa
+epähtälön keskellä oleva merkki pitää kääntää toisin päin, että epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat
+kerrotaan $-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhälö kääntyykin toisin päin.
+
+Esimerkki
+Toteuttaako luku epäyhtälön...
 
 \section{Reaalilukuvälit}
+
+Kun ratkaistaan epäyhtälöstä tuntematon, se pyritään.... ....
+
+vastauksena ei yksittäisiä lukuja kuten yhtälöiden tapauksissa, vaan epäyhtälön toteuttaa moni luku! Jopa ääretön! ...
 
 
 \section{Ensimmäisen asteen epäyhtälö}
 
+Erityisesti harjoittelemme 1. asteen epäyhtälöiden ratkaisemista ja myöhemmin yleisesti polynomiepäyhtälöiden ratkaisemista.
 \textbf{Esimerkki 1}
 \begin{align*}
 ax^2+bx+c<0 \\
@@ -52,22 +91,16 @@ että myös epäyhtälöön voidaan lisätä puolittain jotakin tai siitä voida
 Samoin epäyhtälö voidaan kertoa tai jakaa puolittain positiivisella luvulla. Negatiivisella luvulla
 jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
 
-\textbf{Esimerkki 2}
-\begin{align*}
-4&<6  \ \ \ \ \ &&|| +4 \\
-8&<10 &&|| \cdot 5 \\
-40&<50 &&|| :2 \\
-20&<25 &&|| \cdot (-3) \\
--60&>-75
-\end{align*}
 
-Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö säilyy aivan kuin yhtälökin, kun sama toimitus tehdään
-epäyhtälön kummallekin puolelle. Viimeisessä vaiheessa huomataan kuitenkin, että negatiivisella luvulla kerrottaessa
-epähtälön keskellä oleva merkki pitää kääntää toisin päin, että epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat
-kerrotaan $-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhälö kääntyykin toisin päin.
+Yleisesti pätee seuraava
+	Kasvava/vähenevä funktio
+	
+	\missingfigure{Funktion f(x)=2x kuvaaja}
+	\missingfigure{Funktion f(x)=-x+1 kuvaaja}
 
-Myös silloin, kun epäyhtälö korotetaan potenssiin, täytyy merkin suuntaan kiinnittää erityistä huomiota.
-Tästä kerrotaan tarkemmin toisen asteen epäyhtölön yhteydessä.
+
+
+Potenssiin korottamisen, juurenottoon ja muiden funktioiden käyttöön epäyhtälöiden ratkaisemisessa palataan myöhemmissä luvuissa ja myöhemmillä kursseilla.
 
 \textbf{Esimerkki 2}
 Millä $w$:n arvoilla pätee $-8w-(8-w)\geq w:2+5$?
