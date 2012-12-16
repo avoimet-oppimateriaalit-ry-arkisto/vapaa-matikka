@@ -1,10 +1,10 @@
 % muokattava korostus termeille
-\newcommand{\termi}[2][] {
+\newcommand{\termi}[2][] {%
   \ifthenelse{\isempty{#2}}{\korostettuindeksi{#1}{#1}}%
-  {\korostettuindeksi{#1}{#2}}
+  {\korostettuindeksi{#1}{#2}}%
 }
 
-% mitä käytetään kun sovelletaan sama funktio molemmille puolille
+% käytetään kun sovelletaan sama funktio molemmille puolille
 % (pystypalkki kaksoisviivalla)
 \newcommand{\ppalkki}{\big\|}
 
