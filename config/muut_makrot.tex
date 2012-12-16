@@ -8,7 +8,8 @@
 % (pystypalkki kaksoisviivalla)
 \newcommand{\ppalkki}{\big\|}
 
-\newcommand{\korostettuindeksi}[2]{\textbf{#1}\index{\lowercase{#2}}}
+% \lowercase poistettu, aiheutti ongelmia makeindexin kanssa
+\newcommand{\korostettuindeksi}[2]{\textbf{#1}\index{#2}}
 
 \newenvironment{todistus}[0]
 {
