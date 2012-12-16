@@ -58,33 +58,45 @@ ei ratkaisuja, a negatiivinen
 
 Toisen asteen yhtälö voidaan ratkaista graafisesti tai algebrallisesti. Graafinen ratkaisu on aina likimääräinen eli arvio oikeasta ratkaisusta. \\ \\ Edellä tutustuimme toisen asteen yhtälön graafiseen ratkaisemiseen. Seuraavaksi tutustumme toisen asteen yhtälön algebralliseen ratkaisemiseen.
 \section{Vaillinaiset yhtälöt}
-Toisen asteen yhtälö on aina muotoa $ax^2+bx+c=0$, jossa $a, \ b, \ c \in \mathbb{R}, \ a \neq 0$. \\
-Jos yhtälössä $ax^2+bx+c=0$ kerroin $b=0$, niin toisen asteen yhtälö saa muodon
+Jos toisen asteen yhtälössä $ax^2+bx+c$ missä $a\neq 0$ pätee joko $b = 0$ tai
+$c = 0$ on kyseessä niin sanottu vaillinainen toisen asteen yhtälö, joka on
+siis muotoa
+\[ax^2+c=0\]
+tai
+\[ax^2+bx=0.\]
+\subsection*{Toisen asteen yhtälö $ax^2+c=0$}
+Muotoa $ax^2+c = 0$ oleva toisen asteen yhtälö saadaan helposti ratkaistua neliöjuuren avulla.
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $5x^2-45=0$:
 \begin{align*}
-ax^2+bx+c=0 \\
-ax^2+0 \cdot x+c=0 \\
-ax^2+c=0
+5x^2-45 &= 0 &&\ppalkki : 5 \\
+x^2-9 &= 0 &&\ppalkki + 9 \\
+x^2 &= 9 &&\text{ratkaistaan käyttäen neliöjuurta ($9 \geq 0$)} \\
+x &= \pm \sqrt{9} = \pm 3.
 \end{align*}
-\subsection*{Vaillinainen toisen asteen yhtälö $ax^2+c=0$} 
-    Toisen asteen yhtälöä, joka on muotoa $ax^2+c=0$ kutsutaan vaillinaiseksi toisen asteen yhtälöksi. Tämän muotoinen toisen asteen yhtälö saadaan helposti ratkaistua neliöjuuren avulla.\\
-\textbf{Esimerkki 1} \\
-Ratkaise yhtälö $5x^2-45=0$ \\
-\textbf{Ratkaisu}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $13x^2-42=-3$:
 \begin{align*}
-5x^2-45&=0 \\
-5x^2&=45  \ \ \ \ \ &&\ppalkki:5 \\
-x^2&=9 &&\ppalkki \sqrt{\quad} \\
-x&= \pm 3
+13x^2-42 &= -3 &&\ppalkki + 42 \\
+13x^2 &= 39 &&\ppalkki : 13 \\
+x^2 &= 3 &&\text{ratkaistaan käyttäen neliöjuurta ($3 \geq 0$)} \\
+x &= \pm \sqrt{3}.
 \end{align*}
-\textbf{Esimerkki 2} \\
-Ratkaise yhtälö $13x^2-42=-3$ \\
-\textbf{Ratkaisu} \\
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $x^2+4=3$:
 \begin{align*}
-13x^2-42&=-3 \\
-13x^2&=39 \ \ \ \ \ &&\ppalkki:13 \\
-x^2&=3 \ \ \ \ \ &&\ppalkki \sqrt{\quad} \\
-x&=\pm \sqrt[]{3}
+x^2+4 &= 3 &&\ppalkki - 4 \\
+x^2 &= -1
 \end{align*}
+Koska $x^2 \geq 0$ kaikilla $x$, yhtälöllä ei ole ratkaisua.
+\end{esimerkki}
+
+\subsection*{Toisen asteen yhtälö $ax^2+bx=0$}
 Jos yhtälössä $ax^2+bx+c=0$ kerroin $c=0$, niin toisen asteen yhtälö saa muodon
 \begin{align*}
 ax^2+bx+0&=0 \\
