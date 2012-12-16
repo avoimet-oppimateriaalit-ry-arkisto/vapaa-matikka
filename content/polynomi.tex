@@ -1,5 +1,7 @@
 \chapter{Polynomi}
 
+\section{Polynomilausekkeet}
+
 \termi[Polynomit]{polynomi} ovat yksinkertaisia laskulausekkeita, joissa esiintyy jokin muuttuja.
 %Usein hyödyllinen lauseketyyppi on sellainen joka koostuu muuttujan $x$ ja vakioiden yhteen- ja kertolaskuista.
 %Tällaisia lausekkeita kutsutaan muuttujan $x$ \termi[polynomeiksi]{polynomi}.
@@ -55,6 +57,9 @@ P(-1) & = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
 P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
 \end{align*}
 
+Toisinaan polynomeja ja polynomifunktioita käsitellään kuin ne olisivat sama asia.
+Voidaan esimerkiksi sanoa ''polynomi $P(x)=2x+1$'', vaikka yleensä $P(x)$-merkintää käytetään funktioista.
+
 %Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
 %Esimerkiksi jos $P(x) = x^2-x^2+x+1$ ja $Q(x) = x+1$, $P$ ja $Q$ ovat samat
 %funktiot koska $x^2 - x^2 = 0$ kaikilla reaaliluvuilla x. Siis saman
@@ -63,8 +68,13 @@ P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
 %kuitenkin pienin mahdollinen aste, jolloin polynomifunktion $P$ aste olisi
 %myös 1.
 
+\section{Polynomien yhteen- ja vähennyslasku}
+
+\input{content/polynomien_yhteen_ja_vahennyslasku_sisalto}
 
 \section{Harjoitustehtäviä}
+
+\todo{Polynomien harjoitustehtäviin voisi lisätä sellaisen, jossa tunnistettaisiin polynomeja, esim. ettei 1/x ole polynomi, sekä sellaisen }
 
 \begin{tehtava}
 	Mikä on/mitkä ovat polynomin $P(x) = x^5-3x^3+2x-1$
@@ -102,6 +112,38 @@ P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
 			\item $5$
 		\end{enumerate}
 	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Sievennä
+    \begin{enumerate}
+        \item $(2x + 3) + x $
+        \item $(3x - 1) + (-x + 1)$
+        \item $(5x + 10) + (6x - 6) - (x + 3)$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $3x + 3$
+            \item $2x$
+            \item $10x - 1$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Sievennä
+    \begin{enumerate}
+        \item $(x^2 - 2x + 1) + (-x^2 + x) $
+        \item $(3y^3 + 2y^2  + y) - (-y^2 + y)$
+        \item $(z^{10} - z^6 + z^2 + 1) + (z^{10} + 2z^8 - 3z^6) - (z^4 - 3)$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $-x + 1$
+            \item $3y^3 + 2y^2$
+            \item $2z^{10} + 2z^8 - 4z^6 - z^4 + z^2 + 4$
+        \end{enumerate}
+    \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
