@@ -4,7 +4,6 @@
 
 Olemme yhtälöiden yhteydessä käyttäneet merkintää = osoittamaan, että kaksi lukua tai pidempää lauseketta ovat arvoltaan yhtä suuret. Lukujen välillä on olemassa kuitenkin muitakin riippuvuussuhteita eli \emph{relaatioita}. Seuraavia \emph{epäyhtälömerkkejä} käytetään kuvaamaan yhtäsuuruudesta poikkeavia kahden reaaliluvun välisiä yhteyksiä:
 
-
 \begin{tabular}{ll}
 lukujen välinen yhteys & lausumistapa \\
 $a<b$ &  "$a$ on pienempi kuin $b$"\\
@@ -27,23 +26,19 @@ $a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
 
-
-Yleensä \termi[epäyhtälöistä]{epäyhtälö} puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita. \todo{Onko väliviivaa käytetty tässä lauseessa oikein?} Kielteisten muotojen käyttö on harvinaista.
+Yleensä \termi[epäyhtälöistä]{epäyhtälö} puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään ''pienempi kuin''- ja ''pienempi tai yhtä suuri kuin'' -merkkiä ja niiden vastineita.
 
 \section{Epäyhtälöiden teoriaa}
 
-Yhtälö voi olla:
+Epäyhtälöt käyttäytyvät monessa mielessä yhtälön tavoin. Yhtälö tai epäyhtälö voi olla:
 
 \begin{enumerate}
-\item Aina tosi (identtisesti tosi). Tällöin yhtälö esittää väitteen, joka pitää aina paikkansa jokaisessa tilanteessa. Esimerkiksi $\pi=\pi$ on aina tosi.
-\item Joskus tosi eli ehdollisesti tosi (ehdollisesti tosi). Yhtälö pätee vain tietyissä tilanteissa, yleensä vain tietyillä jonkun muuttujan arvoilla. Esimerkiksi $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$.
-\item Aina epätosi (identtisesti epätosi). Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ on aina epätosi.
+\item Aina tosi (identtisesti tosi). Tällöin yhtälö esittää väitteen, joka pitää aina paikkansa jokaisessa tilanteessa. Esimerkiksi $\pi=\pi$ tai $x-5\leq x$ ovat aina tosia.
+\item Joskus tosi eli ehdollisesti tosi (ehdollisesti tosi). Yhtälö pätee vain tietyissä tilanteissa, yleensä vain tietyillä jonkun muuttujan arvoilla. Esimerkiksi $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$. Epäyhtälö $x-2<2-x$ pätee vain negatiivisilla x:n arvoilla.
+\item Aina epätosi (identtisesti epätosi). Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ tai epäyhtälö $x < x-1$ ovat aina epätosia.
 \end{enumerate}
 
-[[tuo edelliseen yhtälölukuun?]]
-
-
-Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä
+Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus -- toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin kohta, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä.
 
 Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys (eli epäyhtälön totuusarvo) säilyy. Testataan ensin peruslaskutoimituksia. Havainnollistetaan lukusuoralla tilannetta, jossa epäyhtälön molemmille puolille lisätään luku 4:
 
@@ -124,9 +119,10 @@ Negatiivisella luvulla kertominen (tai jakaminen) siis käänsi suuruusjärjesty
 Epäyhtälöstä $2<3$ siis \textit{ei} seuraa, että $-2<-3$, vaan $-2>-3$!
 
 Kaikille epäyhtälöille pätee seuraava erittäin tärkeä tulos:
-LAATIKKO: Jos epäyhtälö kerrotaan tai jaetaan negatiivisella luvulla, epäyhtlömerkki kääntyy.
 
-Lisäksi mainitaan, että nollalla kertominen ei säilytä epäyhtälöä totena, ellei käytetty epäyhtälömerkki hyväksy myös yhtäsuuruutta (esimerkiksi esimerkiksi $\leq$). Koska mikä tahansa luku kerrottuna nollalla antaa nollan, olisivat molemmat epäyhtälön puolet nolla kertomisen jälkeen yhtä suuret.
+\laatikko{Jos epäyhtälö kerrotaan tai jaetaan negatiivisella luvulla, epäyhtlömerkki kääntyy.}
+
+Lisäksi mainitaan, että nollalla kertominen ei säilytä epäyhtälöä totena, ellei käytetty epäyhtälömerkki hyväksy myös yhtäsuuruutta (esimerkiksi esimerkiksi $\leq$). Tällöinkään epäyhtälön kertominen puolittain nollalla ei ole ratkaisun etsimisen kannalta mielekästä. Koska mikä tahansa luku kerrottuna nollalla antaa nollan, olisivat molemmat epäyhtälön puolet nollalla kertomisen jälkeen yhtä suuret alkuperäisestä yhtälöstä riippumatta.
 
 \textbf{Esimerkki epäyhtälön käsittelystä}
 \begin{align*}
@@ -187,7 +183,7 @@ d) Epäyhtälöt $-100<k\leq 0$ ja $u\leq 90$ ovat puoliavoimia välejä, koska 
 Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö.
 
 
-\begin{tabular}{|c|p{2cm}|p{2cm}|c|}
+\begin{tabular}{|c|p{2.5cm}|p{2.5cm}|c|}
 \hline
 Välin nimitys & epäyhtälö\-merkintä & joukko-opillinen merkintä & \\
 \hline
@@ -217,10 +213,8 @@ Samoin kuin yhtälöiden kohdalla, epäyhtälö pyritään muuttamaan niin yksin
 
 %Kokeilemalla tai vähän miettimällä on helppoa huomata, että epäyhtälöiden ratkaisemisessa voi käyttää suurelta osin samanlaisia menetelmiä kuin yhtälön ratkaisemisessa. Helposti huomataan, että myös epäyhtälöön voidaan lisätä puolittain jotakin tai siitä voidaan vähentää puolittain jotakin. Samoin epäyhtälö voidaan kertoa tai jakaa puolittain positiivisella luvulla. Negatiivisella luvulla jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
 
-\textbf{Esimerkki}
-Ratkaise epäyhtälö $2x+1<0$.
-
-\textbf{Ratkaisu}
+\begin{esimerkki}
+Ratkaistaan epäyhtälö $2x+1<0$.
 \begin{align*}
 2x+1<0 \ \ \ \ \ &&\ppalkki -1 \\
 2x<-1 \ \ \ \ \ &&\ppalkki :2 \\
@@ -231,14 +225,16 @@ Epäyhtälön ratkaisu voidaan esittää myös muodossa $x \in ]-\infty, -\frac{
 
 Ratkaisua voidaan motivoida myös graafisesti tutkimalla lausekkeeseen 2x+1 liittyvää kuvaajaa:
 
-\missingfigure{funktion f(x)=2x+1 kuvaaja}
+\begin{kuvaajapohja}{1}{-2}{2}{-2}{2}
+	\kuvaaja{2*x+1}{$f(x)=2x+1$}{red}
+\end{kuvaajapohja}
+
+\end{esimerkki}
 
 Alkuperäinen epäyhtälö $2x+1<0$ vaatii, että lauseke $2x+1$ saa negatiivisia arvoja. Kuvasta tämä on mahdollista nähdä niinä kaikkina $x$:n arvoina, joilla funktion $2x+1$ kuvaaja laskee vaaka-akselin alapuolelle. Tällöin funktio eli toisaalta lauseke $2x+1$ saa negatiivisia arvoja
 
-\textbf{Esimerkki}
-Millä $w$:n arvoilla pätee $-8w-(8-w)\geq w:2+5$?
+\begin{esimerkki}Selvitetään, millä $w$:n arvoilla pätee $-8w-(8-w)\geq w:2+5$?
 
-\textbf{Ratkaisu}
 \begin{align*}
 -8w-(8-w)&\geq w:2+5 \\
 -8w-8+w&\geq w:2+5 \\
@@ -253,13 +249,13 @@ w&\leq -1\frac{11}{15}
 \end{align*}
 
 Vastaus: $w\leq -1\frac{11}{15}$
+\end{esimerkki}
 
 Ensimmäisen asteen polynomiepäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkki kääntyy toisin päin.
 
-\textbf{Esimerkki}
-Ratkaise epäyhtälö $1\leq q+7<-5q+4$.
+\begin{esimerkki}
+Ratkaistaan epäyhtälö $1\leq q+7<-5q+4$.
 
-\textbf{Ratkaisu}
 Tässä on itse asiassa kaksi epäyhtälöä $1\leq q+7$ ja $q+7<-5q+4$. Haluamme siis löytää ne $q$:n arvot, joilla molemmat epäyhtälöt pätevät.
 \begin{align*}
 1&\leq q+7 \ \ \ \ \ &&\ppalkki -7 \\
@@ -273,20 +269,14 @@ q+7&<-5q+4  \ \ \ \ \ &&\ppalkki +5q \\
 q&< -\frac12 \\
 \end{align*}
 
-\todo{kaksi lukusuoraa, joilla esitetään noiden erillisten epäyhtälöiden ratkaisujoukko}
-\begin{lukusuora}{-8}{2}{6}
-	\lukusuoravalisa{-6}{}{$-6$}{}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuoravaliaa{}{-0.5}{}{$-\frac12$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuoravalisa{-6}{-0.5}{$-6$}{$-\frac12$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
-
-
 Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\frac12$ eli $q\in [-6, -\frac12[$.
+
+\begin{tabular}{cc}
+\begin{lukusuora}{-8}{2}{6} \lukusuoravalisa{-6}{}{$-6$}{} \lukusuorapystyviiva{0}{$0$} \end{lukusuora} & $-6\leq q$ \\
+\begin{lukusuora}{-8}{2}{6} \lukusuoravaliaa{}{-0.5}{}{$-\frac12$} \lukusuorapystyviiva{0}{$0$} \end{lukusuora} & $q< -\frac12$ \\
+\begin{lukusuora}{-8}{2}{6} \lukusuoravalisa{-6}{-0.5}{$-6$}{$-\frac12$} \lukusuorapystyviiva{0}{$0$} \end{lukusuora} & $-6\leq q < -\frac12$ \\
+\end{tabular}
+\end{esimerkki}
 
 \Harjoitustehtavat
 
