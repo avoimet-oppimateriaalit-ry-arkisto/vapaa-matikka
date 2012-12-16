@@ -6,22 +6,36 @@ samanasteiset termit lasketaan yhteen. Toisin sanoen polynomi on sievennetty
 mahdollisimman pitkälle, kun kaikki samanasteiset polynomin termit
 (vakiotermit mukaanlukien) on laskettu yhteen.
 
+Samanasteisten termien yhteenlasku perustuu siihen, että vakiokerroin voidaan
+ottaa yhteiseksi tekijäksi:
+\[
+ax^n+bx^n=(a+b)x^n
+\]
+esimerkiksi seuraavasti:
+\[
+5x^n-2x^n=(5-2)x^n=3x^n.
+\]
+
+
 \begin{esimerkki}
+Lasketaan polynomit $P(x)=x+5$ ja $Q(x)=3x-1$ yhteen:
     \begin{align*}
-        (\textcolor{red}{x}+5) + (\textcolor{red}{3x}-1) &= \textcolor{red}{x} + 5 + 
+        P(x)+Q(x)=x+5 + 3x-1 &= \textcolor{red}{x} + 5 + 
         \textcolor{red}{3x} - 1 \\
         &= \textcolor{red}{4x} + 4
     \end{align*}
+Lasketaan polynomit $R(x)=x^2+2x$ ja $S(x)=-3x^2+x$ yhteen:
     \begin{align*}
-        (\textcolor{blue}{\uline{x^2}} + \textcolor{red}{2x}) 
-            + (\textcolor{blue}{\uline{-3x^2}} + \textcolor{red}{x}) 
+        R(x)+S(x)=\uline{x^2} + 2x 
+            + (\uline{-3x^2} + x)
         &= \textcolor{blue}{x^2} + \textcolor{red}{2x} - \textcolor{blue}{3x^2} 
             + \textcolor{red}{x} \\
         &= \textcolor{blue}{-2x^2} + \textcolor{red}{3x}
     \end{align*}
+Vähennetään polynomit $T(x)=14x^3+69$ ja $U(x)=3x^3+2x^2+x$ toisistaan:
     \begin{align*}
-        (\textcolor{green}{\uuline{14x^3}} + 69) - (\textcolor{green}{\uuline{3x^3}} + 
-            \textcolor{blue}{\uline{2x^2}} + \textcolor{red}{x}) 
+        T(x)-U(x)=\uuline{14x^3} + 69 - (\uuline{3x^3} + 
+            \uline{2x^2} + x) 
         &= \textcolor{green}{14x^3} + 69 - \textcolor{green}{3x^3} - 
             \textcolor{blue}{2x^2} - \textcolor{red}{x} \\
         &= \textcolor{green}{11x^3} - \textcolor{blue}{2x^2} - \textcolor{red}{x} + 69
