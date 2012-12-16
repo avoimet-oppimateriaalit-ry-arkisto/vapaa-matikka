@@ -28,7 +28,7 @@ $a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
 
-Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita.
+Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita. Kielteisten muotojen käyttö on harvinaista.
 
 \section{Epäyhtälöiden teoriaa}
 
@@ -40,19 +40,9 @@ Yhtälö voi olla:
 \item Aina epätosi. Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ on aina epätosi.
 \end{enumerate}
 
-Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaa, että epäyhtälöissä sama ei täysin päde, koska esimerkiksi $-1$:llä kertominen edellyttää epäyhtälön suuruusvertailumerkin kääntämistä.
+Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä
 
-Intuitiivisesti tämä on ymmärrettävissä helposti vaaka-esimerkin avulla: jos
-vaaka on tasapainossa, niin se pysyy edelleen tasapainossa, jos molemmille
-puolille laitetaan samansuuruinen paino, tai poistetaan molemmilta puolilta
-yhtä paljon. Tämä siis täysin riippumatta siitä, kuinka erilaisia eri
-vaakakupeissa olevat kuormat ovat, kunhan ne painavat yhtä paljon.
-
-Jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy. Testataan ensin peruslaskutoimituksia:
-
-Lisätään molemmille puolille jokin positiivinen luku, 4
-
-Havainnollistetaan lukusuoralla:
+Jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy. Testataan ensin peruslaskutoimituksia. Havainnollistetaan lukusuoralla tilannetta, jossa epäyhtälön molemmille puolille lisätään luku 4:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -67,7 +57,9 @@ Havainnollistetaan lukusuoralla:
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-vähennyslasku
+Huomataan, että positiivisen luvun lisääminen vain siirtää lukuja lukusuoralla oikealle, mutta säilyttää niiden järjestyksen. Epäyhtälöstä $2<3$ siis seuraa $2+4<3+4$ eli $6<7$.
+
+Myös vähennyslasku, joka voidaan käsittää negatiivisen luvun lisäämisenä, säilyttää pitää epäyhtälön totena:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
@@ -82,7 +74,7 @@ vähennyslasku
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-kertominen positiivisella luvulla
+Tarkastellaan seuraavaksi kerto- ja jakolaskua, joista löydämme poikkeuksen. Epäyhtälön puolten kertominen positiivisella luvulla skaalaa lukusuoran lukuja, mutta sekin säilyttää suuruusjärjestyksen:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -96,6 +88,8 @@ kertominen positiivisella luvulla
 	\lukusuorapiste{9}{$3\cdot 3$}
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
+
+
 
 \textbf{Esimerkki 2}
 \begin{align*}
@@ -176,8 +170,7 @@ w&\leq -1\frac{11}{15}
 
 Vastaus: $w\leq -1\frac{11}{15}$
 
-Epäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla
-jaettaessa tai kerrottaessa merkki kääntyy toisin päin.
+Ensimmäisen asteen polynomiepäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkki kääntyy toisin päin.
 
 \textbf{Esimerkki 3}
 Ratkaise yhtälö $1\leq q+7<-5q+4$.
