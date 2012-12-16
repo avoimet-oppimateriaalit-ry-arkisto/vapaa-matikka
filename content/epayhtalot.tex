@@ -1,5 +1,4 @@
 \chapter{Epäyhtälöt}
-(Joonas kirjoittaa aamuyöllä loppuun)
 
 \section{Epäyhtälömerkit}
 
@@ -28,7 +27,7 @@ $a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
 
-Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita.
+Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita. Kielteisten muotojen käyttö on harvinaista.
 
 \section{Epäyhtälöiden teoriaa}
 
@@ -40,19 +39,12 @@ Yhtälö voi olla:
 \item Aina epätosi (identtisesti epätosi). Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ on aina epätosi.
 \end{enumerate}
 
-Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaa, että epäyhtälöissä sama ei täysin päde, koska esimerkiksi $-1$:llä kertominen edellyttää epäyhtälön suuruusvertailumerkin kääntämistä.
+[[tuo edelliseen yhtälölukuun?]]
 
-Intuitiivisesti tämä on ymmärrettävissä helposti vaaka-esimerkin avulla: jos
-vaaka on tasapainossa, niin se pysyy edelleen tasapainossa, jos molemmille
-puolille laitetaan samansuuruinen paino, tai poistetaan molemmilta puolilta
-yhtä paljon. Tämä siis täysin riippumatta siitä, kuinka erilaisia eri
-vaakakupeissa olevat kuormat ovat, kunhan ne painavat yhtä paljon.
 
-Jokainen epäyhtälö on väite, jolla on totuusarvo. Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys säilyy. Testataan ensin peruslaskutoimituksia:
+Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus – toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä
 
-Lisätään molemmille puolille jokin positiivinen luku, 4
-
-Havainnollistetaan lukusuoralla:
+Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys (eli epäyhtälön totuusarvo) säilyy. Testataan ensin peruslaskutoimituksia. Havainnollistetaan lukusuoralla tilannetta, jossa epäyhtälön molemmille puolille lisätään luku 4:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -67,7 +59,9 @@ Havainnollistetaan lukusuoralla:
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-vähennyslasku
+Huomataan, että positiivisen luvun lisääminen vain siirtää lukuja lukusuoralla oikealle, mutta säilyttää niiden järjestyksen. Epäyhtälöstä $2<3$ siis seuraa $2+4<3+4$ eli $6<7$.
+
+Myös vähennyslasku, joka voidaan käsittää negatiivisen luvun lisäämisenä, säilyttää pitää epäyhtälön totena:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
@@ -82,7 +76,7 @@ vähennyslasku
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-kertominen positiivisella luvulla
+Tarkastellaan seuraavaksi kerto- ja jakolaskua, joista löydämme erään tärkeän poikkeuksen. Epäyhtälön puolten kertominen tai jakaminen positiivisella luvulla skaalaa lukusuoran lukuja, mutta sekin säilyttää suuruusjärjestyksen:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -97,7 +91,43 @@ kertominen positiivisella luvulla
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-\textbf{Esimerkki 2}
+\begin{lukusuora}{-1}{10}{12}
+	\lukusuoranuolialas{2}{1}
+	\lukusuoranuolialas{3}{1.5}
+
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{3}{$3$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{1}{$2 \cdot \frac{1}{2}$}
+	\lukusuorapiste{1.5}{$3 \cdot \frac{1}{2}$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Epäyhtälön puolittainen kertominen tai jakaminen negatiivisella luvulla aiheuttaa lukusuoralla peilauksen nollan suhteen:
+
+\begin{lukusuora}{-6}{10}{6}
+	\lukusuoranuolialas{2}{-2}
+	\lukusuoranuolialas{3}{-3}
+
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{3}{$3$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{-2}{$2\cdot -1$}
+	\lukusuorapiste{-3}{$3 \cdot -1$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Negatiivisella luvulla kertominen (tai jakaminen) siis käänsi suuruusjärjestyksen.
+Epäyhtälöstä $2<3$ siis \textit{ei} seuraa, että $-2<-3$, vaan $-2>-3$!
+
+Kaikille epäyhtälöille pätee seuraava erittäin tärkeä tulos:
+LAATIKKO: Jos epäyhtälö kerrotaan tai jaetaan negatiivisella luvulla, epäyhtlömerkki kääntyy.
+
+Lisäksi mainitaan, että nollalla kertominen ei säilytä epäyhtälöä totena, ellei käytetty epäyhtälömerkki hyväksy myös yhtäsuuruutta (esimerkiksi esimerkiksi $\leq$). Koska mikä tahansa luku kerrottuna nollalla antaa nollan, olisivat molemmat epäyhtälön puolet nolla kertomisen jälkeen yhtä suuret.
+
+\textbf{Esimerkki epäyhtälön käsittelystä}
 \begin{align*}
 4&<6  \ \ \ \ \ &&\ppalkki +4 \\
 8&<10 &&\ppalkki \cdot 5 \\
@@ -107,57 +137,100 @@ kertominen positiivisella luvulla
 \end{align*}
 
 Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö säilyy aivan kuin
-yhtälökin, kun sama toimitus tehdään epäyhtälön kummallekin puolelle.
+yhtälökin, kun sama laskutoimitus tehdään epäyhtälön kummallekin puolelle.
 Viimeisessä vaiheessa huomataan kuitenkin, että negatiivisella luvulla
 kerrottaessa epähtälön keskellä oleva merkki pitää kääntää toisin päin, että
 epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat kerrotaan
-$-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhälö kääntyykin toisin päin.
+$-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhtälö kääntyykin toisin päin.
 
-Esimerkki
-
-Toteuttaako luku epäyhtälön...
+Yleisemmin pätee: jos epäyhtälön puoliin käytetään \emph{kasvavaa funktiota}, esitetty suuruusjärjestys säilyy. Jos epäyhtälön puoliin käytetään \emph{vähenevää funktiota}, epäyhtälömerkki täytyy kääntää. Tähän yleisempään käsittelyyn ja monimutkaisempien laskutoimitusten kuten potenssiin korottamisen ja juurenotton käyttöön epäyhtälöiden ratkaisemisessa palataan myöhemmissä luvuissa ja myöhemmillä kursseilla.
 
 \section{Reaalilukuvälit}
 
-Kun ratkaistaan epäyhtälöstä tuntematon, se pyritään.... ....
+Epäyhtälöiden ratkaisemissa on oleellista ymmärtää, että yhtälöiden kuten $x^3-2x=0$ ratkaisuna saadaan yleensä äärellinen määrä yksittäisiä, erillisiä lukuja:
 
-vastauksena ei yksittäisiä lukuja kuten yhtälöiden tapauksissa, vaan epäyhtälön toteuttaa moni luku! Jopa ääretön! ...
+$x^3-2x=0$
+$x(x^2-2)=0$
+$x=0$ tai $x^2=2$
+$x=0$ tai $x=\pm \sqrt{2}$
 
+Mainittu yhtälö siis pitää paikkansa vain ja ainoastaan kolmella $x$:n arvolla. Epäyhtälöiden tapauksessa on mahdollista, että epäyhtälön avulla esitetyn ehdollisen väitteen toteuttaa äärettömän monta lukua!
+
+\textbf{Esimerkki}
+Epäyhtälö $t \leq 2$ toteutuu, kun $t=1$, sillä $1<2$. Epäyhtälö toteutuu myös esimerkiksi $t$:n arvoilla $2, 0, -\pi, -71,8, -10^100, ...$ – kaikilla reaaliluvuilla, jotka ovat pienempiä tai yhtä suuria kuin 2.
+
+Esitetään tämä ratkaisujoukko vielä lukusuoralla:
+
+\todo{ratkaisujoukon esittäminen lukusuoralla (musta pallukka päätyyn)}
+\begin{lukusuora}{-6}{10}{6}
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Edellisen esimerkkiepäyhtälön kaikkien ratkaisujen joukon voi esittää myös seuraavasti: $t \in ]-\inf, 2]$. Tällaisessa \emph{reaalilukuvälin} merkinnässä ilmoitetaan muuttujalle sen pienin ja suurin mahdollinen arvo. Alhaalta (eli lukusuoralla vasemmalta) epäyhtälön toteuttavia $t$:n arvoja ei rajoita mikään, eli $x$ voi saada mielivaltaisen pieniä arvoja. Tämän vuoksi alarajan merkintänä käytetään miinus ääretöntä.
+
+Merkinnässä hakasulkujen suunta kertoo, voiko muuttuja oikeasti saavuttaa mainitut rajat. Ääretön ei ole luku, jota voisi saavuttaa, ja tämän vuoksi hakasulje on auki ulospäin. Sen sijaan epäyhtälö $t \leq 2$ kyllä sallii sen, että $t$ saa täsmälleen arvon kaksi, jolloin hakasulje osoittaa sisäänpäin.
+
+\textbf{Esimerkki}
+a) Epäyhtälön $x>\pi$ antaman rajoituksen $x$:n arvoille voi esittää myös muodossa $x \in ]\pi, \inf[$. \\
+b) Väite $t \geq 3$ on yhtäpitävä väitteen $t \in [3, \inf]$ kanssa.
+c) $y<0$ tarkoittaa samaa kuin $y \in ]-\inf,0[$.
+
+Välejä kutsutaan joko \emph{avoimiksi}, \emph{puoliavoimiksi} tai \emph{suljetuiksi} sen perusteella, saavuttaako muuttuja annetut rajat. Jos muuttujaa on rajattu sekä ala- että yläpuolelta, päädytään käyttämään niin sanottua \emph{kaksoisepäyhtälöä}.
+
+\textbf{Esimerkki}
+a) Epäyhtälö $2<x<10$ vaatii, että $x$ saa arvoja kahden ja kymmenen väliltä, mutta se ei koskaan saa täsmälleen näitä reuna-arvoja. Kyseessä on avoin väli kahdesta kymmeneen, $]2,10[$. Annetulle epäyhtälölle yhtäpitävä ilmaisu on $x \in ]2,10[$.
+b) Epäyhtälö $0\leq y \leq 2$ rajaa muuttujan $y$ välille suljetulle välille $[0,2]$. Väli on suljettu, koska $y$ voi myös saada täsmälleen arvot $0$ ja $2$.
+c) Joskus kirjallisuudessa näkee äärettömyyssymbolin käyttöä myös kaksoisepäyhtälöissä, esimerkiksi $3<x<\inf$, mutta ilmaistaan yleisemmin muodossa $x \in ]3,\inf[$. Kyseessä on avoin väli.
+d) Epäyhtälöt $-100<k\leq 0$ ja $u\leq 90$ ovat puoliavoimia välejä, koska ne rajaavat muuttujan yhtäsuuruuden avulla vain toiselta puolelta.
+
+Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö.
+
+\todo{reaalilukuvälitaulukkoon myös lukusuoraesitykset!}
+\todo{reaalilukuvälitaulukkoon myös äärettömyysesimerkit}
+\begin{tabular}{|c|c|c|}
+\hline 
+Välin nimitys & epäyhtälömerkintä & joukko-opillinen merkintä \\ 
+\hline 
+Avoin väli & $-3<x<5$ & $x \in ]-3,5[$ \\ 
+\hline 
+Puoliavoin väli & $-3<x \leq 5$ & $x \in ]-3,5]$ \\ 
+\hline 
+Puoliavoin väli & $-3\leq x < 5$ & $x \in [-3,5[$ \\ 
+\hline 
+Suljettu väli & $-3\leq x \leq 5$ & $x \in [-3,5]$ \\ 
+\hline 
+\end{tabular} 
+
+\todo{välimerkintöjen muunnostehtäviä}
 
 \section{Ensimmäisen asteen epäyhtälö}
 
 Erityisesti harjoittelemme 1. asteen epäyhtälöiden ratkaisemista ja myöhemmin yleisesti polynomiepäyhtälöiden ratkaisemista.
-\textbf{Esimerkki 1}
+
+Samoin kuin yhtälöiden kohdalla, epäyhtälö pyritään muuttamaan niin yksinkertaiseen muotoon kuin mahdollista, jotta yksinkertaisesta tilanteesta nähdään välittömästi, mitkä luvut kuuluvat ratkaisuun ja mitkä eivät. Tuntemattomat pyritään yhdistämään, ja epäyhtälöä muokataan niin, että tuntematon saadaan yksin omalle puolelleen yhtälöä.
+
+%Kokeilemalla tai vähän miettimällä on helppoa huomata, että epäyhtälöiden ratkaisemisessa voi käyttää suurelta osin samanlaisia menetelmiä kuin yhtälön ratkaisemisessa. Helposti huomataan, että myös epäyhtälöön voidaan lisätä puolittain jotakin tai siitä voidaan vähentää puolittain jotakin. Samoin epäyhtälö voidaan kertoa tai jakaa puolittain positiivisella luvulla. Negatiivisella luvulla jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
+
+\textbf{Esimerkki}
+Ratkaise epäyhtälö $2x+1<0$.
+
+\textbf{Ratkaisu}
 \begin{align*}
-ax^2+bx+c<0 \\
-9 \cdot x+15\geq 0 \\
-1>0>-1
+2x+1<0 \ \ \ \ \ &&\ppalkki -1 \\
+2x<-1 \ \ \ \ \ &&\ppalkki :2 \\
+x<\-frac{1}{2}
 \end{align*}
 
-Samoin kuin yhtälöiden kohdalla, myös epäyhtälöistä halutaan usein selvittää
-tuntemattoman muuttujan arvot. Epäyhtälöllä ratkaisuja on tietysti paljon ja ratkaistaessa
-pyritään löytämään ne kaikki. Käytännössä ratkaiseminen tarkoittaa sitä, että epäyhtälö
-muutetaan niin yksinkertaiseen muotoon kuin mahdollista siten, että yksinkertaisesta epäyhtälöstä
-on helppoa nähdä, mitkä luvut kuuluvat ratkaisuun ja mitkä eivät.
+Epäyhtälön ratkaisu voidaan esittää myös muodossa $x \in ]-\inf, -\frac{1}{2}[$
 
-Kokeilemalla tai vähän miettimällä on helppoa huomata, että epäyhtälöiden ratkaisemisessa
-voi käyttää suurelta osin samanlaisia menetelmiä kuin yhtälön ratkaisemisessa. Helposti huomataan,
-että myös epäyhtälöön voidaan lisätä puolittain jotakin tai siitä voidaan vähentää puolittain jotakin.
-Samoin epäyhtälö voidaan kertoa tai jakaa puolittain positiivisella luvulla. Negatiivisella luvulla
-jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
+Ratkaisua voidaan motivoida myös graafisesti tutkimalla lausekkeeseen 2x+1 liittyvää kuvaajaa:
 
+\missingfigure{funktion f(x)=2x+1 kuvaaja}
 
-Yleisesti pätee seuraava
-	Kasvava/vähenevä funktio
+Alkuperäinen epäyhtälö $2x+1<0$ vaatii, että lauseke $2x+1$ saa negatiivisia arvoja. Kuvasta tämä on mahdollista nähdä niinä kaikkina $x$:n arvoina, joilla funktion $2x+1$ kuvaaja laskee vaaka-akselin alapuolelle. Tällöin funktio eli toisaalta lauseke $2x+1$ saa negatiivisia arvoja
 
-	\missingfigure{Funktion f(x)=2x kuvaaja}
-	\missingfigure{Funktion f(x)=-x+1 kuvaaja}
-
-
-
-Potenssiin korottamisen, juurenottoon ja muiden funktioiden käyttöön epäyhtälöiden ratkaisemisessa palataan myöhemmissä luvuissa ja myöhemmillä kursseilla.
-
-\textbf{Esimerkki 2}
+\textbf{Esimerkki}
 Millä $w$:n arvoilla pätee $-8w-(8-w)\geq w:2+5$?
 
 \textbf{Ratkaisu}
@@ -176,10 +249,9 @@ w&\leq -1\frac{11}{15}
 
 Vastaus: $w\leq -1\frac{11}{15}$
 
-Epäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla
-jaettaessa tai kerrottaessa merkki kääntyy toisin päin.
+Ensimmäisen asteen polynomiepäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkki kääntyy toisin päin.
 
-\textbf{Esimerkki 3}
+\textbf{Esimerkki}
 Ratkaise epäyhtälö $1\leq q+7<-5q+4$.
 
 \textbf{Ratkaisu}
@@ -197,29 +269,6 @@ q&< -\frac12 \\
 \end{align*}
 
 Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\frac12$ eli $q\in [-6, -\frac12[$.
-
-\textbf{Esimerkki 4}
-Ratkaise epäyhtälö $|-5q+4|<5$. POISTA TÄMÄ!
-
-\textbf{Ratkaisu}
-Luvun itseisarvo on pienempi kuin $5$ jos ja vain jos se on $-5$:n ja $5$:n välillä.
-Itseisarvoepäyhtälö voidaan siis jakaa kahdeksi epäyhtälöksi $-5<-5q+4<5$ eli $-5<-5q+4$ ja $-5q+4<5$.
-
-\begin{align*}
--5&<-5q+4 \ \ \ \ \ &&\ppalkki -4 \\
--9&<-5q &&\ppalkki :(-5) \\
-\frac95&>q
-\end{align*}
-Vastaavasti toiselle yhtälölle:
-\begin{align*}
--5q+4&<5  \ \ \ \ \ &&\ppalkki -4 \\
--5q&<1 &&\ppalkki :(-5) \\
-q&>-\frac15 \\
-\end{align*}
-
-(Huomaa missä kohtaa epäyhtälön merkki kääntyi, kun kerrottiin puolittain negatiivisella luvulla.)
-
-Vastaus: $-\frac15<q<\frac95$ eli $q\in ]-\frac15,\frac95[$
 
 \section{Harjoitustehtäviä}
 
