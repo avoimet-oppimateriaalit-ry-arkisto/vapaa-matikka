@@ -1,77 +1,84 @@
-\chapter{Polynomien yhteen- ja vähennyslasku}
-
-Polynomeja voidaan laskea yhteen summaamalla samanasteiset termit. Esimerkiksi polynomien $5x^2-x+5$ ja $3x^2-1$ summa on
-   \begin{align*}
-        (\textcolor{red}{5x^2}-x\textcolor{blue}{{}+5})+(\textcolor{red}{3x^2}\textcolor{blue}{-1}) &=\textcolor{red}{(5+3)x^2}-x\textcolor{blue}{{}+(5-1)}=\textcolor{red}{8x^2}-x\textcolor{blue}{{}+4}.
-    \end{align*}
-Samalla tavalla polynomeja voidaan vähentää toisistaan. Polynomien
-$14x^3+69$ ja $3x^3+2x^2+x$ erotus on
-    \begin{align*}
-        (\textcolor{green}{14x^3} + 69) - (\textcolor{green}{3x^3} \textcolor{blue}{{}+ 2x^2} \textcolor{red}{{}+x})
-        &= \textcolor{green}{14x^3} + 69 \textcolor{green}{{}-3x^3} - 
-            \textcolor{blue}{2x^2} \textcolor{red}{{}-x} \\
-        &= \textcolor{green}{(14-3)x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69 \\
-        &= \textcolor{green}{11x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69
-    \end{align*}
-    
-Samanasteisten termien yhteen- ja vähennyslasku perustuu siihen, että vakiokerroin voidaan
-ottaa yhteiseksi tekijäksi:
-\[
-ax^n+bx^n=(a+b)x^n.
-\]
-    
-\begin{esimerkki}
-Lasketaan polynomit
-$x+1$ ja $3x^2-2x+5$ yhteen:
-   \begin{align*}
-        (x+1)+(3x^2-2x+5) =3x^2-x+6.
-    \end{align*}
-Lasketaan polynomit $-4x^4+3x^3-x$ ja $-3x^3+5x^2+2x$ yhteen:
-   \begin{align*}
-        (-4x^4+3x^3-x)+(-3x^3+5x^2+2x) =-4x^4+5x^2+x.
-    \end{align*}
-Vähennetään polynomit $x+1$ ja $-4x^4+3x^3-x$ toisistaan:
-   \begin{align*}
-        (x+1)-(-4x^4+3x^3-x) =x+1+4x^4-3x^3+x=4x^4-3x^3+2x+1.
-    \end{align*}
-\end{esimerkki}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HUOM! Tämän luvun koko sisältö on siirretty tiedostoon "polynomien_yhteen_ja_vahennyslasku_sisalto.tex".
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%EN AIVAN YMMÄRTÄNYT TÄTÄ
-%Huomaa, että sulkeet voidaan poistaa ja termit yhdistää silloin, kun ne ovat
-%samaa astetta, ihan samaan tapaan kuin sulkeet voidaan poistaa lukujen
-%yhteenlaskussa silloin, kun ne eivät ole tulon tekijöinä.
 
-\section{Harjoitustehtäviä}
 
-\begin{tehtava}
-    Sievennä
-    \begin{enumerate}
-        \item $(2x + 3) + x $
-        \item $(3x - 1) + (-x + 1)$
-        \item $(5x + 10) + (6x - 6) - (x + 3)$
-    \end{enumerate}
-    \begin{vastaus}
-        \begin{enumerate}
-            \item $3x + 3$
-            \item $2x$
-            \item $10x - 1$
-        \end{enumerate}
-    \end{vastaus}
-\end{tehtava}
+%\chapter{Polynomien yhteen- ja vähennyslasku}
+%
+%Polynomeja voidaan laskea yhteen summaamalla samanasteiset termit. Esimerkiksi polynomien $5x^2-x+5$ ja $3x^2-1$ summa on
+%   \begin{align*}
+%        (\textcolor{red}{5x^2}-x\textcolor{blue}{{}+5})+(\textcolor{red}{3x^2}\textcolor{blue}{-1}) &=\textcolor{red}{(5+3)x^2}-x\textcolor{blue}{{}+(5-1)}=\textcolor{red}{8x^2}-x\textcolor{blue}{{}+4}.
+%    \end{align*}
+%Samalla tavalla polynomeja voidaan vähentää toisistaan. Polynomien
+%$14x^3+69$ ja $3x^3+2x^2+x$ erotus on
+%    \begin{align*}
+%        (\textcolor{green}{14x^3} + 69) - (\textcolor{green}{3x^3} \textcolor{blue}{{}+ 2x^2} \textcolor{red}{{}+x})
+%        &= \textcolor{green}{14x^3} + 69 \textcolor{green}{{}-3x^3} - 
+%            \textcolor{blue}{2x^2} \textcolor{red}{{}-x} \\
+%        &= \textcolor{green}{(14-3)x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69 \\
+%        &= \textcolor{green}{11x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69
+%    \end{align*}
+%    
+%Samanasteisten termien yhteen- ja vähennyslasku perustuu siihen, että vakiokerroin voidaan
+%ottaa yhteiseksi tekijäksi:
+%\[
+%ax^n+bx^n=(a+b)x^n.
+%\]
+%    
+%\begin{esimerkki}
+%Lasketaan polynomit
+%$x+1$ ja $3x^2-2x+5$ yhteen:
+%   \begin{align*}
+%        (x+1)+(3x^2-2x+5) =3x^2-x+6.
+%    \end{align*}
+%Lasketaan polynomit $-4x^4+3x^3-x$ ja $-3x^3+5x^2+2x$ yhteen:
+%   \begin{align*}
+%        (-4x^4+3x^3-x)+(-3x^3+5x^2+2x) =-4x^4+5x^2+x.
+%    \end{align*}
+%Vähennetään polynomit $x+1$ ja $-4x^4+3x^3-x$ toisistaan:
+%   \begin{align*}
+%        (x+1)-(-4x^4+3x^3-x) =x+1+4x^4-3x^3+x=4x^4-3x^3+2x+1.
+%    \end{align*}
+%\end{esimerkki}
+%
+%
+%%EN AIVAN YMMÄRTÄNYT TÄTÄ
+%%Huomaa, että sulkeet voidaan poistaa ja termit yhdistää silloin, kun ne ovat
+%%samaa astetta, ihan samaan tapaan kuin sulkeet voidaan poistaa lukujen
+%%yhteenlaskussa silloin, kun ne eivät ole tulon tekijöinä.
 
-\begin{tehtava}
-    Sievennä
-    \begin{enumerate}
-        \item $(x^2 - 2x + 1) + (-x^2 + x) $
-        \item $(3y^3 + 2y^2  + y) - (-y^2 + y)$
-        \item $(z^{10} - z^6 + z^2 + 1) + (z^{10} + 2z^8 - 3z^6) - (z^4 - 3)$
-    \end{enumerate}
-    \begin{vastaus}
-        \begin{enumerate}
-            \item $-x + 1$
-            \item $3y^3 + 2y^2$
-            \item $2z^{10} + 2z^8 - 4z^6 - z^4 + z^2 + 4$
-        \end{enumerate}
-    \end{vastaus}
-\end{tehtava}
+%\section{Harjoitustehtäviä}
+%
+%\begin{tehtava}
+%    Sievennä
+%    \begin{enumerate}
+%        \item $(2x + 3) + x $
+%        \item $(3x - 1) + (-x + 1)$
+%        \item $(5x + 10) + (6x - 6) - (x + 3)$
+%    \end{enumerate}
+%    \begin{vastaus}
+%        \begin{enumerate}
+%            \item $3x + 3$
+%            \item $2x$
+%            \item $10x - 1$
+%        \end{enumerate}
+%    \end{vastaus}
+%\end{tehtava}
+%
+%\begin{tehtava}
+%    Sievennä
+%    \begin{enumerate}
+%        \item $(x^2 - 2x + 1) + (-x^2 + x) $
+%        \item $(3y^3 + 2y^2  + y) - (-y^2 + y)$
+%        \item $(z^{10} - z^6 + z^2 + 1) + (z^{10} + 2z^8 - 3z^6) - (z^4 - 3)$
+%    \end{enumerate}
+%    \begin{vastaus}
+%        \begin{enumerate}
+%            \item $-x + 1$
+%            \item $3y^3 + 2y^2$
+%            \item $2z^{10} + 2z^8 - 4z^6 - z^4 + z^2 + 4$
+%        \end{enumerate}
+%    \end{vastaus}
+%\end{tehtava}
