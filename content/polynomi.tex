@@ -1,72 +1,68 @@
 \chapter{Polynomi}
-Usein hyödyllinen lauseketyyppi on sellainen joka koostuu muuttujan $x$ ja
-vakioiden yhteen- ja kertolaskuista. Tällaisia lausekkeita kutsutaan muuttujan
-$x$ \termi[polynomeiksi]{polynomi}. Esimerkiksi seuraavat lausekkeet ovat muuttujan $x$ polynomeja:
-\begin{itemize}
-\item $24x + 5 - 6x$
-\item $5x^2+7$
-\item $x^4-6x^3+2x^2-x$
-\end{itemize}
 
+\termi[Polynomit]{polynomi} ovat yksinkertaisia laskulausekkeita, joissa esiintyy jokin muuttuja.
+%Usein hyödyllinen lauseketyyppi on sellainen joka koostuu muuttujan $x$ ja vakioiden yhteen- ja kertolaskuista.
+%Tällaisia lausekkeita kutsutaan muuttujan $x$ \termi[polynomeiksi]{polynomi}.
+Esimerkiksi seuraavat lausekkeet ovat muuttujan $x$ polynomeja:
+\begin{itemize}
+\item $5x^2+x-7$
+\item $x^4-6x^3+2x^2-x$
+\item $-24x^{100}$
+\end{itemize}
+Polynomit tunnistaa siitä, että niissä on käytetty vain yhteen-, vähennys- ja kertolaskuja.
+Esimerkiksi seuraavat muuttujan $x$ lausekkeet \emph{eivät ole} polynomeja:
+\begin{itemize}
+\item $2/x$
+\item $\sqrt{x}+2$
+\end{itemize}
 Yleisin muuttujakirjain on $x$, mutta myös muita kirjaimia voidaan käyttää
 muuttujina. Esimerkiksi $2y^5+y^4-1$ on muuttujan $y$ polynomi ja
-$-\epsilon^3+2\epsilon^2-1$ on muuttujan $\epsilon$ polynomi.
+$-A^3+2A^2-1$ on muuttujan $A$ polynomi.
 
-Polynomi voidaan kirjoittaa aina summana jonka yhteenlaskettavat eli
-\termi[termit]{termi} ovat vakion ja muuttujan potenssin tuloja. Termin muuttujan
-eksponenttia kutsutaan termin \termi[asteeksi]{termi!aste}. Erikoistapaus termistä on
-nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}. Polynomin
-\termi[aste]{polynomi!aste} on suurin sen termien asteista.
+Polynomilausekkeet ovat summia, joiden yhteenlaskettavia kutsutaan \termi[termeiksi]{termi}.
+Esimerkiksi polynomin $5x^2+x-7$ termit ovat $5x^2$, $x$ ja $-7$. Jokainen termi on muuttujan potenssi kerrottuna jollakin vakiolla, joka voi olla myös  negatiivinen. Termi voi olla myös \termi[vakiotermi]{vakiotermi}, joka ei sisällä muuttujaa. Esimerkiksi $-7$ on vakiotermi.
 
-Yhden termin polynomia kutsutaan \termi[monomiksi]{monomi} ja kahden termin polynomia
-\termi[binomiksi]{binomi}.
+Yhden ja kahden termin polynomeista käytetään erityisnimityksiä \termi[monomi]{monomi} ja \termi[binomi]{binomi}.
+
+Termin muuttujan eksponenttia kutsutaan termin \termi[asteeksi]{termi!aste}.
+Vakiotermin aste on nolla.
+%Erikoistapaus termistä on nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}.
+Polynomin \termi[aste]{polynomi!aste} on suurin sen termien asteista.
 
 \begin{esimerkki}
-Polynomilausekkeen $2x^4-x^3-7$ termit ovat $2x^4$, $-x^3$ ja $-7$. \\
-$2x^4$ on neljännen asteen termi, $-x^3$ on kolmannen asteen termi ja $-7$ on nollannen
-asteen termi eli vakiotermi. Polynomin aste on siis 4.
-
+Polynomilausekkeen $x^4-2x^3+7$ termit ovat $x^4$, $-2x^3$ ja $5$.
+Ensimmäinen termi $x^4$ on neljännen asteen termi. Termin $-2x^3$ on puolestaan kolme ja vakiotermin $5$ aste on nolla.
+Koko polynomin aste on neljä, koska se on termien asteista suurin.
 \end{esimerkki}
 
-Kuten muutkin yhden muuttujan lausekkeet, myös polynomit määrittelevät
-funktion. Polynomien määrittelemiä funktioita kutsutaan
-\termi[polynomifunktioiksi]{polynomifunktio} tai pelkästään polynomeiksi. Polynomifunktioita
-merkitään usein kirjaimilla $P$, $Q$ tai $R$. Siis samoin kuin muillakin
-funktioilla, merkintä $P(a)$ tarkoittaa polynomin $P$ arvoa kun muuttujan
-paikalle sijoitetaan $a$.
-\todo{Nollapolynomin aste $ = -\infty$?}
+%Huomaa, että polynomilauseke pitää sieventää ennen asteen määrittämistä.
+%Määritetään vaikkapa polynomin $x^5-4x^2+6x^3+3-x^5-x$ aste.
+%Summataan ensin termejä niin, että
+%polynomissa on vain yksi termi jokaista astetta:
+%\[x^5-4x^2+6x^3+3-x^5-x = 6x^3-4x^2-x+3.\]
+%Nyt nähdään, että polynomin aste on 3.
 
-\begin{esimerkki}
-Jos polynomi $P$ on $P(x) = 5x^2-3x+2$,
+%\laatikko{
+%Polynomi $P$, joka on astetta $n$, voidaan aina sieventää muotoon
+%\[P(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0,\]
+%missä $a_0, a_1, \ldots, a_n$ ovat vakioita ja $a_n \neq 0$.
+%}
+
+Polynomi määrittää funktion, jota kutsutaan \termi[polynomifunktioksi]{polynomifunktio}. Esimerkiksi polynomi $2x^2+2x-1$ määrittää funktion $P(x)=2x^2+2x-1$. Tämän funktion arvoja voidaan laskea sijoittamalla lukuja muuttujan $x$ paikalle:
 \begin{align*}
-&P(-3) = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56 \\
-&P(-1) = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
-&P(2) = 5\cdot 2^2-3\cdot 2+2 = 20 - 6 + 2 = 16.
+P(2) & = 5\cdot 2^2-3\cdot 2+2 = 20 - 6 + 2 = 16 \\
+P(-1) & = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
+P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
 \end{align*}
-\end{esimerkki}
 
-Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
-Esimerkiksi jos $P(x) = x^2-x^2+x+1$ ja $Q(x) = x+1$, $P$ ja $Q$ ovat samat
-funktiot koska $x^2 - x^2 = 0$ kaikilla reaaliluvuilla x. Siis saman
-polynomifunktion eri esityksissä lausekkeina suurimman termin aste voi olla
-eri, esimerkiksi $P$:ssä se on 2 ja $Q$:ssa 1. Useimmiten kiinnostavin on
-kuitenkin pienin mahdollinen aste, jolloin polynomifunktion $P$ aste olisi
-myös 1.
+%Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
+%Esimerkiksi jos $P(x) = x^2-x^2+x+1$ ja $Q(x) = x+1$, $P$ ja $Q$ ovat samat
+%funktiot koska $x^2 - x^2 = 0$ kaikilla reaaliluvuilla x. Siis saman
+%polynomifunktion eri esityksissä lausekkeina suurimman termin aste voi olla
+%eri, esimerkiksi $P$:ssä se on 2 ja $Q$:ssa 1. Useimmiten kiinnostavin on
+%kuitenkin pienin mahdollinen aste, jolloin polynomifunktion $P$ aste olisi
+%myös 1.
 
-\begin{esimerkki}
-Polynomilausekkeessa
-\[P(x) = x^5-4x^2+6x^3+3-x^5-x\]
-korkeimman asteen termin aste on 5, mutta jos polynomi sievennetään niin, että
-esityksessä on vain yksi termi jokaista astetta, saadaan että
-\[P(x) = 6x^3-4x^2-x+3.\]
-Siis polynomifunktion $P$ aste on 3.
-\end{esimerkki}
-
-\laatikko{
-Polynomi $P$, joka on astetta $n$, voidaan aina sieventää muotoon
-\[P(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0,\]
-missä $a_0, a_1, \ldots, a_n$ ovat vakioita ja $a_n \neq 0$.
-}
 
 \section{Harjoitustehtäviä}
 
