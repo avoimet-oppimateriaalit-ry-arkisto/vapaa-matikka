@@ -1,10 +1,10 @@
-\chapter{Paraabelin muoto}
-
-Ville työstää tätä lisää aamulla.
+\chapter{Toisen asteen polynomin kuvaaja}
 
 Tässä pienessä luvussa perustellaan vihdoin, miksi kaikkien toisen asteen funktioiden
 kuvaajat näyttävät samalta. Lisäksi tarkastellaan, mitkä tekijät vaikuttavat kuvaajien
 muotoon.
+
+\underline{Funktio $P(x)=x^2$}
 
 Aloitetaan funktiosta $P(x)=x^2$. Mitä tiedämme siitä piirtämättä kuvaajaa?
 \begin{itemize}
@@ -25,15 +25,26 @@ Tässä kuvaaja nyt on:
   \kuvaaja{x**2}{$f(x)=x^2$}{blue}
 \end{kuvaajapohja}
 \end{center}
-Kuvaajan muoto on geometriselta nimeltään \emph{paraabeli}. Paraabeleja esiintyy monessa yhteydessä: esimerksi polttopeilin pinta kaarautuu paraabelin muotoisena. Samoin ilmaan heitetyn kappaleen
+Kuvaajan muoto on geometriselta nimeltään \emph{paraabeli}. Paraabeleja esiintyy monessa yhteydessä: esimerksi polttopeilin pinta kaareutuu paraabelin muotoisena. Samoin ilmaan heitetyn kappaleen
 rata on likimain (ylösalainen) paraabeli, kun ilmanvastus on pieni.
 
-Polynomien $P(x)=ax^2$ arvot ovat ovat lausekkeeseen $x^2$ nähden $a$-kertaisia. Paraabelin symmetrisyys ja muut keskeiset ominaisuuden siis säilyvät. Kun
-$a > 0$, myös $ax^2\geq 0$, joten pienin arvo on yhä $0$. Kun $a < 0$, tulon merkkisäännön nojalla
-$ax^2 \leq 0$. Nyt $P(0)=0$ onkin suurin arvo, ja funktion arvot ovat sitä pienempiä,
-mitä enemmän $x$ poikkeaa nollasta.
+\underline{Funktio $P(x)=ax^2, \quad a\neq 0$}
+
+Polynomien $P(x)=ax^2$ arvot ovat ovat lausekkeeseen $x^2$ nähden $a$-kertaisia. Paraabelin symmetrisyys ja muut keskeiset ominaisuuden siis säilyvät. 
+
+\begin{itemize}
+\item Kun $a > 0$, myös $ax^2\geq 0$, joten pienin arvo on yhä $0$.\\
+Paraabeli on \termi{ylöspäin aukeava}.
+\item Kun $a < 0$, tulon merkkisäännön nojalla $ax^2 \leq 0$. \\
+ Nyt $P(0)=0$ onkin suurin arvo, ja funktion arvot ovat sitä pienempiä,
+mitä enemmän $x$ poikkeaa nollasta. \\
+Paraabeli on \termi{alaspäin aukeava}.
+\item Mitä enemmän $a$ poikkeaa nollasta, sitä nopeammin funktion arvot
+muuttuvat $x$:n muuttuessa, ja sitä kapeampi paraabeli on.
+\end{itemize}
+
 \begin{center}
-Kun $a>0$, puhutaan ylöspäin aukeavasta paraabelista:\\
+$a>0$, paraabeli aukeaa ylöpäin:\\
 \begin{tabular}{cc}
 $f(x)=\frac{1}{2}x^2$& $f(x)=2x^2$ \\ 
 \begin{kuvaajapohja}{1}{-2}{2}{-1}{4}
@@ -44,7 +55,7 @@ $f(x)=\frac{1}{2}x^2$& $f(x)=2x^2$ \\
 \end{kuvaajapohja}
 \end{tabular}
 
-Kun $a<0$, puhutaan alaspäin aukeavasta paraabelista:\\
+$a<0$, paraabeli aukeaa alaspäin:\\
 \begin{tabular}{cc}
 $f(x)=-\frac{1}{2}x^2$ & $f(x)=-2x^2$ \\
 \begin{kuvaajapohja}{1}{-2}{2}{-4}{1}
@@ -56,14 +67,41 @@ $f(x)=-\frac{1}{2}x^2$ & $f(x)=-2x^2$ \\
 \end{tabular}
 \end{center}
 
+\underline{Funktio $P(x)=ax^2+c$}
+
 Lisäämällä vakiotermin $c$ saadaan $P(x)=ax^2+c$. Vakion lisääminen nostaa tai laskee funktion kuvaajaa (riippuen siitä, onko $c > 0$ tai $c<0$), joten kuvaajan muoto ei muutu.
 
-Miksi sitten täydellisen toisen asteen polynomin $P(x)=ax^2+bx+c$ kuvaaja on myös paraabeli? Täydennetään neliöksi:
+\underline{Funktio $P(x)=ax^2+bx+c$}
+
+Miksi sitten täydellisen toisen asteen polynomin $P(x)=ax^2+bx+c$ kuvaaja on myös paraabeli? Muokataan lauseketta, aloitetaan ottamalla yhteinen tekijä:
 \begin{align*}
-ax^2+bx+c &= a\left(x^2 +\frac{b}{a}x+\frac{c}{a} \right) \\
-&= \text{ Ville jatkaa tästä aamulla...}
+P(x)=ax^2+bx+c &= a\left(x^2 +\frac{b}{a}x\right) + c  \quad &  
+\text{ lavennetaan } \frac{b}{a} \text{ kahdella} \\
+&= a\left(x^2 +2\cdot x \cdot \frac{b}{2a} \quad\right) + c  &  
+\text{ täydennetään neliöksi lisäämällä} \left( \frac{b}{2a} \right)^2 \\
+&= a \Bigg( \underbrace{x^2 +2\cdot x \cdot \frac{b}{2a}+\left(\frac{b}{2a} \right)^2}_{\left( x+\frac{b}{2a} \right)^2}
+- \left(\frac{b}{2a}\right)^2 \Bigg)  + c \\
+&= a \left( \left( x + \frac{b}{2a} \right )^2-\frac{b^2}{4a^2} \right) + c &
+\text{ kerrotaan sulut auki } \\
+&= a \underbrace{\left(  x + \frac{b}{2a} \right)^2}_{\text{neliö}}-
+\underbrace{\frac{b^2}{4a} + c}_{\text{vakio}}
 \end{align*}
 
+Tästä neliöksi täydennetyksi muodosta nähdään, että $P(x)$ on muotoa
+$a\cdot$neliö + vakio. Kuvaaja on siis samanlainen kuin tapauksessa
+$ax^2+c$, huippu on vain siirtynyt.
+Koska neliö $\geq 0$, saadaan
+
+\begin{itemize}
+\item Kun $a>0$, kyseinen vakio on polynomin pienin arvo ja kuvaaja on
+ylöspäin aukeava paraabeli.
+\item Kun $a<0$, kyseinen vakio on suurin arvo ja kuvaaja on alaspäin
+aukeava paraabeli.
+\end{itemize}
+
+Paraabelin \termi{huippu} (eli kuvaajan piste, jossa suurin tai pienin arvo
+saavutetaan) on aina kohdassa
+$x=-\frac{b}{2a}$, koska silloin neliö on nolla.
 
 %Toisen asteen polynomifunktio on muotoa $f(x)=ax^2+bx+c$, jossa $a,b,c \in \mathbb{R}$ ja $a \neq 0$. Toisen asteen polynomifunktion kuvaaja on paraabeli. Toisen asteen polynomifunktioita käytetään matemaattisessa mallinnuksessa talouden, tieteen ja tekniikan aloilla. Esimerkiksi heittoliikkeessä olevan kappaleen lentorata on aina paraabelin muotoinen. \\
 %\textbf{Esimerkki 1.}
@@ -112,13 +150,14 @@ ax^2+bx+c &= a\left(x^2 +\frac{b}{a}x+\frac{c}{a} \right) \\
 %Piirrä funktioiden $f(x)=x^2$, $g(x)=x^2-2$ ja $h(x)=x^2+\frac{3}{2}$ kuvaajat. \\ \\
 %Mitä tapahtuu funktion kuvaajan muodolle, kun vakiotermi $c$ muuttuu? \\ \\
 
+Koottuna:
+
 \laatikko{Toisen asteen polynomifunktion $f(x)=ax^2+bx+c$ kuvaaja on
-\begin{enumerate}
-\item{Ylöspäin aukeava paraabeli, jos $a>0$.}
-\item{Alaspäin aukeava paraabeli, jos $a<0$.}
-\end{enumerate}
-Toisen asteen polynomifunktio leikkaa y-akselin pisteessä $(0,c)$. \\
-Toisen asteen polynomifunktio on sitä kapeampi, mitä suurempi on $|a|$.
+\begin{itemize}
+\item ylöspäin aukeava paraabeli, kun $a>0$
+\item alaspäin aukeava paraabeli, kun $a<0$
+\item sitä kapeampi, mitä suurempi $|a|$ on.
+\end{itemize}
 }
 
 %\textbf{Esimerkki 5.} \\
