@@ -11,23 +11,24 @@ $a<b$ &  "$a$ on pienempi kuin $b$"\\
 $a>b$ & "$a$ on suurempi kuin $b$"\\
 $a \leq b$ & "$a$ on pienempi tai yhtä suuri kuin $b$" \\
 $a \geq b$ & "$a$ on suurempi tai yhtä suuri kuin $b$" \\
+$a\neq b$ & "$a$ ei ole yhtä suuri kuin $b$" \\
 \end{tabular}
 
 Luonnollisen kielen ilmaisu "suurempi tai yhtä suuri kuin" voidaan myös ilmaista
 "vähintään yhtä suuri kuin" ja vastaavasti "pienempi tai yhtä suuri kuin"
 voidaan sanoa "korkeintaan yhtä suuri kuin".
 
-Tutut yhteydet voidaan aina esittää myös kielteisessä muodossa:
+Kaikki yhteydet voi halutessaan esittää myös kielteisessä muodossa:
 
 \begin{tabular}{ll}
-$a\neq b$ & "$a$ ei ole yhtä suuri kuin $b$" \\
 $a \nless b$ &  "$a$ ei ole pienempi kuin $b$"\\
 $a \ngtr b$ & "$a$ ei ole suurempi kuin $b$"\\
 $a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
 
-Yleensä epäyhtälöistä puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita. Kielteisten muotojen käyttö on harvinaista.
+
+Yleensä \termi[epäyhtälöistä]{epäyhtälö} puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään pienempi kuin - ja pienempi tai yhtä suuri kuin -merkkiä ja niiden vastineita. \todo{Onko väliviivaa käytetty tässä lauseessa oikein?} Kielteisten muotojen käyttö on harvinaista.
 
 \section{Epäyhtälöiden teoriaa}
 
@@ -161,10 +162,9 @@ Epäyhtälö $t \leq 2$ toteutuu, kun $t=1$, sillä $1<2$. Epäyhtälö toteutuu
 
 Esitetään tämä ratkaisujoukko vielä lukusuoralla:
 
-\todo{ratkaisujoukon esittäminen lukusuoralla (musta pallukka päätyyn)}
 \begin{lukusuora}{-6}{10}{6}
-	\lukusuorapiste{2}{$2$}
 	\lukusuorapystyviiva{0}{$0$}
+	\lukusuoravalias{}{2}{}{2}
 \end{lukusuora}
 
 Edellisen esimerkkiepäyhtälön kaikkien ratkaisujen joukon voi esittää myös seuraavasti: $t\in ]-\infty, 2]$. Tällaisessa \emph{reaalilukuvälin} merkinnässä ilmoitetaan muuttujalle sen pienin ja suurin mahdollinen arvo. Alhaalta (eli lukusuoralla vasemmalta) epäyhtälön toteuttavia $t$:n arvoja ei rajoita mikään, eli $x$ voi saada mielivaltaisen pieniä arvoja. Tämän vuoksi alarajan merkintänä käytetään miinus ääretöntä.
@@ -186,23 +186,28 @@ d) Epäyhtälöt $-100<k\leq 0$ ja $u\leq 90$ ovat puoliavoimia välejä, koska 
 
 Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö.
 
-\todo{reaalilukuvälitaulukkoon myös lukusuoraesitykset!}
-\todo{reaalilukuvälitaulukkoon myös äärettömyysesimerkit}
-\begin{tabular}{|c|c|c|}
+
+\begin{tabular}{|c|p{2cm}|p{2cm}|c|}
 \hline
-Välin nimitys & epäyhtälömerkintä & joukko-opillinen merkintä \\
+Välin nimitys & epäyhtälö\-merkintä & joukko-opillinen merkintä & \\
 \hline
-Avoin väli & $-3<x<5$ & $x \in ]-3,5[$ \\
+Avoin väli & $-3<x<5$ & $x \in ]-3,5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3<x \leq 5$ & $x \in ]-3,5]$ \\
+Puoliavoin väli & $-3<x \leq 5$ & $x \in ]-3,5]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3\leq x < 5$ & $x \in [-3,5[$ \\
+Puoliavoin väli & $-3\leq x < 5$ & $x \in [-3,5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Suljettu väli & $-3\leq x \leq 5$ & $x \in [-3,5]$ \\
+Suljettu väli & $-3\leq x \leq 5$ & $x \in [-3,5]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+\hline
+Puoliavoin väli & $-3\leq x$ & $x \in ]-3,\infty]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{}{$-3$}{}\end{lukusuora}\\
+\hline
+Avoin väli & $-3<x$ & $x \in ]-3,\infty]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{}{$-3$}{}\end{lukusuora}\\
+\hline
+Puoliavoin väli & $x \leq 5$ & $x \in [-\infty,5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
+\hline
+Avoin väli & $x < 5$ & $x \in [-\infty,5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{}{5}{}{$5$}\end{lukusuora}\\
 \hline
 \end{tabular}
-
-\todo{välimerkintöjen muunnostehtäviä}
 
 \section{Ensimmäisen asteen epäyhtälö}
 
@@ -269,20 +274,41 @@ q&< -\frac12 \\
 \end{align*}
 
 \todo{kaksi lukusuoraa, joilla esitetään noiden erillisten epäyhtälöiden ratkaisujoukko}
-\begin{lukusuora}{-6}{10}{6}
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{5}{$5$}
+\begin{lukusuora}{-8}{2}{6}
+	\lukusuoravalisa{-6}{}{$-6$}{}
 	\lukusuorapystyviiva{0}{$0$}
 \lukusuorauusi
-	\lukusuorapiste{-2}{$-1\cdot 2$}
-	\lukusuorapiste{-5}{$-1\cdot 5$}
+	\lukusuoravaliaa{}{-0.5}{}{$-\frac12$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuoravalisa{-6}{-0.5}{$-6$}{$-\frac12$}
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
 
 Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\frac12$ eli $q\in [-6, -\frac12[$.
 
-\section{Harjoitustehtäviä}
+\Harjoitustehtavat
+
+\begin{tehtava}
+    Esitä joukko-opillisilla merkinnöillä ja piirrä.
+    \begin{enumerate}[a)]
+        \item $-9<x \leq 7$
+        \item $5\leq c$
+        \item $5\leq s \leq 7\frac{1}{2}$
+        \item $5\geq x>1$
+        \item $a<b$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x \in ]-9,7]$
+            \item $c \in [5,\infty]$
+            \item $s \in [5,7\frac{1}{2}]$
+            \item $x \in ]1,5]$
+            \item $a \in ]-\infty,b[$ \quad tai \quad $b \in ]a, \infty[$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
 
 \begin{tehtava}
     Ratkaise seuraavat yhtälöt tai epäyhtälöt.
@@ -339,7 +365,7 @@ Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\fra
 \end{tehtava}
 
 \begin{tehtava}
-    \item Tietyn auton käyttövoimavero on 450 EUR/vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100 km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100 km. Diesel maksaa 1.55 EUR/litra, ja bensiini 1.65 EUR/litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
+	Tietyn auton käyttövoimavero on 450 EUR/vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100 km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100 km. Diesel maksaa 1.55 EUR/litra, ja bensiini 1.65 EUR/litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
     \begin{vastaus}
         \item 8257 km
     \end{vastaus}
