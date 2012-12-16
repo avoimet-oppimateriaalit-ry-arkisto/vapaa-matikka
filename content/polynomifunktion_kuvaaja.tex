@@ -22,7 +22,8 @@ Funktion kuvaajien piirtäminen käsin onnistuu yleensä helpoiten laskemalla fu
 \todo{Joku paremmin latexia osaava voisi järjestää taulukon ja koordinaatiston siistimmin sivulle}
 \begin{esimerkki}
 Lasketaan ensin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja, kartoitetaan ne koordinaatistoon ja piirretään niiden läpi kulkeva kuvaaja.\\
-\begin{tabular}[t]{c c c}
+
+%\begin{tabular}{c c c}
 
 \begin{tabular}{|c|r @{,} l|}
 $x$ & \multicolumn{2}{c|}{$y=f(x)$} \\
@@ -33,12 +34,10 @@ $x$ & \multicolumn{2}{c|}{$y=f(x)$} \\
 0 & -2&0 \\
 1 & -2&5 \\
 2 & -2&0 \\
-3 & -0&5 \\
+3 & -0&5
 \end{tabular}
-
-&
-
-\begin{kuvaajapohja}{0.6}{-4}{4}{-4}{6}
+%
+\begin{kuvaajapohja}{0.6}{-4}{4}{-3}{6}
 \kuvaajapiste{-3}{5.5}
 \kuvaajapiste{-2}{2}
 \kuvaajapiste{-1}{-0.5}
@@ -47,10 +46,8 @@ $x$ & \multicolumn{2}{c|}{$y=f(x)$} \\
 \kuvaajapiste{2}{-2}
 \kuvaajapiste{3}{-0.5}
 \end{kuvaajapohja}
-
-&
-
-\begin{kuvaajapohja}{0.6}{-4}{4}{-4}{6}
+%
+\begin{kuvaajapohja}{0.6}{-4}{4}{-3}{6}
 \kuvaajapiste{-3}{5.5}
 \kuvaajapiste{-2}{2}
 \kuvaajapiste{-1}{-0.5}
@@ -61,7 +58,7 @@ $x$ & \multicolumn{2}{c|}{$y=f(x)$} \\
 \kuvaaja{0.5*x**2-x-2}{$f(x) = \dfrac{1}{2}x^2 - x - 2$}{red}
 \end{kuvaajapohja}
 
-\end{tabular}
+%\end{tabular}
 
 \end{esimerkki}
 
