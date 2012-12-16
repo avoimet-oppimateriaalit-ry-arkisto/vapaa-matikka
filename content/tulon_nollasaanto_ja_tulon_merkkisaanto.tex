@@ -72,6 +72,29 @@ Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
 	Nyt tulon nollasäännö perusteella tiedetään, että $x=0$ tai $yzw=0$. Jos $yzw=0$, niin tulon nollasäännön mukaan $y=0$ tai $zw=0$. Samoin jos $zw=0$, niin $z=0$ tai $w=0$. Näin voidaan päätellä, että vähintään yhden tekijöistä $x$, $y$, $z$ tai $w$ on oltava $0$.
 \end{esimerkki}
 
+
+Tulon nollasääntö on yksi tärkeimmistä syistä siihen, miksi polynomien tekijöihinjako on hyödyllistä.
+
+Jos vaikkapa haluamme ratkaista yhtälön $2x^3-14x^2+32x-24=0$ ja satumme tietämään, että $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$,
+voimme helposti päätellä, että polynomi saa arvon $0$ jos ja vain jos $x-3=0$ tai $x-2=0$. Yhtälön ainoat ratkaisut ovat siis $x=3$ ja $x=2$.
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $6x^3-24x^2+24x=0$ tulon nollasäännön avulla.
+
+\begin{align*}
+6x^3-24x^2+24x &= 0 \\
+6(x^3-6x^2+9x) &= 0 \ \ \ \ &\emph{otetaan $5$ yhteiseksi tekijäksi} \\
+6x(x^2-6x+9) &= 0 &\emph{otetaan $x$ yhteiseksi tekijäksi} \\
+6x(x^2-2\cdot 3\cdot x+3^2)  &= 0 \\
+6x(x-3)^2 &= 0 \\
+6x(x-3)(x-3) &= 0 \\
+x=0 \textrm{\quad tai}& \quad x-3=0 \\
+x=0 \textrm{\quad tai}& \quad x=3
+\end{align*}
+
+Vastaus: $x=0$ tai $x=3$.
+\end{esimerkki}
+
 \section{Harjoitustehtäviä}
 
 \begin{tehtava}

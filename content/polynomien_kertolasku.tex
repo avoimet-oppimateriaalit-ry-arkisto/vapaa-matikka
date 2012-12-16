@@ -25,7 +25,7 @@ Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kerrotaan termeit
 \subsection*{Yleinen kertolasku}
 Kahden polynomin tulo saadaan osittelulailla muotoon jossa kerrotaan polynomia
 monomilla.
-\begin{esimerkki}
+\begin{esimerkki} \todo{Tätä voisi selkeyttää nuolilla ja väreillä.}
 \begin{align*}
 &\hspace{0.5cm}(x^4-3x^3+3)(x^3-2x^2+1) \\
 &= x^4 (x^3-2x^2+1) - 3x^3 (x^3-2x^2+1) + 3 (x^3-2x^2+1) \\
@@ -40,8 +40,6 @@ saadaan kertomalla termi ensimmäisestä ja toinen termi toisesta polynomista.
 
 \missingfigure{Kuva jossa visualisoidaan kivasti termiparien valintaa.}
 
-\subsection*{Polynomin tekijät}
-
 \section{Muistikaavat}
 
 Eräitä polynomien kertolaskuja tarvitaan niin usein, että niitä kutsutaan muistikaavoiksi.
@@ -55,9 +53,7 @@ Eräitä polynomien kertolaskuja tarvitaan niin usein, että niitä kutsutaan mu
     \end{itemize}
 }
 
-\subsection*{Muistikaavojen todistukset}
-
-Todistetaan muistikaavat.
+Nämä kaavat voidaan helposti rodistaa laskemalla.
 
 \subsubsection*{Summan neliö}
 
@@ -114,18 +110,58 @@ Mutta ovatko ne alkutekijöitä, vai voidaanko ne edelleen jakaa pienempiin teki
 Itse asiassa laskemalla voidaan todeta että $2x^2-8x+8$ saadaan tulokseksi kertolaskusta $2(x-2)(x-2)=2(x-2)^2$.
 Voimme siis ilmoitaa polynomin tekijöidensä avulla: $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$.
 
-Mutta miksi haluaisimme jakaa polynomeja tekijöihin?
-Yksi tärkeimmistä hyödyistä liittyy tulon nollasääntöön. Tiedämme nimittäin, että tulo on nolla jos ja vain jos
-jokin tulon tekijöistä on nolla. Jos osaamme jakaa polynomin tekijöihin, pystymme näin helposti päättelemään polynomin nollakohdat.
+Polynomin tekijöitä voi etsiä soveltamalla kertolaskua käänteisesti:
 
-Jos vaikkapa haluamme ratkaista yhtälön $2x^3-14x^2+32x-24=0$ ja satumme tietämään, että $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$,
-voimme helposti päätellä, että polynomi saa arvon $0$ jos ja vain jos $x-3=0$ tai $x-2=0$. Yhtälön ainoat ratkaisut ovat siis $x=3$ ja $x=2$.
+\begin{itemize}
+\item Otetaan korkeimman asteen termin kerroin yhteiseksi tekijäksi: \\
+$5x^4+3x^2+x-9 = 5(x^4+\frac35 x^2+\frac15 x-\frac9)$
+\item Otetaan $x$ tai sen potenssi yhteiseksi tekijäksi, jos mahdollista: \\
+$x^5+x^3+3x^2 = x^2(x^3+x+3)$
+\item Sovelletaan muistikaavaa käänteisesti \\
+$x^2-5=x^2-\sqrt{5}^2=(x+\sqrt{5})(x-\sqrt{5})$ \\
+$x^2+8+16=x^2+2\cdot 4+4^2=(x+4)^2$ \\
+$x^2+1+\frac14=x^2+2\cdot \frac12+(\frac12)^2=(x-\frac12)^2$
+\end{itemize}
 
-% Jokainen reaalikertoiminen polynomi voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
+\begin{esimerkki}
+Jaetaan tekijöihin polynomi $10x^3-20x^2$.
 
-Polynomin jakaminen tekijöihin on siis varsin hyödyllistä. Tekijöihin jakaminen ei aina ole helppoa,
-mutta tässä luvussa käsitellään tapoja, joilla tekijöihin jakaminen monissa tilanteissa onnistuu.
+\begin{align*}
+& 10x^3-20x^2 \\
+=& 10(x^3-2x^2) \ \ \ \ &\emph{otetaan $10$ yhteiseksi tekijäksi} \\
+=& 10x^2(x-2) &\emph{otetaan $x^2$ yhteiseksi tekijäksi} \\
+\end{align*}
+\end{esimerkki}
 
+\begin{esimerkki}
+Jaetaan tekijöihin polynomi $5x^3-20x^2+20x$.
+
+\begin{align*}
+& 5x^3-20x^2+20x \\
+=& 5(x^3-4x^2+4x) \ \ \ \ &\emph{otetaan $5$ yhteiseksi tekijäksi} \\
+=& 5x(x^2-4x+4) &\emph{otetaan $x$ yhteiseksi tekijäksi} \\
+=& 5x(x^2-2\cdot 2x+2^2) \\
+=& 5x(x-1)^2 &\emph{sovelletaan muistikaavaa} \\
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Jaetaan tekijöihin polynomi $5x^7-2\sqrt{15}x^5+3x^3$.
+
+\begin{align*}
+& 5x^7-2\sqrt{15}x^5+3x^3 \\
+=& 5\left(x^7-\frac{2\sqrt{15}}{5}x^5+\frac{3}{5}x^3\right) \ \ \ \ &\emph{otetaan $5$ yhteiseksi tekijäksi} \\
+=& 5\left(x^7-2\sqrt{\frac35}x^5+\frac{3}{5}x^3\right) \\
+=& 5x^3\left(x^4-2\sqrt{\frac35}x^2+\frac{3}{5}\right) &\emph{otetaan $x^3$ yhteiseksi tekijäksi} \\
+=& 5x^3\left((x^2)^2-2\cdot x^2\cdot \sqrt{\frac35}+\sqrt{\frac35}^2\right) & \\
+=& 5x^3\left(x^2-\sqrt{\frac35}\right)^2 &\emph{sovelletaan muistikaavaa} \\
+=& 5x^3\left(x^2-\sqrt[4]{\frac35}^2\right)^2 \\
+=& 5x^3\left(\left(x-\sqrt[4]{\frac35}\right)\left(x+\sqrt[4]{\frac35}\right)\right)^2 &\emph{sovelletaan muistikaavaa} \\
+=& 5x^3\left(x-\sqrt[4]{\frac35}\right)^2\left(x+\sqrt[4]{\frac35}\right)^2 \\
+\end{align*}
+\end{esimerkki}
+
+Myöhemmin tässä kirjassa opitaan myös, miten minkä tahansa polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 
 \section{Harjoitustehtäviä}
 
