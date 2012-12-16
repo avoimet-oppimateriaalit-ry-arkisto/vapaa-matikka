@@ -19,7 +19,7 @@ Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kerrotaan termeit
 \begin{itemize}
     \item $(x+y)(z+w) = xz+xw+yz+yw$
     \item $(ax+by)(x+y) = ax^2+axy+bxy+by^2 = ax^2+(a+b)xy+by^2$
-    \item $(x-5)(x-7) = x^2-5x-5x+35 = x^2-10x+35$
+    \item $(x-5)(x-7) = x^2-7x-5x+35 = x^2-12x+35$
 \end{itemize}
 
 \subsection*{Yleinen kertolasku}
@@ -106,7 +106,7 @@ Eräitä polynomien kertolaskuja tarvitaan niin usein, että niitä kutsutaan mu
     \end{itemize}
 }
 
-Nämä kaavat voidaan helposti rodistaa laskemalla.
+Nämä kaavat voidaan helposti todistaa laskemalla.
 
 \subsubsection*{Summan neliö}
 
@@ -155,19 +155,20 @@ lukuja, joista saadaan $12$ kertomalla ne jollain kokonaisluvulla. Sanotaan myö
 ilmaista niiden tulona ($2\cdot 2\cdot 3 = 2^2\cdot 3 = 12$), mutta näitä tekijöitä ei
 voi enää jakaa pienempiin osatekijöihin. Kokonaisluvun tekijät ovat aina kokonaislukuja.
 
-Vastavasti voidaan puhua polynomin jakamisesta {\bf tekijöihin} tai {\bf alkutekijöihin}. Polynomin tekijät
+Vastaavasti voidaan puhua polynomin jakamisesta \termi{tekijöihin} tai
+\termi{alkutekijöihin}. Polynomin tekijät
 ovat aina polynomeja. Olemme jo oppineet kertomaan polynomeja keskenään,
 joten voimme helposti laskea, että $(x-3)(2x^2-8x+8)=2x^3-14x^2+32x-24$.
 Nyt voidaan sanoa, että $x-3$ ja $2x^2-8x+8$ ovat polynomin $2x^3-14x^2+32x-24$ tekijöitä.
 Mutta ovatko ne alkutekijöitä, vai voidaanko ne edelleen jakaa pienempiin tekijöihin?
 Itse asiassa laskemalla voidaan todeta että $2x^2-8x+8$ saadaan tulokseksi kertolaskusta $2(x-2)(x-2)=2(x-2)^2$.
-Voimme siis ilmoitaa polynomin tekijöidensä avulla: $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$.
+Voimme siis ilmoittaa polynomin tekijöidensä avulla: $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$.
 
 Polynomin tekijöitä voi etsiä soveltamalla kertolaskua käänteisesti:
 
 \begin{itemize}
 \item Otetaan korkeimman asteen termin kerroin yhteiseksi tekijäksi: \\
-$5x^4+3x^2+x-9 = 5(x^4+\frac35 x^2+\frac15 x-\frac9)$
+$5x^4+3x^2+x-9 = 5(x^4+\frac{3}{5} x^2+\frac{1}{5} x-\frac{9}{5}$
 \item Otetaan $x$ tai sen potenssi yhteiseksi tekijäksi, jos mahdollista: \\
 $x^5+x^3+3x^2 = x^2(x^3+x+3)$
 \item Sovelletaan muistikaavaa käänteisesti \\
@@ -214,7 +215,7 @@ Jaetaan tekijöihin polynomi $5x^7-2\sqrt{15}x^5+3x^3$.
 \end{align*}
 \end{esimerkki}
 
-Kaikkien polynomien tekijöihinjakoe ei kuitenkaan näillä menetelmillä onnistu.
+Kaikkien polynomien tekijöihinjako ei kuitenkaan näillä menetelmillä onnistu.
 Myöhemmin tässä kirjassa opitaan, miten minkä tahansa polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 
 \section{Harjoitustehtäviä}
