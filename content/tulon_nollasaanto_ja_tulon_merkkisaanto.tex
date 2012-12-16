@@ -7,17 +7,17 @@ Pitkän matematiikan 1. kurssilta muistetaan seuraava sääntö kahden luvun tul
 \laatikko{
     \emph{Tulon merkkisääntö kahdelle tulontekijälle}
     \begin{itemize}
-		\item Jos tulon tekijät ovat samanmerkkisiä, tulo on positiivinen.
-		\item Jos tulon tekijät ovat erimerkkisiä, tulo on negatiivinen.    
+        \item Jos tulon tekijät ovat samanmerkkisiä, tulo on positiivinen.
+        \item Jos tulon tekijät ovat erimerkkisiä, tulo on negatiivinen.
     \end{itemize}
 }
 
 \begin{esimerkki}{\ }
-\begin{itemize}
-  \item $2\cdot 3 = 6$ (Kahden positiivisen luvun tulo on aina positiivinen.)
-  \item $(-2)\cdot (-3) = 6$ (Kahden negatiivisen luvun tulo on aina positiivinen.)
-  \item $(-2)\cdot 3 = 2\cdot (-3) = -6$ (Positiivisen ja negatiivisen luvun tulo on aina negatiivinen.)
-\end{itemize}
+    \begin{itemize}
+        \item $2\cdot 3 = 6$ (Kahden positiivisen luvun tulo on aina positiivinen.)
+        \item $(-2)\cdot (-3) = 6$ (Kahden negatiivisen luvun tulo on aina positiivinen.)
+        \item $(-2)\cdot 3 = 2\cdot (-3) = -6$ (Positiivisen ja negatiivisen luvun tulo on aina negatiivinen.)
+    \end{itemize}
 \end{esimerkki}
 
 Useasti käytetty merkkisäännöistä saatava tulos on $x^2 \geq 0$.
@@ -38,20 +38,20 @@ Nämä tiedot yhdistämällä saadaan tulon nollasääntö:
 \laatikko{
     \emph{Tulon nollasääntö}
     \begin{itemize}
-   		\item Jos jokin tulon tekijöistä on 0, tulo on 0.    
-   		\item Jos tulo on 0, ainakin yksi tulon tekijöistä on 0.
+   	    \item Jos jokin tulon tekijöistä on 0, tulo on 0.
+   	    \item Jos tulo on 0, ainakin yksi tulon tekijöistä on 0.
     \end{itemize}
 }
 
 Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
 
 \begin{esimerkki} Ratkaistaan yhtälö $(x+5) \cdot x =0 $.
-	\begin{align*}
-	(x+5)\cdot x &=0 \quad || \text{ tulon nollasääntö} \\
-	x +5= 0 \text{ tai } x &=0 \\
-	x= -5 \text{ tai } x &=0.
-	\end{align*}
-	Ratkaisuja oli siis kaksi.
+    \begin{align*}
+        (x+5)\cdot x &=0 \quad || \text{ tulon nollasääntö} \\
+        x +5= 0 \text{ tai } x &=0 \\
+        x= -5 \text{ tai } x &=0.
+    \end{align*}
+    Ratkaisuja oli siis kaksi.
 \end{esimerkki}
 
 %\begin{esimerkki}
@@ -61,15 +61,16 @@ Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
 %\end{esimerkki}
 
 \begin{esimerkki} Ratkaistaan $y$ yhtälöstä
-	\[x^{1+a^2}\cdot 0\cdot\left(x+5+\sqrt[3]{\frac{x}{1+2^a}}\right)=y\]
-	Koska toinen tulon tekijöistä on $0$, tiedätään, että myös niiden tulo on $0$.
-	Siis $y=0$.
+    \[x^{1+a^2}\cdot 0\cdot\left(x+5+\sqrt[3]{\frac{x}{1+2^a}}\right)=y\]
+    Koska yksi tulon tekijöistä on $0$, tiedätään, että myös niiden tulo on $0$.
+    Siis $y=0$.
 \end{esimerkki}
 
 \todo{Esitetäänkö tulon nollasääntö ainoastaan kahdelle tulon tekijälle vai usemmalle kuten nyt. Ehdotan nykyisen säännön jättämistä. Seuraava esimerkki vaikuttaa siltä kuin tiedettäisiin ainoastaan sääntö 2 tekijälle. Annetaanko sen kuitenkin olla noin?}
+%Tämähän on periaatteessa rekursiivinen määritelmä yleiselle säännölle
 \begin{esimerkki}
-	\[xyzw=0\]
-	Nyt tulon nollasäännö perusteella tiedetään, että $x=0$ tai $yzw=0$. Jos $yzw=0$, niin tulon nollasäännön mukaan $y=0$ tai $zw=0$. Samoin jos $zw=0$, niin $z=0$ tai $w=0$. Näin voidaan päätellä, että vähintään yhden tekijöistä $x$, $y$, $z$ tai $w$ on oltava $0$.
+    \[xyzw=0\]
+    Nyt tulon nollasäännö perusteella tiedetään, että $x=0$ tai $yzw=0$. Jos $yzw=0$, niin tulon nollasäännön mukaan $y=0$ tai $zw=0$. Samoin jos $zw=0$, niin $z=0$ tai $w=0$. Näin voidaan päätellä, että vähintään yhden tekijöistä $x$, $y$, $z$ tai $w$ on oltava $0$.
 \end{esimerkki}
 
 
@@ -113,6 +114,21 @@ Vastaus: $x=0$ tai $x=3$.
     \end{vastaus}
 \end{tehtava}
 
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt tulon nollasääntöä hyödyntäen.
+    \begin{enumerate}
+        \item $(x^2-1)(x-7)=0$
+        \item $(x^2-9)(x^2-16)=0$
+        \item $(x-4)=x(x-4)$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $x=-1$, $x=1$ tai $x=7$
+            \item $x=-4$, $x=-3$, $x=3$ tai $x=4$
+            \item $x=1$ tai $x=4$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
 
 \begin{tehtava}
     Ratkaise seuraavat yhtälöt tulon nollasääntöä hyödyntäen.
@@ -131,13 +147,13 @@ Vastaus: $x=0$ tai $x=3$.
 \end{tehtava}
 
 \begin{tehtava}
-	Sievennä seuraava lauseke: $(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x)$.
+    Sievennä seuraava lauseke: $(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x)$.
     \begin{vastaus}
-		Tulossa esiintyy tekijänä $(x-x)=0$. Niinpä tulon nollasäännön mukaan
-		\begin{align*}
- 			&(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot(x-x)\cdot(y-x)\cdot(z-x)\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x) \\
- 			=&(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot 0\cdot(y-x)\cdot(z-x)\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x) \\
- 			=&0
-		\end{align*}
-   \end{vastaus}
+        Tulossa esiintyy tekijänä $(x-x)=0$. Niinpä tulon nollasäännön mukaan
+        \begin{align*}
+            &(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot(x-x)\cdot(y-x)\cdot(z-x)\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x) \\
+            =&(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot 0\cdot(y-x)\cdot(z-x)\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x) \\
+            =&0
+        \end{align*}
+    \end{vastaus}
 \end{tehtava}
