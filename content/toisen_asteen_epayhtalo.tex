@@ -12,7 +12,7 @@
 Milloin toisen asteen polynomifunktion $f(x)=x^2-5$ arvot ovat suurempia kuin nolla?  \\
 \textbf{Ratkaisu} \\
 Funktion $f$ arvot ovat suurempia kuin nolla niillä muuttujan $x$ arvoilla, joilla pätee $x^2-5>0$. \\
-\laatikko{
+
 \begin{itemize}
 \item{Funktion arvo on positiivinen, kun funktion kuvaaja on x-akselin yläpuolella.}
 \item{Funktion arvo on negatiivinen, kun funktion kuvaaja on x-akselin alapuolella.}
@@ -23,7 +23,7 @@ Funktion $f$ arvot ovat suurempia kuin nolla niillä muuttujan $x$ arvoilla, joi
 \lukusuoranimi{-1.8}{$+$}
 \lukusuoranimi{1.8}{$+$}
 \end{lukusuora}
-}
+
 Ratkaistaan funktion $f$ nollakohdat, koska niissä kohdissa funktion arvojen merkki voi vaihtua.
 \begin{align*}
 f(x)&=0 \\
@@ -46,12 +46,14 @@ Funktio $f$ leikkaa x-akselin kohdissa $x=-\sqrt[]{5}$ ja $x=\sqrt[]{5}$.
 Funktion arvot ovat positiivisia niillä muuttujan $x$ arvoilla, joilla funktion kuvaaja on $x$-akselin yläpuolella.
 Kuvaajasta huomataan, että $f(x)>0$, kun $x<-\sqrt[]{5}$ tai $x>\sqrt[]{5}$. 
 \end{esimerkki}
-\laatikko{Toisen asteen polynomifunktion $f(x)=ax^2+bx+c$, $x \in \mathbb{R}$ arvot voivat vaihtaa merkkiään vain kyseisen polynomifunktion nollakohdissa. Jos haluamme tietää, milloin toisen asteen polynomifunktion arvot ovat positiivisia tai negatiivisia, niin
+
+Toisen asteen polynomifunktion $f(x)=ax^2+bx+c$, $x \in \mathbb{R}$ arvot voivat vaihtaa merkkiään vain kyseisen polynomifunktion nollakohdissa. Jos haluamme tietää, milloin toisen asteen polynomifunktion arvot ovat positiivisia tai negatiivisia, niin
 \begin{itemize}
 \item{1.Ratkaistaan toisen asteen polynomifunktion $f$ nollakohdat eli ratkaistaan ne muuttujan $x$ arvot, joilla $ax^2+bx+c=0$. }
 \item{2.Hahmotellaan toisen asteen polynomifunktion kuvaajaparaabelin aukeamissuunta ja merkitään kuvaajaan funktion nollakohdat.}
 \item{3.Päätellään hahmotelmasta milloin funktion arvot ovat positiivisia tai negatiivisia.}
-\end{itemize}} \\
+\end{itemize} 
+
 \begin{esimerkki}
 Milloin funktion $f$, jonka lauseke on $f(x)=5x^2+13x+3$, arvot ovat suurempia tai yhtäsuuria kuin nolla? \\
 \textbf{Ratkaisu} \\
@@ -78,28 +80,29 @@ Kuvaaja on ylöspäin aukeava paraabeli, koska $a=5>0$.
 3. Kuvaajasta voidaan päätellä, että $f(x)>0$, kun $x<\frac{-13 - \sqrt[]{109}}{10}$ tai $x> \frac{-13 + \sqrt[]{109}}{10}$.  
 \end{esimerkki} 
 \begin{esimerkki} 
-Milloin epäyhtälö $x^2-12x+9<0$ toteutuu? \\ 
+Milloin epäyhtälö $x^2+5x-6<0$ toteutuu? \\ 
 \textbf{Ratkaisu} \\
-Toisen asteen polynomifunktion merkin tarkastelussa päädytään aina toisen asteen epäyhtälöön. \\ \\
-\laatikko{Toisen asteen epäyhtälö on muotoa 
-\begin{itemize}
-\item{$ax^2+bx+c>0$}
-\item{$ax^2+bx+c \leq  0$}
-\item{$ax^2+bx+c < 0$}
-\item{$ax^2+bx+c \geq 0$}
-\end{itemize}}
+%Toisen asteen polynomifunktion merkin tarkastelussa päädytään aina toisen asteen %epäyhtälöön. \\ \\
+%\laatikko{Toisen asteen epäyhtälö on muotoa  % SIIS HÄH?
+%\begin{itemize}
+%\item{$ax^2+bx+c>0$}
+%\item{$ax^2+bx+c \leq  0$}
+%\item{$ax^2+bx+c < 0$}
+%\item{$ax^2+bx+c \geq 0$}
+%\end{itemize}}
 Toisen asteen epäyhtälö ratkaistaan tutkimalla toisen asteen polynomifunktion merkkiä.  \\
 1. Ratkaistaan polynomifunktion $f(x)=x^2+5x-6$ nollakohdat.
 \begin{align*}
 f(x)&=0 \\
-x^2+5x-6&=0 \ \  \ \ \ &&||x=\frac{-b \sqrt[]{b^2-4ac}}{2a} \\ 
+x^2+5x-6&=0 \ \  \ \ \ &&||x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a} \\ 
 x&=\frac{-5 \pm \sqrt[]{(5)^2-4 \cdot 1 \cdot(-6)}}{2 \cdot 1} \\
 x&=\frac{-5 \pm \sqrt[]{25+24}}{2} \\
 x&=\frac{-5 \pm \sqrt[]{49}}{2} \\
 x&=\frac{-5 \pm 7}{2} \\
 x&=-6 \text{ tai } x=1
 \end{align*}
-2. Hahmotellaan polynomifunktion kuvaaja. \\ 
+2. Hahmotellaan polynomifunktion kuvaaja. Se aukeaa ylöspäin, koska toisen
+asteen termin $x^2$ kerroin on positiivinen. \\ 
 
 \begin{lukusuora}{-2.5}{2.5}{5}
 \lukusuoraparaabeli{-1}{1}{-1}
@@ -156,7 +159,7 @@ Siis epäyhtälö $-2x^2+14x-12$ toteutuu, kun $1<x<6$. Tämä tarkoittaa, että
 
 Jos aitauksen yhdensuuntaisten sivujen pituus on väliltä $1<x<6$ ja $y=14-2x$, niin aitauksen pinta-ala on vähintään 12 neliömetriä.
 \end{esimerkki}
-\section{Toisen asteen epäyhtälön ratkaiseminen tekijöihin jakamisen avulla.}
+\section{Toisen asteen epäyhtälön ratkaiseminen tekijöihin jakamisen avulla}
 \begin{esimerkki} 
 Ratkaise epäyhtälö $x^2+10x>0$. \\
 \textbf{Ratkaisu} \\
@@ -173,7 +176,7 @@ polynomi $x^2+10x=x(x+10)$ saa positiivisen arvon, kun
 \item{$x<0$ ja $x+10<0$} 
 \end{itemize}
 Koska negatiivisen ja positiivisen luvun tulo on negatiivinen, niin
-Polynomi $x^2+10x=x(x+10)$ saa negatiivisen arvon, kun
+polynomi $x^2+10x=x(x+10)$ saa negatiivisen arvon, kun
 \begin{itemize}
 \item{$x>0$ ja $x+10<0$} \\ tai \\
 \item{$x<0$ ja $x+10>0$} \\
@@ -181,11 +184,13 @@ Polynomi $x^2+10x=x(x+10)$ saa negatiivisen arvon, kun
 \missingfigure{kaavio, jossa käydään tulon merkki}
 Tästä huomataan, että epäyhtälö $x^2+10x>0$ on tosi, kun $x>0$ tai $x<-10$. 
 \end{esimerkki} 
-\laatikko{Toinen tapa ratkaista toisen asteen epäyhtälö on 
+
+Toinen tapa ratkaista toisen asteen epäyhtälö on 
 \begin{itemize}
 \item{jakaa polynomi tekijöihinsä }
-\item{tutkia millä muuttujan x arvoilla kahden lausekkeen tulo on positiivinen ja milloin negatiivinen}
-\end{itemize}}
+\item{tutkia millä muuttujan $x$ arvoilla kahden lausekkeen tulo on positiivinen ja milloin negatiivinen}
+\end{itemize}
+
 \begin{esimerkki}
 Ratkaise epäyhtälö $x^2-6x+9 \leq 0$. \\
 \textbf{Ratkaisu} \\
@@ -203,7 +208,7 @@ Kaaviosta saadaan pääteltyä, että $x^2-6x+9=(x-3)^2$ on positiivinen kun $x 
 \begin{esimerkki}
 Ratkaise epäyhtälö $2x^2+2x-12<0$. 
 \end{esimerkki}
-1. Ratkaistaan millä muuttujan x arvolla polynomi $2x^2+2x-12$ saa arvon nolla.
+1. Ratkaistaan millä muuttujan $x$ arvolla polynomi $2x^2+2x-12$ saa arvon nolla.
 \begin{align*}
 2x^2+2x-12&=0 \\
 x&=\frac{-2 \pm \sqrt[]{2^2-4 \cdot 2 \cdot (-12)}}{2 \cdot 2} \\
@@ -211,10 +216,32 @@ x&=\frac{-2 \pm \sqrt[]{4+96}}{4} \\
 x&=\frac{-2 \pm 10}{4} \\
 x&=-3 \text{ tai } x = 2
 \end{align*}
-2. Polynomi saadaan muotoon $3x^2+15x+10=2(x-2)(x+3)$.  \\
-3. Piirretään merkkikaavio
-\missingfigure{merkkikaavio $(x-2)(x+3)$.}
-4. Huomataan, että polynomi $2(x-2)(x+3)$ on negatiivinen, kun $x<-3$ tai $x>2$. 
+2. Polynomi saadaan muotoon $2x^2+2x-12=2(x-2)(x+3)$.  \\
+3. Piirretään merkkikaavio:
+\begin{center}
+\begin{merkkikaavio}{2}
+\merkkikaavioKohta{$-3$}
+\merkkikaavioKohta{$2$}
+
+
+	\merkkikaavioFunktio{$2(x-2)$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+\merkkikaavioUusirivi
+	\merkkikaavioFunktio{$x+3$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+\merkkikaavioUusiriviKaksoisviiva
+	\merkkikaavioFunktio{$2(x-2)(x+3)$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+\end{merkkikaavio}
+\end{center}
+
+4. Huomataan, että polynomi $2(x-2)(x+3)$ on negatiivinen, kun $-3<x<2$. 
 \section{Harjoitustehtäviä}
 
 \begin{tehtava}
