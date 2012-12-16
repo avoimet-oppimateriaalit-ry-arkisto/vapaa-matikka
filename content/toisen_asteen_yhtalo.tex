@@ -116,37 +116,66 @@ x&=0 \text{ tai } 55x=-8 \\
 x&=0 \text{ tai } x=-\frac{8}{55}
 \end{align*}
 \section{Neliöksi täydentäminen}
-Toisen asteen yhtälöä $ax^2+bx+c=0$, jossa $a,b,c \neq 0$ kutsutaan täydelliseksi toisen asteen yhtälöksi. \\
-\textbf{Esimerkki 5.} \\
-Ratkaise yhtälö $x^2+4x-16=0$. \\
-\textbf{Ratkaisu}
+Toisen asteen yhtälöä $ax^2+bx+c=0$, jossa $a,b,c \neq 0$ kutsutaan
+täydelliseksi toisen asteen yhtälöksi. Tällaiset yhtälöt voidaan palauttaa
+vaillinaisiksi toisen asteen yhtälöiksi neliöön täydentämiseksi kutsutulla
+tekniikalla. Seuraavassa luvussa todistamme neliöön täydentämisen avulla
+yleisen ratkaisukaavan toisen asteen yhtälöille.
+
+\begin{esimerkki}
+Haluaisimme ratkaista yhtälön $x^2+4x-16 = 0$. Jotta se saataisiin muotoon
+jossa on neliö ja vakiotermi eli $(Ax+B)^2-C=0$, täytyy molempien yhtälöiden
+vasempien puolten polynomien olla samat, eli
+\[A^2x^2+2ABx+B^2-X=x^2+4x-16.\]
+Haluamme siis valita kertoimet $A$, $B$ ja $C$ siten, että 
+\[\left\{\begin{array}{l}
+A^2=1 \\ 2AB=4 \\ B^2-C=-16.
+\end{array}\right.\]
+Valitaan $A$:ksi ensimmäisen yhtälön eräs ratkaisu $A = 1$. Nyt toinen yhtälö
+on muotoa $2B=4$ eli $B = 2$. Siis viimeisen yhtälön mukaan voidaan valita
+$C = 16+B^2 = 20$.
+
+Näiden valintojen avulla voimme nyt ratkaista yhtälön:
 \begin{align*}
-x^2+4x-16&=0 \ \ \ \ \ &&\ppalkki +20 \\
-x^2+4x+4&=20 \ \ \ \ \ &&\ppalkki a^2+2ab+b^2=(a+b)^2 \\
-(x+2)^2&=20 \ \ \ \ \ &&\ppalkki \sqrt[]{} \\
-x+2 &= \pm \sqrt[]{20} \\
-x&=-2 \pm \sqrt[]{20} \\
-x&=-2 \pm 2 \sqrt[]{5} \\
+x^2+4x-16 &= 0 &&\ppalkki + 20 \text{ ($C = 20$ oikealle puolelle)} \\
+x^2+4x+4 &= 20 &&\text{vasen puoli $ = (Ax+B)^2 = (x+2)^2$} \\
+(x+2)^2 &= 20 &&\text{ratkaistaan vaillinainen toisen asteen yhtälö} \\
+x+2 &= \pm \sqrt{20} &&\ppalkki - 2 \\
+x &= -2 \pm \sqrt{20} &&\text{sievennetään vastaus} \\
+x &= -2 \pm 2\sqrt{5}.
 \end{align*}
-\textbf{Esimerkki 6.} \\
-Ratkaise yhtälö $16x^2-64x+2=0$. \\
-\textbf{Ratkaisu}
-\begin{align*}
-16x^2-16x+2&=0 \ \ \ \ \ &&\ppalkki +2 \\
-16x^2-16x+4&=2 \ \ \ \ \ &&\ppalkki a^2-2ab+b^2=(a-b)^2 \\
-(4x+2)^2&=2 \ \ \ \ \ &&\ppalkki \sqrt[]{} \\
-4x+2&=\pm \sqrt[]{2} \\
-4x&=-2 \pm \sqrt[]{2} \\
-x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{4} \\
-x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{ 2\sqrt[]{2}\sqrt[]{2}} \\
-x&=-\frac{1}{2} \pm \frac{1}{2 \sqrt[]{2}} \\
-\end{align*}
+\end{esimerkki}
 
-Ratkaisutapaa, jossa toisen asteen yhtälö täydennetään lisäämällä tai vähentämällä termejä binomin neliöksi, kutsutaan neliöksi täydentämiseksi.
-
-Toisen asteen yhtälö voidaan aina ratkaista neliöön täydentämällä. Yleensä toisen asteen yhtälöt kuitenkin ratkaistaan käyttämällä suoraa kaavaa.
-
-Seuraavassa kappaleessa johdamme toisen asteen yhtälön ratkaisukaavan neliöksi täydentämistä käyttäen.
+% \textbf{Esimerkki 5.} \\
+% Ratkaise yhtälö $x^2+4x-16=0$. \\
+% \textbf{Ratkaisu}
+% \begin{align*}
+% x^2+4x-16&=0 \ \ \ \ \ &&\ppalkki +20 \\
+% x^2+4x+4&=20 \ \ \ \ \ &&\ppalkki a^2+2ab+b^2=(a+b)^2 \\
+% (x+2)^2&=20 \ \ \ \ \ &&\ppalkki \sqrt[]{} \\
+% x+2 &= \pm \sqrt[]{20} \\
+% x&=-2 \pm \sqrt[]{20} \\
+% x&=-2 \pm 2 \sqrt[]{5} \\
+% \end{align*}
+% \textbf{Esimerkki 6.} \\
+% Ratkaise yhtälö $16x^2-64x+2=0$. \\
+% \textbf{Ratkaisu}
+% \begin{align*}
+% 16x^2-16x+2&=0 \ \ \ \ \ &&\ppalkki +2 \\
+% 16x^2-16x+4&=2 \ \ \ \ \ &&\ppalkki a^2-2ab+b^2=(a-b)^2 \\
+% (4x+2)^2&=2 \ \ \ \ \ &&\ppalkki \sqrt[]{} \\
+% 4x+2&=\pm \sqrt[]{2} \\
+% 4x&=-2 \pm \sqrt[]{2} \\
+% x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{4} \\
+% x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{ 2\sqrt[]{2}\sqrt[]{2}} \\
+% x&=-\frac{1}{2} \pm \frac{1}{2 \sqrt[]{2}} \\
+% \end{align*}
+% 
+% Ratkaisutapaa, jossa toisen asteen yhtälö täydennetään lisäämällä tai vähentämällä termejä binomin neliöksi, kutsutaan neliöksi täydentämiseksi.
+% 
+% Toisen asteen yhtälö voidaan aina ratkaista neliöön täydentämällä. Yleensä toisen asteen yhtälöt kuitenkin ratkaistaan käyttämällä suoraa kaavaa.
+% 
+% Seuraavassa kappaleessa johdamme toisen asteen yhtälön ratkaisukaavan neliöksi täydentämistä käyttäen.
 
 \section{Harjoitustehtäviä}
 
