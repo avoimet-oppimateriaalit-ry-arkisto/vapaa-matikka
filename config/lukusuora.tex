@@ -173,3 +173,8 @@
 	\pgfmathsetmacro{\LSy}{\LSy-\LSstep}
 	\draw[arrows=-triangle 45,line width=0.2mm] (0, \LSy) -- (\LSpituus + \LSext, \LSy);
 }
+
+% Pakota lukusuoran bounding boxiksi maksimaalinen.
+\newcommand{\lukusuoraisobbox}[0]{
+	\path[use as bounding box] (0, -1.5) rectangle (\LSpituus + \LSext, 1.5);
+}
