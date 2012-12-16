@@ -16,7 +16,7 @@ Polynomi voidaan kirjoittaa aina summana jonka yhteenlaskettavat eli
 \termi{termit}{termi} ovat vakion ja muuttujan potenssin tuloja. Termin muuttujan
 eksponenttia kutsutaan termin \termi{asteeksi}{termi!aste}. Erikoistapaus termistä on
 nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}. Polynomin
-aste on suurin sen termien asteista.
+\termi{aste}{polynomi!aste} on suurin sen termien asteista.
 
 Yhden termin polynomia kutsutaan \termi{monomiksi}{monomi} ja kahden termin polynomia
 \termi{binomiksi}{binomi}.
@@ -34,6 +34,7 @@ funktion. Polynomien määrittelemiä funktioita kutsutaan
 merkitään usein kirjaimilla $P$, $Q$ tai $R$. Siis samoin kuin muillakin
 funktioilla, merkintä $P(a)$ tarkoittaa polynomin $P$ arvoa kun muuttujan
 paikalle sijoitetaan $a$.
+
 \begin{esimerkki}
 Jos polynomi $P$ on $P(x) = 5x^2-3x+2$,
 \begin{align*}
@@ -41,6 +42,20 @@ Jos polynomi $P$ on $P(x) = 5x^2-3x+2$,
 &P(-1) = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
 &P(2) = 5\cdot 2^2-3\cdot 2+2 = 20 - 6 + 2 = 16.
 \end{align*}
+\end{esimerkki}
+
+Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
+Esimerkiksi jos $P(x) = x+3x+1$ ja $Q(x) = 4x+1$, $P$ ja $Q$ ovat samat
+funktiot koska $x+3x = 4x$. Joskus ei siis ole aivan selvää mikä polynomin
+aste tarkalleen on ennen sieventämistä.
+
+\begin{esimerkki}
+Polynomilausekkeessa
+\[P(x) = x^5-4x^2+6x^3+3-x^5-x\]
+korkeimman asteen termin aste on 5, mutta jos polynomi sievennetään niin että
+esityksessä on vain yksi termi jokaista astetta, saadaan että
+\[P(x) = 6x^3-4x^2-x+3.\]
+Siis $P$:n aste on 3.
 \end{esimerkki}
 
 \laatikko{
