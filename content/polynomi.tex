@@ -15,7 +15,7 @@ $-\epsilon^3+2\epsilon^2-1$ on muuttujan $\epsilon$ polynomi.
 Polynomi voidaan kirjoittaa aina summana jonka yhteenlaskettavat eli
 \termi{termit}{termi} ovat vakion ja muuttujan potenssin tuloja. Termin muuttujan
 eksponenttia kutsutaan termin \termi{asteeksi}{termi!aste}. Erikoistapaus termistä on
-nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}. Polynomin
+nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}{}. Polynomin
 \termi{aste}{polynomi!aste} on suurin sen termien asteista.
 
 Yhden termin polynomia kutsutaan \termi{monomiksi}{monomi} ja kahden termin polynomia
@@ -45,17 +45,20 @@ Jos polynomi $P$ on $P(x) = 5x^2-3x+2$,
 \end{esimerkki}
 
 Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
-Esimerkiksi jos $P(x) = x+3x+1$ ja $Q(x) = 4x+1$, $P$ ja $Q$ ovat samat
-funktiot koska $x+3x = 4x$. Joskus ei siis ole aivan selvää mikä polynomin
-aste tarkalleen on ennen sieventämistä.
+Esimerkiksi jos $P(x) = x^2-x^2+x+1$ ja $Q(x) = x+1$, $P$ ja $Q$ ovat samat
+funktiot koska $x^2 - x^2 = 0$ kaikilla reaaliluvuilla x. Siis saman
+polynomifunktion eri esityksissä lausekkeina suurimman termin aste voi olla
+eri, esimerkiksi $P$:ssä se on 2 ja $Q$:ssa 1. Useimmiten kiinnostavin on
+kuitenkin pienin mahdollinen aste, jolloin polynomifunktion $P$ aste olisi
+myös 1.
 
 \begin{esimerkki}
 Polynomilausekkeessa
 \[P(x) = x^5-4x^2+6x^3+3-x^5-x\]
-korkeimman asteen termin aste on 5, mutta jos polynomi sievennetään niin että
+korkeimman asteen termin aste on 5, mutta jos polynomi sievennetään niin, että
 esityksessä on vain yksi termi jokaista astetta, saadaan että
 \[P(x) = 6x^3-4x^2-x+3.\]
-Siis $P$:n aste on 3.
+Siis polynomifunktion $P$ aste on 3.
 \end{esimerkki}
 
 \laatikko{
