@@ -1,12 +1,11 @@
 % muokattava korostus termeille
-\newcommand{\termi}[2] {
-  \ifthenelse{\isempty{#2}}{
-    \emph{#1}\index{\lowercase{#1}}
-  } {
-    \emph{#1}\index{\lowercase{#2}}
-  }
+\newcommand{\termi}[2][] {
+  \ifthenelse{\isempty{#2}}{\korostettuindeksi{#1}{#1}}%
+  {\korostettuindeksi{#1}{#2}}
 }
 
 % mitä käytetään kun sovelletaan sama funktio molemmille puolille
 % (pystypalkki kaksoisviivalla)
 \newcommand{\ppalkki}{\big\|}
+
+\newcommand{\korostettuindeksi}[2]{\emph{#1}\index{\lowercase{#2}}}
