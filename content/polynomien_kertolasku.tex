@@ -42,15 +42,14 @@ polynomista.
 	\draw[color=red] (\PBxa, \PBya) .. controls (\PBca, \PByb) and (\PBcb, \PByb) .. (\PBxb, \PBya);
 }
 
-\todo{asemoi uudestaan kaarten päätepisteet}
 \begin{tikzpicture}
 \draw node[right] {\large $(a+b)(c+d+e) = ac+ad+ae+bc+bd+be$};
 
 \pgfmathsetmacro{\klAx}{0.48}
-\pgfmathsetmacro{\klBx}{1.33}
-\pgfmathsetmacro{\klCx}{1.94}
-\pgfmathsetmacro{\klDx}{2.77}
-\pgfmathsetmacro{\klEx}{3.63}
+\pgfmathsetmacro{\klBx}{1.18}
+\pgfmathsetmacro{\klCx}{1.79}
+\pgfmathsetmacro{\klDx}{2.47}
+\pgfmathsetmacro{\klEx}{3.23}
 \pgfmathsetmacro{\klLo}{-0.22}
 \pgfmathsetmacro{\klHi}{0.26}
 
@@ -84,6 +83,9 @@ Esimerkiksi polynomien $x-3$ ja $x^2-4x+3$ tulo voidaan laskea vastaavasti:
 \pbezier{\klBx}{\klDx}{\klLo}{-0.3}
 \pbezier{\klBx}{\klEx}{\klLo}{-0.5}
 \end{tikzpicture}
+
+\todo{asemoi uudestaan kaarten päätepisteet, yleinen tapaus tehty,
+	esimerkki tekemättä, onhan fontti nyt lopullinen?}
 
 
 Sievennetyksi vastaukseksi saadaan siis $x^3-7x^2+15x-9$.
