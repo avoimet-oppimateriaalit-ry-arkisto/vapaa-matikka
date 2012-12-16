@@ -59,13 +59,13 @@ ei ratkaisuja, a negatiivinen
 Toisen asteen yhtälö voidaan ratkaista graafisesti tai algebrallisesti. Graafinen ratkaisu on aina likimääräinen eli arvio oikeasta ratkaisusta. \\ \\ Edellä tutustuimme toisen asteen yhtälön graafiseen ratkaisemiseen. Seuraavaksi tutustumme toisen asteen yhtälön algebralliseen ratkaisemiseen.
 \section{Vaillinaiset yhtälöt}
 Jos toisen asteen yhtälössä $ax^2+bx+c$ missä $a\neq 0$ pätee joko $b = 0$ tai
-$c = 0$ on kyseessä niin sanottu vaillinainen toisen asteen yhtälö, joka on
+$c = 0$ on kyseessä niin sanottu \termi{vaillinainen toisen asteen yhtälö}, joka on
 siis muotoa
 \[ax^2+c=0\]
 tai
 \[ax^2+bx=0.\]
 \subsection*{Toisen asteen yhtälö $ax^2+c=0$}
-Muotoa $ax^2+c = 0$ oleva toisen asteen yhtälö saadaan ratkaistua neliöjuuren avulla.
+Muotoa $ax^2+c = 0$ oleva toisen asteen yhtälö saadaan helposti ratkaistua neliöjuuren avulla.
 
 \begin{esimerkki}
 Ratkaistaan yhtälö $5x^2-45=0$:
@@ -97,29 +97,36 @@ Koska $x^2 \geq 0$ kaikilla $x$, yhtälöllä ei ole ratkaisua.
 \end{esimerkki}
 
 \subsection*{Toisen asteen yhtälö $ax^2+bx=0$}
-Muotoa $ax^2+bx = 0$ oleva toisen asteen yhtälö saadaan ratkaistua tulon
-nollasäännön avulla, koska yhtälö on muotoa $x(ax+b) = 0$ eli ratkaisut ovat
-yhtälöiden $x = 0$ ja $ax+b=0$ ratkaisut.
-
-\begin{esimerkki}
-Ratkaistaan yhtälö $x^2-11x=0$:
+Jos yhtälössä $ax^2+bx+c=0$ kerroin $c=0$, niin toisen asteen yhtälö saa muodon
 \begin{align*}
-x^2 - 11x &= 0 &&x^2-11x = x(x-11) \\
-x(x-11) &= 0 &&\text{tulon nollasääntö} \\
-x &= 0 \text{\ \ \ tai\ \ \ } x = 11.
+ax^2+bx+0&=0 \\
+ax^2+bx=0
 \end{align*}
-\end{esimerkki}
-
-\begin{esimerkki}
-Ratkaistaan yhtälö $55x^2+8x=0$:
+Toisen asteen yhtälöä, joka on muotoa $ax^2+bx=0$ kutsutaan vaillinaiseksi toisen asteen yhtälöksi. Tämän muotoinen yhtälö saadaan ratkaistua tulon nollasäännön avulla. \\
 \begin{align*}
-55x^2+8x &= 0 &&x^2-11x = x(55x+8) \\
-x(55x+8) &= 0 &&\text{tulon nollasääntö} \\
-x &= 0 \text{\ \ \ tai\ \ \ } 55x + 8 = 0 &&\ppalkki - 8 \text{ (toinen yhtälö)} \\
-x &= 0 \text{\ \ \ tai\ \ \ } 55x = -8 &&\ppalkki : 55 \text{ (toinen yhtälö)} \\
-x &= 0 \text{\ \ \ tai\ \ \ } x = -\frac{8}{55}.
+ax^2+bx&=0 \ \ \ \ \ &&\ppalkki\text{otetaan yhteinen tekijä} \\
+x(ax+b)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
+x&=0 \text{ tai } ax+b=0 \\
+x&=0 \text{ tai } ax=-b \\
+x&=0 \text{ tai } x=-\frac{b}{a}
 \end{align*}
-\end{esimerkki}
+\textbf{Esimerkki 3.}
+Ratkaise yhtälö $x^2-11x=0$
+\begin{align*}
+x^2-11x&=0 \ \ \ \ \  &&\ppalkki\text{otetaan yhteinen tekijä} \\
+x(x-11)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
+x&=0 \text{ tai } x-11=0 \\
+x&=0 \text{ tai } x=11
+\end{align*}
+\textbf{Esimerkki 4.}
+Ratkaise yhtälö $55x^2+8x=0$
+\begin{align*}
+55x^2+8x&=0 \ \ \ \ \ &&\ppalkki\text{otetaan yhteinen tekijä} \\
+x(55x+8)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
+x&=0 \text{ tai } 55x+8=0 \\
+x&=0 \text{ tai } 55x=-8 \\
+x&=0 \text{ tai } x=-\frac{8}{55}
+\end{align*}
 \section{Neliöksi täydentäminen}
 Toisen asteen yhtälöä $ax^2+bx+c=0$, jossa $a,b,c \neq 0$ kutsutaan
 täydelliseksi toisen asteen yhtälöksi. Tällaiset yhtälöt voidaan palauttaa
@@ -133,7 +140,7 @@ jossa on neliö ja vakiotermi eli $(Ax+B)^2-C=0$, täytyy molempien yhtälöiden
 vasempien puolten polynomien olla samat, eli laskemalla muistikaavan avulla
 $(Ax+B)^2-C=0$ saadaan
 \[A^2x^2+2ABx+B^2-x=x^2+4x-16.\]
-Haluamme siis valita kertoimet $A$, $B$ ja $C$ siten, että 
+Haluamme siis valita kertoimet $A$, $B$ ja $C$ siten, että
 \[\left\{\begin{array}{l}
 A^2=1 \\ 2AB=4 \\ B^2-C=-16.
 \end{array}\right.\]
@@ -193,11 +200,11 @@ x &= \frac{1\pm \sqrt{6}}{2}
 % x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{ 2\sqrt[]{2}\sqrt[]{2}} \\
 % x&=-\frac{1}{2} \pm \frac{1}{2 \sqrt[]{2}} \\
 % \end{align*}
-% 
+%
 % Ratkaisutapaa, jossa toisen asteen yhtälö täydennetään lisäämällä tai vähentämällä termejä binomin neliöksi, kutsutaan neliöksi täydentämiseksi.
-% 
+%
 % Toisen asteen yhtälö voidaan aina ratkaista neliöön täydentämällä. Yleensä toisen asteen yhtälöt kuitenkin ratkaistaan käyttämällä suoraa kaavaa.
-% 
+%
 % Seuraavassa kappaleessa johdamme toisen asteen yhtälön ratkaisukaavan neliöksi täydentämistä käyttäen.
 
 \section{Harjoitustehtäviä}
