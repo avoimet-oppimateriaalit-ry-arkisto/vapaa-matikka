@@ -27,7 +27,8 @@
 \newenvironment{lukusuora}[3]
 {
 	\begin{tikzpicture}
-		\draw[arrows=-triangle 45,line width=0.2mm] (0, 0) -- (#3, 0);
+		\pgfmathsetmacro{\LSext}{0.1}
+		\draw[arrows=-triangle 45,line width=0.2mm] (0, 0) -- (#3 + \LSext, 0);
 		\pgfmathsetmacro{\LSax}{#1}
 		\pgfmathsetmacro{\LSy}{0}
 		\pgfmathsetmacro{\LSstep}{1}
@@ -61,17 +62,29 @@
 }
 
 \newcommand{\lukusuoravali}[6]{
-	\pgfmathsetmacro{\LSxa}{\LSpituus*(#1-\LSax)/\LSdx}
-	\pgfmathsetmacro{\LSxb}{\LSpituus*(#2-\LSax)/\LSdx}
+	\ifthenelse{\equal{#1}{}}{
+		\pgfmathsetmacro{\LSxa}{0}
+	}{
+		\pgfmathsetmacro{\LSxa}{\LSpituus*(#1-\LSax)/\LSdx}
+	}
+	\ifthenelse{\equal{#2}{}}{
+		\pgfmathsetmacro{\LSxb}{\LSpituus}
+	}{
+		\pgfmathsetmacro{\LSxb}{\LSpituus*(#2-\LSax)/\LSdx}
+	}
 	\draw[line width=0.6mm] (\LSxa,\LSy) -- (\LSxb,\LSy);
-	\fill (\LSxa,\LSy) circle (0.1);
-	\fill (\LSxb,\LSy) circle (0.1);
-	\fill[color=#5] (\LSxa,\LSy) circle (0.08);
-	\fill[color=#6] (\LSxb,\LSy) circle (0.08);
-	% Integraalimerkit ovat riittävän korkeita saamaan bounding boxit saman
-	% kokoisiksi.
-	\draw (\LSxa,\LSy) node[above] {\phantom{$\int$}#3\phantom{$\int$}};
-	\draw (\LSxb,\LSy) node[above] {\phantom{$\int$}#4\phantom{$\int$}};
+	\ifthenelse{\equal{#1}{}}{}{
+		\fill (\LSxa,\LSy) circle (0.1);
+		\fill[color=#5] (\LSxa,\LSy) circle (0.08);
+		% Integraalimerkit ovat riittävän korkeita saamaan bounding boxit saman
+		% kokoisiksi.
+		\draw (\LSxa,\LSy) node[above] {\phantom{$\int$}#3\phantom{$\int$}};
+	}
+	\ifthenelse{\equal{#2}{}}{}{
+		\fill (\LSxb,\LSy) circle (0.1);
+		\fill[color=#6] (\LSxb,\LSy) circle (0.08);
+		\draw (\LSxb,\LSy) node[above] {\phantom{$\int$}#4\phantom{$\int$}};
+	}
 }
 
 % lukusuorapiste-komennon parametrit:
@@ -158,5 +171,5 @@
 % Tee uusi suora alle.
 \newcommand{\lukusuorauusi}[0]{
 	\pgfmathsetmacro{\LSy}{\LSy-\LSstep}
-	\draw[arrows=-triangle 45,line width=0.2mm] (0, \LSy) -- (\LSpituus, \LSy);
+	\draw[arrows=-triangle 45,line width=0.2mm] (0, \LSy) -- (\LSpituus + \LSext, \LSy);
 }
