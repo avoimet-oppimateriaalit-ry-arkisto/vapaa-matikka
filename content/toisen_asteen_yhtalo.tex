@@ -125,8 +125,9 @@ yleisen ratkaisukaavan toisen asteen yhtälöille.
 \begin{esimerkki}
 Haluaisimme ratkaista yhtälön $x^2+4x-16 = 0$. Jotta se saataisiin muotoon
 jossa on neliö ja vakiotermi eli $(Ax+B)^2-C=0$, täytyy molempien yhtälöiden
-vasempien puolten polynomien olla samat, eli
-\[A^2x^2+2ABx+B^2-X=x^2+4x-16.\]
+vasempien puolten polynomien olla samat, eli laskemalla muistikaavan avulla
+$(Ax+B)^2-C=0$ saadaan
+\[A^2x^2+2ABx+B^2-x=x^2+4x-16.\]
 Haluamme siis valita kertoimet $A$, $B$ ja $C$ siten, että 
 \[\left\{\begin{array}{l}
 A^2=1 \\ 2AB=4 \\ B^2-C=-16.
@@ -143,6 +144,23 @@ x^2+4x+4 &= 20 &&\text{vasen puoli $ = (Ax+B)^2 = (x+2)^2$} \\
 x+2 &= \pm \sqrt{20} &&\ppalkki - 2 \\
 x &= -2 \pm \sqrt{20} &&\text{sievennetään vastaus} \\
 x &= -2 \pm 2\sqrt{5}.
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $4x^2-4x-5=0$. Jotta saisimme polynomin $4x^2-4x-5$ muotoon
+$(Ax+B)^2-C$, täytyy olla $A^2 = 4$. Valitaan toinen ratkaisu $A = 2$. Täytyy
+myös olla $2AB = -4$ eli $B=\frac{-4}{2A}=-1$. Jäljelle jää $B^2 - C = -5$ eli
+$C = B^2+5 = 6$.
+
+Nyt voimme ratkaista yhtälön.
+\begin{align*}
+4x^2-4x-5 &= 0 &&\ppalkki + 6 \text{ ($C = 6$ oikealle puolelle)} \\
+4x^2-4x+1 &= 6 &&\text{vasen puoli $ = (Ax+B)^2 = (2x-1)^2$} \\
+(2x-1)^2 &= 6 &&\text{ratkaistaan vaillinainen toisen asteen yhtälö} \\
+2x-1 &= \pm \sqrt{6} &&\ppalkki + 1 \\
+2x &= 1 \pm \sqrt{6} &&\ppalkki : 2 \\
+x &= \frac{1\pm \sqrt{6}}{2}
 \end{align*}
 \end{esimerkki}
 
