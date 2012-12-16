@@ -46,10 +46,10 @@ polynomista.
 \draw node[right] {\large $(a+b)(c+d+e) = ac+ad+ae+bc+bd+be$};
 
 \pgfmathsetmacro{\klAx}{0.48}
-\pgfmathsetmacro{\klBx}{1.18}
-\pgfmathsetmacro{\klCx}{1.79}
-\pgfmathsetmacro{\klDx}{2.47}
-\pgfmathsetmacro{\klEx}{3.23}
+\pgfmathsetmacro{\klBx}{1.20}
+\pgfmathsetmacro{\klCx}{1.8}
+\pgfmathsetmacro{\klDx}{2.49}
+\pgfmathsetmacro{\klEx}{3.26}
 \pgfmathsetmacro{\klLo}{-0.22}
 \pgfmathsetmacro{\klHi}{0.26}
 
@@ -63,15 +63,14 @@ polynomista.
 \end{tikzpicture}
 
 Esimerkiksi polynomien $x-3$ ja $x^2-4x+3$ tulo voidaan laskea vastaavasti:
-
 \begin{tikzpicture}
 \draw node[right] {\large $(x-3)(x^2-4x+3) = x^3-4x^2+3x-3x^2+12x-9$};
 
 \pgfmathsetmacro{\klAx}{0.48}
-\pgfmathsetmacro{\klBx}{1.34}
-\pgfmathsetmacro{\klCx}{2.04}
-\pgfmathsetmacro{\klDx}{3.21}
-\pgfmathsetmacro{\klEx}{4.25}
+\pgfmathsetmacro{\klBx}{1.15}
+\pgfmathsetmacro{\klCx}{1.8}
+\pgfmathsetmacro{\klDx}{2.8}
+\pgfmathsetmacro{\klEx}{3.64}
 \pgfmathsetmacro{\klLo}{-0.22}
 \pgfmathsetmacro{\klHi}{0.26}
 
@@ -82,12 +81,7 @@ Esimerkiksi polynomien $x-3$ ja $x^2-4x+3$ tulo voidaan laskea vastaavasti:
 \pbezier{\klBx}{\klCx}{\klLo}{-0.15}
 \pbezier{\klBx}{\klDx}{\klLo}{-0.3}
 \pbezier{\klBx}{\klEx}{\klLo}{-0.5}
-\end{tikzpicture}
-
-\todo{asemoi uudestaan kaarten päätepisteet, yleinen tapaus tehty,
-	esimerkki tekemättä, onhan fontti nyt lopullinen?}
-
-
+\end{tikzpicture}\newline
 Sievennetyksi vastaukseksi saadaan siis $x^3-7x^2+15x-9$.
 
 \begin{esimerkki}
