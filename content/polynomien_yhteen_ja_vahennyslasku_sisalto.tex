@@ -3,9 +3,9 @@
 % Sisältö on helposti palautettavissa \input-komennolla kumpaan lukuun halutaan.
 % T: Jokke ja Johanna
 
-Polynomeja voidaan laskea yhteen summaamalla samanasteiset termit. Esimerkiksi polynomien $5x^2-x+5$ ja $3x^2-1$ summa on
+Polynomeja voidaan laskea yhteen summaamalla samanasteiset termit. Tätä varten on kätevää ensin ryhmitellä polynomin samanasteiset termit vierekkäin. Esimerkiksi polynomien $5x^2-x+5$ ja $3x^2-1$ summa on
    \begin{align*}
-        (\textcolor{red}{5x^2}-x\textcolor{blue}{{}+5})+(\textcolor{red}{3x^2}\textcolor{blue}{-1}) &=\textcolor{red}{(5+3)x^2}-x\textcolor{blue}{{}+(5-1)}=\textcolor{red}{8x^2}-x\textcolor{blue}{{}+4}.
+        (\textcolor{red}{5x^2}-x\textcolor{blue}{+5})+(\textcolor{red}{3x^2}\textcolor{blue}{-1}) &=\textcolor{red}{5x^2}+\textcolor{red}{3x^2}-x\textcolor{blue}{+5}\textcolor{blue}{-1} &=\textcolor{red}{(5+3)x^2}-x\textcolor{blue}{+(5-1)}=\textcolor{red}{8x^2}-x\textcolor{blue}{+4}.
     \end{align*}
 Samalla tavalla polynomeja voidaan vähentää toisistaan. Polynomien
 $14x^3+69$ ja $3x^3+2x^2+x$ erotus on
@@ -17,7 +17,7 @@ $14x^3+69$ ja $3x^3+2x^2+x$ erotus on
         &= \textcolor{green}{11x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69
     \end{align*}
     
-Samanasteisten termien yhteen- ja vähennyslasku perustuu siihen, että vakiokerroin voidaan
+Samanasteisten termien yhteen- ja vähennyslasku perustuu siihen, että reaalilukujen osittelulain (ks. Vapaa matikka 1) nojalla vakiokerroin voidaan
 ottaa yhteiseksi tekijäksi:
 \[
 ax^n+bx^n=(a+b)x^n.
@@ -40,13 +40,7 @@ Vähennetään vielä polynomit $P(x)$ ja $R(x)$ toisistaan:
     \end{align*}
 \end{esimerkki}
 
-%EN AIVAN YMMÄRTÄNYT TÄTÄ
-%Huomaa, että sulkeet voidaan poistaa ja termit yhdistää silloin, kun ne ovat
-%samaa astetta, ihan samaan tapaan kuin sulkeet voidaan poistaa lukujen
-%yhteenlaskussa silloin, kun ne eivät ole tulon tekijöinä.
-
-Yhteenlasketut ja vähennetyt polynomit täytyy yleensä sieventää perusmuotoon, jossa on vain yksi termi kutakin astetta kohti.
-Tämä on tehtävä esimerkiksi silloin, kun halutaan tarkistaa polynomin aste.
+Yhteenlasketut ja vähennetyt polynomit täytyy yleensä sieventää perusmuotoon, jossa on vain yksi termi kutakin astetta kohti. Tämä on tehtävä esimerkiksi silloin, kun halutaan tarkistaa polynomin aste.
 
 \begin{esimerkki} Esimerkiksi polynomin
 \[
