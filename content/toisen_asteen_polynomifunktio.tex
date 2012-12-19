@@ -1,36 +1,32 @@
 \chapter{Toisen asteen polynomin kuvaaja}
 
-Tässä pienessä luvussa perustellaan vihdoin, miksi kaikkien toisen asteen funktioiden
-kuvaajat näyttävät samalta. Lisäksi tarkastellaan, mitkä tekijät vaikuttavat kuvaajien
-muotoon.
+Tässä pienessä luvussa perustellaan vihdoin, miksi kaikkien toisen asteen funktioiden kuvaajat näyttävät samalta. Lisäksi tarkastellaan, mitkä tekijät vaikuttavat kuvaajien muotoon.
 
 \underline{Funktio $P(x)=x^2$}
 
 Aloitetaan funktiosta $P(x)=x^2$. Mitä tiedämme siitä piirtämättä kuvaajaa?
 \begin{itemize}
-\item Funktion pienin arvo on $P(0) = 0$, sillä tulon merkkisäännön perusteella $x^2$ ei voi saada negatiivisia arvoja.
+\item Algebrallisen päättelyn avulla voimme todeta, että funktion pienin arvo on $P(0) = 0$, sillä tulon merkkisäännön perusteella lauseke $x^2$ ei voi saada negatiivisia arvoja – ei ole olemassa sellaista reaalilukua $x$, jonka neliö olisi negatiivinen. (Kompleksiluvuilla tällaista rajoitusta ei ole, tästä lisää liitteessä.) Kuvaajan alin kohta sijoittuu siis origoon ja kuvaajan kaikki muut pisteet sen yläpuolelle.
 \item Kun $x > 0$, lauseke $x^2$  on sitä
-suurempi, mitä suurempi $x$ on.
+suurempi, mitä suurempi $x$ on. Tästä tiedämme, että nollasta oikealle siirryttäessä funktion kuvaaja nousee.
 \item Koska $(-x)^2 = x^2$, kuvaaja on symmetrinen $y$-akselin suhteen.
 \end{itemize}
 
 Näiden tietojen avulla voimme päätellä, että funktion kuvaaja koostuu kahdesta
-identtisestä haarasta, jotka kohtaavat, kun $x=0$. Mitä kauempana $x$ on nollasta,
-sitä suurempia ovat funktion arvot. Tämän kaiken voi päätellä jo ennen kuvaajan
-piirtämistä.
+identtisestä haarasta, jotka kohtaavat, kun $x=0$. Mitä kauempana $x$ on nollasta, sitä suurempia ovat funktion arvot. Tämän kaiken voi päätellä jo ennen kuvaajan piirtämistä.
 
-Tässä kuvaaja nyt on:
+Merkitsemällä koordinaatistoon yhtälön $y=x^2$ toteuttavia pisteitä, muodostuu lopulta funktion kuvaaja:
 \begin{center}
 \begin{kuvaajapohja}{2}{-2}{2}{-1}{4}
   \kuvaaja{x**2}{$f(x)=x^2$}{blue}
 \end{kuvaajapohja}
 \end{center}
-Kuvaajan muoto on geometriselta nimeltään \emph{paraabeli}. Paraabeleja esiintyy monessa yhteydessä: esimerksi polttopeilin pinta kaareutuu paraabelin muotoisena. Samoin ilmaan heitetyn kappaleen
-rata on likimain (ylösalainen) paraabeli, kun ilmanvastus on pieni.
+
+Kuvaajan muoto on geometriselta nimeltään \emph{paraabeli}. Paraabeleja esiintyy monessa yhteydessä: esimerksi polttopeilin ja radioteleskoopin pinta kaareutuu paraabelin muotoisena. Samoin ilmaan heitetyn kappaleen rata on likimain (ylösalainen) paraabeli, kun ilmanvastus on pieni.
 
 \underline{Funktio $P(x)=ax^2, \quad a\neq 0$}
 
-Polynomien $P(x)=ax^2$ arvot ovat ovat lausekkeeseen $x^2$ nähden $a$-kertaisia. Paraabelin symmetrisyys ja muut keskeiset ominaisuuden siis säilyvät.
+Polynomien $P(x)=ax^2$ arvot ovat ovat lausekkeeseen $x^2$ nähden $a$-kertaisia. Muuten paraabelin symmetrisyys ja muut keskeiset ominaisuudet säilyvät.
 
 \begin{itemize}
 \item Kun $a > 0$, myös $ax^2\geq 0$, joten pienin arvo on yhä $0$.\\
@@ -40,7 +36,7 @@ Paraabeli on \termi{ylöspäin aukeava}.
 mitä enemmän $x$ poikkeaa nollasta. \\
 Paraabeli on \termi{alaspäin aukeava}.
 \item Mitä enemmän $a$ poikkeaa nollasta, sitä nopeammin funktion arvot
-muuttuvat $x$:n muuttuessa, ja sitä kapeampi paraabeli on.
+muuttuvat $x$:n muuttuessa ja sitä kapeampi paraabeli on.
 \end{itemize}
 
 \begin{center}
@@ -233,3 +229,5 @@ Koottuna:
     \end{enumerate}
   \end{vastaus}
 \end{tehtava}
+
+%Kuvaajaan transformaatioihin esimerkkiä myös muuttujan x muuttamisesta. Piirrä f(x+1):n kuvaaja jne.
