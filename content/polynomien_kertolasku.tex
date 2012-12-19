@@ -2,12 +2,14 @@
 
 \subsection*{Polynomin kertominen monomilla}
 
+Polynomilausekkeiden käsittely on välttämätön taito matematiikassa, ja siksi tähän lukuun kannattaa paneutua kunnolla.
+
 Polynomeja voi kertoa keskenään tuttujen reaalilukujen laskusääntöjen avulla. Yksinkertaisin erikoistapaus on polynomin kertominen monomilla.
 
 \begin{esimerkki}
 \qquad \\
 \begin{itemize}
-    \item $2x(3x^2+5x+7) = 6x^3+10x^2+14x$
+    \item $2x(3x^2+5x+7) = x2\cdot 3x^2+2x\cdot 5x+2x\cdot 7=6x^3+10x^2+14x$
     \item $5x(3y^2+4y) = 15xy^2+20xy$
     \item $x(y+z) = xy+xz$
 \end{itemize}
@@ -15,7 +17,7 @@ Polynomeja voi kertoa keskenään tuttujen reaalilukujen laskusääntöjen avull
 
 \subsection*{Kahden binomin tulo}
 
-Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kerrotaan termeittäin ja summataan.
+Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin päädytään kertomaan polynomit ensin termeittäin ja sitten laskemaan kaikki yhteen.
 
 \begin{esimerkki}
 \qquad \\
@@ -172,7 +174,7 @@ Mutta ovatko ne alkutekijöitä, vai voidaanko ne edelleen jakaa pienempiin teki
 Itse asiassa laskemalla voidaan todeta että $2x^2-8x+8$ saadaan tulokseksi kertolaskusta $2(x-2)(x-2)=2(x-2)^2$.
 Voimme siis ilmoittaa polynomin tekijöidensä avulla: $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$.
 
-Polynomin tekijöitä voi etsiä soveltamalla kertolaskua käänteisesti:
+Polynomin tekijöitä voi etsiä soveltamalla osittelulakia (sulkujen auki kertomista) käänteisesti:
 
 \begin{itemize}
 \item Otetaan korkeimman asteen termin kerroin yhteiseksi tekijäksi: \\
@@ -265,6 +267,19 @@ Myöhemmin tässä kirjassa opitaan, miten minkä tahansa polynomin voi jakaa te
 %	c) kolmannen asteen termin kerroin.
 %	\begin{vastaus}
 %	\end{vastaus}
+%\end{tehtava}
+
+%\begin{tehtava}
+%    Olkoot $P(x)=x^2$ ja $Q(x)=x+1$ reaalifunktioita. Sievennä lausekkeet.
+%    \begin{enumerate}[a)]
+%        \item $P(x+1)$
+%        \item $Q(x-1)$
+%        \item $P(Q(x))$
+%        \item $Q(P(x))$
+%    \end{enumerate}
+%    \begin{vastaus}
+%
+%    \end{vastaus}
 %\end{tehtava}
 
 \begin{tehtava}
@@ -383,3 +398,17 @@ Myöhemmin tässä kirjassa opitaan, miten minkä tahansa polynomin voi jakaa te
 		\end{enumerate}
 	\end{vastaus}
 \end{tehtava}
+
+%\begin{tehtava}
+%    Olkoon annettu funktio $P: \mathbb{R} \rightarrow \mathbb{R}$, $P(x)=-x^4+2x$. Sievennä lausekkeet.
+%    \begin{enumerate}[a)]
+%		\item $P(\sqrt{2})$        
+%        \item $P(x)^2$
+%        \item $P(P(x))$
+%        \item $P(-x)$
+%        \item $P(2t)$
+%    \end{enumerate}
+%    \begin{vastaus}
+%
+%    \end{vastaus}
+%\end{tehtava}
