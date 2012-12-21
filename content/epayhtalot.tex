@@ -2,7 +2,7 @@
 
 \section{Epäyhtälömerkit}
 
-Olemme yhtälöiden yhteydessä käyttäneet merkintää = osoittamaan, että kaksi lukua tai pidempää lauseketta ovat arvoltaan yhtä suuret. Lukujen välillä on olemassa kuitenkin muitakin riippuvuussuhteita eli \emph{relaatioita}. Seuraavia \emph{epäyhtälömerkkejä} käytetään kuvaamaan yhtäsuuruudesta poikkeavia kahden reaaliluvun välisiä yhteyksiä:
+Olemme yhtälöiden yhteydessä käyttäneet merkintää $=$ osoittamaan, että kaksi lukua (tai monimutkaisempaa lauseketta) ovat arvoltaan yhtä suuret. Lukujen välillä on olemassa kuitenkin muitakin käytännön kannalta hyödyllisiä riippuvuussuhteita eli \emph{relaatioita}. Seuraavia \emph{epäyhtälömerkkejä} käytetään kuvaamaan yhtäsuuruudesta poikkeavia kahden reaaliluvun välisiä yhteyksiä:
 
 \begin{tabular}{ll}
 lukujen välinen yhteys & lausumistapa \\
@@ -26,7 +26,7 @@ $a \nleq b$ & "$a$ ei ole pienempi tai yhtä suuri kuin $b$" \\
 $a \ngeq b$ & "$a$ ei ole suurempi tai yhtä suuri kuin $b$" \\
 \end{tabular}
 
-Yleensä \termi[epäyhtälöistä]{epäyhtälö} puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään ''pienempi kuin''- ja ''pienempi tai yhtä suuri kuin'' -merkkiä ja niiden vastineita.
+Yleensä \termi[epäyhtälöistä]{epäyhtälö} puhuttaessa viitataan erityisesti lausekkeisiin, joissa käytetään ''pienempi kuin''- ja ''pienempi tai yhtä suuri kuin'' -merkkiä ja niiden vastineita. Kieltomuodot ovat harvinaisia.
 
 \section{Epäyhtälöiden teoriaa}
 
@@ -34,11 +34,11 @@ Epäyhtälöt käyttäytyvät monessa mielessä yhtälön tavoin. Yhtälö tai e
 
 \begin{enumerate}
 \item Aina tosi (identtisesti tosi). Tällöin yhtälö esittää väitteen, joka pitää aina paikkansa jokaisessa tilanteessa. Esimerkiksi $\pi=\pi$ tai $x-5\leq x$ ovat aina tosia.
-\item Joskus tosi eli ehdollisesti tosi (ehdollisesti tosi). Yhtälö pätee vain tietyissä tilanteissa, yleensä vain tietyillä jonkun muuttujan arvoilla. Esimerkiksi $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$. Epäyhtälö $x-2<2-x$ pätee vain negatiivisilla x:n arvoilla.
-\item Aina epätosi (identtisesti epätosi). Tällaiset yhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ tai epäyhtälö $x < x-1$ ovat aina epätosia.
+\item Joskus tosi (ehdollisesti tosi). Yhtälö tai epäyhtälö pätee vain tietyissä tilanteissa, yleensä vain tietyillä jonkun muuttujan arvoilla. Esimerkiksi $x^2=4$ pitää paikkansa vain, kun muuttuja $x$ saa arvon $2$ tai $-2$. Epäyhtälö $x<0$ pätee vain negatiivisilla $x$:n arvoilla.
+\item Aina epätosi (identtisesti epätosi). Tällaiset yhtälöt ja epäyhtälöt esittävät mahdottomia väitteitä, jotka eivät koskaan pidä paikkaansa. Esimerkiksi yhtäsuuruusväite $-1=3$ tai epäyhtälö $a < a-1$ ovat aina epätosia.
 \end{enumerate}
 
-Yhtälö säilyy totena aina, kun yhtälön molemmille puolille tehdään sama laskutoimitus -- toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin kohta, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä.
+Yhtälö säilyy aina totena, kun yhtälön molemmille puolille tehdään sama laskutoimitus -- toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin kohta, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä.
 
 Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys (eli epäyhtälön totuusarvo) säilyy. Testataan ensin peruslaskutoimituksia. Havainnollistetaan lukusuoralla tilannetta, jossa epäyhtälön molemmille puolille lisätään luku 4:
 
@@ -57,7 +57,7 @@ Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyht
 
 Huomataan, että positiivisen luvun lisääminen vain siirtää lukuja lukusuoralla oikealle, mutta säilyttää niiden järjestyksen. Epäyhtälöstä $2<3$ siis seuraa $2+4<3+4$ eli $6<7$.
 
-Myös vähennyslasku, joka voidaan käsittää negatiivisen luvun lisäämisenä, säilyttää pitää epäyhtälön totena:
+Myös vähennyslasku, joka voidaan käsittää negatiivisen luvun lisäämisenä, säilyttää epäyhtälön totena:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
@@ -122,7 +122,7 @@ Tämän perusteella ja yleistäen, kaikille epäyhtälöille pätee seuraava eri
 
 \laatikko{Jos epäyhtälö kerrotaan tai jaetaan puolittain negatiivisella luvulla, epäyhtälömerkki kääntyy.}
 
-Lisäksi mainitaan, että nollalla kertominen ei säilytä epäyhtälöä totena, ellei käytetty epäyhtälömerkki hyväksy myös yhtäsuuruutta (esimerkiksi $\leq$). Tällöinkään epäyhtälön kertominen puolittain nollalla ei ole ratkaisun etsimisen kannalta mielekästä. Koska mikä tahansa luku kerrottuna nollalla antaa nollan, olisivat molemmat epäyhtälön puolet nollalla kertomisen jälkeen yhtä suuret alkuperäisestä yhtälöstä riippumatta.
+Lopuksi mainitaan, että nollalla kertominen ei säilytä epäyhtälöä totena, ellei käytetty epäyhtälömerkki hyväksy myös yhtäsuuruutta (esimerkiksi $\leq$). Tällöinkään epäyhtälön kertominen puolittain nollalla ei ole ratkaisun etsimisen kannalta mielekästä: koska mikä tahansa luku kerrottuna nollalla antaa nollan, olisivat molemmat epäyhtälön puolet nollalla kertomisen jälkeen yhtä suuret alkuperäisestä yhtälöstä riippumatta.
 
 \begin{esimerkki}
 
@@ -136,9 +136,9 @@ Esimerkki epäyhtälön käsittelystä:
 \end{align*}
 \end{esimerkki}
 
-Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö säilyy aivan kuin
+Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö käyttäytyy aivan kuin
 yhtälökin, kun sama laskutoimitus tehdään epäyhtälön kummallekin puolelle.
-Viimeisessä vaiheessa huomataan kuitenkin, että negatiivisella luvulla
+Viimeisessä vaiheessa kuitenkin huomataan, että negatiivisella luvulla
 kerrottaessa epähtälön keskellä oleva merkki pitää kääntää toisin päin, että
 epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat kerrotaan
 $-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhtälö kääntyykin toisin päin.
@@ -214,7 +214,7 @@ Avoin väli & $x < 5$ & $x \in ]-\infty,5[$ & \begin{lukusuora}{-6}{10}{4}\lukus
 
 \section{Ensimmäisen asteen epäyhtälö}
 
-Erityisesti harjoittelemme 1. asteen epäyhtälöiden ratkaisemista ja myöhemmin yleisesti polynomiepäyhtälöiden ratkaisemista.
+Harjoittelemme nyt erityisesti 1. asteen epäyhtälöiden ratkaisemista -- toisen asteen ja sitä korkeampien polynomiepäyhtälöiden ratkaisemista käsitellään toisen asteen yhtälön käsittelyn jälkeen.
 
 Samoin kuin yhtälöiden kohdalla, epäyhtälö pyritään muuttamaan niin yksinkertaiseen muotoon kuin mahdollista, jotta yksinkertaisesta tilanteesta nähdään välittömästi, mitkä luvut kuuluvat ratkaisuun ja mitkä eivät. Tuntemattomat pyritään yhdistämään, ja epäyhtälöä muokataan niin, että tuntematon saadaan yksin omalle puolelleen yhtälöä.
 
