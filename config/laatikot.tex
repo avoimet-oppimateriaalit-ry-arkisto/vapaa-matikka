@@ -1,14 +1,29 @@
 % Infoboksi väreineen
 
-\definecolor{darkKhaki}{RGB}{189,183,107}
+\usepackage[framemethod=TikZ]{mdframed}
+
+\definecolor{ParisGreen}{RGB}{80,200,120}
+%\definecolor{PersianGreen}{RGB}{0,166,147}
+%\definecolor{darkKhaki}{RGB}{189,183,107}
 %\definecolor{cornflowerBlue}{RGB}{154,206,235}
 %\definecolor{thulianPink}{RGB}{222,111,161}
 %\definecolor{olivine}{RGB}{154,185,115}
 %\definecolor{battleshipGray}{RGB}{132,132,130}
-\definecolor{darkKhaki}{RGB}{189,183,107}
 
-\usepackage[framemethod=TikZ]{mdframed}
-\newcommand{\laatikko}[1]{\begin{minipage}{\textwidth}\begin{mdframed}[backgroundcolor=darkKhaki,skipabove=1em,skipbelow=1em,roundcorner=4pt] #1 \end{mdframed}\end{minipage}}%
+\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(ParisGreen); color(50bp)=(ParisGreen); color(100bp)=(ParisGreen!50)}
+\makeatletter
 
-%\usepackage[tikz]{bclogo}
-%\newcommand{\laatikko}[1]{\begin{bclogo}[couleur = olivine,arrondi = 0.3,logo = , ombre = true, barre = none, couleurOmbre = battleshipGray, blur]{}#1\end{bclogo}}
+\mdfdefinestyle{laatikkotyyli}{
+  leftmargin=-47pt,
+  innerleftmargin=47pt,
+  rightmargin=-164pt,
+  innerrightmargin=164pt,
+  middlelinewidth=0pt,
+  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
+  innertopmargin=3mm,
+  innerbottommargin=3mm,
+  needspace=3\baselineskip,
+}
+\makeatother
+
+\newcommand{\laatikko}[1]{\begin{minipage}{\textwidth}\begin{mdframed}[style=laatikkotyyli] #1 \end{mdframed}\end{minipage}}
