@@ -179,6 +179,26 @@
 % Esimerkeille oma komento http://tex.stackexchange.com/questions/21227/example-environment
 \input{config/esimerkki}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}
+  {\huge\itshape\color{ParisGreen}}{\thechapter}{1em}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\lhead{}
+\chead{}
+\rhead{}
+\lfoot{\leftmark}
+\cfoot{}
+\rfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Euron merkki
 \usepackage{eurosym}
 

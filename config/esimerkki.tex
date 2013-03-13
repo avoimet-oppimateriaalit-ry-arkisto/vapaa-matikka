@@ -2,8 +2,10 @@
 
 \usepackage{framed}
 
+\definecolor{ParisGreen}{RGB}{80,200,120}
+
 \newenvironment{customleftbar}{%
-	\def\FrameCommand{\color{gray}\vrule width 0.7mm \color{black}\hspace{3mm}}%
+	\def\FrameCommand{\color{ParisGreen}\vrule width 0.7mm \color{black}\hspace{3mm}}%
 	\MakeFramed {\advance\hsize-\width \FrameRestore}}%
 {\endMakeFramed}
 
