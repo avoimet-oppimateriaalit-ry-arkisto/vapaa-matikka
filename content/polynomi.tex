@@ -29,7 +29,7 @@ Yhden ja kahden termin polynomeista käytetään erityisnimityksiä \termi[monom
 Termin muuttujan eksponenttia kutsutaan termin \termi[asteeksi]{termi!aste}.
 Vakiotermin aste on nolla.
 %Erikoistapaus termistä on nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}.
-Polynomin \termi[aste]{polynomi!aste} on suurin sen termien asteista.
+Polynomin \termi[aste]{polynomi!aste} (käytetään myös nimitystä \termi[asteluku]{polynomi!asteluku}) on suurin sen termien asteista.
 
 Koska polynomilauseke koostuu potenssien summista ja yhteenlasku on vaihdannainen, termien paikkaa polynomissa voidaan vapaasti vaihtaa. Siksi esimerkiksi polynomi $\frac{1}{3}y^3+y^2-3$ voidaan kirjoittaa myös järjestyksessä $y^2-3+\frac{1}{3}y^3$. Yleensä polynomien termit kirjoitetaan niiden asteen perusteella laskevaan järjestykseen niin, että korkeimman asteen termi kirjoitetaan ensin.
 
@@ -76,6 +76,8 @@ Voidaan esimerkiksi sanoa ''polynomi $P(x)=2x+1$'', vaikka yleensä $P(x)$-merki
 
 \Harjoitustehtavat
 
+\subsubsection*{Opi perusteet}
+
 \begin{tehtava}
     Täydennä taulukko.
         
@@ -115,127 +117,137 @@ $-5x^{99}$   &        1          &          $-5$     &       99            &    
     Mitkä seuraavista ovat polynomeja?
     \begin{enumerate}[a)]
         \item $\frac{1}{x}$
-        \item $x^3+4x$
+       %\item $x^3+4x$
         \item $5x-125$
-        \item $2^x$
-    \end{enumerate}
-    \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item Ei ole.
-            \item On.
-            \item On.
-            \item Ei ole.
-        \end{enumerate}
-     \end{vastaus}
-\end{tehtava}
-
-\begin{tehtava}
-    Mitkä seuraavista ovat polynomeja?
-    \begin{enumerate}[a)]
+       %\item $2^x$
         \item $\sqrt{x}+1$
         \item $3x^4+6x^2+9$
-        \item $\sqrt[3]{2x}-x$
+        \item $\sqrt{2}x-x$
         \item $4^x+5x+6$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
             \item Ei ole.
+           %\item On.
             \item On.
+           %\item Ei ole.
             \item Ei ole.
+            \item On.
+            \item On.
             \item Ei ole.
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
-    Olkoot $P(x)=x^2+5$ ja $Q(x)=x^3-1$. Laske:
+    Olkoot $P(x)=x^2+5$ ja $Q(x)=x^3-1$. Laske.
     \begin{enumerate}[a)]
         \item $P(2)$
         \item $Q(1)$
-        \item $P(7)$
-        \item $Q(4)$
+        \item $P(-7)$
+        \item $Q(-4)$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
-            \item $9$
-            \item $0$
-            \item $54$
-            \item $63$
+            \item $9$ % 2^2 + 5 = 4 + 5 
+            \item $0$ % 1^3 - 1
+            \item $54$ % (-7)^2 + 5 = 49 + 5 
+            \item $-65$ % (-4)^3 - 1 = -64 -1
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
 
+%\begin{tehtava}
+%    Olkoot $P(x)=x^2+3x+4$ ja $Q(x)=x^3-10x+1$. Laske:
+%    \begin{enumerate}[a)]
+%        \item $P(-1)$
+%        \item $Q(-2)$
+%        \item $P(3)$
+%        \item $Q(0)$
+%    \end{enumerate}
+%    \begin{vastaus}
+%        \begin{enumerate}[a)]
+%            \item $2$
+%            \item $13$
+%            \item $22$
+%            \item $1$
+%        \end{enumerate}
+%    \end{vastaus}
+%\end{tehtava}
+
 \begin{tehtava}
-    Olkoot $P(x)=x^2+3x+4$ ja $Q(x)=x^3-10x+1$. Laske:
+    Olkoot $P(x)=x^2+3x+4$ ja $Q(x)=x^3-10x+1$. Sievennä.
     \begin{enumerate}[a)]
-        \item $P(-1)$
-        \item $Q(-2)$
-        \item $P(3)$
-        \item $Q(0)$
+        \item $P(x)+Q(x)$
+        \item $P(x)-Q(x)$
+        \item $Q(x)-P(x)$
+        \item $2P(3)+Q(2)$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
-            \item $2$
-            \item $13$
-            \item $22$
-            \item $1$
+            \item $x^3+x^2-7x+5$ % x^2+3x+4 + x^3-10x+1
+            \item $-x^3+x^2+13x+3$ % x^2+3x+4 -(x^3-10x+1) = x^2+3x+4 -x^3+10x-1
+            \item $x^3-x^2-13x-3$ % 
+            \item $33$ % 2*(3^2+3*3+4) +  2^3-10*2+1 = 2*(9+9+4)+8-20+1 =44-11 =33
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
 
-\begin{tehtava}
-	Mikä on/mitkä ovat polynomin $P(x) = x^5-3x^3+2x-1$
-	\begin{enumerate}[a)]
-		\item aste
-		\item termit
-		\item kolmannen asteen termi
-		\item vakiotermi
-	\end{enumerate}
+%\begin{tehtava}
+%	Mikä on/mitkä ovat polynomin $P(x) = x^5-3x^3+2x-1$
+%	\begin{enumerate}[a)]
+%		\item aste
+%		\item termit
+%		\item kolmannen asteen termi
+%		\item vakiotermi
+%	\end{enumerate}
+%
+%	\begin{vastaus}
+%		\begin{enumerate}[a)]
+%			\item $5$
+%			\item $x^5$, $-3x^3$, $2x$, $-1$
+%			\item $-3x^3$
+%			\item $-1$
+%		\end{enumerate}
+%	\end{vastaus}
+%\end{tehtava}
 
-	\begin{vastaus}
-		\begin{enumerate}[a)]
-			\item $5$
-			\item $x^5$, $-3x^3$, $2x$, $-1$
-			\item $-3x^3$
-			\item $-1$
-		\end{enumerate}
-	\end{vastaus}
-\end{tehtava}
+%\begin{tehtava}
+%	Mitkä on seuraavien polynomien asteet?
+%	\begin{enumerate}[a)]
+%		\item $x^2 + 3x - 5$
+%		\item $100 + x$
+%		\item $3x^3 + 90x^8 + 2x$
+%		\item $12x^1 + 34x^2 + 56x^3 + 78x^5 + 90x^5$
+%	\end{enumerate}
+%
+%	\begin{vastaus}
+%		\begin{enumerate}[a)]
+%			\item $2$
+%			\item $1$
+%			\item $8$
+%			\item $5$
+%		\end{enumerate}
+%	\end{vastaus}
+%\end{tehtava}
 
-\begin{tehtava}
-	Mitkä on seuraavien polynomien asteet?
-	\begin{enumerate}[a)]
-		\item $x^2 + 3x - 5$
-		\item $100 + x$
-		\item $3x^3 + 90x^8 + 2x$
-		\item $12x^1 + 34x^2 + 56x^3 + 78x^5 + 90x^5$
-	\end{enumerate}
+% \begin{tehtava}
+%     Sievennä
+%     \begin{enumerate}
+%         \item $(2x + 3) + x $
+%         \item $(3x - 1) + (-x + 1)$
+%         \item $(5x + 10) + (6x - 6) - (x + 3)$
+%     \end{enumerate}
+%     \begin{vastaus}
+%         \begin{enumerate}
+%             \item $3x + 3$
+%             \item $2x$
+%             \item $10x - 1$
+%         \end{enumerate}
+%     \end{vastaus}
+% \end{tehtava}
 
-	\begin{vastaus}
-		\begin{enumerate}[a)]
-			\item $2$
-			\item $1$
-			\item $8$
-			\item $5$
-		\end{enumerate}
-	\end{vastaus}
-\end{tehtava}
-
-\begin{tehtava}
-    Sievennä
-    \begin{enumerate}
-        \item $(2x + 3) + x $
-        \item $(3x - 1) + (-x + 1)$
-        \item $(5x + 10) + (6x - 6) - (x + 3)$
-    \end{enumerate}
-    \begin{vastaus}
-        \begin{enumerate}
-            \item $3x + 3$
-            \item $2x$
-            \item $10x - 1$
-        \end{enumerate}
-    \end{vastaus}
-\end{tehtava}
+\subsubsection*{Hallitse kokonaisuus}
 
 \begin{tehtava}
     Sievennä
@@ -247,7 +259,7 @@ $-5x^{99}$   &        1          &          $-5$     &       99            &    
     \begin{vastaus}
         \begin{enumerate}
             \item $-x + 1$
-            \item $3y^3 + 2y^2$
+            \item $3y^3 + 3y^2$
             \item $2z^{10} + 2z^8 - 4z^6 - z^4 + z^2 + 4$
         \end{enumerate}
     \end{vastaus}
@@ -302,7 +314,7 @@ $-5x^{99}$   &        1          &          $-5$     &       99            &    
 	\begin{enumerate}[a)]
 		\item $2x+x^3+1$
 		\item $x^2+2x+1$
-		\item $x+2x^3+1$
+		\item $x+2x^3+1 - (x^3+x)$
 		\item $15+x^4+2x+x^3-x^4-14$
 	\end{enumerate}
 	\begin{vastaus}
