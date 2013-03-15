@@ -7,10 +7,10 @@ Polynomilausekkeiden käsittely on välttämätön taito matematiikassa, ja siks
 Kahden monomin tulo sievennetään kertomalla kertoimet keskenään ja kirjainosat keskenään. Muista potenssien laskusäännöt!
 
 \begin{esimerkki}
-Laske kertolaskut \quad a) $3x\cdot 2x$ \quad b)$-3x^2\cdot (-5x^4)$ \quad 
+Laske \quad a) $2x\cdot 3x$ \quad b)$-3x^2\cdot (-5x^4)$ \quad 
 c) $5x^2 \cdot (-2x)$
 \begin{enumerate}[a)]
-    \item $3x\cdot 2x = 2\cdot 3\cdot x\cdot x = 6x^2$
+    \item $2x\cdot 3x = 2\cdot 3\cdot x\cdot x = 6x^2$
     \item $-3x^2\cdot (-5x^4) = (-3)\cdot (-5) \cdot x^2 \cdot x^4 = 15 x^6$
     \item $5x^2 \cdot (-2x) = -10 x^3$
 \end{enumerate} 
@@ -22,18 +22,18 @@ Polynomeja voi kertoa keskenään tuttujen reaalilukujen laskusääntöjen avull
 käytetään osittelulakia $a(b+c)=ab+ac$.
 
 \begin{esimerkki}
-\quad \\
-\begin{itemize}
-    \item $5(x+3) = 5x+15$
-    \item $x(y+z)=xy+xz$
+Laske \quad a) $5(x+3)$ \quad b)$2x(x-5)$ \quad 
+c) $3(a+b+c)$
+\begin{enumerate}[a)]
+    \item $5(x+3) = 5\cdot x + 5\cdot 3 = 5x+15$
     \item $2x(x-5)=2x^2-10x$
     \item $3(a+b+c)=3a+3b+3c$
-\end{itemize} 
+\end{enumerate}
 \end{esimerkki} 
 
 \subsection*{Kahden binomin tulo}
 
-Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kummallakin ensimmäisen binomin termillä kerrotaan toisen binomin termit. Saadut neljä tuloa lasketaan yhteen. 
+Kahden binomin tulossa kummallakin ensimmäisen binomin termillä kerrotaan toisen binomin termit. Saadut neljä tuloa lasketaan yhteen. 
 
 \newcommand{\pbezier}[4]{
 	\pgfmathsetmacro{\PBxa}{#1}
@@ -48,12 +48,12 @@ Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kummallakin ensim
 \begin{esimerkki}
 Laske binomien $x+2$ ja $x-5$ tulo. \\
 \begin{tikzpicture}
-\draw node[right] {\large $(x+2)(x-5) = x^2-5x+2x-10 = x^2 -3x-10.$};
+\draw node[right] {$(x+2)(x-5) = x^2-5x+2x-10 = x^2 -3x-10.$};
 
-\pgfmathsetmacro{\klAx}{0.48}
-\pgfmathsetmacro{\klBx}{1.15}
-\pgfmathsetmacro{\klCx}{1.8}
-\pgfmathsetmacro{\klDx}{2.5} % oli 2.8
+\pgfmathsetmacro{\klAx}{0.40}
+\pgfmathsetmacro{\klBx}{1.00}
+\pgfmathsetmacro{\klCx}{1.5}
+\pgfmathsetmacro{\klDx}{2.1} % oli 2.8
 \pgfmathsetmacro{\klEx}{3.64}
 \pgfmathsetmacro{\klLo}{-0.22}
 \pgfmathsetmacro{\klHi}{0.26}
@@ -69,12 +69,12 @@ Laske binomien $x+2$ ja $x-5$ tulo. \\
 \begin{esimerkki}
 Laske binomien $x^2-x$ ja $2x-1$ tulo. \\
 \begin{tikzpicture}
-\draw node[right] {\large $(x^2-x)(2x-1) = 2x^3-x^2-2x^2+x = 2x^3 -3x^2 +x.$};
+\draw node[right] {$(x^2-x)(2x-1) = 2x^3-x^2-2x^2+x = 2x^3 -3x^2 +x.$};
 
-\pgfmathsetmacro{\klAx}{0.48}
-\pgfmathsetmacro{\klBx}{1.35}
-\pgfmathsetmacro{\klCx}{2.0}
-\pgfmathsetmacro{\klDx}{2.85}
+\pgfmathsetmacro{\klAx}{0.40}
+\pgfmathsetmacro{\klBx}{1.15}
+\pgfmathsetmacro{\klCx}{1.7}
+\pgfmathsetmacro{\klDx}{2.5}
 \pgfmathsetmacro{\klEx}{3.64}
 \pgfmathsetmacro{\klLo}{-0.22}
 \pgfmathsetmacro{\klHi}{0.26}
@@ -114,15 +114,16 @@ polynomista.
 \pbezier{\klBx}{\klEx}{\klLo}{-0.5}
 \end{tikzpicture}
 
-Esimerkiksi polynomien $x-3$ ja $x^2-4x+3$ tulo voidaan laskea seuraavasti:
+\begin{esimerkki}
+Laske polynomien $x-3$ ja $x^2-4x+3$ tulo. \\
 \begin{tikzpicture}
-\draw node[right] {\large $(x-3)(x^2-4x+3) = x^3-4x^2+3x-3x^2+12x-9$};
+\draw node[right] {$(x-3)(x^2-4x+3) = x^3-4x^2+3x-3x^2+12x-9 = x^3-7x^2+15x-9$};
 
-\pgfmathsetmacro{\klAx}{0.48}
-\pgfmathsetmacro{\klBx}{1.15}
-\pgfmathsetmacro{\klCx}{1.8}
-\pgfmathsetmacro{\klDx}{2.8}
-\pgfmathsetmacro{\klEx}{3.64}
+\pgfmathsetmacro{\klAx}{0.40}
+\pgfmathsetmacro{\klBx}{1.00}
+\pgfmathsetmacro{\klCx}{1.5}
+\pgfmathsetmacro{\klDx}{2.3}
+\pgfmathsetmacro{\klEx}{3.1}
 \pgfmathsetmacro{\klLo}{-0.22}
 \pgfmathsetmacro{\klHi}{0.26}
 
@@ -134,13 +135,13 @@ Esimerkiksi polynomien $x-3$ ja $x^2-4x+3$ tulo voidaan laskea seuraavasti:
 \pbezier{\klBx}{\klDx}{\klLo}{-0.3}
 \pbezier{\klBx}{\klEx}{\klLo}{-0.5}
 \end{tikzpicture}\newline
-Vastaukseksi saadaan sievennyksen jälkeen $x^3-7x^2+15x-9$. (Tarkista itse!)
+\end{esimerkki}
 
 \begin{esimerkki}
+Laske polynomien $x^4-3x^3+3$ ja $x^3-2x^2+1$ tulo. \\
 \begin{align*}
-&\hspace{0.5cm}(x^4-3x^3+3)(x^3-2x^2+1) \\
-&= x^4 (x^3-2x^2+1) - 3x^3 (x^3-2x^2+1) + 3 (x^3-2x^2+1) \\
-&= x^4\cdot x^3 + x^4\cdot (-2x^2)+x^4\cdot 1-3x^3\cdot x^3-3x^3(-2x^2)-3x^3\cdot1+3x^3+3(-2x^2)+3\cdot 1 \\
+&\hspace{0.5cm}(\textcolor{red}{x^4} \textcolor{blue}{-3x^3} +{}\textcolor{green}{3})(x^3-2x^2+1) \\
+&= \textcolor{red}{x^4}\cdot x^3 + \textcolor{red}{x^4}\cdot (-2x^2)+\textcolor{red}{x^4}\cdot 1\textcolor{blue}{-3x^3}\cdot x^3\textcolor{blue}{-3x^3}\cdot(-2x^2)\textcolor{blue}{-3x^3}\cdot1+\textcolor{green}{3}x^3+\textcolor{green}{3}\cdot(-2x^2)+\textcolor{green}{3}\cdot 1 \\
 &= x^7-2x^6+x^4-3x^6+6x^5-3x^3+3x^3-6x^2+3 \\
 &= x^7-5x^6+6x^5+x^4-6x^2+3
 \end{align*}
