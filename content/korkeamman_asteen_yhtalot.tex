@@ -1,43 +1,27 @@
 \chapter{Korkeamman asteen yhtälöt}
+Toisen asteen polynomiyhtälön ratkaiseminen on helppoa toisen asteen yhtälön ratkaisukaavan avulla. Korkeamman asteen yhtälöiden ratkaiseminen on monimutkaisempaa. Myös kolmannen ja neljännen asteen yhtälöille on olemassa ratkaisukaavat, mutta ne ovat hyvin monimutkaisia. Vuonna 1823 Niels Abel osoitti, että viidennen ja sitä korkeamman asteen yhtälöille ei ole olemassa ratkaisukaavaa.
 
-Kun polynomiyhtälön aste on suurempi kuin kaksi, yhtälöä kutsutaan kurssin kontekstissa korkeamman asteen yhtälöksi. Sovelluksissa näitäkin tarvitsee ratkaista usein.
+Siis käytännössä korkeamman asteen yhtälöt täytyy ratkaista numeerisesti tietokoneen avulla. Kuitenkin joissain erikoistapauksissa ratkaiseminen onnistuu käsin.
 
-Kolmannen ja neljännen asteen yhtälöille keksittiin ratkaisukaava 1500-luvulla, mutta ne ovat kovin monimutkaisia verrattuna toisen asteen yhtälön ratkaisukaavaan. Vuonna 1823 Niels Abel osoitti, ettei viidennen tai sitä korkeamman asteen yhtälöille ole olemassa ratkaisukaavoja lainkaan. Viidennen ja sitä korkeamman asteen yhtälöille on siis mahdollista laskea tarkat juuret vain likimääräisesti joitakin erikoistapauksia lukuunottamatta.
+\section{Tekijöihinjako}
+Jos polynomiyhtälön $P(x) = 0$ polynomi $P$ voidaan jakaa tekijöihin, ratkaisu saadaan etsimällä näiden tekijöiden nollakohdat. Esimerkiksi jos polynomista puuttuu vakiotermi, voidaan ottaa muuttuja yhteiseksi tekijäksi ja riittää ratkaista yhtä pienemmän asteen polynomiyhtälö.
 
-Tyypillisesti korkeamman asteen yhtälöt ratkaistaan numeerisesti tietokoneen avulla. (Myös 3. ja 4. asteen yhtälöt ratkaistaan usein numeerisesti, koska ratkaisukaavat ovat niin monimutkaisia.) Numeerisista menetelmistä kerrotaan lisää kurssissa 12.
-
-Tässä luvussa käsitellään joitakin korkeamman asteen yhtälön erikoistapauksia, jotka ratkeavat käsin. 
-
-\section{Sijoituksen avulla ratkeavat yhtälöt}
-
-Malliesimerkki sijoituksen avulla ratkeavasta yhtälöstä on ns. bikvadraattinen yhtälö. Bikvadraattinen yhtälö on muotoa $ax^4+bx^2+c=0$ ja se ratkeaa sijoituksella $y=x^2$. Vastaavasti sijoituksella $y=x^n$ voidaan ratkaista kaikki yhtälöt, jotka ovat muotoa $ax^{2n}+bx^n+c=0$.
-
-\begin{esimerkki}{\ }
-
-\begin{itemize}
-    \item Ratkaistaan yhtälö $2x^4+14x^2-36=0$.
-    \item Tehdään sijoitus $y=x^2$.
-    \item Yhtälö saa muodon $2y^2+14y-36=0$.
-    \item Sievennetään yhtälöä jakamalla puolittain kahdella: $y^2+7y-18=0$.
-    \item Ratkaistaan toisen asteen yhtälön ratkaisukaavalla $y=2$ tai $y=-9$.
-    \item Reaaliluvun neliö ei voi olla negatiivinen, joten hylätään jälkimmäinen juuri.
-    \item Ratkaistaan ensimmäisestä juuresta $x$: $x^2=2$ eli $x=\pm\sqrt{2}$.
-    \item Saadaan vastaukseksi kaksi reaalijuurta yhtälölle: $x=\pm\sqrt{2}$.
-\end{itemize}
+\begin{esimerkki}
+Ratkaistaan yhtälö $x^3 - 3x^2 + x = 0$. Huomataan, että vasemmalla puolella on yhteisenä tekijänä $x$, eli yhtälö voidaan kirjoittaa muodossa $x(x^2-3x+1) = 0$. Siis yhtälö pätee täsmälleen silloin kun
+\[x = 0 \text{ tai } x^2-3x+1 = 0.\]
+Siis käyttämällä toisen asteen yhtälön ratkaisukaavaa saadaan, että yhtälön ratkaisu on
+\[x = 0 \text{ tai } x = \frac{3\pm \sqrt{5}}{2}.\]
 \end{esimerkki}
 
-\section{Muuttuja yhteisenä tekijänä}
+Koska polynomien jakolauseen mukaan kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta, periaatteessa tällä tavalla voidaan ratkaista kaikki polynomiyhtälöt. Yleensä kuitenkin tekijöihin jakaminen on vaikeaa.
 
-Joillakin yhtälöillä saattaa olla muuttuja tai jokin muuttujan potenssi yhtälön tekijänä. Esimerkkinä kolmannen asteen yhtälössä, joka on muotoa \\ $ax^3+bx^2+cx=0$, muuttuja $x$ on yhtälön yksi tekijä. Kyseinen yhtälö voidaan esittää muodossa $x(ax^2+bx+c)=0$, jolloin sen ratkaisut ovat $x=0$ ja yhtälön $ax^2+bx+c=0$ ratkaisut. Vastaavasti muotoa $ax^{n+2}+bx^{n+1}+cx^n=0$ oleva yhtälö voidaan esittää muodossa $x^n(ax^2+bx+c)=0$ ja ratkaista samalla lailla.
+\section{Sijoituksen avulla ratkeavat yhtälöt}
+Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla. Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että jos merkitään kirjaimella $y$ lauseketta $x^2$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Nyt $y$ voidaan ratkaista toisen asteen ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$. 
 
-\begin{esimerkki}{\ }
-\begin{itemize}
-    \item Ratkaistaan yhtälö $x^4-8x^3+16x^2=0$.
-    \item Yhtälön yhteinen tekijä on $x^2$, joten muotoillaan se irti muista termeistä: $x^2(x^2-8x+16)=0$.
-    \item Yksi ratkaisu on $x=0$, loput ratkaisut saadaan ratkaisemalla yhtälö \\ $x^2-8x+16=0$.
-    \item Ratkaisut ovat $x=0$ ja $x=4$.
+\begin{esimerkki}
+Ratkaistaan yhtälö $2x^4+14x^2-36=0$. Tehdään sijoitus $y = x^2$. Nyt yhtälö saa muodon $2y^2+14y-36 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = 2$ ja $y = -9$.
 
-\end{itemize}
+Nyt alkuperäisen yhtälön ratkaisut ovat ne $x$:n arvot jotka toteuttavat ainakin toisen yhtälöistä $x^2 = 2$ ja $x^2 = -9$. Reaaliluvun neliö ei ole koskaan negatiivinen, eli ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
 \end{esimerkki}
 
 \Harjoitustehtavat
