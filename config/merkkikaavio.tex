@@ -7,7 +7,7 @@
 		\pgfmathsetmacro{\MKruutuw}{1.4}
 		\pgfmathsetmacro{\MKruutuh}{0.7}
 		\pgfmathsetmacro{\MKkaikkiw}{\MKruutuw*\MKruutuja}
-		\pgfmathsetmacro{\MKsuorakorkeus}{0.2}
+		\pgfmathsetmacro{\MKsuorakorkeus}{0.22}
 		
 		\draw[arrows=-triangle 45,line width=0.2mm] (0, \MKsuorakorkeus) -- (\MKkaikkiw + 0.4, \MKsuorakorkeus) node[below] {$x$};
 		
@@ -16,7 +16,7 @@
 		{
 			\if\sarake0
 			\else
-				\draw (\sarake * \MKruutuw, \MKsuorakorkeus) -- ++(0, 0.3);
+				\draw (\sarake * \MKruutuw, \MKsuorakorkeus - 0.1) -- ++(0, 0.2);
 			\fi
 			\draw (\sarake * \MKruutuw, 0) -- ++(0, -\MKruutuh);
 		}
@@ -31,7 +31,7 @@
 
 % Lisää kohdan x-akselille.
 \newcommand{\merkkikaavioKohta}[1]{
-	\draw (\MKkohtapos, 0.4) node[above] {\phantom{$\int$}#1\phantom{$\int$}};
+	\draw (\MKkohtapos, 0.26) node[above] {\phantom{$\int$}#1\phantom{$\int$}};
 	\pgfmathsetmacro{\MKkohtapos}{\MKkohtapos+\MKruutuw}
 }
 
