@@ -1,40 +1,39 @@
 \chapter{Polynomien kertolasku}
 
-\subsection*{Polynomin kertominen monomilla}
-
 Polynomilausekkeiden käsittely on välttämätön taito matematiikassa, ja siksi tähän lukuun kannattaa paneutua kunnolla.
 
-Polynomeja voi kertoa keskenään tuttujen reaalilukujen laskusääntöjen avulla. Yksinkertaisin erikoistapaus on polynomin kertominen monomilla.
+\subsection*{Monomien tulo}
+
+Kahden monomin tulo sievennetään kertomalla kertoimet keskenään ja kirjainosat keskenään. Muista potenssien laskusäännöt!
 
 \begin{esimerkki}
-\qquad \\
-\begin{itemize}
-    \item $2x(3x^2+5x+7) = x2\cdot 3x^2+2x\cdot 5x+2x\cdot 7=6x^3+10x^2+14x$
-    \item $5x(3y^2+4y) = 15xy^2+20xy$
-    \item $x(y+z) = xy+xz$
-    \item $2x(x+y+z) = 2x^2+2xy+2xz$
-\end{itemize}
+Laske kertolaskut \quad a) $3x\cdot 2x$ \quad b)$-3x^2\cdot (-5x^4)$ \quad 
+c) $5x^2 \cdot (-2x)$
+\begin{enumerate}[a)]
+    \item $3x\cdot 2x = 2\cdot 3\cdot x\cdot x = 6x^2$
+    \item $-3x^2\cdot (-5x^4) = (-3)\cdot (-5) \cdot x^2 \cdot x^4 = 15 x^6$
+    \item $5x^2 \cdot (-2x) = -10 x^3$
+\end{enumerate} 
 \end{esimerkki}
+
+\subsection*{Polynomin kertominen monomilla}
+
+Polynomeja voi kertoa keskenään tuttujen reaalilukujen laskusääntöjen avulla. Yksinkertaisin erikoistapaus on polynomin kertominen monomilla, jolloin
+käytetään osittelulakia $a(b+c)=ab+ac$.
+
+\begin{esimerkki}
+\quad \\
+\begin{itemize}
+    \item $5(x+3) = 5x+15$
+    \item $x(y+z)=xy+xz$
+    \item $2x(x-5)=2x^2-10x$
+    \item $3(a+b+c)=3a+3b+3c$
+\end{itemize} 
+\end{esimerkki} 
 
 \subsection*{Kahden binomin tulo}
 
-Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin päädytään kertomaan polynomit ensin termeittäin ja sitten laskemaan kaikki yhteen.
-
-\begin{esimerkki}
-\qquad \\
-\begin{itemize}
-    \item $(x+y)(z+w) = xz+xw+yz+yw$
-    \item $(ax+by)(x+y) = ax^2+axy+bxy+by^2 = ax^2+(a+b)xy+by^2$
-    \item $(x-5)(x-7) = x^2-7x-5x+35 = x^2-12x+35$
-    \item $(ax-1)(x+6) = ax^2+6ax-x-6 = ax^2+(6a-1)x-6$
-\end{itemize}
-\end{esimerkki}
-
-\subsection*{Yleinen kertolasku}
-
-Osittelulain nojalla kahden polynomin tulo saadaan laskemalla yhteen kaikki
-termit, jotka saadaan kertomalla termi ensimmäisestä ja toinen termi toisesta
-polynomista.
+Toinen yksinkertainen tapaus on kahden binomin tulo. Tällöin kummallakin ensimmäisen binomin termillä kerrotaan toisen binomin termit. Saadut neljä tuloa lasketaan yhteen. 
 
 \newcommand{\pbezier}[4]{
 	\pgfmathsetmacro{\PBxa}{#1}
@@ -45,6 +44,55 @@ polynomista.
 	\pgfmathsetmacro{\PBcb}{0.2 * \PBxa + 0.8 * \PBxb}
 	\draw[color=red] (\PBxa, \PBya) .. controls (\PBca, \PByb) and (\PBcb, \PByb) .. (\PBxb, \PBya);
 }
+
+\begin{esimerkki}
+Laske binomien $x+2$ ja $x-5$ tulo. \\
+\begin{tikzpicture}
+\draw node[right] {\large $(x+2)(x-5) = x^2-5x+2x-10 = x^2 -3x-10.$};
+
+\pgfmathsetmacro{\klAx}{0.48}
+\pgfmathsetmacro{\klBx}{1.15}
+\pgfmathsetmacro{\klCx}{1.8}
+\pgfmathsetmacro{\klDx}{2.5} % oli 2.8
+\pgfmathsetmacro{\klEx}{3.64}
+\pgfmathsetmacro{\klLo}{-0.22}
+\pgfmathsetmacro{\klHi}{0.26}
+
+\pbezier{\klAx}{\klCx}{\klHi}{0.3}
+\pbezier{\klAx}{\klDx}{\klHi}{0.48}
+
+\pbezier{\klBx}{\klCx}{\klLo}{-0.15}
+\pbezier{\klBx}{\klDx}{\klLo}{-0.3}
+\end{tikzpicture}\newline
+\end{esimerkki}
+
+\begin{esimerkki}
+Laske binomien $x^2-x$ ja $2x-1$ tulo. \\
+\begin{tikzpicture}
+\draw node[right] {\large $(x^2-x)(2x-1) = 2x^3-x^2-2x^2+x = 2x^3 -3x^2 +x.$};
+
+\pgfmathsetmacro{\klAx}{0.48}
+\pgfmathsetmacro{\klBx}{1.35}
+\pgfmathsetmacro{\klCx}{2.0}
+\pgfmathsetmacro{\klDx}{2.85}
+\pgfmathsetmacro{\klEx}{3.64}
+\pgfmathsetmacro{\klLo}{-0.22}
+\pgfmathsetmacro{\klHi}{0.26}
+
+\pbezier{\klAx}{\klCx}{\klHi}{0.3}
+\pbezier{\klAx}{\klDx}{\klHi}{0.48}
+
+\pbezier{\klBx}{\klCx}{\klLo}{-0.15}
+\pbezier{\klBx}{\klDx}{\klLo}{-0.3}
+\end{tikzpicture}\newline
+\end{esimerkki}
+
+\subsection*{Yleinen kertolasku}
+
+Osittelulain nojalla kahden polynomin tulo saadaan laskemalla yhteen kaikki
+termit, jotka saadaan kertomalla termi ensimmäisestä ja toinen termi toisesta
+polynomista.
+
 
 \begin{tikzpicture}
 \draw node[right] {\large $(a+b)(c+d+e) = ac+ad+ae+bc+bd+be$};
