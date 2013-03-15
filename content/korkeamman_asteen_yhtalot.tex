@@ -1,34 +1,44 @@
 \chapter{Korkeamman asteen yhtälöt}
-Toisen asteen polynomiyhtälön ratkaiseminen on helppoa toisen asteen yhtälön ratkaisukaavan avulla. Korkeamman asteen yhtälöiden ratkaiseminen on monimutkaisempaa. Myös kolmannen ja neljännen asteen yhtälöille on olemassa ratkaisukaavat, mutta ne ovat hyvin monimutkaisia. Vuonna 1823 Niels Abel osoitti, että viidennen ja sitä korkeamman asteen yhtälöille ei ole olemassa ratkaisukaavaa.
+Toisen asteen polynomiyhtälön ratkaiseminen on helppoa, sillä voimme aina soveltaa toisen asteen yhtälön ratkaisukaavaa.
+Kolmannen ja sitä korkeamman asteen yhtälöiden ratkaiseminen on vaikeampaa.
+Kolmannen ja neljännen asteen yhtälöille on olemassa ratkaisukaavat, mutta ne ovat epäkäytännöllisiä.
+Vuonna 1823 Niels Abel osoitti, että viidennen ja sitä korkeamman asteen yhtälöille ei ole olemassa ratkaisukaavaa.
 
-Siis käytännössä korkeamman asteen yhtälöt täytyy ratkaista numeerisesti tietokoneen avulla. Kuitenkin joissain erikoistapauksissa ratkaiseminen onnistuu käsin.
+Käytännössä korkeamman asteen yhtälöt täytyy ratkaista numeerisesti tietokoneen avulla. Joissain erikoistapauksissa ratkaiseminen onnistuu käsin.
 
 \section{Tekijöihinjako}
-Jos polynomiyhtälön $P(x) = 0$ polynomi $P$ voidaan jakaa tekijöihin, ratkaisu saadaan etsimällä näiden tekijöiden nollakohdat. Esimerkiksi jos polynomista puuttuu vakiotermi, voidaan ottaa muuttuja yhteiseksi tekijäksi ja riittää ratkaista yhtä pienemmän asteen polynomiyhtälö.
+Jos polynomiyhtälön $P(x) = 0$ polynomi $P$ voidaan jakaa tekijöihin, ratkaisu saadaan etsimällä näiden tekijöiden nollakohdat. Esimerkiksi
+vakiotermittömässä polynomissa voidaan ottaa muuttuja yhteiseksi tekijäksi ja riittää ratkaista yhtä pienemmän asteen polynomiyhtälö.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $x^3 - 3x^2 + x = 0$. Huomataan, että vasemmalla puolella on yhteisenä tekijänä $x$, eli yhtälö voidaan kirjoittaa muodossa $x(x^2-3x+1) = 0$. Siis yhtälö pätee täsmälleen silloin kun
+Ratkaistaan yhtälö $x^3 - 3x^2 + x = 0$. Polynomissa $P(x) = x^3 - 3x^2 + x$ ei ole vakiotermiä. Voimme siis ottaa muuttujan $x$ yhteiseksi tekijäksi ja saamme yhtälölle muodon $x(x^2 - 3x + 1) = 0$. Tulon nollasäännön perusteella yhtälö pätee täsmälleen silloin kun
 \[x = 0 \text{ tai } x^2-3x+1 = 0.\]
-Siis käyttämällä toisen asteen yhtälön ratkaisukaavaa saadaan, että yhtälön ratkaisu on
+Käyttämällä toisen asteen yhtälön ratkaisukaavaa saamme yhtälön ratkaisuksi
 \[x = 0 \text{ tai } x = \frac{3\pm \sqrt{5}}{2}.\]
 \end{esimerkki}
 
-Koska polynomien jakolauseen mukaan kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta, periaatteessa tällä tavalla voidaan ratkaista kaikki polynomiyhtälöt. Yleensä kuitenkin tekijöihin jakaminen on vaikeaa.
+Aiemmin esitellyn polynomien jakolauseen mukaan kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
+Periaatteessa voimme siis ratkaista tällä tavalla kaikki polynomiyhtälöt. Tekijöihin jakaminen on kuitenkin yleensä vaikeaa.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $x^3-17x^2+x-17 = 0$. Huomataan, että vasemman puolen polynomilla on tekijänä $x-17$, eli yhtälö voidaan kirjoittaa muodossa $(x-17)(x^2+1) = 0$. Siis yhtälö pätee täsmälleen silloin kun
-\[x - 17 = 0 \text{ tai } x^2+1 = 0.\]
-Ratkaisemalla yhtälöt saadaan, että alkuperäisen yhtälön ratkaisut ovat
+Ratkaistaan yhtälö $x^3-17x^2-x+17 = 0$. Kolmannen asteen yhtälö on lähtökohtaisesti vaikea ratkaista. Tässä tapauksessa huomataan
+kuitenkin, että vasemman puolen polynomilla on tekijänä $x-17$. Näin ollen yhtälö voidaan kirjoittaa muodossa $(x-17)(x^2-1) = 0$.
+Siis yhtälö pätee täsmälleen silloin kun
+\[x - 17 = 0 \text{ tai } x^2-1 = 0.\]
+Ratkaisemalla nämä yhtälöt saamme alkuperäisen yhtälön ratkaisuksi
 \[x = 17 \text{ tai } x = \pm 1.\]
 \end{esimerkki}
 
 \section{Sijoitukset}
-Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla. Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että jos merkitään kirjaimella $y$ lauseketta $x^2$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Nyt $y$ voidaan ratkaista toisen asteen ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$. 
+Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla. Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että merkitsemällä
+lauseketta $x^2$ kirjaimella $y$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Uudesta yhtälöstä voidaan ratkaista $y$ toisen asteen yhtälön
+ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $2x^4+14x^2-36=0$. Tehdään sijoitus $y = x^2$. Nyt yhtälö saa muodon $2y^2+14y-36 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = 2$ ja $y = -9$.
+Ratkaistaan yhtälö $2x^4+14x^2-36=0$. Sijoituksella $y = x^2$ yhtälö saa muodon $2y^2+14y-36 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = 2$ ja $y = -9$.
 
-Nyt alkuperäisen yhtälön ratkaisut ovat yhtälön $y = x^2$ ratkaisut muuttujan $x$ suhteen, kun $y = 2$ ja kun $y = -9$. Reaaliluvun neliö ei ole koskaan negatiivinen, eli ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
+Alkuperäisen yhtälön ratkaisut ovat yhtälön $y = x^2$ ratkaisut muuttujan $x$ suhteen, kun $y = 2$ ja kun $y = -9$. Reaaliluvun neliö ei ole koskaan
+negatiivinen, joten ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
 \end{esimerkki}
 
 Yleisemmin muotoa $ax^{2n}+bx^n+c=0$ olevat yhtälöt voidaan ratkaista sijoituksella $y = x^n$ ja käyttämällä toisen asteen yhtälön ratkaisukaavaa.
