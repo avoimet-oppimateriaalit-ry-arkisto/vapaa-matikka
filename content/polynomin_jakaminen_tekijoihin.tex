@@ -1,16 +1,18 @@
 \chapter{Polynomien jakolause}
 
-Polynomin $P(x)=(x-2)\cdot(x-3)$ nollakohdat ovat tulon nollasäännön nojalla $x=2$ ja $x=3$. Nollakohdat siis näkee suoraan tekijöihin jaetusta polynomista. Tämä tekijöiden ja nollakohtien välinen yhteys toimii myös toisin päin: nollakohtien avulla voi selvittää tekijät. Jos luku $b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.
+Polynomin $P(x)=(x-2)(x-3)$ nollakohdat ovat tulon nollasäännön nojalla $x=2$ ja $x=3$. Nollakohdat siis näkee suoraan tekijöihin jaetusta polynomista. Tämä tekijöiden ja nollakohtien välinen yhteys toimii myös toisin päin: nollakohtien avulla voi selvittää tekijät. Jos luku $b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.
 
-%Esimerkiksi polynomin $P(x)=x²-3x+2$ nollakohdat ovat
-%\begin{align*}
-%x^2-3x+2&=0 \\
-%x&=\frac{-(-3) \pm \sqrt[]{(-3)^2-4 \cdot 1 \cdot 2}}{2 \cdot 1} \\
-%x&=\frac{3 \pm \sqrt[]{9-8}}{2} \\
-%x&=\frac{3 \pm 1}{2} \\
-%x&=1 \textrm{ tai } x = 2.
-%\end{align*}
-%Tämän perusteella voidaan päätellä, että $x-1$ ja $x-2$ ovat polynomin $P(x)$ tekijöitä. Toden %totta: sulut auki kertomalla voidaan tarkistaa, että $(x-1)(x-2)=x^2-3x+2$.
+\begin{esimerkki}
+Polynomin $P(x)=x²-3x+2$ nollakohdat ovat
+\begin{align*}
+x^2-3x+2&=0 \\
+x&=\frac{-(-3) \pm \sqrt[]{(-3)^2-4 \cdot 1 \cdot 2}}{2 \cdot 1} \\
+x&=\frac{3 \pm \sqrt[]{9-8}}{2} \\
+x&=\frac{3 \pm 1}{2} \\
+x&=1 \textrm{ tai } x = 2.
+\end{align*}
+Nollakohdista näemme, että $x-1$ ja $x-2$ ovat polynomin $P(x)$ tekijöitä. Kertomalla sulut auki näemmekin, että $(x-1)(x-2)=x^2-3x+2$.
+\end{esimerkki}
 
 \laatikko{\textbf{Polynomien jakolause} \\
 Jos $x=b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.}
@@ -140,22 +142,27 @@ Tämä tulos kertoo paljon siitä, millaisia polynomien kuvaajat voivat olla.
 \Harjoitustehtavat
 
 \begin{tehtava}
-  Jaa tekijöihin
-  \begin{enumerate}[a)]
-    \item $-10x^2+5x+5$
-    \item $8x^4-12x^2+4x$
-  \end{enumerate}
-
-  \begin{vastaus}
-    \item $(-5)\cdot(2x^2-x-1)$
-    \item $(4x)\cdot(2x^2-3x+1)$
-  \end{vastaus}
+    Jaa tekijöihin
+    \begin{enumerate}[a)]
+        \item $-10x^2+5x+5$
+        \item $8x^4-12x^2+4x$
+    \end{enumerate}
+    \begin{vastaus}
+        \item $(-5)\cdot(2x^2-x-1)$
+        \item $(4x)\cdot(2x^2-3x+1)$
+    \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
-  Kolmanen asteen polynomille $P$ pätee $P(-1)=P(2)=P(3)=0$ ja $P(1)=-8$. Ratkaise $P(x)$.
+    Toisen asteen polynomille $P$ pätee $P(-3)=P(4)=0$ ja $P(1)=12$. Ratkaise $P(x)$.
+    \begin{vastaus}
+        $P(x)=-(x+3)(x-4)=-x^2+x+12$
+    \end{vastaus}
+\end{tehtava}
 
-  \begin{vastaus}
-    $P(x)=-2(x+1)(x-2)(x-3)=-2x^3+8x^2-2x-2.$
-  \end{vastaus}
+\begin{tehtava}
+    Kolmannen asteen polynomille $P$ pätee $P(-1)=P(2)=P(3)=0$ ja $P(1)=-8$. Ratkaise $P(x)$.
+    \begin{vastaus}
+        $P(x)=-2(x+1)(x-2)(x-3)=-2x^3+8x^2-2x-2$
+    \end{vastaus}
 \end{tehtava}
