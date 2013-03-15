@@ -15,13 +15,21 @@ Siis käyttämällä toisen asteen yhtälön ratkaisukaavaa saadaan, että yhtä
 
 Koska polynomien jakolauseen mukaan kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta, periaatteessa tällä tavalla voidaan ratkaista kaikki polynomiyhtälöt. Yleensä kuitenkin tekijöihin jakaminen on vaikeaa.
 
-\section{Sijoituksen avulla ratkeavat yhtälöt}
+\section{Sijoitukset}
 Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla. Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että jos merkitään kirjaimella $y$ lauseketta $x^2$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Nyt $y$ voidaan ratkaista toisen asteen ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$. 
 
 \begin{esimerkki}
 Ratkaistaan yhtälö $2x^4+14x^2-36=0$. Tehdään sijoitus $y = x^2$. Nyt yhtälö saa muodon $2y^2+14y-36 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = 2$ ja $y = -9$.
 
-Nyt alkuperäisen yhtälön ratkaisut ovat ne $x$:n arvot jotka toteuttavat ainakin toisen yhtälöistä $x^2 = 2$ ja $x^2 = -9$. Reaaliluvun neliö ei ole koskaan negatiivinen, eli ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
+Nyt alkuperäisen yhtälön ratkaisut ovat yhtälön $y = x^2$ ratkaisut muuttujan $x$ suhteen, kun $y = 2$ ja kun $y = -9$. Reaaliluvun neliö ei ole koskaan negatiivinen, eli ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
+\end{esimerkki}
+
+Yleisemmin muotoa $ax^{2n}+bx^n+c=0$ olevat yhtälöt voidaan ratkaista sijoituksella $y = x^n$ ja käyttämällä toisen asteen yhtälön ratkaisukaavaa.
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $x^{10}+x^5=2$. Muutetaan yhtälö perusmuotoon $x^{10}+x^5=2$. Tehdään sijoitus $y = x^5$. Nyt yhtälö saa muodon $y^2+y-2 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = -2$ ja $y = 1$.
+
+Nyt alkuperäisen yhtälön ratkaisut ovat yhtälön $y = x^5$ ratkaisut muuttujan $x$ suhteen, kun $y = -2$ ja kun $y = 1$. Siis ratkaisut ovat $x = \sqrt[5]{-2}$ ja $x = 1$.
 \end{esimerkki}
 
 \Harjoitustehtavat
