@@ -5,8 +5,13 @@
 %\titleformat{\part}
 %  {\normalfont\filright\Huge\bfseries\rmfamily}{Osa \thepart}{1em}{}
 
-\titlespacing*{\chapter}{0pt}{0pt}{18ex}
-\titlespacing*{\section}{0pt}{8ex}{4ex}
+\titlespacing*{\chapter}{0pt}{0pt}{*18}
+\titlespacing*{\section}{0pt}{8ex}{*4}
+
+% estää otsikkoa edeltävän välin konsumoinnin sivun alussa
+\newcommand{\sectionbreak}{%
+ \addpenalty{-300}%
+ \vspace*{0pt}}
 
 \renewcommand{\chaptertitlename}{Luku}
 
