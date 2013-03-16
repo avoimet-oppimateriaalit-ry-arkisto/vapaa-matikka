@@ -1,4 +1,4 @@
-\chapter{Toisen asteen yhtälö}
+n asteen\chapter{Toisen asteen yhtälö}
 \begin{esimerkki}
 Selvitetään, milloin funktio $f(x)=x^2+2x+1$ leikkaa x-akselin.
 
@@ -8,7 +8,6 @@ Funktion kuvaaja leikkaa x-akselin, kun $f(x)=0$. Tätä muuttujan $x$ arvoa kut
 \begin{kuvaajapohja}{1.5}{-2.5}{0.5}{-0.5}{3}
 \kuvaaja{x**2+2*x+1}{$f(x)=x^2+2x+1$}{red}
 \end{kuvaajapohja}
-
 \end{esimerkki}
 
 Kuvaajasta huomataan, että funktion $f$ nollakohta on $x \approx -1$. Tätä toisen asteen yhtälön ratkaisumenetelmää kutsutaan graafiseksi ratkaisuksi.
@@ -167,13 +166,28 @@ x&=0 \text{ tai } x=-\frac{8}{55}
 \section*{Neliöksi täydentäminen}
 Toisen asteen yhtälöä $ax^2+bx+c=0$, jossa $a,b,c \neq 0$ kutsutaan
 täydelliseksi toisen asteen yhtälöksi. Tällaiset yhtälöt voidaan palauttaa
-vaillinaisiksi toisen asteen yhtälöiksi neliöön täydentämiseksi kutsutulla
-tekniikalla. Menetelmä perustuu seuraavaan havaintoon yhtälönratkaisusta: toisen asteen yhtälön yleisessä muodossa $ax^2+bx+c=0$ tuntematon $x$ esiintyy kahdesti, mikä tekee sen ratkaisemisesta hankalaa. Aiemmin opettelemamme muistikaavat kuten $x^2+2xy+y^2={(x+y)}^2=$ antavat meille kuitenkin keinon muuttaa yhtälö sellaiseen muotoon, jossa tuntematon esiintyy vain kerran ja on helpompi ratkaista.
+vaillinaisiksi toisen asteen yhtälöiksi muistikaavojen avulla.
+Tarkastellaan vaikkapa yhtälöä
+\[x^2+2x-3=0.\]
+Yhtälön vasen puoli on melkein sama kuin binomin $x+1$ neliö, sillä $(x+1)^2=x^2+2x+1$.
+Vain vakiotermi on siis ''pielessä''. Korjataan asia ja ratkaistaan yhtälö:
 
-Seuraavassa luvussa todistamme neliöön täydentämisen avulla
-yleisen ratkaisukaavan toisen asteen yhtälöille.
+\begin{align*}
+x^2+2x-3 & = 0  &&\ppalkki +4 \\
+x^2+2x+1 & = 4  &&\ppalkki \text{ vasemmalla on muistikaava } (x+1)^2=x^2+2x+1. \\
+(x+1)^2 & = 4  &&\ppalkki \text{ neliöjuuri }  \\
+x+1 & = \pm 2  &&\ppalkki -1 \\
+x & = \pm 2 - 1 \\
+x & = 1 \text{ tai } x= -3. 
+\end{align*}
 
-\begin{esimerkki}
+Miksi edellä osattiin ajatella juuri sopivaa muistikaavaa $(x+1)^2=x^2+2x+1$? Siksi, että yhtälön vasemmalla
+puolella olleen polynomin alku $x^2+2x$ ei voi tulla mistään muustakaan binomin neliöstä.
+Siksi vakiotermiä muutettiin sopivasti eli polynomi \emph{täydennettiin neliöksi}.
+
+Neliöksi täydentäminen vaatii muistikaavojen hyvää hallintaa, mutta niiden avulla kaikki toisen asteen yhtälöt voidaan ratkaista neliöksi täydentämällä. (Yleensä tosin käytetään toisen asteen yhtälön ratkaisukaavaa, joka esitellään seuraavassa luvussa.)
+
+\begin{esimerkki} (korjaa, turhan monimutkainen) \\
 Haluaisimme ratkaista yhtälön $x^2+4x-16 = 0$. Jotta se saataisiin muotoon
 jossa on neliö ja vakiotermi eli $(Ax+B)^2-C=0$, täytyy molempien yhtälöiden
 vasempien puolten polynomien olla samat, eli laskemalla muistikaavan avulla
