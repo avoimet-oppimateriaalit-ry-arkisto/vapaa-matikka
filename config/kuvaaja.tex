@@ -22,25 +22,33 @@
 		\pgfmathsetmacro{\xylaraja}{#3-0.01}
 		\pgfmathsetmacro{\yalaraja}{-#4-0.01}
 		\pgfmathsetmacro{\yylaraja}{#5-0.01}
-		\foreach \sarake in {1,...,\xylaraja}
+		\foreach \sarake in {0,...,\xylaraja}
 		{
-			\draw (#1*\sarake + 0.1, 0) node[above] {\footnotesize\sarake};
-			\draw[thick] (#1*\sarake, -0.07) -- (#1*\sarake, 0.07);
+			\if\sarake0\else
+				\draw (#1*\sarake + 0.1, 0) node[above] {\footnotesize\sarake};
+				\draw[thick] (#1*\sarake, -0.07) -- (#1*\sarake, 0.07);
+			\fi
 		}
-		\foreach \sarake in {1,...,\xalaraja}
+		\foreach \sarake in {0,...,\xalaraja}
 		{
-			\draw (-#1*\sarake + 0.1, 0) node[above] {\footnotesize-\sarake};
-			\draw[thick] (-#1*\sarake, -0.07) -- (-#1*\sarake, 0.07);
+			\if\sarake0\else
+				\draw (-#1*\sarake + 0.1, 0) node[above] {\footnotesize-\sarake};
+				\draw[thick] (-#1*\sarake, -0.07) -- (-#1*\sarake, 0.07);
+			\fi
 		}
-		\foreach \rivi in {1,...,\yylaraja}
+		\foreach \rivi in {0,...,\yylaraja}
 		{
-			\draw (0, #1*\rivi) node[right] {\footnotesize\rivi};
-			\draw[thick] (-0.07, #1*\rivi) -- (0.07, #1*\rivi);
+			\if\rivi0\else
+				\draw (0, #1*\rivi) node[right] {\footnotesize\rivi};
+				\draw[thick] (-0.07, #1*\rivi) -- (0.07, #1*\rivi);
+			\fi
 		}
-		\foreach \rivi in {1,...,\yalaraja}
+		\foreach \rivi in {0,...,\yalaraja}
 		{
-			\draw (0, -#1*\rivi) node[right] {\footnotesize-\rivi};
-			\draw[thick] (-0.07, -#1*\rivi) -- (0.07, -#1*\rivi);
+			\if\rivi0\else
+				\draw (0, -#1*\rivi) node[right] {\footnotesize-\rivi};
+				\draw[thick] (-0.07, -#1*\rivi) -- (0.07, -#1*\rivi);
+			\fi
 		}
 %		\draw (#1, 0) node[above] {1};
 %		\draw (0, #1) node[right] {1};
