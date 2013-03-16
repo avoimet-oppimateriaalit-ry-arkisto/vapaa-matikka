@@ -5,14 +5,18 @@ havainnollistaa koordinaatistoon piirrettynä kuvaajana.
 %funktion arvoja,
 %joten polynomin $P$ kuvaaja on siis sama asia kuin käyrän $y = P(x)$.
 
-Nämä kuvaajat voisi piirtää eri koordinaatistoihin.
+
+%\begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
+%\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
+%\kuvaaja{x**2+x}{$Q(x) = x^2+x$}{blue}
+%\kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{green}
+%\end{kuvaajapohja}
 
 \begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
-\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
+%\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
 \kuvaaja{x**2+x}{$Q(x) = x^2+x$}{blue}
 \kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{green}
 \end{kuvaajapohja}
-
 
 \section*{Kuvaajan piirtäminen}
 
@@ -72,15 +76,13 @@ Kuvaajan avulla voidaan tehdä johtopäätöksiä funktion ominaisuuksista.
 Esimeriksi funktion arvoja voidaan lukea kuvaajasta.
 
 \begin{esimerkki}
-Alla on esitetty erään polynomifunktion $P(x)$ kuvaaja. Kuvaajan perusteella näyttäisi siltä, että $P(1)=(-1)$,
-mutta tarkkaa arvoa kuvaajasta ei voi päätellä.
+Seuraavassa on esitetty erään polynomifunktion $P(x)$ kuvaaja. Kuvaajan perusteella näyttäisi siltä, että $P(1)=-1$, mutta tarkkaa arvoa kuvaajasta ei voi päätellä.
 
 \begin{kuvaajapohja}{1}{-2}{2}{-2}{2}
 \kuvaaja{x**4-2*x**3-x**2+11./10}{P(x)}{red}
 \end{kuvaajapohja}
 
-Itse asiassa edellinen kuvaaja on funktion $P(x)=x^4-2x^3-x^2+\dfrac{11}{10}$ kuvaaja.
-Siten $P(1)=-\dfrac{9}{10}$ eikä $-1$ kuten kuvaajan perusteella voisi luulla.
+Itse asiassa edllinen kuvaaja kuuluu funktiolle $P(x)=x^4-2x^3-x^2+\dfrac{11}{10}$. Nyt tiedetään, että funktion $P(x)$ arvo kohdassa $x=1$ on $-\dfrac{9}{10}$ eikä $-1$, kuten kuvaajan perusteella voisi luulla. Kuvaajasta ei siis voi lukea tarkkoja tietoja funktiosta.
 \end{esimerkki}
 
 Funktion nollakohta on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $Q(x)=x^2-1$
@@ -90,10 +92,12 @@ on nollakohdat $-1$ ja $1$, sillä $Q(1)=0$ ja $Q(-1)=0$. Polynomien tapauksessa
 Funktion kuvaaja antaa tietoa nollakohdista. Niiden kohdalla kuvaaja leikkaa $x$-akselin.
 
 \begin{esimerkki}
-Funktion $Q(x) = x^2-1$ kuvaajasta nähdään, että funktiolla on kaksi nollakohtaa, $1$ ja $-1$.
+Funktion $P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$ kuvaajasta nähdään, että funktiolla on ainakin kaksi nollakohtaa. Toinen niistä on lähellä lukua $1$ ja toinen lukua $11$.
 
-\begin{kuvaajapohja}{1}{-2}{2}{-2}{4}
-\kuvaaja{x**2-1}{$Q(x) = x^2-1$}{red}
+\begin{kuvaajapohja}{0.3}{-5}{15}{-10}{5}
+\kuvaajapiste{0.66146}{0}
+\kuvaajapiste{11.3385}{0}
+\kuvaaja{1./3*x**2-4*x+5./2}{$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$}{red}
 \end{kuvaajapohja}
 \end{esimerkki}
 
