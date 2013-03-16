@@ -73,19 +73,28 @@ Esimeriksi funktion arvoja voidaan lukea kuvaajasta.
 
 \begin{esimerkki}
 Alla on esitetty erään polynomifunktion $P(x)$ kuvaaja. Kuvaajan perusteella näyttäisi siltä, että $P(1)=(-1)$,
-mutta tarkkaa arvoa kuvaajasta ei voi päätellä. Hyvin varmoja voidaan kuitenkin olla siitä, että arvo on negatiivinen.
+mutta tarkkaa arvoa kuvaajasta ei voi päätellä.
 
-Tähän tarvitaan funktion $x^4-2x^3-x^2+9/10$ kuvaaja.
+\begin{kuvaajapohja}{1}{-2}{2}{-2}{2}
+\kuvaaja{x**4-2*x**3-x**2+11./10}{P(x)}{red}
+\end{kuvaajapohja}
+
+Itse asiassa edellinen kuvaaja on funktion $P(x)=x^4-2x^3-x^2+\dfrac{11}{10}$ kuvaaja.
+Siten $P(1)=-\dfrac{9}{10}$ eikä $-1$ kuten kuvaajan perusteella voisi luulla.
 \end{esimerkki}
 
-Funktion nollakohta on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $P(x)=x^2-1$
-on nollakohdat $x=-1$ ja $x=1$, sillä $P(1)=0$ ja $P(-1)=0$. Polynomien tapauksessa nollakohtia on tapana kutsua
+Funktion nollakohta on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $Q(x)=x^2-1$
+on nollakohdat $-1$ ja $1$, sillä $Q(1)=0$ ja $Q(-1)=0$. Polynomien tapauksessa nollakohtia on tapana kutsua
 \termi[juuriksi]{juuri, polynomin}.
 
-Nollakohdat näkyvät funktion kuvaajassa. Niiden kohdalla kuvaaja leikkaa $x$-akselin.
+Funktion kuvaaja antaa tietoa nollakohdista. Niiden kohdalla kuvaaja leikkaa $x$-akselin.
 
 \begin{esimerkki}
-Tähän kuva vaikkapa funktiosta $P(x)=x^2-1$.
+Funktion $Q(x) = x^2-1$ kuvaajasta nähdään, että funktiolla on kaksi nollakohtaa, $1$ ja $-1$.
+
+\begin{kuvaajapohja}{1}{-2}{2}{-2}{4}
+\kuvaaja{x**2-1}{$Q(x) = x^2-1$}{red}
+\end{kuvaajapohja}
 \end{esimerkki}
 
 %Nollakohta tarkoittaa sitä annetun polynomin muuttujan arvoa, jolla koko
