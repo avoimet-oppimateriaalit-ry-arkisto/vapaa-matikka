@@ -1,6 +1,11 @@
 \chapter{Polynomifunktion kuvaaja}
-Kuten muitakin funktioita, polynomifunktioita on monesti hyödyllistä
-havainnollistaa koordinaatistoon piirrettynä kuvaajana. Tavallisesti $xy$-koordinaatistossa pystyakselin arvot eli korkeus vastaavat funktion arvoja, joten polynomin $P$ kuvaaja on siis sama asia kuin käyrän $y = P(x)$.
+Polynomifunktioita on monesti hyödyllistä
+havainnollistaa koordinaatistoon piirrettynä kuvaajana.
+%Tavallisesti $xy$-koordinaatistossa pystyakselin arvot eli korkeus vastaavat
+%funktion arvoja,
+%joten polynomin $P$ kuvaaja on siis sama asia kuin käyrän $y = P(x)$.
+
+Nämä kuvaajat voisi piirtää eri koordinaatistoihin.
 
 \begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
 \kuvaaja{-x-1}{$P(x) = -x-1$}{red}
@@ -8,24 +13,21 @@ havainnollistaa koordinaatistoon piirrettynä kuvaajana. Tavallisesti $xy$-koord
 \kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{green}
 \end{kuvaajapohja}
 
-Ensimmäisen asteen polynomin kuvaaja on luonnollisesti aina suora. 
-%miten niin luonnollisesti?
-
-Nollakohta tarkoittaa sitä annetun polynomin muuttujan arvoa, jolla koko
-polynomi saa arvon nolla. Kuvaajasta sen voi helposti lukea niinä kohtina,
-joissa kuvaaja leikkaa muuttujan koordinaattiakselin. Funktion $P(x)$ ja $xy$-koordinaatiston tapauksessa funktion nollakohdat ovat täsmälleen ne $x$-koordinaatit, joilla funktion kuvaaja leikkaa $x$-akselin.
 
 \section*{Kuvaajan piirtäminen}
 
-Funktion kuvaajien piirtäminen käsin onnistuu yleensä helpoiten laskemalla funktion arvoja muutamilla x:n arvoilla, ja merkitsemällä pisteet $(x,y)$-koordinaatistoon ja hahmottamalla pisteiden läpi kulkeva kuvaaja.
+Funktion kuvaajien piirtäminen käsin onnistuu yleensä helpoiten laskemalla
+funktion arvoja muutamilla muuttujan arvoilla, merkitsemällä pisteet
+$xy$-koordinaatistoon ja hahmottamalla pisteiden kautta kulkeva kuvaaja.
 
 \begin{esimerkki}
-Lasketaan ensin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja, kartoitetaan ne koordinaatistoon ja piirretään niiden läpi kulkeva kuvaaja.\\
+Hahmotellaan polynomifunktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ kuvaaja.
+Lasketaan ensin joitakin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja ja piirretään niitä vastaavat pisteet
+koorinaatistoon. Lopuksi hahmotellan kuvaaja, joka kulkee pisteiden kautta.
 
 \begin{tabular}{c c c}
 	\begin{tabular}{|c|r @{,} l|}
-	\hline
-	$x$ & \multicolumn{2}{c|}{$y=f(x)$} \\
+	\hline $x$ & \multicolumn{2}{c|}{$f(x)$} \\
 	\hline
 	-3 & 5&5 \\
 	-2 & 2&0 \\
@@ -61,11 +63,44 @@ Lasketaan ensin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja, kartoitetaan n
 
 \end{esimerkki}
 
+\section*{Kuvaajan tulkintaa}
+
+%Ensimmäisen asteen polynomin kuvaaja on luonnollisesti aina suora. 
+%miten niin luonnollisesti?
+
+Kuvaajan avulla voidaan tehdä johtopäätöksiä funktion ominaisuuksista.
+Esimeriksi funktion arvoja voidaan lukea kuvaajasta.
+
+\begin{esimerkki}
+Alla on esitetty erään polynomifunktion $P(x)$ kuvaaja. Kuvaajan perusteella näyttäisi siltä, että $P(1)=(-1)$,
+mutta tarkkaa arvoa kuvaajasta ei voi päätellä. Hyvin varmoja voidaan kuitenkin olla siitä, että arvo on negatiivinen.
+
+Tähän tarvitaan funktion $x^4-2x^3-x^2+9/10$ kuvaaja.
+\end{esimerkki}
+
+Funktion nollakohta on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $P(x)=x^2-1$
+on nollakohdat $x=-1$ ja $x=1$, sillä $P(1)=0$ ja $P(-1)=0$. Polynomien tapauksessa nollakohtia on tapana kutsua
+\termi[juuriksi]{juuri, polynomin}.
+
+Nollakohdat näkyvät funktion kuvaajassa. Niiden kohdalla kuvaaja leikkaa $x$-akselin.
+
+\begin{esimerkki}
+Tähän kuva vaikkapa funktiosta $P(x)=x^2-1$.
+\end{esimerkki}
+
+%Nollakohta tarkoittaa sitä annetun polynomin muuttujan arvoa, jolla koko
+%polynomi saa arvon nolla. Kuvaajasta sen voi helposti lukea niinä kohtina,
+%joissa kuvaaja leikkaa muuttujan koordinaattiakselin. Funktion $P(x)$ ja
+%$xy$-koordinaatiston tapauksessa funktion nollakohdat ovat täsmälleen ne
+%$x$-koordinaatit, joilla funktion kuvaaja leikkaa $x$-akselin.
+
 %\section{Taylorin sarja}
 %Eräs mielenkiintoinen ja hyvin tunnettu potenssisarja on Taylorin sarja.
-%Se on päättymätön potenssisarja, jolla voidaan approksimoida muiden funktioiden arvoja.
+%Se on päättymätön potenssisarja, jolla voidaan approksimoida muiden funktioiden
+%arvoja.
 %
-%Yleisesti Taylorin sarjalla saadaan (rajatta derivoituvan) funktion $f$ arvo pisteessä $x_0$:
+%Yleisesti Taylorin sarjalla saadaan (rajatta derivoituvan) funktion $f$ arvo
+%pisteessä $x_0$:
 %
 %\begin{align*}
 %	f(x_0) = \sum\limits_{n=0}^\infty a_n(x-x_0)^n
@@ -77,7 +112,8 @@ Lasketaan ensin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja, kartoitetaan n
 %a_n = \frac{f^n(x_0)}{n!}
 %\end{align*}
 %
-%Koska sarja on äärettömän pitkä, sarjan arvoja edelleen arvioidaan Taylorin polynomilla, joka on muotoa
+%Koska sarja on äärettömän pitkä, sarjan arvoja edelleen arvioidaan Taylorin
+%polynomilla, joka on muotoa
 %
 %\begin{align*}
 %	P_k(x) = \sum\limits_{n=0}^k a_k(x-x_0)^k
@@ -87,11 +123,13 @@ Lasketaan ensin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja, kartoitetaan n
 %$(1-x)^{-1} = \frac{1}{1-x}$ pisteen a ympäristössä, kun $a \neg 1$:
 %
 %\begin{align*}
-%	\frac{1}{1-x} \approx \frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} + \frac{(x-a)^3}{(1-a)^4} ...
+%	\frac{1}{1-x} \approx \frac{1}{1-a} + \frac{x-a}{(1-a)^2} +
+%\frac{(x-a)^2}{(1-a)^3} + \frac{(x-a)^3}{(1-a)^4} ...
 %\end{align*}
 %
 %\missingfigure{Funktion $(x-1)^-1$ kuvaaja}
-%\missingfigure{Funktion $\frac{1}{1-a} + \frac{x-a}{(1-a)^2} + \frac{(x-a)^2}{(1-a)^3} +$ kuvaaja}
+%\missingfigure{Funktion $\frac{1}{1-a} + \frac{x-a}{(1-a)^2} +
+%\frac{(x-a)^2}{(1-a)^3} +$ kuvaaja}
 
 \Harjoitustehtavat
 
@@ -168,15 +206,20 @@ Lasketaan ensin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja, kartoitetaan n
 \end{tehtava}
 
 \begin{tehtava}
-	Monia funktioita voidaan esittää likimääräisesti polynomeina (ns. Taylorin polynomi). Esimerkiksi
+	Monia funktioita voidaan esittää likimääräisesti polynomeina (ns.
+Taylorin polynomi). Esimerkiksi
 
 	\begin{tabular}{lcll}
-	$\frac{1}{1+x^2}$ &$\approx$ & $1-x^2+x^4-x^6+x^8-x^{10}$, & kun $-1<x<1$ \\
+	$\frac{1}{1+x^2}$ &$\approx$ & $1-x^2+x^4-x^6+x^8-x^{10}$, & kun
+$-1<x<1$ \\
 	$\sqrt{1+x}$ & $\approx $ & $ 1+\frac{x}{2}
 	-\frac{x^2}{8}+\frac{x^3}{16}-\frac{5x^4}{128}$, & kun $-1<x<1$
 	\end{tabular}
 
-	Piirrä alkuperäinen funktio ja polynomi samaan kuvaajaan tietokoneella tai graafisella laskimella. Kokeile, kuinka polynomin viimeisten termien pois jättäminen vaikuttaa tarkkuuteen. Mitä havaitset? (Termejä voi laskea lisääkin, mutta siihen ei puututa tässä.)
+	Piirrä alkuperäinen funktio ja polynomi samaan kuvaajaan tietokoneella
+tai graafisella laskimella. Kokeile, kuinka polynomin viimeisten termien pois
+jättäminen vaikuttaa tarkkuuteen. Mitä havaitset? (Termejä voi laskea lisääkin,
+mutta siihen ei puututa tässä.)
 
 	\begin{vastaus}
 		Mitä enemmän termejä, sitä parempi vastaavuus.
