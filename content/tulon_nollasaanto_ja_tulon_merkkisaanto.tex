@@ -2,49 +2,58 @@
 
 \section*{Tulon merkkisääntö}
 
-Pitkän matematiikan 1. kurssilta muistetaan seuraava sääntö kahden luvun tulolle:
+Pitkän matematiikan 1. kurssilla on esitetty seuraava sääntö kahden luvun tulolle:
 
 \laatikko{
     \emph{Tulon merkkisääntö kahdelle tulontekijälle}
     \begin{itemize}
         \item Jos tulon tekijät ovat samanmerkkisiä, tulo on positiivinen.
+        \begin{itemize}
+	        \item Kahden positiivisen luvun tulo on positiivinen.
+	        \item Kahden negatiivisen luvun tulo on positiivinen.
+        \end{itemize}
         \item Jos tulon tekijät ovat erimerkkisiä, tulo on negatiivinen.
+        \begin{itemize}
+	        \item Positiivisen ja negatiivisen luvun tulo on negatiivinen.
+        \end{itemize}
     \end{itemize}
 }
 
-\begin{esimerkki}{\ }
-    \begin{itemize}
-        \item $2\cdot 3 = 6$ (Kahden positiivisen luvun tulo on aina positiivinen.)
-        \item $(-2)\cdot (-3) = 6$ (Kahden negatiivisen luvun tulo on aina positiivinen.)
-        \item $(-2)\cdot 3 = 2\cdot (-3) = -6$ (Positiivisen ja negatiivisen luvun tulo on aina negatiivinen.)
-    \end{itemize}
-\end{esimerkki}
+Useasti käytetty merkkisäännöstä saatava tulos on $x^2 \geq 0$.
 
-Useasti käytetty merkkisäännöistä saatava tulos on $x^2 \geq 0$.
+Tulon merkkisääntö yleistyy mille tahansa määrälle tulontekijöitä.
+
+\laatikko{
+    \emph{Tulon merkkisääntö}
+    \begin{itemize}
+        \item Jos tulossa ($\neq 0$) on parillinen $(0, 2, 4, \ldots)$ määrä negatiivisia tekijöitä, tulo on positiivinen.
+        \begin{itemize}
+	        \item Erityisesti, jos tulossa on vain positiivisia tekijöitä, tulo on positiivinen.
+        \end{itemize}
+        \item Jos tulossa ($\neq 0$) on pariton $(1, 3, 5, \ldots)$ määrä negatiivisia tekijöitä, tulo on negatiivinen.
+    \end{itemize}
+}
+
+Hyödynnämme merkkisääntöä myöhemmin tehdessämme epäyhtälöistä merkkikaavioita.
 
 \section*{Tulon nollasääntö}
 
 Tulon merkkisäännöstä seuraa, että positiivisten ja negatiivisten lukujen tulo on aina positiivista tai negatiivista, ei koskaan nolla.
 
-Jos siis tulo on 0, tulon tekijöistä ainakin yhden täytyy olla 0. Toisaalta
-$0\cdot x = 0$ kaikilla reaaliluvuilla $x$. Todistus on liitteessä \ref{tod:tulonolla}
+Jos siis tulo on $0$, tulon tekijöistä ainakin yhden täytyy olla $0$. Toisaalta $0\cdot x = 0$ kaikilla reaaliluvuilla $x$.
+(Todistus tälle on liitteessä \ref{tod:tulonolla}.)
 
 Nämä tiedot yhdistämällä saadaan tulon nollasääntö:
-
-%Merkkisäännöstä on helppoa huomata, että positiivisten tai negatiivisten
-%lukujen tulot ovat aina positiivisia tai negatiivisia. Näin ollen $0$ ei siis koskaan
-%voi syntyä tulokseksi positiivisten tai negatiivisten lukujen kertolaskusta. Jos siis kahden %luvun
-%kertolaskusta saadaan tulokseksi $0$, ei jää mitään muuta vaihtoehtoa kuin että vähintään %toinen tekijä on $0$.
 
 \laatikko{
     \emph{Tulon nollasääntö}
     \begin{itemize}
-   	    \item Jos jokin tulon tekijöistä on 0, tulo on 0.
-   	    \item Jos tulo on 0, ainakin yksi tulon tekijöistä on 0.
+   	    \item Jos jokin tulon tekijöistä on $0$, tulo on $0$.
+   	    \item Jos tulo on $0$, ainakin yksi tulon tekijöistä on $0$.
     \end{itemize}
 }
 
-Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
+Tulon nollasääntöä on kätevää soveltaa monissa tilanteissa.
 
 \begin{esimerkki} Ratkaistaan yhtälö $(x+5) \cdot x =0 $.
     \begin{align*}
@@ -52,7 +61,7 @@ Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
         x +5= 0 \text{ tai } x &=0 \\
         x= -5 \text{ tai } x &=0.
     \end{align*}
-    Ratkaisuja oli siis kaksi.
+    Ratkaisuja oli siis kaksi, $x= -5$ tai $x= 0$.
 \end{esimerkki}
 
 %\begin{esimerkki}
@@ -62,15 +71,14 @@ Seuraavassa on muutama esimerkki tulon nollasäännön soveltamisesta.
 %\end{esimerkki}
 
 \begin{esimerkki} Ratkaistaan $y$ yhtälöstä
-    \[x^{1+a^2}\cdot 0\cdot\left(x+5+\sqrt[3]{\frac{x}{1+2^a}}\right)=y\]
-    Koska yksi tulon tekijöistä on $0$, tiedätään, että myös niiden tulo on $0$.
-    Siis $y=0$.
+    \[(x^5+5x+5)\cdot 0\cdot \sqrt{x^3-1} =y\]
+    Koska vasemmalla puolella yksi tulon tekijöistä on $0$, tiedämme, että tulo on $0$. Siis $y=0$.
 \end{esimerkki}
 
 \begin{esimerkki} Ratkaise yhtälö
-    \[xyzw=0.\]
-Tulon nollasäännön perusteella $x=0$, $y=0$, $z=0$ tai $w=0$. Nollia voi siis
-olla 1--4 kappaletta.
+    \[xyz=0.\]
+Tulon nollasäännön perusteella $x=0$, $y=0$ tai $z=0$. Nollia voi siis
+olla 1--3 kappaletta.
 \end{esimerkki}
 
 Tulon nollasääntö on yksi tärkeimmistä syistä siihen, miksi polynomien tekijöihinjako on hyödyllistä.
