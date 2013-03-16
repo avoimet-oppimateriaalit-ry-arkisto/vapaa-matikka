@@ -90,20 +90,19 @@ Toisen asteen yhtälö voidaan ratkaista graafisesti tai algebrallisesti. Graafi
 Edellä tutustuimme toisen asteen yhtälön graafiseen ratkaisemiseen. Seuraavaksi tutustumme toisen asteen yhtälön algebralliseen ratkaisemiseen.
 
 \section*{Vaillinaiset yhtälöt}
-Jos toisen asteen yhtälössä $ax^2+bx+c$ missä $a\neq 0$ pätee joko $b = 0$ tai
-$c = 0$ on kyseessä niin sanottu \termi{vaillinainen toisen asteen yhtälö}, joka on
-siis muotoa
-\[ax^2+c=0\]
-tai
-\[ax^2+bx=0.\]
+Jos toisen asteen yhtälöstä $ax^2+bx+c=0$ puuttuu joko termi $bx$ tai $c$, 
+kyseessä on niin sanottu \emph{vaillinainen toisen asteen yhtälö}. Se on muotoa
+\[ax^2+c=0 \quad \text{ tai } \quad ax^2+bx=0.\]
+Vaillinaisten yhtälöiden ratkaiseminen on paljon yleistä tapausta yksinkertaisempaa.
+
 \subsection*{Toisen asteen yhtälö $ax^2+c=0$}
 Muotoa $ax^2+c = 0$ oleva toisen asteen yhtälö saadaan helposti ratkaistua neliöjuuren avulla.
 
 \begin{esimerkki}
 Ratkaistaan yhtälö $5x^2-45=0$:
 \begin{align*}
-5x^2-45 &= 0 &&\ppalkki : 5 \\
-x^2-9 &= 0 &&\ppalkki + 9 \\
+5x^2-45 &= 0 &&\ppalkki + 45 \\
+5x^2 &= 45 &&\ppalkki : 5 \\
 x^2 &= 9 &&\text{ratkaistaan käyttäen neliöjuurta ($9 \geq 0$)} \\
 x &= \pm \sqrt{9} = \pm 3.
 \end{align*}
@@ -129,23 +128,19 @@ Koska $x^2 \geq 0$ kaikilla $x$, yhtälöllä ei ole ratkaisua.
 \end{esimerkki}
 
 \subsection*{Toisen asteen yhtälö $ax^2+bx=0$}
-Jos yhtälössä $ax^2+bx+c=0$ kerroin $c=0$, niin toisen asteen yhtälö saa muodon
-\begin{align*}
-ax^2+bx+0&=0 \\
-ax^2+bx=0
-\end{align*}
-Toisen asteen yhtälöä, joka on muotoa $ax^2+bx=0$ kutsutaan vaillinaiseksi toisen asteen yhtälöksi. Tämän muotoinen yhtälö saadaan ratkaistua tulon nollasäännön avulla. \\
+Jos yhtälöstä $ax^2+bx+c=0$ puuttuu vakiotermi $c$, yhtälö saa muodon 
+$$ax^2+bx=0.$$ Tällainen yhtälö ratkeaa tekijöihin jakamalla ja käyttämällä tulon nollasääntöä:
 \begin{align*}
 ax^2+bx&=0 \ \ \ \ \ &&\ppalkki\text{otetaan yhteinen tekijä} \\
 x(ax+b)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
 x&=0 \text{ tai } ax+b=0 \\
 x&=0 \text{ tai } ax=-b \\
-x&=0 \text{ tai } x=-\frac{b}{a}
+x&=0 \text{ tai } x=-\frac{b}{a}.
 \end{align*}
 \begin{esimerkki}
-Ratkaistaan yhtälö $x^2-11x=0$
+Ratkaise yhtälö $x^2-11x=0$.
 \begin{align*}
-x^2-11x&=0 \ \ \ \ \  &&\ppalkki\text{otetaan yhteinen tekijä} \\
+x^2-11x&=0 \ \ \ \ \  &&\ppalkki\text{otetaan yhteinen tekijä } x\\
 x(x-11)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
 x&=0 \text{ tai } x-11=0 \\
 x&=0 \text{ tai } x=11
@@ -153,7 +148,7 @@ x&=0 \text{ tai } x=11
 \end{esimerkki}
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $55x^2+8x=0$
+Ratkaise yhtälö $55x^2+8x=0$.
 \begin{align*}
 55x^2+8x&=0 \ \ \ \ \ &&\ppalkki\text{otetaan yhteinen tekijä} \\
 x(55x+8)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
@@ -183,9 +178,9 @@ x & = 1 \text{ tai } x= -3.
 
 Miksi edellä osattiin ajatella juuri oikeaa muistikaavaa $(x+1)^2=x^2+2x+1$? Siksi, että yhtälön vasemmalla
 puolella olleen polynomin alku $x^2+2x$ ei voi tulla mistään muustakaan binomin neliöstä.
-Vakiotermiä sopivasti muuttamalla polynomi \emph{täydennettiin neliöksi}.
+Neliöksi täydentäminen vaatii siis muistikaavojen hyvää hallintaa.
 
-Neliöksi täydentäminen vaatii muistikaavojen hyvää hallintaa, mutta niiden avulla kaikki toisen asteen yhtälöt voidaan ratkaista neliöksi täydentämällä. (Yleensä tosin käytetään toisen asteen yhtälön ratkaisukaavaa, joka esitellään seuraavassa luvussa.)
+Kaikki toisen asteen yhtälöt voidaan ratkaista neliöksi täydentämällä. (Yleensä tosin käytetään \emph{toisen asteen yhtälön ratkaisukaavaa}, joka esitellään vasta seuraavassa luvussa. Kaava perustellaan neliöksi täydentämällä, joten opetellaan se ensin.)
 
 \begin{esimerkki} Ratkaise yhtälö $x^2+4x-16 = 0$. 
 
