@@ -12,7 +12,7 @@ $a \geq b$ & $a$ on suurempi tai yhtäsuuri kuin $b$ \\
 \end{tabular}
 \end{center}
 
-Sama epäyhtälö voidaan kirjoittaa monella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$ ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin kun $a \geq b$ ei päde.
+Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$ ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin kun $a \geq b$ ei päde.
 
 Epäyhtälön totuusarvo voi riippua epäyhtälön puolilla esiintyvien muuttujien arvoista. Tämän perusteella epäyhtälöt voidaan jakaa kolmeen tyyppiin:
 \begin{itemize}
@@ -116,11 +116,8 @@ Esimerkki epäyhtälön käsittelystä:
 Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö käyttäytyy aivan kuin
 yhtälökin, kun sama laskutoimitus tehdään epäyhtälön kummallekin puolelle.
 Viimeisessä vaiheessa kuitenkin huomataan, että negatiivisella luvulla
-kerrottaessa epähtälön keskellä oleva merkki pitää kääntää toisin päin, että
-epäyhtälö olisi edelleen voimassa. $20<25$, mutta kun molemmat kerrotaan
-$-3$:lla, saadaan $-60$ ja $-75$, jolloin epäyhtälö kääntyykin toisin päin.
-
-Yleisemmin pätee: jos epäyhtälön puoliin käytetään \emph{kasvavaa funktiota}, esitetty suuruusjärjestys säilyy. Jos epäyhtälön puoliin käytetään \emph{vähenevää funktiota}, epäyhtälömerkki täytyy kääntää. Tähän yleisempään käsittelyyn ja monimutkaisempien laskutoimitusten kuten potenssiin korottamisen ja juurenotton käyttöön epäyhtälöiden ratkaisemisessa palataan myöhemmissä luvuissa ja myöhemmillä kursseilla.
+kerrottaessa epähtälön keskellä oleva merkki pitää kääntää toisin päin, jotta
+epäyhtälö olisi edelleen voimassa.
 
 \section*{Reaalilukuvälit}
 
@@ -195,7 +192,6 @@ Harjoittelemme nyt erityisesti 1. asteen epäyhtälöiden ratkaisemista -- toise
 
 Samoin kuin yhtälöiden kohdalla, epäyhtälö pyritään muuttamaan niin yksinkertaiseen muotoon kuin mahdollista, jotta yksinkertaisesta tilanteesta nähdään välittömästi, mitkä luvut kuuluvat ratkaisuun ja mitkä eivät. Tuntemattomat pyritään yhdistämään, ja epäyhtälöä muokataan niin, että tuntematon saadaan yksin omalle puolelleen yhtälöä.
 
-%Kokeilemalla tai vähän miettimällä on helppoa huomata, että epäyhtälöiden ratkaisemisessa voi käyttää suurelta osin samanlaisia menetelmiä kuin yhtälön ratkaisemisessa. Helposti huomataan, että myös epäyhtälöön voidaan lisätä puolittain jotakin tai siitä voidaan vähentää puolittain jotakin. Samoin epäyhtälö voidaan kertoa tai jakaa puolittain positiivisella luvulla. Negatiivisella luvulla jakamisessa ja kertomisessa täytyy kuitenkin huomata jotain erityistä.
 
 \begin{esimerkki}
 Ratkaistaan epäyhtälö $2x+1<0$.
@@ -356,15 +352,16 @@ Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\fra
 \end{tehtava}
 
 \begin{tehtava}
-Lukion päättötodistuksessa tietyn aineen keskiarvo määräytyy tavallisesti suoraan kurssien keskiarvosta. Opiskelija haluaa filosofian keskiarvokseen 7 tai paremman. Jos filosofian kursseja on tarjolla kolme ja kahden ensimmäisen kurssin arvosanojen keskiarvoksi on tullut 6, niin minkä arvosanan opiskelijan on vähintään saatava kolmannesta kurssista? Jokainen kurssi arvioidaan kokonaislukuasteikolla 4–-10.
+Lukion päättötodistuksessa aineen arvosana määräytyy aineen pakollisten ja syventävien kurssien keskiarvosta. Opiskelija haluaa filosofian keskiarvokseen 7 tai paremman. Opiskelija aikoo osallistua kolmelle filosofian kurssille. Kahden kurssin jälkeen hänen arvosanojen keskiarvoksi on. Millainen arvosana on opiskelijan saatava kolmannesta kurssista? Kurssit arvioidaan asteikolla 4--10.
 \begin{vastaus}
-Muodostettava epäyhtälö on muotoa $\frac{2\cdot 6+x}{3}\geq 7$, josta ratkaisuna saadaan $x\geq9$.
+%Muodostettava epäyhtälö on muotoa $\frac{2\cdot 6+x}{3}\geq 7$, josta ratkaisuna saadaan $x\geq9$.
+9 tai 10
 \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
-	Tietyn auton käyttövoimavero on 450 EUR/vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100 km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100 km. Diesel maksaa 1,55 EUR/litra, ja bensiini 1,65 EUR/litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
+	Tietyn auton käyttövoimavero on 450 \euro /vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100~km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100~km. Diesel maksaa 1,55 \euro /litra, ja bensiini 1,65 \euro /litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
     \begin{vastaus}
-        \item 8257 km
+        8257 km
     \end{vastaus}
 \end{tehtava}
