@@ -1,16 +1,16 @@
-\input{content/metasivu}
+\include{content/metasivu}
 
 \tableofcontents
 
-\input{content/esipuhe}
+\include{content/esipuhe}
 
-\part{Polynomi}
-	\input{content/polynomi}
+\chapter{Polynomi}
+	\include{content/polynomi}
 	%polynomin käsite, eli lähinnä terminologiaa: lauseke, termi, monomi, binomi, polynomi, polynomin aste, vakiotermi
 	%funktiomerkintä P(x), polynomin arvo
-	\input{content/polynomien_yhteen-_ja_vahennyslasku}
+	\include{content/polynomien_yhteen-_ja_vahennyslasku}
 	%samannimisten termien yhdistäminen, sulkujen kanssa pelaaminen tyyliin x-(x-1)=x-x+1=1
-	\input{content/polynomien_kertolasku}
+	\include{content/polynomien_kertolasku}
 	%polynomin kertominen monomilla a(x+b)=ax+ab
 	%kahden binomin tulo: (a+b)(c+d)=ac+ad+bc+bd
 	%tekijöihin jako, käsite tekijä
@@ -19,7 +19,7 @@
 		%(a-b)^2=a^2-2ab+b^2
 		%(a-b)(a+b)=a^2-b^2
 		%Esimerkki tai harjoitustehtävä: 102*98=(100+2)(100-2)=10000-4
-	\input{content/tulon_nollasaanto_ja_tulon_merkkisaanto}
+	\include{content/tulon_nollasaanto_ja_tulon_merkkisaanto}
 	%tulon nollasääntö
 		%tulo on 0 jos ja vain jos ainakin yksi tulon tekijöistä on 0
 		%esim. yhtälön x(x-2)=0 ratkaisu
@@ -32,7 +32,7 @@
 		%sovellus: x^2>=0
 	%on hyvä mainita, että säännöt voidaan todistaa
 	%todistukset korkeintaan liitteeksi
-	\input{content/polynomifunktion_kuvaaja}
+	\include{content/polynomifunktion_kuvaaja}
 	%tarkoituksena varmistaa, että opiskelijat:
 		%muistavat koordinaatiston idean
 		%osaavat hahmotella funktion kuvaajan laskemalla sen arvoja
@@ -41,43 +41,43 @@
 	%esimerkkeinä polynomeja
 	%mitään yleistä teoriaa polynomien kuvaajista ei tarvita, mainittakoon että ensimmäisen asteen funktion kuvaaja on suora
 
-\part{Ensimmäinen aste}
-	\input{content/ensimmaisen_asteen_yhtalo}
+\chapter{Ensimmäinen aste}
+	\include{content/ensimmaisen_asteen_yhtalo}
 	%KERTAUSTA lyhyesti
 	%tarkoituksena, että tämän voi jättää väliin, jos osaa jo
 	%nimitys juuri
-	\input{content/epayhtalot}
+	\include{content/epayhtalot}
 	%yleistä järjestyksestä ja epäyhtälöistä, ratkaisujoukko on reaalilukuväli
 	%ensimmäisen asteen epäyhtälö
 		%merkin kääntyminen negatiivisella luvulla kerrottaessa perustellaan tulon merkkisäännöllä: jos x>b, x-b>0
 		%siis lausekkeella a(x-b) on sama merkki kuin luvulla a
 
-\part{Toinen aste}
-	\input{content/toisen_asteen_yhtalo}
+\chapter{Toinen aste}
+	\include{content/toisen_asteen_yhtalo}
 	%toisen asteen yhtälö on muotoa ax^2+bx+c=0
 	%vaillinaiset yhtälöt
 		%yhtälöt muotoa ax^2+c=0 ja ax^2+bx=0
 	%neliöksi täydentäminen
 		%tämän voi opettaja halutessaan jättää käsittelemättä
 		%idea siitä, että minkä tahansa toisen asteen yhtälön voi ratkaista täydentämällä neliöksi
-	\input{content/toisen_asteen_yhtalon_ratkaisukaava}
+	\include{content/toisen_asteen_yhtalon_ratkaisukaava}
 	%johdetaan täydentämällä neliöksi: ax^2+bx+c=0 -> 4a^2+4abx=-4ac -> (2ax+b)^2=b^2-4ac
 	%diskriminantti
 		%D=b^2-4ac kertoo ratkaisujen lukumäärän
-	\input{content/polynomin_jakaminen_tekijoihin}
+	\include{content/polynomin_jakaminen_tekijoihin}
 	%sen nollakohtien avulla
 	%lause: "Jos x=b on yhtälön P(x)=0 ratkaisu, x-b on polynomin P(x) tekijä."
 	%todistus oikeastaan tarvitsee polynomien jakokulmaa, sen voi yrittää muotoilla uudestaan
 	%erityisesti toisen asteen polynomille: ax^2+bx+c=a(x-x_1)(x-x_2)
-	\input{content/toisen_asteen_epayhtalo}
+	\include{content/toisen_asteen_epayhtalo}
 	%resepti: kaikki termit toiselle puolelle yhtälöä, ratkaise nollakohdat
 	%sitten joko:
 		%(A) jaa tekijöihin ja käytä tulon merkkisääntöä
 		%tai (B) vetoa paraabelin muotoon
 	%huomioitava myös tapaus, jossa polynomilla ei ole nollakohtia, sekä vaillinaiset tapaukset x(x-a)>0 ja x^2<a
 
-\part{Korkeampi aste}
-	\input{content/korkeamman_asteen_yhtalot}
+\chapter{Korkeampi aste}
+	\include{content/korkeamman_asteen_yhtalot}
 	%yleisesti näitä on vaikea ratkaista
 	%3. ja 4. asteen yhtälöille on ratkaisukaava, 5. asteesta eteenpäin ei
 	%ratkaistaan siis yleensä numeerisesti
@@ -87,18 +87,18 @@
 	%joitakin helppoja tapauksia voidaan ratkaista tarkasti: tekijöihinjako ja tulon nollasääntö, esim. x^3+5x^2+x=0
 	%sijoituksen avulla ratkeavat yhtälöt
 		%tyyppiä x^4-3x^2+2=0, x^10-3x^5+1=0 jne. olevat yhtälöt
-	\input{content/korkeamman_asteen_epayhtalot}
+	\include{content/korkeamman_asteen_epayhtalot}
 	%resepti: kaikki toiselle puolelle, etsi nollakohdat
 	%käytä (A) merkkikaaviota tai (B) ota testipisteet joka (nollakohtien) väliltä (koska polynomit ovat jatkuvia, viitataan kurssiin MAA7)
 
 \Closesolutionfile{ans}
 
-\part{Liitteet}
-	\input{content/appendices}
+\chapter{Liitteet}
+	\include{content/appendices}
 	% sisältää vastaukset
 
-%\chapter{Hakemisto}
-\input{content/hakemisto}
+%\section{Hakemisto}
+\include{content/hakemisto}
 
-% \input{content/testiluku}
+% \include{content/testiluku}
 %testailut tänne
