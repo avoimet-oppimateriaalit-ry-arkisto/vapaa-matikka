@@ -166,7 +166,7 @@ Nämä kaavat voidaan todistaa helposti laskemalla.
 
 \begin{align*}
 (a+b)^2 &= (a+b)(a+b) &\emph{neliön määritelmä} \\
-&= a(a+b)+b(a+b) &\emph{osittelulaki} \\
+% &= a(a+b)+b(a+b) &\emph{osittelulaki} \\
 &= a^2+ab+ba+b^2 &\emph{osittelulaki} \\
 &= a^2+ab+ab+b^2 &\emph{vaihdannaisuus ($ba=ab$)} \\
 &= a^2+2ab+b^2
@@ -176,28 +176,28 @@ Nämä kaavat voidaan todistaa helposti laskemalla.
 
 \begin{align*}
 (a-b)^2 &= (a-b)(a-b) &\emph{neliön määritelmä} \\
-&= a(a-b)-b(a-b) &\emph{osittelulaki} \\
+% &= a(a-b)-b(a-b) &\emph{osittelulaki} \\
 &= a^2-ab-ba+b^2 &\emph{osittelulaki} \\
 &= a^2-ab-ab+b^2 &\emph{vaihdannaisuus ($ba=ab$)} \\
 &= a^2-2ab+b^2
 \end{align*}
 
-Edellä todistettuja kahta tapausta kutsutaan yhdessä nimellä binomin neliö. Toisinaan ne kirjoitetaan yhtenä yhtälönä muodossa $(a \pm b)^2=a^2 \pm 2ab+b^2$. Kaavoissa useasti esiintyviä $\pm$-merkkejä luetaan siten, että ylemmät ja alemmat täsmäävät keskenään. Ylempien merkkien (kaikki $+$:ia) valinta vastaa siis summan neliötä ja alempien merkkien (kaikki $-$:ia) valinta erotuksen neliötä.
+Edellä todistettuja kahta tapausta kutsutaan yhdessä nimellä binomin neliö. Toisinaan ne kirjoitetaan yhtenä yhtälönä muodossa $(a \pm b)^2=a^2 \pm 2ab+b^2$. % Kaavoissa useasti esiintyviä $\pm$-merkkejä luetaan siten, että ylemmät ja alemmat täsmäävät keskenään. Ylempien merkkien (kaikki $+$:ia) valinta vastaa siis summan neliötä ja alempien merkkien (kaikki $-$:ia) valinta erotuksen neliötä.
 
 \subsubsection*{Summan ja erotuksen tulo}
 
 \begin{align*}
-(a+b)(a-b) &= a(a-b)+b(a-b) &\emph{osittelulaki} \\
-&= a^2-ab+ba-b^2 &\emph{osittelulaki} \\
+(a+b)(a-b) &= a^2-ab+ba-b^2 &\emph{osittelulaki} \\
 &= a^2-ab+ab-b^2 &\emph{vaihdannaisuus ($ba=ab$)} \\
 &= a^2-b^2
 \end{align*}
 
 \begin{esimerkki}
-Kerro auki sulut lausekkeessa $(3x+2y)^2$. \\
-Käytetään muistikaavaa $(a+b)^2 = a^2+2ab+b^2$. Nyt $a = 3x$ ja $b = 2y$.
+Sievennä $(3x-2y)^2$. \\
+\quad\\
+Käytetään muistikaavaa $(a-b)^2 = a^2-2ab+b^2$. Nyt $a = 3x$ ja $b = 2y$.
 Saadaan
-        \[ (3x+2y)^2 = (3x)^2+2\cdot 3x\cdot 2y+(2y)^2 = 9x^2+12xy+4y^2. \]
+        \[ (3x+2y)^2 = (3x)^2-2\cdot 3x\cdot 2y+(2y)^2 = 9x^2-12xy+4y^2. \]
 \end{esimerkki}
 
 \begin{esimerkki}
@@ -211,7 +211,7 @@ Käytetään ovelasti muistikaavoja $(a-b)^2 = a^2-2ab+b^2$ ja $(a+b)(a-b) = a^2
 
 \section{Tekijöihinjako}
 
-Pitkän matematiikan 1. kurssilla on käsitelty lukujen jakamista tekijöihin.
+%Pitkän matematiikan 1. kurssilla on käsitelty lukujen jakamista tekijöihin.
 Esimerkiksi luvun $12$ \termi[tekijät]{tekijä} ovat luvut $1$, $2$, $3$, $4$, $6$ ja $12$. Nämä ovat sellaisia
 lukuja, joista saadaan luku $12$ kertomalla ne jollain kokonaisluvulla, tai toisin sanottuna luku $12$ voidaan jakaa
 millä tahansa näistä luvuista ilman jakojäännöstä.
@@ -222,55 +222,6 @@ millä tahansa näistä luvuista ilman jakojäännöstä.
 Polynomeja voidaan jakaa vastaavalla tavalla tekijöihin. Polynomien tapauksessa tekijöihinjako tarkoittaa
 polynomin esittämistä saman- tai pienempiasteisten polynomien tulona. Aste on aina pienempi, ellei kyse ole pelkästä
 vakiokertoimen ottamisesta yhteiseksi tekijäksi.
-
-\begin{esimerkki}
-\qquad \\
-\begin{itemize}
-    \item $x^2-1 = (x+1)(x-1)$
-    \item $x^3+x = x(x^2+1)$
-    \item $3x^2+6x = 3x(x+2)$
-    \item $4x^2+24x+32 = 4(x+2)(x+4)$
-\end{itemize}
-\end{esimerkki}
-
-On suositeltavaa tarkistaa itse, että yllä esitetyt tekijöihinjaot todella toimivat. Polynomien tekijöihinjaon toimivuus
-on helppoa tarkistaa -- täytyy vain laskea väitettyjen tekijöiden tulo ja katsoa, onko se alkuperäinen polynomi. Vaikka
-tarkistus onkin helppoa, tässä vaiheessa ei luultavasti vielä ole selvää, miten tekijöihinjaon voisi saada selville
--- paitsi toisinaan arvaamalla, mutta tähän kysymykseen vastataan myöhemmin tällä kurssilla.
-
-Polynomien tekijöihinjako ei ole yksiselitteinen, mutta monesti hyödyllisintä on jakaa polynomi tekijöihin samoin kuin
-esimerkkitapauksissa eli niin, että ensimmäisenä on vakiotermi ja kaikissa muissa tekijäpolynomeissa korkeimman asteen
-termin kerroin on 1.
-
-Esimerkki selkeyttänee asiaa. Polynomi $6x^2+30x+36$ voidaan jakaa tekijöihin vaikkapa seuraavilla tavoilla:
-
-\begin{esimerkki}
-\qquad \\
-\begin{itemize}
-    \item $6(x+2)(x+3)$
-    \item $3(2x+4)(x+3)$
-    \item $3(x+2)(2x+6)$
-    \item $2(3x+6)(x+2)$
-    \item $(6x+12)(x+3)$
-    \item $(\frac12 x+1)(12x+36)$
-\end{itemize}
-\end{esimerkki}
-
-Kaikki nämä tavat ovat ''oikein,'' mutta lähes aina ensimmäinen muoto $6(x+2)(x+3)$ on kätevin.
-
-Toisinaan polynomeille voi löytää tekijöitä soveltamalla joitakin seuraavista keinoista:
-
-\begin{itemize}
-\item Otetaan korkeimman asteen termin kerroin yhteiseksi tekijäksi: \\
-$5x^4+3x^2+x-9 = 5(x^4+\frac{3}{5} x^2+\frac{1}{5} x-\frac{9}{5})$
-\item Otetaan $x$ tai sen potenssi yhteiseksi tekijäksi, jos mahdollista: \\
-$x^5+x^3+3x = x(x^4+x^2+3)$
-$x^7+x^6+5x^4+2x^2 = x^2(x^5+x^4+5x^2+2)$
-\item Sovelletaan muistikaavaa käänteisesti \\
-$x^2-5=x^2-\sqrt{5}^2=(x+\sqrt{5})(x-\sqrt{5})$ \\
-$x^2+8x+16=x^2+2\cdot 4x+4^2=(x+4)^2$ \\
-$x^2+x+\frac14=x^2+2\cdot \frac12 x+(\frac12)^2=(x+\frac12)^2$
-\end{itemize}
 
 \begin{esimerkki}
 Jaetaan tekijöihin polynomi $10x^3-20x^2$.
@@ -289,11 +240,75 @@ Jaetaan tekijöihin polynomi $5x^3-20x^2+20x$.
 & 5x^3-20x^2+20x \\
 =& 5(x^3-4x^2+4x) \ \ \ \ &\emph{otetaan $5$ yhteiseksi tekijäksi} \\
 =& 5x(x^2-4x+4) &\emph{otetaan $x$ yhteiseksi tekijäksi} \\
-=& 5x(x^2-2\cdot 2x+2^2) \\
-=& 5x(x-2)^2 &\emph{sovelletaan muistikaavaa} \\
+=& 5x(x^2-2\cdot 2x+2^2) &\emph{sovelletaan muistikaavaa} \\
+=& 5x(x-2)^2 \\
 \end{align*}
 \end{esimerkki}
 
+\begin{esimerkki}
+Jaa tekijöihin \quad a) $x^3+x$ \quad b) $3x^2+6x.$ \\
+\quad\\
+Kun jokaisessa termissä on sama tekijä, se voidaan erottaa yhteiseksi tekijäksi
+\begin{enumerate}[a)]
+    \item $x^3+x = x(x^2+1)$
+    \item $3x^2+6x = 3x(x+2)$
+\end{enumerate}
+\end{esimerkki}
+
+\quad\\
+
+\begin{esimerkki}
+Jaa tekijöihin \quad a) $x^2-4$ \quad b) $x^2+8x+16.$ \\
+\quad\\
+Jaetaan polynomit tekijöihin muistikaavoja hyödyntäen
+\begin{enumerate}[a)]
+    \item $x^2-4 = x^2-2^2 = (x+2)(x-2)$
+    \item $x^2+8x+16 = x^2+ 2\cdot 4 \cdot x + 4^2 = (x+4)^2$
+\end{enumerate}
+\end{esimerkki}
+
+%On suositeltavaa tarkistaa itse, että yllä esitetyt tekijöihinjaot todella toimivat. Polynomien tekijöihinjaon toimivuus
+%on helppoa tarkistaa -- täytyy vain laskea väitettyjen tekijöiden tulo ja katsoa, onko se alkuperäinen polynomi. Vaikka
+%tarkistus onkin helppoa, tässä vaiheessa ei luultavasti vielä ole selvää, miten tekijöihinjaon voisi saada selville
+%-- paitsi toisinaan arvaamalla, mutta tähän kysymykseen vastataan myöhemmin tällä kurssilla.
+
+%Polynomien tekijöihinjako ei ole yksiselitteinen, mutta monesti hyödyllisintä on jakaa polynomi tekijöihin samoin kuin
+%esimerkkitapauksissa eli niin, että ensimmäisenä on vakiotermi ja kaikissa muissa tekijäpolynomeissa korkeimman asteen
+%termin kerroin on 1.
+%
+%Esimerkki selkeyttänee asiaa. Polynomi $6x^2+30x+36$ voidaan jakaa tekijöihin vaikkapa seuraavilla tavoilla:
+%
+%\begin{esimerkki}
+%\qquad \\
+%\begin{itemize}
+%    \item $6(x+2)(x+3)$
+%    \item $3(2x+4)(x+3)$
+%    \item $3(x+2)(2x+6)$
+%    \item $2(3x+6)(x+2)$
+%    \item $(6x+12)(x+3)$
+%    \item $(\frac12 x+1)(12x+36)$
+%\end{itemize}
+%\end{esimerkki}
+%
+%Kaikki nämä tavat ovat ''oikein,'' mutta lähes aina ensimmäinen muoto $6(x+2)(x+3)$ on kätevin.
+%
+%Toisinaan polynomeille voi löytää tekijöitä soveltamalla joitakin seuraavista keinoista:
+%
+%\begin{itemize}
+%\item Otetaan korkeimman asteen termin kerroin yhteiseksi tekijäksi: \\
+%$5x^4+3x^2+x-9 = 5(x^4+\frac{3}{5} x^2+\frac{1}{5} x-\frac{9}{5})$
+%\item Otetaan $x$ tai sen potenssi yhteiseksi tekijäksi, jos mahdollista: \\
+%$x^5+x^3+3x = x(x^4+x^2+3)$
+%$x^7+x^6+5x^4+2x^2 = x^2(x^5+x^4+5x^2+2)$
+%\item Sovelletaan muistikaavaa käänteisesti \\
+%$x^2-5=x^2-\sqrt{5}^2=(x+\sqrt{5})(x-\sqrt{5})$ \\
+%$x^2+8x+16=x^2+2\cdot 4x+4^2=(x+4)^2$ \\
+%$x^2+x+\frac14=x^2+2\cdot \frac12 x+(\frac12)^2=(x+\frac12)^2$
+%\end{itemize}
+
+
+\quad\\
+!!!TÄSTÄ PUUTTUU RYHMITTELY!!!\\
 Kaikkien polynomien tekijöihinjako ei kuitenkaan näillä menetelmillä onnistu. Myöhemmin tässä kirjassa opitaan,
 miten polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 
@@ -357,47 +372,65 @@ miten polynomin voi jakaa tekijöihin nollakohtiensa avulla.
         \item $(x+y)^2$
         \item $(x-y)^2$
         \item $(x+y)(x-y)$
-        \item $(x+3)^2$
-        \item $(y-5)^2$
-        \item $(x-4)(x+4)$
-        \item $(2x+1)^2$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
         \item $x^2 +2xy+y^2$
         \item $x^2 -2xy +y^2$
         \item $x^2-y^2$
-        \item $x^2 +6x+9$
-        \item $y^2 - 10y+25$
-        \item $x^2 -16$
-        \item $4x^2 +4x +1$
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
 
+\begin{tehtava}
+    Kerro sulut auki muistikaavan avulla.
+    \begin{enumerate}[a)]
+        \item $(x+3)^2$
+        \item $(y-5)^2$
+        \item $(x-4)(x+4)$
+        \item $(3x+2)^2$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+        \item $x^2 +6x+9$
+        \item $y^2 - 10y+25$
+        \item $x^2 -16$
+        \item $9x^2 +12x +4$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
 
+\begin{tehtava}
+    Jaa tekijöihin.
+    \begin{enumerate}[a)]
+        \item $x^2+6x+9$
+        \item $y^2 - 2y+1$
+        \item $x^2 -25$
+        \item $4x^2 +4x +1$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+        \item $(x+3)^2$
+        \item $(y-1)^2$
+        \item $(x-5)(x+5)x^2 -25$
+        \item $(2x+1)^2$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
 
 \subsubsection*{Hallitse kokonaisuutta}
 
 \begin{tehtava}
     Sievennä.
     \begin{enumerate}[a)]
-        \item $x(x^2 + 1)$
-        \item $(x - 5)\cdot 3x$
         \item $(-2x)(4x - 1)\cdot 3$
-        \item $2x(x + y)$
-        \item $(3x^5 + 7)y$
         \item $(-x^3)(10x - 2)$
         \item $5(-2x + 1)(-9x) $
         \item $2x(x-3)+1$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
-            \item $x^3 + x$
-            \item $3x^2 - 15x$
             \item $-24x^2 + 6x$
-            \item $2x^2 + xy$
-            \item $3x^5y + 7y$
             \item $-10x^4 + 2x^3$
             \item $90x^2 - 45x$
             \item $2x^2-6x+1$
@@ -408,22 +441,14 @@ miten polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 \begin{tehtava}
     Sievennä muistikaavojen avulla.
     \begin{enumerate}[a)]
-        \item $(x+2)^2$
-        \item $(x-3)^2$
-        \item $(x-1)(x+1)$
         \item $(5-x)^2$
-        \item $(2x + 8)^2$
         \item $(7x + 4)^2$
         \item $(9 - 7x)(9 + 7x)$
         \item $(8x - 8)(8x + 8)$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
-            \item $x^2 + 4x + 4$
-            \item $x^2 - 6x + 9$
-            \item $x^2 - 1$
             \item $x^2 - 10x + 25$
-            \item $4x^2 + 32x + 64$
             \item $49x^2 + 56x + 16$
             \item $-49x^2 + 81$
             \item $64x^2 - 64$
@@ -434,17 +459,29 @@ miten polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 \begin{tehtava}
     Sievennä.
     \begin{enumerate}[a)]
-        \item $(x+1)(x+3)$
-        \item $(x+2)(x-1)$
-        \item $(2x+5)(x+7)$
+        \item $(2y+5)(y+7)$
         \item $(x-1)(x+4)x$
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[a)]
-            \item $x^2 + 4x + 3$
-            \item $x^2 + x - 2$
-            \item $2x^2 + 19x + 35$
+            \item $2y^2 + 19y + 35$
             \item $x^3 + 3x^2 - 4x$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Jaa tekijöihin.
+    \begin{enumerate}[a)]
+    	\item $x^3 - x$
+        \item $x^2 - x + \frac{1}{4} $
+        \item $9-x^4$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x(x-1)^2$
+            \item $(x-\frac{1}{2})^2$
+            \item $(3+x^2)(3-x^2)$
         \end{enumerate}
     \end{vastaus}
 \end{tehtava}
@@ -464,7 +501,7 @@ miten polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 \end{tehtava}
 
 \begin{tehtava}
-	Laske 
+	Sievennä. 
 	\begin{enumerate}[a)]
 		\item $(x-3)(2x^3-3x+4)$
 		\item $(x^2+1)(x^3-2x-4)$
@@ -482,13 +519,12 @@ miten polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 \end{tehtava}
 
 \begin{tehtava}
-    Johda ''muistikaavat'' potenssien
+    Sievennä.
     \begin{enumerate}[a)]
             \item $(a+b)^3$
             \item $(a+b)^4$
             \item $(a-b)^3$
         \end{enumerate}
-        aukikertomiseksi.
     \begin{vastaus}
         \begin{enumerate}[a)]
             \item $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$
