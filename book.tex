@@ -16,9 +16,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Marginaalit
-\addtolength{\marginparwidth}{6em}
-\addtolength{\hoffset}{-4em}
-\addtolength{\textwidth}{-2em}
+%\addtolength{\marginparwidth}{6em}
+%\addtolength{\hoffset}{-4em}
+%\addtolength{\textwidth}{-2em}
+
 %\addtolength{\voffset}{-1ex}
 %\addtolength{\textheight}{2ex}
 
@@ -35,6 +36,9 @@
 
 % Suometus ja fontit
 \usepackage[utf8]{inputenc}
+
+% OpenSans-fontti
+\usepackage[defaultsans,osfigures,scale=0.95]{opensans}
 
 % alleviivaus yms
 \usepackage[normalem]{ulem}
@@ -136,6 +140,11 @@
 % alamarginaali
 %\geometry{bmargin=2.0cm}
 
+\usepackage[papersize={185mm,240mm},%
+            left=36mm,right=12mm,%
+            top=10mm,bottom=25mm,
+            asymmetric,bindingoffset=10mm]{geometry}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Ykkösvälike, puolitoistakertainen välike ja kakkosvälike yms.
@@ -180,22 +189,25 @@
 \input{config/esimerkki}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage{titlesec}
-
-\titleformat{\chapter}
-  {\huge\itshape\color{ParisGreen}}{\thechapter}{1em}{}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% alatunnisteen asettaminen, sivunumerot ym.
 
 \usepackage{fancyhdr}
-\pagestyle{fancyplain}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{\leftmark}
-\cfoot{}
-\rfoot{\thepage}
+\pagestyle{fancy}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{\chaptertitlename\ \thechapter. #1}{}}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{%
+ \fancyhf{}
+ \fancyfoot[RE]{{\sffamily\fontsize{9}{7}\leftmark}\hspace{1em}\thepage}
+ \fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7}\leftmark}}
+}
+
+\fancyhf{}
+\fancyfoot[RE]{{\sffamily\fontsize{9}{7}\leftmark}\hspace{1em}\thepage}
+\fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7}\leftmark}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
