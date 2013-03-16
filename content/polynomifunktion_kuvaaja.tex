@@ -1,10 +1,6 @@
 \chapter{Polynomifunktion kuvaaja}
-Polynomifunktioita on monesti hyödyllistä
-havainnollistaa koordinaatistoon piirrettynä kuvaajana.
-%Tavallisesti $xy$-koordinaatistossa pystyakselin arvot eli korkeus vastaavat
-%funktion arvoja,
-%joten polynomin $P$ kuvaaja on siis sama asia kuin käyrän $y = P(x)$.
-
+Polynomifunktiota voi
+havainnollistaa koordinaatistoon piirretyn kuvaajan avulla.
 
 %\begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
 %\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
@@ -14,15 +10,14 @@ havainnollistaa koordinaatistoon piirrettynä kuvaajana.
 
 \begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
 %\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
-\kuvaaja{x**2+x}{$Q(x) = x^2+x$}{blue}
-\kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{green}
+\kuvaaja{x**2+x}{$Q(x) = x^2+x$}{black}
+\kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{black}
 \end{kuvaajapohja}
-
+%
 \section*{Kuvaajan piirtäminen}
 
-Funktion kuvaajien piirtäminen käsin onnistuu yleensä helpoiten laskemalla
-funktion arvoja muutamilla muuttujan arvoilla, merkitsemällä pisteet
-$xy$-koordinaatistoon ja hahmottamalla pisteiden kautta kulkeva kuvaaja.
+Funktioiden kuvaaajia voi piirtää laskimella tai tietokoneella. Kuvaajaa voi myös hahmotella käsin laskemalla ensin funktion arvoja muutamilla muuttujan arvoilla, merkitsemällä pisteet
+$xy$-koordinaatistoon ja piirtämällä lopuksi pisteiden kautta kulkeva kuvaajan.
 
 \begin{esimerkki}
 Hahmotellaan polynomifunktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ kuvaaja.
@@ -61,7 +56,7 @@ koorinaatistoon. Lopuksi hahmotellan kuvaaja, joka kulkee pisteiden kautta.
 	\kuvaajapiste{1}{-2.5}
 	\kuvaajapiste{2}{-2}
 	\kuvaajapiste{3}{-0.5}
-	\kuvaaja{0.5*x**2-x-2}{$f(x) = \dfrac{1}{2}x^2 - x - 2$}{red}
+	\kuvaaja{0.5*x**2-x-2}{$f(x) = \dfrac{1}{2}x^2 - x - 2$}{black}
 	\end{kuvaajapohja}}
 \end{tabular}
 
@@ -79,15 +74,14 @@ Esimeriksi funktion arvoja voidaan lukea kuvaajasta.
 Seuraavassa on esitetty erään polynomifunktion $P(x)$ kuvaaja. Kuvaajan perusteella näyttäisi siltä, että $P(1)=-1$, mutta tarkkaa arvoa kuvaajasta ei voi päätellä.
 
 \begin{kuvaajapohja}{1}{-2}{2}{-2}{2}
-\kuvaaja{x**4-2*x**3-x**2+11./10}{P(x)}{red}
+\kuvaaja{x**4-2*x**3-x**2+11./10}{$P(x)$}{black}
 \end{kuvaajapohja}
 
-Itse asiassa edllinen kuvaaja kuuluu funktiolle $P(x)=x^4-2x^3-x^2+\dfrac{11}{10}$. Nyt tiedetään, että funktion $P(x)$ arvo kohdassa $x=1$ on $-\dfrac{9}{10}$ eikä $-1$, kuten kuvaajan perusteella voisi luulla. Kuvaajasta ei siis voi lukea tarkkoja tietoja funktiosta.
+Itse asiassa edellinen kuvaaja kuuluu funktiolle $P(x)=x^4-2x^3-x^2+\dfrac{11}{10}$. Nyt tiedetään, että funktion $P(x)$ arvo kohdassa $x=1$ on $-\dfrac{9}{10}$ eikä $-1$, kuten kuvaajan perusteella voisi luulla. Kuvaajasta ei siis voi lukea tarkkoja tietoja funktiosta.
 \end{esimerkki}
 
 Funktion nollakohta on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $Q(x)=x^2-1$
-on nollakohdat $-1$ ja $1$, sillä $Q(1)=0$ ja $Q(-1)=0$. Polynomien tapauksessa nollakohtia on tapana kutsua
-\termi[juuriksi]{juuri, polynomin}.
+on nollakohdat $-1$ ja $1$, sillä $Q(1)=0$ ja $Q(-1)=0$.
 
 Funktion kuvaaja antaa tietoa nollakohdista. Niiden kohdalla kuvaaja leikkaa $x$-akselin.
 
@@ -97,7 +91,7 @@ Funktion $P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$ kuvaajasta nähdään, että f
 \begin{kuvaajapohja}{0.3}{-5}{15}{-10}{5}
 \kuvaajapiste{0.66146}{0}
 \kuvaajapiste{11.3385}{0}
-\kuvaaja{1./3*x**2-4*x+5./2}{$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$}{red}
+\kuvaaja{1./3*x**2-4*x+5./2}{$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$}{black}
 \end{kuvaajapohja}
 \end{esimerkki}
 
