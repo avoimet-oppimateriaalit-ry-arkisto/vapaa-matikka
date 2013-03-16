@@ -1,4 +1,5 @@
 \chapter{Toisen asteen yhtälö}
+
 \begin{esimerkki}
 Selvitetään, milloin funktio $f(x)=x^2+2x+1$ leikkaa x-akselin.
 
@@ -170,7 +171,7 @@ vaillinaisiksi toisen asteen yhtälöiksi muistikaavojen avulla.
 Tarkastellaan vaikkapa yhtälöä
 \[x^2+2x-3=0.\]
 Yhtälön vasen puoli on melkein sama kuin binomin $x+1$ neliö, sillä $(x+1)^2=x^2+2x+1$.
-Vain vakiotermi on siis ''pielessä''. Korjataan asia ja ratkaistaan yhtälö:
+Vain vakiotermissä on eroa. Korjataan asia ja ratkaistaan yhtälö:
 
 \begin{align*}
 x^2+2x-3 & = 0  &&\ppalkki +4 \\
@@ -181,31 +182,27 @@ x & = \pm 2 - 1 \\
 x & = 1 \text{ tai } x= -3. 
 \end{align*}
 
-Miksi edellä osattiin ajatella juuri sopivaa muistikaavaa $(x+1)^2=x^2+2x+1$? Siksi, että yhtälön vasemmalla
+Miksi edellä osattiin ajatella juuri oikeaa muistikaavaa $(x+1)^2=x^2+2x+1$? Siksi, että yhtälön vasemmalla
 puolella olleen polynomin alku $x^2+2x$ ei voi tulla mistään muustakaan binomin neliöstä.
-Siksi vakiotermiä muutettiin sopivasti eli polynomi \emph{täydennettiin neliöksi}.
+Vakiotermiä sopivasti muuttamalla polynomi \emph{täydennettiin neliöksi}.
 
 Neliöksi täydentäminen vaatii muistikaavojen hyvää hallintaa, mutta niiden avulla kaikki toisen asteen yhtälöt voidaan ratkaista neliöksi täydentämällä. (Yleensä tosin käytetään toisen asteen yhtälön ratkaisukaavaa, joka esitellään seuraavassa luvussa.)
 
-\begin{esimerkki} (korjaa, turhan monimutkainen) \\
-Haluaisimme ratkaista yhtälön $x^2+4x-16 = 0$. Jotta se saataisiin muotoon
-jossa on neliö ja vakiotermi eli $(Ax+B)^2-C=0$, täytyy molempien yhtälöiden
-vasempien puolten polynomien olla samat, eli laskemalla muistikaavan avulla
-$(Ax+B)^2-C=0$ saadaan
-\[A^2x^2+2ABx+B^2-x=x^2+4x-16.\]
-Haluamme siis valita kertoimet $A$, $B$ ja $C$ siten, että
-\[\left\{\begin{array}{l}
-A^2=1 \\ 2AB=4 \\ B^2-C=-16.
-\end{array}\right.\]
-Valitaan $A$:ksi ensimmäisen yhtälön eräs ratkaisu $A = 1$. Nyt toinen yhtälö
-on muotoa $2B=4$ eli $B = 2$. Siis viimeisen yhtälön mukaan voidaan valita
-$C = 16+B^2 = 20$.
+\begin{esimerkki} Ratkaise yhtälö $x^2+4x-16 = 0$. 
 
-Näiden valintojen avulla voimme nyt ratkaista yhtälön:
+Kirjoitetaan yhtälö muotoon $x^2+2\cdot 2x-16 = 0$ ja verrataan kahta ensimmäistä termiä
+muistikaavaan, jotta nähtäisiin, minkä neliön lausekkeesta voisi muokata.
 \begin{align*}
-x^2+4x-16 &= 0 &&\ppalkki + 20 \text{ ($C = 20$ oikealle puolelle)} \\
-x^2+4x+4 &= 20 &&\text{vasen puoli $ = (Ax+B)^2 = (x+2)^2$} \\
-(x+2)^2 &= 20 &&\text{ratkaistaan vaillinainen toisen asteen yhtälö} \\
+&x^2+2\cdot 2\cdot x  &&= (\quad + \quad)^2\\
+&a^2 +2\cdot a\cdot b +b^2 &&= (a+b)^2
+\end{align*}
+Lausekkeita vertaamalla nähdään vastaavuus $a = x$, $b= 2$. Neliöstä puuttuva
+termi $b^2$ on siis $2^2=4$. Täydennetään nyt neliöksi:
+\begin{align*}
+x^2+4x-16 &= 0 &&\ppalkki + 16  \\
+x^2+4x \quad  &= 16 &&\ppalkki + 4 \text{ (täydennetään neliöksi)}  \\
+x^2+4x+4 &= 20 &&\text{vasen puoli: $ x^2+4x+4= (x+2)^2$} \\
+(x+2)^2 &= 20 &&\text{neliöjuuri} \\
 x+2 &= \pm \sqrt{20} &&\ppalkki - 2 \\
 x &= -2 \pm \sqrt{20} &&\text{sievennetään vastaus} \\
 x &= -2 \pm 2\sqrt{5}.
@@ -213,19 +210,18 @@ x &= -2 \pm 2\sqrt{5}.
 \end{esimerkki}
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $4x^2-4x-5=0$. Jotta saisimme polynomin $4x^2-4x-5$ muotoon
-$(Ax+B)^2-C$, täytyy olla $A^2 = 4$. Valitaan toinen ratkaisu $A = 2$. Täytyy
-myös olla $2AB = -4$ eli $B=\frac{-4}{2A}=-1$. Jäljelle jää $B^2 - C = -5$ eli
-$C = B^2+5 = 6$.
+Ratkaistaan yhtälö $4x^2-4x-5=0$. 
 
-Nyt voimme ratkaista yhtälön.
+Oikeat toisen ja ensimmäisen asteen termit syntyvät
+neliöstä $(2x-1)^2=4x^2-4x+1$. Rakennetaan se yhtälön vasemmalle
+puolelle:
 \begin{align*}
-4x^2-4x-5 &= 0 &&\ppalkki + 6 \text{ ($C = 6$ oikealle puolelle)} \\
-4x^2-4x+1 &= 6 &&\text{vasen puoli $ = (Ax+B)^2 = (2x-1)^2$} \\
-(2x-1)^2 &= 6 &&\text{ratkaistaan vaillinainen toisen asteen yhtälö} \\
+4x^2-4x-5 &= 0 &&\ppalkki + 6  \\
+4x^2-4x+1 &= 6 &&\text{vasen puoli: $  4x^2-4x+1 = (2x-1)^2$} \\
+(2x-1)^2 &= 6 &&\text{neliöjuuri} \\
 2x-1 &= \pm \sqrt{6} &&\ppalkki + 1 \\
 2x &= 1 \pm \sqrt{6} &&\ppalkki : 2 \\
-x &= \frac{1\pm \sqrt{6}}{2}
+x &= \frac{1\pm \sqrt{6}}{2}.
 \end{align*}
 \end{esimerkki}
 
