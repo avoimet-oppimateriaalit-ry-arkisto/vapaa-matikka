@@ -26,9 +26,7 @@ Samoin kuin yhtälöiden ratkaisemisessa, epäyhtälöiden ratkaiseminen tarkoit
 
 Yhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu yhtälö on yhtäpitävä alkuperäisen kanssa. Myös epäyhtälöille löytyy vastaavia operaatioita.
 
-Yhtälö säilyy aina totena, kun yhtälön molemmille puolille tehdään sama laskutoimitus -- toisin sanoen molempiin yhtälön puoliin käytetään samaa funktiota. Huomaamme kuitenkin kohta, että epäyhtälöiden käsittelyssä on huomioitava joitakin uusia piirteitä.
-
-Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyhtälölle on luvallista tehdä, jotta lukujen $2$ ja $3$ keskinäinen järjestys (eli epäyhtälön totuusarvo) säilyy. Testataan ensin peruslaskutoimituksia. Havainnollistetaan lukusuoralla tilannetta, jossa epäyhtälön molemmille puolille lisätään luku 4:
+Huomataan, että luvun lisääminen vain siirtää lukusuoralla kaikkia lukuja saman verran, mutta säilyttää niiden keskinäisen järjestyksen. Esimerkiksi kun lukuihin 2 ja 3 lisätään luku 4, niiden keskinäinen järjestys säilyy:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -43,54 +41,42 @@ Tutkitaan seuraavaksi todeksi tunnetun epäyhtälön $2<3$ avulla, mitä epäyht
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Huomataan, että positiivisen luvun lisääminen vain siirtää lukuja lukusuoralla oikealle, mutta säilyttää niiden järjestyksen. Epäyhtälöstä $2<3$ siis seuraa $2+4<3+4$ eli $6<7$.
+Yleisemmin epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
 
-Myös vähennyslasku, joka voidaan käsittää negatiivisen luvun lisäämisenä, säilyttää epäyhtälön totena:
+Huomataan myös, että positiivisella luvulla kertoessa lukusuoran luvut vain skaalautuvat eli leviävät laajemmalle tai pakkautuvat tiukempaan, mutta niiden keskinäinen järjestys ei muutu. Esimerkiksi kun lukuja 2 ja 4 kerrotaan luvulla 2 tai $\frac{1}{2}$, niiden keskinäinen järjestys säilyy:
 
 \begin{lukusuora}{-1}{10}{12}
-	\lukusuoranuolialas{2}{1}
-	\lukusuoranuolialas{3}{2}
+	\lukusuoranuolialas{2}{4}
+	\lukusuoranuolialas{4}{8}
 
 	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{3}{$3$}
+	\lukusuorapiste{4}{$4$}
 	\lukusuorapystyviiva{0}{$0$}
 \lukusuorauusi
-	\lukusuorapiste{1}{$2\!-\!1$}
-	\lukusuorapiste{2}{$3\!-\!1$}
+	\lukusuorapiste{4}{$2\cdot 2$}
+	\lukusuorapiste{8}{$4\cdot 2$}
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Tarkastellaan seuraavaksi kerto- ja jakolaskua, joista löydämme erään tärkeän poikkeuksen. Epäyhtälön puolten kertominen tai jakaminen positiivisella luvulla skaalaa lukusuoran lukuja, mutta sekin säilyttää suuruusjärjestyksen:
-
-\begin{lukusuora}{-1}{10}{12}
-	\lukusuoranuolialas{2}{6}
-	\lukusuoranuolialas{3}{9}
-
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{3}{$3$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuorapiste{6}{$2\cdot 3$}
-	\lukusuorapiste{9}{$3\cdot 3$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
-
+\ \\
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
-	\lukusuoranuolialas{3}{1.5}
+	\lukusuoranuolialas{4}{2}
 
 	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{3}{$3$}
+	\lukusuorapiste{4}{$4$}
 	\lukusuorapystyviiva{0}{$0$}
 \lukusuorauusi
 	\lukusuorapiste{1}{$2 \cdot \frac{1}{2}$}
-	\lukusuorapiste{1.5}{$3 \cdot \frac{1}{2}$}
+	\lukusuorapiste{2}{$4 \cdot \frac{1}{2}$}
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Epäyhtälön puolittainen kertominen tai jakaminen negatiivisella luvulla aiheuttaa lukusuoralla peilauksen nollan suhteen:
+Yleisemmin siis epäyhtälön puolia positiivisella luvulla kertomalla saadaan yhtäpitävä epäyhtälö. Positiivisella luvulla $c$ jakaminen on sama asia kuin positiivisella luvulla $\frac{1}{c}$ kertominen, joten myös epäyhtälön puolien jakaminen positiivisella luvulla säilyttää epäyhtälön yhtäpitävänä.
 
-\begin{lukusuora}{-6}{10}{6}
+Kuitenkaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä, sillä kun lukuja 2 ja 5 kerrotaan luvulla $-1$, niiden suuruusjärjestys kääntyy:
+
+\begin{lukusuora}{-6}{6}{12}
 	\lukusuoranuolialas{2}{-2}
 	\lukusuoranuolialas{5}{-5}
 
@@ -98,17 +84,20 @@ Epäyhtälön puolittainen kertominen tai jakaminen negatiivisella luvulla aiheu
 	\lukusuorapiste{5}{$5$}
 	\lukusuorapystyviiva{0}{$0$}
 \lukusuorauusi
-	\lukusuorapiste{-2}{$-1\cdot 2$}
-	\lukusuorapiste{-5}{$-1\cdot 5$}
+	\lukusuorapiste{-2}{$2 \cdot (-1)$}
+	\lukusuorapiste{-5}{$5 \cdot (-1)$}
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Negatiivisella luvulla kertominen (tai jakaminen) siis käänsi suuruusjärjestyksen.
-Epäyhtälöstä $2<3$ siis \textit{ei} loogisesti seuraa, että $-2<-3$, vaan $-2>-3$!
+Negatiivisen kertoimen tai jakajan tapauksessa täytyykin kääntää epäyhtälön suunta, jotta saataisiin yhtäpitävä epäyhtälö.
 
-Tämän perusteella ja yleistäen, kaikille epäyhtälöille pätee seuraava erittäin tärkeä tulos:
-
-\laatikko{Jos epäyhtälö kerrotaan tai jaetaan puolittain negatiivisella luvulla, epäyhtälömerkki kääntyy.}
+\laatikko{Epäyhtälöstä saadaan seuraavilla tavoilla yhtäpitävä epäyhtälö:
+\begin{itemize}
+\item Molemmille puolille lisätään sama luku.
+\item Molemmat puolet kerrotaan tai jaetaan samalla positiivisella luvulla.
+\item Molemmat puolet kerrotaan tai jaetaan samalla negatiivisella luvulla ja epäyhtälön merkki käännetään.
+\end{itemize}
+}
 
 Lopuksi mainitaan, että nollalla kertominen ei säilytä epäyhtälöä totena, ellei käytetty epäyhtälömerkki hyväksy myös yhtäsuuruutta (esimerkiksi $\leq$). Tällöinkään epäyhtälön kertominen puolittain nollalla ei ole ratkaisun etsimisen kannalta mielekästä: koska mikä tahansa luku kerrottuna nollalla antaa nollan, olisivat molemmat epäyhtälön puolet nollalla kertomisen jälkeen yhtä suuret alkuperäisestä yhtälöstä riippumatta.
 
