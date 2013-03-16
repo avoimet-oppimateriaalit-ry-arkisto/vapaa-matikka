@@ -221,6 +221,7 @@
 \usepackage{answers}                     %tehtävät kirjan lopussa
 %\usepackage[nosolutionfiles]{answers}   %oikolukuversio, vastaukset heti tehtävän jälkeen
 \Newassociation{vastaus}{Vastaus}{ans}
+\renewenvironment{Vastaus}[1]{\begin{trivlist}\item \textbf{#1.} }{\end{trivlist}} %ulkoasumuutos vastauksiin
 \newtheorem{tehtava}{}
 
 % Cancel-paketti supistamista ym. varten
