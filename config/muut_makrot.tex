@@ -29,3 +29,18 @@
 	%\addcontentsline{toc}{section}{Harjoitustehtäviä}
 }
 
+% Linkki ja QR-koodi. Parametrit: URL ja kuvaus.
+\newcommand{\qrlinkki}[2]{
+	
+	\begin{minipage}[c]{1.0in}
+	\begin{pspicture}(0.7in,0.7in)
+		\psbarcode{#1}{}{qrcode}
+	\end{pspicture}
+	\end{minipage}
+	\begin{minipage}[l]{\textwidth-1.0in}
+		\url{#1}
+		
+		#2
+	\end{minipage}
+	
+}
