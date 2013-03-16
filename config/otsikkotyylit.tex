@@ -2,30 +2,35 @@
 % Otsikkotyylit
 %--------------------------------------------------
 
-%\titleformat{\part}[display]
-%  {\normalfont\Huge\filright\bfseries}{\MakeUppercase{Osa\ \thepart}}{\Huge\filright\MakeUppercase}
+%\titleformat{\part}
+%  {\normalfont\filright\Huge\bfseries\rmfamily}{Osa \thepart}{1em}{}
 
-\titleformat{\part}
-  {\normalfont\filright\Huge\bfseries\rmfamily}{Osa \thepart}{1em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{18ex}
+\titlespacing*{\section}{0pt}{8ex}{4ex}
 
-%\titleformat{\chapter}[display]
-%  {\normalfont\huge\filright\bfseries}{\MakeUppercase{\chaptertitlename\ \thechapter}}{\Huge\filright\MakeUppercase}
+\renewcommand{\chaptertitlename}{Luku}
 
-\titleformat{\chapter}
-  {\normalfont\filright\huge\bfseries\rmfamily}{\chaptertitlename\ \thechapter}{1em}{}
+\titleformat{\chapter}[display]
+{\sffamily\fontseries{l}\fontsize{23}{18}\selectfont}
+{\sffamily\fontsize{14}{10}\selectfont\MakeUppercase{\chaptertitlename}\ \thechapter}
+{2pt}
+{}
 
-\titleformat{\section}
-  {\normalfont\filright\LARGE\bfseries\rmfamily}{\thesection}{1em}{}
-
-\titleformat{\subsection}
-  {\normalfont\filright\Large\bfseries\rmfamily}{\thesubsection}{1em}{}
-
-\titleformat{\subsubsection}
-  {\normalfont\filright\large\bfseries\rmfamily}{\thesubsubsection}{1em}{}
-
-\titleformat{\paragraph}[runin]
-  {\normalfont\normalsize\bfseries\rmfamily}{\theparagraph}{1em}{}
-
-\titleformat{\subparagraph}[runin]
-  {\normalfont\normalsize\bfseries\rmfamily}{\thesubparagraph}{1em}{}
-  
+\titleformat{\section}[hang]
+{\sffamily\fontsize{15}{10}\selectfont\filleft}
+{\thesection}
+{0.5em}
+{\MakeUppercase}
+[\vspace{0.5ex}{\titlerule[1pt]}]
+ 
+% \titleformat{\subsection}
+%   {\normalfont\filright\Large\bfseries\rmfamily}{\thesubsection}{1em}{}
+% 
+% \titleformat{\subsubsection}
+%   {\normalfont\filright\large\bfseries\rmfamily}{\thesubsubsection}{1em}{}
+% 
+% \titleformat{\paragraph}[runin]
+%   {\normalfont\normalsize\bfseries\rmfamily}{\theparagraph}{1em}{}
+% 
+% \titleformat{\subparagraph}[runin]
+%   {\normalfont\normalsize\bfseries\rmfamily}{\thesubparagraph}{1em}{}  
