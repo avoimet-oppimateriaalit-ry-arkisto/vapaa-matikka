@@ -14,9 +14,36 @@
 {
 	\begin{tikzpicture}
 		\draw[color=black!10!white, step=#1*0.25] (#1*#2, #1*#4) grid (#1*#3, #1*#5);
-		\draw[color=black!40!white, step=#1] (#1*#2, #1*#4) grid (#1*#3, #1*#5);
-		\draw[arrows=-triangle 45] (#1*#2,0) -- (#1*#3,0);
-		\draw[arrows=-triangle 45] (0,#1*#4) -- (0,#1*#5);
+		\draw[color=black!50!white, step=#1] (#1*#2, #1*#4) grid (#1*#3, #1*#5);
+		\draw[arrows=-triangle 45, semithick] (#1*#2,0) -- (#1*#3,0);
+		\draw[arrows=-triangle 45, semithick] (0,#1*#4) -- (0,#1*#5);
+		
+		\pgfmathsetmacro{\xalaraja}{-#2-0.01}
+		\pgfmathsetmacro{\xylaraja}{#3-0.01}
+		\pgfmathsetmacro{\yalaraja}{-#4-0.01}
+		\pgfmathsetmacro{\yylaraja}{#5-0.01}
+		\foreach \sarake in {1,...,\xylaraja}
+		{
+			\draw (#1*\sarake + 0.1, 0) node[above] {\footnotesize\sarake};
+			\draw[thick] (#1*\sarake, -0.07) -- (#1*\sarake, 0.07);
+		}
+		\foreach \sarake in {1,...,\xalaraja}
+		{
+			\draw (-#1*\sarake + 0.1, 0) node[above] {\footnotesize-\sarake};
+			\draw[thick] (-#1*\sarake, -0.07) -- (-#1*\sarake, 0.07);
+		}
+		\foreach \rivi in {1,...,\yylaraja}
+		{
+			\draw (0, #1*\rivi) node[right] {\footnotesize\rivi};
+			\draw[thick] (-0.07, #1*\rivi) -- (0.07, #1*\rivi);
+		}
+		\foreach \rivi in {1,...,\yalaraja}
+		{
+			\draw (0, -#1*\rivi) node[right] {\footnotesize-\rivi};
+			\draw[thick] (-0.07, -#1*\rivi) -- (0.07, -#1*\rivi);
+		}
+%		\draw (#1, 0) node[above] {1};
+%		\draw (0, #1) node[right] {1};
 		\newcommand\kuvaajascale{#1}
 		\newcommand\kuvaajaminx{#2}
 		\newcommand\kuvaajamaxx{#3}
