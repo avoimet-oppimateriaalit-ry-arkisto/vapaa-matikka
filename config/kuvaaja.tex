@@ -57,7 +57,7 @@
 			\ifthenelse{\lengthtest{\sarake pt > 0 pt}}{
 				\pgfmathsetmacro{\kuvaajajakojaannos}{mod(\sarake, \kuvaajastep)}
 				\ifthenelse{\lengthtest{\kuvaajajakojaannos pt = 0 pt}}{
-					\draw (-#2*\sarake + 0.1, 0) node[above] {\footnotesize\sarake};
+					\draw (-#2*\sarake + 0.1, 0) node[above] {\footnotesize-\sarake};
 					\draw[thick] (-#2*\sarake, -0.07) -- (-#2*\sarake, 0.07);
 				}{}
 			}{}
@@ -77,7 +77,7 @@
 			\ifthenelse{\lengthtest{\rivi pt > 0 pt}}{
 				\pgfmathsetmacro{\kuvaajajakojaannos}{mod(\rivi, \kuvaajastep)}
 				\ifthenelse{\lengthtest{\kuvaajajakojaannos pt = 0 pt}}{
-					\draw (0, -#2*\rivi) node[right] {\footnotesize\rivi};
+					\draw (0, -#2*\rivi) node[right] {\footnotesize-\rivi};
 					\draw[thick] (-0.07, -#2*\rivi) -- (0.07, -#2*\rivi);
 				}{}
 			}{}
