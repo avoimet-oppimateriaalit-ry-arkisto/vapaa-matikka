@@ -178,3 +178,9 @@
 \newcommand{\lukusuoraisobbox}[0]{
 	\path[use as bounding box] (0, -1.5) rectangle (\LSpituus + \LSext, 1.5);
 }
+
+% Pakota lukusuoran bounding boxin y-koordinaatit
+% parametrit: minY maxY
+\newcommand{\lukusuorabboxy}[2]{
+	\path[use as bounding box] (0, #1) rectangle (\LSpituus + \LSext, #2);
+}
