@@ -83,88 +83,7 @@ x&=1 \text{ tai } x=-3 \\
 %Vähennetään puolittain termi $b$: $2ax=-b\pm\sqrt{b^2-4ac}$.
 %Jaetaan puolittain vakiolla $2a$: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
 
-\subsection*{Diskriminantti}
-
-\begin{esimerkki}
-    Ratkaistaan toisen asteen yhtälö $3x^2-5x+10=0$.
-    \begin{align*}
-        \underbrace{3}_{=a}x^2\underbrace{-5}_{=b}x+\underbrace{10}_{=c}=0
-    \end{align*}
-    Sijoitetaan vakiot $a=3$, $b=-5$ ja $c=10$ toisen asteen yhtälön ratkaisukaavaan $x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a}$.
-    \begin{align*}
-        x=\frac{-(-5) \pm \sqrt[]{(-5)^2-4\cdot 3 \cdot 10}}{2 \cdot 3} \\
-        x=-\frac{5 \pm \sqrt[]{25-120}}{6}
-    \end{align*}
-    Koska juurrettava on negatiivinen
-    \begin{align*}
-        b^2-4ac=(-5)^2-4 \cdot 3 \cdot 10=25-120=-95<0
-    \end{align*}
-    niin toisen asteen yhtälöllä ei ole ratkaisuja.
-\end{esimerkki}
-
-%Marginaaliin tai kuvaksi 2. asteen yhtälön ratkaisukaava (tai tekstin sekaan)
-
-Toisen asteen yhtälön ratkaisukaavassa esiintyy neliöjuuri. Tämän neliöjuuren sisällä oleva lauseke $b^2-4ac$ määrää, kuinka monta ratkaisua yhtälöllä on. Joskus riittää pelkkä tieto ratkaisujen olemassaolosta tai lukumäärästä. Tällaisissa tapauksissa ei tarvitse ratkaista yhtälöä, vaan pelkkä edellä mainitun lausekkeen tarkastelu riittää. Tästä lausekkeesta käytetään nimeä \emph{diskriminantti} ja sitä merkitään kirjaimella $D$.
-
-\laatikko{Toisen asteen yhtälön $ax^2+bx+c=0$ ratkaisujen lukumäärän näkee diskriminantin, $D=b^2-4ac$ avulla seuraavasti.
-\begin{itemize}
-\item
-Jos $D<0$, yhtälöllä ei ole reaalisia ratkaisuja.
-\item
-Jos $D=0$, yhtälöllä on tasan yksi reaalinen ratkaisu, niin sanottu \termi{kaksoisjuuri}.
-\item
-Jos $D>0$, yhtälöllä on kaksi erisuurta reaaliratkaisua.
-\end{itemize}
-}
-
-\begin{esimerkki}
-\ \\
-\parbox{4.5cm}{
-\begin{kuvaajapohja}{1}{-1}{3}{-1}{3}
-  \kuvaaja{2*x**2-2*x+1}{}{blue}
-\end{kuvaajapohja}
-}
-\parbox{6cm}{$2x^2-2x+1=0$:\\$D < 0$, ei reaalisia ratkaisuja}
-\\
-\parbox{4.5cm}{
-\begin{kuvaajapohja}{1}{-1}{3}{-1}{3}
-  \kuvaaja{x**2-2*x+1}{}{blue}
-\end{kuvaajapohja}
-}
-\parbox{6cm}{$x^2-2x+1=0$:\\$D = 0$, yksi reaaliratkaisu}
-\\
-\parbox{4.5cm}{
-\begin{kuvaajapohja}{1}{-1}{3}{-2}{2}
-  \kuvaaja{2*x**2-4*x+1}{}{blue}
-\end{kuvaajapohja}
-}
-\parbox{6cm}{$2x^2-4x+1=0$:\\$D > 0$, kaksi eri reaaliratkaisua}
-\end{esimerkki}
-
-\begin{esimerkki}
-Selvitetään onko yhtälöllä $x^2+x+2=0$ ratkaisuja.
-
-Tutkitaan diskriminanttia.
-\[D=1^2-4\cdot 1 \cdot 2 = 1-8 = -7\]
-Koska $D<0$, yhtälöllä ei ole ratkaisuja.
-
-Jos yhtälön ratkaisua yrittäisi ratkaisukaavan avulla, tulisi neliöjuuren alle negatiivinen luku.
-\end{esimerkki}
-
-\begin{esimerkki}
-Millä $a$:n arvolla yhtälöllä $9x^2+ax+1$ on tasan yksi ratkaisu?
-
-Jotta ratkaisuja olisi tasan yksi, on diskriminantin oltava 0.
-\begin{align*}
-D &=0\\
-a^2-4\cdot 9\cdot 1 &= 0\\
-a^2-36&=0\\
-a^2&=36\\
-a=\pm6
-\end{align*}
-Yhtälöllä on täsmälleen yksi ratkaisu, jos $a=-6$ tai $a=6$.
-\end{esimerkki}
-
+\qrlinkki{http://opetus.tv/maa/maa2/toisen-asteen-yhtalon-ratkaisukaava/}{Opetus.tv: \emph{toisen asteen ratkaisukaava} (9:03), \emph{esimerkkejä ratkaisukaavan käytöstä} (11:06) ja \emph{ratkaisukaavan johtaminen} (10:09)}
 
 \Harjoitustehtavat
 
@@ -319,3 +238,88 @@ Yhtälöllä on täsmälleen yksi ratkaisu, jos $a=-6$ tai $a=6$.
 		$x=-1$, $x=0$ tai $x=\frac{1 \pm \sqrt{17}}{2}$
 	\end{vastaus}
 \end{tehtava}
+
+
+\section{Diskriminantti}
+
+\begin{esimerkki}
+    Ratkaistaan toisen asteen yhtälö $3x^2-5x+10=0$.
+    \begin{align*}
+        \underbrace{3}_{=a}x^2\underbrace{-5}_{=b}x+\underbrace{10}_{=c}=0
+    \end{align*}
+    Sijoitetaan vakiot $a=3$, $b=-5$ ja $c=10$ toisen asteen yhtälön ratkaisukaavaan $x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a}$.
+    \begin{align*}
+        x=\frac{-(-5) \pm \sqrt[]{(-5)^2-4\cdot 3 \cdot 10}}{2 \cdot 3} \\
+        x=-\frac{5 \pm \sqrt[]{25-120}}{6}
+    \end{align*}
+    Koska juurrettava on negatiivinen
+    \begin{align*}
+        b^2-4ac=(-5)^2-4 \cdot 3 \cdot 10=25-120=-95<0
+    \end{align*}
+    niin toisen asteen yhtälöllä ei ole ratkaisuja.
+\end{esimerkki}
+
+%Marginaaliin tai kuvaksi 2. asteen yhtälön ratkaisukaava (tai tekstin sekaan)
+
+Toisen asteen yhtälön ratkaisukaavassa esiintyy neliöjuuri. Tämän neliöjuuren sisällä oleva lauseke $b^2-4ac$ määrää, kuinka monta ratkaisua yhtälöllä on. Joskus riittää pelkkä tieto ratkaisujen olemassaolosta tai lukumäärästä. Tällaisissa tapauksissa ei tarvitse ratkaista yhtälöä, vaan pelkkä edellä mainitun lausekkeen tarkastelu riittää. Tästä lausekkeesta käytetään nimeä \emph{diskriminantti} ja sitä merkitään kirjaimella $D$.
+
+\laatikko{Toisen asteen yhtälön $ax^2+bx+c=0$ ratkaisujen lukumäärän näkee diskriminantin, $D=b^2-4ac$ avulla seuraavasti.
+\begin{itemize}
+\item
+Jos $D<0$, yhtälöllä ei ole reaalisia ratkaisuja.
+\item
+Jos $D=0$, yhtälöllä on tasan yksi reaalinen ratkaisu, niin sanottu \termi{kaksoisjuuri}.
+\item
+Jos $D>0$, yhtälöllä on kaksi erisuurta reaaliratkaisua.
+\end{itemize}
+}
+
+\begin{esimerkki}
+\ \\
+\parbox{4.5cm}{
+\begin{kuvaajapohja}{1}{-1}{3}{-1}{3}
+  \kuvaaja{2*x**2-2*x+1}{}{blue}
+\end{kuvaajapohja}
+}
+\parbox{6cm}{$2x^2-2x+1=0$:\\$D < 0$, ei reaalisia ratkaisuja}
+\\
+\parbox{4.5cm}{
+\begin{kuvaajapohja}{1}{-1}{3}{-1}{3}
+  \kuvaaja{x**2-2*x+1}{}{blue}
+\end{kuvaajapohja}
+}
+\parbox{6cm}{$x^2-2x+1=0$:\\$D = 0$, yksi reaaliratkaisu}
+\\
+\parbox{4.5cm}{
+\begin{kuvaajapohja}{1}{-1}{3}{-2}{2}
+  \kuvaaja{2*x**2-4*x+1}{}{blue}
+\end{kuvaajapohja}
+}
+\parbox{6cm}{$2x^2-4x+1=0$:\\$D > 0$, kaksi eri reaaliratkaisua}
+\end{esimerkki}
+
+\begin{esimerkki}
+Selvitetään onko yhtälöllä $x^2+x+2=0$ ratkaisuja.
+
+Tutkitaan diskriminanttia.
+\[D=1^2-4\cdot 1 \cdot 2 = 1-8 = -7\]
+Koska $D<0$, yhtälöllä ei ole ratkaisuja.
+
+Jos yhtälön ratkaisua yrittäisi ratkaisukaavan avulla, tulisi neliöjuuren alle negatiivinen luku.
+\end{esimerkki}
+
+\begin{esimerkki}
+Millä $a$:n arvolla yhtälöllä $9x^2+ax+1$ on tasan yksi ratkaisu?
+
+Jotta ratkaisuja olisi tasan yksi, on diskriminantin oltava 0.
+\begin{align*}
+D &=0\\
+a^2-4\cdot 9\cdot 1 &= 0\\
+a^2-36&=0\\
+a^2&=36\\
+a=\pm6
+\end{align*}
+Yhtälöllä on täsmälleen yksi ratkaisu, jos $a=-6$ tai $a=6$.
+\end{esimerkki}
+
+\qrlinkki{http://opetus.tv/maa/maa2/diskriminantti/}{Opetus.tv: \emph{diskriminantti 2. asteen yhtälölle} (7:56 ja 8:30)}
