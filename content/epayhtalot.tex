@@ -1,9 +1,9 @@
 \section{Epäyhtälöistä yleisesti}
-Epäyhtälöllä tarkoitetaan ilmausta, jossa ilmoitetaan kahden lausekkeen arvon välinen suuruusjärjestys. Suuruusjärjestyksien ilmaisuun käytetään seuraavia merkintöjä:
+Epäyhtälöllä tarkoitetaan ilmausta, jossa esitetään kahden lausekkeen arvon välinen suuruusjärjestys. Suuruusjärjestyksien esittämiseen käytetään seuraavia merkintöjä:
 
 \begin{center}
 \begin{tabular}{l|l}
-\emph{merkintä} & \emph{merkitys} \\
+\emph{Merkintä} & \emph{Merkitys} \\
 \hline
 $a<b$ &  $a$ on pienempi kuin $b$ \\
 $a>b$ & $a$ on suurempi kuin $b$ \\
@@ -12,21 +12,21 @@ $a \geq b$ & $a$ on suurempi tai yhtäsuuri kuin $b$ \\
 \end{tabular}
 \end{center}
 
-Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$ ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin, kun epäyhtälö $a \geq b$ ei päde.
+Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$, ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin, kun epäyhtälö $a \geq b$ ei päde.
 
 Epäyhtälön totuusarvo voi riippua epäyhtälön puolilla esiintyvien muuttujien arvoista. Tämän perusteella epäyhtälöt voidaan jakaa kolmeen tyyppiin:
 \begin{itemize}
 \item \emph{Aina tosi} -- pätee kaikilla muuttujien arvoilla. Esimerkiksi epäyhtälöt $5 < 6$ tai $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
-\item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$ mutta ei päde kun $x = 7$.
+\item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$, mutta ei päde, kun $x = 7$.
 \item \emph{Aina epätosi} -- ei päde millään muuttujien arvoilla. Esimerkiksi epäyhtälöt $3 < 1$ ja $x < x$ eivät päde koskaan.
 \end{itemize}
 
 \subsection*{Epäyhtälöiden muokkaaminen}
 Vastaavasti kuten yhtälöiden ratkaisemisessa, epäyhtälön ratkaisemisessa selvitetään ne muuttujien arvot, joilla epäyhtälö on tosi.
 
-Yhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu yhtälö on yhtäpitävä alkuperäisen kanssa. Epäyhtälöille löytyy vastaavia operaatioita.
+Kuten yhtälöitä, myös epäyhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu epäyhtälö on yhtäpitävä alkuperäisen kanssa.
 
-Lukujen kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen.
+Kahden luvun kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -46,13 +46,13 @@ Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön mole
 \begin{esimerkki}
 Luvun lisääminen epäyhtälöön.
   \begin{align*}
-     2 &< 3 & \ppalkki +4\\
+     2 &< 3 && \ppalkki +4\\
    2+4 &< 3+4  \\
-     6 &< 7 & tosi
+     6 &< 7 && tosi
   \end{align*}
 \end{esimerkki}
 
-Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan.
+Myös lukujen kertominen samalla positiivisella kertoimella säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
@@ -67,7 +67,7 @@ Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuorall
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan.
+Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{4}
@@ -82,23 +82,23 @@ Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan.
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen epäyhtälön puolet positiivisella luvulla kertomalla tai jakamalla saadaan yhtäpitävä epäyhtälö.
+Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen alkuperäisen epäyhtälön kanssa yhtäpitävä epäyhtälö saadaan kertomalla tai jakamalla molemmat puolet positiivisella luvulla.
 
 \begin{esimerkki}
 Epäyhtälön kertominen lukua yksi pienemmällä positiivisella luvulla.
 \begin{align*}
-     2 &< 4 & \ppalkki \cdot \frac{1}{2} \\
+     2 &< 4 && \ppalkki \cdot \frac{1}{2} \\
    2\cdot\frac{1}{2} &< 4\cdot\frac{1}{2}  \\
-     1 &< 2 & tosi
+     1 &< 2 && tosi
 \end{align*}
 \end{esimerkki}
 
 \begin{esimerkki}
 Epäyhtälön kertominen lukua yksi suuremmalla luvulla.
 \begin{align*}
-     2 &< 4 & \ppalkki \cdot 2 \\
+     2 &< 4 && \ppalkki \cdot 2 \\
    2\cdot 2 &< 4\cdot 2  \\
-     4 &< 8 & tosi
+     4 &< 8 && tosi
 \end{align*}
 \end{esimerkki}
 
@@ -123,9 +123,9 @@ Jos epäyhtälöä kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömer
 \begin{esimerkki}
 Epäyhtälön kertominen negatiivisella luvulla.
 \begin{align*}
-     2 &< 5 & \ppalkki \cdot (-1) \\
+     2 &< 5 && \ppalkki \cdot (-1) \\
    2\cdot (-1) &< 4\cdot (-1)  \\
-     -2 &> -5 & tosi
+     -2 &> -5 && tosi
 \end{align*}
 \end{esimerkki}
 
@@ -137,13 +137,13 @@ Epäyhtälön kertominen negatiivisella luvulla.
 \end{itemize}
 }
 
-Kuten yhtälöiden tapauksessa, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$ joka on aina tosi ja epäyhtälöstä $a < b$ tulee $0 < 0$ joka on aina epätosi.
+Kuten yhtälöiden tapauksessa, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$, joka on aina tosi, ja epäyhtälöstä $a < b$ tulee $0 < 0$, joka on aina epätosi.
 
 \begin{esimerkki}
-Muokataan epäyhtälöä $-2x+4<6$ esitetyin operaatioin.
+Muokataan epäyhtälöä $-2x+4<6$ käyttämällä esitettyjä operaatioita.
 \begin{align*}
--2x+4&<6 &&\ppalkki-4 \\
--2x&<2 &&\ppalkki:(-2) \\
+-2x+4&<6 && \ppalkki -4 \\
+-2x&<2 && \ppalkki :(-2) \\
 x&>-1
 \end{align*}
 Tehdyt operaatiot tuottavat yhtäpitäviä epäyhtälöitä, joten epäyhtälö $-2x+4<6$ on yhtäpitävä epäyhtälön $x>-1$ kanssa. Voidaan päätellä, että lukua $-1$ suuremmat luvut ovat täsmälleen epäyhtälön ratkaisut.
@@ -153,15 +153,15 @@ Tehdyt operaatiot tuottavat yhtäpitäviä epäyhtälöitä, joten epäyhtälö 
 
 Ratkaistaessa yhtälöitä ratkaisuksi saadaan yleensä pieni joukko lukuja. Epäyhtälöiden tapauksessa on tyypillistä, että ratkaisu on \termi[väli]{väli}, eli kaikki kahden luvun väliset luvut.
 
-Reaalilukuvälejä merkitään usein laittamalla välin ala- ja ylärajat hakasulkujen sisään. Mikäli ala- tai ylärajan ei kuulu väliin, vastaava hakasulku käännetään. Esimerkiksi $[a, b[$ tarkoittaa lukuja $x$ jotka toteuttavat kaksoisepäyhtälön $a \leq x < b$. Väliä kutsutaan \termi[suljetuksi väliksi]{suljettu väli}, mikäli ala- ja yläraja kuuluu väliin, ja \termi[avoimeksi väliksi]{avoin väli}, mikäli ala- ja yläraja eivät kuulu väliin. Jos vain toinen raja kuuluu väliin, väli on \termi[puoliavoin]{puoliavoin väli}.
+Reaalilukuvälejä merkitään usein laittamalla välin ala- ja ylärajat hakasulkujen sisään. Mikäli ala- tai yläraja ei kuulu väliin, vastaava hakasulku käännetään. Esimerkiksi $[a, b[$ tarkoittaa lukuja $x$ jotka toteuttavat kaksoisepäyhtälön $a \leq x < b$. Väliä kutsutaan \termi[suljetuksi väliksi]{suljettu väli}, mikäli ala- ja yläraja kuuluu väliin, ja \termi[avoimeksi väliksi]{avoin väli}, mikäli ala- ja yläraja eivät kuulu väliin. Jos vain toinen raja kuuluu väliin, väli on \termi[puoliavoin]{puoliavoin väli}.
 
-Väli voidaan piirtää lukusuoralle kahden luvun välisenä viivana. Päätepisteet merkitään täytetyllä ympyrällä mikäli luku kuuluu väliin ja muuten tyhjällä ympyrällä. Esimerkiksi väli $[a, b[$ piirretään seuraavasti:
+Väli voidaan piirtää lukusuoralle kahden luvun välisenä janana. Päätepisteet merkitään täytetyllä ympyrällä, mikäli luku kuuluu väliin, ja muuten tyhjällä ympyrällä. Esimerkiksi väli $[a, b[$ piirretään seuraavasti:
 
 \begin{lukusuora}{0}{10}{6}
 	\lukusuoravalisa{2}{8}{$a$}{$b$}
 \end{lukusuora}
 
-Jos halutaan, että väli ei ole alhaalta tai ylhäältä rajoitettu, merkitään rajaksi $-\infty$ tai $\infty$. Koska ääretön ei kuulu väliin, on sitä vastaava hakasulku käännettävä ja siten esimerkiksi väli $]{-\infty}, a[$ on avoin. 
+Jos halutaan, että väli ei ole alhaalta tai ylhäältä rajoitettu, merkitään rajaksi $-\infty$ tai $\infty$. Koska ääretön ei kuulu väliin, on sitä vastaava hakasulku käännettävä, ja siten esimerkiksi väli $]{-\infty}, a[$ on avoin. 
 
 
 % \begin{esimerkki}
@@ -177,23 +177,23 @@ Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö ja me
 
 \begin{tabular}{|c|p{2.5cm}|p{2.5cm}|c|}
 \hline
-Välin nimitys & epäyhtälö\-merkintä & Joukko-opillinen merkintä & Esitys lukusuoralla \\
+Välin nimitys & Epäyhtälö\-merkintä & Joukko-opillinen merkintä & Esitys lukusuoralla \\
 \hline
-Avoin väli & $-3<x<5$ & $x \in ]-3, 5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Avoin väli & $-3<x<5$ & $x \in {]-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
 Puoliavoin väli & $-3<x \leq 5$ & $x \in {]-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3\leq x < 5$ & $x \in {[-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $-3\leq x < 5$ & $x \in {[-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Suljettu väli & $-3\leq x \leq 5$ & $x \in {[-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Suljettu väli & $-3\leq x \leq 5$ & $x \in {[-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliss{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3\leq x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{}{$-3$}{}\end{lukusuora}\\
+Puoliavoin väli & $-3\leq x$ & $x \in {[-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{}{$-3$}{}\end{lukusuora}\\
 \hline
-Avoin väli & $-3<x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{}{$-3$}{}\end{lukusuora}\\
+Avoin väli & $-3<x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{}{$-3$}{}\end{lukusuora}\\
 \hline
 Puoliavoin väli & $x \leq 5$ & $x \in {]{-\infty}, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
 \hline
-Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
+Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{}{5}{}{$5$}\end{lukusuora}\\
 \hline
 \end{tabular}
 
@@ -207,41 +207,42 @@ Samoin kuin yhtälöiden kohdalla, epäyhtälö pyritään muuttamaan niin yksin
 
 
 \begin{esimerkki}
-Ratkaistaan epäyhtälö $2x+1<0$.
+Ratkaistaan epäyhtälö $2x+1 < 0$.
 \begin{align*}
-2x+1<0 \ \ \ \ \ &&\ppalkki -1 \\
-2x<-1 \ \ \ \ \ &&\ppalkki :2 \\
-x<\-\frac{1}{2}
+2x+1 &< 0 && \ppalkki -1 \\
+2x &< -1 && \ppalkki :2 \\
+x &< -\frac{1}{2}
 \end{align*}
 
 Epäyhtälön ratkaisu voidaan esittää myös muodossa $x \in ]-\infty, -\frac{1}{2}[$.
 
-Ratkaisua voidaan motivoida myös graafisesti tutkimalla lausekkeeseen $2x+1$ liittyvää kuvaajaa:
+Ratkaisua voidaan perustella myös graafisesti tutkimalla lausekkeeseen $2x+1$ liittyvää kuvaajaa:
 
 \begin{kuvaajapohja}{1}{-2}{2}{-2}{2}
 	\kuvaaja{2*x+1}{$f(x)=2x+1$}{red}
 \end{kuvaajapohja}
 
-Alkuperäinen epäyhtälö $2x+1<0$ vaatii, että lauseke $2x+1$ saa negatiivisia arvoja. Kuvasta tämä on mahdollista nähdä niinä kaikkina $x$:n arvoina, joilla funktion $2x+1$ kuvaaja laskee vaaka-akselin alapuolelle. Tällöin funktio eli toisaalta lauseke $2x+1$ saa negatiivisia arvoja
+Alkuperäinen epäyhtälö $2x+1<0$ vaatii, että lausekkeen $2x+1$ arvo on negatiivinen. Yhtälön ratkaisu on mahdollista nähdä katsomalla kuvasta, millä kaikilla $x$:n arvoilla funktion $2x+1$ kuvaaja laskee vaaka-akselin alapuolelle. Tällöin funktio, siis toisaalta lauseke $2x+1$, saa negatiivisia arvoja.
 
 \end{esimerkki}
 
-\begin{esimerkki}Selvitetään, millä $w$:n arvoilla pätee $-8w-(8-w)\geq w:2+5$?
+\begin{esimerkki}Selvitetään, millä $w$:n arvoilla pätee
+$-8w-(8-w) \geq \frac12 w+5$?
 
 \begin{align*}
--8w-(8-w)&\geq w:2+5 \\
--8w-8+w&\geq w:2+5 \\
--7w-8&\geq \frac12 w+5  \ \ \ \ \ &&\ppalkki -\frac12 w \\
--7\frac12 w-8&\geq 5  \ \ \ \ \ &&\ppalkki +8 \\
--7\frac12 w&\geq 13  \ \ \ \ \ &&\ppalkki :(-7\frac12) \\
-w&\leq 13:(-7\frac12) \\
-w&\leq 13:(-\frac{15}{2}) \\
-w&\leq -13\cdot \frac{2}{15} \\
-w&\leq -\frac{26}{15} \\
-w&\leq -1\frac{11}{15}
+-8w-(8-w) &\geq \frac12 w+5 \\
+-8w-8+w &\geq \frac12 w+5 \\
+-7w-8 &\geq \frac12 w+5  \ \ \ \ \ && \ppalkki -\frac12 w \\
+-7\frac12 w-8 &\geq 5  \ \ \ \ \ && \ppalkki +8 \\
+-7\frac12 w &\geq 13  \ \ \ \ \ && \ppalkki :(-7\frac12) \\
+w &\leq 13:(-7\frac12) \\
+w &\leq 13:(-\frac{15}{2}) \\
+w &\leq -13\cdot \frac{2}{15} \\
+w &\leq -\frac{26}{15} \\
+w &\leq -1\frac{11}{15}
 \end{align*}
 
-Vastaus: $w\leq -1\frac{11}{15}$
+Vastaus: $w \leq -1\frac{11}{15}$
 \end{esimerkki}
 
 Ensimmäisen asteen polynomiepäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkki kääntyy toisin päin.
@@ -251,14 +252,14 @@ Ratkaistaan kaksoisepäyhtälö $1\leq q+7<-5q+4$.
 
 Tässä on itse asiassa kaksi epäyhtälöä $1\leq q+7$ ja $q+7<-5q+4$. Haluamme siis löytää ne $q$:n arvot, joilla molemmat epäyhtälöt pätevät.
 \begin{align*}
-1&\leq q+7 \ \ \ \ \ &&\ppalkki -7 \\
+1&\leq q+7 \ \ \ \ \ && \ppalkki -7 \\
 -6&\leq q
 \end{align*}
 Vastaavasti toiselle yhtälölle:
 \begin{align*}
-q+7&<-5q+4  \ \ \ \ \ &&\ppalkki +5q \\
-6q+7&<4 &&\ppalkki -7 \\
-6q&<-3 &&\ppalkki :6 \\
+q+7&<-5q+4  \ \ \ \ \ && \ppalkki +5q \\
+6q+7&<4 && \ppalkki -7 \\
+6q&<-3 && \ppalkki :6 \\
 q&< -\frac12 \\
 \end{align*}
 
@@ -376,7 +377,7 @@ Vähintään arvosana 8.
 \end{tehtava}
 
 \begin{tehtava}
-	Tietyn auton käyttövoimavero on 450 \euro /vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100~km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100~km. Diesel maksaa 1,55 \euro /litra, ja bensiini 1,65 \euro /litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
+	Tietyn auton käyttövoimavero on 450 \euro /vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100~km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100~km. Diesel maksaa 1,55 \euro /litra, ja bensiini maksaa 1,65 \euro /litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
     \begin{vastaus}
         8257 km
     \end{vastaus}
