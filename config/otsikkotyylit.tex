@@ -7,6 +7,7 @@
 
 \titlespacing*{\chapter}{0pt}{0pt}{*18}
 \titlespacing*{\section}{0pt}{8ex}{*4}
+\titlespacing*{\paragraph}{0pt}{0pt}{0.5em}
 
 % estää otsikkoa edeltävän välin konsumoinnin sivun alussa
 \newcommand{\sectionbreak}{%
@@ -33,6 +34,9 @@
 
 \titleformat{\subsubsection}
 {\bfseries}{\thesubsubsection}{1em}{}
+
+\titleformat{\paragraph}[runin]
+{\bfseries}{\theparagraph}{0.2em}{}[.]
 % 
 % \titleformat{\paragraph}[runin]
 %   {\normalfont\normalsize\bfseries\rmfamily}{\theparagraph}{1em}{}
