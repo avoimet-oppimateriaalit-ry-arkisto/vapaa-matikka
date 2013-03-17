@@ -1,4 +1,4 @@
-\section{Epäyhtälöt}
+\section{Epäyhtälöistä yleisesti}
 Epäyhtälöllä tarkoitetaan ilmausta, jossa ilmoitetaan kahden lausekkeen arvon välinen suuruusjärjestys. Suuruusjärjestyksien ilmaisuun käytetään seuraavia merkintöjä:
 
 \begin{center}
@@ -16,13 +16,13 @@ Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa 
 
 Epäyhtälön totuusarvo voi riippua epäyhtälön puolilla esiintyvien muuttujien arvoista. Tämän perusteella epäyhtälöt voidaan jakaa kolmeen tyyppiin:
 \begin{itemize}
-\item \emph{Aina tosi} -- pätee kaikilla muuttujien arvoilla. Esimerkiksi epäyhtälöt $5 < 6$ ja $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
+\item \emph{Aina tosi} -- pätee kaikilla muuttujien arvoilla. Esimerkiksi epäyhtälöt $5 < 6$ tai $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
 \item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$ mutta ei päde kun $x = 7$.
-\item \emph{Aina epätosi} -- ei päde millään muuttujien arvoilla. Esimerkiksi epäyhtälöt $1 > 3$ ja $x < x$ eivät päde koskaan.
+\item \emph{Aina epätosi} -- ei päde millään muuttujien arvoilla. Esimerkiksi epäyhtälöt $3 < 1$ ja $x < x$ eivät päde koskaan.
 \end{itemize}
 
 \subsection*{Epäyhtälöiden ratkaiseminen}
-Vastaavasti kuin yhtälöiden ratkaiseminen, epäyhtälön ratkaiseminen tarkoittaa sellaisten muuttujien arvojen, joilla epäyhtälö on tosi, selvittämistä.
+Vastaavasti kuten yhtälöiden ratkaisemisessa, epäyhtälön ratkaisemisessa selvitetään ne muuttujien arvot, joilla epäyhtälö on tosi.
 
 Yhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu yhtälö on yhtäpitävä alkuperäisen kanssa. Epäyhtälöille löytyy vastaavia operaatioita.
 
@@ -40,6 +40,13 @@ Lukujen kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilytt
 	\lukusuorapiste{7}{$3\!+\!4$}
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
+
+\begin{align*}
+     2 &< 3 & \ppalkki +4\\
+   2+4 &< 3+4  \\
+     6 &< 7 & tosi
+\end{align*}
+
 
 Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
 
@@ -159,7 +166,7 @@ Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \begin{lukusuora}{-6}{10}{4}\
 \hline
 \end{tabular}
 
-\subsection*{Ensimmäisen asteen epäyhtälö}
+\section{Ensimmäisen asteen epäyhtälö}
 
 Harjoittelemme nyt erityisesti 1. asteen epäyhtälöiden ratkaisemista -- toisen asteen ja sitä korkeampien polynomiepäyhtälöiden ratkaisemista käsitellään toisen asteen yhtälön käsittelyn jälkeen.
 
