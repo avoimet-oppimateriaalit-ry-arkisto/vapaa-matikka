@@ -1,39 +1,52 @@
 \section{Toisen asteen epäyhtälö}
-\begin{esimerkki}
-\missingfigure{johdantoesimerkki esim. lämpötilatarkastelu tjsp}
-\begin{itemize}
-\item{Milloin lämpötila on suurempi kuin nolla?}
-\item{Milloin lämpötila on pienempi kuin nolla?}
-\item{Milloin lämpötilan merkki voi vaihtua?} 
-\end{itemize}
-\end{esimerkki}
+
+%\begin{esimerkki}
+%\missingfigure{johdantoesimerkki esim. lämpötilatarkastelu tjsp}
+%\begin{itemize}
+%\item{Milloin lämpötila on suurempi kuin nolla?}
+%\item{Milloin lämpötila on pienempi kuin nolla?}
+%\item{Milloin lämpötilan merkki voi vaihtua?} 
+%\end{itemize}
+%\end{esimerkki}
 
 \subsection*{Toisen asteen epäyhtälön ratkaiseminen kuvaajan avulla}
+
 \begin{esimerkki}
-Milloin toisen asteen polynomifunktion $f(x)=x^2-5$ arvot ovat suurempia kuin nolla? \\ \\
-\textbf{Ratkaisu:} \\
-Funktion $f$ arvot ovat suurempia kuin nolla niillä muuttujan $x$ arvoilla, joilla pätee $x^2-5>0$. \\
+Milloin toisen asteen polynomifunktion $f(x)=x^2-5$ arvot ovat suurempia kuin nolla?
+
+\textbf{Ratkaisu:}
+
+%Funktion $f$ arvot ovat suurempia kuin nolla niillä muuttujan $x$ arvoilla, joilla pätee $x^2-5>0$.
+
+\begin{kuvaajapohja}{0.3}{-5}{5}{-5}{5}
+\kuvaajapiste{0.66146}{0}
+\kuvaajapiste{11.3385}{0}
+\kuvaaja{x**2-5}{$f(x)=x^2-5$}{black}
+\end{kuvaajapohja}
 
 \begin{itemize}
-\item{Funktion arvo on positiivinen, kun funktion kuvaaja on x-akselin yläpuolella.}
-\item{Funktion arvo on negatiivinen, kun funktion kuvaaja on x-akselin alapuolella.}
+\item Funktion arvot ovat positiivisia, kun funktion kuvaaja on $x$-akselin yläpuolella.
+\item Funktion arvot ovat negatiivisia, kun funktion kuvaaja on $x$-akselin alapuolella.
 \end{itemize}
-\begin{lukusuora}{-2.5}{2.5}{5}
-\lukusuoraparaabeli{-1}{1}{-1}
-\lukusuoraalanimi{0}{$-$}
-\lukusuoranimi{-1.8}{$+$}
-\lukusuoranimi{1.8}{$+$}
-\end{lukusuora}
+%\begin{lukusuora}{-2.5}{2.5}{5}
+%\lukusuoraparaabeli{-1}{1}{-1}
+%\lukusuoraalanimi{0}{$-$}
+%\lukusuoranimi{-1.8}{$+$}
+%\lukusuoranimi{1.8}{$+$}
+%\end{lukusuora}
 
-Ratkaistaan funktion $f$ nollakohdat, koska niissä kohdissa funktion arvojen merkki voi vaihtua.
+Kahden vierekkäisen nollakohdan välissä funktion kuvaaja on joko kokonaan $x$-akselin alapuolella tai kokonaan $x$-akselin yläpuolella. Tällöin funktion arvot ovat aina joko pelkästään positiivisia tai pelkästään negatiivisia.
+
+%Ratkaistaan funktion $f$ nollakohdat, koska niissä kohdissa funktion arvojen merkki voi vaihtua.
+Funktion käyttäytymisestä saadaan siis paljon tietoa etsimällä sen nollakohdat:
 \begin{align*}
 f(x)&=0 \\
 x^2-5&=0 \\
 x^2&=5 \\
 x&=\pm \sqrt{5}
 \end{align*}
-Funktion $f$ kuvaaja on ylöspäin aukeava paraabeli, koska kerroin $a>0$.
-Funktio $f$ leikkaa x-akselin kohdissa $x=-\sqrt{5}$ ja $x=\sqrt{5}$.
+
+Nyt tiedetään, että funktio leikkaa $x$-akselin kohdissa $x=-\sqrt{5}$ ja $x=\sqrt{5}$. Kuvasta nähdään, että funktion kuvaaja on $x$-akselin yläpuolella, kun $x<-\sqrt{5}$ tai $x>\sqrt{5}$. Siten funktion arvot ovat positiivisia, kun $x<-\sqrt[]{5}$ tai $x>\sqrt[]{5}$.
 
 \begin{lukusuora}{-2.5}{2.5}{5}
 \lukusuoraparaabeli{-1}{1}{-1}
@@ -44,30 +57,31 @@ Funktio $f$ leikkaa x-akselin kohdissa $x=-\sqrt{5}$ ja $x=\sqrt{5}$.
 \lukusuorapienipiste{1}{$\sqrt{5}$\hspace{3mm}}
 \end{lukusuora}
 
-Funktion arvot ovat positiivisia niillä muuttujan $x$ arvoilla, joilla funktion kuvaaja on $x$-akselin yläpuolella.
-Kuvaajasta huomataan, että $f(x)>0$, kun $x<-\sqrt[]{5}$ tai $x>\sqrt[]{5}$. 
 \end{esimerkki}
 
-Koska polynomifunktiot ovat \emph{jatkuvia} (eli niiden kuvaajat eivät koskaan  katkea), toisen asteen polynomifunktion $f(x)=ax^2+bx+c$, $x \in \mathbb{R}$ arvot voivat vaihtaa merkkiään vain kyseisen polynomifunktion nollakohdissa. Jos haluamme tietää, milloin toisen asteen polynomifunktion arvot ovat positiivisia tai negatiivisia, niin
+Toisen asteen polynomifunktion $f(x)=ax^2+bx+c$ arvot voivat vaihtaa merkkiään vain funktion nollakohdissa. Jos halutaan tietää, milloin toisen asteen polynomifunktion arvot ovat positiivisia tai negatiivisia, niin
 \begin{itemize}
-\item{1. Ratkaistaan toisen asteen polynomifunktion $f$ nollakohdat eli ratkaistaan ne muuttujan $x$ arvot, joilla $ax^2+bx+c=0$. }
-\item{2. Hahmotellaan toisen asteen polynomifunktion kuvaajaparaabelin aukeamissuunta ja merkitään kuvaajaan funktion nollakohdat.}
-\item{3. Päätellään hahmotelmasta milloin funktion arvot ovat positiivisia tai negatiivisia.}
+\item[1.] Ratkaistaan funktion $f(x)=ax^2+bx+c$ nollakohdat eli etsitään ne muuttujan $x$ arvot, joilla $ax^2+bx+c=0$.
+\item[2.] Hahmotellaan funktion kuvaajan aukeamissuunta ja merkitään kuvaajaan funktion nollakohdat.
+\item[3.] Päätellään hahmotelmasta milloin funktion arvot ovat positiivisia ja milloin negatiivisia.
 \end{itemize} 
 
 \begin{esimerkki}
-Milloin funktion $f$, jonka lauseke on $f(x)=5x^2+13x+3$, arvot ovat suurempia tai yhtäsuuria kuin nolla? \\ \\
-\textbf{Ratkaisu:} \\
-1. Ratkaistaan funktion nollakohdat.
+Millä muuttujan $x$ arvoilla funktion $f(x)=5x^2+13x+3$ arvot ovat negatiivisia?
+
+\textbf{Ratkaisu:}
+
+1. Ratkaistaan funktion nollakohdat, jotta tiedetään, missä kohdissa kuvaaja leikkaa $x$-akselin.
 \begin{align*}
 f(x)&=0 \\
-5x^2+13x+3&=0 \ \ \ \ \ \ \ &&||x=\frac{-b\pm \sqrt[]{b^2-4ac}}{2a} \\
-x&=\frac{-13 \pm \sqrt[]{13^2-4 \cdot 5 \cdot 3}}{2 \cdot 5} \\
-x&=\frac{-13 \pm \sqrt[]{169-60}}{10} \\
-x&=\frac{-13 \pm \sqrt[]{109}}{10}  
+5x^2+13x+3&=0 & || \text{ 2. asteen yhtälön ratkaisukaava}  \\
+x&=\frac{-13 \pm \sqrt[]{13^2-4 \cdot 5 \cdot 3}}{2 \cdot 5} & \\
+x&=\frac{-13 \pm \sqrt[]{169-60}}{10} & \\
+x&=\frac{-13 \pm \sqrt[]{109}}{10} & 
 \end{align*}
-2. Hahmotellaan polynomifunktion kuvaaja. \\
-Kuvaaja on ylöspäin aukeava paraabeli, koska $a=5>0$. 
+
+2. Hahmotellaan funktion kuvaaja.
+Kuvaaja on ylöspäin aukeava paraabeli, koska toisen asteen termin kerroin $5$ on positiivinen. 
 
 \begin{lukusuora}{-2.5}{2.5}{5}
 \lukusuoraparaabeli{-1}{1}{-1}
@@ -78,32 +92,31 @@ Kuvaaja on ylöspäin aukeava paraabeli, koska $a=5>0$.
 \lukusuorapienipiste{1}{}
 \end{lukusuora}
 
-3. Kuvaajasta voidaan päätellä, että $f(x)>0$, kun $x<\frac{-13 - \sqrt[]{109}}{10}$ tai $x> \frac{-13 + \sqrt[]{109}}{10}$.  
-\end{esimerkki} 
+3. Kuvaajasta voidaan päätellä, että $f(x)<0$, kun $\frac{-13 - \sqrt[]{109}}{10}<x< \frac{-13 + \sqrt[]{109}}{10}$.
+
+\textbf{Vastaus:}
+Funktion $f(x)=5x^2+13x+3$ arvot ovat negatiivisia, kun $\frac{-13 - \sqrt[]{109}}{10}<x< \frac{-13 + \sqrt[]{109}}{10}$.
+
+\end{esimerkki}
+
 \begin{esimerkki} 
-Milloin epäyhtälö $x^2+5x-6<0$ toteutuu? \\ \\
-\textbf{Ratkaisu:} \\
-%Toisen asteen polynomifunktion merkin tarkastelussa päädytään aina toisen asteen %epäyhtälöön. \\ \\
-%\laatikko{Toisen asteen epäyhtälö on muotoa  % SIIS HÄH?
-%\begin{itemize}
-%\item{$ax^2+bx+c>0$}
-%\item{$ax^2+bx+c \leq  0$}
-%\item{$ax^2+bx+c < 0$}
-%\item{$ax^2+bx+c \geq 0$}
-%\end{itemize}}
-Toisen asteen epäyhtälö ratkaistaan tutkimalla toisen asteen polynomifunktion merkkiä.  \\
+Ratkaise epäyhtälö $x^2+5x<6$.
+
+\textbf{Ratkaisu:}
+Muutetaan ensin epäyhtälö muotoon $x^2+5x-6<0$. Nyt tehtävä voidaan ratkaista tutkimalla, millä muuttujan arvoilla funktion $f(x)=x^2+5x-6$ arvot ovat negatiivisia.
+
 1. Ratkaistaan polynomifunktion $f(x)=x^2+5x-6$ nollakohdat.
 \begin{align*}
-f(x)&=0 \\
-x^2+5x-6&=0 \ \  \ \ \ &&||x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a} \\ 
-x&=\frac{-5 \pm \sqrt[]{(5)^2-4 \cdot 1 \cdot(-6)}}{2 \cdot 1} \\
-x&=\frac{-5 \pm \sqrt[]{25+24}}{2} \\
-x&=\frac{-5 \pm \sqrt[]{49}}{2} \\
-x&=\frac{-5 \pm 7}{2} \\
-x&=-6 \text{ tai } x=1
+f(x)&=0 & \\
+x^2+5x-6&=0 \ \  \ \ \ & || \text{ 2. asteen yhtälön ratkaisukaava} \\ 
+x&=\frac{-5 \pm \sqrt[]{(5)^2-4 \cdot 1 \cdot(-6)}}{2 \cdot 1} & \\
+x&=\frac{-5 \pm \sqrt[]{25+24}}{2} & \\
+x&=\frac{-5 \pm \sqrt[]{49}}{2} & \\
+x&=\frac{-5 \pm 7}{2} & \\
+x&=-6 \text{ tai } x=1 &
 \end{align*}
 2. Hahmotellaan polynomifunktion kuvaaja. Se aukeaa ylöspäin, koska toisen
-asteen termin $x^2$ kerroin on positiivinen. \\ 
+asteen termin $x^2$ kerroin on positiivinen.
 
 \begin{lukusuora}{-2.5}{2.5}{5}
 \lukusuoraparaabeli{-1}{1}{-1}
@@ -114,37 +127,42 @@ asteen termin $x^2$ kerroin on positiivinen. \\
 \lukusuorapienipiste{1}{1\hspace{1mm}}
 \end{lukusuora}
 
-3.  Kuvaajasta voidaan päätellä, että $f(x)<0$, kun $-6 < x < 1$.  \\
+3.  Kuvaajasta voidaan päätellä, että $f(x)<0$, kun $-6 < x < 1$.
+
 Siis alkuperäinen epäyhtälö toteutuu, kun $-6 < x <1$.  
 \end{esimerkki}
+
 \begin{esimerkki}
-Raaka-Arska rakentaa suorakulmion muotoista kaniaitausta lemmikkikanilleen, joka rajoittuu yhdeltä sivulta Arskan taloon. Hänellä on yhteensä 14 metriä kaniverkkoa. Miten hänen kannattaa valita aitauksensa mitat, jotta kaniaitauksen koko on vähintään 12 neliömetriä. \\ \\
-\textbf{Ratkaisu:}\\
-Olkoon aitauksen yhdensuuntaiset sivut pituudeltaan $x$. Olkoon talon suuntaisen sivun pituus $y$. Koska tiedämme, että $x+x+y=14$, niin tästä saadaan ratkaistua talon suuntaisen sivun pituudeksi $y=14 - 2x$. \\ \\
-Sivujen pituuksille pitää päteä
-\begin{align*}
-x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ y>0 \\
-x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 14-2x>0 \\ 
-x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 14>2x \\ 
-x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 7>x \\
-\end{align*} 
-Aitauksen pinta-alaa kuvaa funktio $A(x)=x(14-2x)=14x-2x^2=-2x^2-14x$, $x \in ]0,7[.$. \\
-Halutaan, että $A(x)>12$, josta saadaan epäyhtälö $-2x^2+14x>12$. \\
-1. Muokataan alkuperäistä epäyhtälöä siten, että saadaan kaikki termit vasemmalle puolelle epäyhtälöä.
-\begin{align*}
--2x^2+14x&>12 \\
--2x^2+14x-12&>0
-\end{align*}
-Saimme alkuperäisen epäyhtälön kanssa yhtäpitävän epäyhtälön, jota lähdemme ratkaisemaan. \\
-2. Ratkaistaan millä muuttujan $x$ arvolla polynomi $-2x^2+14x-12$ saa arvon nolla.
+Raaka-Arska rakentaa suorakulmion muotoista kaniaitausta lemmikkikanilleen. Aitaus rajoittuu yhdeltä sivulta Arskan taloon. Hänellä on yhteensä 14 metriä kaniverkkoa. Miten Arskan pitää valita aitauksensa mitat, jotta kaniaitauksen koko on vähintään 12 neliömetriä?
+
+%fixme Tähän esimerkkiin olisi hyvä saada kuva.
+
+\textbf{Ratkaisu}
+
+Olkoon talon suuntaisen sivun pituus $y$ ja kahden muun sivun pituus $x$. Koska tiedämme, että $x+x+y=14$, saadaan tästä ratkaistua talon suuntaisen sivun pituudeksi $y=14 - 2x$.
+%Sivujen pituuksille pitää päteä
+%\begin{align*}
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ y>0 \\
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 14-2x>0 \\ 
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 14>2x \\ 
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 7>x \\
+%\end{align*} 
+Aitauksen pinta-alaa kuvaa funktio $A(x)=x(14-2x)=14x-2x^2=-2x^2-14x$.
+Halutaan, että $A(x)>12$, josta saadaan epäyhtälö $-2x^2+14x>12$. Tämä epäyhtälö saadaan vielä muotoon $-2x^2+14x-12>0$.
+
+Nyt ratkaistavana on epäyhtälö $-2x^2+14x-12>0$. Tutkitaan funktiota $f(x)=-2x^2+14x-12$ ja selvitetään, milloin sen arvot ovat positiivisia.
+
+Selvitetään ensin funktion nollakohdat:
 \begin{align*}
 -2x^2+14x-12&=0 \\
 x&=\frac{-14 \pm \sqrt[]{14^2-4 \cdot (-2) \cdot (-12)}}{2 \cdot (-2)} \\
 x&=\frac{-14 \pm \sqrt[]{196-96}}{-4} \\
 x&=\frac{-14 \pm 10}{-4} \\
-x&=\frac{-24}{-4} \text{ tai } x=\frac{-4}{-4} \\
-x&=6 \text{ tai } x=1
+x&=\frac{-24}{-4} \quad \text{tai} \quad x=\frac{-4}{-4} \\
+x&=6 \quad \text{tai} \quad x=1
 \end{align*}
+
+Hahmotellaan sitten funktion $f(x)=-2x^2+14x-12$ kuvaaja. Koska 2. asteen termin kerroin $-2$ on negatiivinen, on kyseessä alaspäin aukeava paraabeli. Hahmotellaan sen kuvaaja:
 
 \begin{lukusuora}{-2.5}{2.5}{5}
 \lukusuoraparaabeli{-1}{1}{1}
@@ -155,21 +173,37 @@ x&=6 \text{ tai } x=1
 \lukusuorapienipiste{1}{\hspace{1mm}6}
 \end{lukusuora}
 
-Hahmotellaan paraabelin $y=-2x^2+14x-12$ kuvaaja. Huomataan, että paraabeli kulkee x-akselin yläpuolella, kun $1<x<6$. 
-Siis epäyhtälö $-2x^2+14x-12$ toteutuu, kun $1<x<6$. Tämä tarkoittaa, että $A(x)>12$ kun $1<x<6$.
+Kuvasta nähdään, että funktion arvot ovat positiivisia, kun $1<x<6$. Siten
+epäyhtälö $-2x^2+14x-12$ toteutuu, kun $1<x<6$. Tämä tarkoittaa, että aitaukusen ala on suurempi kuin 12 neliömetriä, kun $1<x<6$.
 
-Jos aitauksen yhdensuuntaisten sivujen pituus on väliltä $1<x<6$ ja $y=14-2x$, niin aitauksen pinta-ala on vähintään 12 neliömetriä.
+Selvitetään vielä, kuinka pitkä on tällöin sivu $y=14-2x$. Epäyhtälöstä $1<x$ saadaan
+\begin{align*}
+1&<x \\
+-2&>-2x \\
+12&>14-2x.
+\end{align*}
+Epäyhtälöstä $x<6$ puolestaan saadaan
+\begin{align*}
+x&<6 \\
+-2x&<-12 \\
+14-2x&>2.
+\end{align*}
+Siten $2<14-2x<12$ eli $2<y<12$.
+
+\textbf{Vastaus:} $1<x<6$ ja $2<y<12$, missä $y$ on talon suuntaisen sivun pituus ja $x$ kahden muun sivun pituus
 \end{esimerkki}
 
 \subsection*{Toisen asteen epäyhtälön ratkaiseminen tekijöihin jakamisen avulla}
 \begin{esimerkki} 
-Ratkaise epäyhtälö $x^2+10x>0$. \\ \\
-\textbf{Ratkaisu:} \\
-1. Ratkaistaan millä muuttujan x arvolla toisen asteen polynomi $x^2+10x$ saa arvon nolla. 
+Ratkaise epäyhtälö $x^2+10x>0$.
+
+\textbf{Ratkaisu:}
+
 \begin{align*}
-x^2+10x&=0 \ \ \ \ &&||\text{tulon nollasääntö} \\
-x&=0 \text{ tai } x+10=0 \\
-x&=0 \text{ tai } x=-10
+x^2+10x&=0 &||\text{ tulon nollasääntö} \\
+x(x+10)&=0 & \\
+x&=0 \quad \text{tai} \quad x+10=0 & \\
+x&=0 \quad \text{tai} \quad x=-10 &
 \end{align*}
 Koska kahden positiivisen tai negatiivisen luvun tulo on positiivinen, niin
 polynomi $x^2+10x=x(x+10)$ saa positiivisen arvon, kun 
