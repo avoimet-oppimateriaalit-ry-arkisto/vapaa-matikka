@@ -7,26 +7,57 @@ Vuonna 1823 Niels Abel osoitti, että viidennen ja sitä korkeamman asteen yhtä
 Käytännössä korkeamman asteen yhtälöt täytyy ratkaista numeerisesti tietokoneen avulla. Joissain erikoistapauksissa ratkaiseminen onnistuu käsin.
 
 \subsection*{Tekijöihinjako}
-Jos polynomiyhtälön $P(x) = 0$ polynomi $P$ voidaan jakaa tekijöihin, ratkaisu saadaan etsimällä näiden tekijöiden nollakohdat. Esimerkiksi
-vakiotermittömässä polynomissa voidaan ottaa muuttuja yhteiseksi tekijäksi ja riittää ratkaista yhtä pienemmän asteen polynomiyhtälö.
+
+Polynomiyhtälöitä voi ratkaista jakamalla polynomin tekijöihin.
+
+%Jos polynomiyhtälössä $P(x) = 0$ polynomi $P(x)$ voidaan jakaa tekijöihin, ratkaisu saadaan etsimällä näiden tekijöiden nollakohdat.
+%Esimerkiksi vakiotermittömässä polynomissa voidaan ottaa muuttuja yhteiseksi tekijäksi ja riittää ratkaista yhtä pienemmän asteen %polynomiyhtälö.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $x^3 - 3x^2 + x = 0$. Polynomissa $P(x) = x^3 - 3x^2 + x$ ei ole vakiotermiä. Voimme siis ottaa muuttujan $x$ yhteiseksi tekijäksi ja saamme yhtälölle muodon $x(x^2 - 3x + 1) = 0$. Tulon nollasäännön perusteella yhtälö pätee täsmälleen silloin kun
-\[x = 0 \text{ tai } x^2-3x+1 = 0.\]
-Käyttämällä toisen asteen yhtälön ratkaisukaavaa saamme yhtälön ratkaisuksi
-\[x = 0 \text{ tai } x = \frac{3\pm \sqrt{5}}{2}.\]
+Ratkaise yhtälö $x^3 - 3x^2 + x = 0$.
+
+\textbf{Ratkaisu:}
+
+Polynomissa $x^3 - 3x^2 + x$ ei ole vakiotermiä. Voidaan siis ottaa muuttuja $x$ yhteiseksi tekijäksi, joten se saadaan muotoon $x(x^2 - 3x + 1)$. Nyt yhtälö ratkeaa tulon nollasäännön avulla:
+
+Nyt yhtälön ratkeaa tulon nollasäännöllä.
+\begin{align*}
+x^3 - 3x^2 + x=0 \\
+x(x^2 - 3x + 1)&0 \\
+x= 0 \quad &\text{tai} \quad x^2 - 3x + 1 = 0 \\
+\end{align*}
+
+Käyttämällä toisen asteen yhtälön ratkaisukaavaa saadaan yhtälön $x^2 - 3x + 1 = 0$ ratkaisuksi
+\[x = \frac{3\pm \sqrt{5}}{2}.\]
+
+\textbf{Vastaus:}
+$x= 0$ tai $x=\dfrac{3\pm \sqrt{5}}{2}$
 \end{esimerkki}
 
 Aiemmin esitellyn polynomien jakolauseen mukaan kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
-Periaatteessa voimme siis ratkaista tällä tavalla kaikki polynomiyhtälöt. Tekijöihin jakaminen on kuitenkin yleensä vaikeaa.
+Periaatteessa tällä tavalla voidaan siis ratkaista kaikki polynomiyhtälöt. Tekijöihin jakaminen on kuitenkin yleensä vaikeaa.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $x^3-17x^2-x+17 = 0$. Kolmannen asteen yhtälö on lähtökohtaisesti vaikea ratkaista. Tässä tapauksessa huomataan
-kuitenkin, että vasemman puolen polynomilla on tekijänä $x-17$. Näin ollen yhtälö voidaan kirjoittaa muodossa $(x-17)(x^2-1) = 0$.
-Siis yhtälö pätee täsmälleen silloin kun
-\[x - 17 = 0 \text{ tai } x^2-1 = 0.\]
-Ratkaisemalla nämä yhtälöt saamme alkuperäisen yhtälön ratkaisuksi
-\[x = 17 \text{ tai } x = \pm 1.\]
+Ratkaise yhtälö $x^3-17x^2-x+17 = 0$.
+
+\textbf{Ratkaisu:}
+
+Yhtälön vasemmalla puolella olevan polynomin voi jakaa tekijöihin ryhmittelemällä:
+
+\begin{align*}
+x^3-17x^2-x+17=x^2(x-17)+(-1)(x-17)=(x^2-1)(x-17)
+\end{align*}
+
+Nyt yhtälön ratkeaa tulon nollasäännöllä.
+\begin{align*}
+x^3-17x^2&-x+17=0 \\
+(x^2-1)&(x-17)=0 \\
+x - 17 = 0 \quad &\text{tai} \quad x^2-1 = 0 \\
+x = 17 \quad &\text{tai} \quad x^2 = 1 \\
+x = 17 \quad &\text{tai} \quad x =\pm 1 \\
+\end{align*}
+
+\textbf{Vastaus:} $x = 17$ tai $x = \pm 1$
 \end{esimerkki}
 
 \subsection*{Sijoitukset}
