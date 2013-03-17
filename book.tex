@@ -143,7 +143,10 @@
 \usepackage[papersize={185mm,240mm},%
             left=36mm,right=12mm,%
             top=10mm,bottom=25mm,
-            asymmetric,bindingoffset=10mm]{geometry}
+            asymmetric,bindingoffset=10mm,
+            marginparwidth=30mm]{geometry}
+
+\reversemarginpar            
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -194,6 +197,8 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+\newcommand{\alatunnistefontti}{\sffamily\fontsize{9}{7}\selectfont}
+
 \renewcommand{\chaptermark}[1]{%
 \markboth{\chaptertitlename\ \thechapter. #1}{}}
 
@@ -201,13 +206,13 @@
 
 \fancypagestyle{plain}{%
  \fancyhf{}
- \fancyfoot[RE]{{\sffamily\fontsize{9}{7}\leftmark}\hspace{1em}\thepage}
- \fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7}\leftmark}}
+ \fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
+ \fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
 }
 
 \fancyhf{}
-\fancyfoot[RE]{{\sffamily\fontsize{9}{7}\leftmark}\hspace{1em}\thepage}
-\fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7}\leftmark}}
+\fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
+\fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
