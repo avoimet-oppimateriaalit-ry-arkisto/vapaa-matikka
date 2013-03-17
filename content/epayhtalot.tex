@@ -41,16 +41,18 @@ Lukujen kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilytt
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-\begin{align*}
+Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
+
+\begin{esimerkki}
+Luvun lisääminen epäyhtälöön.
+  \begin{align*}
      2 &< 3 & \ppalkki +4\\
    2+4 &< 3+4  \\
      6 &< 7 & tosi
-\end{align*}
+  \end{align*}
+\end{esimerkki}
 
-
-Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
-
-Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan, ja jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan. Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin.
+Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan.
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
@@ -65,7 +67,8 @@ Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuorall
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-\ \\
+Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan.
+
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{4}
 	\lukusuoranuolialas{4}{8}
@@ -79,7 +82,25 @@ Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuorall
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Näin ollen epäyhtälön puolet positiivisella luvulla kertomalla tai jakamalla saadaan yhtäpitävä epäyhtälö. 
+Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen epäyhtälön puolet positiivisella luvulla kertomalla tai jakamalla saadaan yhtäpitävä epäyhtälö.
+
+\begin{esimerkki}
+Epäyhtälön kertominen lukua yksi pienemmällä positiivisella luvulla.
+\begin{align*}
+     2 &< 4 & \ppalkki \cdot \frac{1}{2} \\
+   2\cdot\frac{1}{2} &< 4\cdot\frac{1}{2}  \\
+     1 &< 2 & tosi
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Epäyhtälön kertominen lukua yksi suuremmalla luvulla.
+\begin{align*}
+     2 &< 4 & \ppalkki \cdot 2 \\
+   2\cdot 2 &< 4\cdot 2  \\
+     4 &< 8 & tosi
+\end{align*}
+\end{esimerkki}
 
 Sen sijaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä. Esimerkiksi kun lukuja 2 ja 5 kerrotaan luvulla $-1$, niiden suuruusjärjestys kääntyy:
 
@@ -96,7 +117,17 @@ Sen sijaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä. 
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Jos epäyhtälöä kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömerkin suunta täytyy kääntää, jotta saataisiin yhtäpitävä epäyhtälö: esimerkissä $2 < 5$ muuttuu muotoon $-2 > -5$.
+Jos epäyhtälöä kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömerkin suunta täytyy kääntää, jotta saataisiin yhtäpitävä epäyhtälö.
+%: esimerkissä $2 < 5$ muuttuu muotoon $-2 > -5$.
+
+\begin{esimerkki}
+Epäyhtälön kertominen negatiivisella luvulla.
+\begin{align*}
+     2 &< 5 & \ppalkki \cdot (-1) \\
+   2\cdot (-1) &< 4\cdot (-1)  \\
+     -2 &> -5 & tosi
+\end{align*}
+\end{esimerkki}
 
 \laatikko{Epäyhtälöstä saadaan yhtäpitävä epäyhtälö
 \begin{itemize}
@@ -342,7 +373,7 @@ Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\fra
 \end{tehtava}
 
 \begin{tehtava}
-Lukion päättötodistuksessa aineen arvosana määräytyy aineen pakollisten ja syventävien kurssien keskiarvosta. Opiskelija haluaa filosofian keskiarvokseen 7 tai paremman. Opiskelija aikoo osallistua kolmelle filosofian kurssille. Kahden kurssin jälkeen hänen arvosanojen keskiarvoksi on. Millainen arvosana on opiskelijan saatava kolmannesta kurssista? Kurssit arvioidaan asteikolla 4--10.
+Lukion päättötodistuksessa aineen arvosana määräytyy aineen pakollisten ja syventävien kurssien keskiarvosta. Opiskelija haluaa filosofian keskiarvokseen 7 tai paremman. Opiskelija aikoo osallistua kolmelle filosofian kurssille. Kahden kurssin jälkeen hänen arvosanojensa keskiarvo on 6. Millainen arvosana on opiskelijan saatava kolmannesta kurssista? Kurssit arvioidaan asteikolla 4--10.
 \begin{vastaus}
 %Muodostettava epäyhtälö on muotoa $\frac{2\cdot 6+x}{3}\geq 7$, josta ratkaisuna saadaan $x\geq9$.
 9 tai 10
