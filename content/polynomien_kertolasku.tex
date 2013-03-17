@@ -487,6 +487,8 @@ Opetusvideot \emph{muistikaavat} (8:05) sekä
 
 \subsection*{Tekijöihinjako}
 
+%fixme Lukujen hierarkiatasoja täytyy miettiä
+
 %Pitkän matematiikan 1. kurssilla on käsitelty lukujen jakamista tekijöihin.
 Esimerkiksi luvun $12$ \termi[tekijät]{tekijä} ovat luvut $1$, $2$, $3$, $4$, $6$ ja $12$. Nämä ovat sellaisia
 lukuja, joista saadaan luku $12$ kertomalla ne jollain kokonaisluvulla, tai toisin sanottuna luku $12$ voidaan jakaa
@@ -496,10 +498,11 @@ millä tahansa näistä luvuista ilman jakojäännöstä.
 %voi enää jakaa pienempiin osatekijöihin. Kokonaisluvun tekijät ovat kokonaislukuja ja alkutekijät alkulukuja.
 
 \begin{esimerkki}
-Jaa tekijöihin luku $12$.
-\begin{align*}
-& 12 = 4 \cdot 3 = 2 \cdot 2 \cdot 3 = 2^2 \cdot 3
-\end{align*}
+Luvun $12$ voidaan kirjoittaa tekijöidensä tulona monella eri tavalla. Esimerkiksi
+\begin{equation*}
+12 = 2 \cdot 6, \ 12= 4 \cdot 3 \text{ ja } 12= 2 \cdot 2 \cdot 3.
+%& 12 = 4 \cdot 3 = 2 \cdot 2 \cdot 3 = 2^2 \cdot 3
+\end{equation*} 
 \end{esimerkki}
 
 Polynomeja voidaan jakaa vastaavalla tavalla tekijöihin. Polynomien tapauksessa tekijöihinjako tarkoittaa
@@ -516,33 +519,33 @@ Jaa tekijöihin polynomi $10x^3-20x^2$.
 \end{esimerkki}
 
 \begin{esimerkki}
+Jaa tekijöihin \quad a) $x^3+x$ \quad b) $3x^2+6x.$
+
+Kun jokaisessa termissä on sama tekijä, se voidaan ottaa yhteiseksi tekijäksi:
+\begin{enumerate}[a)]
+    \item $x^3+x = x(x^2+1)$
+    \item $3x^2+6x = 3x(x+2)$.
+\end{enumerate}
+\end{esimerkki}
+
+\begin{esimerkki}
 Jaa tekijöihin polynomi $5x^3-20x^2+20x$.
 \begin{align*}
 & 5x^3-20x^2+20x \\
 =& 5(x^3-4x^2+4x) \ \ \ \ &\emph{otetaan $5$ yhteiseksi tekijäksi} \\
 =& 5x(x^2-4x+4) &\emph{otetaan $x$ yhteiseksi tekijäksi} \\
 =& 5x(x^2-2\cdot 2x+2^2) &\emph{sovelletaan muistikaavaa} \\
-=& 5x(x-2)^2 \\
+=& 5x(x-2)^2
 \end{align*}
 \end{esimerkki}
 
 \qrlinkki{http://opetus.tv/maa/maa2/polynomin-jakaminen-tekijoihin/}{Opetusvideot \emph{polynomin jakaminen tekijöihin} (9:50 ja 5:44)}
 
-\begin{esimerkki}
-Jaa tekijöihin \quad a) $x^3+x$ \quad b) $3x^2+6x.$ \\
-\quad\\
-Kun jokaisessa termissä on sama tekijä, se voidaan erottaa yhteiseksi tekijäksi
-\begin{enumerate}[a)]
-    \item $x^3+x = x(x^2+1)$
-    \item $3x^2+6x = 3x(x+2)$
-\end{enumerate}
-\end{esimerkki}
-
-\quad\\
+%\quad\\
 
 \begin{esimerkki}
-Jaa tekijöihin \quad a) $x^2-4$ \quad b) $x^2+8x+16.$ \\
-\quad\\
+Jaa tekijöihin \quad a) $x^2-4$ \quad b) $x^2+8x+16.$
+
 Jaetaan polynomit tekijöihin muistikaavoja hyödyntäen
 \begin{enumerate}[a)]
     \item $x^2-4 = x^2-2^2 = (x+2)(x-2)$
@@ -592,6 +595,13 @@ Jaetaan polynomit tekijöihin muistikaavoja hyödyntäen
 Kaikkien polynomien tekijöihinjako ei kuitenkaan näillä menetelmillä onnistu. Myöhemmin tässä kirjassa opitaan, miten toisen asteen polynomin voi jakaa tekijöihin nollakohtiensa avulla.
 
 Seuraavassa esimerkissä tekijöihin jako on toteutettu termien ryhmittelyn avulla. Se on joissain tapauksissa näppärä tapa jakaa polynomi tekijöihinsä, mutta oikean ryhmittelyn keksimiseen ei ole mitään sääntöä.
+
+\begin{esimerkki}
+Jaa tekijöihin $x^3+2x^2+2x+1$.
+\begin{equation*}
+x^3+3x^2+x+3=x^2(x+3)+1(x+3)=(x^2+1)(x+3)
+\end{equation*}
+\end{esimerkki}
 
 \begin{esimerkki}
 Jaa tekijöihin $x^{11}+2x^{10}+3x+6$.
