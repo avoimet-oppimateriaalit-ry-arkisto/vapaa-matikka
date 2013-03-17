@@ -1,9 +1,9 @@
 \section{Epäyhtälöistä yleisesti}
-Epäyhtälöllä tarkoitetaan ilmausta, jossa ilmoitetaan kahden lausekkeen arvon välinen suuruusjärjestys. Suuruusjärjestyksien ilmaisuun käytetään seuraavia merkintöjä:
+Epäyhtälöllä tarkoitetaan ilmausta, jossa esitetään kahden lausekkeen arvon välinen suuruusjärjestys. Suuruusjärjestyksien esittämiseen käytetään seuraavia merkintöjä:
 
 \begin{center}
 \begin{tabular}{l|l}
-\emph{merkintä} & \emph{merkitys} \\
+\emph{Merkintä} & \emph{Merkitys} \\
 \hline
 $a<b$ &  $a$ on pienempi kuin $b$ \\
 $a>b$ & $a$ on suurempi kuin $b$ \\
@@ -12,21 +12,21 @@ $a \geq b$ & $a$ on suurempi tai yhtäsuuri kuin $b$ \\
 \end{tabular}
 \end{center}
 
-Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$ ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin, kun epäyhtälö $a \geq b$ ei päde.
+Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$, ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin, kun epäyhtälö $a \geq b$ ei päde.
 
 Epäyhtälön totuusarvo voi riippua epäyhtälön puolilla esiintyvien muuttujien arvoista. Tämän perusteella epäyhtälöt voidaan jakaa kolmeen tyyppiin:
 \begin{itemize}
 \item \emph{Aina tosi} -- pätee kaikilla muuttujien arvoilla. Esimerkiksi epäyhtälöt $5 < 6$ tai $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
-\item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$ mutta ei päde kun $x = 7$.
+\item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$, mutta ei päde, kun $x = 7$.
 \item \emph{Aina epätosi} -- ei päde millään muuttujien arvoilla. Esimerkiksi epäyhtälöt $3 < 1$ ja $x < x$ eivät päde koskaan.
 \end{itemize}
 
 \subsection*{Epäyhtälöiden muokkaaminen}
 Vastaavasti kuten yhtälöiden ratkaisemisessa, epäyhtälön ratkaisemisessa selvitetään ne muuttujien arvot, joilla epäyhtälö on tosi.
 
-Yhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu yhtälö on yhtäpitävä alkuperäisen kanssa. Epäyhtälöille löytyy vastaavia operaatioita.
+Kuten yhtälöitä, myös epäyhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu epäyhtälö on yhtäpitävä alkuperäisen kanssa.
 
-Lukujen kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen.
+Kahden luvun kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -52,7 +52,7 @@ Luvun lisääminen epäyhtälöön.
   \end{align*}
 \end{esimerkki}
 
-Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan.
+Myös lukujen kertominen samalla positiivisella kertoimella säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
@@ -67,7 +67,7 @@ Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuorall
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan.
+Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan:
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{4}
@@ -82,7 +82,7 @@ Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan.
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen epäyhtälön puolet positiivisella luvulla kertomalla tai jakamalla saadaan yhtäpitävä epäyhtälö.
+Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen alkuperäisen epäyhtälön kanssa yhtäpitävä epäyhtälö saadaan kertomalla tai jakamalla molemmat puolet positiivisella luvulla.
 
 \begin{esimerkki}
 Epäyhtälön kertominen lukua yksi pienemmällä positiivisella luvulla.
@@ -137,13 +137,13 @@ Epäyhtälön kertominen negatiivisella luvulla.
 \end{itemize}
 }
 
-Kuten yhtälöiden tapauksessa, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$ joka on aina tosi ja epäyhtälöstä $a < b$ tulee $0 < 0$ joka on aina epätosi.
+Kuten yhtälöiden tapauksessa, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$, joka on aina tosi, ja epäyhtälöstä $a < b$ tulee $0 < 0$, joka on aina epätosi.
 
 \begin{esimerkki}
-Muokataan epäyhtälöä $-2x+4<6$ esitetyin operaatioin.
+Muokataan epäyhtälöä $-2x+4<6$ käyttämällä esitettyjä operaatioita.
 \begin{align*}
--2x+4&<6 &&\ppalkki-4 \\
--2x&<2 &&\ppalkki:(-2) \\
+-2x+4&<6 && \ppalkki -4 \\
+-2x&<2 && \ppalkki :(-2) \\
 x&>-1
 \end{align*}
 Tehdyt operaatiot tuottavat yhtäpitäviä epäyhtälöitä, joten epäyhtälö $-2x+4<6$ on yhtäpitävä epäyhtälön $x>-1$ kanssa. Voidaan päätellä, että lukua $-1$ suuremmat luvut ovat täsmälleen epäyhtälön ratkaisut.

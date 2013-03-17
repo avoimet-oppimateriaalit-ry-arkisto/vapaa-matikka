@@ -5,26 +5,39 @@ Yhtälöistä yksinkertaisin on ensimmäisen asteen yhtälö. Käydään se lyhy
 läpi kertauksen vuoksi.
 
 Ensimmäisen asteen yhtälössä ratkaistavana on vain mahdollisesti vakiolla
-kerrottu muuttuja, joka voidaan ratkaista vain käyttämällä korkeintaan
-kahta neljästä aritmeettisesta peruslaskutoimitusta. Eli yleensä
-yhtälön molempia puolia lisätään tai vähennetään jollain luvulla, jolla
-vasemmalle puolelle saadaan jäämään vain muuttuja jollain vakiolla kerrottuna.
-Sitten vain jaetaan molemmat puolet muuttujan kertoimella, jolloin saadaan
-suoraan ratkaisu.
+kerrottu muuttuja. Yhtälön ratkaisemiseksi riittää käyttää neljää
+aritmeettista peruslaskutoimitusta. Aluksi yhtälön molempia puolia
+lisätään tai vähennetään jollain luvulla, jolloin
+vasemmalle puolelle saadaan jäämään pelkkä muuttuja
+vakiolla kerrottuna.
+Sen jälkeen jaetaan yhtälön molemmat puolet muuttujan kertoimella, jolloin
+yhtälön ratkaisu jää oikealle puolelle.
 
 % fixme tyylikorjausta, termiä juuri ei vielä esitellä
 
-Yleisesti ensimmäisen asteen yhtälö on siten muotoa
+Yleisesti ensimmäisen asteen yhtälö on muotoa
 
 \begin{align*}
     ax + b = 0.
 \end{align*}
 
-Mikä vain 1. asteen yhtälö on muokattavissa aina annettuun
-muotoon siirtämällä kaiken vasemmalle puolelle ja
-soveltamalla polynomien yhteen- ja vähennyslaskusääntöjä.
+Mikä vain 1. asteen yhtälö on muokattavissa tähän yleiseen
+muotoon siirtämällä kaikki termit vasemmalle puolelle ja
+sieventämällä.
 
 \subsubsection*{Esimerkkejä}
+
+\begin{esimerkki}
+Ratkaise yhtälö $4x + 5 = 2 + 2x$.
+
+\textbf{Ratkaisu}
+\begin{align*}
+    4x + 5 &= 2 + 2x & \ppalkki & -2x \\
+    2x + 5 &= 2      & \ppalkki & -5 \\
+        2x &= -3     & \ppalkki & :2 \\
+         x &= -\frac{3}{2}
+ \end{align*}
+\end{esimerkki}
 
 \begin{esimerkki}
 Ratkaise yhtälö $3x - 6 = 0$.
@@ -38,27 +51,16 @@ Ratkaise yhtälö $3x - 6 = 0$.
   \end{align*}
 \end{esimerkki}
 
-\begin{esimerkki}
-Ratkaise yhtälö $4x + 5 = 2$.
-
-\textbf{Ratkaisu}
-\begin{align*}
-    4x + 5 &= 2  & \ppalkki & -5 \\
-        4x &= -3 & \ppalkki & :4 \\
-         x &= \frac{-3}{4}
- \end{align*}
-\end{esimerkki}
-
-Yleisen yhtälön ratkaisu on siten muotoa
+Yleisen yhtälön $ax + b = 0$ ratkaisu on siis
 
 \begin{align*}
-  x = \frac{-b}{a}.
+  x = -\frac{b}{a}.
 \end{align*}
 
-Erityisesti kannattaa huomata, että kaikkia 1. asteen yhtälöitä ei toki
-kannata saattaa aina yleiseen muotoon. Jos vakiotermit ovat valmiiksi oikealla
-puolella, ratkaisu on luonnollisesti helpompaa vain suorittamalla
-molemmille puolille jakolasku muuttujan kertoimella.
+Erityisesti kannattaa huomata, että kaikkia 1. asteen yhtälöitä ei tarvitse
+saattaa yleiseen muotoon. Esimerkiksi jos vakiotermit ovat valmiiksi
+oikealla puolella, yhtälön ratkaisemiseksi riittää luonnollisesti jakaa
+molemmat puolet muuttujan kertoimella.
 
 \Harjoitustehtavat
 
@@ -96,12 +98,12 @@ molemmille puolille jakolasku muuttujan kertoimella.
     \end{vastaus}
 \end{tehtava}
 
-%ei ole yhtälö tehtävä, mutta mallinnusharjoituksena ok? 
+%ei ole yhtälötehtävä, mutta mallinnusharjoituksena ok? 
 \begin{tehtava}
     Muodosta tilannetta kuvaavat lausekkeet.
     \begin{enumerate}[(a)]
-        \item Kuinka paljon maksaa hilavitkuttimen vuokraus $x$:ksi tunniksi, kun vuokra on 42 \euro /tunti. Vuokrajan tulee ottaa myös pakollinen 25 euron laitteistovakuutus.
-        \item Kuinka monta euroa saa $x$:llä dollarilla, kun 1~EUR vastaa 1,23~USD ja halutaan vaihtaa dollareita euroiksi. Valuutanvaihtaja veloittaa lisäksi palvelumaksun 0,50 euroa.
+        \item Kuinka paljon maksaa hilavitkuttimen vuokraus $x$:ksi tunniksi, kun vuokra on 42 \euro /tunti. Vuokraajan tulee myös ottaa pakollinen 25 euron laitteistovakuutus.
+        \item Kuinka monta euroa saa $x$:llä dollarilla, kun 1~EUR vastaa 1,23~USD:a, ja halutaan vaihtaa dollareita euroiksi. Valuutanvaihtaja veloittaa lisäksi palvelumaksun 0,50 euroa.
     \end{enumerate}
     \begin{vastaus}
         \begin{enumerate}[(a)]
@@ -147,17 +149,10 @@ molemmille puolille jakolasku muuttujan kertoimella.
     \end{vastaus}
 \end{tehtava}
 
-\begin{tehtava}
- 
-    \begin{vastaus}
-		
-    \end{vastaus}
-\end{tehtava}
-
 %vaatii Pythagoraan lauseen, jota ei vielä ole käsitelty lukiossa.
 \begin{tehtava}
     Tässä tehtävässä pitäisi muistaa peruskoulussa käsitelty Pythagoraan lause.
-    Suorakulmaisen kolmion sivujen pituuden kateetittien pituudet ovat $x+1$ ja $4$. Hypotenuusan pituus $x+3$. Mikä $x$ on?
+    Suorakulmaisen kolmion sivujen pituuden kateettien pituudet ovat $x+1$ ja $4$. Hypotenuusan pituus $x+3$. Mikä $x$ on?
     \begin{vastaus}
 		$x=2$
     \end{vastaus}
@@ -165,7 +160,7 @@ molemmille puolille jakolasku muuttujan kertoimella.
 
 %hankala
 \begin{tehtava}
-    Määritä sekunnin tarkkuudella se ajanhetki, kun kellotaulun minuutti- ja tuntiviisarit ovat päällekkäin ensimmäisen kerran klo 12.00 jälkeen.
+    Määritä sekunnin tarkkuudella se ajanhetki, kun kellotaulun minuutti- ja tuntiviisarit ovat päällekkäin ensimmäisen kerran klo 12.00:n jälkeen.
     \begin{vastaus}
 		$13.05.27$
     \end{vastaus}
