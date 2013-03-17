@@ -32,14 +32,15 @@
 % Linkki ja QR-koodi. Parametrit: URL ja kuvaus.
 \newcommand{\qrlinkki}[2]{
 	
-	\begin{minipage}[c]{1.0in}
-	\vspace{0.1in}
-	\begin{pspicture}(0.7in,0.7in)
-		\psbarcode{#1}{}{qrcode}
-	\end{pspicture}
-	\vspace{0.2in}
+	\begin{minipage}[c]{0.6in}
+		\begin{pspicture}(0.6in,0.6in)
+			\psscalebox{0.6}{
+				\psbarcode{#1}{}{qrcode}
+			}
+		\end{pspicture}
+		\vspace{0.12in}
 	\end{minipage}
-	\begin{minipage}[l]{\textwidth-1.0in}
+	\begin{minipage}[l]{\textwidth-0.6in}
 		#2
 		
 		{\scriptsize\url{#1}}
