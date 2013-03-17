@@ -1,4 +1,4 @@
-\section{Polynomien jakolause}
+\section{Toisen asteen polynomin jakaminen tekijöihin}
 
 Polynomin $P(x)=(x-2)(x-3)$ nollakohdat ovat tulon nollasäännön nojalla $x=2$ ja $x=3$. Nollakohdat siis näkee suoraan tekijöihin jaetusta polynomista. Tämä tekijöiden ja nollakohtien välinen yhteys toimii myös toisin päin: nollakohtien avulla voi selvittää tekijät. Jos luku $b$ on polynomin nollakohta, $x-b$ on polynomin tekijä.
 
@@ -54,90 +54,94 @@ Nollakohdat ovat $x_1=3$ ja $x_2=-5$. Saadaan siis
 $$P(x)= 2(x-3)(x-(-5)) = 2(x-3)(x+5).$$
 \end{esimerkki}
 
-\paragraph*{Kun nollakohtia on vain yksi tai ei lainkaan}
+\qrlinkki{http://opetus.tv/maa/maa2/polynomi-tekijoihin-nollakohtien-avulla/}{Opetus.tv: \emph{polynomin jakaminen tekijöihin nollakohtiensa avulla} (6:48)}
+
 Jos toisen asteen polynomilla on vain yksi nollakohta, kyseessä on niin sanottu kaksinkertainen juuri. Voidaan tulkita, että nollakohdat $x_1$ ja $x_2$ ovat yhtäsuuret. Tällöin tekijöiksi saadaan $a(x-x_1)(x-x_1)=a(x-x_1)^2$.
 
 Esimerkiksi polynomin $P(x)=2x^2-4x+2$ ainoa nollakohta on $x=1$. Polynomi voidaan siis jakaa tekijöihin seuraavasti: \\ $P(x)=2(x-1)(x-1)=2(x-1)^2$. \\
 
-Jos toisen asteen polynomilla ei ole nollakohtia, sitä ei voi jakaa ensimmäisen asteen tekijöihin. (Sillä ensimmäisen asteen tekijällä on aina nollakohta.)
+Jos toisen asteen polynomilla ei ole nollakohtia, sitä ei voi jakaa ensimmäisen asteen tekijöihin. % (Sillä ensimmäisen asteen tekijällä on aina nollakohta.)
 
-\subsubsection*{Joitakin yleistyksiä}
-
-Polynomeille voidaan todistaa seuraavat tulokset:
-
-\laatikko{
-\begin{itemize}
-\item Kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
-\item Paritonasteisilla polynomeilla on vähintään yksi nollakohta
-\item $n$. asteen polynomilla on korkeintaan $n$ nollakohtaa
-\end{itemize}}
-
-Todistetaan näistä viimeinen:
-
-\begin{todistus}
-Jos $n$. asteen polynomilla $P$ olisi yli $n$ nollakohtaa, sillä olisi yli $n$ ensimmäisen asteen
-tekijää. Polynomin $P$ aste olisi siis yli $n$, mikä on ristiriita. Nollakohtia on siis
-korkeintaan $n$.
-\end{todistus}
-
-Tämä tulos kertoo paljon siitä, millaisia polynomien kuvaajat voivat olla.
-\todo{asemoi esimerkit}
-
-\begin{esimerkki} Kolmannen asteen polynomilla on 1--3 nollakohtaa.
-
-\begin{lukusuora}{-2.5}{3}{3}
-\lukusuorakuvaaja{(x**3-x-1)/2}
-\lukusuorapienipiste{1.32472}{}
-\end{lukusuora}
-\begin{lukusuora}{-2.8}{2.5}{3}
-\lukusuorakuvaaja{(x**3-x+0.3849)/2}
-\lukusuorapienipiste{-1.1547}{}
-\lukusuorapienipiste{0.577028}{}
-\end{lukusuora}
-\begin{lukusuora}{-2}{2}{3}
-\lukusuorakuvaaja{1.4*(x**3-x)}
-\lukusuorapienipiste{-1}{}
-\lukusuorapienipiste{0}{}
-\lukusuorapienipiste{1}{}
-\end{lukusuora}
-
-\end{esimerkki}
-
-
-\begin{esimerkki} Neljännen asteen polynomilla on 0--4 nollakohtaa.\\
-\begin{tabular}{c}
-
-\begin{lukusuora}{-4}{4}{3}
-\lukusuorakuvaaja{(x**4-5*x**2+12)/14}
-\end{lukusuora}
-\begin{lukusuora}{-4}{4}{3}
-\lukusuorakuvaaja{(x**4-5*x**2+3*x+11.2)/14}
-\lukusuorapienipiste{-1.71394}{}
-\end{lukusuora}
-\begin{lukusuora}{-4}{4}{3}
-\lukusuorakuvaaja{(x**4-5*x**2-3)/14}
-\lukusuorapienipiste{2.354}{}
-\lukusuorapienipiste{-2.354}{}
-\end{lukusuora}
-
-\\ \qquad \\
-
-\begin{lukusuora}{-4}{4}{3}
-\lukusuorakuvaaja{(x**4-5*x**2+3*x+1.75842)/14}
-\lukusuorapienipiste{-2.43622}{}
-\lukusuorapienipiste{-0.367327}{}
-\lukusuorapienipiste{1.402}{}
-\end{lukusuora}
-\begin{lukusuora}{-2.8}{2.8}{3}
-\lukusuorakuvaaja{0.6*(x+1.5)*(x+0.5)*(x-0.5)*(x-1.5)}
-\lukusuorapienipiste{1.5}{}
-\lukusuorapienipiste{0.5}{}
-\lukusuorapienipiste{-1.5}{}
-\lukusuorapienipiste{-0.5}{}
-\end{lukusuora}
-
-\end{tabular}
-\end{esimerkki}
+%\subsubsection*{Joitakin yleistyksiä}
+%
+%Polynomeille voidaan todistaa seuraavat tulokset:
+%
+%\laatikko{
+%\begin{itemize}
+%\item Kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
+%\item Paritonasteisilla polynomeilla on vähintään yksi nollakohta
+%\item $n$. asteen polynomilla on korkeintaan $n$ nollakohtaa
+%\end{itemize}}
+%
+%Todistetaan näistä viimeinen:
+%
+%\begin{todistus}
+%Jos $n$. asteen polynomilla $P$ olisi yli $n$ nollakohtaa, sillä olisi yli $n$ ensimmäisen asteen
+%tekijää. Polynomin $P$ aste olisi siis yli $n$, mikä on ristiriita. Nollakohtia on siis
+%korkeintaan $n$.
+%\end{todistus}
+%
+%Tämä tulos kertoo paljon siitä, millaisia polynomien kuvaajat voivat olla.
+%
+%\begin{esimerkki} Kolmannen asteen polynomilla on 1--3 nollakohtaa.
+%
+%\begin{lukusuora}{-2.5}{3}{3.6}
+%\lukusuoraisobbox
+%\lukusuorakuvaaja{(x**3-x-1)/2}
+%\lukusuorapienipiste{1.32472}{}
+%\end{lukusuora}
+%\begin{lukusuora}{-2.8}{2.5}{3.6}
+%\lukusuoraisobbox
+%\lukusuorakuvaaja{(x**3-x+0.3849)/2}
+%\lukusuorapienipiste{-1.1547}{}
+%\lukusuorapienipiste{0.577028}{}
+%\end{lukusuora}
+%\begin{lukusuora}{-2}{2}{3.6}
+%\lukusuoraisobbox
+%\lukusuorakuvaaja{1.4*(x**3-x)}
+%\lukusuorapienipiste{-1}{}
+%\lukusuorapienipiste{0}{}
+%\lukusuorapienipiste{1}{}
+%\end{lukusuora}
+%
+%\end{esimerkki}
+%
+%
+%\begin{esimerkki} Neljännen asteen polynomilla on 0--4 nollakohtaa.
+%
+%\begin{lukusuora}{-4}{4}{3.6}
+%\lukusuorabboxy{-0.5}{1.5}
+%\lukusuorakuvaaja{(x**4-5*x**2+12)/14}
+%\end{lukusuora}
+%\begin{lukusuora}{-4}{4}{3.6}
+%\lukusuorabboxy{-0.5}{1.5}
+%\lukusuorakuvaaja{(x**4-5*x**2+3*x+11.2)/14}
+%\lukusuorapienipiste{-1.71394}{}
+%\end{lukusuora}
+%\begin{lukusuora}{-4}{4}{3.6}
+%\lukusuorabboxy{-0.5}{1.5}
+%\lukusuorakuvaaja{(x**4-5*x**2-3)/14}
+%\lukusuorapienipiste{2.354}{}
+%\lukusuorapienipiste{-2.354}{}
+%\end{lukusuora}
+%
+%\begin{lukusuora}{-4}{4}{3.6}
+%\lukusuorabboxy{-0.5}{1.5}
+%\lukusuorakuvaaja{(x**4-5*x**2+3*x+1.75842)/14}
+%\lukusuorapienipiste{-2.43622}{}
+%\lukusuorapienipiste{-0.367327}{}
+%\lukusuorapienipiste{1.402}{}
+%\end{lukusuora}
+%\begin{lukusuora}{-2.8}{2.8}{3.6}
+%\lukusuorabboxy{-0.5}{1.5}
+%\lukusuorakuvaaja{0.6*(x+1.5)*(x+0.5)*(x-0.5)*(x-1.5)}
+%\lukusuorapienipiste{1.5}{}
+%\lukusuorapienipiste{0.5}{}
+%\lukusuorapienipiste{-1.5}{}
+%\lukusuorapienipiste{-0.5}{}
+%\end{lukusuora}
+%
+%\end{esimerkki}
 
 \Harjoitustehtavat
 
