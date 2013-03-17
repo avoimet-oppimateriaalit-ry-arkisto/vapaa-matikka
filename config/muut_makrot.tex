@@ -1,7 +1,11 @@
+% marginaalihuomautuksia varten (lähinnä termeille), ei vielä käytössä
+% \newcommand{\marginaali}[1]{%
+%  \marginpar{\raggedleft\sffamily\small\selectfont{#1}}}
+
 % muokattava korostus termeille
 \newcommand{\termi}[2][] {%
-  \ifthenelse{\isempty{#2}}{\korostettuindeksi{#1}{#1}}%
-  {\korostettuindeksi{#1}{#2}}%
+ \ifthenelse{\isempty{#2}}{\korostettuindeksi{#1}{#1}}%
+ {\korostettuindeksi{#1}{#2}}%
 }
 
 % käytetään kun sovelletaan sama funktio molemmille puolille
