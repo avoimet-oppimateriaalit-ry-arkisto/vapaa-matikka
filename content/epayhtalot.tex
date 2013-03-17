@@ -12,21 +12,21 @@ $a \geq b$ & $a$ on suurempi tai yhtäsuuri kuin $b$ \\
 \end{tabular}
 \end{center}
 
-Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$ ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin kun $a \geq b$ ei päde.
+Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$ ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin, kun epäyhtälö $a \geq b$ ei päde.
 
 Epäyhtälön totuusarvo voi riippua epäyhtälön puolilla esiintyvien muuttujien arvoista. Tämän perusteella epäyhtälöt voidaan jakaa kolmeen tyyppiin:
 \begin{itemize}
-\item \emph{aina tosi}. Esimerkiksi epäyhtälöt $5 < 6$ ja $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
-\item \emph{ehdollisesti tosi}, eli epäyhtälö, joka pätee vain joillain muuttujien arvoilla. Esimerkiksi $x < 5$ pätee, kun $x = 4$ mutta ei päde kun $x = 7$.
-\item \emph{aina epätosi}. Esimerkiksi epäyhtälöt $1 > 3$ ja $x < x$ eivät päde millään muuttujien arvoilla.
+\item \emph{Aina tosi} -- pätee kaikilla muuttujien arvoilla. Esimerkiksi epäyhtälöt $5 < 6$ ja $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
+\item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$ mutta ei päde kun $x = 7$.
+\item \emph{Aina epätosi} -- ei päde millään muuttujien arvoilla. Esimerkiksi epäyhtälöt $1 > 3$ ja $x < x$ eivät päde koskaan.
 \end{itemize}
 
 \subsection*{Epäyhtälöiden ratkaiseminen}
-Samoin kuin yhtälöiden ratkaisemisessa, epäyhtälöiden ratkaiseminen tarkoittaa sellaisten muuttujien arvojen, joilla epäyhtälö on tosi, selvittämistä.
+Vastaavasti kuin yhtälöiden ratkaiseminen, epäyhtälön ratkaiseminen tarkoittaa sellaisten muuttujien arvojen, joilla epäyhtälö on tosi, selvittämistä.
 
-Yhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu yhtälö on yhtäpitävä alkuperäisen kanssa. Myös epäyhtälöille löytyy vastaavia operaatioita.
+Yhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu yhtälö on yhtäpitävä alkuperäisen kanssa. Epäyhtälöille löytyy vastaavia operaatioita.
 
-Huomataan, että luvun lisääminen vain siirtää lukusuoralla kaikkia lukuja saman verran, mutta säilyttää niiden keskinäisen järjestyksen. Esimerkiksi kun lukuihin 2 ja 3 lisätään luku 4, niiden keskinäinen järjestys säilyy:
+Lukujen kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen.
 
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{6}
@@ -41,24 +41,10 @@ Huomataan, että luvun lisääminen vain siirtää lukusuoralla kaikkia lukuja s
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Yleisemmin epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
+Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
 
-Huomataan myös, että positiivisella luvulla kertoessa lukusuoran luvut vain skaalautuvat eli leviävät laajemmalle tai pakkautuvat tiukempaan, mutta niiden keskinäinen järjestys ei muutu. Esimerkiksi kun lukuja 2 ja 4 kerrotaan luvulla 2 tai $\frac{1}{2}$, niiden keskinäinen järjestys säilyy:
+Lukujen kertominen samalla positiivisella kertoimella skaalaa lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan, ja jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan. Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin.
 
-\begin{lukusuora}{-1}{10}{12}
-	\lukusuoranuolialas{2}{4}
-	\lukusuoranuolialas{4}{8}
-
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{4}{$4$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuorapiste{4}{$2\cdot 2$}
-	\lukusuorapiste{8}{$4\cdot 2$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
-
-\ \\
 \begin{lukusuora}{-1}{10}{12}
 	\lukusuoranuolialas{2}{1}
 	\lukusuoranuolialas{4}{2}
@@ -72,9 +58,23 @@ Huomataan myös, että positiivisella luvulla kertoessa lukusuoran luvut vain sk
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Yleisemmin siis epäyhtälön puolia positiivisella luvulla kertomalla saadaan yhtäpitävä epäyhtälö. Positiivisella luvulla $c$ jakaminen on sama asia kuin positiivisella luvulla $\frac{1}{c}$ kertominen, joten myös epäyhtälön puolien jakaminen positiivisella luvulla säilyttää epäyhtälön yhtäpitävänä.
+\ \\
+\begin{lukusuora}{-1}{10}{12}
+	\lukusuoranuolialas{2}{4}
+	\lukusuoranuolialas{4}{8}
 
-Kuitenkaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä, sillä kun lukuja 2 ja 5 kerrotaan luvulla $-1$, niiden suuruusjärjestys kääntyy:
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{4}{$4$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{4}{$2\cdot 2$}
+	\lukusuorapiste{8}{$4\cdot 2$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Näin ollen epäyhtälön puolet positiivisella luvulla kertomalla tai jakamalla saadaan yhtäpitävä epäyhtälö. 
+
+Sen sijaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä. Esimerkiksi kun lukuja 2 ja 5 kerrotaan luvulla $-1$, niiden suuruusjärjestys kääntyy:
 
 \begin{lukusuora}{-6}{6}{12}
 	\lukusuoranuolialas{2}{-2}
@@ -89,50 +89,33 @@ Kuitenkaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä, 
 	\lukusuorapystyviiva{0}{$0$}
 \end{lukusuora}
 
-Negatiivisen kertoimen tai jakajan tapauksessa täytyykin kääntää epäyhtälön suunta, jotta saataisiin yhtäpitävä epäyhtälö.
+Jos epäyhtälöä kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömerkin suunta täytyy kääntää, jotta saataisiin yhtäpitävä epäyhtälö: esimerkissä $2 < 5$ muuttuu muotoon $-2 > -5$.
 
-\laatikko{Epäyhtälöstä saadaan seuraavilla tavoilla yhtäpitävä epäyhtälö:
+\laatikko{Epäyhtälöstä saadaan yhtäpitävä epäyhtälö
 \begin{itemize}
-\item Molemmille puolille lisätään sama luku.
-\item Molemmat puolet kerrotaan tai jaetaan samalla positiivisella luvulla.
-\item Molemmat puolet kerrotaan tai jaetaan samalla negatiivisella luvulla ja epäyhtälön merkki käännetään.
+\item lisäämällä molemmille puolille sama lauseke,
+\item kertomalla tai jakamalla molemmat puolet samalla positiivisella luvulla tai
+\item kertomalla tai jakamalla molemmat puolet samalla negatiivisella luvulla ja kääntämällä epäyhtälömerkin suunta.
 \end{itemize}
 }
 
-On huomattava, että kuten yhtälöissäkin, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$ joka on aina tosi ja epäyhtälöstä $a < b$ tulee $0 < 0$ joka on aina epätosi.
+Kuten yhtälöiden tapauksessa, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$ joka on aina tosi ja epäyhtälöstä $a < b$ tulee $0 < 0$ joka on aina epätosi.
 
 \begin{esimerkki}
-
-Esimerkki epäyhtälön käsittelystä:
+Muokataan epäyhtälöä $-2x+4<6$ esitetyin operaatioin.
 \begin{align*}
-4&<6  \ \ \ \ \ &&\ppalkki +4 \\
-8&<10 &&\ppalkki \cdot 5 \\
-40&<50 &&\ppalkki :2 \\
-20&<25 &&\ppalkki \cdot (-3) \\
--60&>-75
+-2x+4&<6 &&\ppalkki-4 \\
+-2x&<2 &&\ppalkki:(-2) \\
+x&>-1
 \end{align*}
+Tehdyt operaatiot tuottavat yhtäpitäviä epäyhtälöitä, joten epäyhtälö $-2x+4<6$ on yhtäpitävä epäyhtälön $x>-1$ kanssa. Voidaan päätellä, että lukua $-1$ suuremmat luvut ovat täsmälleen epäyhtälön ratkaisut.
 \end{esimerkki}
-
-Yllä oleva esimerkki havainnollistaa sitä, että epäyhtälö käyttäytyy aivan kuin
-yhtälökin, kun sama laskutoimitus tehdään epäyhtälön kummallekin puolelle.
-Viimeisessä vaiheessa kuitenkin huomataan, että negatiivisella luvulla
-kerrottaessa epähtälön keskellä oleva merkki pitää kääntää toisin päin, jotta
-epäyhtälö olisi edelleen voimassa.
 
 \subsection*{Reaalilukuvälit}
 
-Epäyhtälöiden ratkaisemissa on oleellista ymmärtää, että yhtälöiden kuten $x^3-2x=0$ ratkaisuna saadaan yleensä äärellinen määrä yksittäisiä, erillisiä lukuja:
+Ratkaistaessa yhtälöitä ratkaisuksi saadaan yleensä pieni joukko lukuja. Epäyhtälöiden tapauksessa on tyypillistä, että ratkaisu on \termi[väli]{väli}: kaikki kahden luvun väliset luvut.
 
-$x^3-2x=0$
-$x(x^2-2)=0$
-$x=0$ tai $x^2=2$
-$x=0$ tai $x=\pm \sqrt{2}$
-
-Mainittu yhtälö siis pitää paikkansa vain ja ainoastaan kolmella $x$:n arvolla. Epäyhtälöiden tapauksessa on mahdollista, että epäyhtälön avulla esitetyn ehdollisen väitteen toteuttaa äärettömän monta lukua!
-
-\begin{esimerkki}
-Epäyhtälö $t \leq 2$ toteutuu, kun $t=1$, sillä $1<2$. Epäyhtälö toteutuu myös esimerkiksi $t$:n arvoilla $2, 0, -\pi, -71,8, -10^{100}, ...$ – kaikilla reaaliluvuilla, jotka ovat pienempiä tai yhtä suuria kuin 2.
-\end{esimerkki}
+...
 
 Esitetään tämä ratkaisujoukko vielä lukusuoralla:
 
