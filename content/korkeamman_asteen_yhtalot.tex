@@ -22,8 +22,8 @@ Polynomissa $x^3 - 3x^2 + x$ ei ole vakiotermiä. Voidaan siis ottaa muuttuja $x
 
 Nyt yhtälön ratkeaa tulon nollasäännöllä.
 \begin{align*}
-x^3 - 3x^2 + x=0 \\
-x(x^2 - 3x + 1)&0 \\
+x^3 - 3&x^2 + x=0 \\
+x(x^2 - 3x + 1)=0 \\
 x= 0 \quad &\text{tai} \quad x^2 - 3x + 1 = 0 \\
 \end{align*}
 
@@ -61,23 +61,37 @@ x = 17 \quad &\text{tai} \quad x =\pm 1 \\
 \end{esimerkki}
 
 \subsection*{Sijoitukset}
-Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla. Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että merkitsemällä
-lauseketta $x^2$ kirjaimella $y$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Uudesta yhtälöstä voidaan ratkaista $y$ toisen asteen yhtälön
-ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$.
+Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla.
+
+%Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että merkitsemällä lauseketta $x^2$ kirjaimella $y$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Uudesta yhtälöstä voidaan ratkaista $y$ toisen asteen yhtälön ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $2x^4+14x^2-36=0$. Sijoituksella $y = x^2$ yhtälö saa muodon $2y^2+14y-36 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = 2$ ja $y = -9$.
+Ratkaise yhtälö $2x^4+14x^2-36=0$.
 
-Alkuperäisen yhtälön ratkaisut ovat yhtälön $y = x^2$ ratkaisut muuttujan $x$ suhteen, kun $y = 2$ ja kun $y = -9$. Reaaliluvun neliö ei ole koskaan
-negatiivinen, joten ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
+\textbf{Ratkaisu:}
+
+Yhtälö voidaan kirjoittaa muodossa $2(x^2)^2+14x^2-36=0$. Kun merkitään $y=x^2$, saadaankin muuttujan $y$ yhtälö
+\[2y^2+14y-36=0.\]
+Tämä on toisen asteen yhtälö, joka osataan ratkaista toisen asteen yhtälön ratkaisukaavalla. Ratkaisut ovat $y = 2$ ja $y = -9$.
+
+Nyt on vielä selvitettävä muuttujan $x$ arvot. Koska $x^2=y$, saadaan yhtälöt $x^2=2$ ja $x^2=-9$. Reaaliluvun neliö ei kuitenkaan voi olla negatiivinen, joten ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
+
+\textbf{Vastaus:} $x=-2$ tai $x=2$
 \end{esimerkki}
 
-Yleisemmin muotoa $ax^{2n}+bx^n+c=0$ olevat yhtälöt voidaan ratkaista sijoituksella $y = x^n$ ja käyttämällä toisen asteen yhtälön ratkaisukaavaa.
+Muotoa $ax^4+bx^2+c=0$ oleva yhtälö voidaan aina ratkaista sijoituksella $y=x^2$.  Yleisemmin muotoa $ax^{2n}+bx^n+c=0$ olevat yhtälöt voidaan ratkaista sijoituksella $y = x^n$.
 
 \begin{esimerkki}
-Ratkaistaan yhtälö $x^{10}+x^5=2$. Muutetaan yhtälö perusmuotoon $x^{10}+x^5-2=0$. Tehdään sijoitus $y = x^5$. Nyt yhtälö saa muodon $y^2+y-2 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = -2$ ja $y = 1$.
+Ratkaise yhtälö $x^{10}+x^5=2$.
 
-Nyt alkuperäisen yhtälön ratkaisut ovat yhtälön $y = x^5$ ratkaisut muuttujan $x$ suhteen, kun $y = -2$ ja kun $y = 1$. Siis ratkaisut ovat $x = \sqrt[5]{-2}$ ja $x = 1$.
+\textbf{Ratkaisu:}
+
+Muutetaan yhtälö muotoon $x^{10}+x^5-2=0$ ja edelleen $(x^5)^2+x^5-2=0$. Tehdään sijoitus $y = x^5$. Nyt yhtälö saa muodon $y^2+y-2 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = -2$ ja $y = 1$.
+
+Nyt alkuperäisen yhtälön ratkaisut saadaan yhtälöistä $x^5=-2$ ja $x^5=1$. Siten ratkaisut ovat $x = \sqrt[5]{-2}$ ja $x = 1$.
+
+\textbf{Ratkaisu:} $x = \sqrt[5]{-2}$ ja $x = 1$
+
 \end{esimerkki}
 
 \Harjoitustehtavat
