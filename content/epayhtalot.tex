@@ -151,39 +151,29 @@ Tehdyt operaatiot tuottavat yhtäpitäviä epäyhtälöitä, joten epäyhtälö 
 
 \subsection*{Reaalilukuvälit}
 
-Ratkaistaessa yhtälöitä ratkaisuksi saadaan yleensä pieni joukko lukuja. Epäyhtälöiden tapauksessa on tyypillistä, että ratkaisu on \termi[väli]{väli}: kaikki kahden luvun väliset luvut.
+Ratkaistaessa yhtälöitä ratkaisuksi saadaan yleensä pieni joukko lukuja. Epäyhtälöiden tapauksessa on tyypillistä, että ratkaisu on \termi[väli]{väli}, eli kaikki kahden luvun väliset luvut.
 
-...
+Reaalilukuvälejä merkitään usein laittamalla välin ala- ja ylärajat hakasulkujen sisään. Mikäli ala- tai ylärajan ei kuulu väliin, vastaava hakasulku käännetään. Esimerkiksi $[a, b[$ tarkoittaa lukuja $x$ jotka toteuttavat kaksoisepäyhtälön $a \leq x < b$. Väliä kutsutaan \termi[suljetuksi väliksi]{suljettu väli}, mikäli ala- ja yläraja kuuluu väliin, ja \termi[avoimeksi väliksi]{avoin väli}, mikäli ala- ja yläraja eivät kuulu väliin. Jos vain toinen raja kuuluu väliin, väli on \termi[puoliavoin]{puoliavoin väli}.
 
-Esitetään tämä ratkaisujoukko vielä lukusuoralla:
+Väli voidaan piirtää lukusuoralle kahden luvun välisenä viivana. Päätepisteet merkitään täytetyllä ympyrällä mikäli luku kuuluu väliin ja muuten tyhjällä ympyrällä. Esimerkiksi väli $[a, b[$ piirretään seuraavasti:
 
-\begin{lukusuora}{-6}{10}{6}
-	\lukusuorapystyviiva{0}{$0$}
-	\lukusuoravalias{}{2}{}{2}
+\begin{lukusuora}{0}{10}{6}
+	\lukusuoravalisa{2}{8}{$a$}{$b$}
 \end{lukusuora}
 
-Edellisen esimerkkiepäyhtälön kaikkien ratkaisujen joukon voi esittää myös seuraavasti: $t\in ]-\infty, 2]$. Tällaisessa \emph{reaalilukuvälin} merkinnässä ilmoitetaan muuttujalle sen pienin ja suurin mahdollinen arvo. Alhaalta (eli lukusuoralla vasemmalta) epäyhtälön toteuttavia $t$:n arvoja ei rajoita mikään, eli $x$ voi saada mielivaltaisen pieniä arvoja. Tämän vuoksi alarajan merkintänä käytetään miinus ääretöntä.
+Jos halutaan, että väli ei ole alhaalta tai ylhäältä rajoitettu, merkitään rajaksi $-\infty$ tai $\infty$. Koska ääretön ei kuulu väliin, on sitä vastaava hakasulku käännettävä ja siten esimerkiksi väli $]{-\infty}, a[$ on avoin. 
 
-Merkinnässä hakasulkujen suunta kertoo, voiko muuttuja oikeasti saavuttaa mainitut rajat. Ääretön ei ole luku, jota voisi saavuttaa, ja tämän vuoksi hakasulje on auki ulospäin. Sen sijaan epäyhtälö $t \leq 2$ kyllä sallii sen, että $t$ saa täsmälleen arvon kaksi, jolloin hakasulje osoittaa sisäänpäin.
 
-\begin{esimerkki}
-a) Epäyhtälön $x>\pi$ antaman rajoituksen $x$:n arvoille voi esittää myös muodossa $x \in ]\pi, \infty [$. \\
-b) Väite $t \geq 3$ on yhtäpitävä väitteen $t \in [3, \infty]$ kanssa.
-c) $y<0$ tarkoittaa samaa kuin $y \in ]-\infty,0[$.
-\end{esimerkki}
+% \begin{esimerkki}
+% 
+% a) Epäyhtälö $2<x<10$ vaatii, että $x$ saa arvoja kahden ja kymmenen väliltä, mutta se ei koskaan saa täsmälleen näitä reuna-arvoja. Kyseessä on avoin väli kahdesta kymmeneen, $]2,10[$. Annetulle epäyhtälölle yhtäpitävä ilmaisu on $x \in ]2,10[$. \\
+% b) Epäyhtälö $0\leq y \leq 2$ rajaa muuttujan $y$ välille suljetulle välille $[0,2]$. Väli on suljettu, koska $y$ voi myös saada täsmälleen arvot $0$ ja $2$. \\
+% c) Joskus kirjallisuudessa näkee äärettömyyssymbolin käyttöä myös kaksoisepäyhtälöissä, esimerkiksi $3<x<\infty $, mutta ilmaistaan yleisemmin muodossa $x \in ]3,\infty[$. Kyseessä on avoin väli. \\
+% d) Epäyhtälöt $-100<k\leq 0$ ja $u\leq 90$ ovat puoliavoimia välejä, koska ne rajaavat muuttujan yhtäsuuruuden avulla vain toiselta puolelta. \\
+% e) Kaksoisepäyhtälö $\frac{1}{5}\geq x>-\sqrt{3}$ tarkoittaa samaa kuin kaksoisepäyhtälö $-\sqrt{3}<x\leq \frac{1}{5}$. Kaksoisepäyhtälö vaatii, että muuttujalle $x$ pätee erikseen sekä epäyhtälö $-\sqrt{3}<x$ että $x\leq \frac{1}{5}$.
+% \end{esimerkki}
 
-Välejä kutsutaan joko \emph{avoimiksi}, \emph{puoliavoimiksi} tai \emph{suljetuiksi} sen perusteella, saavuttaako muuttuja annetut rajat. Jos muuttujaa on rajattu sekä ala- että yläpuolelta, päädytään käyttämään niin sanottua \emph{kaksoisepäyhtälöä}. Tällöin epäyhtälössä esiintyvät luvut kirjoitetaan usein vasemmalta oikealle kasvavaan järjestykseen.
-
-\begin{esimerkki}
-
-a) Epäyhtälö $2<x<10$ vaatii, että $x$ saa arvoja kahden ja kymmenen väliltä, mutta se ei koskaan saa täsmälleen näitä reuna-arvoja. Kyseessä on avoin väli kahdesta kymmeneen, $]2,10[$. Annetulle epäyhtälölle yhtäpitävä ilmaisu on $x \in ]2,10[$. \\
-b) Epäyhtälö $0\leq y \leq 2$ rajaa muuttujan $y$ välille suljetulle välille $[0,2]$. Väli on suljettu, koska $y$ voi myös saada täsmälleen arvot $0$ ja $2$. \\
-c) Joskus kirjallisuudessa näkee äärettömyyssymbolin käyttöä myös kaksoisepäyhtälöissä, esimerkiksi $3<x<\infty $, mutta ilmaistaan yleisemmin muodossa $x \in ]3,\infty[$. Kyseessä on avoin väli. \\
-d) Epäyhtälöt $-100<k\leq 0$ ja $u\leq 90$ ovat puoliavoimia välejä, koska ne rajaavat muuttujan yhtäsuuruuden avulla vain toiselta puolelta. \\
-e) Kaksoisepäyhtälö $\frac{1}{5}\geq x>-\sqrt{3}$ tarkoittaa samaa kuin kaksoisepäyhtälö $-\sqrt{3}<x\leq \frac{1}{5}$. Kaksoisepäyhtälö vaatii, että muuttujalle $x$ pätee erikseen sekä epäyhtälö $-\sqrt{3}<x$ että $x\leq \frac{1}{5}$.
-\end{esimerkki}
-
-Seuraavaan taulukkoon on koottu esimerkinomaisesti reaalilukuvälien olennainen käsitteistö ja merkinnät. Lukusuoraesityksessä tyhjä ympyrä merkitsee, että päätepiste ei kuulu kyseiselle välille ja täytetty ympyrä taasen sitä, että väli sisältää annetun rajan.
+Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö ja merkinnät.
 
 \begin{tabular}{|c|p{2.5cm}|p{2.5cm}|c|}
 \hline
@@ -191,19 +181,19 @@ Välin nimitys & epäyhtälö\-merkintä & Joukko-opillinen merkintä & Esitys l
 \hline
 Avoin väli & $-3<x<5$ & $x \in ]-3, 5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3<x \leq 5$ & $x \in ]-3, 5]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $-3<x \leq 5$ & $x \in {]-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3\leq x < 5$ & $x \in [-3, 5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $-3\leq x < 5$ & $x \in {[-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Suljettu väli & $-3\leq x \leq 5$ & $x \in [-3, 5]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Suljettu väli & $-3\leq x \leq 5$ & $x \in {[-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $-3\leq x$ & $x \in ]-3, \infty[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{}{$-3$}{}\end{lukusuora}\\
+Puoliavoin väli & $-3\leq x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{}{$-3$}{}\end{lukusuora}\\
 \hline
-Avoin väli & $-3<x$ & $x \in ]-3, \infty[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{}{$-3$}{}\end{lukusuora}\\
+Avoin väli & $-3<x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{}{$-3$}{}\end{lukusuora}\\
 \hline
-Puoliavoin väli & $x \leq 5$ & $x \in ]-\infty, 5]$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $x \leq 5$ & $x \in {]{-\infty}, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
 \hline
-Avoin väli & $x < 5$ & $x \in ]-\infty, 5[$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
+Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
 \hline
 \end{tabular}
 
