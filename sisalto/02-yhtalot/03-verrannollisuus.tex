@@ -1,0 +1,209 @@
+\chapter{Suoraan ja kääntäen verrannollisuus}
+
+Kaksi muuttujaa voivat riippua toisistaan monin eri tavoin. Tavallisia
+riippuvuuden tyyppejä ovat suoraan ja kääntäen verrannollisuus.
+
+\laatikko{
+Kaksi muuttujaa $x$ ja $y$ ovat suoraan verrannolliset, jos toinen saadaan
+toisesta kertomalla se jollakin vakiolla, eli $y = kx$. Vakiota $k$
+kutsutaan \emph{verrannollisuuskertoimeksi}.}
+
+Jos suureet $x$ ja $y$ ovat suoraan verrannolliset, niin tätä merkitään $x\sim y$ tai $x\propto y$.
+
+Suoraan verrannollisuus voidaan tunnistaa esimerkiksi laskemalla muuttujien
+suhde ja toteamalla, että se on muuttujista riippumaton vakio.
+
+\begin{esimerkki}
+Banaanien kilohinta on $2,00$ euroa. Seuraavassa taulukossa on
+banaanien paino\footnote{Fysikaalisesti kyse on massasta, mutta
+arkikielessä käytetään sanaa paino.}, jonka saa ostettua tietyllä rahamäärällä:
+\begin{center} 
+\begin{tabular}{|l|r|r|}
+\hline
+Hinta (euroa) & Paino (kg) & Hinta/paino (euroa/kg) \\
+\hline
+$1,00$ & $0,50$ & $2,00$ \\
+$2,00$ & $1,00$ & $2,00$ \\
+$3,00$ & $1,50$ & $2,00$ \\
+$4,00$ & $2,00$ & $2,00$ \\
+\hline
+\end{tabular}
+\end{center}
+Hinnan ja painon suhde on vakio, $2,00$ euroa/kg, joten ostettujen
+banaanien paino ja niihin käytetty rahamäärä ovat suoraan verrannolliset.
+\end{esimerkki}
+
+Suoraan verrannollisuutta voidaan kuvata myös niin, että jos
+toinen muuttujista kaksinkertaistuu, niin toinenkin kaksinkertaistuu.
+Samoin jos toisen muuttujan arvo puolittuu, toisenkin arvo puolittuu.
+
+Jos suoraan verrannollisista muuttujista piirretään kuvaaja, pisteet
+asettuvat suoralle:
+
+%\missingfigure{Kuva, johon piirretty vaaka-akselille käytetty rahamäärä
+%ja pystyakselille ostettujen banaanien paino.}
+
+\begin{center}
+\begin{kuvaajapohja}{1.5}{0}{5}{0}{3}
+\kuvaajapiste{1}{0.5}
+\kuvaajapiste{2}{1}
+\kuvaajapiste{3}{1.5}
+\kuvaajapiste{4}{2}
+\kuvaaja{0.5*x}{}{black}
+\node at (8.2,0) {euroa};
+\node at (0,4.8) {kg};
+\end{kuvaajapohja}
+\end{center}
+
+Suoraan verrannollisia muuttujia ovat myös esimerkiksi
+\begin{itemize}
+    \item aika ja kuljettu matka, kun liikutaan vakionopeudella, tai
+    \item kappaleen massa ja painovoiman kappaleeseen aiheuttama voima.
+\end{itemize}
+
+Suoraan verrannollisuutta monimutkaisempi riippuvuus on kääntäen
+verrannollisuus.
+
+\laatikko{
+Muuttujat $x$ ja $y$ ovat kääntäen verrannolliset, jos toinen saadaan toisesta
+jakamalla jokin vakio sillä, eli $y = \frac{a}{x}$.
+}
+
+Kääntäen verrannollisuus voidaan tunnistaa esimerkiksi
+kertomalla muuttujien arvoja keskenään ja huomaamalla,
+että tulo on muuttujista riippumaton vakio.
+
+\begin{esimerkki}
+Nopeus ja matkaan tarvittava aika ovat kääntäen verrannolliset.
+Jos kuljettavana matkana on $10$ km, voidaan nopeudet ja matka-ajat
+kirjoittaa taulukoksi:
+\begin{center} 
+\begin{tabular}{|l|r|r|}
+\hline
+Nopeus (km/h) & Matka-aika (h) & Nopeus$\cdot$matka-aika (km) \\
+\hline
+$5$ & $2$ & $10$ \\
+$10$ & $1$ & $10$ \\
+$12$ & $0,8$ & $10$ \\
+\hline
+\end{tabular}
+\end{center}
+Tulo on aina $10$ km, joten nopeus ja matka-aika ovat kääntäen verrannolliset.
+\end{esimerkki}
+
+Kääntäen verrannollisuutta voidaan kuvata myös niin, että jos
+toinen muuttujista kaksinkertaistuu, toinen puolittuu.
+
+Jos kääntäen verrannollisista muuttujista piirretään kuvaaja, pisteet
+muodostavat laskevan käyrän:
+
+%\missingfigure{Kuva, johon on piirretty matka-aika ja nopeus (yllä olevan
+%taulukon mukaisesti).}
+
+% FIXME sellainen käyrätemplate, joka toimii myös silloin, jos toiseen akseliin
+% FIXME tarvitaan eri jakoväli kuin toiseen.
+% FIXME Myös akseleiden nimeäminen olisi kiva olla templatessa.
+\begin{center}
+\begin{kuvaajapohja}{0.8}{0}{13}{0}{5}
+\kuvaajapiste{5}{2}
+\kuvaajapiste{10}{1}
+\kuvaajapiste{12}{0.8}
+\kuvaaja{10/x}{}{black}
+\node at (10.6,0) {h};
+\node at (0,4.3) {km/h};
+\end{kuvaajapohja}
+\end{center}
+
+
+Kääntäen verrannollisia muuttujia ovat myös esimerkiksi
+\begin{itemize}
+    \item kaivamistyön suorittamiseen kuluva aika ja työntekijöiden lukumäärä.
+\end{itemize}
+
+\section*{Tehtäviä}
+
+\begin{tehtava}
+    Tutkitaan seuraavia muuttujapareja:
+    \begin{enumerate}
+        \item Neliön sivun pituus ja neliön pinta-ala.
+        \item Kuljettu matka ja kulunut aika, kun nopeus on vakio.
+        \item Dieselin hinta ja 50 eurolla saatavan dieselin määrä.
+        \item Irtomyynnistä ostetun suolakurkkuerän paino ja hinta.
+    \end{enumerate}
+    Miten toinen muuttuja muuttuu ensimmäisen kaksinkertaistuessa tai puolittuessa? Ovatko muuttujat suoraan tai kääntäen verrannolliset vai eivät kumpaakaan?
+    \begin{vastaus}
+        Vastaus:
+        \begin{enumerate}
+            \item Eivät ole.
+            \item Suoraan verrannolliset.
+            \item Kääntäen verrannolliset.
+            \item Suoraan verrannolliset.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Ratkaise
+\begin{enumerate}
+\item $ \frac{x}{3} = 1$
+\item $ \frac{8}{x} = 2$
+\item $ \frac{7}{x} = \frac{16}{8}$
+\item $ \frac{x}{3} = \frac{1}{7}$
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}
+\item $x= \frac{1}{3}$
+\item $y= \frac{1}{4}$
+\item $x= \frac{7}{2}$
+\item $x= \frac{3}{7}$
+\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Muodosta seuraavia tilanteita kuvaavat yhtälöt. 
+%Voit käyttää vakion merkkinä esimerkiksi $c$:tä. %%%miksei vakiintunutta k:ta?
+\begin{enumerate}
+\item Kultakimpaleen arvo ($x$) on suoraan verrannollinen sen massaan ($m$),
+eli mitä painavampi kimpale on, sitä enemmän siitä saa rahaa.
+\item Aidan maalaamiseen osallistuvien ihmisten määrä {$x$} on kääntäen verrannollinen maalaamiseen kuluvaan aikaan ($t$). Toisin sanoen, mitä
+enemmän maalaajia, sitä nopeammin homma on valmis.
+\item Planeettojen toisiinsa aiheuttama vetovoima ($F$) on suoraan verrannollinen planeettojen massoihin ($m_1$ ja $m_2$) ja kääntäen verrannollinen niiden välisen etäisyyden ($r$) neliöön.
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}
+\item $ \frac{x}{m}=c$
+\item $ xt=c $
+\item $ \frac{Fr^2}{m_1+m_2}=c$
+\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Rento pyöräilyvauhti kaupunkiolosuhteissa on noin $20$~km/h. Lukiolta urheiluhallille on matkaa $7$~km. Kuinka monta minuuttia kestää arviolta pyöräillä lukiolta urheiluhallille?
+\begin{vastaus}
+Viiden minuutin tarkkuudella $20$ min.
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Isä ja lapset ovat ajamassa mökille Sotkamoon. On ajettu jo neljä
+    viidesosaa matkasta, ja aikaa on kulunut kaksi tuntia. ''Joko ollaan perillä?''
+    lapset kysyvät takapenkiltä. Kuinka pitkään vielä arviolta kuluu, ennen
+    kuin ollaan mökillä?
+    
+    \begin{vastaus}
+        Vastaus: 30 min
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Äidinkielen kurssilla annettiin tehtäväksi lukea 300-sivuinen romaani.
+    Eräs opiskelija otti aikaa ja selvitti lukevansa vartissa seitsemän sivua.
+    Kuinka monta tuntia häneltä kuluu koko romaanin lukemiseen, jos
+    taukoja ei lasketa?
+    
+    \begin{vastaus}
+        Vastaus: 642 minuuttia eli 10 h 42 min.
+    \end{vastaus}
+\end{tehtava}

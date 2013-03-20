@@ -1,0 +1,263 @@
+\chapter{Desimaaliluvut}
+
+\emph{Desimaaliluvut} on \emph{kymmenjärjestelmään} perustava tapa merkitä rationaalilukuja. Niillä voi merkitä myös irrationaalilukujen \emph{likiarvoja}.
+
+$123,456$ on esimerkki desimaaliluvusta.
+
+\begin{itemize}
+	\item $123$ on sen \emph{kokonaisosa}.
+	\item Kokonaisluku erotetaan loppuosasta \emph{desimaalierottimella}, joka on suomen kielessä pilkku (,).
+	\footnote{Useissa englanninkielisissä maissa käytetään desimaalierottimena pistettä (.) ja pilkku on tuhaterotin. Esimerkiksi yhdysvaltalaisessa kirjassa merkintä \$ 1,000.50 tarkoittaa tuhatta dollaria ja 50 senttiä. Suomen kielessä tuhaterotin on välilyönti.}
+	\item Osaa $456$ kutsutaan desimaaliluvun \emph{loppuosaksi}.
+\end{itemize}
+
+\laatikko{
+
+Esimerkkinä annettu desimaaliluku tulkitaan seuraavasti:
+\begin{equation*}
+123,456 = 1 \cdot 10^2 + 2 \cdot 10^1 + 3 \cdot 10^0 + 4 \cdot 10^{-1} + 5 \cdot 10^{-2} + 6 \cdot 10^{-3}
+\end{equation*}
+
+%\missingfigure{Tähän kuva siitä, kuinka desimaaliluvun numerot vastaavat kymmenen potensseja}
+\begin{center}
+ \includegraphics{01-luvut/kuvia/Kuva5-1-desimaali-potenssit.pdf}
+\end{center}
+
+
+}
+
+Kymmenjärjestelmä saa nimensä siitä, että jokainen luvussa esiintyvä numero kertoo sen paikkaa vastaavien kymmenen potenssien määrän.
+
+\subsection*{Murtoluvun muuttaminen desimaaliluvuksi}
+
+Murtoluku on tapa merkitä jakolaskua. Jakolaskun tuloksen esittämiseksi desimaalilukuna
+käytetään peruskoulun alaluokilla opetettavaa jakokulmaa. Jakokulman ajatus on yksinkertaisesti kokeilla, kuinka monta jakajaa, sen kymmenesosaa, sadasosaa ja niin
+edelleen jaettavaan mahtuu. Jakokulmat voi laskea käsin, mutta laskin tekee saman nopeammin.
+
+\begin{esimerkki}
+Muutetaan $\frac{21}{4}$ desimaaliluvuksi laskemalla jakolasku $21 : 4$ jakokulmassa.
+
+\[ 
+\begin{array}{cccccc}
+ & \underline{ \ \ } & \underline{5}, & \underline{2} & \underline{5} \\
+ 4 & \!\!|\,2 & 1, & 0 & 0 \\
+ \underline{-} & \underline{2}& \underline{0} \\
+ & & 1 &0 \\
+ & \underline{-} &\underline{ \ \ }  & \underline{8} \\
+ & & & 2 & 0 \\
+ & & \underline{-} & \underline{2} & \underline{0} \\
+ & &  & & 0
+\end{array}
+\]
+Siis $\dfrac{21}{4} = 5,25$.
+\end{esimerkki}
+
+Vastaavasti laskien saadaan $\dfrac{3}{11}=0,272727\ldots \ $ :
+\[ 
+\begin{array}{cccccc}
+ & \underline{ 0}, & \underline{2} & \underline{7} & \underline{2} & 
+ \underline{\ldots} \\
+ 11 & \!\!|\,3, & 0 & 0 & 0 & \ldots \\
+ \underline{-} & \underline{2}& \underline{2} \\
+ & & \boldsymbol{8} &0 \\
+ & \underline{-} &\underline{ 7 }  & \underline{7} \\
+ & & & \boldsymbol{3} & 0 \\
+ & & \underline{-} & \underline{2} & \underline{2} \\
+ & &  & & \boldsymbol{8} & 0 \\
+ & & & & & \ddots
+\end{array}
+\]
+Koska jakojäännökset 3 ja 8 toistuvat loputtomiin, tämä desimaaliluku
+ei ole päättyvä. Siinä on \emph{jakso}: numerosarja 27 toistuu.
+Jaksoa voidaan merkitä yläviivan avulla seuraavasti:
+\[ 0,27272727\ldots = 0,\overline{27}. \]
+
+{\bf Kaikkien murtolukujen desimaaliesitykset ovat joko päättyviä tai jaksollisia.}
+Vähennyslaskuissa syntyvät jakojäännökset ovat nimittäin aina jakajaa pienempiä, ja siksi
+ne alkavat väistämättä toistaa itseään, ellei jako jossakin vaiheessa mene tasan.
+Koska eri vaihtoehtoja jakojäännöksiksi on yksi jakajaa vähemmän,
+jakson pituus on suurimmillaan yhden verran jakajaa pienempi. Esimerkiksi luvulla
+$\dfrac{1}{7}=0,\overline{142857}$ jakso on pisin mahdollinen, $7-1=6$ numeron mittainen.
+
+\laatikko{
+Tässä on joitain murtolukujen desimaaliesityksiä, jotka on hyvä osata
+\begin{itemize}
+	\item $ \frac{1}{10} = 0,1$
+	\item $ \frac{1}{100} = 0,01$
+	\item $ \frac{1}{2} = 0,5$
+	\item $ \frac{1}{4} = 0,25$
+	\item $ \frac{3}{4} = 0,75$
+\end{itemize}
+}
+
+\subsection*{Desimaaliluvun muuttaminen murtoluvuksi}
+
+\subsubsection*{Päättyvät desimaaliluvut}
+
+Päättyvät desimaaliluvut voidaan muuttaa murtoluvuiksi muuttamalla kukin
+desimaali erikseen murtoluvuksi ja laskemalla syntyneet luvut yhteen.
+
+\begin{esimerkki}
+$21,37 = 21+ \frac{3}{10}+\frac{7}{100} =
+\frac{2100}{100}+\frac{30}{100}+\frac{7}{100}
+ = \frac{2100+30+7}{100} = \frac{2137}{100}.$
+\end{esimerkki}
+
+Tämä on turhan työlästä, ja paljon helpommalla päästäänkin kun lavennetaan luku ''niin monella kympillä, kuin siinä on numeroita desimaalipilkun jälkeen''. Täsmällisemmin sanottuna $10^n$:llä, jossa $n$ on pilkun jälkeen tulevien numeroiden määrä.
+
+\begin{esimerkki}
+$21,47 = 21,37 \cdot  \frac{100}{100} = \frac{21,37 \cdot 100}{100} = \frac{2137}{100}$
+\end{esimerkki}
+
+%\begin{esimerkki}
+%$0,007 = 0,007 \cdot 1 = 0,007 \cdot \frac{10^3}{10^3} = \frac{0,007 \cdot 1000}{1000} = %\frac{7}{1000}$
+%\end{esimerkki}
+
+%Menetelmän toimivuus kaikkien desimaalilukujen tapauksessa voidaan todistaa %tarkastelemalla desimaaliluvun määritelmää, mutta jätetään tässä tekemättä.
+
+\subsubsection*{Jaksolliset desimaaliluvut}
+
+Minkä tahansa jaksollisen desimaaliluvun voi muuttaa murtoluvuksi seuraavalla tempulla.
+Muutetaan esimerkiksi $0,575757\ldots$ murtoluvuksi. Jos merkitään
+\[
+\begin{array}{rcll}
+x &=& \ \, 0,575757 \ldots\ , &\textrm{saadaan sadalla kertomalla} \\
+100x &=& 57,575757 \ldots \ , &\textrm{joiden erotuksena} \\
+100x - x &=& 57,57 \ldots - 0,57 \ldots \ , & \textrm{eli} \\
+99x &=& 57, & \textrm{josta saadaan} \\
+x &=& \frac{57}{99} = \frac{19}{33}.
+\end{array}
+\]
+Siis $0,575757\ldots = \frac{19}{33}$. Menetelmä toimii kaikille jaksollisille
+desimaaliluvuille: kerrotaan vain sopivalla luvun 10 potenssilla, jotta jakso
+katoaa vähennyslaskussa.
+
+\laatikko{
+Nämä kannattaa muistaa:
+\begin{itemize}
+	\item $ \frac{1}{3} = 0,3333 \ldots$
+	\item $ \frac{2}{3} = 0,6666 \ldots$
+\end{itemize}
+}
+
+\section*{Tehtäviä}
+
+\begin{tehtava}
+Laske ja totea murtolukujen 
+ $ \frac{1}{10} = 0,1$ , 
+$ \frac{1}{100} = 0,01$ , 
+ $ \frac{1}{2} = 0,5$ , 
+$ \frac{1}{4} = 0,25$ , 
+$ \frac{3}{4} = 0,75$
+desimaaliesitysten paikkansapitävyys.
+\end{tehtava}
+
+\begin{tehtava}
+Muuta murtoluvuksi.
+%selkeys voitti täsmällisyyden ei siis murtolukumuotoon
+	\begin{enumerate}[a)]
+		\item $43{,}532$
+		\item $5{,}031$
+		\item $0{,}23$
+		\item $0{,}3002$
+		\item $0{,}101$
+	\end{enumerate}
+\begin{vastaus}
+	\begin{enumerate}[a)]
+		\item $ \frac{43532}{1000}$
+		\item $ \frac{5031}{1000}$
+		\item $ \frac{23}{100}$
+		\item $ \frac{3002}{1000}$
+		\item $ \frac{101}{1000}$
+	\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}%sovteht tai vaikea tehtävä? sivevennyksen takia
+Muuta murtoluvuksi ja sievennä.
+%selkeys voitti täsmällisyyden ei siis murtolukumuotoon
+	\begin{enumerate}[a)]
+		\item $0{,}01$
+		\item $0{,}0245$
+		\item $0{,}004$
+		\item $0{,}001004$
+	\end{enumerate}
+\begin{vastaus}
+	\begin{enumerate}[a)]
+		\item $ \frac{1}{100}$
+		\item $ \frac{49}{200}$
+		\item $ \frac{1}{250}$
+		\item $ \frac{251}{250~000}$
+	\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Muuta murtoluvuksi.
+	\begin{enumerate}[a)]
+		\item $0,77777\ldots$
+		\item $0,151515 \ldots$
+		\item $2,05\overline{631}$
+	\end{enumerate}
+\begin{vastaus}
+		a) $\frac{7}{9}$ \ \
+		b) $\frac{15}{99}=\frac{5}{33}$ \ \
+		c) $\frac{205\ 426}{99\ 900} = \frac{102\ 713}{49\ 950}$
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	\begin{enumerate}[a)]
+		\item
+	\end{enumerate}
+\begin{vastaus}
+	\begin{enumerate}[a)]
+		\item
+	\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\laatikko{
+Joissain yhteyksissä käytetään muitakin \emph{lukujärjestelmiä} kuin kymmenjärjestelmää. Esimerkiksi tietokoneet käyttävät kaksikantajärjestelmää eli \emph{binäärijärjestelmää}. Binäärijärjestelmässä jokainen luvun numero kertoo sen paikkaa vastaavan kakkosen potenssien määrän kymmenen potenssien sijasta.
+
+Binäärijärjestelmässä esitetty luku merkitään yleensä kirjoittamalla pieni kakkonen luvun jälkeen, esim. $10,01_2$.
+}
+
+\begin{esimerkki}
+$10,01_2 = 1 \cdot 2^1 + 0 \cdot 2^0 + 0 \cdot 2^{-1} + 1 \cdot 2^{-2} = 2,25_{10}$
+\end{esimerkki}
+
+\section*{Tehtäviä}
+
+\begin{tehtava}
+Muunna seuraavat binääriluvut kymmenjärjestelmään.
+	\begin{enumerate}[a)]
+		\item $101,0_2$
+		\item $1,00101_2$
+		\item $100101,1101_2$
+	\end{enumerate}
+\begin{vastaus}
+	\begin{enumerate}[a)]
+		\item $5,0_{10}$
+		\item $1,15625_{10}$
+		\item $37.8125_{10}$
+	\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Muunna seuraavat luvut binäärijärjestelmään.
+	\begin{enumerate}[a)]
+		\item $7,0_{10}$
+		\item $2,5_{10}$
+		\item $11,1875_{10}$
+	\end{enumerate}
+\begin{vastaus}
+	\begin{enumerate}[a)]
+		\item $111,0_2$
+		\item $10,1_2$
+		\item $1011,0011_2$
+	\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+

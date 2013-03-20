@@ -1,0 +1,151 @@
+\chapter{Potenssifunktio}
+
+Kahden muuttujan välinen riippuvuus ei monesti ole suoraan
+tai kääntäen verrannollista. Potenssifunktion käyttäminen on eräs
+keino kuvata tällaisia riippuvuuksia.
+
+\laatikko{Potenssifunktioita ovat muotoa
+$ f(x) = a x^n $ olevat funktiot, jossa $a \neq 0$. }
+
+Eksponenttia $n$ kutsutaan potenssifunktion \emph{asteluvuksi}
+tai \emph{asteeksi}.
+Potenssifunktion eksponentti voi olla mikä tahansa reaaliluku, mutta
+rajoitumme ensin käsittelemään tapauksia, jossa $n = 1, 2, 3\ldots $.
+
+\begin{esimerkki}
+Jos neliön sivun pituus on $x$, neliön pinta-ala voidaan laskea
+funktiolla $A(x)=x^2$.
+Esimerkiksi jos $x = 3$ cm, saadaan neliön pinta-alaksi $A(x) = 9$ cm$^2$.
+Vastaavasti kuutiolle: jos $x$ kuvaa kuution särmän pituutta, funktiolla
+$V(x)=x^3$ voidaan laskea kuution tilavuus. Sekä $A(x)$ että $V(x)$ ovat
+esimerkkejä potenssifunktioista.
+\end{esimerkki}
+
+Potenssifunktion aste vaikuttaa funktion kuvaajan muotoon:
+\begin{itemize}
+  \item
+Jos aste on parillinen, kuvaaja on U-kirjaimen muotoinen ja funktio
+saa $a$:n merkistä riippuen joko pelkästään positiivisia tai pelkästään
+negatiivisia arvoja.
+  \item
+Jos aste on pariton, kuvaaja muodostaa ''kaksoismutkan'' ja potenssifunktio
+saa sekä positiivisia että negatiivisia arvoja.
+\end{itemize}
+
+%\missingfigure{Potenssifunktioiden kuvaajat -- yksi parillisilla potensseilla ja toinen parittomilla (kerroin a positiivinen).}
+\begin{center}
+\begin{kuvaajapohja}{0.5}{-6}{6}{-6}{6}
+\kuvaaja{0.2*x**2}{$\frac{1}{5}x^2$}{red}
+\kuvaaja{0.2*x**3}{$\frac{1}{5}x^3$}{blue}
+\end{kuvaajapohja}
+\end{center}
+Potenssifunktion tärkeitä erikoistapauksia ovat asteluvut $n = 1$ ja $n = -1$.
+Kun $n = 1$, saadaan edellisessä luvussa esitelty suoraan verrannollinen
+riippuvuus $x$:n ja $f(x)$:n välillä, ja kun $n = -1$, muuttuja $x$ ja
+funktion arvo $f(x)$ ovat kääntäen verrannolliset.
+
+Potenssifunktiota voidaan laajentaa sallimalla eksponentille $n$
+myös negatiiviset arvot.
+Tällöin funktion muoto muuttuu merkittävästi. Funktio ei myöskään ole
+enää määritelty kohdassa $x = 0$, vaan funktion arvot
+''räjähtävät äärettömyyteen'', kun y-akselia lähestytään:
+
+%\missingfigure{Potenssifunktioiden kuvaajat - yksi potenssilla -1 ja toinen potenssilla -2.}
+
+\begin{center}
+\begin{kuvaajapohja}{0.5}{-6}{6}{-6}{6}
+%\kuvaaja{x**(-1)}{$\frac{1}{5}x^2$}{red}
+%\kuvaaja{x**(-2)}{$\frac{1}{5}x^3$}{blue}
+% FIXME: alla oleva puukotus, että saa äärettömyyteen menevät käppyrät piirtymään oikein
+\newcommand{\kuvaajaneg}[3]{
+\draw[smooth,color=#3,thick,domain=\kuvaajaminx:-0.01,scale=\kuvaajascale,samples=300] plot function{(#1) < \kuvaajamaxy ? ((#1) > \kuvaajaminy ? (#1) : NaN) : NaN} node[right] {#2};
+}
+\newcommand{\kuvaajapos}[3]{
+\draw[smooth,color=#3,thick,domain=0.01:\kuvaajamaxx,scale=\kuvaajascale,samples=300] plot function{(#1) < \kuvaajamaxy ? ((#1) > \kuvaajaminy ? (#1) : NaN) : NaN} node[right] {#2};
+}
+\kuvaajaneg{x**(-1)}{$x^{-1}$}{red}
+\kuvaajaneg{x**(-2)}{}{blue}
+
+\kuvaajapos{x**(-1)}{}{red}
+\kuvaajapos{x**(-2)}{$x^{-2}$}{blue}
+
+\end{kuvaajapohja}
+\end{center}
+
+%Potenssifunktiota käsitellään samalla lailla riippumatta eksponentin
+%etumerkistä. Huomaa kuitenkin, että $\frac{1}{x^n} \neq 0 $ kaikilla $x$:n %arvoilla.
+
+%Tästä alaspäin on potenssiyhtälöitä, jotka varmaan menee jo päälle
+%aiemmin käydyn asian kanssa. Sekaannus meikäläisen osalta... -Matti
+
+\section*{Tehtäviä}
+
+\subsubsection*{Opi perusteet}
+
+\begin{tehtava}
+Mikä on seuraavien potenssifunktioiden aste?
+\begin{enumerate}[a)]
+\item $f(x) = x$
+\item $f(x) = 5x^5$
+\item $f(x) = \frac{1}{2x}$
+\item $f(x) = x^{-2}$
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}
+\item $1$
+\item $5$
+\item $-1$
+\item $-2$
+\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Olkoon $f(x)=x^{-3}$. Laske
+\begin{enumerate}[a)]
+\item $f(1)$
+\item $f(2)$
+\item $f(-\frac{1}{3})$
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}
+\item $1$
+\item $\frac{1}{8}$
+\item $-27$
+\end{enumerate}
+\end{vastaus}
+\end{tehtava}
+
+\subsubsection*{Hallitse kokonaisuus}
+
+\begin{tehtava}
+Olkoon $f(x)=x^2$. Millä $x$:n arvoilla
+\begin{enumerate}[a)]
+\item $f(x)=4$
+\item $f(x)=25$
+\item $f(x)=121$
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}
+\item $2$
+\item $5$
+\item $11$
+\end{enumerate}
+\end{vastaus}
+
+\end{tehtava}
+\begin{tehtava}
+Minkä kahden kokonaisluvun välissä yhtälön $x^2 = 12$ ratkaisu on?
+\begin{vastaus}
+Ratkaisu on lukujen $3$ ja $4$ välissä.
+\end{vastaus}
+\end{tehtava}
+
+\subsubsection*{Sekalaisia tehtäviä}
+
+\begin{tehtava}
+Kuution tilavuus särmän pituuden funktiona on $f(x) = x^3$. Jos kuution tilavuus on $64$, mikä on särmän pituus?
+\begin{vastaus}
+Särmän pituus on $4$.
+\end{vastaus}
+\end{tehtava}
