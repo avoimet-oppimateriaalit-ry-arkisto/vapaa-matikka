@@ -87,7 +87,7 @@
 % Dataa ulkoasusta, komento \pagevalues
 \usepackage{layouts}
 
-\input{config/otsikkotyylit}
+
 
 % Tukea pdf(la)texin microtypes-laajennoksille. Pakko olla
 % fonttimäärityksien jälkeen.
@@ -186,10 +186,7 @@
 \theoremstyle{definition}
 \newtheorem{theorem}{Teoreema}
 
-\input{config/laatikot}
 
-% Esimerkeille oma komento http://tex.stackexchange.com/questions/21227/example-environment
-\input{config/esimerkki}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % alatunnisteen asettaminen, sivunumerot ym.
@@ -248,7 +245,7 @@
 %       \listoftodos            % Todo-merkintöjen 'sisällysluettelo'
 \usepackage{todonotes}
 
-\usepackage{config/oppikirjamaraton}
+
 
 \usepackage{enumerate}
 
@@ -271,17 +268,9 @@
 \newif\iftools
 \toolstrue
 
-% kuvaajapohja-ympäristö.
-\input{config/kuvaaja}
+% Esimerkeille oma komento http://tex.stackexchange.com/questions/21227/example-environment
 
-% lukusuora-ympäristö
-\input{config/lukusuora}
-
-% merkkikaavio-ympäristö
-\input{config/merkkikaavio}
-
-% muut makrot yms
-\input{config/muut_makrot}
+\usepackage{../vapaa-matikka}
 
 % luvut muodosta "Luku N Nimi" muotoon "N Nimi"
 \addto\captionsfinnish{
@@ -293,27 +282,3 @@
 \Opensolutionfile{ans}[ans1] %Answers-pakettiin!
 
 \selectlanguage{finnish}
-
-\begin{titlepage}
-	\input{config/kansilehti}
-\end{titlepage}
-
-%\pagevalues
-
-%% Siistitään sisällysluettelo - tämä rikkoo listoftodosin joten vasta tässä.
-%\setcounter{tocdepth}{0}
-%
-%% Esipuheesta "Luku 0" ja numerointi siitä eteenpäin
-%\setcounter{chapter}{-1}
-
-\input{index}
-
-\end{document}
-
-% -*- coding: utf-8 -*-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% coding: utf-8
-%%% End:

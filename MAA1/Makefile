@@ -1,3 +1,3 @@
-TARGET = MAA2
+TARGET = MAA1
 
 include ../Makefile.include
