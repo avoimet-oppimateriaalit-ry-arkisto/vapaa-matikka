@@ -676,4 +676,42 @@
 %   {\normalfont\normalsize\bfseries\rmfamily}{\theparagraph}{1em}{}
 % 
 % \titleformat{\subparagraph}[runin]
-%   {\normalfont\normalsize\bfseries\rmfamily}{\thesubparagraph}{1em}{}  
+%   {\normalfont\normalsize\bfseries\rmfamily}{\thesubparagraph}{1em}{}
+
+% ===== KANSILEHTI =====
+
+\newcommand{\kansilehti}[2]{
+\begin{titlepage}
+\vspace*{3cm}
+
+\begin{center}
+    \sffamily
+    \begin{doublespace}
+        \begin{Huge}
+            #1 \\
+        \end{Huge}
+        \vspace*{1cm}
+        \begin{LARGE}
+            #2
+        \end{LARGE}
+
+        \vfill
+
+        \begin{LARGE}
+            Avoimet oppimateriaalit ry \\
+        \end{LARGE}
+        \vspace*{1cm}
+        \includegraphics[scale=0.5]{../saatio.jpg}
+    \end{doublespace}
+\end{center}
+
+\vspace*{3cm}
+
+\begin{flushright}
+    \sffamily
+    $\vcenter{\hbox{\includegraphics[scale=0.3]{../cc.pdf}}}$
+    $\vcenter{\hbox{\includegraphics[scale=0.3]{../by.pdf}}}$
+    Sisältö on lisensoitu avoimella CC BY 3.0 -lisenssillä.
+\end{flushright}
+\end{titlepage}
+}
