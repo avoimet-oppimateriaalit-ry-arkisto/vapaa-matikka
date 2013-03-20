@@ -1,0 +1,205 @@
+\section{Korkeamman asteen yhtälöt}
+
+\qrlinkki{http://opetus.tv/maa/maa2/n-asteinen-polynomifunktio/}{Opetus.tv: \emph{N-asteinen polynomifunktio} (10:40)}
+
+\qrlinkki{http://opetus.tv/maa/maa2/n-asteinen-polynomiyhtalo/}{Opetus.tv: \emph{N-asteinen polynomiyhtälö} (8:38, 6:20 ja 15:53)}
+
+Toisen asteen polynomiyhtälön ratkaiseminen on helppoa, sillä voimme aina soveltaa toisen asteen yhtälön ratkaisukaavaa.
+Kolmannen ja sitä korkeamman asteen yhtälöiden ratkaiseminen on vaikeampaa.
+Kolmannen ja neljännen asteen yhtälöille on olemassa ratkaisukaavat, mutta ne ovat epäkäytännöllisiä.
+Vuonna 1823 Niels Abel osoitti, että viidennen ja sitä korkeamman asteen yhtälöille ei ole olemassa ratkaisukaavaa.
+
+Käytännössä korkeamman asteen yhtälöt täytyy ratkaista numeerisesti tietokoneen avulla. Joissain erikoistapauksissa ratkaiseminen onnistuu käsin.
+
+\subsection*{Tekijöihinjako}
+
+Polynomiyhtälöitä voi ratkaista jakamalla polynomin tekijöihin.
+
+%Jos polynomiyhtälössä $P(x) = 0$ polynomi $P(x)$ voidaan jakaa tekijöihin, ratkaisu saadaan etsimällä näiden tekijöiden nollakohdat.
+%Esimerkiksi vakiotermittömässä polynomissa voidaan ottaa muuttuja yhteiseksi tekijäksi ja riittää ratkaista yhtä pienemmän asteen %polynomiyhtälö.
+
+\begin{esimerkki}
+Ratkaise yhtälö $x^3 - 3x^2 + x = 0$.
+
+\textbf{Ratkaisu:}
+
+Polynomissa $x^3 - 3x^2 + x$ ei ole vakiotermiä. Voidaan siis ottaa muuttuja $x$ yhteiseksi tekijäksi, joten se saadaan muotoon $x(x^2 - 3x + 1)$. Nyt yhtälö ratkeaa tulon nollasäännön avulla:
+
+Nyt yhtälön ratkeaa tulon nollasäännöllä.
+\begin{align*}
+x^3 - 3&x^2 + x=0 \\
+x(x^2 - 3x + 1)=0 \\
+x= 0 \quad &\text{tai} \quad x^2 - 3x + 1 = 0 \\
+\end{align*}
+
+Käyttämällä toisen asteen yhtälön ratkaisukaavaa saadaan yhtälön $x^2 - 3x + 1 = 0$ ratkaisuksi
+\[x = \frac{3\pm \sqrt{5}}{2}.\]
+
+\textbf{Vastaus:}
+$x= 0$ tai $x=\dfrac{3\pm \sqrt{5}}{2}$
+\end{esimerkki}
+
+Aiemmin esitellyn polynomien jakolauseen mukaan kaikki polynomit voidaan jakaa tekijöihin, jotka ovat korkeintaan toista astetta.
+Periaatteessa tällä tavalla voidaan siis ratkaista kaikki polynomiyhtälöt. Tekijöihin jakaminen on kuitenkin yleensä vaikeaa.
+
+\begin{esimerkki}
+Ratkaise yhtälö $x^3-17x^2-x+17 = 0$.
+
+\textbf{Ratkaisu:}
+
+Yhtälön vasemmalla puolella olevan polynomin voi jakaa tekijöihin ryhmittelemällä:
+
+\begin{align*}
+x^3-17x^2-x+17=x^2(x-17)+(-1)(x-17)=(x^2-1)(x-17)
+\end{align*}
+
+Nyt yhtälön ratkeaa tulon nollasäännöllä.
+\begin{align*}
+x^3-17x^2&-x+17=0 \\
+(x^2-1)&(x-17)=0 \\
+x - 17 = 0 \quad &\text{tai} \quad x^2-1 = 0 \\
+x = 17 \quad &\text{tai} \quad x^2 = 1 \\
+x = 17 \quad &\text{tai} \quad x =\pm 1 \\
+\end{align*}
+
+\textbf{Vastaus:} $x = 17$ tai $x = \pm 1$
+\end{esimerkki}
+
+\subsection*{Sijoitukset}
+Joskus yhtälöt ratkeavat ns. sijoituksella eli muuttujanvaihdolla.
+
+%Esimerkiksi muotoa $ax^4+bx^2+c=0$ olevissa yhtälöissä huomataan, että merkitsemällä lauseketta $x^2$ kirjaimella $y$, yhtälö voidaan kirjoittaa muotoon $ay^2+by+c=0$. Uudesta yhtälöstä voidaan ratkaista $y$ toisen asteen yhtälön ratkaisukaavalla, ja sijoituksesta $y = x^2$ voidaan ratkaista $x$.
+
+\begin{esimerkki}
+Ratkaise yhtälö $2x^4+14x^2-36=0$.
+
+\textbf{Ratkaisu:}
+
+Yhtälö voidaan kirjoittaa muodossa $2(x^2)^2+14x^2-36=0$. Kun merkitään $y=x^2$, saadaankin muuttujan $y$ yhtälö
+\[2y^2+14y-36=0.\]
+Tämä on toisen asteen yhtälö, joka osataan ratkaista toisen asteen yhtälön ratkaisukaavalla. Ratkaisut ovat $y = 2$ ja $y = -9$.
+
+Nyt on vielä selvitettävä muuttujan $x$ arvot. Koska $x^2=y$, saadaan yhtälöt $x^2=2$ ja $x^2=-9$. Reaaliluvun neliö ei kuitenkaan voi olla negatiivinen, joten ainoat ratkaisut ovat yhtälön $x^2 = 2$ ratkaisut $x = \pm\sqrt{2}$.
+
+\textbf{Vastaus:} $x=-2$ tai $x=2$
+\end{esimerkki}
+
+Muotoa $ax^4+bx^2+c=0$ oleva yhtälö voidaan aina ratkaista sijoituksella $y=x^2$.  Yleisemmin muotoa $ax^{2n}+bx^n+c=0$ olevat yhtälöt voidaan ratkaista sijoituksella $y = x^n$.
+
+\begin{esimerkki}
+Ratkaise yhtälö $x^{10}+x^5=2$.
+
+\textbf{Ratkaisu:}
+
+Muutetaan yhtälö muotoon $x^{10}+x^5-2=0$ ja edelleen $(x^5)^2+x^5-2=0$. Tehdään sijoitus $y = x^5$. Nyt yhtälö saa muodon $y^2+y-2 = 0$. Toisen asteen yhtälön ratkaisukaavalla saadaan yhtälön ratkaisuiksi $y = -2$ ja $y = 1$.
+
+Nyt alkuperäisen yhtälön ratkaisut saadaan yhtälöistä $x^5=-2$ ja $x^5=1$. Siten ratkaisut ovat $x = \sqrt[5]{-2}$ ja $x = 1$.
+
+\textbf{Ratkaisu:} $x = \sqrt[5]{-2}$ ja $x = 1$
+
+\end{esimerkki}
+
+\Harjoitustehtavat
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^4 - 2x^2 - 24 = 0$
+        \item $x^4 - 4x^2 - 5 = 0$
+        \item $x^4 - 8x^2 + 15 = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x = \pm\sqrt{6}$
+            \item $x = \pm\sqrt{5}$
+            \item $x = \pm\sqrt{3}$ tai $\pm\sqrt{5}$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^8 - 1 = 0$
+        \item $x^8 - x^4 = 0$
+        \item $x^8 - x^4 - 1 = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x = \pm\sqrt{1}$
+            \item $x = 0$ tai $x = \pm\sqrt{1}$
+            \item $x = \pm\sqrt[4]{\frac{1+\sqrt{5}}{2}} = \pm\sqrt[4]{\upvarphi}$ ($\upvarphi$ on kultaisena leikkauksena tunnettu vakio)
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^4 - 16 = 0$
+        \item $2x^4 = 8x^2$
+        \item $x^6 - 2x^3 = 3$
+        \item $x^{100} - 2x^{50} + 1 = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x = \pm2$
+            \item $x = 0$ tai $x=\pm2$
+            \item $x = \sqrt[3]{3}$ tai $x= -1$
+            \item $x = \pm1$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^4 + 7x^3 = 0$
+        \item $2x^3 - 16x^2 + 32x = 0$
+        \item $x^6 + 6x^5 = -9x^4$
+        \item $x^3 - 2x^5 = 0$      
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+        	\item $x = 0$ tai $x = -7$
+        	\item $x = 0$ tai $x = 4$
+        	\item $x = 0$ tai $x = -3$
+            \item $x = 0$ tai $x = \pm\dfrac{1}{\sqrt{2}}$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^5 - 2x^3 + x = 0$
+        \item $x^8 + 4x^4 = 5x^6$       
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+        	\item $x = 0$ tai $x = \pm1$
+        	\item $x = 0$ tai $x = \pm1$ tai $x = \pm2$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Ratkaise yhtälö $x^{627} - 6x^{514} + 5x^{401} = 0$.
+	\begin{vastaus}
+		$x = 0$, $x = 1$ tai $x = \sqrt[113]{5}$
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	(K02/T2b) Ratkaise yhtälö $e^{x^3+4x^2+1}=1$. [$e$ on matemaattinen vakio, irrationaaliluku, jonka likiarvo on $2,718$.]
+	\begin{vastaus}
+	$x=0$ tai $x=-2 + \sqrt[]{3}$ tai $x=-2 - \sqrt[]{3}$
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	$[ \star ]$ Ratkaise yhtälö $2^x-1=\frac{12}{2^x}$
+	\begin{vastaus}
+	$x=2$
+	\end{vastaus}
+\end{tehtava}

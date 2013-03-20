@@ -1,0 +1,487 @@
+\section{Toisen asteen yhtälö}
+
+\qrlinkki{http://opetus.tv/maa/maa2/toisen-asteen-yhtalo/}{Opetus.tv: \emph{toisen asteen yhtälö} (9:02, 11:09 ja 9:30)}
+
+\begin{esimerkki}
+Selvitetään, milloin funktio $f(x)=x^2+2x+1$ leikkaa x-akselin.
+
+Funktion kuvaaja leikkaa x-akselin, kun $f(x)=0$. Tätä muuttujan $x$ arvoa kutsutaan funktion $f$ \textbf{nollakohdaksi}. Piirretään funktion $f$ kuvaaja ja etsitään ne kohdat, joissa funktio leikkaa x-akselin. %insert kuvaaja.pic
+%funktio käsite on tuttu, joten itse esittelisin tämän asian näin -Lauri
+
+\begin{kuvaajapohja}{1.5}{-2.5}{0.5}{-0.5}{3}
+\kuvaaja{x**2+2*x+1}{$f(x)=x^2+2x+1$}{red}
+\end{kuvaajapohja}
+\end{esimerkki}
+
+Kuvaajasta havaitaan, että funktion $f$ nollakohta on $x \approx -1$. Tätä funktion nollikohtien ratkaisumenetelmää kutsutaan graafiseksi ratkaisemiseksi.
+Graafinen ratkaisu on aina likimääräinen eli arvio oikeasta ratkaisusta.
+
+Määritettäessä toisen asteen polynomifunktion nollakohtia päädytään \textbf{toisen asteen yhtälöön}, joka on aina saatettavissa yleiseen muotoon
+\begin{align*}
+ax^2+bx+c=0
+\end{align*}
+\laatikko{Toisen asteen yhtälöllä on reaalilukuratkaisuja joko 0, 1 tai 2 kappaletta.}
+
+Seuraavassa kuvat eri tapauksista:
+
+\begin{tabular}{c c}
+
+\begin{tabular}{c}
+	2 ratkaisua, a positiivinen\\
+	\begin{lukusuora}{-1}{1}{4}
+	\lukusuoraisobbox
+	\lukusuoraparaabeli{-0.5}{0.5}{-1}
+	\end{lukusuora}
+\end{tabular}
+
+&
+
+\begin{tabular}{c}
+	2 ratkaisua, a negatiivinen\\
+	\begin{lukusuora}{-1}{1}{4}
+	\lukusuoraisobbox
+	\lukusuoraparaabeli{-0.5}{0.5}{1}
+	\end{lukusuora}
+\end{tabular}
+
+\\ \qquad & \qquad \\
+
+\begin{tabular}{c}
+	1 ratkaisu, a positiivinen\\
+	\begin{lukusuora}{-2}{2}{4}
+	\lukusuoraisobbox
+	\lukusuorakuvaaja{x**2}
+	\end{lukusuora}
+\end{tabular}
+
+&
+
+\begin{tabular}{c}
+	1 ratkaisu, a negatiivinen\\
+	\begin{lukusuora}{-2}{2}{4}
+	\lukusuoraisobbox
+	\lukusuorakuvaaja{-x**2}
+	\end{lukusuora}
+\end{tabular}
+
+\\ \qquad & \qquad \\
+
+\begin{tabular}{c}
+	ei ratkaisuja, a positiivinen\\
+	\begin{lukusuora}{-2}{2}{4}
+	\lukusuoraisobbox
+	\lukusuorakuvaaja{x**2+0.3}
+	\end{lukusuora}
+\end{tabular}
+
+&
+
+\begin{tabular}{c}
+	ei ratkaisuja, a negatiivinen\\
+	\begin{lukusuora}{-2}{2}{4}
+	\lukusuoraisobbox
+	\lukusuorakuvaaja{-x**2-0.3}
+	\end{lukusuora}
+\end{tabular}
+
+\\ \qquad & \qquad \\
+
+\end{tabular}
+% fixme {termi-komento ei toimi vaillinaisen ekvationin kohdalla}
+
+Graafisen ratkaisemisen lisäksi toisen asteen yhtälö voidaan ratkaista
+myös algebrallisesti, mihin tutustumme seuraavaksi.
+%Seuraavaksi tutustumme toisen asteen yhtälön algebralliseen ratkaisemiseen.
+
+\subsection*{Vaillinaiset yhtälöt}
+Jos toisen asteen yhtälöstä $ax^2+bx+c=0$ puuttuu joko termi $bx$ tai $c$, 
+kyseessä on niin sanottu \emph{vaillinainen toisen asteen yhtälö}. Se on muotoa
+\[ax^2+c=0 \quad \text{ tai } \quad ax^2+bx=0.\]
+Vaillinaisten yhtälöiden ratkaiseminen on paljon yleistä tapausta yksinkertaisempaa.
+
+\subsubsection*{Toisen asteen yhtälö $ax^2+c=0$}
+Muotoa $ax^2+c = 0$ oleva toisen asteen yhtälö saadaan helposti ratkaistua neliöjuuren avulla.
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $5x^2-45=0$:
+\begin{align*}
+5x^2-45 &= 0 &&\ppalkki + 45 \\
+5x^2 &= 45 &&\ppalkki : 5 \\
+x^2 &= 9 &&\text{ratkaistaan käyttäen neliöjuurta ($9 \geq 0$)} \\
+x &= \pm \sqrt{9} = \pm 3.
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $13x^2-42=-3$:
+\begin{align*}
+13x^2-42 &= -3 &&\ppalkki + 42 \\
+13x^2 &= 39 &&\ppalkki : 13 \\
+x^2 &= 3 &&\text{ratkaistaan käyttäen neliöjuurta ($3 \geq 0$)} \\
+x &= \pm \sqrt{3}.
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $x^2+4=3$:
+\begin{align*}
+x^2+4 &= 3 &&\ppalkki - 4 \\
+x^2 &= -1
+\end{align*}
+Koska $x^2 \geq 0$ kaikilla $x$, yhtälöllä ei ole ratkaisua.
+\end{esimerkki}
+
+\subsubsection*{Toisen asteen yhtälö $ax^2+bx=0$}
+Jos yhtälöstä $ax^2+bx+c=0$ puuttuu vakiotermi $c$, yhtälö saa muodon 
+$$ax^2+bx=0.$$ Tällainen yhtälö ratkeaa jakamalla tekijöihin ja käyttämällä tulon nollasääntöä:
+\begin{align*}
+ax^2+bx&=0 \ \ \ \ \ &&\ppalkki\text{otetaan yhteinen tekijä} \\
+x(ax+b)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
+x&=0 \text{ tai } ax+b=0 \\
+x&=0 \text{ tai } ax=-b \\
+x&=0 \text{ tai } x=-\frac{b}{a}.
+\end{align*}
+\begin{esimerkki}
+Ratkaise yhtälö $x^2-11x=0$.
+\begin{align*}
+x^2-11x&=0 \ \ \ \ \  &&\ppalkki\text{otetaan yhteinen tekijä } x\\
+x(x-11)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
+x&=0 \text{ tai } x-11=0 \\
+x&=0 \text{ tai } x=11
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaise yhtälö $55x^2+8x=0$.
+\begin{align*}
+55x^2+8x&=0 \ \ \ \ \ &&\ppalkki\text{otetaan yhteinen tekijä} \\
+x(55x+8)&=0 \ \ \ \ \ &&\ppalkki\text{tulon nollasääntö} \\
+x&=0 \text{ tai } 55x+8=0 \\
+x&=0 \text{ tai } 55x=-8 \\
+x&=0 \text{ tai } x=-\frac{8}{55}
+\end{align*}
+\end{esimerkki}
+
+\subsection*{Neliöksi täydentäminen}
+Toisen asteen yhtälöä $ax^2+bx+c=0$, jossa $a,b,c \neq 0$, kutsutaan
+täydelliseksi toisen asteen yhtälöksi. Tällaiset yhtälöt voidaan palauttaa
+vaillinaisiksi toisen asteen yhtälöiksi muistikaavojen avulla.
+Tarkastellaan vaikkapa yhtälöä
+\[x^2+2x-3=0.\]
+Yhtälön vasen puoli on melkein sama kuin binomin $x+1$ neliö, sillä $(x+1)^2=x^2+2x+1$.
+Vain vakiotermissä on eroa. Korjataan asia ja ratkaistaan yhtälö:
+
+\begin{align*}
+x^2+2x-3 & = 0  &&\ppalkki +4 \\
+x^2+2x+1 & = 4  &&\ppalkki \text{ muistikaava: } (x+1)^2=x^2+2x+1. \\
+(x+1)^2 & = 4 \\
+x+1 & = \pm 2 \\
+x & = \pm 2 - 1 \\
+x & = 1 \text{ tai } x= -3. 
+\end{align*}
+
+Miksi edellä osattiin ajatella juuri oikeaa muistikaavaa $(x+1)^2=x^2+2x+1$?
+Syynä on se, että yhtälön vasemmalla
+puolella olevan polynomin alkuosaa $x^2+2x$ ei saada minkään muun
+binomin neliöstä. Neliöksi täydentäminen vaatii siis muistikaavojen hyvää
+hallintaa.
+
+Kaikki toisen asteen yhtälöt voidaan ratkaista neliöksi täydentämällä. (Yleensä tosin käytetään \emph{toisen asteen yhtälön ratkaisukaavaa}, joka esitellään seuraavassa luvussa. Ratkaisukaava perustellaan neliöksi täydentämällä, minkä vuoksi neliöksi täydentäminen opetellaan ensin.)
+
+\begin{esimerkki} Ratkaise yhtälö $x^2+4x-16 = 0$. 
+
+Kirjoitetaan yhtälö muotoon $x^2+2\cdot 2x-16 = 0$ ja verrataan kahta ensimmäistä termiä
+muistikaavaan, jotta nähdään, minkä binomin neliöksi lauseke voidaan muokata.
+\begin{align*}
+&x^2+2\cdot 2\cdot x  &&= (\quad + \quad)^2\\
+&a^2 +2\cdot a\cdot b +b^2 &&= (a+b)^2
+\end{align*}
+Lausekkeita vertaamalla nähdään vastaavuus $a = x$, $b = 2$. Neliöstä puuttuva
+termi $b^2$ on siis $2^2=4$. Täydennetään nyt neliöksi:
+\begin{align*}
+x^2+4x-16 &= 0 \\
+x^2+4x &= 16 && \\
+x^2+4x+4 &= 20 && \ppalkki \text{muistikaava: $ x^2+4x+4= (x+2)^2$} \\
+(x+2)^2 &= 20 \\
+x+2 &= \pm \sqrt{20} \\
+x &= -2 \pm \sqrt{20} && \ppalkki \text{sievennetään vastaus} \\
+x &= -2 \pm 2\sqrt{5}.
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $4x^2-4x-5=0$.
+
+Toisen ja ensimmäisen asteen termit saadaan neliöstä
+$(2x-1)^2=4x^2-4x+1$. Rakennetaan se yhtälön vasemmalle puolelle:
+\begin{align*}
+4x^2-4x-5 &= 0 \\
+4x^2-4x+1 &= 6 &&\text{muistikaava: $  4x^2-4x+1 = (2x-1)^2$} \\
+(2x-1)^2 &= 6 \\
+2x-1 &= \pm \sqrt{6} \\
+2x &= 1 \pm \sqrt{6} \\
+x &= \frac{1 \pm \sqrt{6}}{2}.
+\end{align*}
+\end{esimerkki}
+
+% \textbf{Esimerkki 5.} \\
+% Ratkaistaan yhtälö $x^2+4x-16=0$.
+% \begin{align*}
+% x^2+4x-16&=0 \ \ \ \ \ &&\ppalkki +20 \\
+% x^2+4x+4&=20 \ \ \ \ \ &&\ppalkki a^2+2ab+b^2=(a+b)^2 \\
+% (x+2)^2&=20 \ \ \ \ \ &&\ppalkki \sqrt[]{} \\
+% x+2 &= \pm \sqrt[]{20} \\
+% x&=-2 \pm \sqrt[]{20} \\
+% x&=-2 \pm 2 \sqrt[]{5} \\
+% \end{align*}
+% \textbf{Esimerkki 6.} \\
+% Ratkaise yhtälö $16x^2-64x+2=0$. \\
+% \textbf{Ratkaisu}
+% \begin{align*}
+% 16x^2-16x+2&=0 \ \ \ \ \ &&\ppalkki +2 \\
+% 16x^2-16x+4&=2 \ \ \ \ \ &&\ppalkki a^2-2ab+b^2=(a-b)^2 \\
+% (4x+2)^2&=2 \ \ \ \ \ &&\ppalkki \sqrt[]{} \\
+% 4x+2&=\pm \sqrt[]{2} \\
+% 4x&=-2 \pm \sqrt[]{2} \\
+% x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{4} \\
+% x&=-\frac{1}{2} \pm \frac{\sqrt[]{2}}{ 2\sqrt[]{2}\sqrt[]{2}} \\
+% x&=-\frac{1}{2} \pm \frac{1}{2 \sqrt[]{2}} \\
+% \end{align*}
+%
+% Ratkaisutapaa, jossa toisen asteen yhtälö täydennetään lisäämällä tai vähentämällä termejä binomin neliöksi, kutsutaan neliöksi täydentämiseksi.
+%
+% Toisen asteen yhtälö voidaan aina ratkaista neliöön täydentämällä. Yleensä toisen asteen yhtälöt kuitenkin ratkaistaan käyttämällä suoraa kaavaa.
+%
+% Seuraavassa kappaleessa johdamme toisen asteen yhtälön ratkaisukaavan neliöksi täydentämistä käyttäen.
+
+\Harjoitustehtavat
+
+\paragraph*{Opi perusteet}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2 = 16$
+        \item $x^2 = - 16$
+        \item $x^2 - 13 = 0$
+        \item $3x^2 - 12 = 0$
+
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=\pm 4$
+            \item Ei ratkaisuja. 
+            \item $x = \pm \sqrt{13}$.
+            \item $x=\pm 2$ 
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x(x-3)= 0$
+        \item $x^2 + 4x = 0$
+        \item $7x^2-3x = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=0$ tai $x=3$
+            \item $x =0$ tai $x=-4$.
+            \item $x=0$ tai $x=\frac{3}{7}$     
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Kirjoita neliöksi tunnistamalla muistikaava
+    \begin{enumerate}[a)]
+        \item $x^2 +2x +1 =$
+        \item $x^2 +6x +9 = $
+        \item $x^2 -4x -4 = $
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $(x+1)^2$
+            \item $(x+3)^2$.
+            \item $(x-2)^2$     
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälö täydentämällä neliöksi
+    \begin{enumerate}[a)]
+        \item $x^2 -2x +1 = 4$
+        \item $x^2 +4x = 5 $
+        \item $x^2 -3x + 10 = 0 $
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x = 3$ tai $x= -1$. Neliöksi täydennettynä $(x+1)^2=4$
+            \item $x = -5$ tai $x = 1$. Neliöksi täydennettynä $(x+2)^2=9$
+            \item Ei ratkaisua. Neliöksi täydennettynä $(x-3)^2=-1$   
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\paragraph*{Hallitse kokonaisuus}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2 - 100 = 0$
+        \item $x^2 + 100 = 0$
+        \item $x^2 - 10 = 0$
+        \item $x^2 + 10 = 0$
+        \item $-x^2 - 25 = 0$
+        \item $-x^2 + 25 = 0$
+        \item $2x^2 - 98 = 0$
+        \item $2x^2 + 98 = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=\pm10$
+            \item Ei ratkaisuja.
+            \item $x=\pm\sqrt{10}$
+            \item Ei ratkaisuja.
+            \item Ei ratkaisuja.
+            \item $x=\pm5$
+            \item $x=\pm7$
+            \item Ei ratkaisuja.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2 - 72x = 0$
+        \item $x^2 + 72x = 0$
+        \item $x^2 - 56x = 0$
+        \item $x^2 + 56x = 0$
+        \item $-x^2 - 13x = 0$
+        \item $-x^2 + 13x = 0$
+        \item $2x^2 - 43x = 0$
+        \item $2x^2 + 43x = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=0$ tai $x=72$
+            \item $x=-72$ tai $x=0$
+            \item $x=0$ tai $x=56$
+            \item $x=-56$ tai $x=0$
+            \item $x=-13$ tai $x=0$
+            \item $x=0$ tai $x=13$
+            \item $x=0$ tai $x=21,5$
+            \item $x=-21,5$ tai $x=0$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2 - 36 = 0$
+        \item $x^2 - 85x = 0$
+        \item $x^2 + 11x = -6x$
+        \item $x^2 + 10x = -4x^2$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=\pm6$
+            \item $x=0$ tai $x=85$
+            \item $x=0$ tai $x=-17$
+            \item $x=0$ tai $x=-2$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2 - 9 = 0$
+        \item $2x^2 + 8 = 0$
+        \item $-x^2 + 11 = -5$
+        \item $3 - x^2 = -1 + 3x^2$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=\pm3$
+            \item Ei ratkaisuja.
+            \item $x=\pm4$
+            \item $x=\pm1$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2 - 3x = 0$
+        \item $10x + 2x^2 = 0$
+        \item $-3x^2 + 8x = -2x$
+        \item $2x^2 - x^3 = 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=0$ tai $x=3$
+            \item $x=0$ tai $x=-5$
+            \item $x=0$ tai $x=8$
+            \item $x=0$ tai $x=2$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2+3x+2=0$
+        \item $2x^2+5x-12=0$
+        \item $3x^2-7x-20=0$
+        \item $x^2+3x-5=0$
+        \item $x^2+5x-24=0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x=-2$ tai $x=-1$
+            \item $x=3/2$ tai $x=-4$
+            \item $x=4$ tai $x=-5/3$
+            \item $x=\frac{3\pm\sqrt{29}}{2}$
+            \item $x=3$ tai $x=-8$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt.
+    \begin{enumerate}[a)]
+        \item $x^2+3x-5=4x+8$
+        \item $8x^2-5x+1=-36$
+        \item $-3x^2-4x+2=-5x^2+3$
+        \item $-3x^2+4x+13=-5x^2+10x+9$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $\frac{1\pm\sqrt{53}}{2}$
+            \item Ei ratkaisua reaalilukujen joukossa.
+            \item $1\pm\frac{\sqrt{6}}{2}$
+            \item $x=1$ tai $x=2$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Elokuvassa \emph{Dredd} pudotetaan ihmisiä kuolemaan noin $1$ kilometrin korkeudesta. Ennen pudotusta heille annetaan huumausainetta, joka hidastaa aikakäsityksen $1$ prosenttiin normaalista. Vapaassa pudotuksessa pudottu matka ajanhetkellä $t$ on $\frac{1}{2} gt^2$, jossa $g$ on putoamiskiihtyvyytenä tunnettu vakio, jolle voimme tässä hyvin käyttää arviota $g \approx 10\frac{\text{m}}{\text{s}^2}$.
+    \begin{enumerate}[a)]
+    \item Olettaen, että huumausaineen vaikutus kestää koko putoamisen ajan, kuinka pitkältä aika pudotuksesta kuolemaan \textbf{uhrista} tuntuu? (Oleta annetut arvot tarkoiksi ja muodosta relevantti toisen asteen yhtälö.)
+    \item Mikä menee fataalisti pieleen, jos a)-kohdan laskee suoraan kuvatulla tavalla?
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item Vastaukseksi saadaan $1414 \, \text{s} = 23 \, \text{min} \, 34 \, \text{s}$. Käytännössä hyvä vastaustarkkuus voisi olla esimerkiksi $25 \, \text{min}$.
+            \item Tehtävä ei huomioi ilmanvastusta. Ihminen saavuttaa korkeimmillaan rajanopeuden $v_{raja} \approx 55\frac{\text{m}}{\text{s}}$. Tehtävän mallissa putoavan ihmisen nopeus nousee $v_{max} \approx 141\frac{\text{m}}{\text{s}}$ asti. Todellisuudessa putoaminen siis kestää vieläkin kauemmin.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}

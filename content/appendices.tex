@@ -1,0 +1,46 @@
+\chapter*{Liitteet}
+\addcontentsline{toc}{chapter}{Liitteet}
+
+\renewcommand*{\thesection}{\Alph{section}}
+\titleformat{\section}[hang]
+{\sffamily\fontsize{15}{10}\selectfont\filleft}
+{Liite \thesection}
+{0.5em}
+{\MakeUppercase}
+[\vspace{0.5ex}{\titlerule[1pt]}]
+
+\fancypagestyle{plain}{%
+ \fancyhf{}
+ \fancyfoot[RE]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
+ \fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
+}
+\fancyhf{}
+\fancyfoot[RE]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
+\fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
+
+\setcounter{section}{0}
+
+\section{Vastaukset}
+\input{ans1}
+
+\section{Harjoituskokeita}
+
+\input{content/harjoituskokeita}
+
+
+
+\section{Todistuksia}
+
+\input{content/todistukset/tulonolla}
+
+\input{content/todistukset/toisen_asteen_polynomifunktio}
+%funktion nollakohtien ja yhtälön juurien yhteys
+%paraabelin muodon perustelu: P(x)=ax^2+bx+c=a(x-b/2a)^2+b^2/4a^2, siis pienin/suurin arvo kun x=-b/2a -> ylöspäin ja alaspäin aukeavat paraabelit
+
+\input{content/todistukset/poljako}
+
+\include{content/ylioppilaskokeita}
+
+\include{content/sekalaisia}
+
+\include{content/monsterit}

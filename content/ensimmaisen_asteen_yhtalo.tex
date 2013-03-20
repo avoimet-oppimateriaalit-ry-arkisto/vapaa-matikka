@@ -1,0 +1,167 @@
+%% encoding: utf-8
+\section{Kertausta: Ensimmäisen asteen yhtälö}
+
+Yhtälöistä yksinkertaisin on ensimmäisen asteen yhtälö. Käydään se lyhyesti
+läpi kertauksen vuoksi.
+
+Ensimmäisen asteen yhtälössä ratkaistavana on vain mahdollisesti vakiolla
+kerrottu muuttuja. Yhtälön ratkaisemiseksi riittää käyttää neljää
+aritmeettista peruslaskutoimitusta. Aluksi yhtälön molempia puolia
+lisätään tai vähennetään jollain luvulla, jolloin
+vasemmalle puolelle saadaan jäämään pelkkä muuttuja
+vakiolla kerrottuna.
+Sen jälkeen jaetaan yhtälön molemmat puolet muuttujan kertoimella, jolloin
+yhtälön ratkaisu jää oikealle puolelle.
+
+% fixme tyylikorjausta, termiä juuri ei vielä esitellä
+
+Yleisesti ensimmäisen asteen yhtälö on muotoa
+
+\begin{align*}
+    ax + b = 0.
+\end{align*}
+
+Mikä vain 1. asteen yhtälö on muokattavissa tähän yleiseen
+muotoon siirtämällä kaikki termit vasemmalle puolelle ja
+sieventämällä.
+
+\subsubsection*{Esimerkkejä}
+
+\begin{esimerkki}
+Ratkaise yhtälö $4x + 5 = 2 + 2x$.
+
+\textbf{Ratkaisu}
+\begin{align*}
+    4x + 5 &= 2 + 2x && \ppalkki -2x \\
+    2x + 5 &= 2      && \ppalkki -5 \\
+        2x &= -3     && \ppalkki :2 \\
+         x &= -\frac{3}{2}
+ \end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaise yhtälö $3x - 6 = 0$.
+
+\textbf{Ratkaisu}
+  \begin{align*}
+    3x - 6 &= 0 && \ppalkki +6 \\
+        3x &= 6 && \ppalkki :3 \\
+         x &= \frac{6}{3} \\
+           &= 2
+  \end{align*}
+\end{esimerkki}
+
+Yleisen yhtälön $ax + b = 0$ ratkaisu on siis
+
+\begin{align*}
+  x = -\frac{b}{a}.
+\end{align*}
+
+Erityisesti kannattaa huomata, että kaikkia 1. asteen yhtälöitä ei tarvitse
+saattaa yleiseen muotoon. Esimerkiksi jos vakiotermit ovat valmiiksi
+oikealla puolella, yhtälön ratkaisemiseksi riittää luonnollisesti jakaa
+molemmat puolet muuttujan kertoimella.
+
+\Harjoitustehtavat
+
+\paragraph*{Opi perusteet}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[(a)]
+        \item $x + 5 = 47$
+        \item $2x = 64$
+        \item $3x - 5 = 16$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $x = 42$
+            \item $x = 32$
+            \item $x = 7$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[(a)]
+        \item $x + 8 = 2x - 1$
+        \item $2x + 4 = 60$
+        \item $3x - 5 = -x + 11$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $x = 9$
+            \item $x = 28$
+            \item $x = 4$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+%ei ole yhtälötehtävä, mutta mallinnusharjoituksena ok? 
+\begin{tehtava}
+    Muodosta tilannetta kuvaavat lausekkeet.
+    \begin{enumerate}[(a)]
+        \item Kuinka paljon maksaa hilavitkuttimen vuokraus $x$:ksi tunniksi, kun vuokra on 42 \euro /tunti. Vuokraajan tulee myös ottaa pakollinen 25 euron laitteistovakuutus.
+        \item Kuinka monta euroa saa $x$:llä dollarilla, kun 1~EUR vastaa 1,23~USD:a, ja halutaan vaihtaa dollareita euroiksi. Valuutanvaihtaja veloittaa lisäksi palvelumaksun 0,50 euroa.
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $42x + 25$
+            \item $\frac{1}{1{,}23}x + 0{,}5$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+
+
+\paragraph*{Hallitse kokonaisuus}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[(a)]
+        \item $3(x+7)=7x$
+        \item $2(3x-1)=-7x $
+        \item $3-2x-(4-x)=2 $
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $x = \frac{7}{6} =1\frac{1}{6} $
+            \item $x = \frac{2}{13}$
+            \item $x = -3$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöt.
+    \begin{enumerate}[(a)]
+        \item $-2\cdot\frac{x-5}{3}-\frac{5}{7}(1-x)=5x+3$
+        \item $\frac{4x-5}{3}-\frac{3}{2}(x-8)=-\frac{x+5}{6}$
+        \item $3(x-3)+x=4x-9$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $x = -\frac{1}{13}$
+            \item ei ratkaisuja
+            \item yhtälö on toteutuu kaikilla reaaliluvuilla
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+%vaatii Pythagoraan lauseen, jota ei vielä ole käsitelty lukiossa.
+\begin{tehtava}
+    Tässä tehtävässä pitäisi muistaa peruskoulussa käsitelty Pythagoraan lause.
+    Suorakulmaisen kolmion sivujen pituuden kateettien pituudet ovat $x+1$ ja $4$. Hypotenuusan pituus $x+3$. Mikä $x$ on?
+    \begin{vastaus}
+		$x=2$
+    \end{vastaus}
+\end{tehtava}
+
+%hankala
+\begin{tehtava}
+    Määritä sekunnin tarkkuudella se ajanhetki, kun kellotaulun minuutti- ja tuntiviisarit ovat päällekkäin ensimmäisen kerran klo 12.00:n jälkeen.
+    \begin{vastaus}
+		$13.05.27$
+    \end{vastaus}
+\end{tehtava}

@@ -1,0 +1,335 @@
+\section{Käsitteitä}
+
+\qrlinkki{http://opetus.tv/maa/maa2/polynomien-peruskasitteet/}
+{Opetus.tv: \emph{polynomien peruskäsitteet} (9:00)}
+
+\qrlinkki{http://opetus.tv/maa/maa2/polynomin-tasmallinen-maaritelma/}
+{Opetus.tv: \emph{polynomin täsmällinen määritelmä} (6:10)}
+
+\subsection*{Polynomilausekkeet}
+
+\termi[Polynomit]{polynomi} ovat matematiikassa yleisiä yhden muuttujan laskulausekkeita.
+%\termi[Polynomit]{polynomi} ovat matematiikassa ryhmä hyvin yleisiä ja yksinkertaisia yhden muuttujan laskulausekkeita.
+%Usein hyödyllinen lauseketyyppi on sellainen joka koostuu muuttujan $x$ ja vakioiden yhteen- ja kertolaskuista.
+%Tällaisia lausekkeita kutsutaan muuttujan $x$ \termi[polynomeiksi]{polynomi}.
+Esimerkiksi seuraavat lausekkeet ovat muuttujan $x$ polynomeja:
+\begin{itemize}
+\item $5x^2+x-7$
+\item $x^4-6x^3+2x^2-x$
+\item $-24x^{100}$
+\end{itemize}
+Polynomit tunnistaa siitä, että niissä on käytetty muuttujan potenssien lisäksi vain yhteen-, vähennys- ja kertolaskuja. Esimerkiksi seuraavat muuttujan $x$ lausekkeet \emph{eivät ole} polynomeja:
+\begin{itemize}
+\item $2/x$
+\item $\sqrt{x}+2$
+\end{itemize}
+Yleisin muuttujakirjain on $x$, mutta myös muita kirjaimia voidaan käyttää
+merkitsemään muuttujia. Esimerkiksi $2y^5+y^4-1$ on muuttujan $y$ polynomi ja
+$-A^3+2A^2-1$ on muuttujan $A$ polynomi.
+
+Polynomilausekkeet ovat summia, joiden yhteenlaskettavia kutsutaan \termi[termeiksi]{termi}. (Termit, joita edeltää miinusmerkki, voidaan käsittää negatiivisten lukujen yhteenlaskuina.)
+
+Esimerkiksi polynomin $5x^2+x-7$ termit ovat $5x^2$, $x$ ja $-7$. Kukin termi on muuttujan potenssi kerrottuna jollakin vakiolla, joka voi olla myös negatiivinen. Termi voi olla myös \termi[vakiotermi]{vakiotermi}, joka ei sisällä muuttujaa. Esimerkiksi $-7$ on vakiotermi.
+
+Yhden ja kahden termin polynomeista käytetään erityisnimityksiä \termi[monomi]{monomi} ja \termi[binomi]{binomi}.
+
+Termin muuttujan eksponenttia kutsutaan termin \termi[asteeksi]{termi!aste}.
+Vakiotermin aste on nolla.
+%Erikoistapaus termistä on nollannen asteen termi, joka on vain vakio eli \termi{vakiotermi}.
+Polynomin \termi[aste]{polynomi!aste} (käytetään myös nimitystä \termi[asteluku]{polynomi!asteluku}) on suurin sen termien asteista.
+
+Koska polynomilauseke koostuu potenssien summista ja yhteenlasku on vaihdannainen, termien paikkaa polynomissa voidaan vapaasti vaihtaa. Siksi esimerkiksi polynomi $\frac{1}{3}y^3+y^2-3$ voidaan kirjoittaa myös järjestyksessä $y^2-3+\frac{1}{3}y^3$. Yleensä polynomien termit kirjoitetaan niiden asteen perusteella laskevaan järjestykseen niin, että korkeimman asteen termi kirjoitetaan ensin.
+
+\begin{esimerkki}
+Polynomilausekkeen $x^4-2x^3+5$ termit ovat $x^4$, $-2x^3$ ja $5$.
+Ensimmäinen termi $x^4$ on neljännen asteen termi. Termin $-2x^3$ aste on kolme, ja vakiotermin $5$ aste on nolla.
+Koko polynomin aste on neljä, koska se on termien asteista suurin.
+\end{esimerkki}
+
+%Huomaa, että polynomilauseke pitää sieventää ennen asteen määrittämistä.
+%Määritetään vaikkapa polynomin $x^5-4x^2+6x^3+3-x^5-x$ aste.
+%Summataan ensin termejä niin, että
+%polynomissa on vain yksi termi jokaista astetta:
+%\[x^5-4x^2+6x^3+3-x^5-x = 6x^3-4x^2-x+3.\]
+%Nyt nähdään, että polynomin aste on 3.
+
+%\laatikko{
+%Polynomi $P$, joka on astetta $n$, voidaan aina sieventää muotoon
+%\[P(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0,\]
+%missä $a_0, a_1, \ldots, a_n$ ovat vakioita ja $a_n \neq 0$.
+%}
+
+\subsection*{Polynomifunktion arvo}
+
+\qrlinkki{http://opetus.tv/maa/maa2/polynomiesimerkkeja/}
+{Opetus.tv: \emph{polynomiesimerkkejä} (7:43 ja 6:59)}
+
+Polynomi määrittää funktion, jota kutsutaan \termi[polynomifunktioksi]{polynomifunktio}. Esimerkiksi polynomi $2x^2+2x-1$ määrittää funktion $P(x)=2x^2+2x-1$. Tämän funktion arvoja voidaan laskea sijoittamalla lukuja muuttujan $x$ paikalle:
+\begin{align*}
+P(2) & = 5\cdot 2^2-3\cdot 2+2 = 20 - 6 + 2 = 16 \\
+P(-1) & = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
+P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
+\end{align*}
+
+Toisinaan polynomeja ja polynomifunktioita käsitellään kuin ne olisivat sama asia.
+Voidaan esimerkiksi sanoa ''polynomi $P(x)=2x+1$'', vaikka yleensä $P(x)$-merkintää käytetään funktioista.
+
+%Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
+%Esimerkiksi jos $P(x) = x^2-x^2+x+1$ ja $Q(x) = x+1$, $P$ ja $Q$ ovat samat
+%funktiot koska $x^2 - x^2 = 0$ kaikilla reaaliluvuilla x. Siis saman
+%polynomifunktion eri esityksissä lausekkeina suurimman termin aste voi olla
+%eri, esimerkiksi $P$:ssä se on 2 ja $Q$:ssa 1. Useimmiten kiinnostavin on
+%kuitenkin pienin mahdollinen aste, jolloin polynomifunktion $P$ aste olisi
+%myös 1.
+
+\subsection*{Polynomien yhteen- ja vähennyslasku}
+
+\input{content/polynomien_yhteen_ja_vahennyslasku_sisalto}
+
+\Harjoitustehtavat
+
+\paragraph*{Opi perusteet}
+
+\begin{tehtava}
+    Täydennä taulukko.
+        
+    \begin{tabular}{|c|c|c|c|c|}
+                                                                                           \hline
+             & termien   & korkeimman asteen & polynomin &            \\
+polynomi     & lukumäärä & termin kerroin    & asteluku  & vakiotermi \\ \hline
+$-2x^2+6x$   &        2  &         $-2$      &       2   &    0       \\ \hline 
+$7x^3-x-15$  &           &                   &           &            \\ \hline 
+             &        2  &          $-9$     &       2   &    5       \\ \hline 
+             &        3  &          $-1$     &       5   &    $-17$   \\ \hline 
+             &        4  &                   &       3   &            \\ \hline 
+             &        1  &          -5       &       99  &            \\ \hline                           
+    \end{tabular}
+    \begin{vastaus}
+    Värilliset kohdat voivat olla jotain muutakin.
+    
+    \begin{tabular}{|c|c|c|c|c|}
+                                                                                           \hline
+             &                   & korkeimman asteen &                     &            \\
+polynomi     & termien lukumäärä & termin kerroin    & polynomin asteluku  & vakiotermi \\ \hline
+$-2x^2+6x$   &        2          &         $-2$      &       2             &    0       \\ \hline 
+$7x^3-x-15$  &        3          &           7       &       3             &    $-15$   \\ \hline 
+$-9x^2+5$    &        2          &          $-9$     &       2             &    5       \\ \hline 
+$-x^5\textcolor{blue}{+4x}-17$%
+             &        3          &          $-1$     &       5             &    $-17$   \\ \hline 
+$\textcolor{blue}{8}x^3\textcolor{blue}{-x^2+4x}-17$%
+             &        4          &\textcolor{blue}{8}  &       3             &\textcolor{blue}{7}\\ \hline 
+$-5x^{99}$   &        1          &          $-5$     &       99            &         0      \\ \hline                           
+     \end{tabular}
+     \end{vastaus}
+\end{tehtava}
+
+
+
+\begin{tehtava}
+    Mitkä seuraavista ovat polynomeja?
+    \begin{enumerate}[a)]
+        \item $\frac{1}{x}$
+       %\item $x^3+4x$
+        \item $5x-125$
+       %\item $2^x$
+        \item $\sqrt{x}+1$
+        \item $3x^4+6x^2+9$
+        \item $\sqrt{2}x-x$
+        \item $4^x+5x+6$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item Ei ole.
+           %\item On.
+            \item On.
+           %\item Ei ole.
+            \item Ei ole.
+            \item On.
+            \item On.
+            \item Ei ole.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Olkoot $P(x)=x^2+5$ ja $Q(x)=x^3-1$. Laske
+    \begin{enumerate}[a)]
+        \item $P(2)$
+        \item $Q(1)$
+        \item $P(-7)$
+        \item $Q(-4)$.
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $9$ % 2^2 + 5 = 4 + 5 
+            \item $0$ % 1^3 - 1
+            \item $54$ % (-7)^2 + 5 = 49 + 5 
+            \item $-65$ % (-4)^3 - 1 = -64 -1
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+%\begin{tehtava}
+%    Olkoot $P(x)=x^2+3x+4$ ja $Q(x)=x^3-10x+1$. Laske:
+%    \begin{enumerate}[a)]
+%        \item $P(-1)$
+%        \item $Q(-2)$
+%        \item $P(3)$
+%        \item $Q(0)$
+%    \end{enumerate}
+%    \begin{vastaus}
+%        \begin{enumerate}[a)]
+%            \item $2$
+%            \item $13$
+%            \item $22$
+%            \item $1$
+%        \end{enumerate}
+%    \end{vastaus}
+%\end{tehtava}
+
+\begin{tehtava}
+    Olkoot $P(x)=x^2+3x+4$ ja $Q(x)=x^3-10x+1$. Sievennä
+    \begin{enumerate}[a)]
+        \item $P(x)+Q(x)$
+        \item $P(x)-Q(x)$
+        \item $Q(x)-P(x)$
+        \item $2P(3)+Q(2)$.
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x^3+x^2-7x+5$ % x^2+3x+4 + x^3-10x+1
+            \item $-x^3+x^2+13x+3$ % x^2+3x+4 -(x^3-10x+1) = x^2+3x+4 -x^3+10x-1
+            \item $x^3-x^2-13x-3$ % 
+            \item $33$ % 2*(3^2+3*3+4) +  2^3-10*2+1 = 2*(9+9+4)+8-20+1 =44-11 =33
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+%\begin{tehtava}
+%	Mikä on/mitkä ovat polynomin $P(x) = x^5-3x^3+2x-1$
+%	\begin{enumerate}[a)]
+%		\item aste
+%		\item termit
+%		\item kolmannen asteen termi
+%		\item vakiotermi
+%	\end{enumerate}
+%
+%	\begin{vastaus}
+%		\begin{enumerate}[a)]
+%			\item $5$
+%			\item $x^5$, $-3x^3$, $2x$, $-1$
+%			\item $-3x^3$
+%			\item $-1$
+%		\end{enumerate}
+%	\end{vastaus}
+%\end{tehtava}
+
+%\begin{tehtava}
+%	Mitkä on seuraavien polynomien asteet?
+%	\begin{enumerate}[a)]
+%		\item $x^2 + 3x - 5$
+%		\item $100 + x$
+%		\item $3x^3 + 90x^8 + 2x$
+%		\item $12x^1 + 34x^2 + 56x^3 + 78x^5 + 90x^5$
+%	\end{enumerate}
+%
+%	\begin{vastaus}
+%		\begin{enumerate}[a)]
+%			\item $2$
+%			\item $1$
+%			\item $8$
+%			\item $5$
+%		\end{enumerate}
+%	\end{vastaus}
+%\end{tehtava}
+
+% \begin{tehtava}
+%     Sievennä
+%     \begin{enumerate}
+%         \item $(2x + 3) + x $
+%         \item $(3x - 1) + (-x + 1)$
+%         \item $(5x + 10) + (6x - 6) - (x + 3)$
+%     \end{enumerate}
+%     \begin{vastaus}
+%         \begin{enumerate}
+%             \item $3x + 3$
+%             \item $2x$
+%             \item $10x - 1$
+%         \end{enumerate}
+%     \end{vastaus}
+% \end{tehtava}
+
+\paragraph*{Hallitse kokonaisuus}
+
+\begin{tehtava}
+    Sievennä
+    \begin{enumerate}
+        \item $(x^2 - 2x + 1) + (-x^2 + x) $
+        \item $(3y^3 + 2y^2  + y) - (-y^2 + y)$
+        \item $(z^{10} - z^6 + z^2 + 1) + (z^{10} + 2z^8 - 3z^6) - (z^4 - 3)$.
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $-x + 1$
+            \item $3y^3 + 3y^2$
+            \item $2z^{10} + 2z^8 - 4z^6 - z^4 + z^2 + 4$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Mitkä ovat seuraavien polynomifunktioiden asteet, ts. sievennettyjen muotojen asteet?
+	\begin{enumerate}[a)]
+		\item $x+5-x$
+		\item $x^2+x-2x^2$
+		\item $4x^5+x^2-4-x^2$
+		\item $x^3+2x^5-x-3x^5+3x^2+5+x^5$
+		\item $x^4-2x^3+x-1+x^3-x^4+x^3$
+	\end{enumerate}
+
+	\begin{vastaus}
+		\begin{enumerate}[a)]
+			\item $0$
+			\item $2$
+			\item $5$
+			\item $3$
+			\item $1$
+		\end{enumerate}
+	\end{vastaus}
+\end{tehtava}
+
+% Hämäävä tehtävä
+% \begin{tehtava}
+% 	Sievennä.
+% 	\begin{enumerate}[a)]
+% 		\item $2 + x$
+% 		\item $3x - 1 + 2x^2$
+% 		\item $x^3 - \dfrac{2}{3}x^5 + 2x^4 $
+% 		\item $1 - 15x + \pi x^{10} + 2$
+% 		\item $-2x + 3 + 5x - 5x^2 - 5$
+% 	\end{enumerate}
+%
+% 	\begin{vastaus}
+% 		\begin{enumerate}[a)]
+% 			\item $x + 2$
+% 			\item $2x^2 + 3x - 1$
+% 			\item $-\dfrac{2}{3}x^5 + 2x^4 + x^3 $
+% 			\item $\pi x^10 - 15x + 3$
+% 			\item $-5x^2 + 3x - 2$
+% 		\end{enumerate}
+% 	\end{vastaus}
+% \end{tehtava}
+
+\begin{tehtava}
+	Mitkä seuraavista polynomilausekkeista esittävät samaa polynomifunktiota kuin
+	$x^3+2x+1$?
+	\begin{enumerate}[a)]
+		\item $2x+x^3+1$
+		\item $x^2+2x+1$
+		\item $x+2x^3+1 - (x^3+x)$
+		\item $15+x^4+2x+x^3-x^4-14$
+	\end{enumerate}
+	\begin{vastaus}
+		a) ja d)
+	\end{vastaus}
+\end{tehtava}

@@ -1,0 +1,378 @@
+\section{Toisen asteen epäyhtälö}
+
+\qrlinkki{http://opetus.tv/maa/maa2/toisen-asteen-epayhtalo/}{Opetus.tv: \emph{toisen asteen epäyhtälö} (9:20 ja 10:19)}
+
+%\begin{esimerkki}
+%\missingfigure{johdantoesimerkki esim. lämpötilatarkastelu tjsp}
+%\begin{itemize}
+%\item{Milloin lämpötila on suurempi kuin nolla?}
+%\item{Milloin lämpötila on pienempi kuin nolla?}
+%\item{Milloin lämpötilan merkki voi vaihtua?} 
+%\end{itemize}
+%\end{esimerkki}
+
+%\subsection*{Toisen asteen epäyhtälön ratkaiseminen kuvaajan avulla}
+
+Toisen asteen epäyhtälön voi ratkaista tutkimalla toisen asteen polynomin kulkua.
+
+\begin{esimerkki}
+Ratkaise epäyhtälö $x^2-5>0$.
+
+\textbf{Ratkaisu:}
+Tarkastellaan polynomifunktiota $f(x)=x^2-5$. Tehtävänanto voidaan nyt muotoilla uudelleen. On selvitettävä, millä muuttujan $x$ arvoilla polynomifunktion $f(x)=x^2-5$ arvot ovat positiivisia.
+%Funktion $f$ arvot ovat suurempia kuin nolla niillä muuttujan $x$ arvoilla, joilla pätee $x^2-5>0$.
+
+\begin{kuvaajapohja}[\kuvaajaAsetusEiRuudukkoa\kuvaajaAsetusEiLukuja]{0.6}{-5}{5}{-6}{5}
+\kuvaajakohtaarvo{-3}{4}{$-3$}{$f(-3)$}
+\kuvaajakohtaarvo{1}{-4}{$1$}{$f(1)$}
+\kuvaaja{x**2-5}{$f(x)=x^2-5$}{black}
+\end{kuvaajapohja}
+
+\begin{itemize}
+\item Funktion arvot ovat positiivisia, kun funktion kuvaaja on $x$-akselin yläpuolella.
+\item Funktion arvot ovat negatiivisia, kun funktion kuvaaja on $x$-akselin alapuolella.
+\end{itemize}
+%\begin{lukusuora}{-2.5}{2.5}{5}
+%\lukusuoraparaabeli{-1}{1}{-1}
+%\lukusuoraalanimi{0}{$-$}
+%\lukusuoranimi{-1.8}{$+$}
+%\lukusuoranimi{1.8}{$+$}
+%\end{lukusuora}
+
+Kahden vierekkäisen nollakohdan välissä funktion kuvaaja on joko kokonaan $x$-akselin alapuolella tai kokonaan $x$-akselin yläpuolella. Tällöin funktion arvot ovat aina joko pelkästään positiivisia tai pelkästään negatiivisia.
+
+%Ratkaistaan funktion $f$ nollakohdat, koska niissä kohdissa funktion arvojen merkki voi vaihtua.
+Funktion käyttäytymisestä saadaan siis paljon tietoa etsimällä sen nollakohdat:
+\begin{align*}
+f(x)&=0 \\
+x^2-5&=0 \\
+x^2&=5 \\
+x&=\pm \sqrt{5}
+\end{align*}
+
+Nyt tiedetään, että funktio leikkaa $x$-akselin kohdissa $x=-\sqrt{5}$ ja $x=\sqrt{5}$. Kuvasta nähdään, että funktion kuvaaja on $x$-akselin yläpuolella, kun $x<-\sqrt{5}$ tai $x>\sqrt{5}$. Siten funktion arvot ovat positiivisia, kun $x<-\sqrt{5}$ tai $x>\sqrt{5}$.
+
+\begin{lukusuora}{-2.5}{2.5}{5}
+\lukusuoraparaabeli{-1}{1}{-1}
+\lukusuoraalanimi{0}{$-$}
+\lukusuoranimi{-1.8}{$+$}
+\lukusuoranimi{1.8}{$+$}
+\lukusuorapienipiste{-1}{\hspace{4mm}-\!$\sqrt{5}$}
+\lukusuorapienipiste{1}{$\sqrt{5}$\hspace{3mm}}
+\end{lukusuora}
+
+\textbf{Vastaus:} $x<-\sqrt{5}$ tai $x>\sqrt{5}$.
+
+\end{esimerkki}
+
+Toisen asteen polynomifunktion $f(x)=ax^2+bx+c$ arvot voivat vaihtaa merkkiään vain funktion nollakohdissa. Jos halutaan tietää, milloin toisen asteen polynomifunktion arvot ovat positiivisia tai negatiivisia, niin
+\begin{itemize}
+\item[1.] Ratkaistaan funktion $f(x)=ax^2+bx+c$ nollakohdat eli etsitään ne muuttujan $x$ arvot, joilla $ax^2+bx+c=0$.
+\item[2.] Hahmotellaan funktion kuvaajan aukeamissuunta ja merkitään kuvaajaan funktion nollakohdat.
+\item[3.] Päätellään hahmotelmasta milloin funktion arvot ovat positiivisia ja milloin negatiivisia.
+\end{itemize} 
+
+\begin{esimerkki} 
+Ratkaise epäyhtälö $x^2-6<-5x$.
+ 
+\textbf{Ratkaisu:}
+Muutetaan ensin epäyhtälö muotoon $x^2+5x-6<0$ lisäämällä molemmille puolille termi $5x$. Nyt tehtävä voidaan ratkaista tutkimalla, millä muuttujan arvoilla funktion $f(x)=x^2+5x-6$ arvot ovat negatiivisia.
+ 
+1. Ratkaistaan polynomifunktion $f(x)=x^2+5x-6$ nollakohdat.
+\begin{align*}
+f(x)&=0 & \\
+x^2+5x-6&=0 \ \  \ \ \ & || \text{ 2. asteen yhtälön ratkaisukaava} \\ 
+x&=\frac{-5 \pm \sqrt[]{(5)^2-4 \cdot 1 \cdot(-6)}}{2 \cdot 1} & \\
+x&=\frac{-5 \pm \sqrt[]{25+24}}{2} & \\
+x&=\frac{-5 \pm \sqrt[]{49}}{2} & \\
+x&=\frac{-5 \pm 7}{2} & \\
+x&=-6 \text{ tai } x=1 &
+\end{align*}
+2. Hahmotellaan polynomifunktion kuvaaja. Se aukeaa ylöspäin, koska toisen
+asteen termin $x^2$ kerroin on positiivinen.
+ 
+\begin{lukusuora}{-2.5}{2.5}{5}
+\lukusuoraparaabeli{-1}{1}{-1}
+\lukusuoraalanimi{0}{$-$}
+\lukusuoranimi{-1.8}{$+$}
+\lukusuoranimi{1.8}{$+$}
+\lukusuorapienipiste{-1}{\hspace{3mm}-6}
+\lukusuorapienipiste{1}{1\hspace{1mm}}
+\end{lukusuora}
+ 
+3.  Kuvaajasta voidaan päätellä, että $f(x)<0$, kun $-6 < x < 1$.
+ 
+Siis alkuperäinen epäyhtälö toteutuu, kun $-6 < x <1$.  
+\end{esimerkki}
+
+\begin{esimerkki}
+
+Ratkaise epäyhtälö $5x^2+13x+3<0$.
+
+\textbf{Ratkaisu:}
+
+Tutkitaan funktiota $f(x)=5x^2+13x+3$. Nyt on selvitettävä, millä muuttujan $x$ arvoilla funktion arvot ovat negatiivisia.
+
+1. Ratkaistaan funktion nollakohdat, jotta tiedetään, missä kohdissa kuvaaja leikkaa $x$-akselin.
+\begin{align*}
+f(x)&=0 \\
+5x^2+13x+3&=0 & || \text{ 2. asteen yhtälön ratkaisukaava}  \\
+x&=\frac{-13 \pm \sqrt[]{13^2-4 \cdot 5 \cdot 3}}{2 \cdot 5} & \\
+x&=\frac{-13 \pm \sqrt[]{169-60}}{10} & \\
+x&=\frac{-13 \pm \sqrt[]{109}}{10} & 
+\end{align*}
+
+2. Hahmotellaan funktion kuvaaja.
+Kuvaaja on ylöspäin aukeava paraabeli, koska toisen asteen termin kerroin $5$ on positiivinen. 
+
+\begin{lukusuora}{-2.5}{2.5}{5}
+\lukusuoraparaabeli{-1}{1}{-1}
+\lukusuoraalanimi{0}{$-$}
+\lukusuoranimi{-1.8}{$+$}
+\lukusuoranimi{1.8}{$+$}
+\lukusuorapienipiste{-1}{}
+\lukusuorapienipiste{1}{}
+\end{lukusuora}
+
+3. Kuvaajasta voidaan päätellä, että $f(x)<0$, kun $\frac{-13 - \sqrt[]{109}}{10}<x< \frac{-13 + \sqrt[]{109}}{10}$.
+
+\textbf{Vastaus:}
+$\frac{-13 - \sqrt[]{109}}{10}<x< \frac{-13 + \sqrt[]{109}}{10}$
+
+\end{esimerkki}
+
+\begin{esimerkki}
+Mikko rakentaa suorakulmion muotoista kaniaitausta lemmikkikanilleen. Aitaus rajoittuu yhdeltä sivulta Mikon taloon. Hänellä on yhteensä 14 metriä kaniverkkoa. Miten Mikon pitää valita aitauksensa mitat, jotta kaniaitauksen koko on vähintään 12 neliömetriä?
+
+%fixme Tähän esimerkkiin olisi hyvä saada kuva.
+
+\textbf{Ratkaisu}
+
+Olkoon talon suuntaisen sivun pituus $y$ ja kahden päätysivun pituus $x$. Koska tiedämme, että $x+x+y=14$, saadaan tästä ratkaistua talon suuntaisen sivun pituudeksi $y=14 - 2x$.
+%Sivujen pituuksille pitää päteä
+%\begin{align*}
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ y>0 \\
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 14-2x>0 \\ 
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 14>2x \\ 
+%x&>0 \ \ \ \ \ \ \text{ ja } \ \ \ \ \ 7>x \\
+%\end{align*} 
+Aitauksen pinta-alaa kuvaa funktio $A(x)=x(14-2x)=14x-2x^2=-2x^2-14x$.
+Halutaan, että $A(x)>12$, josta saadaan epäyhtälö $-2x^2+14x>12$. Tämä epäyhtälö saadaan vielä muotoon $-2x^2+14x-12>0$.
+
+Nyt ratkaistavana on epäyhtälö $-2x^2+14x-12>0$. Tutkitaan funktiota $f(x)=-2x^2+14x-12$ ja selvitetään, milloin sen arvot ovat positiivisia.
+
+Selvitetään ensin funktion nollakohdat:
+\begin{align*}
+-2x^2+14x-12&=0 \\
+x&=\frac{-14 \pm \sqrt[]{14^2-4 \cdot (-2) \cdot (-12)}}{2 \cdot (-2)} \\
+x&=\frac{-14 \pm \sqrt[]{196-96}}{-4} \\
+x&=\frac{-14 \pm 10}{-4} \\
+x&=\frac{-24}{-4} \quad \text{tai} \quad x=\frac{-4}{-4} \\
+x&=6 \quad \text{tai} \quad x=1
+\end{align*}
+
+Hahmotellaan sitten funktion $f(x)=-2x^2+14x-12$ kuvaaja. Koska 2. asteen termin kerroin $-2$ on negatiivinen, on kyseessä alaspäin aukeava paraabeli. Hahmotellaan sen kuvaaja:
+
+\begin{lukusuora}{-2.5}{2.5}{5}
+\lukusuoraparaabeli{-1}{1}{1}
+\lukusuoranimi{0}{$+$}
+\lukusuoraalanimi{-1.8}{$-$}
+\lukusuoraalanimi{1.8}{$-$}
+\lukusuorapienipiste{-1}{1\hspace{1mm}}
+\lukusuorapienipiste{1}{\hspace{1mm}6}
+\end{lukusuora}
+
+Kuvasta nähdään, että funktion arvot ovat positiivisia, kun $1<x<6$. Siten
+epäyhtälö $-2x^2+14x-12$ toteutuu, kun $1<x<6$. Tämä tarkoittaa, että aitauksen ala on suurempi kuin 12 neliömetriä, kun $1<x<6$.
+
+\textbf{Vastaus:} Olkoon $y$ aitauksen talonsuuntainen sivun ja $x$ päätysivun pituus. Tällöin $1<x<6$ ja $y=14-2x$.
+\end{esimerkki}
+
+% \subsection*{Toisen asteen epäyhtälön ratkaiseminen tekijöihin jakamisen avulla}
+% \begin{esimerkki} 
+% Ratkaise epäyhtälö $x^2+10x>0$.
+% 
+% \textbf{Ratkaisu:}
+% 
+% \begin{align*}
+% x^2+10x&=0 &||\text{ tulon nollasääntö} \\
+% x(x+10)&=0 & \\
+% x&=0 \quad \text{tai} \quad x+10=0 & \\
+% x&=0 \quad \text{tai} \quad x=-10 &
+% \end{align*}
+% Koska kahden positiivisen tai negatiivisen luvun tulo on positiivinen, niin
+% polynomi $x^2+10x=x(x+10)$ saa positiivisen arvon, kun 
+% \begin{itemize}
+% \item{$x>0$ ja $x+10>0$} \\tai \\
+% \item{$x<0$ ja $x+10<0$} 
+% \end{itemize}
+% Koska negatiivisen ja positiivisen luvun tulo on negatiivinen, niin
+% polynomi $x^2+10x=x(x+10)$ saa negatiivisen arvon, kun
+% \begin{itemize}
+% \item{$x>0$ ja $x+10<0$} \\ tai \\
+% \item{$x<0$ ja $x+10>0$} \\
+% \end{itemize}
+% 
+% \begin{center}
+% \begin{merkkikaavio}{2}
+% \merkkikaavioKohta{$-10$}
+% \merkkikaavioKohta{$0$}
+% 
+% 	\merkkikaavioFunktio{$x$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% \merkkikaavioUusirivi
+% 	\merkkikaavioFunktio{$x+10$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% 	\merkkikaavioMerkki{$+$}
+% \merkkikaavioUusiriviKaksoisviiva
+% 	\merkkikaavioFunktio{$x(x+10)$}
+% 	\merkkikaavioMerkki{$+$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% \end{merkkikaavio}
+% \end{center}
+% 
+% Tästä huomataan, että epäyhtälö $x^2+10x>0$ on tosi, kun $x>0$ tai $x<-10$. 
+% \end{esimerkki} 
+% 
+% Toinen tapa ratkaista toisen asteen epäyhtälö on 
+% \begin{itemize}
+% \item{jakaa polynomi tekijöihinsä }
+% \item{tutkia millä muuttujan $x$ arvoilla kahden lausekkeen tulo on positiivinen ja milloin negatiivinen}
+% \end{itemize}
+% 
+% \begin{esimerkki}
+% Ratkaise epäyhtälö $x^2-6x+9 \leq 0$. \\ \\
+% \textbf{Ratkaisu:} \\
+% Ratkaistaan millä muuttujan $x$ arvolla polynomi saa arvon nolla.
+% \begin{align*}
+% x^2-6x+9&=0 \\
+% x&=\frac{-(-6) \pm \sqrt[]{(-6)^2-4 \cdot 1 \cdot 9}}{2 \cdot 1} \\
+% x&=-3
+% \end{align*}
+% Yhtälöllä $x^2-6x+9=0$ on kaksoisjuuri $x=-3$. 
+% Polynomi saadaan siis muotoon $x^2-6x+9=(x-3)^2$.
+% 
+% \begin{center}
+% \begin{merkkikaavio}{1}
+% \merkkikaavioKohta{$3$}
+% 
+% 	\merkkikaavioFunktio{$x-3$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% \merkkikaavioUusirivi
+% 	\merkkikaavioFunktio{$x-3$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% \merkkikaavioUusirivi
+% 	\merkkikaavioFunktio{$(x-3)(x-3)$}
+% 	\merkkikaavioMerkki{$+$}
+% 	\merkkikaavioMerkki{$+$}
+% \end{merkkikaavio}
+% \end{center}
+% 
+% Kaaviosta saadaan pääteltyä, että $x^2-6x+9=(x-3)^2$ on positiivinen kun $x \neq -3$. Siis epäyhtälö $x^2-6x+9 \leq 0$ toteutuu, kun $x=-3$ jolloin polynomi saa arvon nolla. 
+% \end{esimerkki}
+% \begin{esimerkki}
+% Ratkaise epäyhtälö $2x^2+2x-12<0$. 
+% 1. Ratkaistaan millä muuttujan $x$ arvolla polynomi $2x^2+2x-12$ saa arvon nolla.
+% \begin{align*}
+% 2x^2+2x-12&=0 \\
+% x&=\frac{-2 \pm \sqrt[]{2^2-4 \cdot 2 \cdot (-12)}}{2 \cdot 2} \\
+% x&=\frac{-2 \pm \sqrt[]{4+96}}{4} \\
+% x&=\frac{-2 \pm 10}{4} \\
+% x&=-3 \text{ tai } x = 2
+% \end{align*}
+% 2. Polynomi saadaan muotoon $2x^2+2x-12=2(x-2)(x+3)$.  \\
+% 3. Piirretään merkkikaavio:
+% \begin{center}
+% \begin{merkkikaavio}{2}
+% \merkkikaavioKohta{$-3$}
+% \merkkikaavioKohta{$2$}
+% 
+% 
+% 	\merkkikaavioFunktio{$2(x-2)$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% \merkkikaavioUusirivi
+% 	\merkkikaavioFunktio{$x+3$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% 	\merkkikaavioMerkki{$+$}
+% \merkkikaavioUusiriviKaksoisviiva
+% 	\merkkikaavioFunktio{$2(x-2)(x+3)$}
+% 	\merkkikaavioMerkki{$+$}
+% 	\merkkikaavioMerkki{$-$}
+% 	\merkkikaavioMerkki{$+$}
+% \end{merkkikaavio}
+% \end{center}
+% 
+% 4. Huomataan, että polynomi $2(x-2)(x+3)$ on negatiivinen, kun $-3<x<2$. 
+% \end{esimerkki}
+
+\Harjoitustehtavat
+
+\begin{tehtava}
+    Ratkaise seuraavat epäyhtälöt.
+    \begin{enumerate}[(a)]
+        \item $-x^2+5x+8>0$
+        \item $-2x^2+6x+9>0$
+        \item $4x^2-8x-72<0$
+        \item $5x^2+10x-73<0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $\frac{1}{2} (5+\sqrt{57}) > x > \frac{1}{2} (5-\sqrt{57})$
+            \item $\frac{3}{2} (1+\sqrt{3}) > x > \frac{3}{2} (1-\sqrt{3})$
+            \item $1+\sqrt{19} > x > 1-\sqrt{19}$
+            \item $-1+\frac{1}{5} \sqrt{390} > x > -1-\frac{1}{5} \sqrt{390}$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat epäyhtälöt.
+    \begin{enumerate}[(a)]
+        \item $4x^2+13x\geq 0$
+        \item $4x^2-776\geq 0$
+        \item $7x^2-8x\leq 0$
+        \item $11x^2-12\leq 0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[(a)]
+            \item $x \geq 0$ tai $x \leq -3,25$
+            \item $x \geq \sqrt{194}$ tai $x \leq -\sqrt{194}$
+            \item $0,875 \geq x \geq 0$
+            \item $2\sqrt{\frac{3}{11}} \geq x \geq -2\sqrt{\frac{3}{11}}$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise epäyhtälö $ax^2+(a+1)x+1 > 0$ vapaan parametrin $a$ funktiona.
+    \begin{vastaus}
+        $a < 0$: $-\frac{1}{a} > x > -1$ \\ $a = 0$: $x > -1$ \\ $1 > a > 0$: $x > -1$ tai $x < -\frac{1}{a}$ \\ $a = 1$: $x \neq -1$ \\ $a > 1$: $x \in \mathbb{R}$
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise epäyhtälö $a^2x^2+ax+1 \geq 0$ vapaan parametrin $a$ funktiona.
+    \begin{vastaus}
+        $a < 0$: $x \geq -\frac{2}{a}$ tai $x \leq \frac{1}{a}$ \\ $a = 0$: $x \in \mathbb{R} $ \\ $a > 0$: $x \geq \frac{1}{a}$ tai $x \leq -\frac{2}{a}$
+    \end{vastaus}
+\end{tehtava}
+
+% $ax^2+x+5 < 0$
+% $x^2+x+a \leq 0$
+
+\begin{tehtava}
+(K93/T3b) Autoilijan työmatkan kesto $t$ riippuu liikennevirrasta $m$ kaavan 
+        $t=0,01m^2+0,03m+18$ mukaisesti, missä $t$ on ajoaika minuutteina ja $m$ liikenteen mittauspisteen minuutissa ohittavien autojen määrä. Kuinka suuri saa liikennevirta enintään olla, jotta autoilijan työmatka kestäisi enintään puoli tuntia?
+\begin{vastaus}
+        $33$ autoa/minuutti
+    \end{vastaus}
+\end{tehtava}

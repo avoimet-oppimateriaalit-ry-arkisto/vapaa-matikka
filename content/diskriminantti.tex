@@ -1,0 +1,130 @@
+\section{Diskriminantti}
+
+\qrlinkki{http://opetus.tv/maa/maa2/diskriminantti/}{Opetus.tv: \emph{diskriminantti 2. asteen yhtälölle} (7:56 ja 8:30)}
+
+\begin{esimerkki}
+    Ratkaistaan toisen asteen yhtälö $3x^2-5x+10=0$.
+    \begin{align*}
+        \underbrace{3}_{=a}x^2\underbrace{-5}_{=b}x+\underbrace{10}_{=c}=0
+    \end{align*}
+    Sijoitetaan vakiot $a=3$, $b=-5$ ja $c=10$ toisen asteen yhtälön ratkaisukaavaan $x=\frac{-b \pm \sqrt[]{b^2-4ac}}{2a}$.
+    \begin{align*}
+        x=\frac{-(-5) \pm \sqrt[]{(-5)^2-4\cdot 3 \cdot 10}}{2 \cdot 3} \\
+        x=-\frac{5 \pm \sqrt[]{25-120}}{6}
+    \end{align*}
+    Koska juurrettava on negatiivinen,
+    \begin{align*}
+        b^2-4ac=(-5)^2-4 \cdot 3 \cdot 10=25-120=-95<0,
+    \end{align*}
+    niin toisen asteen yhtälöllä ei ole ratkaisuja.
+\end{esimerkki}
+
+%Marginaaliin tai kuvaksi 2. asteen yhtälön ratkaisukaava (tai tekstin sekaan)
+
+Toisen asteen yhtälön ratkaisukaavassa esiintyy neliöjuuri. Tämän neliöjuuren sisällä oleva lauseke $b^2-4ac$ määrää, kuinka monta ratkaisua yhtälöllä on. Joskus riittää pelkkä tieto ratkaisujen olemassaolosta tai lukumäärästä. Tällaisissa tapauksissa ei tarvitse ratkaista yhtälöä, vaan pelkkä edellä mainitun lausekkeen tarkastelu riittää. Tästä lausekkeesta käytetään nimeä \emph{diskriminantti} ja sitä merkitään kirjaimella $D$.
+
+\laatikko{Toisen asteen yhtälön $ax^2+bx+c=0$ ratkaisujen lukumäärä
+voidaan laskea diskriminantin $D=b^2-4ac$ avulla seuraavasti:
+\begin{itemize}
+\item
+Jos $D<0$, yhtälöllä ei ole reaalisia ratkaisuja.
+\item
+Jos $D=0$, yhtälöllä on tasan yksi reaalinen ratkaisu.
+\item
+Jos $D>0$, yhtälöllä on kaksi erisuurta reaaliratkaisua.
+\end{itemize}
+}
+Tapauksessa $D=0$ yhtälön ainoaa ratkaisua kutsutaan
+sen \termi[kaksoisjuureksi]{kaksoisjuuri}.
+
+\begin{esimerkki}
+\ \\
+\parbox{4.5cm}{
+\begin{kuvaajapohja}{1}{-1}{3}{-1}{3}
+  \kuvaaja{2*x**2-2*x+1}{}{blue}
+\end{kuvaajapohja}
+}
+\parbox{6cm}{$2x^2-2x+1=0$:\\$D < 0$, ei reaalisia ratkaisuja}
+\\
+\parbox{4.5cm}{
+\begin{kuvaajapohja}{1}{-1}{3}{-1}{3}
+  \kuvaaja{x**2-2*x+1}{}{blue}
+\end{kuvaajapohja}
+}
+\parbox{6cm}{$x^2-2x+1=0$:\\$D = 0$, yksi reaaliratkaisu}
+\\
+\parbox{4.5cm}{
+\begin{kuvaajapohja}{1}{-1}{3}{-2}{2}
+  \kuvaaja{2*x**2-4*x+1}{}{blue}
+\end{kuvaajapohja}
+}
+\parbox{6cm}{$2x^2-4x+1=0$:\\$D > 0$, kaksi eri reaaliratkaisua}
+\end{esimerkki}
+
+\begin{esimerkki}
+Selvitetään, onko yhtälöllä $x^2+x+2=0$ ratkaisuja.
+
+Tutkitaan diskriminanttia.
+\[D=1^2-4\cdot 1 \cdot 2 = 1-8 = -7\]
+Koska $D<0$, yhtälöllä ei ole ratkaisuja.
+
+Jos yhtälön ratkaisemista yrittäisi ratkaisukaavan avulla, tulisi
+neliöjuuren alle negatiivinen luku.
+\end{esimerkki}
+
+\begin{esimerkki}
+Millä $a$:n arvolla yhtälöllä $9x^2+ax+1$ on tasan yksi ratkaisu?
+
+Jotta ratkaisuja olisi tasan yksi, on diskriminantin oltava 0.
+\begin{align*}
+D &= 0\\
+a^2-4\cdot 9\cdot 1 &= 0\\
+a^2-36 &= 0\\
+a^2 &= 36\\
+a &= \pm 6
+\end{align*}
+Yhtälöllä on täsmälleen yksi ratkaisu, jos $a=-6$ tai $a=6$.
+\end{esimerkki}
+
+\Harjoitustehtavat
+
+\begin{tehtava}
+	Kuinka monta ratkaisua yhtälöillä on?
+	\begin{enumerate}[a)]
+		\item $9x^2+12x-4$
+		\item $5x^2+4x-10$
+		\item $3x^2-12x+12$
+		\item $5x^2+10x-30$
+	\end{enumerate}
+	\begin{vastaus}
+		\begin{enumerate}[a)]
+			\item Kaksi. $D=12^2-4 \cdot 9 \cdot (-4) = 288 >0$
+			\item Kaksi. $D=4^2-4\cdot 5 \cdot (-10) = 216 >0$
+			\item Yksi. $D=(-12)^2-4\cdot 3\cdot 12 =0$
+			\item Kaksi. $D=10^2-4\cdot 5 \cdot (-30) = 700 >0$
+		\end{enumerate}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Millä vakion $k$ arvoilla yhtälöllä $-x^2-x-k = 0$ ei ole ratkaisua?
+	\begin{vastaus}
+		Pitää olla $D=(-1)^2-4 \cdot (-1) \cdot (-k)<0$. Siis $k>\frac{1}{4}$.
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Millä vakion $t$ arvoilla yhtälöllä $6x^2+2tx+2t=0$ on kaksoisjuuri?
+	\begin{vastaus}
+		Jos kaksoisjuuri, niin pitää päteä $D=4t^2-48t>0$. Joka toteutuu, kun $-12 < t < 0$.
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Osoita, että diskriminantti on $0$ jos ja vain jos yhtälö voidaan esittää muodossa $(c_1 x+ c_2)^2=0$, missä $c_1$ ja $c_2$ ovat reaalilukuja.
+	\begin{vastaus}
+		Suunta "$\Rightarrow$": $(c_1 x+ c_2)^2=0 \Leftrightarrow c_1^2 x^2 + 2c_1 c_2 x+ c_2^2 =0 \Rightarrow
+		D=(2 c_1 c_2)^2-4 c_1^2 c_2^2 =4 c_1^2 c_2^2 -4 c_1^2 c_2^2 =0$ \\
+		Suunta "$\Leftarrow$": $D=0 \Leftrightarrow b^2-4ac=0 \Leftrightarrow b^2=4ac \Leftrightarrow c=\frac{b^2}{4a} \Rightarrow ax^2+bx+\frac{b^2}{4a}=0 \Leftrightarrow 4a^2x^2+4abx+b^2=0 \Leftrightarrow (2ax+b)^2=0$
+	\end{vastaus}
+\end{tehtava}

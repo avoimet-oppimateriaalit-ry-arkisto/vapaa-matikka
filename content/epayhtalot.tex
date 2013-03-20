@@ -1,0 +1,383 @@
+\section{Epäyhtälöistä yleisesti}
+Epäyhtälöllä tarkoitetaan ilmausta, jossa esitetään kahden lausekkeen arvon välinen suuruusjärjestys. Suuruusjärjestyksien esittämiseen käytetään seuraavia merkintöjä:
+
+\begin{center}
+\begin{tabular}{l|l}
+\emph{Merkintä} & \emph{Merkitys} \\
+\hline
+$a<b$ &  $a$ on pienempi kuin $b$ \\
+$a>b$ & $a$ on suurempi kuin $b$ \\
+$a \leq b$ & $a$ on pienempi tai yhtäsuuri kuin $b$ \\
+$a \geq b$ & $a$ on suurempi tai yhtäsuuri kuin $b$ \\
+\end{tabular}
+\end{center}
+
+Sama epäyhtälö voidaan kirjoittaa kahdella tavalla: $a < b$ tarkoittaa samaa kuin $b > a$, ja $a \leq b$ tarkoittaa samaa kuin $b \geq a$. Epäyhtälö $a < b$ pätee täsmälleen silloin, kun epäyhtälö $a \geq b$ ei päde.
+
+Epäyhtälön totuusarvo voi riippua epäyhtälön puolilla esiintyvien muuttujien arvoista. Tämän perusteella epäyhtälöt voidaan jakaa kolmeen tyyppiin:
+\begin{itemize}
+\item \emph{Aina tosi} -- pätee kaikilla muuttujien arvoilla. Esimerkiksi epäyhtälöt $5 < 6$ tai $x + 1 \leq x + 3$ pätevät riippumatta muuttujien arvoista.
+\item \emph{Ehdollisesti tosi} -- pätee vain joillain muuttujien arvoilla. Esimerkiksi epäyhtälö $x < 5$ pätee, kun $x = 4$, mutta ei päde, kun $x = 7$.
+\item \emph{Aina epätosi} -- ei päde millään muuttujien arvoilla. Esimerkiksi epäyhtälöt $3 < 1$ ja $x < x$ eivät päde koskaan.
+\end{itemize}
+
+\subsection*{Epäyhtälöiden muokkaaminen}
+Vastaavasti kuten yhtälöiden ratkaisemisessa, epäyhtälön ratkaisemisessa selvitetään ne muuttujien arvot, joilla epäyhtälö on tosi.
+
+Kuten yhtälöitä, myös epäyhtälöitä voidaan ratkaista muokkaamalla niitä sellaisilla operaatioilla, joilla muokattu epäyhtälö on yhtäpitävä alkuperäisen kanssa.
+
+Kahden luvun kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen:
+
+\begin{lukusuora}{-1}{10}{12}
+	\lukusuoranuolialas{2}{6}
+	\lukusuoranuolialas{3}{7}
+
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{3}{$3$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{6}{$2\!+\!4$}
+	\lukusuorapiste{7}{$3\!+\!4$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
+
+\begin{esimerkki}
+Luvun lisääminen epäyhtälöön.
+  \begin{align*}
+     2 &< 3 && \ppalkki +4\\
+   2+4 &< 3+4  \\
+     6 &< 7 && tosi
+  \end{align*}
+\end{esimerkki}
+
+Myös lukujen kertominen samalla positiivisella kertoimella säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan:
+
+\begin{lukusuora}{-1}{10}{12}
+	\lukusuoranuolialas{2}{1}
+	\lukusuoranuolialas{4}{2}
+
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{4}{$4$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{1}{$2 \cdot \frac{1}{2}$}
+	\lukusuorapiste{2}{$4 \cdot \frac{1}{2}$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan:
+
+\begin{lukusuora}{-1}{10}{12}
+	\lukusuoranuolialas{2}{4}
+	\lukusuoranuolialas{4}{8}
+
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{4}{$4$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{4}{$2\cdot 2$}
+	\lukusuorapiste{8}{$4\cdot 2$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen alkuperäisen epäyhtälön kanssa yhtäpitävä epäyhtälö saadaan kertomalla tai jakamalla molemmat puolet positiivisella luvulla.
+
+\begin{esimerkki}
+Epäyhtälön kertominen lukua yksi pienemmällä positiivisella luvulla.
+\begin{align*}
+     2 &< 4 && \ppalkki \cdot \frac{1}{2} \\
+   2\cdot\frac{1}{2} &< 4\cdot\frac{1}{2}  \\
+     1 &< 2 && tosi
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Epäyhtälön kertominen lukua yksi suuremmalla luvulla.
+\begin{align*}
+     2 &< 4 && \ppalkki \cdot 2 \\
+   2\cdot 2 &< 4\cdot 2  \\
+     4 &< 8 && tosi
+\end{align*}
+\end{esimerkki}
+
+Sen sijaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä. Esimerkiksi kun lukuja 2 ja 5 kerrotaan luvulla $-1$, niiden suuruusjärjestys kääntyy:
+
+\begin{lukusuora}{-6}{6}{12}
+	\lukusuoranuolialas{2}{-2}
+	\lukusuoranuolialas{5}{-5}
+
+	\lukusuorapiste{2}{$2$}
+	\lukusuorapiste{5}{$5$}
+	\lukusuorapystyviiva{0}{$0$}
+\lukusuorauusi
+	\lukusuorapiste{-2}{$2 \cdot (-1)$}
+	\lukusuorapiste{-5}{$5 \cdot (-1)$}
+	\lukusuorapystyviiva{0}{$0$}
+\end{lukusuora}
+
+Jos epäyhtälöä kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömerkin suunta täytyy kääntää, jotta saataisiin yhtäpitävä epäyhtälö.
+%: esimerkissä $2 < 5$ muuttuu muotoon $-2 > -5$.
+
+\begin{esimerkki}
+Epäyhtälön kertominen negatiivisella luvulla.
+\begin{align*}
+     2 &< 5 && \ppalkki \cdot (-1) \\
+   2\cdot (-1) &< 4\cdot (-1)  \\
+     -2 &> -5 && tosi
+\end{align*}
+\end{esimerkki}
+
+\laatikko{Epäyhtälöstä saadaan yhtäpitävä epäyhtälö
+\begin{itemize}
+\item lisäämällä molemmille puolille sama lauseke,
+\item kertomalla tai jakamalla molemmat puolet samalla positiivisella luvulla tai
+\item kertomalla tai jakamalla molemmat puolet samalla negatiivisella luvulla ja kääntämällä epäyhtälömerkin suunta.
+\end{itemize}
+}
+
+Kuten yhtälöiden tapauksessa, epäyhtälön kertominen puolittain nollalla ei tuota yhtäpitävää epäyhtälöä, sillä esimerkiksi epäyhtälöstä $a \leq b$ tulee $0 \leq 0$, joka on aina tosi, ja epäyhtälöstä $a < b$ tulee $0 < 0$, joka on aina epätosi.
+
+\begin{esimerkki}
+Muokataan epäyhtälöä $-2x+4<6$ käyttämällä esitettyjä operaatioita.
+\begin{align*}
+-2x+4&<6 && \ppalkki -4 \\
+-2x&<2 && \ppalkki :(-2) \\
+x&>-1
+\end{align*}
+Tehdyt operaatiot tuottavat yhtäpitäviä epäyhtälöitä, joten epäyhtälö $-2x+4<6$ on yhtäpitävä epäyhtälön $x>-1$ kanssa. Voidaan päätellä, että lukua $-1$ suuremmat luvut ovat täsmälleen epäyhtälön ratkaisut.
+\end{esimerkki}
+
+\subsection*{Reaalilukuvälit}
+
+Ratkaistaessa yhtälöitä ratkaisuksi saadaan yleensä pieni joukko lukuja. Epäyhtälöiden tapauksessa on tyypillistä, että ratkaisu on \termi[väli]{väli}, eli kaikki kahden luvun väliset luvut.
+
+Reaalilukuvälejä merkitään usein laittamalla välin ala- ja ylärajat hakasulkujen sisään. Mikäli ala- tai yläraja ei kuulu väliin, vastaava hakasulku käännetään. Esimerkiksi $[a, b[$ tarkoittaa lukuja $x$ jotka toteuttavat kaksoisepäyhtälön $a \leq x < b$. Väliä kutsutaan \termi[suljetuksi väliksi]{suljettu väli}, mikäli ala- ja yläraja kuuluu väliin, ja \termi[avoimeksi väliksi]{avoin väli}, mikäli ala- ja yläraja eivät kuulu väliin. Jos vain toinen raja kuuluu väliin, väli on \termi[puoliavoin]{puoliavoin väli}.
+
+Väli voidaan piirtää lukusuoralle kahden luvun välisenä janana. Päätepisteet merkitään täytetyllä ympyrällä, mikäli luku kuuluu väliin, ja muuten tyhjällä ympyrällä. Esimerkiksi väli $[a, b[$ piirretään seuraavasti:
+
+\begin{lukusuora}{0}{10}{6}
+	\lukusuoravalisa{2}{8}{$a$}{$b$}
+\end{lukusuora}
+
+Jos halutaan, että väli ei ole alhaalta tai ylhäältä rajoitettu, merkitään rajaksi $-\infty$ tai $\infty$. Koska ääretön ei ole luku eikä näin ollen kuulu väliin, on sitä vastaava hakasulku käännettävä, ja siten esimerkiksi väli $]{-\infty}, a[$ on avoin. 
+
+Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö ja merkinnät.
+
+\begin{tabular}{|c|p{2.0cm}|p{2.1cm}|c|}
+\hline
+Välin nimitys & Epäyhtälö\-merkintä & Joukko-opillinen merkintä & Esitys lukusuoralla \\
+\hline
+Avoin väli & $-3<x<5$ & $x \in {]-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+\hline
+Puoliavoin väli & $-3<x \leq 5$ & $x \in {]-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+\hline
+Puoliavoin väli & $-3\leq x < 5$ & $x \in {[-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+\hline
+Suljettu väli & $-3\leq x \leq 5$ & $x \in {[-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliss{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+\hline
+Puoliavoin väli & $-3\leq x$ & $x \in {[-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{}{$-3$}{}\end{lukusuora}\\
+\hline
+Avoin väli & $-3<x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{}{$-3$}{}\end{lukusuora}\\
+\hline
+Puoliavoin väli & $x \leq 5$ & $x \in {]{-\infty}, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
+\hline
+Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{}{5}{}{$5$}\end{lukusuora}\\
+\hline
+\end{tabular}
+
+ \begin{esimerkki}
+ 
+ a) Epäyhtälö $2<x<10$ vaatii, että $x$ saa arvoja kahden ja kymmenen väliltä, mutta se ei koskaan saa täsmälleen näitä reuna-arvoja. Kyseessä on avoin väli kahdesta kymmeneen, $]2,10[$. Annetulle epäyhtälölle yhtäpitävä ilmaisu on $x \in ]2,10[$. \\
+ b) Epäyhtälö $0\leq y \leq 2$ rajaa muuttujan $y$ välille suljetulle välille $[0,2]$. Väli on suljettu, koska $y$ voi myös saada täsmälleen arvot $0$ ja $2$. \\
+ c) Joskus kirjallisuudessa näkee äärettömyyssymbolin käyttöä myös kaksoisepäyhtälöissä, esimerkiksi $3<x<\infty $, mutta ilmaistaan yleisemmin muodossa $x \in ]3,\infty[$. Kyseessä on avoin väli. \\
+ d) Epäyhtälöt $-100<k\leq 0$ ja $u\leq 90$ ovat puoliavoimia välejä, koska ne rajaavat muuttujan yhtäsuuruuden avulla vain toiselta puolelta. \\
+ e) Kaksoisepäyhtälö $\frac{1}{5}\geq x>-\sqrt{3}$ tarkoittaa samaa kuin kaksoisepäyhtälö $-\sqrt{3}<x\leq \frac{1}{5}$. Kaksoisepäyhtälö vaatii, että muuttujalle $x$ pätee erikseen sekä epäyhtälö $-\sqrt{3}<x$ että $x\leq \frac{1}{5}$.
+ \end{esimerkki}
+
+\section{Ensimmäisen asteen epäyhtälö}
+
+\qrlinkki{http://opetus.tv/maa/maa2/ensimmaisen-asteen-epayhtalo/}{Opetus.tv: \emph{ensimmäisen asteen epäyhtälö} (14:55 ja 8:21)}
+
+Harjoittelemme nyt erityisesti 1. asteen epäyhtälöiden ratkaisemista -- toisen asteen ja sitä korkeampien polynomiepäyhtälöiden ratkaisemista käsitellään toisen asteen yhtälön käsittelyn jälkeen.
+
+Samoin kuin yhtälöiden kohdalla, epäyhtälö pyritään muuttamaan niin yksinkertaiseen muotoon kuin mahdollista, jotta yksinkertaisesta tilanteesta nähdään välittömästi, mitkä luvut kuuluvat ratkaisuun ja mitkä eivät. Tuntemattomat pyritään yhdistämään, ja epäyhtälöä muokataan niin, että tuntematon saadaan yksin omalle puolelleen yhtälöä.
+
+
+\begin{esimerkki}
+Ratkaistaan epäyhtälö $2x+1 < 0$.
+\begin{align*}
+2x+1 &< 0 && \ppalkki -1 \\
+2x &< -1 && \ppalkki :2 \\
+x &< -\frac{1}{2}
+\end{align*}
+
+Epäyhtälön ratkaisu voidaan esittää myös muodossa $x \in ]-\infty, -\frac{1}{2}[$.
+
+Ratkaisua voidaan perustella myös graafisesti tutkimalla lausekkeeseen $2x+1$ liittyvää kuvaajaa:
+
+\begin{kuvaajapohja}{1}{-2}{2}{-2}{2}
+	\kuvaaja{2*x+1}{$f(x)=2x+1$}{red}
+\end{kuvaajapohja}
+
+Alkuperäinen epäyhtälö $2x+1<0$ vaatii, että lausekkeen $2x+1$ arvo on negatiivinen. Yhtälön ratkaisu on mahdollista nähdä katsomalla kuvasta, millä kaikilla $x$:n arvoilla funktion $2x+1$ kuvaaja laskee vaaka-akselin alapuolelle. Tällöin funktio, siis toisaalta lauseke $2x+1$, saa negatiivisia arvoja.
+
+\end{esimerkki}
+
+\begin{esimerkki}Selvitetään, millä $w$:n arvoilla pätee
+$-8w-(8-w) \geq \frac12 w+5$?
+
+\begin{align*}
+-8w-(8-w) &\geq \frac12 w+5 \\
+-8w-8+w &\geq \frac12 w+5 \\
+-7w-8 &\geq \frac12 w+5  \ \ \ \ \ && \ppalkki -\frac12 w \\
+-7\frac12 w-8 &\geq 5  \ \ \ \ \ && \ppalkki +8 \\
+-7\frac12 w &\geq 13  \ \ \ \ \ && \ppalkki :(-7\frac12) \\
+w &\leq 13:(-7\frac12) \\
+w &\leq 13:(-\frac{15}{2}) \\
+w &\leq -13\cdot \frac{2}{15} \\
+w &\leq -\frac{26}{15} \\
+w &\leq -1\frac{11}{15}
+\end{align*}
+
+Vastaus: $w \leq -1\frac{11}{15}$
+\end{esimerkki}
+
+Ensimmäisen asteen polynomiepäyhtälö ratkaistaan siis aivan kuten vastaava yhtälö, mutta negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkki kääntyy toisin päin.
+
+\begin{esimerkki}
+Ratkaistaan kaksoisepäyhtälö $1\leq q+7<-5q+4$.
+
+Tässä on itse asiassa kaksi epäyhtälöä $1\leq q+7$ ja $q+7<-5q+4$. Haluamme siis löytää ne $q$:n arvot, joilla molemmat epäyhtälöt pätevät.
+\begin{align*}
+1&\leq q+7 \ \ \ \ \ && \ppalkki -7 \\
+-6&\leq q
+\end{align*}
+Vastaavasti toiselle yhtälölle:
+\begin{align*}
+q+7&<-5q+4  \ \ \ \ \ && \ppalkki +5q \\
+6q+7&<4 && \ppalkki -7 \\
+6q&<-3 && \ppalkki :6 \\
+q&< -\frac12 \\
+\end{align*}
+
+Nämä yhdistämällä saadaan $-6\leq q$ ja $q< -\frac12$ eli $-6\leq q < -\frac12$ eli $q\in [-6, -\frac12[$.
+
+\begin{tabular}{cc}
+\begin{lukusuora}{-8}{2}{6} \lukusuoravalisa{-6}{}{$-6$}{} \lukusuorapystyviiva{0}{$0$} \end{lukusuora} & $-6\leq q$ \\
+\begin{lukusuora}{-8}{2}{6} \lukusuoravaliaa{}{-0.5}{}{$-\frac12$} \lukusuorapystyviiva{0}{$0$} \end{lukusuora} & $q< -\frac12$ \\
+\begin{lukusuora}{-8}{2}{6} \lukusuoravalisa{-6}{-0.5}{$-6$}{$-\frac12$} \lukusuorapystyviiva{0}{$0$} \end{lukusuora} & $-6\leq q < -\frac12$ \\
+\end{tabular}
+\end{esimerkki}
+
+\Harjoitustehtavat
+
+\begin{tehtava}
+    Esitä joukko-opillisilla merkinnöillä ja lukusuoralla.
+    \begin{enumerate}[a)]
+        \item $-9<x \leq 7$
+        \item $5\leq c$
+        \item $5\leq s \leq 7\frac{1}{2}$
+        \item $5\geq x>1$
+        \item $a<b$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x \in ]-9,7]$
+            \item $c \in [5,\infty]$
+            \item $s \in [5,7\frac{1}{2}]$
+            \item $x \in ]1,5]$
+            \item $a \in ]-\infty,b[$ \quad tai \quad $b \in ]a, \infty[$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt tai epäyhtälöt.
+    \begin{enumerate}[a)]
+        \item $-2r+6=0$
+        \item $-2r+6\leq 0$
+        \item $5y-2<y+6$
+        \item $8(x+2)\geq -5(5-x)+3$
+        \item $\frac{x+3}{2}+\frac{-2x+1}{3}>\frac{x-9}{4}$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $r=3$
+            \item $r\geq 3$
+            \item $y<2$
+            \item $x=-12\frac{2}{3}$
+            \item $x<9\frac{4}{5}$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat epäyhtälöt.
+    \begin{enumerate}[a)]
+        \item $3x+6<4x$
+        \item $3x-6<2x+57$
+        \item $5y-2<12$
+        \item $3\leq y+9$
+        \item $z-5\geq-888$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x>6$
+            \item $x<63$
+            \item $y<2,8$
+            \item $y\geq -6$
+            \item $z\leq 883$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat epäyhtälöt.
+    \begin{enumerate}[a)]
+        \item $3x+6<2x\leq 9-x$
+        \item $3x+6<2x\leq 1+3x$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x<-6$
+            \item ei ratkaisua
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+
+\begin{tehtava}
+	Millä $x$:n arvoilla luvut $2x - 5$, $-x$ ja $x + 4$ ovat erisuuria ja $2x - 5$ on luvuista
+	\begin{enumerate}[a)]
+		\item suurin
+		\item toiseksi suurin
+		\item pienin?
+	\end{enumerate}
+	\begin{vastaus}
+		\begin{enumerate}[a)]
+			\item $x > 9$
+			\item $\frac{5}{3} < x < 9$
+			\item $x < \frac{5}{3}$
+		\end{enumerate}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Lukion päättötodistuksessa aineen arvosana määräytyy aineen pakollisten ja syventävien kurssien keskiarvosta pyöristettynä kokonaisluvuksi tavallisten 
+sääntöjen mukaan. Opiskelija haluaa filosofian päättöarvosanakseen 7 tai paremman. Opiskelija aikoo osallistua kolmelle filosofian kurssille. Kahden 
+kurssin jälkeen hänen arvosanojensa keskiarvo on 6. Mikä arvosana on opiskelijan vähintään saatava kolmannesta kurssista? Kurssit arvioidaan asteikolla 
+4--10.
+\begin{vastaus}
+%Muodostettava epäyhtälö on muotoa $\frac{2\cdot 6+x}{3}\geq 6.5$, josta ratkaisuna saadaan $x\geq7.5$.
+Vähintään arvosana 8.
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	Tietyn auton käyttövoimavero on 450 \euro /vuosi, ja keskimääräinen kulutus on 5 litraa dieselöljyä / 100~km. Saman valmistajan vastaava bensiinikäyttöinen auto kuluttaa 8 litraa / 100~km. Diesel maksaa 1,55 \euro /litra, ja bensiini maksaa 1,65 \euro /litra. Kun vain annetut tiedot huomioidaan, niin kuinka paljon esimerkin dieselajoneuvolla tulee vähintään ajaa vuodessa, jotta se on edullisempi? Dieselauton mahdollista kalliimpaa ostohintaa ei huomioida.
+    \begin{vastaus}
+        8257 km
+    \end{vastaus}
+\end{tehtava}

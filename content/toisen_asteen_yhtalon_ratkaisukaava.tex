@@ -1,0 +1,202 @@
+\section{Toisen asteen yhtälön ratkaisukaava}
+
+\qrlinkki{http://opetus.tv/maa/maa2/toisen-asteen-yhtalon-ratkaisukaava/}{Opetus.tv: \emph{toisen asteen ratkaisukaava} (9:03, 11:06 ja 10:09)}
+
+Edellisessä kappaleessa opittiin, että toisen asteen yhtälö voidaan aina ratkaista täydentämällä se neliöksi.
+Neliöksi täydentämistä käytetään kuitenkin harvoin, sillä saman ajatuksen voi ilmaista valmiina kaavana.
+Johdetaan seuraavassa toisen asteen yhtälön ratkaisukaava. \\ \\
+
+Lähdetään liikkeelle täydellisestä toisen asteen yhtälöstä $ax^2+bx+c=0$.
+\begin{align*}
+ax^2+bx+c&=0 &&\textnormal{\footnotesize{kerrotaan molemmat puolet termillä}} \ 4a \\
+4a \cdot ax^2+4a \cdot bx + 4a \cdot c&=0 \\
+4a^2x^2+4abx+4ac&=0 &&\textnormal{\footnotesize{vähennetään puolittain termi}} \ 4ac  \\
+4a^2x^2+4abx&=-4ac
+\end{align*}
+Täydennetään vasen puoli binomin neliöksi.
+\begin{align*}
+4a^2x^2+4abx&=-4ac &&\textnormal{\footnotesize{lisätään puolittain termi}} \ b^2 \\
+4a^2x^2+4abx+b^2&=b^2-4ac &&\textnormal{\footnotesize{neliö:}} \ 4a^2x^2+4abx+b^2=(2ax+b)^2 \\
+(2ax+b)^2&=b^2-4ac &&\textnormal{\footnotesize{otetaan puolittain neliöjuuri, jos}} \ b^2 \geq 4ac \\
+2ax+b&= \pm \sqrt[]{b^2-4ac} &&\textnormal{\footnotesize{vähennetään puolittain termi}} \ b \\
+2ax&=-b \pm \sqrt[]{b^2-4ac} &&\textnormal{\footnotesize{jaetaan puolittain termillä}} \ 2a \neq 0 \\
+x&= \frac{-b \pm \sqrt[]{b^2-4ac}}{2a}
+\end{align*}
+Toisen asteen yhtälön ratkaisukaava on siis \[x= \frac{-b \pm \sqrt[]{b^2-4ac}}{2a}\] oletuksella, että $b^2 \geq 4ac$. Oletus tarvitaan, koska negatiivisille luvuille ei ole reaaliluvuilla määriteltyä neliöjuurta.\\
+\laatikko{\textbf{Toisen asteen yhtälön ratkaisukaava} \\
+Yhtälön
+$ax^2+bx+c=0$, missä $a \neq 0$ ja $b^2 \geq 4ac$, reaaliset ratkaisut ovat
+muotoa \\
+\[ x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}.\]
+}
+\begin{esimerkki}
+Ratkaistaan yhtälö $x^2-8x+16=0$.
+\begin{align*}
+\underbrace{1}_{=a}x^2 +\underbrace{(-8)}_{=b}x+\underbrace{16}_{=c}=0
+\end{align*}
+Sijoitetaan vakioiden $a=1$, $b=-8$ ja $c=16$ arvot toisen asteen yhtälön
+ratkaisukaavaan.
+\begin{align*}
+x&=\frac{-(-8)\pm \sqrt[]{(-8)^2-4\cdot 1 \cdot 16}}{2 \cdot 1} \\
+x&=\frac{8 \pm \sqrt{64- 64}}{2} \\
+x&=\frac{8 \pm 0}{2} \\
+x&=4
+\end{align*}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $15x^2+24x+10=0$.
+\begin{align*}
+\underbrace{15}_{=a}x^2+\underbrace{24}_{=b}x+\underbrace{10}_{=c}=0
+\end{align*}
+Sijoitetaan vakioiden $a=15$, $b=24$ ja $c=10$ arvot toisen asteen yhtälön ratkaisukaavaan.
+\begin{align*}
+x&=\frac{-24 \pm \sqrt[]{24^2-4 \cdot 15 \cdot 10}}{2 \cdot 15} \\
+x&=\frac{-24 \pm \sqrt[]{576-600}}{30} \\
+x&=\frac{-24 \pm \sqrt[]{-24}}{30}
+\end{align*}
+Koska juurrettava on negatiivinen $-24<0$, niin yhtälöllä ei ole reaalilukuratkaisuja. \\
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaistaan yhtälö $x^2+2x-3=0$.
+\begin{align*}
+\underbrace{1}_{=a} \cdot x^2+\underbrace{2}_{=b}x\underbrace{-3}_{=c}=0
+\end{align*}
+Sijoitetaan vakioiden $a=1$, $b=2$ ja $c=-3$ arvot toisen asteen yhtälön ratkaisukaavaan.
+\begin{align*}
+x&=\frac{-2 \pm \sqrt[]{2^2-4 \cdot 1 \cdot (-3)}}{2 \cdot 1} \\
+x&=\frac{-2 \pm \sqrt[]{4+12}}{2} \\
+x&=\frac{-2 \pm \sqrt[]{16}}{2} \\
+x&=\frac{-2 \pm 4}{2} \\
+x&=-1 \pm 2 \\
+x&=1 \text{ tai } x=-3 \\
+\end{align*}
+\end{esimerkki}
+
+%\begin{esimerkki}
+%Ratkaistaan yhtälö $-\sqrt{2}x+\frac{1}{2}=x^2$.
+%\end{esimerkki}
+
+%Yleinen toisen asteen yhtälö on muotoa $ax^2+bx+c=0$.
+%Kerrotaan yhtälön molemmat puolet vakiolla $4a$: $4a^2x^2+4abx+4ac=0$.
+%Siirretään termi $4ac$ toiselle puolelle: $4a^2x^2+4abx=-4ac$.
+%Pyritään täydentämään vasen puoli neliöksi.
+%Lisätään puolittain termi $b^2$: $4a^2x^2+4abx+b^2=b^2-4ac$.
+%Havaitaan vasemmalla puolella neliö: $(2ax+b)^2=b^2-4ac$.
+%Otetaan puolittain neliöjuuri: $2ax+b=\pm\sqrt{b^2-4ac}$.
+%Vähennetään puolittain termi $b$: $2ax=-b\pm\sqrt{b^2-4ac}$.
+%Jaetaan puolittain vakiolla $2a$: $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$.
+
+\Harjoitustehtavat
+
+\begin{tehtava}
+    Ratkaise
+    \begin{enumerate}[a)]
+        \item $x^2 - 2x - 3 = 0$
+        \item $-x^2 - 6x - 5 = 0$
+        \item $x + 2x^2 - 6= 0$
+        \item $1 + x + 3x^2= 0$.
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x = 3 tai x = -1$
+            \item $x = -5 tai x = -1$
+            \item $x = -1 + \sqrt{2} tai x = -1 - \sqrt{2}$
+            \item Ei ratkaisuja.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise
+    \begin{enumerate}[a)]
+        \item $9x^2 - 12x + 4 = 0$
+        \item $x^2 + 2x = -4$
+        \item $4x^2 = 12x - 8$
+        \item $3x^2 - 13x + 50 = -2x^2 + 17x + 5$.
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $x = \dfrac{2}{3}$
+            \item $x = -2$
+            \item $x = 1$ tai $x = 2$
+            \item $x = 3$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Tasaisesti kiihtyvässä liikkeessä on voimassa kaavat $v = v_0 + at$ ja $s = v_0t + \dfrac{1}{2}at^2$, missä $v$ on loppunopeus, $v_0$ alkunopeus, $a$ kiihtyvyys, $t$ aika ja $s$ siirtymä.
+		\begin{enumerate}[a)]
+            \item Auton nopeus on $72$~km/h. Auto pysäytetään jarruttamalla tasaisesti. Se pysähtyy $10$ sekunnissa. Laske jarrutusmatka.
+            \item Kivi heitetään suoraan alas $50$ metriä syvään rotkoon nopeudella $3,0$~m/s. Kuinka monen sekunnin kuluttua se kohtaa rotkon pohjan?
+        \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item Jarrutusmatka on $100$ metriä.
+            \item Noin $2,9$ sekunnin kuluttua.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Kahden luvun summa on $8$ ja tulo $15$. Määritä luvut.
+    \begin{vastaus}
+		Luvut ovat $3$ ja $5$.
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Suorakulmaisen muotoisen alueen piiri on $34$~m ja pinta-ala $60$~m$^2$. Selvitä alueen mitat.
+    \begin{vastaus}
+		Alueen toinen sivu on $5$ m ja toinen $12$ m.
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Kultaisessa leikkauksessa jana on jaettu siten, että pidemmän osan suhde lyhyempään on sama kuin koko janan suhde pidempään osaan. Tämä suhde ei riipu koko janan pituudesta ja sitä merkitään yleensä kreikkalaisella aakkosella fii eli $\varphi$. Kultaista leikkausta on taiteessa kautta aikojen pidetty ''jumalallisena suhteena''.
+		\begin{enumerate}[a)]
+            \item Laske kultaiseen leikkauksen suhteen $\varphi$ tarkka arvo ja likiarvo.
+            \item Napa jakaa ihmisvartalon pituussuunnassa kultaisen leikkauksen suhteessa. Millä korkeudella napa on $170$~cm pitkällä ihmisellä?
+        \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}[a)]
+            \item $ \varphi = \dfrac{\sqrt{5}-1}{2} \approx 0,618$
+            \item Noin $105,1$ cm korkeudella.
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+(K93/T5) Ratkaise yhtälö
+        $\frac{2x+a^2-3a}{x-1}=a$ vakion $a$ kaikilla reaaliarvoilla.
+\begin{vastaus}
+        \begin{enumerate}
+         \item{$x=a$, jos $a \neq 2$ ja $a \neq 1$}
+         \item{$x\neq 1$, jos $a=2$}
+         \item{ei ratkaisua, jos $a=1$}
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+(K94/T2a) Polynomin $P(x)=ax^3-31x^2+1$ eräs nollakohta on $x=1$. Määritä $a$ ja ratkaise tämän jälkeen $P(x)=0$.
+\begin{vastaus}
+      $a=30$ yhtälön ratkaisut ovat $1$, $\frac{1}{5}$ ja $-\frac{1}{6}$.
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+(K96/T2b) Yhtälössä $x^2-2ax+2a-1=0$ korvataan luku $a$ luvulla $a+1$. Miten muuttuvat yhtälön juuret?
+\begin{vastaus}
+     Toinen kasvaa kahdella ja toinen ei muutu.
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava} % HANKALA!
+	Ratkaise yhtälö $(x^2-2)^6=(x^2+4x+4)^3$.
+	\begin{vastaus}
+		$x=-1$, $x=0$ tai $x=\frac{1 \pm \sqrt{17}}{2}$
+	\end{vastaus}
+\end{tehtava}

@@ -1,0 +1,170 @@
+\section{Tulon nollasääntö ja tulon merkkisääntö}
+
+\subsection*{Tulon merkkisääntö}
+
+Pitkän matematiikan 1. kurssilla on esitetty seuraava sääntö kahden luvun tulolle:
+
+\laatikko{
+    \emph{Tulon merkkisääntö kahdelle tulontekijälle}
+    \begin{itemize}
+        \item Jos tulon tekijät ovat samanmerkkisiä, tulo on positiivinen.
+        \begin{itemize}
+	        \item Kahden positiivisen luvun tulo on positiivinen.
+	        \item Kahden negatiivisen luvun tulo on positiivinen.
+        \end{itemize}
+        \item Jos tulon tekijät ovat erimerkkisiä, tulo on negatiivinen.
+        \begin{itemize}
+	        \item Positiivisen ja negatiivisen luvun tulo on negatiivinen.
+        \end{itemize}
+    \end{itemize}
+}
+
+Useasti käytetty merkkisäännöstä saatava tulos on $x^2 \geq 0$.
+
+%Tulon merkkisääntö yleistyy mille tahansa määrälle tulontekijöitä.
+
+%\laatikko{
+%    \emph{Tulon merkkisääntö}
+%    \begin{itemize}
+%        \item Jos tulossa on parillinen $(0, 2, 4, \ldots)$ määrä negatiivisia tekijöitä, tulo on positiivinen.
+%        \begin{itemize}
+%	        \item Erityisesti, jos tulossa on vain positiivisia tekijöitä, tulo on positiivinen.
+%        \end{itemize}
+%        \item Jos tulossa on pariton $(1, 3, 5, \ldots)$ määrä negatiivisia tekijöitä, tulo on negatiivinen.
+%    \end{itemize}
+%}
+
+Hyödynnämme merkkisääntöä myöhemmin, kun teemme epäyhtälöistä merkkikaavioita.
+
+\subsection*{Tulon nollasääntö}
+
+Tulon merkkisäännöstä seuraa, että positiivisten ja negatiivisten lukujen tulo on aina positiivinen tai negatiivinen, ei koskaan nolla.
+
+Jos siis tulo on $0$, tulon tekijöistä ainakin yhden täytyy olla $0$. Toisaalta $0\cdot x = 0$ kaikilla reaaliluvuilla $x$.
+(Todistus tälle on liitteessä \ref{tod:tulonolla}.)
+
+Nämä tiedot yhdistämällä saadaan tulon nollasääntö:
+
+\laatikko{
+    \emph{Tulon nollasääntö}
+    \begin{itemize}
+   	    \item Jos jokin tulon tekijöistä on $0$, tulo on $0$.
+   	    \item Jos tulo on $0$, ainakin yksi tulon tekijöistä on $0$.
+    \end{itemize}
+}
+
+Tulon nollasääntöä on kätevää soveltaa monissa tilanteissa.
+
+\begin{esimerkki} Ratkaistaan yhtälö $(x+5) \cdot x =0 $.
+    \begin{align*}
+        (x+5)\cdot x &=0 \quad \ppalkki \text{ tulon nollasääntö} \\
+        x +5= 0 \text{ tai } x &=0 \\
+        x= -5 \text{ tai } x &=0.
+    \end{align*}
+    Ratkaisuja on siis kaksi, $x= -5$ tai $x= 0$.
+\end{esimerkki}
+
+%\begin{esimerkki}
+%	\[2(x+5)=0\]
+%	Nyt tulon nollasäännön perusteella tiedetään, että $2=0$ tai $x+5=0$.
+%	Koska selvästi $2\neq 0$, jää ainoaksi ratkaisuksi $x+5=0$ eli $x=-5$.
+%\end{esimerkki}
+
+\begin{esimerkki} Ratkaistaan $y$ yhtälöstä
+    \[(x^5+5x+5)\cdot 0\cdot \sqrt{x^3-1} =y\]
+    Koska vasemmalla puolella yksi tulon tekijöistä on $0$, tiedämme, että tulo on $0$. Siis $y=0$.
+\end{esimerkki}
+
+\begin{esimerkki} Ratkaise yhtälö
+    \[xyz=0.\]
+Tulon nollasäännön perusteella $x=0$, $y=0$ tai $z=0$. Nollia voi siis
+olla 1--3 kappaletta.
+\end{esimerkki}
+
+Tulon nollasääntö on yksi tärkeimmistä syistä siihen, miksi polynomien tekijöihinjako on hyödyllistä.
+
+Jos vaikkapa haluamme ratkaista yhtälön $2x^3-14x^2+32x-24=0$ ja satumme tietämään, että $2x^3-14x^2+32x-24=2(x-3)(x-2)^2$,
+voimme helposti päätellä, että polynomi saa arvon $0$ jos ja vain jos $x-3=0$ tai $x-2=0$. Yhtälön ainoat ratkaisut ovat siis $x=3$ ja $x=2$.
+
+\begin{esimerkki}
+Ratkaise yhtälö $6x^3-36x^2+54x=0$ tulon nollasäännön avulla.
+\begin{esimratk}
+\begin{align*}
+6x^3-36x^2+54x &= 0 \\
+6(x^3-6x^2+9x) &= 0 && \ppalkki \text{ otetaan } 6 \text{ yhteiseksi tekijäksi} \\
+6x(x^2-6x+9) &= 0 && \ppalkki \text{ otetaan } x \text{ yhteiseksi tekijäksi} \\
+6x(x^2-2\cdot 3\cdot x+3^2)  &= 0 \\
+6x(x-3)^2 &= 0 & \\
+6x(x-3)(x-3) &= 0 && \ppalkki \text{ tulon nollasääntö}\\
+6x=0 \textrm{\quad tai}& \quad x-3=0 \\
+x=0 \textrm{\quad tai}& \quad x=3 \\
+\end{align*}
+\end{esimratk}
+\begin{esimvast}
+$x=0$ tai $x=3$.
+\end{esimvast}
+\end{esimerkki}
+
+Myöhemmin tässä kirjassa esitetään polynomien jakolause, joka antaa vielä syvällisemmän yhteyden polynomien nollakohtien ja tekijöiden välille.
+
+\Harjoitustehtavat
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt käyttämällä tulon nollasääntöä.
+    \begin{enumerate}
+        \item $x^2(3+x)=0$
+        \item $0=x^3(x-5)$
+        \item $(x-4)(x^2-4)=0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $x=0$ tai $x=-3$
+            \item $x=0$ tai $x=5$
+            \item $x=-2$, $x=2$ tai $x=4$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt käyttämällä tulon nollasääntöä.
+    \begin{enumerate}
+        \item $(x^2-1)(x-7)=0$
+        \item $(x^2-9)(x^2-16)=0$
+        \item $(x-4)=x(x-4)$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $x=-1$, $x=1$ tai $x=7$
+            \item $x=-4$, $x=-3$, $x=3$ tai $x=4$
+            \item $x=1$ tai $x=4$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise seuraavat yhtälöt käyttämällä tulon nollasääntöä.
+    \begin{enumerate}
+        \item $(\smiley{}+1)\cdot (t+1)=0$
+        \item $x(x-5)=0$
+        \item $(2w+2)^2=0$
+    \end{enumerate}
+    \begin{vastaus}
+        \begin{enumerate}
+            \item $\smiley{}=-1$ tai $t=-1$,\qquad  Symboli $\smiley{}$ esittää jotain lukua, sillä muutoin laskutoimitukset eivät olisi mielekkäitä. Tehtävässä ei myöskään ole selvää, minkä muuttujan suhteen yhtälö pitäisi ratkaista. Siksi on ratkaistu molempien muuttujien suhteen.
+            \item $x=0$ tai $x=5$
+            \item $w=-1$
+        \end{enumerate}
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Sievennä seuraava lauseke: $(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x)$.
+    \begin{vastaus}
+        Tulossa esiintyy tekijänä $(x-x)=0$. Niinpä tulon nollasäännön mukaan
+        \begin{align*}
+            &(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot(x-x)\cdot(y-x)\cdot(z-x)\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x) \\
+            =&(a-x)\cdot(b-x)\cdot(c-x)\cdot...\cdot 0\cdot(y-x)\cdot(z-x)\cdot(\mathring{a}-x)\cdot(\ddot{a}-x)\cdot(\ddot{o}-x) \\
+            =&0
+        \end{align*}
+    \end{vastaus}
+\end{tehtava}

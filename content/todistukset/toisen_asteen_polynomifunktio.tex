@@ -1,0 +1,177 @@
+\subsection*{Toisen asteen polynomin kuvaaja}
+
+Tässä liitteessä perustellaan, miksi kaikkien toisen asteen polynomifunktioiden kuvaajat näyttävät samalta. Lisäksi tarkastellaan, mitkä tekijät vaikuttavat kuvaajien muotoon.
+
+\underline{Funktio $P(x)=x^2$}
+
+Aloitetaan funktiosta $P(x)=x^2$. Mitä tiedämme siitä piirtämättä kuvaajaa?
+\begin{itemize}
+\item Algebrallisen päättelyn avulla voimme todeta, että funktion pienin arvo on $P(0) = 0$, sillä tulon merkkisäännön perusteella lauseke $x^2$ ei voi saada negatiivisia arvoja – ei ole olemassa sellaista reaalilukua $x$, jonka neliö olisi negatiivinen. (Kompleksiluvuilla tällaista rajoitusta ei ole, tästä lisää liitteessä.) Kuvaajan alin kohta sijoittuu siis origoon ja kuvaajan kaikki muut pisteet sen yläpuolelle.
+\item Kun $x > 0$, lauseke $x^2$  on sitä
+suurempi, mitä suurempi $x$ on. Tästä tiedämme, että nollasta oikealle siirryttäessä funktion kuvaaja nousee.
+\item Koska $(-x)^2 = x^2$, kuvaaja on symmetrinen $y$-akselin suhteen.
+\end{itemize}
+
+Näiden tietojen avulla voimme päätellä, että funktion kuvaaja koostuu kahdesta
+identtisestä haarasta, jotka kohtaavat, kun $x=0$. Mitä kauempana $x$ on nollasta, sitä suurempia ovat funktion arvot. Tämän kaiken voi päätellä jo ennen kuvaajan piirtämistä.
+
+Merkitsemällä koordinaatistoon yhtälön $y=x^2$ toteuttavia pisteitä, muodostuu lopulta funktion kuvaaja:
+\begin{center}
+\begin{kuvaajapohja}{2}{-2}{2}{-1}{4}
+  \kuvaaja{x**2}{$f(x)=x^2$}{blue}
+\end{kuvaajapohja}
+\end{center}
+
+% FIXME: ongelmallista: ''alaspäin aukeava'' vasta seuraavaksi
+Kuvaajan muoto on geometriselta nimeltään \emph{paraabeli}. Paraabeleja esiintyy monessa yhteydessä: esimerksi polttopeilin ja radioteleskoopin pinta kaareutuu paraabelin muotoisena. Samoin ilmaan heitetyn kappaleen rata on likimain alaspäin aukeava paraabeli, kun ilmanvastus on pieni.
+
+\underline{Funktio $P(x)=ax^2, \quad a\neq 0$}
+
+Polynomien $P(x)=ax^2$ arvot ovat ovat lausekkeeseen $x^2$ nähden $a$-kertaisia. Muuten paraabelin symmetrisyys ja muut keskeiset ominaisuudet säilyvät.
+
+\begin{itemize}
+\item Kun $a > 0$, myös $ax^2\geq 0$, joten pienin arvo on yhä $0$.\\
+Paraabeli on \termi[ylöspäin aukeava]{ylöspäin aukeava}.
+\item Kun $a < 0$, tulon merkkisäännön nojalla $ax^2 \leq 0$. \\
+ Nyt $P(0)=0$ onkin suurin arvo, ja funktion arvot ovat sitä pienempiä,
+mitä enemmän $x$ poikkeaa nollasta. \\
+Paraabeli on \termi[alaspäin aukeava]{alaspäin aukeava}.
+\item Mitä enemmän $a$ poikkeaa nollasta, sitä nopeammin funktion arvot
+muuttuvat $x$:n muuttuessa ja sitä kapeampi paraabeli on.
+\end{itemize}
+
+\begin{center}
+$a>0$, paraabeli aukeaa ylöspäin:\\
+\begin{tabular}{cc}
+$f(x)=\frac{1}{2}x^2$& $f(x)=2x^2$ \\
+\begin{kuvaajapohja}{1}{-2}{2}{-1}{4}
+  \kuvaaja{0.5*x**2}{}{blue}
+\end{kuvaajapohja} &
+\begin{kuvaajapohja}{1}{-2}{2}{-1}{4}
+  \kuvaaja{2*x**2}{}{blue}
+\end{kuvaajapohja}
+\end{tabular}
+
+$a<0$, paraabeli aukeaa alaspäin:\\
+\begin{tabular}{cc}
+$f(x)=-\frac{1}{2}x^2$ & $f(x)=-2x^2$ \\
+\begin{kuvaajapohja}{1}{-2}{2}{-4}{1}
+  \kuvaaja{-0.5*x**2}{}{blue}
+\end{kuvaajapohja} &
+\begin{kuvaajapohja}{1}{-2}{2}{-4}{1}
+  \kuvaaja{-2*x**2}{}{blue}
+\end{kuvaajapohja}
+\end{tabular}
+\end{center}
+
+\underline{Funktio $P(x)=ax^2+c$}
+
+Lisäämällä vakiotermi $c$ saadaan $P(x)=ax^2+c$. Vakion lisääminen nostaa tai laskee funktion kuvaajaa (riippuen siitä, onko $c > 0$ tai $c<0$), joten kuvaajan muoto ei muutu.
+
+\underline{Funktio $P(x)=ax^2+bx+c$}
+
+Miksi sitten täydellisen toisen asteen polynomin $P(x)=ax^2+bx+c$ kuvaaja on myös paraabeli? Muokataan lauseketta, aloitetaan ottamalla yhteinen tekijä:
+\begin{align*}
+P(x) &=ax^2+bx+c \\
+&= a\left(x^2 +\frac{b}{a}x\right) + c  \quad &
+\text{ lavennetaan } \frac{b}{a} \text{ kahdella} \\
+&= a\left(x^2 +2\cdot x \cdot \frac{b}{2a} \quad\right) + c  &
+\text{ täydennetään neliöksi lisäämällä} \left( \frac{b}{2a} \right)^2 \\
+&= a \Bigg( \underbrace{x^2 +2\cdot x \cdot \frac{b}{2a}+\left(\frac{b}{2a} \right)^2}_{\left( x+\frac{b}{2a} \right)^2}
+- \left(\frac{b}{2a}\right)^2 \Bigg)  + c \\
+&= a \left( \left( x + \frac{b}{2a} \right )^2-\frac{b^2}{4a^2} \right) + c &
+\text{ kerrotaan sulut auki } \\
+&= a \underbrace{\left(  x + \frac{b}{2a} \right)^2}_{\text{neliö}}-
+\underbrace{\frac{b^2}{4a} + c}_{\text{vakio}}
+\end{align*}
+
+Tästä neliöksi täydennetyksi muodosta nähdään, että $P(x)$ on muotoa
+$a\cdot$neliö + vakio. Kuvaaja on siis samanlainen kuin tapauksessa
+$ax^2+c$, huippu on vain siirtynyt.
+Koska neliö $\geq 0$, saadaan
+
+\begin{itemize}
+\item Kun $a>0$, kyseinen vakio on polynomin pienin arvo ja kuvaaja on
+ylöspäin aukeava paraabeli.
+\item Kun $a<0$, kyseinen vakio on suurin arvo ja kuvaaja on alaspäin
+aukeava paraabeli.
+\end{itemize}
+
+Paraabelin \termi[huippu]{huippu} (eli kuvaajan piste, jossa suurin tai pienin arvo
+saavutetaan) on aina kohdassa
+$x=-\frac{b}{2a}$, koska silloin neliö on nolla.
+
+%Toisen asteen polynomifunktio on muotoa $f(x)=ax^2+bx+c$, jossa $a,b,c \in \mathbb{R}$ ja $a \neq 0$. Toisen asteen polynomifunktion kuvaaja on paraabeli. Toisen asteen polynomifunktioita käytetään matemaattisessa mallinnuksessa talouden, tieteen ja tekniikan aloilla. Esimerkiksi heittoliikkeessä olevan kappaleen lentorata on aina paraabelin muotoinen. \\
+%\textbf{Esimerkki 1.}
+%a) Piirrä funktion $f(x)=x^2-2$ kuvaaja. \\
+%b) Ratkaise funktion $f$ nollakohdat. \\ \\
+%
+%\begin{kuvaajapohja}{1}{-2}{2}{-3}{1}
+%  \kuvaaja{x**2-2}{$f(x)=x^2-2$}{blue}
+%\end{kuvaajapohja}
+%
+%Funtkion kuvaaja on ylöspäin aukeava paraabeli, joka leikkaa x-akselin kohdissa joissa $f(x)=0$. \\
+%Graafisesti funktion nollakohdat saadaan ratkaistua kuvaajasta. Kuvaajasta nähdään, että funktion nollakohdat ovat $x_1 \approx 1,4$ ja $x_2 \approx -1,4$. \\
+%Algebrallisesti saadaan ratkaistua, että funktion nollakohdat ovat
+%\begin{align*}
+%f(x)&=0 \\
+%x^2-2&=0 \\
+%x^2&=2 \\
+%x&= \pm \sqrt[]{2}
+%\end{align*}
+%Funktion $f$ kuvaajasta huomataan, että se on symmetrinen y-akselin suhteen.
+%
+%\textbf{Esimerkki 2.} \\
+%Piirrä funktioiden $f(x)=x^2+1$, $g(x)=2x^2$ ja $h(x)=\frac{1}{3}x^2$ kuvaajat. \\ \\
+%
+%\begin{kuvaajapohja}{1}{-2}{2}{-1}{3}
+%  \kuvaaja{x**2+1}{$f(x)=x^2+1$}{blue}
+%\end{kuvaajapohja}
+%
+%
+%\begin{kuvaajapohja}{1}{-2}{2}{-1}{3}
+%  \kuvaaja{2*x**2}{$g(x)=2x^2$}{blue}
+%\end{kuvaajapohja}
+%
+%\begin{kuvaajapohja}{1}{-2}{2}{-1}{3}
+%  \kuvaaja{(1 / 3.0)*(x**2)}{$h(x)=\frac{1}{3}x^2$}{blue}
+%\end{kuvaajapohja}
+%
+%Mitä tapahtuu funktion kuvaajan muodolle, kun termin $ax^2$ kerroin $a$ muuttuu? \\ \\
+%
+%\textbf{Esimerkki 3.} \\
+%Piirrä funktioiden $f(x)=-x^2+x$, $g(x)=-x^2+2x+1$ ja $h(x)=-x^2+\frac{1}{2}x-1$ kuvaajat. \\
+%\missingfigure \\
+%Mitä tapahtuu funktion kuvaajan muodolle, kun termin $bx$ kerroin $b$ muuttuu? \\ \\
+%
+%\textbf{Esimerkki 4.} \\
+%Piirrä funktioiden $f(x)=x^2$, $g(x)=x^2-2$ ja $h(x)=x^2+\frac{3}{2}$ kuvaajat. \\ \\
+%Mitä tapahtuu funktion kuvaajan muodolle, kun vakiotermi $c$ muuttuu? \\ \\
+
+Koottuna:
+
+\laatikko{Toisen asteen polynomifunktion $f(x)=ax^2+bx+c$ kuvaaja on
+\begin{itemize}
+\item ylöspäin aukeava paraabeli, kun $a>0$
+\item alaspäin aukeava paraabeli, kun $a<0$
+\item sitä kapeampi, mitä suurempi $|a|$ on.
+\end{itemize}
+}
+
+% FIXME: selitys tulisi hoitaa ilman itseisarvoa
+
+%\textbf{Esimerkki 5.} \\
+%Ratkaise funktion $f(x)=4x^2-13x+8$ nollakohdat.
+%\begin{align*}
+%f(x)&=0 \\
+%4x^2-13x+8&=0 \\
+%x&=\frac{-(-13) \pm \sqrt[]{(-13)^2-4 \cdot 4 \cdot 8}}{2 \cdot 4} \\
+%x&=\frac{13 \pm \sqrt[]{169-128}}{8} \\
+%x&=\frac{13 \pm \sqrt[]{41}}{8} \\
+%x&=\frac{13 \pm \sqrt[]{41}}{8}
+%\end{align*}
+
+
+
+
+%Kuvaajaan transformaatioihin esimerkkiä myös muuttujan x muuttamisesta. Piirrä f(x+1):n kuvaaja jne.

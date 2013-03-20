@@ -1,0 +1,8 @@
+Varmista, että sinulla on 'gnuplot' asennettuna (esim. which gnuplot)
+
+sitten vain 'make' tai suoraan 'pdflatex book.tex'. 
+
+
+Jos haluat varmistua, että et voi commitoida keskeneräisiä mergejä (copy-pastea alempi rivi):
+
+cp extra/pre-commit .git/hooks/ && chmod 0744 .git/hooks/pre-commit
