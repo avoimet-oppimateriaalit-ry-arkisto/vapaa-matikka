@@ -56,6 +56,6 @@ Polynomien jakokulma (kurssista MAA12)
 
 Kompleksilukujen alkeet (ei kuulu lukiokurssiin)
 
-3. asteen yhtälön ratkaisukaava johdettuna
+Kolmannen asteen yhtälön ratkaisukaava johdettuna
 
 Eksplisiittinen esimerkki joukosta, jossa tulon nollasääntö ei päde
