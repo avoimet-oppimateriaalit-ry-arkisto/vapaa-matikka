@@ -1,3 +1,3 @@
 TARGET = MAA1
 
-include ../Makefile.include
+include ../commons/Makefile.include

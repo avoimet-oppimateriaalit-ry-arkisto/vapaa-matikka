@@ -1,6 +1,6 @@
 Varmista, että sinulla on 'gnuplot' asennettuna (esim. which gnuplot)
 
-sitten vain 'make' tai suoraan 'pdflatex book.tex'. 
+sitten vain valitun kirjan hakemistossa 'make' tai 'pdflatex [kirjan tunnus].tex'. 
 
 
 Jos haluat varmistua, että et voi commitoida keskeneräisiä mergejä (copy-pastea alempi rivi):

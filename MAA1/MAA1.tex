@@ -1,23 +1,26 @@
-\input{../boilerplate}
+\input{../commons/boilerplate}
 
 \begin{document}
-%Korjausta vaativat kohdat merkitään: % FIXME: asia
 
-\Opensolutionfile{ans}[ans1] %Answers-pakettiin!
+\Opensolutionfile{ans}[appendices/vastaukset]
 
 \selectlanguage{finnish}
 
 \kansilehti{Vapaa matikka 1}{MAA1 -- Funktiot ja yhtälöt}
 
-%\pagevalues
-
-% Siistitään sisällysluettelo - tämä rikkoo listoftodosin joten vasta tässä.
+% Siistitään sisällysluettelo - aiempana rikkoisi listoftodosin
 \setcounter{tocdepth}{0}
 
 % Esipuheesta "Luku 0" ja numerointi siitä eteenpäin
 \setcounter{chapter}{-1}
 
-\input{index}
+\input{preface}
+
+\input{chapters}
+
+\Closesolutionfile{ans}
+
+\input{appendices}
 
 \end{document}
 
