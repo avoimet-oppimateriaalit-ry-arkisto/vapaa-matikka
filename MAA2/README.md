@@ -18,11 +18,6 @@ Kun tehtäviä laaditaan, ne voi aina laittaa ensin sekalaisia tehtäviä -osioo
 
 Lopuksi kootaan kauniit, tiiviit ja kattavat paketit kahteen ensimmäiseen kategoriaan.
 
-Kuvat
-=====
-
-Kuvaajat tehdään TikZillä. Tämän lisäksi ammattilaistasoisia kuvituskuvia ja valokuvia.
-
 Yleishyödyllistä lisämateriaalia
 =================================
 
