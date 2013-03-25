@@ -3,7 +3,7 @@
 \begin{document}
 %Korjausta vaativat kohdat merkitään: % FIXME: asia
 
-\Opensolutionfile{ans}[ans1] %Answers-pakettiin!
+\Opensolutionfile{ans}[appendices/vastaukset] %Answers-pakettiin!
 
 \selectlanguage{finnish}
 
@@ -17,7 +17,13 @@
 %% Esipuheesta "Luku 0" ja numerointi siitä eteenpäin
 %\setcounter{chapter}{-1}
 
-\input{index}
+\input{preface}
+
+\input{chapters}
+
+\Closesolutionfile{ans}
+
+\input{appendices}
 
 \end{document}
 
