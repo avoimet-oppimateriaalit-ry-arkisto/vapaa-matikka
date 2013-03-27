@@ -1,12 +1,12 @@
-vapaa-matikka
+Vapaa matikka
 =============
 
-CC BY -lisensoitu lukion pitkän matematiikan kirjasarja.
+Avoimesti (CC BY 3.0) lisensoitu lukion pitkän matematiikan kirjasarja.
 
-CC BY licensed textbook series for Finnish schools. Corresponds roughly to any of
+Openly (CC BY 3.0) licensed textbook series for Finnish schools. Corresponds roughly to any of
 > Advanced high school mathematics (US),
 
-> A-Level Further Mathematics (UK),
+> A-level further mathematics (UK),
 
 > Mathematics HL (IB).
 
