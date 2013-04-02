@@ -37,7 +37,7 @@ endif
 TARGET ?= report
 PDFTARGETS += $(TARGET).pdf
 
-AFTERALL += book.ind
+AFTERALL += (TARGET).ind
 
 ## If $(TARGET).tex refers to .bib files like \bibliography{foo,bar}, then
 ## $(BIBFILES) will contain foo.bib and bar.bib, and both files will be added as
@@ -87,8 +87,8 @@ pdf: $(PDFTARGETS)
 view: $(PDFTARGETS)
 	$(PDFVIEWER) $(PDFTARGETS)
 
-book.ind: $(CONTENTTEX)
-	makeindex book
+(TARGET).ind: $(CONTENTTEX)
+	makeindex (TARGET)
 
 # define a \Revision{} command you can include in your document's preamble.
 # especially useful with e.g. drafthead.sty or fancyhdr.
