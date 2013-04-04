@@ -10,8 +10,6 @@ Openly (CC BY 3.0) licensed textbook series for Finnish schools. Corresponds rou
 
 > Mathematics HL (IB).
 
-Kirjasarja on kesken -- tähtäimessä on 14 osaa. A work in progress -- the full series will contain 14 books.
-
 Tämä repo sisältää kirjojen lähdekoodin. This repo contains the source code of the books.
 
 Kirjojen kehityshistoria: / Development history of the books:
@@ -19,11 +17,13 @@ Kirjojen kehityshistoria: / Development history of the books:
 
 > Vapaa matikka 2: 14.12.2012 -->
 
-> Vapaa matikka 3: suunnitteilla
+> Vapaa matikka 3: suunnitteilla / planned
 
 > Vapaa matikka 4: 19.4.2013 -->
 
-> ...
+> Vapaa matikka 5: suunnitteilla / planned
+
+> Kirjasarja on kesken, tavoitteena on 14 kirjaa. A work in progress; will eventually include 14 books.
 
 Tekniset yksityiskohdat: / Technical details:
 > Ladontajärjestelmä: / Typesetting: LaTeX
