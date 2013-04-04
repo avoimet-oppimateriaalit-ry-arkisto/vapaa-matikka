@@ -1,0 +1,1 @@
+Kirjan ydinsisältö.

@@ -19,6 +19,12 @@ Kirjojen kehityshistoria: / Development history of the books:
 
 > Vapaa matikka 2: 14.12.2012 -->
 
+> Vapaa matikka 3: suunnitteilla
+
+> Vapaa matikka 4: 19.4.2013 -->
+
+> ...
+
 Tekniset yksityiskohdat: / Technical details:
 > Ladontajärjestelmä: / Typesetting: LaTeX
 
