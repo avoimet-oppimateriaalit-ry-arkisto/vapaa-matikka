@@ -1,0 +1,37 @@
+\ProvidesPackage{../commons/vapaa-matikka_kansilehti}
+
+\newcommand{\kansilehti}[2]{
+\begin{titlepage}
+\vspace*{3cm}
+
+\begin{center}
+    \sffamily
+    \begin{doublespace}
+        \begin{Huge}
+            #1 \\
+        \end{Huge}
+        \vspace*{1cm}
+        \begin{LARGE}
+            #2
+        \end{LARGE}
+
+        \vfill
+
+        \begin{LARGE}
+            Avoimet oppimateriaalit ry \\
+        \end{LARGE}
+        \vspace*{1cm}
+        \includegraphics[scale=0.5]{../commons/tt.jpg}
+    \end{doublespace}
+\end{center}
+
+\vspace*{3cm}
+
+\begin{flushright}
+    \sffamily
+    $\vcenter{\hbox{\includegraphics[scale=0.3]{../commons/cc.pdf}}}$
+    $\vcenter{\hbox{\includegraphics[scale=0.3]{../commons/by.pdf}}}$
+    Sisältö on lisensoitu avoimella CC BY 3.0 -lisenssillä.
+\end{flushright}
+\end{titlepage}
+}

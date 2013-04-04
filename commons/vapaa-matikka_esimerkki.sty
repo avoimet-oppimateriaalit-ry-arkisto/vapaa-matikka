@@ -1,0 +1,44 @@
+\ProvidesPackage{../commons/vapaa-matikka_esimerkki}
+
+% \newtheorem{esimerkkitheorem}{Esimerkki}[chapter] %[section]
+% 
+\usepackage{framed}
+
+%\definecolor{ParisGreen}{RGB}{80,200,120}
+\definecolor{Sampo4}{cmyk}{1.0,0.42,0.65,0.0}
+
+\newenvironment{customleftbar}{%
+	\def\FrameCommand{\color{Sampo4}\vrule width 3mm \color{black}\hspace{3mm}}%
+	\MakeFramed {\advance\hsize-\width \FrameRestore}}%
+{\endMakeFramed}
+
+% uusi esimerkkiympäristö.
+% pystysuora välistys on hoidettu tosi rumasti, koska en saanut marginaalimerkintää toimimaan framed:in kanssa
+\newcounter{esimerkki}
+
+\newenvironment{esimerkki}[0]{%
+ \addtocounter{esimerkki}{1}%
+ \mbox{}\vspace{1.5ex}\marginpar{\raggedleft\sffamily\textcolor{Sampo4}{ESIMERKKI\ \thechapter.\theesimerkki}}%
+ \vspace*{-3.5ex}%
+ \begin{customleftbar}%
+}
+{%
+ \end{customleftbar}%
+ \vspace{0.5ex plus 3pt minus 1pt}}
+ 
+\newenvironment{esimratk}
+{\paragraph*{Ratkaisu.}}{}
+
+\newenvironment{esimvast}
+{\paragraph*{Vastaus.}}{}
+ 
+% \newenvironment{esimerkki}[0]
+% {
+% 	\vspace{3mm}
+% 	\begin{esimerkkitheorem}
+% 	\begin{customleftbar}
+% }
+% {
+% 	\end{customleftbar}
+% 	\end{esimerkkitheorem}
+% }

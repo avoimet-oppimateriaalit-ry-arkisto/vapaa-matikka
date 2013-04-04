@@ -1,0 +1,77 @@
+\ProvidesPackage{../commons/vapaa-matikka_merkkikaavio}
+
+% merkkikaavio-ympäristön parametrit:
+% leveys
+\newenvironment{merkkikaavio}[1]
+{
+	\begin{tikzpicture}
+		\pgfmathsetmacro{\MKruutuja}{#1+1}
+		\pgfmathsetmacro{\MKruutuw}{1.4}
+		\pgfmathsetmacro{\MKruutuh}{0.7}
+		\pgfmathsetmacro{\MKkaikkiw}{\MKruutuw*\MKruutuja}
+		\pgfmathsetmacro{\MKsuorakorkeus}{0.22}
+		
+		\draw[arrows=-triangle 45,line width=0.2mm] (0, \MKsuorakorkeus) -- (\MKkaikkiw + 0.4, \MKsuorakorkeus) node[below] {$x$};
+		
+		\pgfmathsetmacro{\MKvikaviiva}{\MKruutuja-1}
+		\foreach \sarake in {0,...,\MKvikaviiva}
+		{
+			\if\sarake0
+			\else
+				\draw (\sarake * \MKruutuw, \MKsuorakorkeus - 0.1) -- ++(0, 0.2);
+			\fi
+			\draw (\sarake * \MKruutuw, 0) -- ++(0, -\MKruutuh);
+		}
+		
+		\pgfmathsetmacro{\MKposx}{0}
+		\pgfmathsetmacro{\MKposy}{0}
+		\pgfmathsetmacro{\MKkohtapos}{\MKruutuw}
+}
+{
+	\end{tikzpicture}
+}
+
+% Lisää kohdan x-akselille.
+\newcommand{\merkkikaavioKohta}[1]{
+	\draw (\MKkohtapos, 0.26) node[above] {\phantom{$\int$}#1\phantom{$\int$}};
+	\pgfmathsetmacro{\MKkohtapos}{\MKkohtapos+\MKruutuw}
+}
+
+% Piirtää funktion nimen merkkikaaviossa.
+\newcommand{\merkkikaavioFunktio}[1]{
+	\draw (0, \MKposy-\MKruutuh/2) ++(-0.1, 0) node[left] {#1};
+}
+
+% Aloittaa uuden rivin merkkikaaviossa.
+\newcommand{\merkkikaavioUusirivi}[0]{
+	\pgfmathsetmacro{\MKposx}{0}
+	\pgfmathsetmacro{\MKposy}{\MKposy-\MKruutuh}
+	\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
+	\foreach \sarake in {0,...,\MKvikaviiva}
+	{
+		\draw (\sarake * \MKruutuw, \MKposy) -- ++(0, -\MKruutuh);
+	}
+}
+
+% Aloittaa uuden rivin merkkikaaviossa käyttäen kaksoisviivaa.
+\newcommand{\merkkikaavioUusiriviKaksoisviiva}[0]{
+	\pgfmathsetmacro{\MKposx}{0}
+	\pgfmathsetmacro{\MKposy}{\MKposy-\MKruutuh}
+	\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
+	\foreach \sarake in {0,...,\MKvikaviiva}
+	{
+		\draw (\sarake * \MKruutuw, \MKposy) -- ++(0, -\MKruutuh);
+	}
+	\pgfmathsetmacro{\MKposy}{\MKposy-0.06}
+	\draw (-0.3, \MKposy) -- (\MKkaikkiw, \MKposy);
+	\foreach \sarake in {0,...,\MKvikaviiva}
+	{
+		\draw (\sarake * \MKruutuw, \MKposy) -- ++(0, -\MKruutuh);
+	}
+}
+
+% Lisää merkin merkkikaavioon.
+\newcommand{\merkkikaavioMerkki}[1]{
+	\draw (\MKposx+\MKruutuw/2, \MKposy-\MKruutuh/2) node {#1};
+	\pgfmathsetmacro{\MKposx}{\MKposx+\MKruutuw}
+}

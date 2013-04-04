@@ -1,0 +1,57 @@
+\ProvidesPackage{../commons/vapaa-matikka_tehtavat}
+
+\newcommand{\Harjoitustehtavat}{%
+	\newpage
+	\subsection*{Harjoitustehtäviä}%
+	%\addcontentsline{toc}{section}{Harjoitustehtäviä}
+}
+
+% Ympäristö tehtävän alakohtien listaamiseen.
+% Variantit:
+%   - alakohdat = alakohdat allekkain
+%   - alakohdatrivi = alakohdat vierekkäin
+% Alakohdat lisätään alakohta-komennolla. Esimerkiksi:
+% \begin{alakohdat}
+%   \alakohta{bsd}
+%   \alakohta{asd}
+% \end{alakohdat}
+\newenvironment{alakohdat}
+{
+	\newcommand{\alakohtaTyyppi}{allekkain}
+	\newcommand{\alakohtaKoodi}{}
+	
+}
+{
+	\begin{enumerate}[a)]
+		\alakohtaKoodi
+	\end{enumerate}
+}
+
+\newcounter{alakohtaMonesko}
+
+\newenvironment{alakohdatrivi}
+{
+	\newcommand{\alakohtaTyyppi}{vierekkain}
+	\newcommand{\alakohtaKoodi}{}
+	
+}
+{
+	
+	\setcounter{alakohtaMonesko}{1}
+	\alakohtaKoodi
+	
+}
+
+\newcommand{\alakohta}[1]{
+	\ifthenelse{\equal{\alakohtaTyyppi}{allekkain}} {
+		\expandafter\def\expandafter\alakohtaKoodi\expandafter{\alakohtaKoodi{} \item #1}
+	}{
+		\expandafter\def\expandafter\alakohtaKoodi\expandafter{%
+			\alakohtaKoodi{}%
+			\ifthenelse{\equal{\value{alakohtaMonesko}}{1}}{\hspace{0.52cm}}{\hspace{0.6cm}}%
+			\alph{alakohtaMonesko}) %
+			\addtocounter{alakohtaMonesko}{1}%
+			#1
+		}
+	}
+}

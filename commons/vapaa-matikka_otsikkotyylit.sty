@@ -1,0 +1,47 @@
+\ProvidesPackage{../commons/vapaa-matikka_otsikkotyylit}
+
+%\titleformat{\part}
+%  {\normalfont\filright\Huge\bfseries\rmfamily}{Osa \thepart}{1em}{}
+
+\titlespacing*{\chapter}{0pt}{0pt}{*18}
+\titlespacing*{\section}{0pt}{8ex}{*4}
+\titlespacing*{\paragraph}{0pt}{0pt}{0.5em}
+
+% estää otsikkoa edeltävän välin konsumoinnin sivun alussa
+\newcommand{\sectionbreak}{%
+ \addpenalty{-300}%
+ \vspace*{0pt}}
+
+\renewcommand{\chaptertitlename}{Luku}
+
+\titleformat{\chapter}[display]
+{\sffamily\fontseries{l}\fontsize{23}{18}\selectfont}
+{\sffamily\fontsize{14}{10}\selectfont\MakeUppercase{\chaptertitlename}\ \thechapter}
+{2pt}
+{}
+
+\titleformat{\section}[hang]
+{\sffamily\fontsize{15}{10}\selectfont\filleft}
+{\thesection}
+{0.5em}
+{\MakeUppercase}
+[\vspace{0.5ex}{\titlerule[1pt]}]
+ 
+\titleformat{\subsection}
+{\sffamily\fontsize{14}{10}\selectfont}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\bfseries}{\thesubsubsection}{1em}{}
+
+\titleformat{\paragraph}[runin]
+{\bfseries}{\theparagraph}{0.2em}{}
+% 
+% \titleformat{\paragraph}[runin]
+%   {\normalfont\normalsize\bfseries\rmfamily}{\theparagraph}{1em}{}
+% 
+% \titleformat{\subparagraph}[runin]
+%   {\normalfont\normalsize\bfseries\rmfamily}{\thesubparagraph}{1em}{}
+
+%% luvut muodosta "Luku N Nimi" muotoon "N Nimi"
+%\addto\captionsfinnish{
+% \renewcommand{\chaptername}{}}

@@ -1,0 +1,65 @@
+\ProvidesPackage{../commons/vapaa-matikka_laatikot}
+
+%\newcommand{\pikkulaatikko}[1]{
+%    \begin{tabular}{|p{\marginparwidth}|}
+%        \hline
+%    	\footnotesize #1\\ 
+%    	\hline
+%    \end{tabular}
+%}
+%
+%\newcommand{\sivulaatikko}[1]{
+%    \marginpar{\par\pikkulaatikko{#1}}
+%}
+
+% Infoboksi väreineen
+
+\usepackage[framemethod=TikZ]{mdframed}
+
+\definecolor{Sampo3}{cmyk}{0.2,0.27,0.0,0.0}
+%\definecolor{ParisGreen}{RGB}{80,200,120}
+%\definecolor{PersianGreen}{RGB}{0,166,147}
+%\definecolor{darkKhaki}{RGB}{189,183,107}
+%\definecolor{cornflowerBlue}{RGB}{154,206,235}
+%\definecolor{thulianPink}{RGB}{222,111,161}
+%\definecolor{olivine}{RGB}{154,185,115}
+%\definecolor{battleshipGray}{RGB}{132,132,130}
+
+%\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(ParisGreen); color(50bp)=(ParisGreen); color(100bp)=(ParisGreen!50)}
+\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(Sampo3); color(50bp)=(Sampo3); color(100bp)=(Sampo3!50)}
+
+\mdfdefinestyle{laatikkotyyli}{
+  userdefinedwidth=\paperwidth,
+  leftmargin=0pt,
+  innerleftmargin=5pt,
+  rightmargin=0pt,
+  innerrightmargin=0pt,
+  middlelinewidth=0pt,
+  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
+  innertopmargin=3mm,
+  innerbottommargin=3mm,
+  needspace=3\baselineskip,
+}
+
+% laatikot eivät vielä toimi kunnolla. tämä oli hyvä yritys saada laatikko levennettyä :) T: Jokke
+
+% \usepackage{changepage}
+% 
+% \makeatletter
+% \newenvironment{widepar}{%
+%   \checkoddpage%
+%   \ifthenelse{\boolean{oddpage}}{%
+%    \setlength{\leftskip}{-\Gm@lmargin-\Gm@bindingoffset}%
+%    \setlength{\rightskip}{-\Gm@rmargin}
+%   }{%
+%    \setlength{\leftskip}{-\Gm@lmargin}%
+%    \setlength{\rightskip}{-\Gm@rmargin-\Gm@bindingoffset}%
+%   }%
+%   {\par}}
+% \makeatother
+
+\newcommand{\laatikko}[1]{%
+%\begin{\widepar}
+  \begin{mdframed}[style=laatikkotyyli] #1 \end{mdframed}
+%\end{widepar}
+}

@@ -1,0 +1,18 @@
+\ProvidesPackage{../commons/vapaa-matikka_qrlinkki}
+
+% Linkki ja QR-koodi. Parametrit: URL ja kuvaus.
+\newcommand{\qrlinkki}[2]{
+	
+	\begin{minipage}[c]{0.7in}
+		\begin{pspicture}(0.6in,0.6in)
+			\psbarcode{#1}{width=0.6 height=0.6}{qrcode}
+		\end{pspicture}
+		\vspace{0.1in}
+	\end{minipage}
+	\begin{minipage}[l]{\textwidth-0.7in}
+		#2
+		
+		{\scriptsize\url{#1}}
+	\end{minipage}
+	
+}
