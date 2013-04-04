@@ -1,33 +1,6 @@
-\input{../commons/boilerplate}
+\input{../commons/boilerplate_pre}
 
-\begin{document}
+\newcommand{\kurssinTunnus}{MAA1}
+\newcommand{\kurssinNimi}{\maaI}
 
-\Opensolutionfile{ans}[appendices/vastaukset]
-
-\selectlanguage{finnish}
-
-\kansilehti{Vapaa matikka 1}{MAA1 -- Funktiot ja yhtälöt}
-
-% Siistitään sisällysluettelo - aiempana rikkoisi listoftodosin
-\setcounter{tocdepth}{0}
-
-% Esipuheesta "Luku 0" ja numerointi siitä eteenpäin
-\setcounter{chapter}{-1}
-
-\input{preface}
-
-\input{chapters}
-
-\Closesolutionfile{ans}
-
-\input{appendices}
-
-\end{document}
-
-% -*- coding: utf-8 -*-
-
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: t
-%%% coding: utf-8
-%%% End: 
+\input{../commons/boilerplate_post}
