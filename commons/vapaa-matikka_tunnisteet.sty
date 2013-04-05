@@ -1,0 +1,22 @@
+\ProvidesPackage{../commons/vapaa-matikka_tunnisteet}
+
+% vaatii paketin "fancyhdr"
+
+\pagestyle{fancy}
+
+\newcommand{\alatunnistefontti}{\sffamily\fontsize{9}{7}\selectfont}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{\chaptertitlename\ \thechapter. #1}{}}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{%
+ \fancyhf{}
+ \fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
+ \fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
+}
+
+\fancyhf{}
+\fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
+\fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}

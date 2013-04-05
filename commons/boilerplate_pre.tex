@@ -13,26 +13,7 @@
 % Luokkamäärittelyt.
 \documentclass[a4paper,onecolumn,12pt,finnish,oneside,final,oldtoc]{boek3}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Marginaalit
-%\addtolength{\marginparwidth}{6em}
-%\addtolength{\hoffset}{-4em}
-%\addtolength{\textwidth}{-2em}
-
-%\addtolength{\voffset}{-1ex}
-%\addtolength{\textheight}{2ex}
-
-% Hienosäätöä
-%\addtolength{\headheight}{2.5pt}
-%\setlength{\emergencystretch}{2em}
-%\setlength{\mathsurround}{1pt}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \setcounter{secnumdepth}{7}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Suometus ja fontit
 \usepackage[utf8]{inputenc}
@@ -53,30 +34,21 @@
 \usepackage[T1]{fontenc}
 % Suometusten asettaminen jatkuu myöhemmin
 
-\usepackage{blindtext}
-\usepackage{lipsum}
-
 \usepackage{xifthen}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Yleisimmät erikoismerkit, kuten copyleft
 \usepackage{textcomp}
 
-% Matikka-symboleita
+% AMS & matematiikka
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[psamsfonts]{amssymb}
+\usepackage{amsxtra}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
 \usepackage{latexsym}
-
-% AMS:sän matikka-paketteja:
-% Lisätietoa paketista optiolla "?"
-%\usepackage[?]{amsmath}
-\RequirePackage{amsmath}
-\RequirePackage{amsfonts}
-\RequirePackage[psamsfonts]{amssymb}
-\RequirePackage{amsxtra}
-\RequirePackage{amscd}
-\RequirePackage{amsthm}
-\RequirePackage{mathrsfs}
-\RequirePackage{mathtools}
 
 % Fontti := Utopia Regular with Fourier
 \usepackage{fourier}
@@ -86,8 +58,6 @@
 
 % Dataa ulkoasusta, komento \pagevalues
 \usepackage{layouts}
-
-
 
 % Tukea pdf(la)texin microtypes-laajennoksille. Pakko olla
 % fonttimäärityksien jälkeen.
@@ -118,27 +88,8 @@
 % (totpages tarvii tätä)
 \usepackage{everyshi}
 
-% Värien tuki:
-% (Mihinkähän mä tätä tarvitsinkaan?)
-%\usepackage{color}
-
-% Kuvien lisäys dokumenttiin:
-% (Mihinkähän mä tätä tarvitsinkaan?)
-%\usepackage{graphicx}
-
 % Laskutehtävien suoritusta (geometry-paketti hyötyy tästä):
 \usepackage{calc}
-
-%\usepackage[nomarginpar,includeheadfoot]{geometry}
-
-% vasen marginaali
-%\geometry{lmargin=4.0cm}
-% oikea marginaali
-%\geometry{rmargin=2.0cm}
-% ylämarginaali
-%\geometry{tmargin=2.0cm}
-% alamarginaali
-%\geometry{bmargin=2.0cm}
 
 \usepackage[papersize={185mm,240mm},%
             left=36mm,right=12mm,%
@@ -148,29 +99,19 @@
 
 \reversemarginpar            
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Ykkösvälike, puolitoistakertainen välike ja kakkosvälike yms.
+% Riviväli 1,5
 \usepackage{setspace}
-%\singlespacing
 \onehalfspacing
-%\spacing{1.7} % Tämä bugasi joskus aiheuttaen tällaista: (\end occurred inside a group at level 1)
-%\doublespacing
 
 % URL:ien ladonta ja "tavutus"
 \usepackage[obeyspaces,spaces,hyphens,T1]{url}
-%\renewcommand\url{\begingroup \def\UrlLeft{<URL: }\def\UrlRight{>}\urlstyle{rm}\Url}
-%\def\UrlBigBreakPenalty{120}
-%\def\UrlBreakPenalty{200}
 
 % Helpottaa TeX:iin liittyvien nimien ladontaa (LaTeX, BibTeX jne.)
 \usepackage{texnames}
 
-% tikz mukaan
+% TikZ-paketti
 \usepackage{pgf,tikz}
 \usetikzlibrary{arrows}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Upeet headerit ja footerit
 
@@ -186,32 +127,8 @@
 \theoremstyle{definition}
 \newtheorem{theorem}{Teoreema}
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% alatunnisteen asettaminen, sivunumerot ym.
-
+% Tunnisteiden ja sivunumeroiden asettamista varten
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-
-\newcommand{\alatunnistefontti}{\sffamily\fontsize{9}{7}\selectfont}
-
-\renewcommand{\chaptermark}[1]{%
-\markboth{\chaptertitlename\ \thechapter. #1}{}}
-
-\renewcommand{\headrulewidth}{0pt}
-
-\fancypagestyle{plain}{%
- \fancyhf{}
- \fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
- \fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
-}
-
-\fancyhf{}
-\fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
-\fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Euron merkki
 \usepackage{eurosym}
@@ -220,8 +137,7 @@
 \usepackage{wasysym}
 
 % Harjoitustehtävät answers-paketilla
-\usepackage{answers}                     %tehtävät kirjan lopussa
-%\usepackage[nosolutionfiles]{answers}   %oikolukuversio, vastaukset heti tehtävän jälkeen
+\usepackage{answers}
 \Newassociation{vastaus}{Vastaus}{ans}
 \renewenvironment{Vastaus}[1]{\begin{trivlist}\item \textbf{#1.} }{\end{trivlist}} %ulkoasumuutos vastauksiin
 \newtheorem{tehtava}{}
@@ -235,37 +151,20 @@
 %         \end{multicols}
 \usepackage{multicol}
 
-% Todo-merkintöjen tuki
-%  - ks. lisää: https://latexforhumans.wordpress.com/2009/03/13/todonotes/
-%  - Tukee seuraavia komentoja:
-%       \todo{Todo-kommentti marginaalissa}
-%       \todo[noline]{Todo-kommentti marginaalissa ilman korostusviivaa}
-%       \todo[inline]{Todo-kommentti tekstin seassa}
-%       \missingfigure{Puuttuva kuva}
-%       \listoftodos            % Todo-merkintöjen 'sisällysluettelo'
-\usepackage{todonotes}
-
-
-
+% Tuki numeroiduille listoille
 \usepackage{enumerate}
 
+% Tuki desimaalipilkulle
 \usepackage{icomma} % Jotta pilkun perään ei tule naurettavaa väliä.
 
-% Jotta mikro-etuliitteen saisi pystyyn: $\upmu$
+% Ei-kursivoidut kreikkalaiset aakkoset, esim. $\upmu$
 \usepackage{upgreek}
-
-%% https://github.com/sliedes/oppikirjamaraton-maa1/commit/c9a8d834ac8b0b50166f973ec856e94c5c65dcab
-%% hieman normaalia isompi hyphenpenalty -> isompia sanavälejä, mutta
-%% vähemmän tavuviivoja
-%\usepackage{hyphenat}
-%\hyphenpenalty=1000
-%% -> Ei kyllä näytä vaikuttavan yhtään mihinkään, ainakaan ensimmäisellä
-%% 22 sivulla.
 
 % QR-koodeihin
 \usepackage{pst-barcode}
 \usepackage{auto-pst-pdf}
 
+% Automatisoitu hakemisto
 \usepackage{makeidx}
 \makeindex
 
@@ -279,10 +178,9 @@
 % Aika- ja pvmformaattien kustomointiin
 \usepackage{datetime}
 
-% Esimerkeille oma komento http://tex.stackexchange.com/questions/21227/example-environment
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Omat komennot
 \usepackage{../commons/vapaa-matikka_const}
 \usepackage{../commons/vapaa-matikka_esimerkki}
 \usepackage{../commons/vapaa-matikka_kansilehti}
@@ -297,6 +195,7 @@
 \usepackage{../commons/vapaa-matikka_projekti}
 \usepackage{../commons/vapaa-matikka_qrlinkki}
 \usepackage{../commons/vapaa-matikka_tehtavat}
+\usepackage{../commons/vapaa-matikka_tunnisteet} % vaatii paketin "fancyhdr"
 \usepackage{../commons/vapaa-matikka_versio}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
