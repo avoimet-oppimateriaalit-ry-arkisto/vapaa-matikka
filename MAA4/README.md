@@ -1,4 +1,4 @@
-Vapaa matikka 4 (MAA4 -- Analyyttinen geometria)
-================================================
+MAA4
+====
 
-Kirjoitustyötä ei ole vielä aloitettu.
+Analyyttisen geometrian kurssi. Kirjoitustyötä ei ole vielä aloitettu.
