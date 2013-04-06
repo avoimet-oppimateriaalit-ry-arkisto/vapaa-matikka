@@ -23,6 +23,8 @@ Kirjojen kehityshistoria: / Development history of the books:
 
 > Vapaa matikka 5: suunnitteilla / planned
 
+> Vapaa matikka 11: käsikirjoitus valmis; tekijät: Anna-Maija Partanen, Antti Rasila, Mika Setälä
+
 > Kirjasarja on kesken, tavoitteena on 14 kirjaa. A work in progress; will eventually include 14 books.
 
 Tekniset yksityiskohdat: / Technical details:
