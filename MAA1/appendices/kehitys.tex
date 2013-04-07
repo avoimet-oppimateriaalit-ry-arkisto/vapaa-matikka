@@ -1,4 +1,4 @@
-\chapter{Kirjan kehitykseen osallistuminen}
+\section{Kirjan kehitykseen osallistuminen}
 
 Tässä liitteessä kuvataan, kuinka voit osallistua kirjan kehittämiseen.
 
@@ -15,7 +15,7 @@ Työkalut ja niiden käyttötarkoitus lyhyesti:
 
 \end{enumerate}
 
-\section{Tee tunnus github.com:iin}
+\subsection{Tee tunnus github.com:iin}
 
 Tee tunnus githubiin. Github.com on palvelu, joka antaa ilmaista palvelintilaa avoimen lähdekoodin projekteille.
 
@@ -23,7 +23,7 @@ Tee tunnus githubiin. Github.com on palvelu, joka antaa ilmaista palvelintilaa a
 https://github.com/signup/free
 }
 
-\section{Forkkaa projekti ja aloita työskentely}
+\subsection{Forkkaa projekti ja aloita työskentely}
 
 Forkkaaminen (fork) on github-toimenpide, joka tarkoittaa sitä että teet oman versiosi kirjasta. Työstäessäsi muutoksia, teet ensin muutokset omaan versioosi jonka jälkeen lähetät muutostoiveen (pull request) pääprojektin hallinnoijalle.
 
@@ -37,7 +37,7 @@ Forkkaaminen (fork) on github-toimenpide, joka tarkoittaa sitä että teet oman 
 
 Voit muokata omaa versiotasi suoraan githubin nettisivuilta (Edit). Kun olet tehnyt muutoksen nettikäyttöliittymässä, kuvaile yhdellä rivillä mitä teit ja paina Commit changes.
 
-\section{Pull request}
+\subsection{Pull request}
 
 Kun olet tehnyt muutoksen omaan kopioosi, voit lähettää muutosehdotukset suoraan pääkehittäjälle tekemällä Pull Request-muutosehdotuksen. Tämä tapahtuu painamalla Pull Request nappulaa githubissa oman kopiosi sivulla.
 
@@ -49,20 +49,20 @@ Pull requestit syvällisemmin: https://help.github.com/articles/using-pull-reque
 
 Pienet muutokset, kuten kirjoitusvirheet, voit tehdä suoraan githubin nettikäyttöliittymässä. Isompia muutoksia varten kannattaa asentaa \LaTeX ja git omalle koneellesi, niin voit kokeilla miltä lopputulos näyttää ja muokata koodia tehokkaammin.
 
-\section{Versionhallinta omalle koneelle: git}
+\subsection{Versionhallinta omalle koneelle: git}
 
 Jotta pääsisit paremmin muokkaamaan ja tarkastelemaan koodia, kannattaa asentaa omalle koneelle versionhallintatyökalu. Github tarjoaa omat työkalunsa eri käyttöjärjestelmille, mutta voit myös asentaa alkuperäisen git-versiohallintajärjestelmän osoitteesta http://git-scm.com/
 
 Tässä oppaassa käydään läpi komentorivityökalu-komennot. Vastaavat komennot graafisista työkaluista on helppo löytää. Kaikki komennot suoritetaan pääkansiosta (oppikirjamaraton-maa1). Korvaa tagit (<tagi>) omilla tiedoillasi.
 
-\subsection{Tiedostot omalle koneelle}
+\subsubsection{Tiedostot omalle koneelle}
 
 \begin{verbatim}
 git clone https://github.com/<oma tunnus>/oppikirjamaraton-maa1.git
 cd oppikirjamaraton-maa1
 \end{verbatim}
 
-\subsection{Päähaaran asettaminen}
+\subsubsection{Päähaaran asettaminen}
 
 Tämä toiminto pitää tehdä, jotta voit tehdä yhteistyötä projektin vetäjän kanssa.
 
@@ -70,14 +70,14 @@ Tämä toiminto pitää tehdä, jotta voit tehdä yhteistyötä projektin vetäj
 git remote add upstream https://github.com/Oppikirjamaraton/oppikirjamaraton-maa1.git
 \end{verbatim}
 
-\subsection{Muutoksien päivittäminen päähaarasta}
+\subsubsection{Muutoksien päivittäminen päähaarasta}
 
 \begin{verbatim}
 git fetch upstream
 git merge upstream/master
 \end{verbatim}
 
-\subsection{Omien muutoksien lähettäminen}
+\subsubsection{Omien muutoksien lähettäminen}
 
 \begin{verbatim}
 git commit -m "<muutoksen kuvaus>" -a
@@ -86,11 +86,11 @@ git push origin master
 
 Kun olet saanut valmiiksi muutokset, tee pull request github.com:n kautta.
 
-\subsection{Lähdekoodin katsominen ja muokkaaminen}
+\subsubsection{Lähdekoodin katsominen ja muokkaaminen}
 
 Voit käyttää koodin muokkaamiseen mitä tahansa tekstieditoria, vaikkapa notepadia. Erillisen tähän tarkoituksene soveltuvan ohjelman asentaminen on kuitenkin suositeltavaa, tässä eräs hyväksi koettu ohjelma: http://www.xm1math.net/texmaker/
 
-\section{lopullisen version kääntämiseen \LaTeX}
+\subsection{lopullisen version kääntämiseen \LaTeX}
 
 \LaTeX on työkalu, jolla saat muutettua tekstimuotoisen lähdekoodin kauniiseen muotoon esim. PDF-formaattiin.
 
