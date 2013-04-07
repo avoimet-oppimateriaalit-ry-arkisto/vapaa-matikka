@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# author (script): Joonas Kuorilehto (joneskoo)
+# author (list): Aapo Rantalainen (aapo)
+#
 #käy läpi listan, jossa on sanoja, joiden tiedetään hälyttävän oikoluvussa
 #  mutta joita ei haluta lisätä sanastoon
 #  (esim englannin- ja ruotsinkieliset sanat. nimiä jne)
