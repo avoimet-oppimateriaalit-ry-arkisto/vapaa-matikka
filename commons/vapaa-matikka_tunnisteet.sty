@@ -20,3 +20,27 @@
 \fancyhf{}
 \fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
 \fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
+
+\newcommand{\liitetyyli}{
+\chapter*{Liitteet}
+\addcontentsline{toc}{chapter}{Liitteet}
+
+\renewcommand*{\thesection}{\Alph{section}}
+\titleformat{\section}[hang]
+{\sffamily\fontsize{15}{10}\selectfont\filleft}
+{Liite \thesection}
+{0.5em}
+{\MakeUppercase}
+[\vspace{0.5ex}{\titlerule[1pt]}]
+
+\fancypagestyle{plain}{%
+ \fancyhf{}
+ \fancyfoot[RE]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
+ \fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
+}
+\fancyhf{}
+\fancyfoot[RE]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
+\fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
+
+\setcounter{section}{0}
+}
