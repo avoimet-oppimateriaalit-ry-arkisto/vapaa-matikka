@@ -1,9 +1,0 @@
-Varmista, että sinulla on 'gnuplot' asennettuna (esim. which gnuplot).
-
-Jos käytät projektin virtuaalikonetta, kaikki vaadittu on asennettu valmiiksi.
-
-Kääntäminen tapahtuu valitun kirjan hakemistossa komennolla 'make' tai 'pdflatex --shell-escape [kirjan tunnus].tex'. 
-
-Jos haluat varmistua, että et voi commitoida keskeneräisiä mergejä (copy-pastea alempi rivi):
-
-cp extra/pre-commit .git/hooks/ && chmod 0744 .git/hooks/pre-commit
