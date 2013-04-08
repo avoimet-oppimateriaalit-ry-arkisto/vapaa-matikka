@@ -1,7 +1,8 @@
-Varmista, että sinulla on 'gnuplot' asennettuna (esim. which gnuplot)
+Varmista, että sinulla on 'gnuplot' asennettuna (esim. which gnuplot).
 
-sitten vain valitun kirjan hakemistossa 'make' tai 'pdflatex [kirjan tunnus].tex'. 
+Jos käytät projektin virtuaalikonetta, kaikki vaadittu on asennettu valmiiksi.
 
+Kääntäminen tapahtuu valitun kirjan hakemistossa komennolla 'make' tai 'pdflatex --shell-escape [kirjan tunnus].tex'. 
 
 Jos haluat varmistua, että et voi commitoida keskeneräisiä mergejä (copy-pastea alempi rivi):
 
