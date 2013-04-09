@@ -1,6 +1,8 @@
 Vapaa matikka
 =============
 
+(Ohjeet kirjoittajille ym.: ks. wiki: https://github.com/avoimet-oppimateriaalit-ry/vapaa-matikka/wiki)
+
 Avoimesti (CC BY 3.0) lisensoitu lukion pitkän matematiikan kirjasarja.
 
 Openly (CC BY 3.0) licensed textbook series for Finnish schools. Corresponds roughly to any of
@@ -13,19 +15,21 @@ Openly (CC BY 3.0) licensed textbook series for Finnish schools. Corresponds rou
 Tämä repo sisältää kirjojen lähdekoodin. This repo contains the source code of the books.
 
 Kirjojen kehityshistoria: / Development history of the books:
-> Vapaa matikka 1: 28.9.2012 -->
+> MAA1 (Funktiot ja yhtälöt): 28.9.2012 -->
 
-> Vapaa matikka 2: 14.12.2012 -->
+> MAA1 (Functions and equations, English-language version): suunnitteilla / planned
 
-> Vapaa matikka 3: suunnitteilla / planned
+> MAA2 (Polynomifunktiot): 14.12.2012 -->
 
-> Vapaa matikka 4: 19.4.2013 -->
+> MAA3 (Geometria): suunnitteilla / planned
 
-> Vapaa matikka 5: suunnitteilla / planned
+> MAA4 (Analyyttinen geometria): 19.4.2013 -->
 
-> Vapaa matikka 6: suunnitteilla / planned
+> MAA5 (Vektorit): suunnitteilla / planned
 
-> Vapaa matikka 11: käsikirjoitus valmis; tekijät: Anna-Maija Partanen, Antti Rasila, Mika Setälä
+> MAA6 (Todennäköisyys ja tilastot): suunnitteilla / planned
+
+> MAA11 (Lukuteoria ja logiikka): käsikirjoitus valmis; tekijät: Anna-Maija Partanen, Antti Rasila, Mika Setälä
 
 > Kirjasarja on kesken, tavoitteena on 14 kirjaa. A work in progress; will eventually include 14 books.
 
