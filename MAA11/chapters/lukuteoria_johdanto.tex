@@ -8,7 +8,7 @@ Kurssin loppuosassa perehdytään lukuteoriaan. Lukuteoria on matematiikan ala, 
 \label{jaollisuus}
 Kokonaislukujen jaollisuus on lukuteoriassa keskeinen käsite, johon on tutustuttu jo alakoulussa.
 
-\section*{Tutkimustehtävä} %Palautetaan mieliin jaollisuus ja jakojäännös.
+\subsection*{Tutkimustehtävä} %Palautetaan mieliin jaollisuus ja jakojäännös.
 \begin{enumerate}
 \item
 Laske jakokulmassa a) $905 / 11$ b) $540 / 12$. Ilmoita jakolaskun tulos kokonaisosan ja jakojäännöksen avulla.
@@ -20,7 +20,9 @@ ilmaistua osamäärän, jakajan ja jakojäännöksen avulla.
 
 Alakoulun matematiikassa esimerkiksi kokonaislukujen jakolasku $17/3$ ratkaistaan seuraavasti: $17/3 = 5$, jää $2$. Tämä tarkoittaa, että luku $3$ menee $5$ kertaa lukuun $17$ ja jää $2$. Yleisesti kokonaislukujen $a$ ja $b \neq 0$ jakolaskusta $a/b$ saadaan tulokseksi {\em osamäärä} ja {\em jakojäännös}. Edellisessä jakolaskussa osamäärä on $5$ ja jakojäännös on $2$. Mikäli jakojäännös on nolla eli jako menee tasan, sanotaan, että luku $a$ on {\em jaollinen} luvulla $b$ tai että luku $b$ {\em jakaa} luvun $a$. Tällöin merkitään $b|a$. Jos $b|a$, niin luku $a$ voidaan kirjoittaa osamäärän $q$ ja luvun $b$ avulla $a = qb$. Itse asiassa nämä ehdot ovat yhtäpitäviä. Jos luku $a$ ei ole jaollinen luvulla $b$, merkitään $b \nmid a$.
 
-{\bf Esimerkki 1.} Tutki, onko totta, että a)  $3 | 6$  b)  $2 | 5$ c) $-4|12$.
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+ Tutki, onko totta, että a)  $3 | 6$  b)  $2 | 5$ c) $-4|12$.
 
 {\bf Ratkaisu:}
 
@@ -38,15 +40,19 @@ Tapa 1: Suoritetaan jakolasku $12/(-4)=-12/4= -3$. Jako menee tasan, joten luku 
 Tapa 2: Koska $12 = -3 \cdot (-4)$, luku $-4$ on luvun $12$ tekijä. Siis $-4 | 12$.
 
 {\bf Vastaus:} a) On.  b) Ei ole. c) On.
-
+\end{esimerkki}
 
 Jaollisuuden tutkimisessa tärkeä tulos on seuraava lause, jonka todistus on melko vaativa:
 
+\laatikko{
 {\bf Lause (Jakoyhtälö).}
-Jos $a$ ja $b$ ovat kokonaislukuja ja $b > 0$, niin on olemassa sellaiset yksikäsitteiset kokonaisluvut $q$ ja $r$, että
+Jos $a$ ja $b$ ovat kokonaislukuja ja $b > 0$, niin on\newline olemassa sellaiset
+ yksikäsitteiset kokonaisluvut $q$ ja $r$, että
 \[
 a = qb + r,\qquad 0\le r<b.
 \]
+}
+
 Jakoyhtälössä esiintyvää lukua $q$ sanotaan lukujen $a$ ja $b$ (vaillinaiseksi) osamääräksi ja lukua $r$  jakojäännökseksi.
 
 %Jakojäännökselle käytetään myös merkintää 
@@ -54,7 +60,7 @@ Jakoyhtälössä esiintyvää lukua $q$ sanotaan lukujen $a$ ja $b$ (vaillinaise
 %r = a \mod b.
 %\]
 
-\proof (Lisämateriaali)
+\begin{todistus}% (Lisämateriaali)
 Todistetaan väite tapauksessa $a\ge 0$. Tutkitaan aluksi joukkoja
 \[
 S = \{ a-nb\,|\, n\in \Z\}.
@@ -74,10 +80,10 @@ Voidaan olettaa, että $q_2>q_1$. Nyt
 r_1 - r_2 = q_2b - q_1b = (q_2-q_1)b \ge b.
 \]
 Toisaalta $r_1-r_2<b$, koska $0\le r_1 < b$ ja $0\le r_2 < b$, mikä on ristiriita. Siten ainoa mahdollisuus on, että $q_1=q_2$ ja $r_1=r_2$. 
-\qed
+\end{todistus}
 
-
-{\bf Esimerkki 2.}
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
 %Määritä jakolaskun $a/b$ osamäärä ja jakojäännös, kun
 %a) $a=23$ ja $b=5$, 
 %b) $a=-19$ ja $b=6$. 
@@ -109,8 +115,10 @@ Jakoyhtälö on
 \]
 
 {\bf Vastaus:} a) $23 = 4\cdot 5 + 3$, b) $-19 = -4\cdot 6 +5$.
+\end{esimerkki}
 
-{\bf Esimerkki 3.} %Anna-Maija keksii konkreettisen / soveltavan esimerkin. 
+\begin{esimerkki}
+%{\bf Esimerkki 3.} %Anna-Maija keksii konkreettisen / soveltavan esimerkin. 
 Jussi tavoittelee Cooperin testissä tulosta 3050 metriä. Testi juostaan 400 metriä pitkällä
 radalla. Kuinka monta kokonaista kierrosta Jussin pitää juosta? Kuinka pitkä matka
 hänen pitää juosta vielä kokonaisten kierrosten lisäksi?
@@ -121,20 +129,24 @@ $3050  / 400  = 7,625$. Jussin pitää siis juosta $7$ kokonaista kierrosta.
 Koska $3050  - 7 \cdot 400 = 3050  - 2800  = 250$, Jussin pitää juosta kokonaisten kierrosten lisäksi $250$ metriä.
 
 {\bf Vastaus:} Jussin on juostava $7$ kokonaista kierrosta ja $250$ metriä.
+\end{esimerkki}
 
-{\bf Esimerkki 4.} Olkoot $a$, $b$ ja $c$ kokonaislukuja ja $a\neq 0$. Osoita, että jos $a|b$ ja $a|c$, niin $a|(b + c)$.
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
+Olkoot $a$, $b$ ja $c$ kokonaislukuja ja $a\neq 0$. Osoita, että jos $a|b$ ja $a|c$, niin $a|(b + c)$.
 
 {\bf Ratkaisu:}
 Jos $a|b$, niin on olemassa sellainen kokonaisluku $q$, että $b = qa$.
 Jos $a|c$, niin on olemassa sellainen kokonaisluku $r$, että $c = ra$.
 Tällöin $b + c = qa + ra = (q + r)a$, missä $q + r$ on kokonaisluku. 
 Siis $a|(b + c)$.
+\end{esimerkki}
 
+%\newpage
 
-\newpage
+%\section*{Tehtäviä}
 
-
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 
@@ -327,7 +339,7 @@ Kirjoittamalla nyt jakojäännökset lopusta alkuun saadaan luku $10010$. Se on 
 \section{Kongruenssi} 
 Luonnonilmiöitä mallinnettaessa tulee usein vastaan tilanteita, joissa on hyödyllistä samastaa keskenään jaksollisesti toistuvat ilmiöt. Tällaisia ilmiöitä ovat esimerkiksi vuodenajat, viikonpäivät ja kellonajat. Samaan tapaan kokonaislukujen jonossa esimerkiksi parilliset tai yhdellätoista jaolliset luvut esiintyvät jaksollisesti. Lukujonossa toistuvien ominaisuuksien tutkimisessa käytetään {\em kongruenssin} käsitettä.
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 \begin{enumerate}
 \item Ryhmittele luvut $16$, $59$, $12$, $3$, $177$, $21$, $47$, $65$, $222$, $-17$, $-100$ ja $-1$ niin, että samaan joukkoon kuuluvat ne luvut, joilla on sama jakojäännös, kun ne jaetaan luvulla $5$.
 \item Valitse ensin kaksi lukua, jotka ovat samassa kohdan 1 joukossa. Laske niiden erotus. Toista kaksi kertaa. Valitse sitten kaksi lukua, jotka ovat eri joukoissa kohdassa 1. Laske niiden erotus. Toista kaksi kertaa. Miten erotuksen arvosta näkee, kuuluvatko vähenevä ja vähentäjä samaan kohdan 1 joukkoon?
@@ -340,13 +352,13 @@ Kokonaislukujen $a$ ja $b$ kongruenssi tarkoittaa, että niillä on sama jakojä
 %---
 %{\bf Teorialaatikko [Kongruenssi].}
 
-\fbox{
-\begin{minipage}{12cm}
-{\large \bf Kongruenssi}
-
-\medskip
-
-Kokonaisluvut $a$ ja $b$ ovat {\em kongruentteja modulo} $k$, jos erotus $a-b$ on jaollinen positiivisella kokonaisluvulla $k$. Tällöin merkitään
+%\fbox{
+%\begin{minipage}{12cm}
+\laatikko{
+{\bf Kongruenssi.}
+%\medskip
+Kokonaisluvut $a$ ja $b$ ovat {\em kongruentteja modulo} $k$, jos erotus\newline
+ $a-b$ on jaollinen positiivisella kokonaisluvulla $k$. Tällöin merkitään
 \[
 a \equiv b \quad (\mod k).
 \]
@@ -356,7 +368,7 @@ Jos $a$ ja $b$ eivät ole kongruentteja modulo $k$, merkitään
 a \not\equiv b \quad (\mod k).
 \]
 Merkintää $(\mod k)$ ei ole tapana kirjoittaa, jos luku $k$ on asiayhteydestä selvä.
-\end{minipage}
+%\end{minipage}
 %---
 }
 
@@ -367,7 +379,8 @@ a\equiv b\qquad (\mod k)
 kanssa on yhtäpitävää, että $a-b=nk$ eli $a=b+nk$ vähintään yhdellä luvulla $n\in \Z$.
 
 
-{\bf Esimerkki 1.} 
+%{\bf Esimerkki 1.} 
+\begin{esimerkki}
 Osoita, että a) $27 \equiv 19 \ (\mod 4)$ b) $13 \equiv -82 \ (\mod 5)$.
 
 {\bf Ratkaisu:}
@@ -390,9 +403,10 @@ Hannalla on kaksi lasta, Aaro ja Mirkku. Hanna laski, että Aaron syntymäpäiv�
 Tutkitaan, ovatko luvut $38$ ja $59$ kongruentteja modulo $7$. Koska $59 - 38 = 21 = 3\cdot 7$, niin $59 \equiv 38\ (\mod 7)$. Aaron ja Mirkun syntymäpäivät ovat siis  samana viikonpäivänä.
 
 {\bf Vastaus:} Ovat.
+\end{esimerkki}
 
-
-{\bf Esimerkki 3.} 
+\begin{esimerkki}
+%{\bf Esimerkki 3.} 
 \begin{itemize}
 \item[a)] Määritä pienin epänegatiivinen kokonaisluku, joka on kongruentti luvun $45$ kanssa modulo $7$.
 \item[b)] Jos tänään on perjantai ja loman alkuun on $45$ päivää, niin minä viikonpäivänä loma alkaa?
@@ -407,21 +421,22 @@ b)
 a-kohdan perusteella luku $3$ on kongruentti luvun $45$ kanssa modulo $7$. Kysytty viikonpäivä saadaan selville laskemalla perjantaista $3$ päivää eteenpäin, jolloin on maanantai. Siis loma alkaa maanantaina. 
 
 {\bf Vastaus:} a) 3 b) Loma alkaa maanantaina.
+\end{esimerkki}
 
+\subsection*{Kongruenssin laskusääntöjä} Kongruensseilla on monia ominaisuuksia, jotka muistuttavat yhtälöiden ratkaisemisessa käytettäviä laskusääntöjä.
 
-{\bf Kongruenssin laskusääntöjä.} Kongruensseilla on monia ominaisuuksia, jotka muistuttavat yhtälöiden ratkaisemisessa käytettäviä laskusääntöjä.
-
-{\bf Lause.} Olkoot $a,b,c,d\in \Z$ ja $k,n \in \Z_+$ sekä $a \equiv c$, $b \equiv d\quad (\mod k)$. Tällöin:
-
+\laatikko{
+{\bf Lause.} Olkoot $a,b,c,d\in \Z$ ja $k,n \in \Z_+$ sekä $a \equiv c$,\newline
+$b \equiv d\quad (\mod k)$. Tällöin:
 \begin{enumerate}
 \item $a+b\equiv c+d\quad (\mod k)$,
 \item $a-b\equiv c-d\quad (\mod k)$,
 \item $ab \equiv cd\quad (\mod k)$,
 \item $a^n \equiv c^n \quad (\mod k)$.
-
 \end{enumerate}
+}
 
-\proof
+\begin{todistus}
 Todistetaan kohdat 1 ja 3. Kohdan 2 todistus on kotitehtävänä, ja potenssisääntö 4 todistetaan lisämateriaalina olevan kappaleen 5.4 tehtävässä XX.
 
 Kongruenssin määritelmän perusteella $a=c + mk$ ja $b= d + nk$, missä $m,n\in \mathbb{Z}$.
@@ -437,15 +452,15 @@ Samaan tapaan saadaan
 ab - cd &=& (c + mk)(d + nk) - cd\\ &=& cd +c nk + d mk + mnk^2 - cd\\ &=& (cn+dm+mnk)k,
 \end{eqnarray*}
 missä $(cn+dm+mnk)$ on kokonaisluku. Siten erotus $ab - cd$ on jaollinen luvulla $k$, joten kolmas väite pätee.
-\qed
+\end{todistus}
 
 
 Erityisesti tuloksesta seuraa, että  jos $a\equiv b \ (\mod k)$, niin $na\equiv nb
 \ (\mod k)$ kaikilla $n\in \Z$.
 
 
-{\bf Esimerkki 4.}
-
+%{\bf Esimerkki 4.}
+\begin{esimerkki}
 Määritä pienin epänegatiivinen luku, jonka kanssa luku a) $350 - 7778$, b) $65 \cdot 141$, c) $16^{10} + 82$ on kongruentti modulo $7$.
 
 {\bf Ratkaisu:}
@@ -463,9 +478,11 @@ Koska $16 \equiv 2$ ja $82 \equiv 5 \ (\mod 7)$, niin säännön 1 ja potenssis�
 $16^{10} + 82 \equiv 2^{10} + 5 = 1024 + 5 = 1029 \equiv 0 \ (\mod 7)$.
 
 {\bf Vastaus:} a) $6$ b) $2$ c) $0$
+\end{esimerkki}
 
-
-{\bf Esimerkki 5.} Osoita, että luku $n^4 + 2n^3 + n^2$ on
+\begin{esimerkki}
+%{\bf Esimerkki 5.}
+Osoita, että luku $n^4 + 2n^3 + n^2$ on
 jaollinen luvulla $4$, kun $n$ on kokonaisluku.
 
 {\bf Ratkaisu:}
@@ -546,11 +563,12 @@ ja luku $n^4 + 2n^3 + n^2$ on jaollinen luvulla $4$.
 
 Siis luku $n^4 + 2n^3 + n^2$ on jaollinen luvulla $4$, kun $n$ on
 kokonaisluku.
+\end{esimerkki}
 
-\newpage
+%\newpage
+%\section*{Tehtäviä}
 
-
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 
@@ -718,7 +736,8 @@ Luvun $a$ määräämä {\em jäännösluokka modulo} $m$ on luvun $a$ kanssa ko
 \section{Kongruenssin sovelluksia}
 Kongruenssi on hyödyllinen työkalu lukuteoriassa. Kongruenssin laskusääntöjä käyttämällä voidaan esimerkiksi tutkia lukujen jaollisuutta. Näin saadaan johdettua monia klassisia tuloksia, esimerkiksi helpot testit sille, onko kokonaisluku jaollinen luvuilla $3$ ja $9$.
 
-{\bf Esimerkki 1.}
+%{\bf Esimerkki 1.}
+\begin{esimerkki}
 Määritä jakojäännös, kun
 \begin{itemize}
 \item[a)] luku $7^{650}$ jaetaan luvulla $6$
@@ -747,10 +766,10 @@ c) Jokainen kokonaisluku on kongruentti jonkin luvuista $0,1,2,3,4,5$ tai $6$ ka
 Jakojäännös on siis $0$.
 
 {\bf Vastaus:} a) $1$ b) $7$ c) $0$
+\end{esimerkki}
 
-
-
-{\bf Esimerkki 2.}
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
 Mikä on luvun a) $2^{120}$, b) $3^{100}$ viimeinen numero?
 
 {\bf Ratkaisu:}
@@ -781,10 +800,10 @@ Tapa 2
 Koska $3^2 = 9 \equiv -1 \quad(\mod 10)$, niin $3^{100} = (3^2)^{50} \equiv (-1)^{50} = 1 \quad (\mod 10)$. Luvun $3^{100}$ viimeinen numero on $1$.
 
 {\bf Vastaus:} a) $6$, b) $1$.
+\end{esimerkki}
 
-
-{\bf Esimerkki 3.}
-
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
 Olkoon $n$ luonnollinen luku. Osoita, että luku $498 \cdot 16^{n} + 104^{2n+1} + 3$ on jaollinen luvulla $5$.
 
 {\bf Ratkaisu:}
@@ -797,9 +816,11 @@ Koska $498 \equiv 3$, $16 \equiv 1$ ja $104 \equiv -1 \ (\mod 5)$, niin
  & = & 3 - 1 + 3 = 5 \equiv 0 \ (\mod 5).
 \end{eqnarray*}
 Jakojäännös on $0$, kun luku $498 \cdot 16^{n} + 104^{2n+1} + 3$ jaetaan luvulla $5$. Luku $498 \cdot 16^{n} + 104^{2n+1} + 3$ on siis jaollinen luvulla $5$.
+\end{esimerkki}
 
-
-{\bf Esimerkki 4.} Tutki, onko a) luku $16\, 783$ jaollinen luvulla $3$, b) luku $295\, 542$ jaollinen luvulla $9$.
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
+Tutki, onko a) luku $16\, 783$ jaollinen luvulla $3$, b) luku $295\, 542$ jaollinen luvulla $9$.
 
 {\bf Ratkaisu:}
 
@@ -837,6 +858,7 @@ Koska $10 \equiv 1 \quad(\mod 9)$, niin
 Luvun $295\, 542$ jakojäännös on $0$, kun jaetaan luvulla $9$. Luku $295\, 542$ on siis jaollinen luvulla $9$.
 
 {\bf Vastaus:} a) Ei ole. b) On.
+\end{esimerkki}
 
 Edellisessä esimerkissä havaittiin, että luku $16\, 783$ on kongruentti numeroidensa
 summan $1 + 6 + 7 + 8 + 3$ kanssa modulo $3$. Samoin luku $295\, 542$  on kongruentti
@@ -845,25 +867,28 @@ säännönmukaisuudesta:
 
 %---
 
-\fbox{
-\begin{minipage}{12cm}
-{\large \bf Jaollisuussääntöjä}
-
-\medskip
-
+%\fbox{
+%\begin{minipage}{12cm}
+\laatikko{
+{\bf Jaollisuussääntöjä.}
+%\medskip
 %{\bf Teorialaatikko [Jaollisuussääntöjä]}
-Kokonaisluku on jaollinen luvulla $3$, jos ja vain jos sen numeroiden summa on jaollinen luvulla $3$. Vastaavasti kokonaisluku on jaollinen luvulla $9$, jos ja vain jos sen numeroiden summa on jaollinen luvulla $9$.
+Kokonaisluku on jaollinen luvulla $3$, jos ja vain jos sen\newline numeroiden
+summa on jaollinen luvulla $3$. Vastaavasti kokonaisluku on\newline jaollinen luvulla $9$,
+jos ja vain jos sen numeroiden summa on jaollinen\newline luvulla $9$.
 
-\end{minipage}
+%\end{minipage}
 }
 %---
 
 Muillakin luvuilla on samantapaisia jaollisuussääntöjä, joista esimerkkinä on lukuun $11$ liittyvä sääntö harjoitustehtävissä.
 
-\newpage
+%\newpage
 
 
-\section*{Tehtäviä}
+%\section*{Tehtäviä}
+
+\Harjoitustehtavat
 
 \begin{enumerate}
 
@@ -991,10 +1016,10 @@ Osoita luvun $11$ jaollisuussääntö: Kokonaisluku on jaollinen luvulla $11$, j
 
 \newpage
 
-\section{Luonnolliset luvut ja induktioperiaate (lisämateriaalia)}
+\section{Luonnolliset luvut ja induktioperiaate} % (lisämateriaalia)}
 Käytännön tilanteissa luonnollisia lukuja käytetään yleensä ilmaisemaan lukumääriä. 
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 \begin{enumerate}
 \item
 Hyvin suuri määrä ihmisiä seisoo jonossa. Jonossa toteutuu periaate: jos jollakin jonon
@@ -1024,7 +1049,9 @@ Induktiotodistuksen muoto on yleensä seuraava.
 \end{itemize}
 Todistuksen toista vaihetta kutsutaan {\em induktioaskeleeksi}, siinä esiintyvää oletusta {\em induktio-oletukseksi} ja väitettä {\em induktioväitteeksi}.
 
-{\bf Esimerkki 1.} Olkoon $n$ luonnollinen luku. Osoita induktiolla, että luku $n^2-n$ on jaollinen luvulla $2$.
+\begin{esimerkki}
+%{\bf Esimerkki 1.} 
+Olkoon $n$ luonnollinen luku. Osoita induktiolla, että luku $n^2-n$ on jaollinen luvulla $2$.
 
 {\bf Ratkaisu:} 
 Kun $n=0$, saadaan $n^2-n=0$, joka on jaollinen luvulla $2$.
@@ -1040,10 +1067,12 @@ Lasketaan
 missä $(m+k)$ on kokonaisluku. Siis $(k+1)^2-(k+1)$ on jaollinen luvulla $2$, joten induktioväite on todistettu.
 
 Nyt induktioperiaatteesta seuraa, että väite on tosi kaikilla $n=0,1,2,\ldots$.
-\qed
+\end{esimerkki}
+%\qed
 
-
-{\bf Esimerkki 2.} Osoita, että $2^n \ge n^2$, kun $n$ on kokonaisluku ja $n \ge 4$.
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
+Osoita, että $2^n \ge n^2$, kun $n$ on kokonaisluku ja $n \ge 4$.
 
 {\bf Ratkaisu:}
 
@@ -1063,13 +1092,14 @@ x^2 - 2x - 1 &\ge& 0.
 Polynomin $x^2 - 2x - 1$ nollakohdat ovat $x = 1 - \sqrt{2}\approx -0,414$ ja $x = 1 + \sqrt{2}\approx 2,414$, ja sen kuvaaja on ylöspäin aukeava paraabeli. Siten epäyhtälö $2k^2 \ge (k + 1)^2$ on tosi, kun $k \ge 4$. Näin ollen myös epäyhtälö $2^{k+1} \ge 2k^2 \ge (k + 1)^2$ on tosi, kun $k \ge 4$. 
 
 Siis induktioperiaatteen perusteella $2^n \ge n^2$ kaikilla $n=4,5,6,\ldots$.
-\qed
-
+%\qed
+\end{esimerkki}
 
 %Tyypillinen esimerkki induktiotodistuksella todistettavasta väitteestä on seuraava.
 
-
-{\bf Esimerkki 3.} Osoita induktiolla, että
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
+Osoita induktiolla, että
 positiivisille kokonaisluvuille $n=1,2,\ldots$ pätee
 \[
 \sum_{m=1}^n m = 1+2+3+\ldots+n= \frac{n(n+1)}{2}.
@@ -1112,9 +1142,11 @@ eli kaava pätee myös, kun $n=k+1$.
 
 Induktioperiaatteen nojalla väite on siis tosi kaikilla
 $n=1,2,\ldots$.
-\qed
+%\qed
+\end{esimerkki}
 
-{\bf Esimerkki 4.}
+%{\bf Esimerkki 4.}
+\begin{esimerkki}
 Monikulmion sanotaan olevan {\em kupera} eli {\em konveksi}, jos sen kaikki kulmat ovat pienempiä kuin $180^\circ$.
 
 Osoita matemaattisella induktiolla, että $n$-sivuisen kuperan monikulmion lävistäjien
@@ -1165,13 +1197,15 @@ on $k^2 -k -2 = (k + 1)(k- 2)$. Siis $(k + 1)$-sivuisen monikulmion lävistäjie
 Kaava pätee siis myös kuperille $(k + 1)$-sivuiselle monikulmiolle.
 
 Induktioperiaatteen nojalla kaava on tosi, kun $n=3,4,5,\ldots$.
-\qed
-
-\newpage
+\end{esimerkki}
 
 
+\Harjoitustehtavat
+%\newpage
 
-\section*{Tehtäviä.}
+
+
+%\section*{Tehtäviä.}
 
 \begin{enumerate}
 
