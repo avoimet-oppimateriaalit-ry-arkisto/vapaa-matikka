@@ -1,11 +1,11 @@
 \chapter{Lukuteorian tuloksia}
 
-Tässä luvussa käsitellään joitakin lukuteorian tunnetuimpia tuloksia ja niiden todistuksia.
+%Tässä luvussa käsitellään joitakin lukuteorian tunnetuimpia tuloksia ja niiden todistuksia.
 
 \section{Suurin yhteinen tekijä ja Eukleideen algoritmi}
 Seuraavaksi käsitellään kahden positiivisen kokonaisluvun yhteisiä tekijöitä ja esitetään käytännöllinen menetelmä {\em suurimman yhteisen tekijän} etsimiseksi.
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 \begin{enumerate}
 \item Määritä lukujen $45$ ja $75$ kaikki positiiviset tekijät.
 \item Mitkä ovat lukujen yhteiset positiiviset tekijät?
@@ -13,8 +13,9 @@ Seuraavaksi käsitellään kahden positiivisen kokonaisluvun yhteisiä tekijöit
 \item Supista murtoluku $\frac{45}{75}$.
 \end{enumerate}
 
-
-{\bf Esimerkki 1.} Määritä lukujen $30$ ja $84$ kaikki positiiviset tekijät. Mitkä ovat niiden yhteiset positiiviset tekijät? Mikä on niiden suurin yhteinen tekijä?
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+Määritä lukujen $30$ ja $84$ kaikki positiiviset tekijät. Mitkä ovat niiden yhteiset positiiviset tekijät? Mikä on niiden suurin yhteinen tekijä?
 
 {\bf Ratkaisu:} Luvun $30$ positiiviset tekijät ovat $1, 2, 3, 5, 6, 10, 15$ ja $30$. Luvun $84$ positiiviset tekijät ovat $1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42$ ja $84$.
 
@@ -22,14 +23,13 @@ Lukujen $30$ ja $84$ yhteiset positiiviset tekijät ovat $1, 2, 3$ ja $6$. Yhtei
 
 {\bf Vastaus:} 
 Yhteiset positiiviset tekijät ovat $1, 2, 3$ ja $6$. Suurin yhteinen tekijä on $6$.
+\end{esimerkki}
 
-
-\fbox{
+%\fbox{
+\laatikko{
 \begin{minipage}{12cm}
-{\large \bf Suurin yhteinen tekijä}
-
-\medskip
-
+{\bf Suurin yhteinen tekijä.}
+%\medskip
 %---
 %{\bf Teorialaatikko [Suurin yhteinen tekijä]}
 Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Positiivista kokonaislukua $d$ sanotaan lukujen $a$ ja $b$  suurimmaksi yhteiseksi tekijäksi, jos seuraavat ehdot ovat voimassa:
@@ -48,26 +48,34 @@ Tehokkaan algoritmin suurimman yhteisen tekijän etsimiseksi esitti aleksandrial
 
 %{\bf Lause (Jaollisuuden peruslause, s.108 / Pitkä matematiikka)}
 
+\laatikko{
+%\begin{minipage}{12cm}
 {\bf Lemma.} Olkoot $a$ ja $b$ sellaisia positiivisia kokonaislukuja, että
 \[
 a=qb+r,
 \]
-missä $q$ sekä $r$ ovat kokonaislukuja ja $0<r<b$. Tällöin kokonaisluku $c$ on lukujen $a$ ja $b$ yhteinen tekijä, jos ja vain jos $c$ on lukujen $b$ ja $r$ yhteinen tekijä.
+missä $q$ sekä $r$ ovat kokonaislukuja ja $0<r<b$. Tällöin kokonaisluku\newline $c$ on lukujen $a$ ja $b$ yhteinen tekijä, jos ja vain jos $c$ on lukujen $b$ ja $r$\newline yhteinen tekijä.
+%\end{minipage}
+}
 
-\proof
+\begin{todistus}
 Oletetaan aluksi, että $c$ on jokin lukujen $a$ ja $b$ yhteinen tekijä. Osoitetaan, että se on myös lukujen $b$ ja $r$ yhteinen tekijä.
 
 Kirjoitetaan $r=a-qb$. Luvun $c$ täytyy olla luvun $r$ tekijä, koska se on lukujen $a$ ja $b$ tekijä. Siten $c$ on lukujen $b$ ja $r$ yhteinen tekijä.
 
 Oletetaan, että $c$ on jokin lukujen $b$ ja $r$ yhteinen tekijä. Koska $a=qb+r$, luvun $c$ täytyy olla myös luvun $a$ tekijä. Siten $c$ on lukujen $a$ ja $b$ yhteinen tekijä.
 
-\qed
+\end{todistus}
 
+\laatikko{
+\begin{minipage}{12cm}
 {\bf Seuraus.} Jos $a$ ja $b$ ovat positiivisia kokonaislukija ja $a=qb+r$, missä $q$ sekä $r$ ovat kokonaislukija ja $0<r<b$, niin $\syt(a,b)=\syt(b,r)$.
+\end{minipage}
+}
 
-\proof
+\begin{todistus}
 Lemman perusteella lukujen $a$ ja $b$ yhteiset tekijät ovat samat kuin lukujen $b$ ja $r$ yhteiset tekijät. Erityisesti siis lukujen $a$ ja $b$ suurimman yhteisen tekijän täytyy olla sama kuin lukujen $b$ ja $r$ suurimman yhteisen tekijän.
-\qed
+\end{todistus}
 
 %{\bf ... täydennä}
 
@@ -90,7 +98,9 @@ r_1 = q_3r_2 + r_3, \qquad 0 \le r_3 < r_2.
 
 Näin jatkamalla päädytään lopulta jakolaskuun, joka menee tasan. Lukujen $a$ ja $b$ suurin yhteinen tekijä on viimeinen nollasta eroava jakojäännös. Koska algoritmissa esiintyy laskeva jono $b>r_1>r_2> \cdots \ge 0$, tarvitaan enintään $b$ askelta. Algoritmissa tarvittavat jakolaskut kannattaa yleensä tehdä laskimella.
 
-{\bf Esimerkki 2.} Määritä $\syt(84, 30)$ Eukleideen
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
+Määritä $\syt(84, 30)$ Eukleideen
 algoritmia käyttäen.
 
 {\bf Ratkaisu:}
@@ -118,8 +128,11 @@ jakojäännös, $6$. Siis $\syt(84, 30) = 6$. Saatiin sama
 tulos kuin esimerkissä 1.
 
 {\bf Vastaus:} $\syt(84, 30) = 6$.
+\end{esimerkki}
 
-{\bf Esimerkki 3.} Määritä $\syt(16515,3951)$ Eukleideen
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
+Määritä $\syt(16515,3951)$ Eukleideen
 algoritmia käyttäen.
 
 {\bf Ratkaisu:}
@@ -152,11 +165,13 @@ jakojäännös, siis tässä tapauksessa $9$. Siten
 \]
 
 {\bf Vastaus:} $\syt(16515, 3951) = 9$.
+\end{esimerkki}
 
-\newpage
+%\newpage
 
+%\section*{Tehtäviä}
 
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 
@@ -254,7 +269,7 @@ Esitä murtoluku  a) $\frac{182}{299}$  b) $\frac{7697}{32041}$  supistetussa mu
 \section{Diofantoksen yhtälöt}
 Noin vuoden 250 tienoilla elänyt Diofantos oli yksi viimeisistä antiikin Aleksandriassa vaikuttaneista suurista matemaatikoista. Aleksandrian suuruuden ajan oppineisuuden keskuksena katsotaan yleisesti päättyneen noin sata vuotta myöhemmin pakanaksi ja noidaksi syytetyn naismatemaatikko Hypatian murhaan vuonna 415. Vaikka Diofantos kirjoitti kreikaksi ja häntä usein kutsutaan kreikkalaiseksi matemaatikoksi, Diofantos oli todennäköisesti kreikkalaistunut babylonialainen. 
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 \begin{enumerate}
 \item Missä sijaitsevat ne $xy$-tason pisteet, joiden koordinaatit toteuttavat yhtälön $x + 3y = 6$?
 \item Etsitään seuraavaksi kokonaislukuratkaisuja kahden muuttujan yhtälölle $x + 3y = 6$. Määritä yhtälölle jokin kokonaislukuratkaisu.
@@ -263,7 +278,7 @@ Noin vuoden 250 tienoilla elänyt Diofantos oli yksi viimeisistä antiikin Aleks
 \item Keksi vastaava kokonaislukukertoiminen kahden muuttujan yhtälö, jolla ei ole yhtään kokonaislukuratkaisua.
 \end{enumerate}
 
-{\bf Marginaaliin:}
+%{\bf Marginaaliin:}
 Diofantoksesta ei tiedetä kovinkaan paljon, mutta hänen tarkka \hbox{elin}\-ikän\-sä tunnetaan kuitenkin hautakiveen ikuistetusta matemaattisesta ongelmasta: Diofantoksen poikavuodet kestivät $1/6$ hänen elämästään, parta alkoi kasvaa $1/12$ tämän jälkeen, $1/7$ kuluttua hän meni naimisiin ja hänen poikansa syntyi $5$ vuotta myöhemmin. Poika eli puolet siitä, mitä isänsä, ja isä kuoli neljä vuotta poikansa kuoleman jälkeen. Ongelma johtaa yhtälöön
 \[
 \frac{1}{6}x + \frac{1}{12} x + \frac{1}{7}x + 5 + \frac{1}{2}x+ 4=x,
@@ -296,7 +311,9 @@ Ratkaisujen etsimisessä on hyötyä tiedosta, että jos on annettu positiiviset
 Käytännössä kertoimien etsiminen ei ole vaikeaa, sillä siinä voidaan käyttää hyväksi Eukleideen algoritmia.
 % Tästä esitysmuodosta ja Eukleideen algoritmista hyötyä Diofantoksen yhtälöiden ratkaisemisessa.
 
-{\bf Esimerkki 1.} Ratkaise Diofantoksen yhtälö
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+Ratkaise Diofantoksen yhtälö
 $\syt(84,30) = 84x + 30y$.
 
 {\bf Ratkaisu:} Lukujen $84$ ja $30$ suurin yhteinen tekijä
@@ -328,16 +345,19 @@ ratkaisu on $x = -1$ ja $y = 3$.
 
 {\bf Vastaus:} $x = -1$ ja $y = 3$.
  %Samat luvut kuin edellisen kappaleen esimerkissä 2.
+\end{esimerkki}
 
 Diofantoksen yhtälöitä voidaan usein ratkaista esimerkiksi tietokoneella, mutta se onnistuu myös seuraavaa tulosta käyttämällä.
 
+\laatikko{
 {\bf Lause.} Diofantoksen yhtälöllä
 \[
 a x + b y = c
 \]
 on ratkaisu, jos ja vain jos $d|c$, kun $d=\syt(a,b)$.
+}
 
-\proof
+\begin{todistus}
 %{\bf Mieti todistuksen muotoilua, vars. jos ja vain jos.}
 %Jaa kahteen osaan, ensin toiseen ja sitten toiseen suuntaan. Oletukset eksplisiittisesti.
 
@@ -352,8 +372,10 @@ joillekin luvuille $x_1$ ja $y_1$. Koska
 c = dt = (ax_1 + by_1)t = a(tx_1)+ b(ty_1),
 \]
 saadaan pari $x=tx_1$ ja $y=ty_1$, joka toteuttaa alkuperäisen yhtälön.
-\qed
+\end{todistus}
 
+\laatikko{
+\begin{minipage}{12cm}
 {\bf Lause.}
 Jos
 \[
@@ -363,8 +385,10 @@ on ratkeava Diofantoksen yhtälö, sen yksi ratkaisu on $x=tx_1$ ja $y=ty_1$, mi
 \[
 d=\syt(a,b)=a x_1 + b y_1 \textrm{ ja } t=c/d.
 \]
+\end{minipage}
+}
 
-\proof
+\begin{todistus}
 Edellisen lauseen nojalla Diofantoksen yhtälöllä
 \[
 d= a x + b y,
@@ -386,7 +410,7 @@ molemmat puolet luvulla $t=c/d$. Tällöin saadaan
 c=td=t(a x_1 + b y_1) = a(tx_1)+ b(ty_1).
 \]
 Tämä osoittaa, että $x=tx_1$ ja $y=ty_1$ on alkuperäisen Diofantoksen yhtälön ratkaisu.
-\qed
+\end{todistus}
 
 Itse asiassa jos $x_0$ ja $y_0$ ovat yhtälön $ax + by = c$ jokin ratkaisu, niin sen kaikki ratkaisut saadaan kaavoista
 \[
@@ -394,7 +418,9 @@ x= x_0 + n\frac{b}{d}, \textrm{ ja } y=y_0 - n\frac{a}{d}, \textrm{ missä } \qq
 \]
 Erityisesti siis jokaisella ratkeavalla Diofantoksen yhtälöllä on äärettömän monta ratkaisua. Ratkaisussa esiintyvät kertoimet saattavat kuitenkin olla negatiivisia lukuja.
 
-{\bf Esimerkki 2.} Määritä Diofantoksen yhtälön
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
+Määritä Diofantoksen yhtälön
 \[
 172x + 20y = 1000
 \]
@@ -435,9 +461,10 @@ Kertomalla tämä lauseke luvulla $1000/4=250$ saadaan viimein
 Siten yhtälön $172x + 20y = 1000$ ratkaisu on $x=500$ ja $y=-4250$.
 
 {\bf Vastaus:} $x=500$ ja $y=-4250$
+\end{esimerkki}
 
-
-{\bf Esimerkki 3.}
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
 Määritä Diofantoksen yhtälön $172x + 20y = 1000$ kaikki
 ratkaisut. Mitkä niistä toteuttavat ehdon $|x|+|y|\le
 50$?
@@ -506,9 +533,12 @@ tai suurenee taulukon arvoista, niin sekä $|x|$ että $|
 y|$ suurenevat.
 
 {\bf Vastaus:} Kaikki ratkaisut ovat  $x=500+5n$ ja $y=-4250-43n$, $n\in\Z$. Näistä ehdon $|x|+|y|\le 50$ toteuttavat ratkaisut $x = 10$ ja $y = -36$, $x = 5$ ja $y = 7$ sekä $x = 0$ ja $y = 50$.
+\end{esimerkki}
 
-{\bf Esimerkki 4.} (Kexleruksen viiniongelma)
-(Lisämateriaalia)
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
+ (Kexleruksen viiniongelma)
+%(Lisämateriaalia)
 Suomen ensimmäinen matematiikan professori, Turun
 akatemiassa vaikuttanut Simon Kexlerus (1602--1669) jätti
 jälkeensä seuraavan ongelman.
@@ -584,11 +614,14 @@ markan viiniä ja $2$ pulloa $10$ markan viiniä.
 Esimerkiksi tietokonetta käyttämällä voidaan löytää
 ongelman kaikki ratkaisut. Niitä on yhteensä seitsemän.
 Ei ole tiedossa, miten Kexlerus itse ratkaisi ongelmansa.
+\end{esimerkki}
 
-\newpage
+%\newpage
 
 
-\section*{Tehtäviä}
+%\section*{Tehtäviä}
+
+\Harjoitustehtavat
 
 \begin{enumerate}
 
@@ -700,7 +733,7 @@ pisteitä, joiden molemmat koordinaatit ovat kokonaislukuja.
 
 \section{Alkuluvut ja aritmetiikan peruslause}
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 \begin{enumerate}
 \item Millä positiivisilla kokonaisluvuilla luku $60$ on jaollinen?
 \item Millä positiivisilla kokonaisluvuilla luku $29$ on jaollinen?
@@ -709,8 +742,9 @@ pisteitä, joiden molemmat koordinaatit ovat kokonaislukuja.
 
 {\em Alkuluvuksi} sanotaan luonnollista lukua $p\ge 2$, joka ei ole jaollinen muilla positiivisilla kokonaisluvuilla kuin itsellään sekä luvulla $1$. Esimerkiksi luku $13$ on alkuluku. Luku $14$ ei ole alkuluku, koska se on jaollinen myös luvuilla $2$ ja $7$.
 
-
-{\bf Esimerkki 1.} Tutki, onko luku a) $23$, b) $357$ alkuluku.
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+Tutki, onko luku a) $23$, b) $357$ alkuluku.
 
 {\bf Ratkaisu:}
 
@@ -745,7 +779,7 @@ nähdään myös siitä, että luvun $357$ numeroiden summa $3 + 5 + 7
 = 15$ on jaollinen luvulla $3$. Luku $357$ ei ole alkuluku.
 
 {\bf Vastaus:} a) On. b) Ei ole.
-
+\end{esimerkki}
 
 Alkulukuja voidaan etsiä helpommin esimerkiksi yksinkertaisella algoritmilla, joka tunnetaan {\em Eratostheneen seulana}. Eratosthenes oli kreikkalainen matemaatikko, filosofi, runoilija, tähtitieteilijä ja historioitsija. Bysanttilaisten historioitsijoiden mukaan hän syntyi vuonna 276 eaa. nykyisessä Libyassa ja kuoli 81-vuotiaana vuonna 195 eaa. Eratosthenes vaikutti tuon ajan sivistyksen keskuksessa Aleksandriassa. Hänen kuuluisin keksintönsä lienee menetelmä maapallon ympärysmitan laskemiseksi. %Itse hän kuvaili itseään viisauden ystäväksi.
 
@@ -767,7 +801,9 @@ niin $z=qm>\sqrt{n}\cdot \sqrt{n}=n$, mikä ei ole mahdollista. Koska $q\le \sqr
 
 Eratostheneen seula on käyttö\-kelpoinen etsittäessä suhteellisen pieniä alkulukuja. Suurempien alkulukujen etsimiseen on kehitetty monenlaisia matemaattisia algoritmeja. Suurten alkulukujen löytäminen on joskus tarpeellista etenkin lukuteoriaan pohjaavia salakirjoitusmenetelmiä käytettäessä.
 
-{\bf Esimerkki 2.} Etsi Eratostheneen seulaa käyttäen alkuluvut välillä $2,\ldots,60$.
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
+Etsi Eratostheneen seulaa käyttäen alkuluvut välillä $2,\ldots,60$.
 
 {\bf Ratkaisu:} Tehdään aluksi lista tutkittavista luvuista.
 
@@ -785,13 +821,16 @@ Eratostheneen seula on käyttö\-kelpoinen etsittäessä suhteellisen pieniä al
 Luku $2$ on alkuluku. Poistetaan listasta muut luvulla $2$ jaolliset luvut. Seuraava jäljellä oleva luku on $3$. Se on myös alkuluku. Poistetaan muut luvulla $3$ jaolliset luvut. Seuraava jäljellä oleva luku on $5$. Se on alkuluku. Poistetaan muut luvulla $5$ jaolliset luvut. Seuraava jäljellä oleva luku on $7$. Sekin on alkuluku. Poistetaan kaikki muut luvulla $7$ jaolliset luvut. Seuraava jäljellä oleva luku on $11$. Koska kuitenkin $\sqrt{60} \approx 7,75 < 11$, niin algoritmi päättyy ja kaikki listassa jäljellä olevat luvut ovat alkulukuja. Luvuista $2, \ldots , 60$ alkulukuja ovat siis $2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53$ ja $59$. 
 
 {\bf Vastaus:} $2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53$ ja $59$
+\end{esimerkki}
 
-{\bf Alkutekijä.} Kokonaisluvun $n$ {\em alkutekijöiksi} sanotaan niitä alkulukuja, joilla $n$ on jaollinen. Toisin sanoen, $p$ on luvun $n$ alkutekijä, jos ja vain jos $p|n$ ja $p$ on alkuluku.  Esimerkiksi luvun $12$ tekijät ovat $1, 2, 3, 4, 6$ ja $12$. Näistä alkutekijöitä ovat $2$ ja $3$.
+\subsection*{Alkutekijä} Kokonaisluvun $n$ {\em alkutekijöiksi} sanotaan niitä alkulukuja, joilla $n$ on jaollinen. Toisin sanoen, $p$ on luvun $n$ alkutekijä, jos ja vain jos $p|n$ ja $p$ on alkuluku.  Esimerkiksi luvun $12$ tekijät ovat $1, 2, 3, 4, 6$ ja $12$. Näistä alkutekijöitä ovat $2$ ja $3$.
 
 %{\bf Esimerkki.} Etsi kaikki alkutekijät... (AM).
 
 Lukuteorian keskeisimpiä tuloksia on aritmetiikan peruslause, jonka todistuksen esitti ensimmäisenä Eukleides pääteoksensa Elementa (Alkeet) seitsemännessä kirjassa. Eukleideen esittämä todistus ei kuitenkaan ole täysin riittävä. Ensimmäisen täydellisen ja virheettömän todistuksen esitti Carl Friedrich Gauss.
 
+\laatikko{
+\begin{minipage}{12cm}
 {\bf Aritmetiikan peruslause.} Jokainen kokonaisluku $n>1$ voidaan kirjoittaa (tekijöiden järjestystä vaille) yksikäsitteisesti alkutekijöidensä tulona:
 \[
 n= p_1^{m_1} \cdot p_2^{m_2} \cdot \ldots \cdot p_k^{m_k},
@@ -799,12 +838,19 @@ n= p_1^{m_1} \cdot p_2^{m_2} \cdot \ldots \cdot p_k^{m_k},
 missä $p_1,\ldots,p_k$ ovat luvun $n$ alkutekijät ja $m_1,\ldots,m_k$ ovat positiivisia kokonaislukuja.
 
 Esitystä kutsutaan luvun $n$ {\em alkutekijähajotelmaksi}. Esimerkiksi luvun $750$ alkutekijähajotelma on $2\cdot 3\cdot 5^3$.
+\end{minipage}
+}
 
 Aritmetiikan peruslauseen todistuksessa tarvitaan seuraavaa aputulosta.
 
+\laatikko{
+\begin{minipage}{12cm}
 {\bf Eukleideen lemma.} Jos $n=a\cdot b$ ja $p$ on sellainen alkuluku, että $p|n$, niin $p|a$ tai $p|b$.
+\end{minipage}
+}
 
-{\it Eukleideen lemman todistus.} Oletetaan, että $p\nmid a$. Osoitettavaksi jää, että $p|b$.
+\begin{todistus}
+{\it Eukleideen lemma:} Oletetaan, että $p\nmid a$. Osoitettavaksi jää, että $p|b$.
 
 Koska $p$ on alkuluku ja $p \nmid a$, pätee $\syt(p,a)=1$. Aikaisemmin osoitettiin, että tällöin on olemassa kokonaisluvut $x,y$ siten, että
 \[
@@ -815,11 +861,9 @@ Kertomalla yhtälön molemmat puolet luvulla $b$, saadaan
 abx+bpy = b.
 \]
 Oletuksen nojalla $p|n$ eli $p|(ab)$. Nyt $p$ jakaa molemmat yhtälön vasemmalla puolella olevat luvut, ja siten yhtälön perusteella $p|b$. 
-\qed
-
 
 %\proof
-{\it Aritmetiikan peruslauseen todistus.}
+{\it Aritmetiikan peruslauseen todistus:}
 Aloitetaan osoittamalla ristiriita-argumentilla, että tällainen hajotelma on aina olemassa.
 
 Tehdään vastaoletus, että $n$ on pienin sellainen luku, jolla kyseistä hajotelmaa ei ole. Koska luvulla $n$ ei ole alkutekijähajotelmaa, $n$ ei voi olla alkuluku. Siten $n=a\cdot b$ joillakin kokonaisluvuilla $a,b> 1$.
@@ -839,9 +883,11 @@ Voidaan olettaa, että jokin luvuista $p_i$ ei esiinny lainkaan jälkimmäisess�
 p_i | (q_2^{r_2} \cdot \ldots \cdot q_j^{r_j}).
 \]
 Samasta syystä $p_i$ ei voi myöskään jakaa lukua $q_2$. Näin voidaan jatkaa aina lukuun $q_j$ asti, mistä seuraa, että $p_i|1$. Tämä on ristiriita, joten alkutekijähajotelma on yksikäsitteinen.
-\qed
+\end{todistus}
 
-{\bf Esimerkki 3.} Määritä luvun $4200$
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
+Määritä luvun $4200$
 alkutekijähajotelma.
 
 {\bf Ratkaisu:}
@@ -877,10 +923,13 @@ alkutekijähajotelmaksi
 \]
 
 {\bf Vastaus.} $4200 =2^3\cdot 3 \cdot 5^2 \cdot 7$.
+\end{esimerkki}
 
 Alkutekijähajotelma voidaan määrittää myös symbolisen laskimen tekijöihin jakoon tarkoitetulla komennolla. Esimerkiksi edellinen esimerkki voidaan ratkaista komennolla {\tt factor(4200)}.
 
-{\bf Esimerkki 4.} Tutki, onko luku $457$ alkuluku.
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
+Tutki, onko luku $457$ alkuluku.
 
 {\bf Ratkaisu:}
 
@@ -898,12 +947,13 @@ $7$, $11$, $13$, $17$ ja $19$. Luku $457$ ei ole jaollinen
 millään näistä luvuista. Se on siis alkuluku.
 
 {\bf Vastaus:} On.
+\end{esimerkki}
 
 Lukuteorian kuuluisimpia tuloksia on seuraava lause, jonka todisti ensimmäisenä Eukleides noin 300 eaa. Tässä esitettävä todistus on idealtaan sama kuin Eukleideen alkuperäinen todistus.
 
-{\bf Eukleideen lause.} Alkulukuja on äärettömän monta.
+\laatikko{{\bf Eukleideen lause.} Alkulukuja on äärettömän monta.}
 
-\proof 
+\begin{todistus}
 Tehdään vastaoletus, että alkulukuja olisi äärellisen monta. Olkoot listassa
 $p_1,p_2,p_3,\ldots,p_n$ kaikki alkuluvut. Tarkastellaan lukua
 \[
@@ -914,17 +964,18 @@ Merkitään $q=m+1$.
 Nyt joko $q$ on alkuluku tai $q$ ei ole alkuluku. Mikäli $q$ on alkuluku, on päädytty ristiriitaan, koska luku $q$ ei ollut listassa $p_1,p_2,p_3,\ldots,p_n$, jonka piti sisältää kaikki alkuluvut.
 
 Voidaan siis olettaa, että $q$ ei ole alkuluku. Tällöin on olemassa jokin alkuluku $p$ siten, että $1<p<q$ ja $p|q$. Toisaalta $p|m$, koska $m$ on kaikkien alkulukujen tulo. Edelleen, koska $p|q$ ja $p|m$, täytyy päteä $p|(q-m)$ eli $p|(m+1-m)$. Siten $p|1$, mikä on ristiriita. Alkulukuja on siis äärettömän monta.
-\qed
+\end{todistus}
 
 
-{\bf Pienin yhteinen jaettava.}
+\subsection*{Pienin yhteinen jaettava}
 Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Lukujen $a$ ja $b$ {\em pienin yhteinen jaettava} $\pyj(a,b)$ on pienin positiivinen kokonaisluku, joka on jaollinen molemmilla luvuista $a$ ja $b$. Esimerkiksi luvulla $12$ jaollisia lukuja ovat $12, 24, 36, 48, 60, 72, 84, 96, 108, 120, \ldots$ ja luvulla $15$ jaollisia lukuja ovat $15, 30, 45, 60, 75, 90, 105, 120, \ldots$. Huomataan, että luku $60$ on pienin positiivinen kokonaisluku, joka on jaollinen sekä luvulla $12$ että luvulla $15$. Siten $\pyj(12, 15) = 60$.
 
 Lukujen $a$ ja $b$ pienintä yhteistä jaettavaa kutsutaan toisinaan {\em pienimmäksi yhteiseksi monikerraksi}, jota merkitään $\pym(a,b)$. Voidaan käyttää myös merkintää $\mathrm{lcm}(a,b)$, joka tulee englanninkielisistä sanoista {\em least common multiple}.
 
 Lukujen $a$ ja $b$ suurin yhteinen tekijä sekä pienin yhteinen jaettava voidaan määrittää lukujen alkutekijähajotelmien avulla. Suurimman yhteisen tekijän alkutekijöitä ovat kaikki lukujen $a$ ja $b$ yhteiset alkutekijät. Kunkin yhteisen alkutekijän eksponentiksi valitaan lukujen $a$ ja $b$ alkutekijähajotelmissa esiintyvistä eksponenteista pienempi. Vastaavasti pienimmän yhteisen jaettavan alkutekijöitä ovat kaikki ne alkuluvut, jotka ovat luvun $a$ tai luvun $b$ tekijöitä. Kunkin alkutekijän eksponentiksi valitaan lukujen $a$ ja $b$ alkutekijähajotelmissa esiintyvistä eksponenteista suurempi.
 
-{\bf Esimerkki 5.}
+%{\bf Esimerkki 5.}
+\begin{esimerkki}
 Määritä alkutekijähajotelmien avulla lukujen $280$ ja $500$
 suurin yhteinen tekijä $\syt(280, 500)$ ja pienin yhteinen
 jaettava $\pyj(280, 500)$.
@@ -950,10 +1001,15 @@ saadaan
 \]
 
 {\bf Vastaus:} $\syt(280, 500) = 20$ ja $\pyj(280, 500) = 7000$.
+\end{esimerkki}
 
+\laatikko{
+\begin{minipage}{12cm}
 {\bf Lause.} Olkoot $a$ ja $b$ positiivisia kokonaislukuja ja $\syt(a,b)=1$. Jos $c$ on sellainen luku, että $a|c$ ja $b|c$, niin $(ab) | c$.
+\end{minipage}
+}
 
-\proof
+\begin{todistus}
 Tutkitaan aluksi tapausta, että $a$ ja $b$ ovat alkulukuja. Koska $\syt(a,b)=1$, välttämättä $a\neq b$.
 
 Kirjoitetaan luvulle $c$ alkutekijähajotelma
@@ -971,11 +1027,12 @@ ja
 b=r_1^{t_1} \cdot r_2^{t_2} \cdot \ldots \cdot r_v^{t_v}.
 \]
 Koska $\syt(a,b)=1$, täytyy päteä $q_i\neq r_j$ kaikilla indekseillä $i,j$. Kuten ensimmäisessä kohdassa, nähdään, että kaikkien lukujen $q_i^{s_i}$ ja $r_j^{t_j}$ täytyy esiintyä luvun $c$ alkutekijähajotelmassa. Siten $(ab)|c$.
-\qed
+\end{todistus}
 
 Edellisen lauseen tulos pätee siis erityisesti silloin, kun luvut $a$ ja $b$ ovat alkulukuja. Jos esimerkiksi luku on jaollinen alkuluvuilla $3$ ja $5$, niin se on myös jaollinen niiden tulolla $15$. Lausetta ei voida kuitenkaan soveltaa tilanteessa, jossa lukujen $a$ ja $b$ suurin yhteinen tekijä ei ole yksi. Esimerkiksi luku $12$ on jaollinen sekä luvulla $4$ että luvulla $6$, mutta se ei ole jaollinen niiden tulolla $24$.
 
-{\bf Esimerkki 6.}
+%{\bf Esimerkki 6.}
+\begin{esimerkki}
 Osoita väite todeksi tai epätodeksi: Luku $n^3 - n$ on jaollinen luvulla $6$, kun $n$ on
 kokonaisluku.
 
@@ -991,14 +1048,15 @@ kahdella. Täsmälleen yksi luvuista on jaollinen luvulla $3$,
 joten myös luku $n^3 - n$ on jaollinen luvulla $3$. Luvut 2 ja
 3 ovat alkulukuja. Tällöin luku $n^3 - n$ on jaollinen tulolla
 $2 \cdot 3 = 6$. Väite on tosi.
+\end{esimerkki}
 
-{\bf Fermat'n pieni lause.} {\em Fermat'n pieni lause} sanoo, että jos $a\in\Z$ ja $p$ on alkuluku, niin 
+\subsection*{Fermat'n pieni lause} {\em Fermat'n pieni lause} sanoo, että jos $a\in\Z$ ja $p$ on alkuluku, niin 
 \[
 a^p \equiv a \qquad (\mod p).
 \]
 Lauseen esitti Pierre de Fermat vuonna 1640 kirjeessään, valittaen kuitenkin väitteen todistusta liian pitkäksi. Ensimmäisen todistuksen julkaisi Leonhard Euler, mutta käytännössä sama todistus oli esiintynyt Gottfried Leibnizin julkaisemattomissa muistiinpanoissa.
 
-{\bf Kiinalainen alkulukutesti.}
+\subsection*{Kiinalainen alkulukutesti}
 Useat matemaatikot ovat toisistaan riippumatta esittäneet virheellisen {\em otaksuman} eli {\em konjektuurin}, jonka mukaan luku $p$ on alkuluku, jos ja vain jos
 \[
 2^p \equiv 2 \qquad (\mod p).
@@ -1008,7 +1066,7 @@ Väitteessä esiintyvä kaava on sama kuin Fermat'n pienessä lauseessa, kun $a=
 Pienin vastaesimerkki konjektuurille on suhteellisen suuri luku $p=341 = 11\cdot 31$. Tämä esimerkki valaisee sitä, miksi matemaattista todistamista tarvitaan eikä pelkkä lukujen kokeileminen edes laskimella tai tietokoneella riitä osoittamaan tulosta.
 
 
-{\bf Goldbach (Lisämateriaalia).}
+\subsection*{Goldbachin konjektuuri}
 {\em Goldbachin konjektuuri} on yksi lukuteorian ja samalla matematiikan vanhimmista sekä kuuluisimmista avoimista ongelmista. Konjektuurin esitti vuonna 1742 saksalainen mate\-maa\-tik\-ko Christian Goldbach. Konjektuuri sanoo, että jokainen parillinen kokonaisluku, joka on suurempi kuin $2$, voidaan esittää kahden alkuluvun summana. 
 
 Lukuja voidaan esittää kahden alkuluvun summana useilla eri tavoilla. Esimerkiksi
@@ -1031,7 +1089,7 @@ Lukuja voidaan esittää kahden alkuluvun summana useilla eri tavoilla. Esimerki
 14 = 3 + 11\textrm{ tai }14 =7 + 7, \textrm{ jne.}
 \]
 
-{\bf Eulerin $\varphi$-funktio.} (Lisämateriaalia)
+\subsection*{Eulerin $\varphi$-funktio.} 
 Olkoot $n$ ja $k$ positiivisia kokonaislukuja. Funktio $\varphi(n)$ ilmaisee niiden kokonaislukujen $k$ lukumäärän, joille pätee 
 $\syt(n, k) = 1$, kun $1\le k \le n$. Sen laskemisessa voidaan käyttää esimerkiksi {\em Eulerin tulokaavaa}
 \[
@@ -1039,7 +1097,7 @@ $\syt(n, k) = 1$, kun $1\le k \le n$. Sen laskemisessa voidaan käyttää esimer
 \]
 missä $p$ on alkuluku. Funktiolla $\varphi(n)$ on monia teoreettisia ja käy\-tän\-nöl\-li\-siä sovelluksia, kuten seuraavaksi esiteltävä RSA-algoritmi.
 
-{\bf RSA-algoritmi.} (Lisämateriaalia) Tällä hetkellä ehkä merkittävin lukuteorian käy\-tän\-nöl\-li\-nen sovellus on niin kutsuttu {\em julkisen avaimen salakirjoitus}. Julkisen avaimen salakirjoituksen esittelivät MIT:n (Massachusetts Institute of Technology) tutkijat Ron Rivest, Adi Shamir ja Leonard Adleman vuonna 1978. Algoritmia kutsutaan sitä koskevan alkuperäisen tutkimusartikkelin kirjoittajien sukunimien alkukirjaimista muodostetulla lyhenteellä RSA. Aihepiiri on edelleen aktiivisen tutkimuksen kohteena, mutta algoritmin teoreettinen perusta on klassisissa lukuteorian tuloksissa. Siksi RSA-algoritmi osoittaa, että puhtaan matematiikan tutkimuksella voi olla uusia yllättäviä ja merkittäviä sovelluksia jopa satoja vuosia tutkimuksen julkaisemisen jälkeenkin.
+\subsection*{RSA-algoritmi} Tällä hetkellä ehkä merkittävin lukuteorian käy\-tän\-nöl\-li\-nen sovellus on niin kutsuttu {\em julkisen avaimen salakirjoitus}. Julkisen avaimen salakirjoituksen esittelivät MIT:n (Massachusetts Institute of Technology) tutkijat Ron Rivest, Adi Shamir ja Leonard Adleman vuonna 1978. Algoritmia kutsutaan sitä koskevan alkuperäisen tutkimusartikkelin kirjoittajien sukunimien alkukirjaimista muodostetulla lyhenteellä RSA. Aihepiiri on edelleen aktiivisen tutkimuksen kohteena, mutta algoritmin teoreettinen perusta on klassisissa lukuteorian tuloksissa. Siksi RSA-algoritmi osoittaa, että puhtaan matematiikan tutkimuksella voi olla uusia yllättäviä ja merkittäviä sovelluksia jopa satoja vuosia tutkimuksen julkaisemisen jälkeenkin.
 
 RSA-algoritmi perustuu lukuteoriaan ja alkulukujen ominaisuuksiin. Algoritmin keskeisiä käsitteitä ovat {\em julkinen avain} ja {\em salainen avain}. Julkista avainta käytetään viestin salakirjoittamisessa, mutta sen avulla salakirjoitusta ei voi purkaa. Salakirjoituksen purkamisessa käytetään salaista avainta, jonka vain viestin vastaanottaja tietää. Julkisen avaimen salakirjoitusmenetelmät poistavat siten kaikkien aikaisempien salakirjoitusmenetelmien keskeisen heikkouden. Niitä käytettäessä viestin lähettäjän ei koskaan tarvitse saada viestin purkamisessa tarvittavaa tietoa. 
 
@@ -1068,7 +1126,9 @@ m=c^d\quad (\mod n).
 \]
 Pidempiä viestejä voidaan lähettää katkaisemalla ne sopivan mittaisiksi paloiksi (bittijonoiksi), jotka vuorollaan salakirjoitetaan samalla tavalla. Tehokkaita algoritmeja salakirjoitusprosessin eri vaiheiden käsittelemiseksi kehitellään jatkuvasti.
 
-{\bf Esimerkki 7.} Salakirjoita RSA-algoritmia käyttäen viesti $65$, joka vastaa ASCII-koodausjärjestelmässä kirjainta A. Käytä algoritmissa tarvittavina alkulukuina lukuja $47$ ja $59$. Pura lopuksi koodaamasi viesti.
+\begin{esimerkki}
+%{\bf Esimerkki 7.}
+Salakirjoita RSA-algoritmia käyttäen viesti $65$, joka vastaa ASCII-koodausjärjestelmässä kirjainta A. Käytä algoritmissa tarvittavina alkulukuina lukuja $47$ ja $59$. Pura lopuksi koodaamasi viesti.
 
 {\bf Ratkaisu:} 
 Nyt $p = 47$ ja $q = 59$. Siten $n=pq=2773$ ja kaavalla $\varphi(n)=(p-1)(q-1)$ saadaan
@@ -1096,11 +1156,13 @@ eli päädyttiin alkuperäiseen viestiin, kuten pitääkin.
 Näin isoilla luvuilla laskeminen on luonnollisesti hankalaa laskimenkin avulla. Tuloksen voi tarkastaa symbolisen laskennan ohjelmistoa tai esim. Wolfram Alphaa käyttäen. 
 
 {\bf Vastaus:} Salakirjoitettu viesti on $660$. Purettu viesti on $65$.
+\end{esimerkki}
 
+%\newpage
 
-\newpage
+%\section*{Tehtäviä}
 
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 
