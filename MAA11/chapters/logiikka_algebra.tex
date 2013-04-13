@@ -1,0 +1,233 @@
+\chapter{Looginen algebra ja Boolen algebra (Lisämateriaalia)}
+
+\section{Looginen algebra}
+
+{\bf Tutkimustehtävä}
+Määritellään joukossa $B=\{0,1\}$ kolme operaatiota, $+$, $\cdot$ ja $-$ seuraavasti:
+\[
+\begin{array}{|c|c|c|}
+\hline
+0+0=0 & 0\cdot0=0 & - 0=1\\
+\hline
+0+1=1 & 0\cdot1=0 & - 1=0\\
+\hline
+1+0=1 & 1\cdot0=0 & \\
+\hline
+1+1=1 & 1\cdot1=1 & \\
+\hline
+
+\end{array}
+\]
+\begin{enumerate}
+\item Miten nämä operaatiot eroavat kokonaislukujen yhteenlaskusta, kertolaskusta ja vastaluvusta?
+\item Vertaa operaatioita logiikan konnektiiveihin. Mitä konnektiiveja operaatiot $+$, $\cdot$ ja $-$ vastaavat?
+\end{enumerate}
+
+\item
+Määritellään joukossa $B=\{0,1\}$ kolme operaatiota, yhteenlasku ($+$), kertolasku ($\cdot$) ja komplementti ($-$) seuraavan taulukon avulla:
+\[
+\begin{array}{|c|c|c|}
+\hline
+0+0=0 & 0\cdot0=0 & - 0=1\\
+\hline
+0+1=1 & 0\cdot1=0 & - 1=0\\
+\hline
+1+0=1 & 1\cdot0=0 & \\
+\hline
+1+1=1 & 1\cdot1=1 & \\
+\hline
+\end{array}
+\]
+Yhteenlasku vastaa disjunktiota, kertolasku konjunktiota ja komplementti negaatiota. Näin määritellyn {\em loogisen algebran} avulla monimutkaisten yhdistettyjen lauseiden totuusarvoja voidaan laskea nopeammin kuin totuustauluja käyttämällä. Pitää vain muistaa, milloin lasku\-sään\-nöt eroavat kokonaisluvuilla $0$ ja $1$ laskemisesta ja milloin taas voidaan suoraan soveltaa kokonaislukulaskentaa.
+
+
+{\bf Esimerkki 1.}
+Määritä lauseen
+ a) $\lnot A \lor (B\land A)$,  b) $A\lor (\lnot B \land A)$  
+totuusarvo, kun $A$ on tosi ja $B$ on epätosi.
+
+{\bf Ratkaisu:}
+
+a) Sijoittamalla $A=1$ ja $B=0$ sekä käyttämällä loogisen algebran merkintöjä ja laskusääntöjä saadaan $-1+(0\cdot 1) = 0 + 0 =  0$, joten lause on epätosi.
+
+Huomaa, että sulkeita ei välttämättä tarvitsisi käyttää, koska kertolasku suoritetaan ennen yhteenlaskua. Tämä vastaa konnektiivien suoritusjärjestystä (konjunktio ennen disjunktiota).
+
+b) Sijoittamalla $A=1$ ja $B=0$ saadaan $1 + ((- 0)\cdot1) = 1 + 1\cdot1 = 1 + 1 = 1$, joten lause on tosi.
+
+{\bf Vastaus:} a) epätosi, b) tosi
+
+{\bf Esimerkki 2.}
+Esitä De Morganin laki
+\[
+\lnot (A\lor B) \lequiv \lnot A\land \lnot B
+\]
+loogisen algebran merkinnöin ja osoita laki päteväksi.
+
+{\bf Ratkaisu:}
+De Morganin laki saa loogisessa algebrassa muodon
+\[
+- (A + B) =( - A )\cdot( - B ).
+\]
+Loogisen algebran laskusäännöillä saadaan seuraava totuustaulu:
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+$A$ & $B$ & $- (A + B)$ & $( - A )\cdot( - B )$\\ \hline
+1 & 1 & $- (1 + 1) = - 1 = 0$ & $( - 1 )\cdot ( - 1 ) = 0\cdot 0
+= 0$\\ \hline
+1 & 0 & $- (1 + 0) = - 1 = 0$ & $( - 1 )\cdot ( - 0 ) = 0\cdot 1
+= 0$\\ \hline
+0 & 1 & $- (0 + 1) = - 1 = 0$ & $( - 0 )\cdot( - 1 ) = 1\cdot 0 =
+0$\\ \hline
+0 & 0 & $- (0 + 0) = - 0 = 1$ & $( - 0 )\cdot( - 0 ) = 1\cdot 1 =
+1$\\ \hline
+\end{tabular}
+
+Koska lausekkeet $- (A + B)$ ja $( - A ) \cdot ( - B )$ saavat
+samat totuusarvot kaikilla lauseiden $A$ ja $B$ totuusarvoilla,
+De Morganin laki on pätevä.
+
+
+\newpage
+
+\section*{Tehtäviä.}
+\begin{enumerate}
+\item Määritä lauseen a) $\lnot(B\land A)\lor (A\land\lnot B)$, b) $(B\lor \lnot A)\land (A\lor \lnot B)$
+ totuusarvo, kun $A$ on tosi ja $B$ on epätosi.
+
+\item Esitä a) kaksoisnegaation laki $\lnot \lnot A \lequiv A$ b) De Morganin laki $\lnot(A\land B)\lequiv \lnot A\lor \lnot B$ loogisen algebran merkinnöin. Laadi totuustaulu laskemalla loogisen algebran laskusäännöillä ja osoita laki päteväksi.
+
+
+\item Esitä a) implikaatio $A\to B$, b) ekvivalenssi $A\lequiv B$ käyttäen loogisen algebran merkintöjä. Laske lauseen totuusarvot atomilauseiden $A$ ja $B$ eri totuusarvoilla käyttäen loogisen algebran laskusääntöjä.
+\end{enumerate}
+
+\newpage
+
+\section{Boolen algebra}
+
+Olkoon $B$ joukko, jossa on määritelty operaatiot $+$, $\cdot$ ja $-$.  Joukko $B$ operaatioineen on {\em Boolen algebra}, jos seuraavat ehdot ovat voimassa kaikille $x,y,z\in B$:
+\[
+\begin{array}{|ll|ll|}
+\hline
+1. & x+y=y+x  & 6. & x\cdot(y\cdot z)=(x\cdot y)\cdot z \\ 
+\hline
+2. & x+(y+z)=(x+y)+z& 7. & x\cdot1=x \\
+\hline
+3. & x+0=x & 8. & x\cdot (-x)=0 \\
+\hline
+4. & x+(-x)=1   &9. & x+(y\cdot z)=(x+y)\cdot (x+z)\\
+\hline
+5. &x\cdot y=y\cdot x& 10. &x\cdot(y+z)=(x\cdot y)+(x\cdot z) \\
+\hline
+\end{array}
+\]
+
+Alkiota $0$ kutsutaan nolla-alkioksi ja alkiota $1$ ykkösalkioksi.
+Voidaan osoittaa, että looginen algebra (joukko $B=\{0,1\}$ ja operaatiot $+$, $\cdot$ sekä $-$) on Boolen algebra.
+
+{\bf Esimerkki 1.}
+Osoita, että looginen algebra toteuttaa Boolen algebran ehdot 3, 4 ja 9.
+
+{\bf Ratkaisu:}
+
+Koska $0 + 0 = 0$ ja $1 + 0 =1$, toteutuu ehto 3.
+
+Koska $0 + (-0) = 0 + 1 = 1$ ja $1 + (-1) = 1 + 0 = 1$, toteutuu ehto 4.
+
+Esitetään ehto 9 lauselogiikan merkinnöillä. Ehto $x+(y\cdot z)=(x+y)\cdot(x+z)$ on sama kuin $x\lor (y\land z) \lequiv (x\lor y)\land (x\lor z)$ eli lauselogiikan osittelulaki, joten ehto toteutuu.
+
+{\bf Esimerkki 2.}
+Osoita, että Boolen algebrassa $x + x = x$.
+
+
+{\bf Ratkaisu:}
+Sovelletaan Boolen algebran ehtoja lausekkeeseen $x + x = x$.
+
+\begin{tabular}{ll}
+$x + x$ & ehto 7 \\
+$= (x + x) \cdot 1$ & ehto 4 \\
+$= (x + x) \cdot (x + (-x))$ & ehto 9 \\
+$= x + (x \cdot (-x))$ & ehto 8 \\
+$= x + 0$ & ehto 3 \\
+$= x$
+\end{tabular}
+
+
+Loogisen algebran lisäksi voidaan määritellä myös muita Boolen algebroita. Esimerkiksi joukon $X$ potenssijoukko eli sen kaikkien osajoukkojen joukko $\mathcal{P}(X)$ yhdessä operaatioiden yhdiste $\cup$, leikkaus $\cap$  ja komplementti $\compl$ kanssa muodostavat Boolen algebran. Näin saadun Boolen algebran nolla-alkio on tyhjä joukko $\emptyset$ ja ykkösalkio on joukko $X$ itse. Esimerkissä 2 johdettu tulos $x + x = x$ vastaa tällöin joukko-opin tulosta $A\cup A=A$. Kun tulos on johdettu Boolen algebrojen teoriassa, se voidaan ottaa suoraan käyttöön joukko-opissa. Boolen algebroja tutkimalla saadaan siten tuloksia, joita voidaan hyödyntää sekä logiikassa että joukko-opissa. Koska Boolen algebra on määritelty hyvin yleisellä tasolla, se on käsitteenä abstrakti. Tämä näkyy esimerkiksi tuloksen $x + x = x$ todistamisessa: todistaminen erikseen sekä logiikassa että joukko-opissa on helppoa, mutta todistus Boolen algebrassa vaatii varsin abstraktia ajattelua.
+
+
+\newpage
+
+
+\section*{Tehtäviä.}
+
+\begin{enumerate}
+
+\item Osoita, että looginen algebra toteuttaa Boolen algebran ehdot 1,2, 5-8 ja 10.
+
+\item Osoita, että seuraavat laskusäännöt ovat voimassa loogisessa algebrassa.
+\begin{itemize}
+\item[a)] $x + x = x$
+\item[b)] $x \cdot x = x$
+\item[c)] $x + 1 = 1$
+\item[d)] $x \cdot 0 = 0$
+\item[e)] $x + x \cdot y = x$
+\item[f)] $x \cdot (x + y) = x$
+\item[g)] $x + (-x) \cdot y = x + y$
+\item[h)] $x \cdot (-x + y) = x \cdot y$
+\item[i)] $-(-x) = x$
+\item[j)] $-(x + y) = (-x) \cdot (-y)$
+\item[k)] $-(x \cdot y) = (-x) + (-y)$
+\end{itemize}
+
+\item
+Tulkitse, mitä Boolen algebran tulokset
+\begin{itemize}
+\item[a)] $x \cdot x = x$
+\item[b)] $x + 1 = 1$
+\item[c)] $x \cdot 0 = 0$
+\item[d)] $-(-x) = x$
+\item[e)] $x + x \cdot y = x$
+\item[f)] $x \cdot (x + y) = x$
+\end{itemize}
+tarkoittavat joukko-opissa. Perustele tulokset myös käyttäen Venn-diagrammeja.
+
+\item
+Sievennä lausekkeet Boolen algebran määritelmän ja tehtävän 2 laskusääntöjen avulla.
+\begin{itemize}
+\item[a)] $x \cdot x + x \cdot x$
+\item[b)] $x \cdot x \cdot x \cdot y \cdot y \cdot y$
+\item[c)] $(a + b) \cdot (a + c)$
+\item[d)] $a + b \cdot a + b$
+\item[e)] $(a + (-b)) \cdot b$
+\item[f)] $a + b + (-(a \cdot b))$
+\end{itemize}
+
+\item
+Piirrä Boolen algebran lauseketta
+\begin{itemize}
+\item[a)] $(x + y) \cdot (x + z)$
+\item[b)] $(x + y) \cdot (x + (-y))$
+\item[c)] $x + (-x) \cdot y$
+\end{itemize}
+vastaava looginen piiri. Sievennä lauseke Boolen algebran säännöillä ja piirrä sievennettyä muotoa vastaava piiri. Loogisia piirejä on käsitelty kappaleessa 2.1 tehtävissä xx ja yy.
+
+\item
+Osoita, että tehtävän 2 säännöt ovat voimassa kaikissa Boolen algebroissa.
+{\bf Vain todellisille matemaatikoille.}
+
+\item
+Reaalilukujen joukossa $\R$ määritellään yhteenlaskua muistuttava laskutoimitus $x \circ y$ seuraavasti: $x \circ y = x + y - 2$ kaikilla $x, y \in \R$. Osoita, että laskutoimitus toteuttaa seuraavat ehdot: 
+\begin{itemize}
+\item[i]
+$(x \circ y) \circ z = x \circ (y \circ z)$ kaikilla $x, y, z \in \R$. 
+\item[ii]
+$x \circ y = y \circ x$ kaikilla $x, y \in \R$. 
+\item[iii]
+On olemassa sellainen luku $\omega \in \R$, että $x \circ \omega = \omega \circ x = x$ kaikilla $x \in \R$. Mikä $\omega$ on? 
+\item[iv]
+Jokaisella $x \in \R$ on vasta-alkio $x^*$, jolle $x \circ x^* = x^* \circ x = \omega$. 
+\end{itemize}
+[Ylioppilastehtävä s97 9b]
+
+\end{enumerate}

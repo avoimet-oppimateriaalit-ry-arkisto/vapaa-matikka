@@ -1,0 +1,288 @@
+\chapter{Matemaattisen väitteen todistaminen}
+
+Matematiikassa pyritään {\em todistamaan} matemaattisia tuloksia. Todistamisen ideana on, että tulos johdetaan loogisesti sitovalla päättelyllä, jossa voidaan vedota aikaisemmin todistettuihin tuloksiin, käsiteltävän teorian {\em aksioomiin} eli perusoletuksiin sekä loogisiin päättelysääntöihin. Matematiikassa tärkeimpiä tuloksia sanotaan yleensä {\em lauseiksi} eli {\em teoreemoiksi} (esim. Pythagoraan lause) ja pienempiä aputuloksia kutsutaan {\em apulauseiksi} eli {\em lemmoiksi}.
+
+Kun tulos on todistettu matemaattisesti, se on kumoamaton. Matemaattiset tulokset eivät siksi vanhene. Toisaalta matemaattisten tulosten soveltamista rajoittavat niiden johtamisessa käytetyt oletukset, koska tulos ei sano mitään tilanteesta, jossa nämä oletukset eivät ole voimassa.
+
+\section*{Tutkimustehtävä}
+%Tutkitaan lukujen parillisuutta ja parittomuutta.
+\begin{enumerate}
+\item Mitä lukuja tarkoittaa merkintä $2n$, kun $n$ käy läpi kaikki luonnolliset luvut? Entä mitä lukuja tarkoittaa merkintä $2n + 1$, kun $n\in \mathbb{N}$?
+\item %Kaikki parilliset luvut voidaan esittää muodossa $2n$, missä $n$ on kokonaisluku. Esimerkiksi $12=2\cdot 6$.
+Esitä luvut $6$, $10$ ja $26$ muodossa $2n$.
+\item %Kaikki parittomat luvut voidaan esittää muodossa $2n + 1$, missä $n$ on kokonaisluku. 
+Esitä luvut $7$, $11$ ja $35$ muodossa $2n+1$.
+%\item Laske yhteen parittomia lukupareja. Esimerkiksi $5 + 7 =12$. Mitä havaitset summasta? 
+%Kahden parittoman luvun summa on aina \underline{\phantom{xxxxxxxxxx}}.
+%\item Todista edellisessä kohdassa muotoilemasi väite käyttäen kohdissa (1) ja (2) esitettyjä parillisten ja parittomien lukujen esitysmuotoja.
+%\item Todista väite matemaattisesti. Voit käyttää merkintöjä $2n$ ja $2n + 1$, $n\in\mathbb{N}$.
+\item Laske yhteen parittomia lukuja. Esimerkiksi $5 + 7 = 12$. Mitä havaitset summasta?
+\item Todista havainto matemaattisesti. Kahdelle eri suurelle parittomalle luvulle voidaan käyttää yleisiä merkintöjä $2n + 1$, $n \in\N$, ja $2m + 1$, $m \in\N$.
+\end{enumerate}
+
+%\section*{Tutkimustehtävä}
+%\begin{enumerate}
+%\end{enumerate}
+
+{\bf Oletus, väite ja deduktio}
+
+% (formaaleja väittämiä, suora todistus,vastaesimerkkitodistus, tehtäviä oletusten ja väitteiden)
+Matemaattinen tulos muodostuu kolmesta osasta. Tulokseen liittyy {\em oletuksia}. Oletusten täytyy olla tosia, jotta tulosta voitaisiin käyttää. Tuloksen toinen osa on {\em väite}. Matematiikan lause sanoo, että oletusten vallitessa lauseen väite on myös tosi. Tuloksen kolmas osa on {\em todistus}. Matemaattinen todistus on deduktiivinen päättelyketju, jossa oletuksista johdetaan lauseen väite. Matemaattisen todistuksen loppuun merkitään yleensä pieni neliö merkiksi todistuksen päättymisestä.
+
+Yksinkertaisin matemaattisen todistuksen tyyppi on {\em suora todistus}. Suorassa todistuksessa tulos saadaan suoralla päättelyllä, jossa voidaan vedota lauseen oletuksiin, aksioomiin, määritelmiin ja aikaisemmin todistettuihin tuloksiin, esimerkiksi laskusääntöihin. Suoralla todistuksella voidaan todistaa seuraavan esimerkin tulos.
+
+{\bf Esimerkki 1.} Todista lause.
+
+{\bf Lause 1.} Olkoot $m$ ja $n$ parillisia kokonaislukuja. Tällöin luku $m+n$ on parillinen.
+
+\proof
+Koska $m$ ja $n$ ovat parillisia, voidaan kirjoittaa $m=2a$ ja $n=2b$, missä $a$ ja $b$ ovat kokonaislukuja.
+
+Siten
+\[
+m+n =2a+2b = 2(a+b).
+\]
+
+Luku $2(a+b)$ on parillinen, joten väite on todistettu.
+\qed
+
+{\bf Esimerkki 2.} Todista lause.
+
+{\bf Lause 2.} Kahden rationaaliluvun summa on rationaalinen.
+
+\proof
+Olkoot $q_1$ ja $q_2$ kaksi rationaalilukua. Ne voidaan kirjoittaa muodossa
+\[
+q_1=\frac{m_1}{n_1},\qquad 
+q_2=\frac{m_2}{n_2},
+\]
+ja missä $m_1,m_2,n_1,n_2$ ovat kokonaislukuja ja $n_1,n_2\neq 0$.
+
+Edelleen voidaan kirjoittaa
+\[
+q_1+q_2 = \frac{m_1}{n_1}+ \frac{m_2}{n_2}
+\]
+\[
+= \frac{m_1 n_2}{n_1 n_2}+ \frac{m_2 n_1}{n_2 n_1} = \frac{m_1n_2 + m_2 n_1}{n_1 n_2}.
+\]
+
+Nyt $m_1n_2 + m_2 n_1$ sekä $n_1 n_2$ ovat kokonaislukuja ja $n_1 n_2\neq 0$, joten summa $q_1+q_2$ kuuluu rationaalilukujen joukkoon $\mathbb{Q}$.
+\qed
+
+{\bf Esimerkki 3.} Todista lause.
+
+{\bf Lause 3.} Olkoot $a$ ja $b$ reaalilukuja. Tulo $ab<0$, jos ja vain jos joko $a>0$ ja $b<0$ tai $a<0$ ja $b>0$.
+
+\proof
+Ekvivalenssilauseen väite on muotoa ''jos ja vain jos''. Tällainen lause todistetaan usein kahdessa osassa.
+
+Todistetaan aluksi lauseen ''jos''-osa: $ab<0$, jos joko $a>0$ ja $b<0$ tai $a<0$ ja $b>0$.
+
+Oletetaan aluksi, että $a>0$ ja $b<0$. Kertomalla epäyhtälö $b<0$ luvulla $a$ saadaan $ab<0$.
+
+Vastaavasti jos $a<0$ ja $b>0$, niin kertomalla epäyhtälö $a<0$ luvulla $b$ saadaan $ab<0$. Siten lauseen ensimmäinen osa on todistettu.
+
+Osoitetaan seuraavaksi lauseen toinen osa: $ab<0$ vain, jos $a>0$ ja $b<0$ tai $a<0$ ja $b>0$.
+
+Huomataan aluksi, että jos $ab<0$, niin $a\neq 0$ ja $b\neq 0$. Jos $a>0$, niin jakamalla epäyhtälö $ab<0$ luvulla $a$ saadaan $b<0$. Toisaalta, jos $a<0$, niin jaettaessa epäyhtälön $ab<0$ suunta vaihtuu ja saadaan $b>0$. Siis myös lauseen toinen osa on todistettu.
+\qed
+
+{\bf Epäsuora todistus}
+%{\bf (mainittava ristiriitatodistus; yleinen ristiriita ja käänteinen todistus; väitteen negaatioon)}
+Tärkeä esimerkki matemaattisesta todistusmenetelmästä on {\em epäsuora todistus}. Epäsuora todistus perustuu jo aikaisemmin tässä kurssissa esiintyneeseen kolmannen poissulkevan lakiin. Tämä laki sanoo, että kaikki väitteet ovat joko tosia tai epätosia.
+
+{\em Käänteisessä todistuksessa} ajatuksena on, että väitteen $A\to B$ todistamiseksi riittää osoittaa, että väitteen $B$ negaatio $\lnot B$ eli niin sanottu {\em vastaoletus} johtaa oletuksen $A$ negaatioon $\lnot A$. Käänteinen todistus perustuu kappaleessa 2.3 esiteltyyn kontraposition lakiin, jonka mukaan lauseet $A\to B$ ja $\lnot B \to \lnot A$ ovat loogisesti ekvivalentit. 
+
+Käänteisessä todistuksessa täytyy siis olettaa väitteen negaatio ja päätellä siitä, että oletus on epätosi. Tällä tavoin voidaan osoittaa esimerkiksi seuraava tulos:
+
+{\bf Lause 4.} Olkoon $m\in \N$ siten, että $m^2$ on parillinen. Tällöin $m$ on parillinen.
+
+\proof
+Lauseen todistamiseksi tehdään vastaoletus, joka on lauseen väitteen ''$m$ on parillinen'' negaatio.
+
+Vastaoletus: $m$ on pariton.
+
+Tästä seuraa, että on olemassa $k\in \N$, jolle $m=2k+1$.
+
+Nyt
+\[
+m^2 = (2k+1)^2 = 4k^2+4k+1 = 2(2k^2+2k)+1.
+\]
+
+Siten $m^2$ on pariton. On päädytty ristiriitaan lauseen oletuksen kanssa. Siten lauseen väite on tosi.
+\qed
+
+{\em Ristiriitatodistuksessa} pyritään todistamaan muotoa $A\to B$ oleva väite tekemällä ensin vastaoletus $\lnot B$ ja päätymällä johonkin ristiriitaan, ei kuitenkaan välttämättä oletuksen $A$ negaatioon.
+
+Ehkä kuuluisin esimerkki epäsuorasta todistuksesta on todistus sille, että luku $\sqrt{2}$ on irrationaalinen. Todistuksessa tarvitaan seuraavaa lisätietoa rationaaliluvuista. Sanotaan, että kokonaisluku $a$ on kokonaisluvun $b$ {\em tekijä}, jos on olemassa sellainen kokonaisluku $c$, että $b=a\cdot c$. Rationaaliluku $q\in\Q$ voidaan aina esittää {\em supistetussa muodossa} $q=m/n$, missä $m$ ja $n$ ovat kokonaislukuja, joilla ei ole yhteisiä tekijöitä, ja $n\neq 0$. Esimerkiksi murtoluku $2/5$ on supistetussa muodossa, koska luvuilla $2$ ja $5$ ei ole yhteisiä tekijöitä. Sen sijaan murtoluku $6/9$ ei ole supistetussa muodossa, koska luku $3$ on sekä osoittajan että nimittäjän tekijä. Murtoluvun $6/9$ esitys supistetussa muodossa on $2/3$.
+
+{\bf Lause 5.} Luku $\sqrt{2}$ on irrationaalinen.
+
+\proof
+Vastaoletus: Luku $\sqrt{2}$ on rationaalinen.
+
+On siis olemassa luku $q\in \Q$ siten, että $q^2=2$.
+
+Kirjoitetaan luku $q$ supistetussa muodossa $q=m/n$, missä kokonaisluvuilla $m$ ja $n$ ei ole yhteisiä tekijöitä. Nyt $q^2=2$, jos ja vain jos
+\[
+\bigg(\frac{m}{n}\bigg)^2=2.
+\]
+
+Kertomalla puolittain luvulla $n^2$ saadaan yhtälö
+\[
+m^2 = 2n^2.
+\]
+
+Koska luku $2n^2$ on parillinen, on $m^2$ parillinen. Lauseen 4 perusteella myös $m$ on parillinen.
+
+Siten on olemassa $k\in \Z$, jolle $m=2k$.
+
+Koska
+\[
+n^2=m^2/2=(2k)^2/2= 2k^2,
+\]
+luku $n^2$ on parillinen. Lauseen 4 nojalla myös $n$ on parillinen.
+
+Näin ollen luku $2$ on lukujen $m$ ja $n$ yhteinen tekijä. Tämä on ristiriita, koska oletettiin, ettei näillä luvuilla ole yhteisiä tekijöitä.
+\qed
+
+\newpage
+
+
+
+
+\section*{Tehtäviä}
+
+\begin{enumerate}
+
+\item a) Laske neljän peräkkäisen kokonaisluvun summa.
+Toista lasku useilla neljän peräkkäisen kokonaisluvun
+joukoilla. Mitä havaitset summasta?
+b) Jos neljän peräkkäisen kokonaisluvun joukon pienin
+luku on $m$, niin millainen esitysmuoto on kolmella
+muulla luvulla?
+c) Todista a-kohdan tulos matemaattisesti käyttäen
+hyväksi b-kohdan esitysmuotoja.
+
+\item Todista, että parillisen ja parittoman kokonaisluvun
+summa on pariton.
+
+\item Todista, että kahden parillisen kokonaisluvun tulo
+on parillinen.
+
+\item Todista, että kahden rationaaliluvun tulo on rationaalinen.
+
+\item Olkoot $a$ ja $b$ kokonaislukuja. Todista, että luku
+$a + b$ on parillinen silloin ja vain silloin, kun luku
+$a - b$ on parillinen.
+
+\item Olkoon $m$ sellainen kokonaisluku, että $m^2$ on
+pariton. Todista, että tällöin $m$ on pariton.
+
+\item Todista väite todeksi tai epätodeksi: Kahden
+irrationaaliluvun summa on aina irrationaaliluku.
+
+\item Luku $\sqrt{3}$ on irrationaaliluku. Todista,
+että $\sqrt{3}+1/2$ on irrationaaliluku. Vihje: Käytä
+epäsuoraa todistusta.
+
+\item Todista, että irrationaaliluvun ja nollasta poikkeavan rationaaliluvun tulo on irrationaaliluku.
+
+\item Todista, että luku $\sqrt{6}$ on irrationaaliluku.
+
+\item Todista: Jos luku $a$ on irrationaaliluku, niin
+myös luku
+\[
+\frac{2a-5}{3a-11}
+\]
+on irrationaaliluku. Vihje: Käytä symbolisen laskimen
+{\tt solve}-toimintoa.
+
+\item
+Tarkastellaan suorakulmaista kolmiota, jonka kateettien
+pituudet ovat $a$ ja $b$ ja hypotenuusan pituus $c$.
+Todista väite todeksi tai epätodeksi.
+
+\begin{itemize}
+\item[a)] On olemassa sellainen suorakulmainen kolmio,
+jonka sivujen pituudet $a$, $b$ ja $c$ ovat kaikki parillisia kokonaislukuja.
+\item[b)] On olemassa sellainen suorakulmainen kolmio,
+jonka sivujen pituudet $a$, $b$ ja $c$ ovat kaikki 
+parittomia kokonaislukuja.
+\end{itemize}
+
+\item Kokonaisluvut $0, 1, 2, \ldots, 12$ asetetaan
+mielivaltaiseen järjestykseen ympyrän kehälle. Todista,
+että joidenkin neljän peräkkäisen luvun summa on
+vähintään 26.
+
+\end{enumerate}
+
+{\bf Kotitehtäviä.}
+
+\begin{enumerate}
+
+\item
+\begin{itemize}
+\item[a)] Laske luonnollisten lukujen $1, 2, 3,\ldots,
+10$ neliöt.
+\item[b)] Esitä väite luonnollisten lukujen neliöiden
+parillisuudesta tai parittomuudesta.
+\item[c)] Todista väitteesi matemaattisesti.
+\end{itemize}
+
+\item Todista, että kolmen parittoman kokonaisluvun summa on pariton.
+
+\item Todista, että kolmen peräkkäisen kokonaisluvun summa
+on jaollinen luvulla 3.
+
+\item Todista, että kahden parittoman kokonaisluvun tulo
+on pariton.
+
+\item Olkoot $a$ ja $b$ reaalilukuja. Todista, että tulo $ab = 0$, jos ja vain jos $a=0$ tai $b=0$.
+
+\item Olkoon $n$ kokonaisluku. Todista, että luku $n^{2} + 3n + 1$ on aina pariton. Käytä a) suoraa b) epäsuoraa
+todistusta.
+
+\item Todista, että ei ole olemassa sellaisia
+positiivisia kokonaislukuja $x$ ja $y$, jotka toteuttavat
+yhtälön $4^{x} = 7^{y}$.
+
+\item Todista väite todeksi tai epätodeksi: Kahden
+irrationaaliluvun tulo voi olla rationaaliluku.
+
+\item Todista, että luku $\sqrt{5}$ on irrationaaliluku.
+Tarvitset seuraavaa lisätietoa: jos kahden kokonaisluvun
+tulo on jaollinen luvulla 5, niin ainakin toinen tulon
+tekijöistä on jaollinen luvulla 5.
+
+\item Tarkastellaan paritonta määrää parittomia
+kokonaislukuja. Todista, että lukujen keskiarvo ei voi
+olla nolla.
+
+\item Tarkastellaan kolmiota, jonka sivujen pituudet ovat
+$a$, $b$ ja $c$. Niin sanotun {\em Heronin kaavan} mukaan
+kolmion pinta-alalle pätee $A = \sqrt{p(p-a)(p-b)(p-c)}$,
+missä $p = \frac{1}{2}(a+b+c)$. Todista, että jos kolmion
+sivujen pituudet ovat luvulla 4 jaollisia kokonaislukuja,
+niin kolmion pinta-alan neliö on jaollinen luvulla 16.
+
+\item
+Niin sanotun {\em Fermat'n suuren lauseen} mukaan ei ole
+olemassa sellaisia positiivisia kokonaislukuja $x$, $y$
+ja $z$, jotka toteuttaisivat yhtälön $x^{n} + y^{n} = z^{n}$, missä $n$ on lukua 2 suurempi kokonaisluku.
+Erityisesti siis yhtälöllä $x^{3} + y^{3} = z^{3}$ ei
+ole ratkaisua, jos $x$, $y$ ja $z$ ovat positiivisia
+kokonaislukuja.
+\begin{itemize}
+\item[a)] Todista, että ei ole olemassa sellaisia
+positiivisia rationaalilukuja $x$, $y$ ja $z$, jotka
+toteuttavat yhtälön $x^{3} + y^{3} = z^{3}$.
+\item[b)] Todista väite todeksi tai epätodeksi: ei ole
+olemassa sellaisia keskenään eri suuria kokonaislukuja
+$x$, $y$ ja $z$, jotka toteuttavat yhtälön $x^{3} + y^{3} = z^{3}$.
+\end{itemize}
+
+\item Olkoot $a$ ja $b$ reaalilukuja, joille pätee $0 \le a \le 1$ ja $0 \le b \le 1$. Todista, että tällöin $0 \le \frac{a + b}{1 + ab} \le 1$.
+
+\end{enumerate}

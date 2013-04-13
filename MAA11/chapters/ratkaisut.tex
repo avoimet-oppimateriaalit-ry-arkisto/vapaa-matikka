@@ -1,0 +1,54 @@
+\chapter{Harjoitustehtävien ratkaisuja}
+
+Kaavan 
+\[
+\sum_{k=1}^n k^2= \frac{n(n+1)(2n+1)}{6}
+\]
+todistus.
+
+\proof
+1. Lasketaan
+\[
+1^2 = \frac{1(1+1)(2\cdot 1 +1)}{6} = \frac{6}{6}=1.
+\]
+Väite siis pätee luvulla $n=1$.
+
+2. Tehdään induktioaskel, eli osoitetaan väite luvulle $n+1$. Oletuksena on, että väite pätee luvulla $n$:
+\[
+1^2+2^2+3^2 + \cdots + n^2 = \frac{n(n+1)(2n+1)}{6}.
+\]
+Lisätään yhtälön molemmille puolille $(n+1)^2$:
+\[
+1^2+2^2+3^2 + \cdots + n^2+ (n+1)^2 = \frac{n(n+1)(2n+1)}{6}+(n+1)^2
+\]
+\[
+= \frac{n(n+1)(2n+1)+6(n+1)^2}{6}
+\]
+\[
+= 
+\frac{(n+1)(n(2n+1)+6(n+1))}{6}
+\]
+\[
+=
+\frac{(n+1)(2n^2+7n+6)}{6}.
+\]
+Toisaalta
+\[
+((n+1)+1)(2(n+1)+1)=(n+2)(2n+3)
+\]
+\[
+=2n^2+3n+4n+6=2n^2+7n+6.
+\]
+Siten 
+\[
+\frac{(n+1)(2n^2+7n+6)}{6}
+%\frac{n(2n+1)(n+1)+6(n+1)^2}{6} 
+= \frac{(n+1)((n+1)+1)(2(n+1)+1)}{6},
+\]
+ja siis
+\[
+1^2+2^2+3^2 + \cdots + n^2+ (n+1)^2 %=\frac{n(2n+1)(n+1)+6(n+1)^2}{6}.
+= \frac{(n+1)((n+1)+1)(2(n+1)+1)}{6}.
+\]
+Väite on todistettu.
+\qed
