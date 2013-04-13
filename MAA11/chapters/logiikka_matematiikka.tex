@@ -4,10 +4,10 @@ Matematiikka on logiikan keskeinen sovellusalue. Matematiikan rakenteita tutkiva
 
 
 % (pelkästään matematiikkaa sivuavia esimerkkejä)
-\section{Joukko-oppia (mahdollisesti lisämateriaalia)}
+\section{Joukko-oppia}% (mahdollisesti lisämateriaalia)}
 Seuraavaksi tutkitaan logiikan soveltamista matemaattisiin rakenteisiin, joita kutsutaan {\em joukoiksi}.
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 Luokalla on $34$ opiskelijaa. Heistä $21$ laulaa kuorossa ja $16$ soittaa jotain soitinta. Neljä opiskelijaa ei laula kuorossa eikä soita mitään soitinta.
 \begin{itemize}
 \item[a)] Kuinka moni luokan opiskelijoista ei laula kuorossa?
@@ -42,7 +42,8 @@ Jos kaikki joukon $A$ alkiot ovat myös joukon $B$ alkioita, niin joukkoa $A$ ku
 
 Jos $A\subset B$ ja $B\subset A$, niin  $A$ ja $B$ ovat sama joukko. Tällöin merkitään $A=B$. Samuus tarkoittaa sitä, että kyseisillä joukoilla on samat alkiot. % {\bf (toistoa, mitä pitäisikö siirtää aikaisemmaksi)}
 
-{\bf Esimerkki 1.}
+%{\bf Esimerkki 1.}
+\begin{esimerkki}
 Akaan kaupunki muodostuu Toijalan, Viialan ja Kylmäkosken
 kylistä. Akaa taas on osa Pirkanmaan maakuntaa. Olkoot $A
 = \{\textrm{akaalaiset}\}$, $T = \{\textrm{toijalalaiset}\}$, $V
@@ -72,7 +73,9 @@ pirkanmaalaisia. Koska kylmäkoskelaiset ovat akaalaisia
 ja akaalaiset pirkanmaalaisia, niin lause on tosi.
 
 {\bf Vastaus:} a) On. b) Ei ole. c) On. d) On.
+\end{esimerkki}
 
+\subsection*{Komplementti}
 Ne perusjoukon $X$ alkiot, jotka eivät kuulu joukkoon $A$, muodostavat joukon $A$ {\em komplementin}. Joukon $A$ komplementtia merkitään $\complement A$.
 
 \begin{center}
@@ -109,7 +112,8 @@ Joukkojen $A$ ja $B$ {\em erotuksella} tarkoitetaan joukkoa, joka jää jäljell
 \end{center}
 
 
-{\bf Esimerkki 2.}
+%{\bf Esimerkki 2.}
+\begin{esimerkki}
 Olkoot $A = \{0, 1, 2, 3, 4, 5, 6\}$ ja $B = \{2, 4, 6, 8, 10\}$. Määritä joukot a) $A\cup B$ b) $A \cap B$ c) $A\setminus B$ d) $B \setminus A$.
 
 {\bf Ratkaisu:} 
@@ -122,10 +126,11 @@ c) Joukkojen $A$ ja $B$ erotukseen $A \setminus B$ kuuluvat ne alkiot, jotka kuu
 d) Vastaavasti erotukseen $B \setminus A$ kuuluvat ne alkiot, jotka kuuluvat joukkoon $B$, mutta eivät joukkoon $A$. Siten $B \setminus A = \{8, 10\}$.
 
 {\bf Vastaus:} a) $A \cup B = \{0, 1, 2, 3, 4, 5, 6, 8, 10\}$,  b) $A \cap B = \{2, 4, 6\}$,  c) $A \setminus B = \{0, 1, 3,5\}$,  d) $B \setminus A = \{8, 10\}$.
+\end{esimerkki}
 
 
-
-{\bf Esimerkki 3.}
+%{\bf Esimerkki 3.}
+\begin{esimerkki}
 Koulussa on $700$ opiskelijaa. Erään kyselyn tuloksena saatiin selville, että $550$ heistä 
 seuraa uutisia säännöllisesti sanomalehdistä ja $400$ Internetistä. Opiskelijoista $350$  
 seuraa uutisia säännöllisesti kummastakin lähteestä. Havainnollista tilannetta Venn-diagrammilla ja vastaa seuraaviin kysymyksiin.
@@ -148,9 +153,12 @@ a) Opiskelijoista $400$ seuraa uutisia Internetistä ja $350$ heistä seuraa uut
 b) Ainakin toisesta lähteestä uutisia seuraa $550 + 400 - 350 = 600$ opiskelijaa. Tällöin $700 - 600 = 100$ opiskelijaa ei seuraa uutisia ollenkaan. Tämä on joukon $\compl(A\cup B)$ alkioiden lukumäärä.
 
 {\bf Vastaus:} a) $50$ opiskelijaa b) $100$ opiskelijaa
+\end{esimerkki}
 
 
-{\bf Esimerkki 4.} Olkoot perusjoukko $\R$ sekä joukot $A$ ja $B$ reaalilukuvälit $A = ]-5, 1]$ ja $B = ]-2, 4]$. Ilmaise välimerkintää käyttäen joukot a) $A\cup B$, b) $A \setminus B$, c) $\compl A$, d) $\compl( A \cap B)$. {\bf (lukusuora jonnekin?)}  
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
+Olkoot perusjoukko $\R$ sekä joukot $A$ ja $B$ reaalilukuvälit $A = ]-5, 1]$ ja $B = ]-2, 4]$. Ilmaise välimerkintää käyttäen joukot a) $A\cup B$, b) $A \setminus B$, c) $\compl A$, d) $\compl( A \cap B)$. {\bf (lukusuora jonnekin?)}  
 
 {\bf Ratkaisu:} 
 \begin{itemize}
@@ -167,9 +175,11 @@ b) Ainakin toisesta lähteestä uutisia seuraa $550 + 400 - 350 = 600$ opiskelij
 \item[c)] $\compl A = ]-\infty, -5] \cup ]1, \infty [$,
 \item[d)] $\compl( A \cap B) = ]-\infty, -2] \cup ]1,\infty [$.
 \end{itemize}
+\end{esimerkki}
 
-
-{\bf Esimerkki 5.} Osoita Venn-diagrammia käyttäen, että $\compl A \cap B = B \setminus A$.
+\begin{esimerkki}
+%{\bf Esimerkki 5.}
+Osoita Venn-diagrammia käyttäen, että $\compl A \cap B = B \setminus A$.
 
 {\bf Ratkaisu:}
 
@@ -189,12 +199,14 @@ Joukon $A$ komplementtijoukko $\compl A$ on niiden perusjoukon alkioiden joukko,
 
 Joukko $B \setminus A$ sisältää ne joukon $B$ alkiot, jotka eivät kuulu joukkoon $A$.
 Venn-diagrammit havainnollistavat, että on kyse samasta joukosta. Siis $\compl A\cap B = B \setminus A$.
+\end{esimerkki}
+
+%\newpage
 
 
-\newpage
+%\section*{Tehtäviä}
 
-
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 
@@ -461,7 +473,7 @@ Onko lause tosi?
 
 \section{Avoin lause ja konnektiivien joukko-opillinen tulkinta.}
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 \begin{itemize}
 \item[1)] Ketkä seuraavista henkilöistä toteuttavat väitteen ''henkilö on entinen Suomen tasavallan presidentti''? 
 a) Urho Kekkonen,  b)  Paavo Nurmi,  c)  Armi Kuusela,  d)  Tarja Halonen,  
@@ -472,7 +484,7 @@ Lause $P(x)$ on ''$-10x = 100$''. Onko lause $P(-2)$, $P(5)$ tai $P(-10)$ tosi?
 Millä kokonaisluvuilla lause $Q(x)$: ''$2x^2 - x - 1 = 0$'' on tosi?
 \end{itemize}
 
-{\bf Avoin lause ja ratkaisujoukko.}
+\subsection*{Avoin lause ja ratkaisujoukko}
 Lauselogiikassa asioiden tiloja ilmaisemaan käytetään atomilauseita, esimerkiksi lausetta $S$: ''sataa''. Tämän lauseen totuusarvo kuitenkin riippuu tarkastelijan olinpaikasta $x$. Onkin luonnollinen ajatus tarkastella loogista lausetta, jossa on {\em vapaa muuttuja}, tässä tapauksessa paikka $x$. Tällöin merkitään $S(x)$: ''paikassa $x$ sataa''. Lauseen totuusarvo ratkeaa vasta, kun vapaan muuttujan arvo kiinnitetään. Siksi lausetta $S(x)$ kutsutaan {\em avoimeksi lauseeksi}. Avoimia lauseita kutsutaan myös {\em predikaateiksi}, ja avoimia lauseita käsittelevää logiikkaa sanotaan {\em predikaattilogiikaksi}.
 
 Vapaa muuttuja saa arvoja annetusta perusjoukosta $X$. Perusjoukkoa ei ole tapana kirjoittaa näkyviin, jos se voidaan päätellä tilanteesta. Esimerkiksi yllä mainitussa avoimessa lauseessa $S(x)$ perusjoukkona ovat kaikki paikkakunnat. Avoimen lauseen {\em ratkaisujoukon} muodostavat puolestaan ne perusjoukon alkiot, joilla avoin lause on tosi. Esimerkiksi lauseen $S(x)$ ratkaisujoukkona ovat kaikki ne paikkakunnat, joilla sataa.
@@ -482,8 +494,9 @@ avulla.
 
 Matematiikassa avoin lause on usein yhtälö tai epäyhtälö. Yhtälössä esiintyvät tuntemattomat voidaan tulkita vapaiksi muuttujiksi. Esimerkiksi voidaan merkitä $C(x)$: ''$\cos x + x^2= 2$''. Avoimen lauseen ratkaisujoukko on niiden pisteiden $x$ joukko, joilla kyseinen yhtälö toteutuu.
 
-
-{\bf Esimerkki 1.} Olkoon $P(x)$ avoin lause ''$2x - 10 = 0$''. Onko lause a) $P(5)$, b) $P(-5)$ tosi?
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+Olkoon $P(x)$ avoin lause ''$2x - 10 = 0$''. Onko lause a) $P(5)$, b) $P(-5)$ tosi?
 
 {\bf Ratkaisut:}
 
@@ -492,8 +505,11 @@ a) Sijoitetaan luku $5$ avoimeen lauseeseen muuttujan $x$ paikalle. Koska $2\cdo
 b) Sijoitetaan luku $-5$ avoimeen lauseeseen muuttujan $x$ paikalle. Koska $2\cdot(-5) - 10 = -10 - 10 = -20 \neq 0$, lause $P(-5)$ on epätosi.
 
 {\bf Vastaukset:} a) On. b) Ei ole.
+\end{esimerkki}
 
-{\bf Esimerkki 2.} Yhtälöiden ja epäyhtälöiden yhteydessä perusjoukkoa kutsutaan myös {\em määrittelyjoukoksi}. Ratkaise avoin lause $2x^2 + 5x - 3 < 0$, kun määrittelyjoukko on a) reaalilukujen joukko b) kokonaislukujen joukko.
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
+Yhtälöiden ja epäyhtälöiden yhteydessä perusjoukkoa kutsutaan myös {\em määrittelyjoukoksi}. Ratkaise avoin lause $2x^2 + 5x - 3 < 0$, kun määrittelyjoukko on a) reaalilukujen joukko b) kokonaislukujen joukko.
 
 {\bf Ratkaisut:}
 
@@ -515,8 +531,9 @@ Koska funktion $2x^2 + 5x - 3$ kuvaaja on ylöspäin aukeava paraabeli, avoin la
 b) Kun määrittelyjoukko on kokonaislukujen joukko, a-kohdan ratkaisuista kelpaavat vain $x = -2$, $x = -1$ ja $x = 0$. Avoimen lauseen ratkaisujoukko on siis $\{-2, -1, 0\}$.
 
 {\bf Vastaukset:} a) $-3 < x < \frac{1}{2}$, b) $x = -2$ tai $x = -1$ tai $x = 0$
+\end{esimerkki}
 
-{\bf Ominaisuudet ja osajoukot.}
+\subsection*{Ominaisuudet ja osajoukot}
 Jouk\-ko-opin soveltamisen kannalta on usein hyödyllistä {\em samastaa} keskenään joukot ja perusjoukon $X$ alkioiden ominaisuudet. Tällöin avoimelle lauseelle $P(x)$ käytetään myös merkintää $x\in P$. Jos $\lnot P(y)$, voidaan merkitä $y\notin P$. Tätä voidaan havainnollistaa Venn-diagrammilla. Kuvassa $x\in P$ ja $y\notin P$.
 
 %{\bf kuva}.
@@ -543,8 +560,9 @@ $0$ & $0$ & $1$\\ \hline
 
 Nähdään, että implikaatio on epätosi vain silloin, jos $x \in P$ mutta $x\not \in Q$, toisin sanoen $P$ ei ole $Q$:n osajoukko. Implikaatiota $P \to Q$ vastaa siis sisältymisrelaatio $P \subset Q$. Erityisesti periaatetta, että epätodesta lauseesta voidaan päätellä mitä tahansa, vastaa se, että tyhjä joukko $\emptyset$ on minkä tahansa joukon osajoukko. Ekvivalenssia $P\lequiv Q$ vastaava relaatio on joukko-opillinen yhtäsuuruus $P=Q$.
 
-
-{\bf Esimerkki 3.} Olkoon perusjoukko kuviossa olevien nelikulmioiden joukko. Olkoot avoin lause $K(x)$: ''nelikulmio $x$ on suorakulmio'' ja $S(x)$: ''nelikulmio $x$ on suunnikas''. Ratkaise avoin lause.  a)  $K(x)$,  b)  $S(x)$,  c) $\lnot S(x)$,  d)  $\lnot K(x) \land S(x)$  e)  $K(x) \lequiv S(x)$.
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
+ Olkoon perusjoukko kuviossa olevien nelikulmioiden joukko. Olkoot avoin lause $K(x)$: ''nelikulmio $x$ on suorakulmio'' ja $S(x)$: ''nelikulmio $x$ on suunnikas''. Ratkaise avoin lause.  a)  $K(x)$,  b)  $S(x)$,  c) $\lnot S(x)$,  d)  $\lnot K(x) \land S(x)$  e)  $K(x) \lequiv S(x)$.
 
 \begin{center}
 %\includegraphics[width=12cm,height=4cm]{pictures/Kappale3_2_esim_3_kuvio_v2}
@@ -565,9 +583,11 @@ d) Avoin lause $\lnot K(x) \land S(x)$ on tosi, kun nelikulmio on suunnikas mutt
 e) Avoin lause $K(x) \lequiv S(x)$ on tosi, kun nelikulmio on suorakulmio ja suunnikas tai ei kumpikaan. Ehto toteutuu nelikulmioilla $N_1$, $N_3$ ja $N_5$, joten ratkaisujoukko on $\{ N_1, N_3, N_5\}$.
 
 {\bf Vastaukset:}   a)  $\{ N_1, N_3\}$,   b)  $\{ N_1, N_2, N_3, N_4\}$,   c)  $\{N_5\}$,  d)  $\{ N_2, N_4\}$,  e)  $\{ N_1, N_3, N_5\}$.
+\end{esimerkki}
 
-
-{\bf Esimerkki 4.} Heitetään kahta noppaa, punaista ja sinistä. Tuloksena saadaan lukupari $(x, y)$, missä $x$ on punaisen nopan silmäluku ja $y$ on sinisen nopan silmäluku. Perusjoukko $X$ sisältää lukuparit
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
+Heitetään kahta noppaa, punaista ja sinistä. Tuloksena saadaan lukupari $(x, y)$, missä $x$ on punaisen nopan silmäluku ja $y$ on sinisen nopan silmäluku. Perusjoukko $X$ sisältää lukuparit
 \[
 (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 1), (2, 2),\ldots , (6, 5), (6, 6).
 \]
@@ -601,9 +621,12 @@ b) $\{(1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6)\}$
 c) $\{(1,1), (2, 2), (3, 3), (4, 4)\}$
 
 d) $\{(1,1), (2, 2), (3, 3), (4, 4), (4, 6), (5, 5), (5, 6), (6, 4), (6, 5), (6, 6)\}$
+\end{esimerkki}
 
 
-{\bf Esimerkki 5.} Ratkaise reaalilukujen joukossa
+\begin{esimerkki}
+%{\bf Esimerkki 5.}
+Ratkaise reaalilukujen joukossa
 \begin{itemize}
 \item[a)] yhtälö $(x + 4)(x^2 - 2) = 0$,
 \item[b)] yhtälöpari
@@ -660,11 +683,12 @@ joukko $\emptyset$.
 
 a) $x = -4$ tai $x = -\sqrt{2}$ tai $x = \sqrt{2}$
 b) Yhtälöparilla ei ole ratkaisuja.
+\end{esimerkki}
 
-\newpage
+%\newpage
+%\section*{Tehtäviä}
 
-
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 \item
@@ -910,7 +934,7 @@ ja $B(x)$ avoin lause $\lnot ((x \le 0) \lor (x \ge 20))$. Ratkaise avoin lause 
 \section{Kvanttorit}
 {\em Kvanttorien} avulla voidaan ilmaista täsmällisesti yleisluontoisia väitteitä, kuten tämän kirjan ensimmäisessä luvussa annettu esimerkki: ''kaikki joutsenet ovat valkoisia''. Tavoitteena on muodostaa loogisesti päteviä päätelmiä, jotka koskevat esimerkiksi jonkin joukon kaikkia alkioita.
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 Ovatko seuraavat väitteet tosia?
 \begin{enumerate}
 \item Kaikki koulumme opiskelijat opiskelevat englantia.
@@ -934,7 +958,9 @@ tarkoittaa, että ominaisuus $P$ on kaikilla perusjoukon $X$ alkioilla. Lause lu
 
 Kvanttorien avulla voidaan esittää matemaattisia väittämiä hyvin tiiviissä ja täsmällisessä muodossa. Tästä on hyötyä etenkin matemaattisessa logiikassa, jossa tutkimuskohteena ovat matemaattiset teoriat, tulokset ja todistukset. 
 
-{\bf Esimerkki 1.} Liikuntailtapäivässä koulun opiskelijat harrastavat eri talviurheilulajeja. Olkoot perusjoukko koulun opiskelijat ja avoimet lauseet $H(x)$: ''opiskelija $x$
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+Liikuntailtapäivässä koulun opiskelijat harrastavat eri talviurheilulajeja. Olkoot perusjoukko koulun opiskelijat ja avoimet lauseet $H(x)$: ''opiskelija $x$
  hiihtää'' ja $L(x)$: ''opiskelija $x$ laskettelee lumilaudalla''.
 
 Kirjoita suomen kielellä lauseet a) $\forall x H(x)$,  b)  $\exists x L(x)$. Milloin lause on tosi? Milloin lause on epätosi?
@@ -946,8 +972,10 @@ hiihdä.
 b) Lause tarkoittaa, että joku koulun opiskelija laskettelee lumilaudalla. Lause on tosi
 silloin, kun ainakin yksi opiskelija laskettelee lumilaudalla. Lause on epätosi silloin, kun 
 kukaan koulun opiskelijoista ei laskettele lumilaudalla. 
+\end{esimerkki}
 
-{\bf Esimerkki 2.}
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
 Olkoot perusjoukko reaalilukujen joukko $\mathbb{R}$ ja avoimet lauseet  $P(x)$: ''$x^2 > 0$''  sekä  
 $Q(x)$: ''$x^2\le  0$''. Suomenna lauseet  a) $\forall x P(x)$,   b) $\exists x Q(x)$. Ovatko lauseet tosia?
 
@@ -964,9 +992,10 @@ Lauseen todeksi osoittamiseen siis riittää, että on olemassa yksikin alkio, j
 a) Kaikkien reaalilukujen neliöt ovat positiivisia. Lause on epätosi.
 
 b) On olemassa reaaliluku, jonka neliö on pienempi tai yhtä suuri kuin nolla. Lause on tosi. 
+\end{esimerkki}
 
-
-{\bf Esimerkki 3.}
+\begin{esimerkki}
+%{\bf Esimerkki 3.}
 Onko lause tosi? Perustele.
 \begin{itemize}
 \item[a)] $\exists x\in \Z(4x - 3 = 0)$
@@ -993,8 +1022,10 @@ Funktiolla ei ole nollakohtia, koska diskriminantti $-7$ on negatiivinen.
 Koska funktion $x^2 - x + 2$ kuvaaja on ylöspäin aukeava paraabeli, funktio saa vain positiivisia arvoja. Siten epäyhtälö $0 \le x^2 - x + 2$ toteutuu kaikilla muuttujan $x$ arvoilla. Lause $\forall x\in \R(-x^2 + x \le 2)$ on siis tosi.
 
 {\bf Vastaus:} a) Lause on epätosi. b) Lause on tosi.
+\end{esimerkki}
 
-{\bf Esimerkki 4.}
+\begin{esimerkki}
+%{\bf Esimerkki 4.}
 Suomenna lause
 \begin{itemize}
 \item[a)] $\forall x\in \Z\exists y\in \Z (x+y=0)$
@@ -1022,18 +1053,17 @@ tosi.
 
 b) On olemassa sellainen reaaliluku $y$, että sen ja minkä
 tahansa reaaliluvun $x$ summa on aina $x$. Lause on tosi.
+\end{esimerkki}
 
-
-{\bf Kvanttorien negaatiot.} Tutkitaan lausetta ''kaikki joutsenet ovat valkoisia''. Lause voidaan formalisoida kaikkikvanttorin avulla $\forall x V(x)$, missä perusjoukkona on joutsenten joukko $J$ ja $V(x)$ on lause ''$x$ on valkoinen''. Tämä lause osoittautui epätodeksi, kun Australiasta löydettiin mustia joutsenia. Lauseen $\forall x V(x)$ negaatio $\lnot \forall x V(x)$ voidaan kirjoittaa $\exists x \lnot V(x)$ ja suomentaa ''on olemassa (ainakin yksi) joutsen, joka ei ole valkoinen''. Vastaavasti lauseen $\exists x V(x)$ negaatio $\lnot \exists x V(x)$ eli ''ei ole olemassa valkoista joutsenta'' voidaan lausua ekvivalentissa muodossa $\forall x \lnot V(x)$. Tämä lause voidaan hieman kömpelösti kielentää ''kaikki joutsenet ovat ei-valkoisia''.
+\subsection*{Kvanttorien negaatiot} Tutkitaan lausetta ''kaikki joutsenet ovat valkoisia''. Lause voidaan formalisoida kaikkikvanttorin avulla $\forall x V(x)$, missä perusjoukkona on joutsenten joukko $J$ ja $V(x)$ on lause ''$x$ on valkoinen''. Tämä lause osoittautui epätodeksi, kun Australiasta löydettiin mustia joutsenia. Lauseen $\forall x V(x)$ negaatio $\lnot \forall x V(x)$ voidaan kirjoittaa $\exists x \lnot V(x)$ ja suomentaa ''on olemassa (ainakin yksi) joutsen, joka ei ole valkoinen''. Vastaavasti lauseen $\exists x V(x)$ negaatio $\lnot \exists x V(x)$ eli ''ei ole olemassa valkoista joutsenta'' voidaan lausua ekvivalentissa muodossa $\forall x \lnot V(x)$. Tämä lause voidaan hieman kömpelösti kielentää ''kaikki joutsenet ovat ei-valkoisia''.
 
 %---
 %{\bf Teorialaatikko [Kvanttorien negaatiot].} 
-\fbox{
-\begin{minipage}{12cm}
-{\large \bf Kvanttorien negaatiot}
-
-\medskip
-
+%\fbox{
+%\begin{minipage}{12cm}
+\laatikko{
+{\bf Kvanttorien negaatiot.}
+%\medskip
 Olkoon $P(x)$ avoin lause. Tällöin
 \begin{itemize}
 \item 
@@ -1041,15 +1071,15 @@ lause $\lnot \forall xP(x)$ on loogisesti ekvivalentti lauseen $\exists x\lnot P
 \item
  lause $\lnot \exists xP(x)$ on loogisesti ekvivalentti lauseen $\forall x\lnot P(x)$ kanssa.
 \end{itemize}
-\end{minipage}
+%\end{minipage}
 }
 %---
 
 Saatu kvanttorien negaatioita koskeva tulos muotoillaan joskus myös toisella tavalla. Koska lause $\lnot \forall x V(x)$ on loogisesti ekvivalentti lauseen $\exists x\lnot V(x)$ kanssa, voidaan päätellä, että lause $\forall x V(x)$ on loogisesti ekvivalentti lauseen $\lnot \exists x\lnot V(x)$ kanssa. Vastaava päättely voidaan tehdä myös eksistenssikvanttorin tapauksessa.
 
 
-
-{\bf Esimerkki 5.}
+\begin{esimerkki}
+%{\bf Esimerkki 5.}
 Muodosta lauseen
 \begin{itemize}
 \item[a)] $\forall x \in \R(-x^2 \le 0)$
@@ -1070,12 +1100,14 @@ Lause $\forall x\in \N(2x-3 \le 0)$ on epätosi, sillä esimerkiksi tapauksessa 
 {\bf Vastaus:} a) $\exists x\in \R (-x^2 > 0)$. Negaatio on epätosi. 
 
 b) $\forall x\in \N(2x-3 \le 0)$. Negaatio on epätosi.
+\end{esimerkki}
 
 
+%\newpage
 
-\newpage
+%\section*{Tehtäviä}
 
-\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 
