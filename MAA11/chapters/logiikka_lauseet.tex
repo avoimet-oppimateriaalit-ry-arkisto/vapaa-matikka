@@ -5,7 +5,7 @@ Logiikkaa ja erilaisia päättelyitä käytetään jatkuvasti arkipäivän tilan
 \section{Atomilauseet, konnektiivit ja totuusarvot}
 \label{konnektiivit}
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 Neljä opiskelijaa hakee kesätöihin huvipuistoon. Tutustu heidän hakutietoihinsa. Vastaa kysymyksiin hakijoiden soveltuvuudesta eri tehtäviin.
 
 Hanna (17 v.) on opiskellut kaksi vuotta ammattilukiossa. Opintoihinsa liittyen hän on suorittanut hygieniapassin. Hanna harrastaa tennistä ja kalliokiipeilyä.
@@ -35,7 +35,7 @@ Atomilauseita ajatellaan eräänlaisina totuusmuuttujina, jotka voivat saada kak
 
 Loogisia lauseita voidaan myös muodostaa yhdistelemällä atomilauseita {\em konnektiivien} avulla. Konnektiiveja ovat esimerkiksi \emph{ei}, \emph{ja}, \emph{tai} sekä \emph{jos ... niin}. Näillä sanoilla on myös arkikielessä merkityksiä, jotka joskus eivät täysin vastaa niiden merkitystä logiikassa. Lausetta, jossa on vähintään yksi konnektiivi, kutsutaan {\em yhdistetyksi lauseeksi}. Yhdistetyn lauseen totuusarvoa tutkitaan \emph{totuustaulujen} avulla.
 
-{\bf Negaatio.} Yksinkertaisin esimerkki konnektiivista on looginen ei, jota kutsutaan {\em negaatioksi}. Lauseen $A$ negaatiota merkitään $\lnot A$. Negaation totuusarvo on vastakkainen sille lauseelle, johon negaatio liittyy. Jos $A$ on tosi, niin $\lnot A$ on epätosi. Jos $A$ on epätosi, niin $\lnot A$ on tosi.
+\subsection*{Negaatio} Yksinkertaisin esimerkki konnektiivista on looginen ei, jota kutsutaan {\em negaatioksi}. Lauseen $A$ negaatiota merkitään $\lnot A$. Negaation totuusarvo on vastakkainen sille lauseelle, johon negaatio liittyy. Jos $A$ on tosi, niin $\lnot A$ on epätosi. Jos $A$ on epätosi, niin $\lnot A$ on tosi.
 
 Esimerkiksi lauseen $A$: ''uimahalli on auki'' negaatio on $\lnot A$: ''uimahalli on suljettu''.
 
@@ -71,10 +71,10 @@ $0$ & $1$ \\ \hline
 
 \bigskip
 
-{\bf Konjunktio.} Loogista ja-konnektiivia sanotaan {\em konjunktioksi}. Kahden lauseen $A$ ja $B$ konjunktio $A\land B$ on tosi vain silloin, kun molemmat kyseisistä lauseista ovat tosia. Muussa tapauksessa se on epätosi.
+\subsection*{Konjunktio}
+Loogista ja-konnektiivia sanotaan {\em konjunktioksi}. Kahden lauseen $A$ ja $B$ konjunktio $A\land B$ on tosi vain silloin, kun molemmat kyseisistä lauseista ovat tosia. Muussa tapauksessa se on epätosi.
 
 Esimerkiksi lauseiden $A$: ''olen vaaleatukkainen'' ja $B$: ''olen ruskeasilmäinen'' konjunktio on $A \land B$: ''olen vaaleatukkainen ja ruskeasilmäinen''. 
-
 
 Konjunktion totuustaulu:
 
@@ -93,7 +93,8 @@ $0$ & $0$ & $0$\\
 
 \bigskip
 
-{\bf Disjunktio.} Loogista tai-konnektiivia sanotaan {\em disjunktioksi}. Lauseiden $A$ ja $B$ disjunktio $A\lor B$ on tosi silloin, kun ainakin toinen lauseista $A$ ja $B$ on tosi.
+\subsection*{Disjunktio} Loogista tai-konnektiivia sanotaan {\em disjunktioksi}. Lauseiden $A$ ja $B$ disjunktio $A\lor B$ on tosi silloin, kun ainakin toinen lauseista $A$ ja $B$ on tosi.
+
 
 Esimerkiksi lauseiden $A$: ''henkilöllä on B-ajokortti'' ja $B$: ''henkilöllä on moottoripyöräkortti'' disjunktio on $A \lor B$: ''henkilöllä on B-ajokortti tai hänellä on moottoripyöräkortti''. 
 
@@ -117,7 +118,8 @@ Kannattaa huomata, että arkikielessä sanalla tai on usein eri merkitys kuin lo
 
 Esimerkiksi hampurilaisateriaan voi valita ranskalaiset perunat tai minisalaatin mutta ei molempia. Toisaalta henkilö on vapaa oppivelvollisuudesta, jos hänellä on peruskoulun päästötodistus tai jos koulun aloittamisesta on kulunut kymmenen vuotta. Kumpi tahansa ehto yksinään riittää. Suurimmalla osalla oppivelvollisuudesta vapaista ihmisistä on kummatkin ominaisuudet.
 
-{\bf Esimerkki 1.}
+%{\bf Esimerkki 1.}
+\begin{esimerkki}
 Olkoot lauseet $A$: ''on kesä'', $B$: ''käyn töissä'' ja $C$: ''pelaan jalkapalloliigassa''. Suomenna lauseet
 \begin{itemize}
 \item[a)] $\lnot A$, 
@@ -133,14 +135,17 @@ Olkoot lauseet $A$: ''on kesä'', $B$: ''käyn töissä'' ja $C$: ''pelaan jalka
 \item[c)] Ei ole kesä ja käyn töissä.
 \item[d)] Käyn töissä, tai sitten on kesä ja pelaan jalkapalloliigassa.
 \end{itemize}
+\end{esimerkki}
 
 
-{\bf Formalisointi.}
+\subsection*{Formalisointi}
 {\em Formalisoinnilla} tarkoitetaan luonnollisen kielen, esimerkiksi suomen kielen, lauseiden kääntämistä logiikan kielelle. Tällöin on esimerkiksi valittava, mitkä ovat atomilauseita. Samalla ilmaisulla voi olla useita mielekkäitä formalisointeja. Formalisoinnin tarkoituksena on löytää vastaavuuksia logiikan ja arkielämän tilanteiden välille. Näin voidaan esimerkiksi tutkia erilaisia väitelauseita ja päätelmiä. Formalisointi on tärkeä väline eräiden filosofian ja tietojenkäsittelyn ongelmien tutkimuksessa.
 
 Arkikielen lauseiden kääntäminen logiikan kielelle ei ole aina helppoa ja tulkinnanvaraisuuttakin voi esiintyä. Erityisen ongelmallisia ovat paljon konnektiiveja sisältävät lauseet, koska luonnollisessa kielessä konnektiivien suoritusjärjestystä ei määritellä eikä tavallisesti käytetä sulkeita.
 
-{\bf Esimerkki 2.}  Formalisoi lauseet
+\begin{esimerkki}
+%{\bf Esimerkki 2.}  
+Formalisoi lauseet
 \begin{itemize}
 \item[a)] Liisalla ei ole alibia. 
 \item[b)] Liisalla on alibi tai hänellä ei ole motiivia.
@@ -161,8 +166,10 @@ Formalisoidut lauseet ovat:
 {\bf Vastaus:}
 a) $\lnot A$, b) $A \lor \lnot M$, c) $M\land A$, d) esimerkiksi 
 $\lnot A \land \lnot M$.
+\end{esimerkki}
 
-{\bf Esimerkki 3.}
+%{\bf Esimerkki 3.}
+\begin{esimerkki}
 Lomamatkallaan Liina ja Pasi halusivat osallistua rullaluistelutapahtumaan. He  näkivät tarjouksen: ''Vuokraa 5 eurolla rullaluistimet tai suojat ja kypärä!'' Miten tarjous pitäisi ymmärtää?
 
 {\bf Ratkaisu:}
@@ -170,10 +177,12 @@ Tarjous ei ole yksiselitteinen. Käytetään atomilauseita $R$: ''vuokraan kuulu
 
 {\bf Vastaus:} Tarjouksen voi ymmärtää kahdella tavalla:
 viidellä eurolla voi vuokrata joko pelkästään rullaluistimet tai sitten sekä suojat että kypärän; viidellä eurolla voi vuokrata joko rullaluistimet tai suojat ja niiden lisäksi kypärän.
+\end{esimerkki}
 
 Formalisoinnin jälkeen lauseen totuusarvoa voidaan tutkia esimerkiksi totuustaulujen avulla.
 
-{\bf Esimerkki 4.}
+%{\bf Esimerkki 4.}
+\begin{esimerkki}
 Laadi totuustaulu lauseelle a) $\lnot(A\land \lnot B)$, b) $(A\land B)\lor \lnot C$.
 
 {\bf Ratkaisu:}
@@ -212,11 +221,14 @@ $0$ & $0$ & $0$ & $1$ & $0$ & $1$ \\ \hline
 \end{center}
 
 \end{itemize}
+\end{esimerkki}
 
 
-\newpage
+%\newpage
 
-\section*{Tehtäviä}
+%\section*{Tehtäviä}
+
+\Harjoitustehtavat
 
 \begin{enumerate}
 \item Onko lause atomilause?
@@ -300,12 +312,18 @@ Saarella asuu haltijoita ja menninkäisiä. Turisti tapasi kaksi saarelaista, Hi
 %\section*{Loogiset piirit}
 \item
 Loogisilla piireillä suoritetaan digitaalisissa laitteissa erilaisia loogisia operaatioita. Loogisen piirin toimintaa voidaan kuvata esimerkiksi seuraavalla kaaviolla.
+
+\medskip
+
 \begin{center}
 sisäänmenot \hskip0.5cm looginen piiri \hskip0.5cm
 ulostulo
 
 \includegraphics[width=5cm]{pictures/digi}
 \end{center}
+
+\medskip
+
 Loogisella piirillä on yksi tai useampi sisäänmeno ja
 yksi ulostulo. Sisäänmenojen ja ulostulon signaalin arvo
 voi olla 1 tai 0. Edellisessä tapauksessa johtimessa on
@@ -315,7 +333,7 @@ Loogiset piirit kootaan loogisista porteista. Seuraavassa
 taulukossa on lueteltu loogiset portit, niiden toiminta
 ja toimintaa vastaava looginen konnektiivi.
 
-\newpage
+%\newpage
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -376,7 +394,7 @@ $\lnot A$
 
 \end{center}
 
-\newpage
+%\newpage
 
 
 Esimerkiksi looginen piiri
@@ -486,13 +504,13 @@ Kissoilla lyhyen karvan aiheuttaa dominoiva geeni ja pitkän karvan resessiivine
 
 \end{enumerate}
 
-\newpage
+%\newpage
 
 
 \section{Implikaatio ja ekvivalenssi}
 Tässä kappaleessa esitellään kaksi usein käytettyä konnektiivia: {\em implikaatio} eli {\em looginen seuraus} sekä {\em ekvivalenssi} eli {\em looginen yhtäpitävyys}.
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 
 \begin{center}
 \includegraphics[width=7cm]{pictures/piaget}
@@ -504,13 +522,15 @@ Tarkastellaan oheisen kuvan mukaisia kortteja. Korttien toisella puolella on jok
 
 2) Ongelmana on selvittää, toteuttavatko kortit seuraavan säännön: Kortin toisella puolella on parillinen luku, jos ja vain jos sen toisella puolella on vokaali. Mitkä kortit täytyy vähintään kääntää?
 
-Psykologi Jean Piaget (1896 -- 1980) käytti ensimmäistä kysymystä tutkiessaan nuorten ja aikuisten abstraktia ajattelua\\ ({\tt webspace.ship.edu/cgboer/piaget.html}).
+Psykologi Jean Piaget (1896 -- 1980) käytti ensimmäistä kysymystä tutkiessaan nuorten ja aikuisten abstraktia ajattelua ({\tt webspace.ship.edu/cgboer/piaget.html}).
 
-{\bf Implikaatio}
+\subsection*{Implikaatio}
 
 Loogista jos $A$ niin $B$ -rakennetta sanotaan implikaatioksi. Implikaatiota merkitään $A\to B$. Implikaatiota  kutsutaan toisinaan loogiseksi seu\-rauk\-sek\-si, mutta tämä ilmaisu on hieman tulkinnanvarainen. Sanalla seuraus on nimittäin puhekielessä kaksi sanan loogisesta merkityksestä poikkeavaa mutta tavallisempaa merkitystä. Seuraus voi tarkoittaa esimerkiksi ajallista seurausta, eli asia tapahtuu toisen jälkeen. Sanalla voidaan myös tarkoittaa kausaalista seurausta, eli asia on toisen aiheuttava syy. Logiikassa ei yleensä kiinnitetä huomiota tällaisiin näkökohtiin. Joskus asiat voivat olla toistensa loogisia seurauksia, vaikka niillä ei olisi kausaalisesti mitään tekemistä toistensa kanssa. Esimerkiksi lause ''jos Caesar elää, niin Helsinki sijaitsee Afrikassa'' on logiikan mielessä tosi. 
 
+%\laatikko{
 Looginen implikaatio $A\to B$  määritellään niin, että se on epätosi ainoastaan tapauksessa, jossa $A$ on tosi mutta $B$ ei ole. Kaikissa muissa tapauksissa se on tosi. Siksi logiikassa usein sanotaan, että epätodesta oletuksesta voi päätellä mitä tahansa.
+
 
 Esimerkiksi lauseista $A$: ''Anne on suomalainen'' ja $B$: ''Anne on eurooppalainen'' saadaan implikaation avulla lauseet $A \to B$: ''jos Anne on suomalainen, niin hän on eurooppalainen'' sekä myös $B \to A$: ''jos Anne on eurooppalainen, niin hän on suomalainen''. 
 
@@ -533,7 +553,9 @@ $0$ & $0$ & $1$\\ \hline
 Kappaleessa \ref{monimloog} osoitetaan, että implikaatiota voidaan ajatella lyhennysmerkintänä lauseelle $\lnot A \lor B$, koska implikaatiolla on sama totuustaulu kuin kyseisellä lauseella.
 
 
-{\bf Ekvivalenssi.} Jos sekä $A\to B$ että $B\to A$ ovat tosia lauseita, sanotaan, että lauseet $A$ ja $B$ ovat ekvivalentit, $A \lequiv B$. Ekvivalenssia voi ajatella lyhennysmerkintänä lauseelle $(A\to B) \land (B\to A)$. Intuitiivisesti se tarkoittaa lauseiden $A$ ja $B$ yhtäpitävyyttä (vrt. yhtäsuuruus), eli molemmat lauseet saavat samat totuusarvot.
+\subsection*{Ekvivalenssi}
+Jos sekä $A\to B$ että $B\to A$ ovat tosia lauseita, sanotaan, että lauseet $A$ ja $B$ ovat ekvivalentit, $A \lequiv B$. Ekvivalenssia voi ajatella lyhennysmerkintänä lauseelle $(A\to B) \land (B\to A)$. Intuitiivisesti se tarkoittaa lauseiden $A$ ja $B$ yhtäpitävyyttä (vrt. yhtäsuuruus), eli molemmat lauseet saavat samat totuusarvot.
+
 
 Esimerkiksi lauseiden $A$: ''Pekka menee hammaslääkäriin'' ja $B$: ''Pekan hammasta särkee'' ekvivalenssi on $A \lequiv B$: ''Pekka menee hammaslääkäriin, jos ja vain jos hänen hammastaan särkee''.
 
@@ -555,7 +577,10 @@ $0$ & $0$ & $1$\\ \hline
 
 Ekvivalenssi $A\lequiv B$ voidaan lukea ''$A$, jos ja vain jos $B$''. Tämä ilmaisu esiintyy usein matemaattisessa tekstissä. Voidaan käyttää myös esimerkiksi ilmaisuja ''$A$ silloin ja vain silloin, kun $B$'' ja ''$A$ ja $B$ ovat yhtäpitävät''.
 
-{\bf Esimerkki 1.} Formalisoi lause. Missä tilanteissa lause on tosi? a) On kesä, ja jos on kesä, järvivesi on lämmintä. b) Uin silloin ja vain silloin, kun on kesä ja järvivesi on lämmintä. 
+
+\begin{esimerkki}
+%{\bf Esimerkki 1.}
+Formalisoi lause. Missä tilanteissa lause on tosi? a) On kesä, ja jos on kesä, järvivesi on lämmintä. b) Uin silloin ja vain silloin, kun on kesä ja järvivesi on lämmintä. 
 
 {\bf Ratkaisu:}
 Käytetään atomilauseita $A$: ''on kesä'',
@@ -563,6 +588,8 @@ $B$: ''järvivesi on lämmintä'' ja $C$: ''uin''.
 \begin{itemize}
 \item[a)] Lause on $A \land (A \to B)$. Muodostetaan
 lauseen totuustaulu.
+
+\bigskip
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}\hline
@@ -574,10 +601,14 @@ $0$ & $0$ & $1$ & $0$\\ \hline
 \end{tabular}
 \end{center}
 
+\bigskip
+
 Lause on tosi täsmälleen silloin, kun $A$ ja $B$ ovat
 molemmat tosia eli kun on kesä ja järvivesi on lämmintä.
 \item[b)] Lause on $C \lequiv (A \land B)$. Muodostetaan
 lauseen totuustaulu.
+
+\bigskip
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}\hline
@@ -593,6 +624,8 @@ $0$ & $0$ & $1$ & $0$ & $0$\\
 $0$ & $0$ & $0$ & $0$ & $1$\\ \hline
 \end{tabular}
 \end{center}
+
+\bigskip
 
 Lause on tosi, kun atomilauseet $A$, $B$ ja $C$ ovat
 kaikki tosia, kun $A$ on tosi sekä $B$ ja $C$ ovat
@@ -610,8 +643,10 @@ b) Lause on tosi seuraavissa tilanteissa: on kesä, järvivesi on lämmintä
 ja uin; on kesä, järvivesi ei ole lämmintä enkä ui; ei ole 
 kesä, järvivesi on lämmintä, mutta en ui; ei ole kesä, 
 järvivesi ei ole lämmintä enkä ui.
+\end{esimerkki}
 
-{\bf Esimerkki 2.}
+%{\bf Esimerkki 2.}
+\begin{esimerkki}
 Matti, Seppo ja Teppo ovat epäiltyinä rikoksesta. Heitä kuulusteleva konstaapeli Reinikainen tietää, että syytön puhuu aina totta ja syyllinen valehtelee aina.
 
 Matti sanoi: ''Jos Seppo on syytön, niin minäkin olen.''
@@ -648,15 +683,17 @@ $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $0$ & $0$ \\ \hline
 Koska syytön puhuu totta ja syyllinen valehtelee, on löydettävä totuustaulusta rivi, jolla väitteillä $S\to M$, $S\lequiv T$ ja $M \land \lnot S\land T$ on samat totuusarvot kuin lauseilla $M$, $S$ ja $T$. Tällainen rivi on totuustaulun kolmas rivi. Siten Seppo on yksin syyllinen.
 
 {\bf Vastaus:} Seppo on yksin syyllinen.
+\end{esimerkki}
 
 \bigskip
 
-{\bf Konnektiivien suoritusjärjestys.} 
+\subsection*{Konnektiivien suoritusjärjestys} 
 Loogisten lauseiden lukeminen helpottuu ja tarve sulkeiden käyttämiseen vähenee, jos sovitaan konnektiivien suoritusjärjestyksestä. Nykyään yleisimmin käytetään seuraavaa suoritusjärjestystä, jota noudatetaan myös tässä kirjassa: $\lnot$, $\land$, $\lor$, $\to$, $\lequiv$, ja vasemmalta oikealle.
 
 Suoritusjärjestystä voidaan muuttaa käyttämällä sulkeita. Sulkeita kannattaa myös käyttää aina silloin, kun se helpottaa loogisen lauseen lukemista.
 
-{\bf Esimerkki 3.}
+%{\bf Esimerkki 3.}
+\begin{esimerkki}
 Mikä on lauseiden a) $B \lequiv \lnot A\lor B \land A \to B$, ja  b)  $(B\lequiv \lnot A)\lor B \land (A\to B)$  totuusarvo, kun $A$ on tosi ja $B$ epätosi?   
 
 {\bf Ratkaisu:}
@@ -689,8 +726,10 @@ $1$ & $0$ & $0$ & $1$ & $0$ & $0$ & $1$\\ \hline
 Ensin suoritetaan negaatio. Sen jälkeen tulevat sulkeissa olevat ekvivalenssi ja implikaatio. Konjunktio suoritetaan ennen disjunktiota. Kun $A$ on tosi ja $B$ epätosi, lause on tosi.
 
 {\bf Vastaus:} a) epätosi, b) tosi
+\end{esimerkki}
 
-{\bf Harvinaisempia konnektiiveja (Lisämateriaalia).} Logiikassa ja tietotekniikassa esiintyy myös muita, harvinaisempia loogisia konnektiiveja. Esimerkki tällaisesta on {\em poissulkeva tai} (engl. exclusive or), josta usein käytetään tietotekniikasta tulevaa lyhennettä {\em xor}. Poissulkevan tain totuustaulu on seuraava:
+\subsection*{Harvinaisempia konnektiiveja}% (Lisämateriaalia).}
+Logiikassa ja tietotekniikassa esiintyy myös muita, harvinaisempia loogisia konnektiiveja. Esimerkki tällaisesta on {\em poissulkeva tai} (engl. exclusive or), josta usein käytetään tietotekniikasta tulevaa lyhennettä {\em xor}. Poissulkevan tain totuustaulu on seuraava:
 
 \bigskip
 
@@ -711,11 +750,12 @@ Kuten kappaleessa \ref{konnektiivit} todettiin, arkikielessä sana tai saattaa t
 Lisää loogisia konnektiiveja esitellään harjoitustehtävissä.
 
 
-\newpage
+%\newpage
 
 %\bigskip
 
-\section*{Tehtäviä}
+%\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 \item Olkoot $A$: ''Matti on insinööri'' ja $B$: ''Matilla on hyvä työpaikka''.
@@ -871,7 +911,6 @@ Henkilö saa työpaikan matkamuistomyymälässä silloin ja vain silloin, kun h�
 
 
 \item
-
 Vertaa lauseiden totuusarvoja atomilauseiden $A$, $B$ ja $C$ eri totuusarvoilla. Onko sulkeiden muuttamisella vaikutusta lauseen totuusarvoon?
 
 \begin{itemize}
@@ -910,7 +949,7 @@ Peircen nuoli on konnektiivi, joka luonnollisessa kielessä tarkoittaa samaa kui
 \label{monimloog}
 Seuraavaksi tarkastellaan eräitä usein esiintyviä loogisia rakenteita. Tällaisia rakenteita ovat {\em tautologiat}, {\em loogisesti ekvivalentit} ja {\em ristiriitaiset lauseet}. On tärkeää oppia tunnistamaan nämä rakenteet, koska niitä käytetään usein logiikan yhteydessä.
 
-\section*{Tutkimustehtävä}
+\subsection*{Tutkimustehtävä}
 Turisti tapasi kaksi saarelaista, Hipsun ja Vipsun. Hän kyseli heiltä, kuinka hyvin kala syö, ja sai seuraavat vastaukset.
 \begin{enumerate}
 \item[a)] On pilvistä, tai sitten jos kala ei syö, niin ei ole pilvistä.
@@ -918,10 +957,12 @@ Turisti tapasi kaksi saarelaista, Hipsun ja Vipsun. Hän kyseli heiltä, kuinka 
 \end{enumerate}
 Formalisoi lauseet käyttäen atomilauseita $P$: ''on pilvistä'' ja $K$: ''kala syö''. Tutki totuustaulun avulla, milloin väitteet ovat tosia. Mitä huomaat?
 
-{\bf Tautologia.}
+\subsection*{Tautologia}
 Tautologialla tarkoitetaan lausetta, joka on tosi riippumatta asioiden tilasta. Tällainen lause on esimerkiksi: ''Huominen on aina tulevaisuutta.'' Sanaa tautologia käytetään filosofiassa myös argumenteista, joita ei voi kumota tekemättä ristiriitaisia oletuksia.
 
-{\bf Esimerkki 1.} Osoita, että lause $(A\land B)\lor (\lnot A \lor \lnot B)$ on
+\begin{esimerkki}
+%{\bf Esimerkki 1.} 
+Osoita, että lause $(A\land B)\lor (\lnot A \lor \lnot B)$ on
 tautologia.
 
 {\bf Ratkaisu:}
@@ -941,14 +982,17 @@ $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $1$ \\ \hline
 \end{center}
 
 Koska lause on aina tosi, se on tautologia.
+\end{esimerkki}
 
-{\bf Looginen ekvivalenssi.}  Loogisesti
+\subsection*{Looginen ekvivalenssi}  Loogisesti
 ekvivalentit lauseet saavat samat totuusarvot
 kaikissa tilanteissa. Kaksi lausetta $L_1$ ja
 $L_2$ ovat siis  loogisesti ekvivalentteja, jos niillä
 on samat totuustaulut. Toisin sanoen lause $L_1 \lequiv L_2$ on tautologia.
 
-{\bf Esimerkki 2.} Osoita, että lauseet $A\to B$ ja $\lnot A \lor B$ ovat loogisesti
+\begin{esimerkki}
+%{\bf Esimerkki 2.}
+ Osoita, että lauseet $A\to B$ ja $\lnot A \lor B$ ovat loogisesti
 ekvivalentit.
 
 {\bf Ratkaisu:}
@@ -967,6 +1011,7 @@ $0$ & $0$ & $1$ & $1$ & $1$  \\ \hline
 
 Koska lauseiden $A\to B$ ja $\lnot A \lor B$ totuusarvot
 ovat aina samat, lauseet ovat loogisesti ekvivalentit.
+\end{esimerkki}
 
 {\em Kolmannen poissulkevan laki} sanoo, että kaikki lauseet ovat joko tosia tai epätosia. Formaalilla kielellä kolmannen poissulkevan laki tarkoittaa, että lause $A \lor \lnot A$ on tautologia. Tämä voidaan nähdä seuraavasta totuustaulusta:
 
@@ -983,10 +1028,11 @@ $0$ & $1$ & $1$\\ \hline
 \bigskip
 
 
-{\bf Moniarvoiset logiikat (lisämateriaalia).}
+\subsection*{Moniarvoiset logiikat}% (lisämateriaalia).}
 Lauseen $A \lor \lnot A$ tautologisuus liittyy klassisen logiikan kaksiarvoisuuteen. Voidaan ajatella myös sellaisia päättelymalleja, joissa lause $A \lor \lnot A$ ei ole tautologia. Esimerkki tällaisesta on {\em kolmiarvoinen logiikka}, jossa mahdollisia totuusarvoja ovat tosi, epätosi ja epävarma.  Toinen esimerkki on niin kutsuttu {\em sumean logiikka}, jossa on äärettömän monta totuusarvoa. Erilaiset päättelyjärjestelmät eivät kuitenkaan kumoa toisiaan, vaan logiikkaa sovellettaessa käytetään kuhunkin tilanteeseen sopivaa päättelyjärjestelmää. Esimerkiksi kolmiarvoinen logiikka soveltuu tilanteisiin, joissa käytössä oleva informaatio ajatellaan epätäydelliseksi.
 
-{\bf Ristiriitainen lause.}
+
+\subsection*{Ristiriitainen lause}
 Lausetta, joka ei toteudu missään tilanteessa, kutsutaan loogisesti ristiriitaiseksi. Lauseen ristiriitaisuutta voidaan jälleen tutkia totuustaulun avulla. Loogisesti ristiriitaisen lauseen negaatio on tautologia. 
 
 Yksinkertaisin esimerkki ristiriitaisesta lauseesta on lause $A\land \lnot A$. Sen totuustaulu on seuraava:
@@ -1004,7 +1050,7 @@ $0$ & $1$ & $0$\\ \hline
 \bigskip
 
 
-{\bf Päättelysääntöjä.} Logiikassa esiintyy monia hyödyllisiksi havaittuja päättelysääntöjä, joille on annettu nimi. Nämä päättelysäännöt ovat esimerkkejä tautologioista, ja niiden tautologisuus voidaan osoittaa esimerkiksi totuustaulua käyttämällä.
+\subsection*{Päättelysääntöjä} Logiikassa esiintyy monia hyödyllisiksi havaittuja päättelysääntöjä, joille on annettu nimi. Nämä päättelysäännöt ovat esimerkkejä tautologioista, ja niiden tautologisuus voidaan osoittaa esimerkiksi totuustaulua käyttämällä.
 
 Tärkeitä päättelysääntöjä ovat esimerkiksi {\em De Morganin lait}
 \[
@@ -1029,6 +1075,10 @@ Matematiikassa tärkeä todistusmenetelmä, niin sanottu käänteinen todistus, 
 
 Seuraavaan taulukkoon on koottu edellisten lisäksi muutamia muita tunnetuimpia päättelysääntöjä: %***********
 
+\bigskip
+
+\laatikko{
+%\begin{center}
 \begin{tabular}{|l|c|}
 \hline
 {\bf Päättelysääntöjä} & \\\hline
@@ -1040,8 +1090,13 @@ Seuraavaan taulukkoon on koottu edellisten lisäksi muutamia muita tunnetuimpia 
 {\em Modus tollens} & $((A\to B) \land \lnot B) \to \lnot A$ \\\hline
 {\em Reductio ad absurdum} & $(\lnot A \to (B \land \lnot B))\to A$\\\hline
 \end{tabular}
+%\end{center}
+}
 
-{\bf Esimerkki 3.}
+\bigskip
+
+%{\bf Esimerkki 3.}
+\begin{esimerkki}
 Esitä  sanallinen muotoilu a) De Morganin 1. laille
 \[
 \lnot (A\land B) \lequiv \lnot A \lor \lnot B,
@@ -1056,8 +1111,11 @@ b) modus tollens -päättelysäännölle
 a) Jos $A$ ja $B$ ei ole tosi, niin $A$ ei ole tosi tai $B$ ei ole tosi. Jos $A$ ei ole tosi tai $B$ ei ole tosi, niin $A$ ja $B$ ei ole tosi.
 
 b) Jos $B$ on $A$:n looginen seuraus ja $B$ ei ole tosi, niin $A$ ei ole tosi.
+\end{esimerkki}
 
-{\bf Esimerkki 4.}
+
+%{\bf Esimerkki 4.}
+\begin{esimerkki}
 Osoita kontraposition laki oikeaksi totuustaulun avulla.
 
 {\bf Ratkaisu:} 
@@ -1066,6 +1124,7 @@ Muodostetaan totuustaulu lauseille  $A\to B$  ja  $\lnot B \to \lnot A$.
 \bigskip
 
 \begin{center}
+
 \begin{tabular}{|c|c|c|c|c|c|}\hline
 $A$ & $B$ &  $A\to B$ & $\lnot A$  & $\lnot B$ & $\lnot B \to \lnot A$ \\ \hline
 $1$ & $1$ & $1$ & $0$ & $0$ & $1$\\ 
@@ -1073,14 +1132,17 @@ $1$ & $0$ & $0$ & $0$ & $1$ & $0$\\
 $0$ & $1$ & $1$ & $1$ & $0$ & $1$\\
 $0$ & $0$ & $1$ & $1$ & $1$ & $1$\\ \hline
 \end{tabular}
+
 \end{center}
 
 \bigskip
 
 Koska lauseiden $A\to B$ ja $\lnot B \to \lnot A$ totuusarvot ovat samat kaikilla atomilauseiden $A$ ja $B$ totuusarvoilla, lauseet ovat loogisesti ekvivalentit.
+\end{esimerkki}
 
 
-{\bf Esimerkki 5.} 
+%{\bf Esimerkki 5.} 
+\begin{esimerkki}
 Osoita ilman totuustauluja, että lauseet  a) $\lnot(A \land \lnot B)$  ja  $\lnot A \lor B$,    b)  
 $\lnot C\to A \lor B$ ja $\lnot A \land \lnot B \to C$ ovat loogisesti ekvivalentit.
 
@@ -1095,6 +1157,8 @@ $\lnot A \lor \lnot (\lnot B)$ & kaksoisnegaation laki \\
 $\lnot A \lor B$ & \\
 \end{tabular}
 
+\bigskip
+
 Lauseet $\lnot(A \land \lnot B)$  ja  $\lnot A \lor B$ ovat loogisesti ekvivalentit.
 
 b)
@@ -1106,14 +1170,19 @@ $\lnot (A \lor B) \to C$ & De Morganin laki\\
 $\lnot A \land \lnot B \to C$
 \end{tabular}
 
+\bigskip
+
 Lauseet $\lnot C\to A \lor B$ ja $\lnot A \land \lnot B \to C$ ovat loogisesti ekvivalentit.
+
+\end{esimerkki}
 
 %\bigskip
 
-\newpage
+%\newpage
 
 
-\section*{Tehtäviä}
+%\section*{Tehtäviä}
+\Harjoitustehtavat
 
 \begin{enumerate}
 \item Tutki, onko lause tautologia.
