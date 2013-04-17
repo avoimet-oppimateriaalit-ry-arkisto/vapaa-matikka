@@ -28,8 +28,26 @@ Alkion $x$ kuulumista joukkoon havainnollistetaan usein niin kutsutun {\em Venn-
 
 %{\bf KUVA}
 
+%%  Kuva s. 54
+
 \begin{center}
-\includegraphics[width=6cm]{pictures/venn}
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+%\fill[red!60,outline=red] (3,2.47) circle (2);
+\fill[fill=none,outline=black] (3,2.47) circle (2);
+%\begin{scope}
+%\pgfsetfillopacity{0.5}
+%\fill[blue,outline=blue] (5,2.47) circle (2);
+\fill[fill=none,outline=black] (5,2.47) circle (2);
+%\end{scope}
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{black}{\LARGE $B$}};
+\coordinate [label=60:\textcolor{black}{\LARGE $x$}] (x) at (5.6,3);
+\fill[black] (x) circle (.08);
+\end{tikzpicture}
+
+%\includegraphics[width=6cm]{pictures/venn}
 \end{center}
 
 Jos kaikki joukon $A$ alkiot ovat myös joukon $B$ alkioita, niin joukkoa $A$ kutsutaan joukon $B$ {\em osajoukoksi}. Osajoukkoa merkitään $A\subset B$. 
@@ -37,7 +55,24 @@ Jos kaikki joukon $A$ alkiot ovat myös joukon $B$ alkioita, niin joukkoa $A$ ku
 %{\bf KUVA}
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/osajoukko}
+
+%%  Kuva s. 55
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+%\fill[red!60,outline=red] (4,2.47) circle (2);
+\fill[fill=none,outline=black] (4,2.47) circle (2);
+%\begin{scope}
+%\pgfsetfillopacity{0.5}
+%\fill[blue,outline=blue] (4.2,2.6) circle (1);
+\fill[fill=none,outline=black] (4.2,2.6) circle (1);
+%\end{scope}
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (4.4,2.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (3.4,1.2) node {\textcolor{black}{\LARGE $B$}};
+\end{tikzpicture}
+
+%\includegraphics[width=6cm]{pictures/osajoukko}
 \end{center}
 
 Jos $A\subset B$ ja $B\subset A$, niin  $A$ ja $B$ ovat sama joukko. Tällöin merkitään $A=B$. Samuus tarkoittaa sitä, että kyseisillä joukoilla on samat alkiot. % {\bf (toistoa, mitä pitäisikö siirtää aikaisemmaksi)}
@@ -79,7 +114,19 @@ ja akaalaiset pirkanmaalaisia, niin lause on tosi.
 Ne perusjoukon $X$ alkiot, jotka eivät kuulu joukkoon $A$, muodostavat joukon $A$ {\em komplementin}. Joukon $A$ komplementtia merkitään $\complement A$.
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/komplementti}
+%%  Ylempi kuva s. 56
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=gray,outline=black] (0,0) rectangle (8,4.94);
+\fill[white,outline=black] (3,2.47) circle (2);
+\draw (.6,4.3) node {\textcolor{white}{\LARGE $X$}};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\coordinate [label=right:\textcolor{white}{\LARGE $\complement A$}] (x) at (5.6,2);
+\end{tikzpicture}
+
+
+
+%\includegraphics[width=6cm]{pictures/komplementti}
 \end{center}
 
 Perusjoukon $X$ komplementti on {\em tyhjä joukko}, jota merkitään $\emptyset$. Tyhjässä joukossa ei ole alkioita. Erityisesti tyhjä joukko on minkä tahansa joukon osajoukko.
@@ -89,7 +136,23 @@ Perusjoukon $X$ komplementti on {\em tyhjä joukko}, jota merkitään $\emptyset
 Joukkojen $A$ ja $B$ {\em leikkaus} $A\cap B$ on niiden perusjoukon alkioiden joukko, jotka kuuluvat sekä joukkoon $A$ että joukkoon $B$. Leikkausta voidaan havainnollistaa Venn-diagrammilla:
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/leikkaus}
+%%  Alempi kuva s. 56
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\begin{scope}
+\clip (3,2.47) circle (2);
+\fill[gray,outline=black] (5,2.47) circle (2);
+\end{scope}
+\fill[fill=none,outline=black] (3,2.47) circle (2);
+\fill[fill=none,outline=black] (5,2.47) circle (2);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{black}{\LARGE $B$}};
+\coordinate [label=90:\textcolor{white}{\LARGE $A\cap B$}] (x) at (4,2.2);
+\end{tikzpicture}
+
+%\includegraphics[width=6cm]{pictures/leikkaus}
 \end{center}
 
 %{\bf KUVA}
@@ -98,7 +161,20 @@ Joukkojen $A$ ja $B$ {\em yhdiste} $A\cup B$ muodostuu niistä perusjoukon alkio
 Joukkojen yhdistettä voidaan jälleen havainnollistaa Venn-diagrammin avulla:
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/yhdiste}
+%%  Ylempi kuva s. 57
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=gray,outline=black] (3,2.47) circle (2);
+\fill[fill=gray,outline=black] (5,2.47) circle (2);
+\fill[fill=none,outline=black] (3,2.47) circle (2);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{white}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{white}{\LARGE $B$}};
+\coordinate [label=90:\textcolor{white}{\LARGE $A\cup B$}] (x) at (3.2,2.8);
+\end{tikzpicture}
+
+%\includegraphics[width=6cm]{pictures/yhdiste}
 \end{center}
 
 %{\bf KUVA}
@@ -108,7 +184,19 @@ Joukkojen yhdistettä voidaan jälleen havainnollistaa Venn-diagrammin avulla:
 Joukkojen $A$ ja $B$ {\em erotuksella} tarkoitetaan joukkoa, joka jää jäljelle, kun joukosta $A$ poistetaan kaikki joukon $B$ alkiot. Tätä joukkoa merkitään $A\setminus B$. 
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/erotus}
+%%  Alempi kuva s. 57
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=gray,outline=black] (3,2.47) circle (2);
+\fill[fill=white,outline=black] (5,2.47) circle (2);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{white}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{black}{\LARGE $B$}};
+\coordinate [label=90:\textcolor{white}{\LARGE $A\setminus B$}] (x) at (2,2.2);
+\end{tikzpicture}
+
+%\includegraphics[width=6cm]{pictures/erotus}
 \end{center}
 
 
@@ -143,7 +231,23 @@ seuraa uutisia säännöllisesti kummastakin lähteestä. Havainnollista tilanne
 
 %[Venn-diagrammi]		
 \begin{center}
-\includegraphics[width=6cm]{pictures/venn2}
+
+
+%%  Kuva s. 58....onko tämä kuten pitää?
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=none,outline=black] (3,2.47) circle (2);
+\begin{scope}
+\pgfsetfillopacity{0.5}
+\fill[fill=none,outline=black] (5,2.47) circle (2);
+\end{scope}
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{black}{\LARGE $B$}};
+\end{tikzpicture}
+
+%\includegraphics[width=6cm]{pictures/venn2}
 \end{center}
 
 Perusjoukko $X$ sisältää kaikki koulun opiskelijat. Joukkoon $A$ kuuluvat opiskelijat, jotka seuraavat uutisia sanomalehdistä, ja joukkoon $B$ opiskelijat, jotka seuraavat uutisia Internetistä.
@@ -186,7 +290,21 @@ Osoita Venn-diagrammia käyttäen, että $\compl A \cap B = B \setminus A$.
 %[Venn-diagrammi, jossa on esitetty $\compl A \cap B$]
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/esim4-3_2b}
+%%  Kuva s. 59
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=gray!50] (0,0) rectangle (8,4.94);
+\fill[fill=gray,outline=black] (5,2.47) circle (2);
+\fill[fill=white,outline=black] (3,2.47) circle (2);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{white}{\LARGE $B$}};
+\coordinate [label=90:\textcolor{white}{\LARGE $\complement A\cap B$}] (x) at (6,2.2);
+\coordinate [label=90:\textcolor{black}{\LARGE $\complement A$}] (y) at (.9,.5);
+\end{tikzpicture}
+
+
+%\includegraphics[width=6cm]{pictures/esim4-3_2b}
 \end{center}
 
 Joukon $A$ komplementtijoukko $\compl A$ on niiden perusjoukon alkioiden joukko, jotka eivät kuulu joukkoon $A$, ja $\compl A\cap B$ on tämän joukon leikkaus joukon $B$ kanssa.
@@ -194,7 +312,21 @@ Joukon $A$ komplementtijoukko $\compl A$ on niiden perusjoukon alkioiden joukko,
 %[Venn-diagrammi, jossa on esitetty $B \setminus A$]
 
 \begin{center}
-\includegraphics[width=6cm]{pictures/esim4-3_2}
+
+%%  Kuva s. 60
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=gray,outline=black] (5,2.47) circle (2);
+\fill[fill=white,outline=black] (3,2.47) circle (2);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{white}{\LARGE $B$}};
+\coordinate [label=90:\textcolor{white}{\LARGE $B\setminus A$}] (x) at (5.9,2.1);
+\end{tikzpicture}
+
+
+%\includegraphics[width=6cm]{pictures/esim4-3_2}
 \end{center}
 
 Joukko $B \setminus A$ sisältää ne joukon $B$ alkiot, jotka eivät kuulu joukkoon $A$.
@@ -250,7 +382,22 @@ Ilmaise joukkomerkintöjä käyttäen kuvan
 \end{itemize}
 
 \begin{center}
-\includegraphics[width=10cm]{pictures/mika2}
+
+%%  Kuva s. 62
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=none,outline=black] (3,2.47) circle (2);
+\begin{scope}
+\pgfsetfillopacity{0.5}
+\fill[fill=none,outline=black] (5,2.47) circle (2);
+\end{scope}
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.5,1.2) node {\textcolor{black}{\LARGE $A$}};
+\draw (5.5,1.2) node {\textcolor{black}{\LARGE $B$}};
+\end{tikzpicture}
+
+%\includegraphics[width=10cm]{pictures/mika2}
 \end{center}
 %PICXX2
 
@@ -442,18 +589,41 @@ Onko lause tosi?
 \item[e)] $B \cap \compl B = B$
 \end{itemize}
 
-\item Ilmaise joukkomerkintöjä käyttäen kuvan
+\item Merkitään kuvan ympyröiden sisään jääviä alueita kirjaimilla A, B ja C. Ilmaise joukkomerkintöjä käyttäen alueiden A, B ja C avulla kuvan
 \begin{itemize}
-\item[a)] punainen alue,
-\item[b)] sininen alue,
-\item[c)] vihreä alue,
-\item[d)] keltainen alue.
+\item[a)] alue D,
+\item[b)] alue E,
+\item[c)] alue F,
+\item[d)] alue G.
 \end{itemize}
 
+\medskip
+
 \begin{center}
-\includegraphics[width=10cm]{pictures/mika3}
+% Kuva s. 66, MUUTA TEHTÄVÄ VASTAAMAAN KUVAA
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=none,outline=black] (3.3,3.2) circle (1.4);
+\fill[fill=none,outline=black] (4.7,3.2) circle (1.4);
+\fill[fill=none,outline=black] (4,1.7) circle (1.4);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (2.4,3.4) node {\LARGE $A$};
+\draw (5.6,3.4) node {\LARGE $B$};
+\draw (4,.8) node {\LARGE $C$};
+\draw (4,3.6) node {$D$};
+\draw (4,2.6) node {$E$};
+\draw (4,1.5) node {$F$};
+\draw (3.2,2.2) node {$G$};
+\draw (4.8,2.2) node {$G$};
+\end{tikzpicture}
+
+
+%\includegraphics[width=10cm]{pictures/mika3}
 \end{center}
 %PICXX3
+
+\medskip
 
 \item Tarkastellaan kaksinumeroisia luonnollisia lukuja $10,11, \ldots ,98,99$.
 \begin{itemize}
@@ -538,7 +708,22 @@ Jouk\-ko-opin soveltamisen kannalta on usein hyödyllistä {\em samastaa} kesken
 
 %{\bf kuva}.
 \begin{center}
-\includegraphics[width=6cm]{pictures/kuuluu}
+% Kuva s. 70
+
+\begin{tikzpicture}[outline/.style={draw=#1,thick}]
+\draw[fill=none] (0,0) rectangle (8,4.94);
+\fill[fill=none,outline=black] (4,2.47) circle (2);
+\draw (.6,4.3) node {\LARGE $X$};
+\draw (3.4,1.2) node {\textcolor{black}{\LARGE $P$}};
+\coordinate [label=60:\textcolor{black}{\LARGE $x$}] (x) at (4.2,3);
+\fill[black] (x) circle (.08);
+\coordinate [label=100:\textcolor{black}{\LARGE $y$}] (y) at (1.2,1);
+\fill[black] (y) circle (.08);
+\end{tikzpicture}
+
+
+
+%\includegraphics[width=6cm]{pictures/kuuluu}
 \end{center}
 
 Jos predikaatit ajatellaan perusjoukon osajoukoiksi, niin joukko-opil\-li\-set operaatiot voidaan tulkita loogisina operaatioina. Kahden predikaatin $P$ ja $Q$ konjunktiota $P\land Q$ vastaa joukko-opissa leikkaus $P\cap Q$, disjunktiota $P \lor Q$ yhdiste $P\cup Q$ ja negaatiota $\lnot P$ komplementtijoukko $\complement P$. 
