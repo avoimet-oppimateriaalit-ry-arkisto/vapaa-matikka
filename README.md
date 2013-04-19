@@ -1,6 +1,8 @@
 ## Vapaa matikka
 
-(Ohjeet kirjoittajille ym.: ks. [wiki](https://github.com/avoimet-oppimateriaalit-ry/vapaa-matikka/wiki).)
+> Valmiiksi käännetyt pdf-versiot: / Precompiled pdf files: http://goo.gl/7OikD
+
+> Ohjeet kirjoittajille ym.: ks. [wiki](https://github.com/avoimet-oppimateriaalit-ry/vapaa-matikka/wiki).
 
 Avoimesti (CC BY 3.0) lisensoitu lukion pitkän matematiikan kirjasarja.
 
