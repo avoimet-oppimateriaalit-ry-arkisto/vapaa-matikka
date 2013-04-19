@@ -50,7 +50,8 @@ BIBFILES = $(patsubst %,%.bib,\
 
 ## Add \input'ed or \include'd files to $(PDFTARGETS) dependencies.
 CONTENTTEX= $(wildcard content/*.tex)
-INCLUDEDTEX = $(wildcard *.tex config/*.tex) $(CONTENTTEX)
+APPENDTEX= $(wildcard appendices/*.tex)
+INCLUDEDTEX = $(wildcard ../commons/*.tex) $(CONTENTTEX) $(APPENDTEX)
 
 ## grab a version number from the repository (if any) that stores this.
 ## * REVISION is the current revision number (short form, for inclusion in text)
@@ -87,7 +88,7 @@ pdf: $(PDFTARGETS)
 view: $(PDFTARGETS)
 	$(PDFVIEWER) $(PDFTARGETS)
 
-$(TARGET).ind: $(CONTENTTEX)
+$(TARGET).ind: $(CONTENTTEX) $(APPENDTEX)
 	makeindex $(TARGET)
 
 # define a \Revision{} command you can include in your document's preamble.
