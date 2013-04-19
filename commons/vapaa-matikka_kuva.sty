@@ -1,0 +1,12 @@
+\ProvidesPackage{../commons/vapaa-matikka_kuva}
+
+\newenvironment{kuva}
+{
+	\VerbatimOut{kuva-tmp.py}
+}
+{
+	\endVerbatimOut
+	\immediate\write18{python ../commons/kuva/luo_kuvaskripti.py kuva-tmp.py kuva-tmp2.py}
+	\immediate\write18{python kuva-tmp2.py}
+	\input{kuva-tmp.out}
+}
