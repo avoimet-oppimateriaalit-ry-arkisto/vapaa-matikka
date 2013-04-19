@@ -14,7 +14,25 @@ $|f(x)|=g(x)$
 KIITOS!}
 
 
-% Lukusuora kuva tähän alkuun, tai jotain
+% Rumasti toteutettu, mutta toistaiseksi toimii.
+% Korjatkaa, jos joku saa siistimmin aikaiseksi.
+\begin{lukusuora}{-5}{5}{10}
+	\lukusuorapiste{0}{$0$}
+	\lukusuorapiste{3}{}
+	\lukusuorapiste{-3}{}
+	\lukusuoraalanimi{3.1}{$a$}
+	\lukusuoraalanimi{-3.3}{$-a$}
+	\lukusuoranimi{1.5}{$\overbrace{\hspace{27 mm}}^{|a|}$}
+	\lukusuoranimi{-1.5}{$\overbrace{\hspace{27 mm}}^{|-a|}$}
+	
+	\lukusuorapiste{2}{}
+	\lukusuorapiste{-2}{}
+	\lukusuoraalanimi{-2.3}{$-2$}
+	\lukusuoraalanimi{2.1}{$2$}
+	\lukusuoraalanimi{1}{$\underbrace{\hspace{18 mm}}_{|2|=2}$}
+	\lukusuoraalanimi{-1}{$\underbrace{\hspace{18 mm}}_{|-2|=2}$}
+\end{lukusuora}
+
 
 
 Itseisarvo kuvaa lukusuoralla luvun etäisyyttä nollasta. Positiivisen luvun itseisarvo on luku itse ja negatiivisen luvun itseisarvo on luvun vastaluku. Nollan itseisarvo on nolla.
@@ -108,12 +126,9 @@ Kun $-4<x<4$, niin $x^2-16<0$. Tällöin \\
  $|x^2-16|+3x =x^2-16+3x=x^2+3x-16$ \\
  \\
  Siis:
- 
 			$|x^2-16|+3x= \left \{ \begin{array}{rcl}
 			-x^2+3x+16 & , kun & -4<x<4 \\
 			x^2+3x-16 & , kun & x\leq-4 \ \ tai \ \ x\geq4
 			\end{array}\right.$
- 
- 
 
 \end{esimerkki}
