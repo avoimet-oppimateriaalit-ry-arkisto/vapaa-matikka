@@ -1,0 +1,93 @@
+ 
+\section{Ulkoasukokeiluja}
+
+\mdfdefinestyle{laatikkotyyliB}{
+  userdefinedwidth=0.72\paperwidth, % FIXME: controversial
+  leftmargin=0pt,
+  innermargin=0pt,
+  innerleftmargin=5pt,
+  rightmargin=0pt,
+  innerrightmargin=0pt,
+  middlelinewidth=0pt,
+  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
+  innertopmargin=3mm,
+  innerbottommargin=3mm,
+  needspace=3\baselineskip,
+}
+
+\mdfdefinestyle{laatikkotyyliC}{
+  userdefinedwidth=0.72\paperwidth, % FIXME: controversial
+  leftmargin=0pt,
+  innermargin=0pt,
+  innerleftmargin=50pt,
+  rightmargin=0pt,
+  innerrightmargin=0pt,
+  middlelinewidth=0pt,
+  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
+  innertopmargin=3mm,
+  innerbottommargin=3mm,
+  needspace=3\baselineskip,
+}
+
+\newcommand{\laatikkoB}[1]{%
+%\begin{\widepar}
+\ifthispageodd
+{
+  \begin{mdframed}[style=laatikkotyyliB]
+    #1
+  \end{mdframed}
+}
+{
+  \begin{mdframed}[style=laatikkotyyliC]
+    #1
+  \end{mdframed}
+}
+%\end{widepar}
+}
+
+\newcommand{\laatikkoD}[1]{%
+%\begin{\widepar}
+  \begin{mdframed}[style=laatikkotyyliB]
+    \begin{mdframed}[style=laatikkotyyliB]
+      #1
+    \end{mdframed}
+  \end{mdframed}
+%\end{widepar}
+}
+
+\laatikkoB{
+\textbf{Itseisarvon ominaisuuksia}\\ \\
+	\begin{tabular}{l l}
+		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
+		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
+		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
+		$|\frac{a}{b}|=\frac{|a|}{|b|}$ & Osamaarän itseisarvo on itseisarvojen osamäärä
+
+	\end{tabular}
+}
+
+\newpage
+
+\laatikkoB{
+\textbf{Itseisarvon ominaisuuksia}\\ \\
+	\begin{tabular}{l l}
+		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
+		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
+		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
+		$|\frac{a}{b}|=\frac{|a|}{|b|}$ & Osamaarän itseisarvo on itseisarvojen osamäärä
+
+	\end{tabular}
+}
+
+\newpage
+
+\laatikkoD{
+\textbf{Itseisarvon ominaisuuksia}\\ \\
+	\begin{tabular}{l l}
+		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
+		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
+		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
+		$|\frac{a}{b}|=\frac{|a|}{|b|}$ & Osamaarän itseisarvo on itseisarvojen osamäärä
+
+	\end{tabular}
+}
