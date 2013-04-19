@@ -1,1 +1,218 @@
 \section{Itseisarvo}
+
+
+\laatikko{
+KIRJOITA TÄHÄN LUKUUN
+
+\begin{itemize}
+\item itseisarvon määritelmä (paloittain määritelty muoto)
+\item geometrinen tulkinta lukusuoralla
+\item itseisarvoyhtälöistä tyyppiä $|f(x)|=a$, $|f(x)|=|g(x)|$,
+$|f(x)|=g(x)$
+\end{itemize}
+
+KIITOS!}
+
+
+\qrlinkki{http://opetus.tv/maa/maa4/itseisarvo/}{Opetus.tv: Itseisarvolauseke ja itseisarvon ominaisuuksia}
+
+
+% Rumasti toteutettu, mutta toistaiseksi toimii.
+% Korjatkaa, jos joku saa siistimmin aikaiseksi.
+\begin{lukusuora}{-5}{5}{10}
+	\lukusuorapiste{0}{$0$}
+	\lukusuorapiste{3}{}
+	\lukusuorapiste{-3}{}
+	\lukusuoraalanimi{3.1}{$a$}
+	\lukusuoraalanimi{-3.3}{$-a$}
+	\lukusuoranimi{1.5}{$\overbrace{\hspace{27 mm}}^{|a|}$}
+	\lukusuoranimi{-1.5}{$\overbrace{\hspace{27 mm}}^{|-a|}$}
+	
+	\lukusuorapiste{2}{}
+	\lukusuorapiste{-2}{}
+	\lukusuoraalanimi{-2.3}{$-2$}
+	\lukusuoraalanimi{2.1}{$2$}
+	\lukusuoraalanimi{1}{$\underbrace{\hspace{18 mm}}_{|2|=2}$}
+	\lukusuoraalanimi{-1}{$\underbrace{\hspace{18 mm}}_{|-2|=2}$}
+\end{lukusuora}
+
+
+
+Itseisarvo kuvaa lukusuoralla pisteen etäisyyttä nollasta. Positiivisen luvun itseisarvo on luku itse ja negatiivisen luvun itseisarvo on luvun vastaluku. Nollan itseisarvo on nolla.
+
+
+\laatikko{\textbf{Itseisarvon määritelmä}\\
+$|x|= \left\{ \begin{array}{rcl}
+		x & , kun & x \geq 0 \\
+		-x & , kun & x < 0
+		\end{array}\right.$}
+
+\begin{esimerkki}
+Esitä ilman itseisarvomerkkejä
+	\begin{alakohdat}
+		\alakohta{$|3-\pi|$}
+		\alakohta{$|x-3|$}
+	\end{alakohdat}
+	\textbf{Ratkaisu}
+	\begin{alakohdat}
+		\alakohta{Koska $3-\pi\approx-0,14<0$, niin $|3-\pi|=-(3-\pi)=\pi-3$}
+		\alakohta{Koska $x-3\geq 0$, kun $x\geq3$, niin\\
+			$|x-3|= \left \{ \begin{array}{rcl}
+			x-3 & , kun & x\geq3 \\
+			-x+3 & , kun & x<3
+			\end{array}\right.$
+		}
+	\end{alakohdat}
+\end{esimerkki}
+
+\vspace{10 mm}
+
+\laatikko{
+\textbf{Itseisarvon ominaisuuksia}\\ \\
+	\begin{tabular}{l l}
+		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
+		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
+		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
+		$|ab|=|a||b|$ & Tulon itseisarvo \\
+		$|\frac{a}{b}|=\frac{|a|}{|b|}$ & Osamaarän itseisarvo
+
+	\end{tabular}
+}
+
+\begin{esimerkki}
+	Esitä lauseke $|x^2-16|+3x$ ilman itseisarvomerkkejä.\\
+	\textbf{Ratkaisu} \\
+	Tutkitaan ensin lausekkeen $x^2-16$ merkit.
+	
+	\begin{align*}
+		\text{Nollakohdat: } \qquad	x^2-16 &=0 \\
+			x^2 &=16 \\
+			x &=\pm\sqrt{16} \\
+			x &=\pm 4
+	\end{align*}
+	
+	Lausekkeen $x^2-16$ kuvaaja on ylöspäin aukeneva paraabeli, joka leikkaa x-akselin kohdissa $-4$ ja $4$.
+	
+% Käyttö:
+% \begin{lukusuora}{-1}{1}{10}
+% \lukusuoraparaabeli{0.2}{0.8}{1}
+% \lukusuoravalisa{0.2}{0.8}{x}{y}
+% \lukusuoravaliaa{-0.5}{-0.3}{a}{b}
+% \lukusuorapiste{0}{$x^2+y^2$}
+% \lukusuoranimi{0.5}{$+$}
+% \lukusuoraalanimi{0.05}{$-$}
+% \end{lukusuora}
+% 
+% luo lukusuoran joka piirretään 10 pituisena, käyttää sisäisesti
+% koordinaatteja -1..1, ja jolla näytetään väli [0.2, 0.8[ ja
+% väli ]-0.5, -0.3[ nimillä [x, y[ ja ]a, b[. Näyttää pisteen
+% 0 nimellä $x^2+y^2$ ja piirtää paraabelin jonka nollakohdat ovat
+% 0.2 ja 0.8 ja huippu 1. Lisäksi se laittaa +-merkin suoran yläpuolelle
+% kohtaan 0.5 ja --merkin suoran alapuolelle kohtaan 0.05.
+%
+% Mielivaltaisia kuvaajia saa lukusuoralle lukusuorakuvaaja-komennolla.
+% Nuolia lukujen välille saa lukusuoranuoli-komennolla.
+
+
+\begin{lukusuora}{-10}{10}{8}
+	\lukusuoraparaabeli{-4}{4}{-1.5}
+	\lukusuorapiste{-4}{$-4$}
+	\lukusuorapiste{4}{$4$}
+	\lukusuoranimi{-6}{$+$}
+	\lukusuoranimi{6}{$+$}
+	\lukusuoraalanimi{0}{$-$}
+\end{lukusuora}
+
+Kun $-4<x<4$, niin $x^2-16<0$. Tällöin \\
+ $|x^2-16|+3x = -(x^2-16)+3x = -x^2+16+3x=-x^2+3x+16$. \\
+ \\
+ Kun $x\leq-4$ tai $x\geq4$, on $x^2-16\geq0$ ja tällöin\\
+ $|x^2-16|+3x =x^2-16+3x=x^2+3x-16$ \\
+ \\
+ Siis:
+			$|x^2-16|+3x= \left \{ \begin{array}{rcl}
+			-x^2+3x+16 & , kun & -4<x<4 \\
+			x^2+3x-16 & , kun & x\leq-4 \ \ tai \ \ x\geq4
+			\end{array}\right.$
+
+\end{esimerkki}
+
+\section{Tehtäviä}
+Tehtävissä 1 - n esitä lauseke ilman itseisarvomerkkejä.
+
+\begin{tehtava}
+	\begin{alakohdat}
+		\alakohta{$|\pi-2^2|$}
+		\alakohta{$|2x-6|$}
+		\alakohta{$x+|6-3x|$}
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$-(\pi-4)=-\pi+4=4-\pi$}
+			\alakohta{$\left \{ \begin{array}{rcl}
+					-2x+6, & jos & x<3 \\
+					2x-6, & jos & x \geq 3
+				\end{array}\right.$}
+			\alakohta{$\left \{ \begin{array}{rcl}
+					x+(6-3x), & jos & 6-3x \geq0 \\
+					x-(6-3x), & jos & 6-3x <0 
+				\end{array}\right.
+				=\left \{ \begin{array}{rcl}
+					x+6-3x, & jos & -3x \geq-6 \\
+					x-6+3x, & jos & -3x <-6 
+				\end{array}\right.\\
+				=\left\{\begin{array}{rcl}
+					-2x+6, & jos & x \leq2 \\
+					4x-6, & jos & x >2 
+				\end{array}\right.$}
+		\end{alakohdat}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	\begin{alakohdat}
+		\alakohta{$2x-x|2-x|$}
+		\alakohta{$|x^2+3|$}
+		\alakohta{$|x^2-4|$}
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$\left \{ \begin{array}{l c l}
+					\ \ \ x^2, & jos & x \leq2 \\
+					-x^2+4x, & jos & x>2 
+				\end{array}\right.$}
+			\alakohta{$x^2+3$}
+			\alakohta{$\left \{ \begin{array}{rcl}
+					x^2-4, & jos & x \leq-2 \ \ tai\ \ x\geq2 \\
+					-x^2+4, & jos & -2<x<2 
+				\end{array}\right.$}
+		\end{alakohdat}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	\begin{alakohdat}
+		\alakohta{$(x-1)|4x^2+4x+1|$}
+		\alakohta{$|-3x^2+4x-2|$}
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$4x^3-3x-1$}
+			\alakohta{$3x^2-4x+2$}
+		\end{alakohdat}
+	\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+	\begin{alakohdat}
+		\alakohta{$3|9-x^2|-2|x^2-9|,\ \ kun\ \ x\leq-3$}
+		\alakohta{$\frac{|-x^2+4x+5|}{|x^2-5x|},\ \ kun\ \ x>5$}
+	\end{alakohdat}
+	\begin{vastaus}
+		\begin{alakohdat}
+			\alakohta{$x^2-9$ (vinkki: vastalukujen itseisarvot ovat yhtä suuret)}
+			%
+			\alakohta{$\frac{x+1}{x}$}
+		\end{alakohdat}
+	\end{vastaus}
+\end{tehtava}

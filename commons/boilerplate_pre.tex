@@ -181,6 +181,9 @@
 % Aika- ja pvmformaattien kustomointiin
 \usepackage{datetime}
 
+% Täältä saa komennon \ifthispageodd
+\usepackage{scrextend}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % MAA11
@@ -195,13 +198,14 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\compl}{\complement}
-\newcommand{\xor}{\mathop{\mathrm{xor}}}
+
+\DeclareMathOperator{\xor}{xor}
+\DeclareMathOperator{\syt}{syt}
+\DeclareMathOperator{\pyj}{pyj}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\pym}{pym}
 \renewcommand{\div}{\mathop{\mathrm{div}}}
 \renewcommand{\mod}{\mathop{\mathrm{mod}}}
-\newcommand{\syt}{\mathop{\mathrm{syt}}}
-\newcommand{\pyj}{\mathop{\mathrm{pyj}}}
-\newcommand{\lcm}{\mathop{\mathrm{lcm}}}
-\newcommand{\pym}{\mathop{\mathrm{pym}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
