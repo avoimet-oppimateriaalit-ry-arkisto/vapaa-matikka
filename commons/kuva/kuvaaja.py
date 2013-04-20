@@ -2,7 +2,7 @@
 
 from kuva import *
 
-def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = "", nimiY = "", ruudukko = True):
+def pohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = "", nimiY = "", ruudukko = True):
 	"""Luo kuvaajapohja kuvaajalle jossa X-koordinaatit ovat välillä [minX, maxX]
 	ja Y-koordinaatit välillä [minY, maxY]. Kuvaajapohjan koko on
 	'leveys' x 'korkeus'. Mikäli vain toinen parametreista 'leveys' ja 'korkeus'
@@ -155,7 +155,7 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	
 	return ret
 
-def parametrikuvaaja(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0)):
+def piirraParametri(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0)):
 	"""Piirrä parametrikäyrä (x(t), y(t)), kun t käy läpi välin [a, b].
 	x ja y voivat olla funktioita tai merkkijonokuvauksia t:n funktiosta.
 	Esimerkiksi paraabeli välillä [-1, 1] piirretään kutsulla
@@ -164,7 +164,8 @@ def parametrikuvaaja(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0
 	'nimi' kirjoitetaan kohtaan 'kohta' suuntaan 'suunta'. Mikäli kohtaa ei
 	anneta, nimi kirjoitetaan käyrän viimeiseen pisteeseen. Mikäli kohta on
 	yksi luku, nimi laitetaan käyrän arvoon parametrin arvolla 'kohta'. Muuten
-	käytetään arvoa 'kohta' pisteenä."""
+	käytetään arvoa 'kohta' pisteenä.
+	Kuvaaja voidaan piirtää myös ilman kuvaajapohjaa."""
 	
 	x = funktioksi(x, "t")
 	y = funktioksi(y, "t")
@@ -217,12 +218,13 @@ def parametrikuvaaja(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0
 	
 	nimeaPiste(kohta, nimi, suunta[0], suunta[1])
 
-def kuvaaja(f, a = None, b = None, nimi = "", kohta = None, suunta = (1, 0)):
+def piirra(f, a = None, b = None, nimi = "", kohta = None, suunta = (1, 0)):
 	"""Piirrä funktion f kuvaaja (f joko funktio tai x:n funktion
 	merkkijonokuvaus). X-koordinaatti käy läpi välin [a, b], jos jompi kumpi
 	jätetään pois, käytetään X-rajaa. Siis esimerkiksi kuvaajapohjassa ei yleensä
 	erikseen tarvitse ilmoittaa väliä [a, b]. 'nimi', 'kohta' ja 'suunta'
-	toimivat kuten parametrikäyrissä."""
+	toimivat kuten parametrikäyrissä.
+	Kuvaaja voidaan piirtää myös ilman kuvaajapohjaa."""
 	
 	if a is None: a = tila.asetukset['minX']
 	if b is None: b = tila.asetukset['maxX']
@@ -231,4 +233,4 @@ def kuvaaja(f, a = None, b = None, nimi = "", kohta = None, suunta = (1, 0)):
 	if b == float("inf"): raise ValueError("kuvaaja: X-yläraja puuttuu.")
 	
 	f = funktioksi(f, "x")
-	parametrikuvaaja("t", f, a, b, nimi, kohta, suunta)
+	piirraParametri("t", f, a, b, nimi, kohta, suunta)
