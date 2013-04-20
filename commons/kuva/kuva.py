@@ -16,7 +16,12 @@ _asetukset = {
 	'maxY': float("inf"), # Y-yläraja.
 	'xmuunnos': (1, 0), # X-koordinaatin muunnos (kulmakerroin, vakiotermi).
 	'ymuunnos': (1, 0), # Y-koordinaatin muunnos (kulmakerroin, vakiotermi).
+	'piirtovari': "black", # Piirrossa käytettävä TiKZ-väri.
+	'piirtopaksuus': 1, # Piirrossa käytettävä viivan paksuus.
 }
+
+# Viivanpaksuuksien kerroin kun muunnetaan pt:ksi.
+_paksuuskerroin = 1
 
 def muunna(P):
 	"""Muunna piirrettävä piste (2-tuple) pisteeksi kuvapinnalla."""
@@ -76,12 +81,15 @@ def parametrikayra(x, y, a = 0, b = 1):
 	t = a
 	dt = (b - a) / 300
 	
+	paksuus = "{}pt".format(tikzLuku(_asetukset['piirtopaksuus'] * _paksuuskerroin))
+	vari = _asetukset['piirtovari']
+	
 	datafp = [None]
 	filename = [None]
 	def lopetaTiedosto():
 		if datafp[0] is not None:
 			datafp[0].close()
-			_out.write("\draw plot[smooth] file{{{}}};\n".format(filename[0]))
+			_out.write("\\draw[line width={}, color={}] plot[smooth] file{{{}}};\n".format(paksuus, vari, filename[0]))
 		datafp[0] = None
 		filename[0] = None
 	
@@ -103,8 +111,6 @@ def parametrikayra(x, y, a = 0, b = 1):
 		
 		t += dt
 	lopetaTiedosto()
-	
-	_out.write("\draw plot[smooth] file{{{}}};\n".format(filename))
 
 class AsetusPalautin:
 	"""Tallentaa konstruktorissaan asetukset ja palauttaa ne __exit__-funktiossaan."""
@@ -198,13 +204,37 @@ def rajaa(minX = None, maxX = None, minY = None, maxY = None):
 	
 	return ret
 
-def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None):
+def vari(uusivari):
+	"""Aseta piirrossa käytettävä väri annettuun TiKZ-värikuvaukseen."""
+	
+	ret = AsetusPalautin()
+	_asetukset['piirtovari'] = uusivari
+	return ret
+
+def paksuus(kerroin):
+	"""Aseta piirrossa käytettävä viivan paksuus alkuperäiseen paksuuteen
+	kerrottuna luvulla 'kerroin'."""
+	
+	ret = AsetusPalautin()
+	_asetukset['piirtopaksuus'] = kerroin
+	return ret
+	
+def muutaPaksuus(kerroin):
+	"""Kerro nykyistä viivan paksuutta luvulla 'kerroin'."""
+	
+	ret = AsetusPalautin()
+	_asetukset['piirtopaksuus'] *= kerroin
+	return ret
+
+def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = "", nimiY = ""):
 	"""Luo kuvaajapohja kuvaajalle jossa X-koordinaatit ovat välillä [minX, maxX]
 	ja Y-koordinaatit välillä [minY, maxY]. Kuvaajapohjan koko on
 	'leveys' x 'korkeus'. Mikäli vain toinen parametreista 'leveys' ja 'korkeus'
 	puuttuu, se lasketaan toisen perusteella säilyttäen kuvasuhteen. Mikäli
 	molemmat puuttuvat, tehdään kuvaajapohjasta saman kokoinen kuin
-	koordinaattialoista. On oltava minX <= 0 <= maxX ja minY <= 0 <= maxY."""
+	koordinaattialoista. On oltava minX <= 0 <= maxX ja minY <= 0 <= maxY.
+	Kuvaajapohja rajoittaa piirron alueelle [minX, maxX] x [minY, maxY].
+	nimiX:llä ja nimiY:llä voidaan nimetä akselit."""
 	
 	ret = AsetusPalautin()
 	
@@ -234,14 +264,115 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None):
 	siirraX(minX)
 	siirraY(minY)
 	
-	# Piirretään kuvaajan pohja.
-	nuoli = "\\draw[arrows=-triangle 45, thick] {} -- {};\n"
-	valku = muunna((minX, 0))
-	vloppu = vekSumma(muunna((maxX, 0)), (1, 0))
-	palku = muunna((0, minY))
-	ploppu = vekSumma(muunna((0, maxY)), (0, 1))
-	_out.write(nuoli.format(tikzPiste(valku), tikzPiste(vloppu)))
-	_out.write(nuoli.format(tikzPiste(palku), tikzPiste(ploppu)))
+	# Piirretään ruudukko.
+	ruudukkovarit = ["black!50!white", "black!20!white", "black!10!white", "black!4!white", "black!2!white"]
+	ruudukkovalit = [100.0, 50.0, 10.0, 5.0, 1.0, 0.5, 0.25, 0.125]
+	ruudukkorivit = []
 	
+	def piirraPystyViiva(X, vari):
+		vari = ruudukkovarit[min(vari, len(ruudukkovarit) - 1)]
+		
+		alku = muunna((X, minY))
+		loppu = muunna((X, maxY))
+		ruudukkorivit.append("\\draw[color={}] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)));
+	
+	def piirraVaakaViiva(Y, vari):
+		vari = ruudukkovarit[min(vari, len(ruudukkovarit) - 1)]
+		
+		alku = muunna((minX, Y))
+		loppu = muunna((maxX, Y))
+		ruudukkorivit.append("\\draw[color={}] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)));
+	
+	pvari = 0
+	vvari = 0
+	for vali in ruudukkovalit:
+		if vali * _asetukset['xmuunnos'][0] >= 0.47:
+			kaytetty = False
+			X = vali
+			while(X < maxX + 0.0001):
+				kaytetty = True
+				piirraPystyViiva(X, pvari)
+				X += vali
+			X = -vali
+			while(X > minX - 0.0001):
+				kaytetty = True
+				piirraPystyViiva(X, pvari)
+				X -= vali
+			if kaytetty: pvari += 1
+		
+		if vali * _asetukset['ymuunnos'][0] >= 0.47:
+			kaytetty = False
+			Y = vali
+			while(Y < maxY + 0.0001):
+				kaytetty = True
+				piirraVaakaViiva(Y, vvari)
+				Y += vali
+			Y = -vali
+			while(Y > minY - 0.0001):
+				kaytetty = True
+				piirraVaakaViiva(Y, vvari)
+				Y -= vali
+			if kaytetty: vvari += 1
+	
+	ruudukkorivit.reverse()
+	for rivi in ruudukkorivit:
+		_out.write(rivi)
+	
+	# Piirretään pohjaristi.
+	nuoli = "\\draw[arrows=-triangle 45, thick] {} -- {};\n"
+	valku = vekSumma(muunna((minX, 0)), (-0.2, 0))
+	vloppu = vekSumma(muunna((maxX, 0)), (0.5, 0))
+	palku = vekSumma(muunna((0, minY)), (0, -0.2))
+	ploppu = vekSumma(muunna((0, maxY)), (0, 0.5))
+	_out.write("\\draw[arrows=-triangle 45, thick] {} -- {} node[above] {{{}}};\n".format(tikzPiste(valku), tikzPiste(vloppu), nimiX))
+	_out.write("\\draw[arrows=-triangle 45, thick] {} -- {} node[right] {{{}}};\n".format(tikzPiste(palku), tikzPiste(ploppu), nimiY))
+	
+	# Piirretään asteikko.
+	asteikkovalit = [1, 2, 5, 10, 20, 50, 100]
+	
+	def piirraXKohta(X):
+		alku = vekSumma(muunna((X, 0)), (0, -0.07))
+		kohta = vekSumma(muunna((X, 0)), (0.1, 0))
+		loppu = vekSumma(muunna((X, 0)), (0, 0.07))
+		_out.write("\\draw[thick] {} -- {};\n".format(tikzPiste(alku), tikzPiste(loppu)))
+		_out.write("\\draw {} node[above] {{\\footnotesize {}}};\n".format(tikzPiste(kohta), X))
+	
+	def piirraYKohta(Y):
+		alku = vekSumma(muunna((0, Y)), (-0.07, 0))
+		kohta = muunna((0, Y))
+		loppu = vekSumma(muunna((0, Y)), (0.07, 0))
+		_out.write("\\draw[thick] {} -- {};\n".format(tikzPiste(alku), tikzPiste(loppu)))
+		_out.write("\\draw {} node[right] {{\\footnotesize {}}};\n".format(tikzPiste(kohta), Y))
+	
+	for vali in asteikkovalit:
+		if vali * _asetukset['xmuunnos'][0] >= 0.67:
+			X = vali
+			while X < maxX + 0.0001:
+				piirraXKohta(X)
+				X += vali
+			
+			X = -vali
+			while X > minX - 0.0001:
+				piirraXKohta(X)
+				X -= vali
+			
+			break
+	
+	for vali in asteikkovalit:
+		if vali * _asetukset['ymuunnos'][0] >= 0.67:
+			Y = vali
+			while Y < maxY + 0.0001:
+				piirraYKohta(Y)
+				Y += vali
+			
+			Y = -vali
+			while Y > minY - 0.0001:
+				piirraYKohta(Y)
+				Y -= vali
+			
+			break
+	
+	# Rajaa piirto.
+	rajaa(minX = minX, maxX = maxX, minY = minY, maxY = maxY)
 	
 	return ret
