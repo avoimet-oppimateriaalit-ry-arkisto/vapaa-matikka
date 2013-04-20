@@ -86,11 +86,11 @@ Esitä ilman itseisarvomerkkejä
 \laatikko{
 \textbf{Itseisarvon ominaisuuksia}\\ \\
 	\begin{tabular}{l l}
-		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
+		$|a|\geq0$ & Itseisarvo on aina epänegatiivinen \\
 		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
 		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
 		$|ab|=|a||b|$ & Tulon itseisarvo \\
-		$|\frac{a}{b}|=\frac{|a|}{|b|}$ & Osamaarän itseisarvo
+		$\Bigl|\dfrac{a}{b}\Bigr|=\dfrac{|a|}{|b|}$ & Osamäärän itseisarvo
 
 	\end{tabular}
 }
@@ -139,22 +139,23 @@ Esitä ilman itseisarvomerkkejä
 	\lukusuoraalanimi{0}{$-$}
 \end{lukusuora}
 
-Kun $-4<x<4$, niin $x^2-16<0$. Tällöin \\
- $|x^2-16|+3x = -(x^2-16)+3x = -x^2+16+3x=-x^2+3x+16$. \\
- \\
- Kun $x\leq-4$ tai $x\geq4$, on $x^2-16\geq0$ ja tällöin\\
- $|x^2-16|+3x =x^2-16+3x=x^2+3x-16$ \\
- \\
- Siis:
-			$|x^2-16|+3x= \left \{ \begin{array}{rcl}
-			-x^2+3x+16 & , kun & -4<x<4 \\
-			x^2+3x-16 & , kun & x\leq-4 \ \ tai \ \ x\geq4
-			\end{array}\right.$
+Kun $-4<x<4$, niin $x^2-16<0$. Tällöin
+\[
+|x^2-16|+3x = -(x^2-16)+3x = -x^2+16+3x=-x^2+3x+16.
+\]
+Kun $x\leq-4$ tai $x\geq4$, on $x^2-16\geq0$, ja tällöin
+\[
+|x^2-16|+3x =x^2-16+3x=x^2+3x-16
+\]
+Siis:
+			$|x^2-16|+3x= \begin{cases}
+			-x^2+3x+16, & \text{kun $-4<x<4$} \\
+			x^2+3x-16, & \text{kun $x\leq -4$ tai $x\geq 4$}\end{cases}$
 
 \end{esimerkki}
 
 \subsection*{Tehtäviä}
-Tehtävissä 1 - n esitä lauseke ilman itseisarvomerkkejä.
+Tehtävissä 1--n esitä lauseke ilman itseisarvomerkkejä.
 
 \begin{tehtava}
 	\begin{alakohdat}
@@ -221,8 +222,8 @@ Tehtävissä 1 - n esitä lauseke ilman itseisarvomerkkejä.
 
 \begin{tehtava}
 	\begin{alakohdat}
-		\alakohta{$3|9-x^2|-2|x^2-9|,\ \ kun\ \ x\leq-3$}
-		\alakohta{$\frac{|-x^2+4x+5|}{|x^2-5x|},\ \ kun\ \ x>5$}
+		\alakohta{$3|9-x^2|-2|x^2-9|$, kun $x\leq-3$}
+		\alakohta{$\dfrac{|-x^2+4x+5|}{|x^2-5x|}$, kun $x>5$}
 	\end{alakohdat}
 	\begin{vastaus}
 		\begin{alakohdat}
