@@ -1,5 +1,7 @@
 # -*- coding: UTF-8 -*-
 
+from math import *
+
 def funktioksi(funktio, muuttuja):
 	"""Jos funktio on merkkijono, tulkitse se muuttujan funktioksi.
 	Muussa tapauksessa palautetaan alkuperäinen funktio."""
