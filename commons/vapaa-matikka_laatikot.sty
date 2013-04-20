@@ -75,8 +75,10 @@
 %   {\par}}
 % \makeatother
 
-\newcommand{\laatikko}[1]{%
+\newcommand{\laatikko}[2][]{%
 %\begin{\widepar}
-  \begin{mdframed}[style=laatikkotyyli] #1 \end{mdframed}
+ \marginpar{\raggedleft\sffamily\fontsize{10}{14}\selectfont{#1}}
+% \end{\widepar}
+  \begin{mdframed}[style=laatikkotyyli]#2\end{mdframed}
 %\end{widepar}
 }
