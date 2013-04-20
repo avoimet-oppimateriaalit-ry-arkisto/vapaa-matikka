@@ -26,9 +26,11 @@ ratkaistaessa kahden ympyrän tai ympyrän ja suoran leikkauspisteitä.
 
 \subsection*{Lineaarinen yhtälöpari}
 
-Yksinkertaisin tapaus yhtälöryhmistä on kahden ensimmäisen asteen yhtälön
-muodostama \termi[lineaarinen yhtälöpari]{lineaarinen yhtälöpari}.
-Lineaarinen yhtälöryhmä voidaan esittää monella tapaa.
+Yksinkertaisin mielenkiintoinen yhtälöryhmä on
+\termi[lineaarinen yhtälöpari]{lineaarinen yhtälöpari}.
+Lineaarisessa yhtälöparissa on kaksi ensimmäisen asteen yhtälöä.
+Lineaarinen yhtälöpari voidaan esittää monella tapaa. Tässä
+kirjassa käytämme pääasiallisesti ns. normaalimuotoa.
 
 \laatikko{
 \textbf{Normaalimuotoinen lineaarinen yhtälöpari}
@@ -46,27 +48,74 @@ Lineaarisen yhtälöparin ratkaisu on pari $(x, y) \in \mathbb{R}^2$, joka toteu
 Aiemmin on todettu, että normaalimuotoinen ensimmäisen asteen yhtälö voidaan tulkita suorana
 $(x, y)$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: sen
 ratkaisut ovat ne tason pisteet, joissa yhtälöitä vastaavat
-suorat leikkaavat. Näitä voi olla $0$ (suorat ovat yhdensuuntaiset,
-mutta eivät sama suora), $1$ (suorat eivät ole yhdensuuntaiset) tai äärettömän monta (suorat ovat sama suora).
+suorat leikkaavat. Näitä voi olla
+$0$ (suorat ovat yhdensuuntaiset, mutta eivät sama suora),
+$1$ (suorat eivät ole yhdensuuntaiset) tai
+äärettömän monta (suorat ovat sama suora).
 
 \laatikko{
 Lineaarisella yhtälöparilla voi olla joko $0$, $1$ tai äärettömän monta ratkaisua.
 }
 
+\subsection*{Lineaarisen yhtälöparin ratkaisumenetelmiä}
+
+Lineaarisia yhtälöpareja ratkotaan pääasiallisesti kahdella menetelmällä.
+Nämä menetelmät ovat \termi[sijoitusmenetelmä]{sijoitusmenetelmä} ja
+\termi[yhteenlaskumenetelmä]{yhteenlaskumenetelmä}.
+
+% tähän menetelmien käytöstä
+
 \subsection*{Lineaarinen yhtälöryhmä}
 
 Lineaarisen yhtälöparin ajatus yleistyy mihin tahansa määrään ensimmäisen asteen yhtälöitä.
 Tällöin puhutaan lineaarisista yhtälöryhmistä.\footnote{Myös lineaarinen yhtälöpari on lineaarinen yhtälöryhmä.}
-Myös geometrinen tulkinta yleistyy, mutta se on vaikeampi visualisoida paperille:
-lineaarinen kolmen yhtälön ryhmä vastaa kolmen $(x, y)$-tason leikkauspisteitä
+Myös geometrinen tulkinta yleistyy, mutta se on vaikeampi hahmottaa kuin lineaarisen yhtälöparin tapauksessa:
+kolmen yhtälön lineaarinen yhtälöryhmä vastaa kolmen $(x, y)$-tason leikkauspisteitä
 kolmiulotteisessa $(x, y, z)$-avaruudessa jne.
 
-Tällä kurssilla tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Neljän yhtälön
+Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Neljän yhtälön
 lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. Yleisesti ottaen yhtälöryhmiä
 ei ratkaista tällä kurssilla esitetyin keinoin, vaan likimääräisesti tietokoneella käyttäen numeerista 
-matriisilaskentaa (ei käsitellä lukiossa).
+matriisilaskentaa, joka ei kuulu lukion oppimäärään.
+
+\subsection*{Lineaarisen yhtälöryhmän ratkaisumenetelmiä}
+
+% tähän menetelmistä
 
 \subsection*{Tehtäviä}
+
+\begin{tehtava}
+    Ratkaise yhtälöpari.
+    \begin{align*}
+        x+y+1 &= 0 \\
+        x+2y+1 &=0
+    \end{align*}
+    \begin{vastaus}
+        $x = -1, \, y = 0$
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöpari.
+    \begin{align*}
+        2x+5y+1 &= 0 \\
+        2x+2y+7 &=0
+    \end{align*}
+    \begin{vastaus}
+        $x = -\frac{11}{2}, \, y = 2$
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöpari. $t \in \mathbb{R}$ on vapaa parametri, joka saa sisältyä vastaukseen.
+    \begin{align*}
+        x+2y-t-1 &= 0 \\
+        x+y+t^2 &=0
+    \end{align*}
+    \begin{vastaus}
+        $x = -2t^2-t-1, \, y = t^2+t+1$
+    \end{vastaus}
+\end{tehtava}
 
 \begin{tehtava}
     Ratkaise yhtälöryhmä.
