@@ -1,0 +1,1 @@
+Piirtäjä: Hannu Köngäs
