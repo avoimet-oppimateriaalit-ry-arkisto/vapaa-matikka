@@ -263,7 +263,7 @@ def muutaPaksuus(kerroin):
 	_asetukset['piirtopaksuus'] *= kerroin
 	return ret
 
-def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = "", nimiY = ""):
+def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = "", nimiY = "", ruudukko = True):
 	"""Luo kuvaajapohja kuvaajalle jossa X-koordinaatit ovat välillä [minX, maxX]
 	ja Y-koordinaatit välillä [minY, maxY]. Kuvaajapohjan koko on
 	'leveys' x 'korkeus'. Mikäli vain toinen parametreista 'leveys' ja 'korkeus'
@@ -271,7 +271,8 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	molemmat puuttuvat, tehdään kuvaajapohjasta saman kokoinen kuin
 	koordinaattialoista. On oltava minX <= 0 <= maxX ja minY <= 0 <= maxY.
 	Kuvaajapohja rajoittaa piirron alueelle [minX, maxX] x [minY, maxY].
-	nimiX:llä ja nimiY:llä voidaan nimetä akselit."""
+	nimiX:llä ja nimiY:llä voidaan nimetä akselit.
+	Pohjaan piirretään ruudukko jos 'ruudukko' on True."""
 	
 	ret = AsetusPalautin()
 	
@@ -302,58 +303,59 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	siirraY(minY)
 	
 	# Piirretään ruudukko.
-	ruudukkovarit = ["black!30!white", "black!15!white", "black!8!white", "black!4!white", "black!2!white"]
-	ruudukkovalit = [64.0, 32.0, 16.0, 8.0, 4.0, 2.0, 1.0, 0.5, 0.25, 0.125]
-	ruudukkorivit = []
-	
-	def piirraPystyViiva(X, vari):
-		vari = ruudukkovarit[min(vari, len(ruudukkovarit) - 1)]
+	if ruudukko:
+		varit = ["black!30!white", "black!15!white", "black!8!white", "black!4!white", "black!2!white"]
+		valit = [64.0, 32.0, 16.0, 8.0, 4.0, 2.0, 1.0, 0.5, 0.25, 0.125]
+		rivit = []
 		
-		alku = muunna((X, minY))
-		loppu = muunna((X, maxY))
-		ruudukkorivit.append("\\draw[color={}] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)));
-	
-	def piirraVaakaViiva(Y, vari):
-		vari = ruudukkovarit[min(vari, len(ruudukkovarit) - 1)]
+		def piirraPystyViiva(X, vari):
+			vari = varit[min(vari, len(varit) - 1)]
+			
+			alku = muunna((X, minY))
+			loppu = muunna((X, maxY))
+			rivit.append("\\draw[color={}] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)));
 		
-		alku = muunna((minX, Y))
-		loppu = muunna((maxX, Y))
-		ruudukkorivit.append("\\draw[color={}] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)));
-	
-	pvari = 0
-	vvari = 0
-	for vali in ruudukkovalit:
-		if vali * _asetukset['xmuunnos'][0] >= 0.37:
-			kaytetty = False
-			X = vali
-			while(X < maxX + 0.0001):
-				kaytetty = True
-				piirraPystyViiva(X, pvari)
-				X += vali
-			X = -vali
-			while(X > minX - 0.0001):
-				kaytetty = True
-				piirraPystyViiva(X, pvari)
-				X -= vali
-			if kaytetty: pvari += 1
+		def piirraVaakaViiva(Y, vari):
+			vari = varit[min(vari, len(varit) - 1)]
+			
+			alku = muunna((minX, Y))
+			loppu = muunna((maxX, Y))
+			rivit.append("\\draw[color={}] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)));
 		
-		if vali * _asetukset['ymuunnos'][0] >= 0.37:
-			kaytetty = False
-			Y = vali
-			while(Y < maxY + 0.0001):
-				kaytetty = True
-				piirraVaakaViiva(Y, vvari)
-				Y += vali
-			Y = -vali
-			while(Y > minY - 0.0001):
-				kaytetty = True
-				piirraVaakaViiva(Y, vvari)
-				Y -= vali
-			if kaytetty: vvari += 1
-	
-	ruudukkorivit.reverse()
-	for rivi in ruudukkorivit:
-		_out.write(rivi)
+		pvari = 0
+		vvari = 0
+		for vali in valit:
+			if vali * _asetukset['xmuunnos'][0] >= 0.37:
+				kaytetty = False
+				X = vali
+				while(X < maxX + 0.0001):
+					kaytetty = True
+					piirraPystyViiva(X, pvari)
+					X += vali
+				X = -vali
+				while(X > minX - 0.0001):
+					kaytetty = True
+					piirraPystyViiva(X, pvari)
+					X -= vali
+				if kaytetty: pvari += 1
+			
+			if vali * _asetukset['ymuunnos'][0] >= 0.37:
+				kaytetty = False
+				Y = vali
+				while(Y < maxY + 0.0001):
+					kaytetty = True
+					piirraVaakaViiva(Y, vvari)
+					Y += vali
+				Y = -vali
+				while(Y > minY - 0.0001):
+					kaytetty = True
+					piirraVaakaViiva(Y, vvari)
+					Y -= vali
+				if kaytetty: vvari += 1
+		
+		rivit.reverse()
+		for rivi in rivit:
+			_out.write(rivi)
 	
 	# Piirretään pohjaristi.
 	nuoli = "\\draw[arrows=-triangle 45, thick] {} -- {};\n"
