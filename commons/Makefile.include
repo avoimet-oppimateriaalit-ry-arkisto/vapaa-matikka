@@ -128,10 +128,11 @@ endif
 AUXFILES = $(foreach T,$(PDFTARGETS:.pdf=), $(T).aux)
 AUXFILES += $(patsubst %.tex,%.aux, $(INCLUDEDTEX))
 LOGFILES = $(patsubst %.aux,%.log, $(AUXFILES))
+KUVAAJAFILES = $(wildcard kuva-tmp-*) $(wildcard *.pgf-plot.*)
 
 clean:
 	$(RM) $(foreach T,$(PDFTARGETS:.pdf=), \
 		$(T).out $(T).pdf $(T).blg $(T).bbl \
 		$(T).lof $(T).lot $(T).toc $(T).idx \
 		$(T).nav $(T).snm) \
-		$(REVDEPS) $(AUXFILES) $(LOGFILES)
+		$(REVDEPS) $(AUXFILES) $(LOGFILES) $(KUVAAJAFILES)
