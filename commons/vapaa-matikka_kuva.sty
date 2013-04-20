@@ -1,12 +1,30 @@
 \ProvidesPackage{../commons/vapaa-matikka_kuva}
 
-\newenvironment{kuva}
+% Luo kuvan python-skriptistä parametrina annetulla nimellä. Kuvan voi näyttää
+% myöhemmin samalla nimellä naytaKuva-komennolla. Ylikirjoittaa vanhat
+% samannimiset.
+\newenvironment{luoKuva}[1]
 {
-	\VerbatimOut{kuva-tmp-skripti.py}
+	\VerbatimOut{kuva-tmp-skripti--#1.py}
 }
 {
 	\endVerbatimOut
-	\immediate\write18{python ../commons/kuva/luo_kuvaskripti.py kuva-tmp-skripti.py kuva-tmp-skripti2.py}
-	\immediate\write18{python kuva-tmp-skripti2.py}
+}
+
+\newcommand{\naytaKuva}[1]{
+	\immediate\write18{python ../commons/kuva/luo_kuvaskripti.py kuva-tmp-skripti--#1.py kuva-tmp-skripti.py}
+	\immediate\write18{python kuva-tmp-skripti.py}
+	\input{kuva-tmp-output.txt}
+}
+
+% Luo ja näytä kuva python-skriptistä suoraan.
+\newenvironment{kuva}
+{
+	\VerbatimOut{kuva-tmp-skripti--nimetonKuva.py}
+}
+{
+	\endVerbatimOut
+	\immediate\write18{python ../commons/kuva/luo_kuvaskripti.py kuva-tmp-skripti--nimetonKuva.py kuva-tmp-skripti.py}
+	\immediate\write18{python kuva-tmp-skripti.py}
 	\input{kuva-tmp-output.txt}
 }

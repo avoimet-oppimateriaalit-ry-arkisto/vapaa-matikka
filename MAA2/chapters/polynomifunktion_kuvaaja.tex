@@ -28,6 +28,29 @@ kuvaaja("x**3-3*x-1", nimi = "$R(x) = x^3-3x-1$", kohta = 1.8)
 Funktioiden kuvaajia voi piirtää laskimella tai tietokoneella. Kuvaajaa voi myös hahmotella käsin laskemalla funktion arvoja muutamilla muuttujan arvoilla, merkitsemällä pisteet
 $xy$-koordinaatistoon ja piirtämällä lopuksi kuvaajaan pisteiden kautta kulkeva viiva.
 
+% Esimerkin kuvat.
+\begin{luoKuva}{esimkuva1}
+kuvaajapohja(-4, 4, -3, 6, leveys = 3.5, nimiX = "$x$")
+piste((-3, 5.5))
+piste((-2, 2))
+piste((-1, -0.5))
+piste((0, -2))
+piste((1, -2.5))
+piste((2, -2))
+piste((3, -0.5))
+\end{luoKuva}
+\begin{luoKuva}{esimkuva2}
+kuvaajapohja(-4, 4, -3, 6, leveys = 3.5, nimiX = "$x$")
+piste((-3, 5.5))
+piste((-2, 2))
+piste((-1, -0.5))
+piste((0, -2))
+piste((1, -2.5))
+piste((2, -2))
+piste((3, -0.5))
+kuvaaja("0.5*x**2-x-2")
+\end{luoKuva}
+
 \begin{esimerkki}
 Hahmotellaan polynomifunktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ kuvaaja.
 Lasketaan ensin joitakin funktion $f(x) = \dfrac{1}{2}x^2 - x - 2$ arvoja ja piirretään niitä vastaavat pisteet
@@ -47,27 +70,46 @@ koordinaatistoon. Lopuksi hahmotellaan kuvaaja, joka kulkee pisteiden kautta.
 	\hline
 	\end{tabular}
 	&
-	\vcent{\begin{kuvaajapohja}{0.6}{-4}{4}{-3}{6}
-	\kuvaajapiste{-3}{5.5}
-	\kuvaajapiste{-2}{2}
-	\kuvaajapiste{-1}{-0.5}
-	\kuvaajapiste{0}{-2}
-	\kuvaajapiste{1}{-2.5}
-	\kuvaajapiste{2}{-2}
-	\kuvaajapiste{3}{-0.5}
-	\end{kuvaajapohja}}
+	\vcent{\naytaKuva{esimkuva1}}
 	&
-	\vcent{\begin{kuvaajapohja}{0.6}{-4}{4}{-3}{6}
-	\kuvaajapiste{-3}{5.5}
-	\kuvaajapiste{-2}{2}
-	\kuvaajapiste{-1}{-0.5}
-	\kuvaajapiste{0}{-2}
-	\kuvaajapiste{1}{-2.5}
-	\kuvaajapiste{2}{-2}
-	\kuvaajapiste{3}{-0.5}
-	\kuvaaja{0.5*x**2-x-2}{}{black}
-	\end{kuvaajapohja}}
+	\vcent{\naytaKuva{esimkuva2}}
 \end{tabular}
+% 
+% \begin{tabular}{c c c}
+% 	\begin{tabular}{|c|r @{,} l|}
+% 	\hline $x$ & \multicolumn{2}{c|}{$f(x)$} \\
+% 	\hline
+% 	-3 & 5&5 \\
+% 	-2 & 2&0 \\
+% 	-1 & -0&5 \\
+% 	0 & -2&0 \\
+% 	1 & -2&5 \\
+% 	2 & -2&0 \\
+% 	3 & -0&5 \\
+% 	\hline
+% 	\end{tabular}
+% 	&
+% 	\vcent{\begin{kuvaajapohja}{0.6}{-4}{4}{-3}{6}
+% 	\kuvaajapiste{-3}{5.5}
+% 	\kuvaajapiste{-2}{2}
+% 	\kuvaajapiste{-1}{-0.5}
+% 	\kuvaajapiste{0}{-2}
+% 	\kuvaajapiste{1}{-2.5}
+% 	\kuvaajapiste{2}{-2}
+% 	\kuvaajapiste{3}{-0.5}
+% 	\end{kuvaajapohja}}
+% 	&
+% 	\vcent{\begin{kuvaajapohja}{0.6}{-4}{4}{-3}{6}
+% 	\kuvaajapiste{-3}{5.5}
+% 	\kuvaajapiste{-2}{2}
+% 	\kuvaajapiste{-1}{-0.5}
+% 	\kuvaajapiste{0}{-2}
+% 	\kuvaajapiste{1}{-2.5}
+% 	\kuvaajapiste{2}{-2}
+% 	\kuvaajapiste{3}{-0.5}
+% 	\kuvaaja{0.5*x**2-x-2}{}{black}
+% 	\end{kuvaajapohja}}
+% \end{tabular}
 
 \end{esimerkki}
 

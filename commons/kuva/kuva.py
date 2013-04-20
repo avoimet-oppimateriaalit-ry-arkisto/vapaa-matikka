@@ -63,7 +63,7 @@ def lopetaKuva():
 	
 	_out.close()
 
-def nimeaPiste(P, nimi, vaaka = 1, pysty = -1, vari = 'black'):
+def nimeaPiste(P, nimi, vaaka = 1, pysty = -1):
 	"""Kirjoita LaTeX-koodina annettu 'nimi' pisteen P viereen, suunnilleen
 	suuntaan (vaaka, pysty)."""
 	
@@ -84,7 +84,7 @@ def nimeaPiste(P, nimi, vaaka = 1, pysty = -1, vari = 'black'):
 	if pysty and vaaka:
 		nodepos += "=-0.07cm"
 	
-	_out.write("\draw[color={}] {} node[{}] {{{}}};\n".format(vari, tikzPiste(muunna(P)), nodepos, nimi))
+	_out.write("\draw[color={}] {} node[{}] {{{}}};\n".format(_asetukset['piirtovari'], tikzPiste(muunna(P)), nodepos, nimi))
 
 def parametrikayra(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0)):
 	"""Piirrä parametrikäyrä (x(t), y(t)), kun t käy läpi välin [a, b].
@@ -147,7 +147,7 @@ def parametrikayra(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0))
 	elif isinstance(kohta, int) or isinstance(kohta, float):
 		kohta = (x(kohta), y(kohta))
 	
-	nimeaPiste(kohta, nimi, suunta[0], suunta[1], vari)
+	nimeaPiste(kohta, nimi, suunta[0], suunta[1])
 
 class AsetusPalautin:
 	"""Tallentaa konstruktorissaan asetukset ja palauttaa ne __exit__-funktiossaan."""
@@ -249,15 +249,15 @@ def vari(uusivari):
 	return ret
 
 def paksuus(kerroin):
-	"""Aseta piirrossa käytettävä viivan paksuus alkuperäiseen paksuuteen
-	kerrottuna luvulla 'kerroin'."""
+	"""Aseta käyrien viivanpaksuus alkuperäiseen paksuuteen kerrottuna
+	luvulla 'kerroin'."""
 	
 	ret = AsetusPalautin()
 	_asetukset['piirtopaksuus'] = kerroin
 	return ret
 	
 def muutaPaksuus(kerroin):
-	"""Kerro nykyistä viivan paksuutta luvulla 'kerroin'."""
+	"""Kerro nykyistä käyrien viivan paksuutta luvulla 'kerroin'."""
 	
 	ret = AsetusPalautin()
 	_asetukset['piirtopaksuus'] *= kerroin
@@ -303,7 +303,7 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	
 	# Piirretään ruudukko.
 	ruudukkovarit = ["black!30!white", "black!15!white", "black!8!white", "black!4!white", "black!2!white"]
-	ruudukkovalit = [100.0, 50.0, 10.0, 5.0, 1.0, 0.5, 0.25, 0.125]
+	ruudukkovalit = [64.0, 32.0, 16.0, 8.0, 4.0, 2.0, 1.0, 0.5, 0.25, 0.125]
 	ruudukkorivit = []
 	
 	def piirraPystyViiva(X, vari):
@@ -323,7 +323,7 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	pvari = 0
 	vvari = 0
 	for vali in ruudukkovalit:
-		if vali * _asetukset['xmuunnos'][0] >= 0.47:
+		if vali * _asetukset['xmuunnos'][0] >= 0.37:
 			kaytetty = False
 			X = vali
 			while(X < maxX + 0.0001):
@@ -337,7 +337,7 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 				X -= vali
 			if kaytetty: pvari += 1
 		
-		if vali * _asetukset['ymuunnos'][0] >= 0.47:
+		if vali * _asetukset['ymuunnos'][0] >= 0.37:
 			kaytetty = False
 			Y = vali
 			while(Y < maxY + 0.0001):
@@ -358,14 +358,14 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	# Piirretään pohjaristi.
 	nuoli = "\\draw[arrows=-triangle 45, thick] {} -- {};\n"
 	valku = vekSumma(muunna((minX, 0)), (-0.2, 0))
-	vloppu = vekSumma(muunna((maxX, 0)), (0.5, 0))
+	vloppu = vekSumma(muunna((maxX, 0)), (0.6, 0))
 	palku = vekSumma(muunna((0, minY)), (0, -0.2))
-	ploppu = vekSumma(muunna((0, maxY)), (0, 0.5))
+	ploppu = vekSumma(muunna((0, maxY)), (0, 0.6))
 	_out.write("\\draw[arrows=-triangle 45, thick] {} -- {} node[above] {{{}}};\n".format(tikzPiste(valku), tikzPiste(vloppu), nimiX))
 	_out.write("\\draw[arrows=-triangle 45, thick] {} -- {} node[right] {{{}}};\n".format(tikzPiste(palku), tikzPiste(ploppu), nimiY))
 	
 	# Piirretään asteikko.
-	asteikkovalit = [1, 2, 5, 10, 20, 50, 100]
+	asteikkovalit = [1, 2, 4, 8, 16, 32, 64]
 	
 	def piirraXKohta(X):
 		alku = vekSumma(muunna((X, 0)), (0, -0.09))
@@ -429,3 +429,11 @@ def kuvaaja(f, a = None, b = None, nimi = "", kohta = None, suunta = (1, 0)):
 	
 	f = funktioksi(f, "x")
 	parametrikayra("t", f, a, b, nimi, kohta, suunta)
+
+def piste(P, nimi = "", suunta = (1, 0)):
+	"""Piirrä piste 'P' kuvaan. Nimi laitetaan suuntaan 'suunta' (ks. nimeaPiste)."""
+	
+	vari = _asetukset['piirtovari']
+	_out.write("\\fill[color={}] {} circle (0.07);\n".format(vari, tikzPiste(muunna(P))))
+	
+	nimeaPiste(P, nimi, suunta[0], suunta[1])
