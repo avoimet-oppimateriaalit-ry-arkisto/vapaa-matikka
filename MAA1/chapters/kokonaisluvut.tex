@@ -21,7 +21,7 @@
 % 
 % \end{tehtava}
 
-\section{Kokonaisluvut}
+\section*{Kokonaisluvut}
 
 Yksinkertaisimmat käyttämämme luvut ovat lukumäärien ilmaisemiseen käytetyt $0, 1, 2, 3, \ldots$. Näitä kutsutaan \emph{luonnollisiksi luvuiksi}, ja niiden joukkoa eli kaikkia luonnollisia lukuja yhdessä merkitään symbolilla $\mathbb{N}$.
 Nolla määritellään tässä luonnolliseksi luvuksi, mutta tästä ei ole yhteistä sopimusta: eräät pitävät nollaa luonnollisena lukuna ja toiset eivät.
@@ -51,7 +51,29 @@ Jokaisella luvulla $n$ on vastaluku $-n$, jolle pätee $n+(-n)=0$.
 
 Luonnolliset luvut ja niiden vastaluvut muodostavat yhdessä
 kokonaislukujen joukon
-\[\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}.\]
+\[\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\},\]
+jota voidaan havainnollistaa \emph{lukusuoran} avulla
+
+\begin{center}
+\begin{lukusuora}{-4}{4}{10}
+\lukusuorapiste{-3}{}
+\lukusuorapiste{-2}{}
+\lukusuorapiste{-1}{}
+\lukusuorapiste{0}{}
+\lukusuorapiste{1}{}
+\lukusuorapiste{2}{}
+\lukusuorapiste{3}{}
+\lukusuoraalanimi{-3}{$-3$}
+\lukusuoraalanimi{-2}{$-2$}
+\lukusuoraalanimi{-1}{$-1$}
+\lukusuoraalanimi{0}{$0$}
+\lukusuoraalanimi{1}{$1$}
+\lukusuoraalanimi{2}{$2$}
+\lukusuoraalanimi{3}{$3$}
+
+\end{lukusuora}
+\end{center}
+
 Kun käytämme kokonaislukuja, voidaan kahden luvun erotus määritellä
 yhteenlaskun ja vastaluvun avulla yksinkertaisesti:
 
@@ -61,7 +83,7 @@ yhteenlaskun ja vastaluvun avulla yksinkertaisesti:
 
     Esimerkiksi luvun $2$ vastalukua merkitään $-2$, ja sille pätee $2+(-2)=0$. Vastaavasti luvun $-2$ vastaluku on sellainen luku, joka laskettuna yhteen luvun $-2$ kanssa antaa luvun $0$. Tämä on tietysti $2$, koska $-2+2=0$. Näin voidaan huomata, että $-(-2)=2$.
     
-
+\laatikko{$$-(-a)=a$$}
 
 \subsection*{Yhteen- ja vähennyslasku}
 
@@ -121,7 +143,7 @@ yhteenlaskun ja vastaluvun avulla yksinkertaisesti:
 
 %lukiolaiset pitivät näitä epäselvinä kuvina
     
-    Mitä tapahtuu, kun lisätään negatiivinen luku? Kun lukuun lisätään $1$, se kasvaa yhdellä. Kun lukuun lisätään $0$, se ei kasva lainkaan. Kun lukuun lisätään negatiivinen luku, esimerkiksi $-1$, on luonnollista ajatella, että se pienenee. Tällä logiikalla negatiivisen luvun lisäämisen pitäisi siis pienentää alkuperäistä lukua. Siksi on sovittu, että $5+(-8)$ on yhtä suuri kuin $5-8$.
+    Mitä tapahtuu, kun lisätään negatiivinen luku? Kun lukuun lisätään $1$, se kasvaa yhdellä. Kun lukuun lisätään $0$, se ei kasva lainkaan. Kun lukuun lisätään negatiivinen luku, esimerkiksi $-1$, on luonnollista ajatella, että se pienenee. Tällä logiikalla negatiivisen luvun lisäämisen pitäisi siis pienentää alkuperäistä lukua. Juuri näin vähennyslasku määritellään: $5+(-8)$ on yhtä suuri kuin $5-8$.
     
 %säädetään kuva vähän irti tuosta edeltävästä tektistä
 \vspace{0.3cm}     
@@ -139,7 +161,7 @@ yhteenlaskun ja vastaluvun avulla yksinkertaisesti:
     
     $5-(-8)$ ''viidestä vähennetään miinus kahdeksan''
     
-    Negatiivisen luvun lisääminen on vastakohta positiivisen luvun lisäämiselle. Tällöin on luonnollista, että negatiivisen luvun vähentäminen on vastakohta positiivisen luvun vähentämiselle. Koska positiivisen luvun vähentäminen pienentää lukua, pitäisi negatiivisen luvun vähentämisen kasvattaa lukua. Tämän vuoksi on sovittu, että $5-(-8)$ tarkoittaa samaa kuin $5+8$.
+    Negatiivisen luvun lisääminen on vastakohta positiivisen luvun lisäämiselle. Tällöin on luonnollista, että negatiivisen luvun vähentäminen on vastakohta positiivisen luvun vähentämiselle. Koska positiivisen luvun vähentäminen pienentää lukua, pitäisi negatiivisen luvun vähentämisen kasvattaa lukua. Lasku $5-(-8)$ tarkoittaa siis samaa kuin $5+8$.
     
 %säädetään kuva vähän irti tuosta edeltävästä tektistä
 \vspace{0.3cm}     
@@ -159,20 +181,20 @@ yhteenlaskun ja vastaluvun avulla yksinkertaisesti:
 Yhteen- ja vähennyslaskun merkkisäännöt
 
 \begin{itemize}
-\item $a+(-b)=a-b=a-(+b)$
-\item $-(-a)=a$
-\item $a-(-b)=a+b=a+(+b)$
+\item $a+(+b)=a+b$
+\item $a+(-b)=a-b$
+\item $a-(+b)=a-b$
+\item $a-(-b)=a+b$
 \end{itemize}
 }
 
-\laatikko{
-Yhteen- ja vähennyslasku kumoavat toisensa
+%Koska $+b-b=0$, yhteen- ja vähennyslasku kumoavat toisensa, eli
+%
+%\begin{itemize}
+%\item $a+b-b=a$
+%\item $a-b+b=a$
+%\end{itemize}
 
-\begin{itemize}
-\item $a+b-b=a$
-\item $a-b+b=a$
-\end{itemize}
-}
 
 
 \subsection*{Kertolasku}
