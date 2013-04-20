@@ -37,15 +37,30 @@ KIITOS!}
 \end{lukusuora}
 
 
+Itseisarvo voidaan tulkita lukusuoralla pisteen etäisyytenä nollasta.
+Epänegatiivisen luvun itseisarvo on luku itse ja
+negatiivisen luvun itseisarvo on luvun vastaluku.
 
-Itseisarvo kuvaa lukusuoralla pisteen etäisyyttä nollasta. Positiivisen luvun itseisarvo on luku itse ja negatiivisen luvun itseisarvo on luvun vastaluku. Nollan itseisarvo on nolla.
+\laatikko{
+	\textbf{Itseisarvon määritelmä}\\
+	$|x|= \left\{
+		\begin{array}{rcl}
+			x, & \textnormal{kun} \; x \geq 0 \\
+			-x, & \textnormal{kun} \; x < 0
+		\end{array}
+	\right.$
+}
 
-
-\laatikko{\textbf{Itseisarvon määritelmä}\\
-$|x|= \left\{ \begin{array}{rcl}
-		x & , kun & x \geq 0 \\
-		-x & , kun & x < 0
-		\end{array}\right.$}
+Itseisarvo on funktio
+\[
+||: \mathbb{R} \rightarrow \mathbb{R}, \;
+|x| = \left\{
+	\begin{array}{rcl}
+		x, & \textnormal{kun} \; x \geq 0 \\
+		-x, & \textnormal{kun} \; x < 0.
+	\end{array}
+\right.
+\]
 
 \begin{esimerkki}
 Esitä ilman itseisarvomerkkejä
@@ -57,10 +72,11 @@ Esitä ilman itseisarvomerkkejä
 	\begin{alakohdat}
 		\alakohta{Koska $3-\pi\approx-0,14<0$, niin $|3-\pi|=-(3-\pi)=\pi-3$}
 		\alakohta{Koska $x-3\geq 0$, kun $x\geq3$, niin\\
-			$|x-3|= \left \{ \begin{array}{rcl}
-			x-3 & , kun & x\geq3 \\
-			-x+3 & , kun & x<3
-			\end{array}\right.$
+			$|x-3|= \left \{
+				\begin{array}{rcl}
+					x-3, & \textnormal{kun} \; x \geq 3 \\
+					-x+3, & \textnormal{kun} \; x < 3
+				\end{array}\right.$
 		}
 	\end{alakohdat}
 \end{esimerkki}
