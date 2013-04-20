@@ -63,12 +63,39 @@ def lopetaKuva():
 	
 	_out.close()
 
-def parametrikayra(x, y, a = 0, b = 1):
+def nimeaPiste(P, nimi, vaaka = 1, pysty = -1, vari = 'black'):
+	"""Kirjoita LaTeX-koodina annettu 'nimi' pisteen P viereen, suunnilleen
+	suuntaan (vaaka, pysty)."""
+	
+	nodepos = ""
+	
+	if pysty < 0:
+		nodepos += "below "
+	elif pysty > 0:
+		nodepos += "above "
+	
+	if vaaka < 0:
+		nodepos += "left "
+	elif vaaka > 0:
+		nodepos += "right "
+	
+	nodepos = nodepos[:-1]
+	
+	if pysty and vaaka:
+		nodepos += "=-0.07cm"
+	
+	_out.write("\draw[color={}] {} node[{}] {{{}}};\n".format(vari, tikzPiste(muunna(P)), nodepos, nimi))
+
+def parametrikayra(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0)):
 	"""Piirrä parametrikäyrä (x(t), y(t)), kun t käy läpi välin [a, b].
 	x ja y voivat olla funktioita tai merkkijonokuvauksia t:n funktiosta.
 	Esimerkiksi paraabeli välillä [-1, 1] piirretään kutsulla
 	piirraKayra(lambda t: t, lambda t: t**2, -1, 1) tai
-	piirraKayra("t", "t**2", -1, 1)."""
+	piirraKayra("t", "t**2", -1, 1).
+	'nimi' kirjoitetaan kohtaan 'kohta' suuntaan 'suunta'. Mikäli kohtaa ei
+	anneta, nimi kirjoitetaan käyrän viimeiseen pisteeseen. Mikäli kohta on
+	yksi luku, nimi laitetaan käyrän arvoon parametrin arvolla 'kohta'. Muuten
+	käytetään arvoa 'kohta' pisteenä."""
 	
 	x = funktioksi(x, "t")
 	y = funktioksi(y, "t")
@@ -79,6 +106,7 @@ def parametrikayra(x, y, a = 0, b = 1):
 		raise ValueError("piirraKayra: alarajan on oltava pienempi kuin ylärajan.")
 	
 	t = a
+	viim_t = a # Viimeinen sisäpuolella oleva t:n arvo.
 	dt = (b - a) / 300
 	
 	paksuus = "{}pt".format(tikzLuku(_asetukset['piirtopaksuus'] * _paksuuskerroin))
@@ -103,6 +131,7 @@ def parametrikayra(x, y, a = 0, b = 1):
 	while t <= b:
 		P = (x(t), y(t))
 		if onkoSisapuolella(P):
+			viim_t = t
 			X, Y = muunna(P)
 			aloitaTiedosto()
 			datafp[0].write("{} {}\n".format(tikzLuku(X), tikzLuku(Y)))
@@ -111,6 +140,14 @@ def parametrikayra(x, y, a = 0, b = 1):
 		
 		t += dt
 	lopetaTiedosto()
+	
+	# Kirjoitetaan nimi.
+	if kohta is None:
+		kohta = (x(viim_t), y(viim_t))
+	elif isinstance(kohta, int) or isinstance(kohta, float):
+		kohta = (x(kohta), y(kohta))
+	
+	nimeaPiste(kohta, nimi, suunta[0], suunta[1], vari)
 
 class AsetusPalautin:
 	"""Tallentaa konstruktorissaan asetukset ja palauttaa ne __exit__-funktiossaan."""
@@ -376,3 +413,19 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	rajaa(minX = minX, maxX = maxX, minY = minY, maxY = maxY)
 	
 	return ret
+
+def kuvaaja(f, a = None, b = None, nimi = "", kohta = None, suunta = (1, 0)):
+	"""Piirrä funktion f kuvaaja (f joko funktio tai x:n funktion
+	merkkijonokuvaus). X-koordinaatti käy läpi välin [a, b], jos jompi kumpi
+	jätetään pois, käytetään X-rajaa. Siis esimerkiksi kuvaajapohjassa ei yleensä
+	erikseen tarvitse ilmoittaa väliä [a, b]. 'nimi', 'kohta' ja 'suunta'
+	toimivat kuten parametrikäyrissä."""
+	
+	if a is None: a = _asetukset['minX']
+	if b is None: b = _asetukset['maxX']
+	
+	if a == float("-inf"): raise ValueError("kuvaaja: X-alaraja puuttuu.")
+	if b == float("inf"): raise ValueError("kuvaaja: X-yläraja puuttuu.")
+	
+	f = funktioksi(f, "x")
+	parametrikayra("t", f, a, b, nimi, kohta, suunta)
