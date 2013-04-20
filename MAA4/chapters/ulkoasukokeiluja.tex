@@ -1,31 +1,67 @@
  
 \section{Ulkoasukokeiluja}
 
+%\definecolor{Sampo3}{cmyk}{0.2,0.27,0.0,0.0}
+\definecolor{ParisGreen}{RGB}{80,200,120}
+%\definecolor{PersianGreen}{RGB}{0,166,147}
+%\definecolor{darkKhaki}{RGB}{189,183,107}
+%\definecolor{cornflowerBlue}{RGB}{154,206,235}
+%\definecolor{thulianPink}{RGB}{222,111,161}
+%\definecolor{olivine}{RGB}{154,185,115}
+%\definecolor{battleshipGray}{RGB}{132,132,130}
+
+\pgfdeclarehorizontalshading{laatikkotaustaC}{100bp}{color(0bp)=(ParisGreen); color(50bp)=(ParisGreen); color(100bp)=(ParisGreen!50)}
+%\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(white); color(50bp)=(Sampo3); color(100bp)=(Sampo3!50)}
+\pgfdeclarehorizontalshading{laatikkotaustaE}{195mm}{color(0mm)=(ParisGreen); color(97mm)=(ParisGreen); color(195mm)=(Sampo3)}
+\pgfdeclarehorizontalshading{laatikkotaustaF}{100bp}{color(0bp)=(white); color(25bp)=(white); color(75bp)=(Sampo3); color(100bp)=(Sampo3)}
+\colorlet{mycolor}{green}
+\pgfdeclarehorizontalshading[mycolor]{myshadingB}{1cm}{rgb(0cm)=(1,0,0); color(1cm)=(white); color(2cm)=(Sampo3)}
+
+\mdfdefinestyle{laatikkotyyliQ}{
+  usetwoside=false,
+  leftmargin=-46mm,
+  rightmargin=-22mm,
+  innerleftmargin=0mm,
+  innerrightmargin=0mm,
+  innertopmargin=0mm,
+  innerbottommargin=0mm,
+}
+
 \mdfdefinestyle{laatikkotyyliB}{
-  userdefinedwidth=0.72\paperwidth, % FIXME: controversial
-  leftmargin=0pt,
-  innermargin=0pt,
-  innerleftmargin=5pt,
-  rightmargin=0pt,
-  innerrightmargin=0pt,
+%  userdefinedwidth=166mm % FIXME: controversial
+  usetwoside=true,
+  innermargin=15mm,
+  outermargin=0mm,
+  innerleftmargin=36mm,
+  innerrightmargin=12mm,
   middlelinewidth=0pt,
   apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
-  innertopmargin=3mm,
-  innerbottommargin=3mm,
-  needspace=3\baselineskip,
 }
 
 \mdfdefinestyle{laatikkotyyliC}{
-  userdefinedwidth=0.72\paperwidth, % FIXME: controversial
+  userdefinedwidth=127mm,
   leftmargin=0pt,
   innermargin=0pt,
-  innerleftmargin=50pt,
+  innerleftmargin=0,
   rightmargin=0pt,
   innerrightmargin=0pt,
   middlelinewidth=0pt,
-  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
-  innertopmargin=3mm,
-  innerbottommargin=3mm,
+  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotaustaC}}},
+  innertopmargin=0mm,
+  innerbottommargin=0mm,
+  needspace=3\baselineskip,
+}
+
+\mdfdefinestyle{laatikkotyyliW}{
+  usetwoside=false,
+  leftmargin=-46mm,
+  rightmargin=-22mm,
+  innerleftmargin=46mm,
+  innerrightmargin=22mm,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  hidealllines=true,
+  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotaustaF}}},
   needspace=3\baselineskip,
 }
 
@@ -45,17 +81,16 @@
 %\end{widepar}
 }
 
-\newcommand{\laatikkoD}[1]{%
+
+\newcommand{\laatikkoE}[1]{%
 %\begin{\widepar}
-  \begin{mdframed}[style=laatikkotyyliB]
-    \begin{mdframed}[style=laatikkotyyliB]
-      #1
-    \end{mdframed}
+  \begin{mdframed}[style=laatikkotyyliW]
+	#1
   \end{mdframed}
 %\end{widepar}
 }
 
-\laatikkoB{
+\laatikkoE{
 \textbf{Itseisarvon ominaisuuksia}\\ \\
 	\begin{tabular}{l l}
 		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
@@ -68,7 +103,9 @@
 
 \newpage
 
-\laatikkoB{
+\section{Ulkoasukokeiluja 2}
+
+\laatikkoE{
 \textbf{Itseisarvon ominaisuuksia}\\ \\
 	\begin{tabular}{l l}
 		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
@@ -80,14 +117,3 @@
 }
 
 \newpage
-
-\laatikkoD{
-\textbf{Itseisarvon ominaisuuksia}\\ \\
-	\begin{tabular}{l l}
-		$|a|\geq0$ & Itseisarvo on aina ei-negatiivinen \\
-		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
-		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
-		$|\frac{a}{b}|=\frac{|a|}{|b|}$ & Osamaarän itseisarvo on itseisarvojen osamäärä
-
-	\end{tabular}
-}

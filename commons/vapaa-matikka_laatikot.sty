@@ -26,19 +26,35 @@
 %\definecolor{battleshipGray}{RGB}{132,132,130}
 
 %\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(ParisGreen); color(50bp)=(ParisGreen); color(100bp)=(ParisGreen!50)}
-\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(white); color(50bp)=(Sampo3); color(100bp)=(Sampo3!50)}
+%\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(white); color(50bp)=(Sampo3); color(100bp)=(Sampo3!50)}
+\pgfdeclarehorizontalshading{laatikkotausta}{100bp}{color(0bp)=(white); color(25bp)=(white); color(75bp)=(Sampo3); color(100bp)=(Sampo3)}
+
+%\mdfdefinestyle{laatikkotyyli}{
+%  userdefinedwidth=0.72\paperwidth, % FIXME: controversial
+%  leftmargin=0pt,
+%  innermargin=0pt,
+%  innerleftmargin=5pt,
+%  rightmargin=0pt,
+%  innerrightmargin=0pt,
+%  middlelinewidth=0pt,
+%  apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
+%  innertopmargin=3mm,
+%  innerbottommargin=3mm,
+%  needspace=3\baselineskip,
+%}
 
 \mdfdefinestyle{laatikkotyyli}{
-  userdefinedwidth=0.72\paperwidth, % FIXME: controversial
-  leftmargin=0pt,
-  innermargin=0pt,
-  innerleftmargin=5pt,
-  rightmargin=0pt,
-  innerrightmargin=0pt,
-  middlelinewidth=0pt,
+% Värin pitää mennä vähintään 3 mm paperin reunan yli, jotta
+% kirjapainolle jää leikkausvaraa
+  usetwoside=false,
+  leftmargin=-49mm,
+  rightmargin=-25mm,
+  innerleftmargin=49mm,
+  innerrightmargin=25mm,
+  innertopmargin=8pt,
+  innerbottommargin=8pt,
+  hidealllines=true,
   apptotikzsetting={\tikzset{mdfbackground/.append style = {shading = laatikkotausta}}},
-  innertopmargin=3mm,
-  innerbottommargin=3mm,
   needspace=3\baselineskip,
 }
 
