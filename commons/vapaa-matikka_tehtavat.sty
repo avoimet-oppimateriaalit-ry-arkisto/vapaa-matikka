@@ -1,10 +1,54 @@
 \ProvidesPackage{../commons/vapaa-matikka_tehtavat}
 
+\definecolor{Sampo5}{cmyk}{0.60,0.80,0.0,0.0}
+
+% Vanhentunut komento
 \newcommand{\Harjoitustehtavat}{%
 	\newpage
 	\subsection*{Harjoitustehtäviä}%
 	%\addcontentsline{toc}{section}{Harjoitustehtäviä}
 }
+
+% Käytä tätä ympäristöä tehtäville
+\newenvironment{tehtavasivu}
+{
+  \begin{adjustwidth}{-13mm}{0mm}
+  \newpage
+
+  \titleformat{\subsection}[hang]
+  {\sffamily\color{Sampo5}\fontsize{16}{12}\selectfont}
+  {\thesubsection}
+  {0.5em}
+  {}
+  [\vspace{0.5mm}{\titlerule[0.5pt]}]
+
+  \subsection*{Tehtäviä}%
+  %\addcontentsline{toc}{section}{Tehtäviä}
+  \begin{flushleft}
+  \begin{multicols}{2}
+}
+{
+  \end{multicols}
+  \end{flushleft}
+  \end{adjustwidth}
+}
+% Harjoitustehtävät answers-paketilla
+\Newassociation{vastaus}{Vastaus}{ans}
+\renewenvironment{Vastaus}[1]{\begin{trivlist}\item \textbf{#1.} }{\end{trivlist}} %ulkoasumuutos vastauksiin
+
+\newtheoremstyle{tehtava}% name
+  {3pt}%Space above
+  {3pt}%Space below
+  {\fontsize{10.5}{11.5}\selectfont}%Body font
+  {0pt}%Indent amount
+  {\bf\sffamily\color{Sampo5}\fontsize{9.5}{11.5}\selectfont}% Theorem head font
+  {}%Punctuation after theorem head
+  {2mm}%Space after theorem head 2
+  {}%Theorem head spec (can be left empty, meaning ‘normal’)
+
+\theoremstyle{tehtava}
+\newtheorem{tehtava}{}
+\theoremstyle{plain}
 
 % Ympäristö tehtävän alakohtien listaamiseen.
 % Variantit:
