@@ -2,6 +2,7 @@
 
 import tila
 from util import *
+import os
 
 def muunna(P):
 	"""Muunna piirrettävä piste (2-tuple) pisteeksi kuvapinnalla."""
@@ -29,7 +30,11 @@ def aloitaKuva():
 	lopetettava kutsumalla lopeta(). LaTeX-ympäristö kutsuu yleensä aloitaKuva-
 	ja lopetaKuva-funktioita automaattisesti."""
 	
-	tila.out = open("kuva-tmp-output.txt", "w")
+	try:
+		os.unlink("kuva-tmp-output.txt")
+	except OSError:
+		pass
+	tila.out = open("kuva-tmp-output.txt.tmp", "w")
 	
 	tila.out.write("\\begin{tikzpicture}\n")
 
@@ -41,6 +46,7 @@ def lopetaKuva():
 	tila.out.write("\\end{tikzpicture}\n")
 	
 	tila.out.close()
+	os.rename("kuva-tmp-output.txt.tmp", "kuva-tmp-output.txt")
 
 def nimeaPiste(P, nimi, vaaka = 1, pysty = -1):
 	"""Kirjoita LaTeX-koodina annettu 'nimi' pisteen P viereen, suunnilleen
@@ -63,7 +69,7 @@ def nimeaPiste(P, nimi, vaaka = 1, pysty = -1):
 	if pysty and vaaka:
 		nodepos += "=-0.07cm"
 	
-	tila.out.write("\draw[color={}] {} node[{}] {{{}}};\n".format(tila.asetukset['piirtovari'], tikzPiste(muunna(P)), nodepos, nimi))
+	tila.out.write("\\draw[color={}] {} node[{}] {{{}}};\n".format(tila.asetukset['piirtovari'], tikzPiste(muunna(P)), nodepos, nimi))
 
 class AsetusPalautin:
 	"""Tallentaa konstruktorissaan asetukset ja palauttaa ne __exit__-funktiossaan."""
@@ -76,6 +82,14 @@ class AsetusPalautin:
 	
 	def __exit__(self, type, value, traceback):
 		tila.asetukset = self.asetukset
+
+def piste(P, nimi = "", suunta = (1, 0)):
+	"""Piirrä piste 'P' kuvaan. Nimi laitetaan suuntaan 'suunta' (ks. nimeaPiste)."""
+	
+	vari = tila.asetukset['piirtovari']
+	tila.out.write("\\fill[color={}] {} circle (0.07);\n".format(vari, tikzPiste(muunna(P))))
+	
+	nimeaPiste(P, nimi, suunta[0], suunta[1])
 
 # Funktiot piirtoasetusten muuttamiseen. Kaikkia funktioita voi käyttää
 # with-lauseessa, jolloin with-blokin jälkeen asetukset palaavat ennalleen.
@@ -114,7 +128,7 @@ def siirraX(siirto):
 	ret = AsetusPalautin()
 	
 	a, b = tila.asetukset['xmuunnos']
-	tila.asetukset['xmuunnos'] = (a, b + siirto)
+	tila.asetukset['xmuunnos'] = (a, b + a * siirto)
 	
 	return ret
 
@@ -124,7 +138,7 @@ def siirraY(siirto):
 	ret = AsetusPalautin()
 	
 	a, b = tila.asetukset['ymuunnos']
-	tila.asetukset['ymuunnos'] = (a, b + siirto)
+	tila.asetukset['ymuunnos'] = (a, b + a * siirto)
 	
 	return ret
 
@@ -178,10 +192,8 @@ def muutaPaksuus(kerroin):
 	tila.asetukset['piirtopaksuus'] *= kerroin
 	return ret
 
-def piste(P, nimi = "", suunta = (1, 0)):
-	"""Piirrä piste 'P' kuvaan. Nimi laitetaan suuntaan 'suunta' (ks. nimeaPiste)."""
+def palautin():
+	"""Ei tee mitään, mutta palauttaa AsetusPalauttimen, joten voidaan käyttää
+	asetusten tallentamiseen withillä."""
 	
-	vari = tila.asetukset['piirtovari']
-	tila.out.write("\\fill[color={}] {} circle (0.07);\n".format(vari, tikzPiste(muunna(P))))
-	
-	nimeaPiste(P, nimi, suunta[0], suunta[1])
+	return AsetusPalautin()
