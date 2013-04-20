@@ -368,17 +368,17 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	asteikkovalit = [1, 2, 5, 10, 20, 50, 100]
 	
 	def piirraXKohta(X):
-		alku = vekSumma(muunna((X, 0)), (0, -0.07))
+		alku = vekSumma(muunna((X, 0)), (0, -0.09))
 		kohta = vekSumma(muunna((X, 0)), (0.1, 0))
-		loppu = vekSumma(muunna((X, 0)), (0, 0.07))
-		_out.write("\\draw[thick] {} -- {};\n".format(tikzPiste(alku), tikzPiste(loppu)))
+		loppu = vekSumma(muunna((X, 0)), (0, 0.09))
+		_out.write("\\draw[line width=1.2pt] {} -- {};\n".format(tikzPiste(alku), tikzPiste(loppu)))
 		_out.write("\\draw {} node[above] {{\\footnotesize {}}};\n".format(tikzPiste(kohta), X))
 	
 	def piirraYKohta(Y):
-		alku = vekSumma(muunna((0, Y)), (-0.07, 0))
+		alku = vekSumma(muunna((0, Y)), (-0.09, 0))
 		kohta = muunna((0, Y))
-		loppu = vekSumma(muunna((0, Y)), (0.07, 0))
-		_out.write("\\draw[thick] {} -- {};\n".format(tikzPiste(alku), tikzPiste(loppu)))
+		loppu = vekSumma(muunna((0, Y)), (0.09, 0))
+		_out.write("\\draw[line width=1.2pt] {} -- {};\n".format(tikzPiste(alku), tikzPiste(loppu)))
 		_out.write("\\draw {} node[right] {{\\footnotesize {}}};\n".format(tikzPiste(kohta), Y))
 	
 	for vali in asteikkovalit:

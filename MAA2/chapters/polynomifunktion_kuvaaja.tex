@@ -8,12 +8,19 @@ havainnollistaa koordinaatistoon piirretyn kuvaajan avulla:
 %\kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{green}
 %\end{kuvaajapohja}
 
-\begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
-%\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
-\kuvaaja{x**2+x}{$Q(x) = x^2+x$}{black}
-\kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{black}
-\end{kuvaajapohja}
-%
+% \begin{kuvaajapohja}{1.5}{-2}{2}{-3}{3}
+% %\kuvaaja{-x-1}{$P(x) = -x-1$}{red}
+% \kuvaaja{x**2+x}{$Q(x) = x^2+x$}{black}
+% \kuvaaja{x**3-3*x-1}{$R(x) = x^3-3x-1$}{black}
+% \end{kuvaajapohja}
+% %
+
+\begin{kuva}
+kuvaajapohja(-2, 2, -3, 3, korkeus = 9, nimiX = '$x$')
+kuvaaja("x**2+x", nimi = "$Q(x) = x^2+x$")
+kuvaaja("x**3-3*x-1", nimi = "$R(x) = x^3-3x-1$")
+\end{kuva}
+
 \subsection*{Kuvaajan piirtäminen}
 
 \qrlinkki{http://opetus.tv/maa/maa2/suoran-piirtaminen/}{Opetus.tv: \emph{suoran piirtäminen} (5:47)}
