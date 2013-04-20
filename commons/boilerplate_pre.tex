@@ -141,9 +141,6 @@
 
 % Harjoitustehtävät answers-paketilla
 \usepackage{answers}
-\Newassociation{vastaus}{Vastaus}{ans}
-\renewenvironment{Vastaus}[1]{\begin{trivlist}\item \textbf{#1.} }{\end{trivlist}} %ulkoasumuutos vastauksiin
-\newtheorem{tehtava}{}
 
 % Cancel-paketti supistamista ym. varten
 \usepackage{cancel}
@@ -183,6 +180,9 @@
 
 % Täältä saa komennon \ifthispageodd
 \usepackage{scrextend}
+
+% Marginaalien muuttaminen harjoitustehtäväsivuja varten
+\usepackage[strict]{changepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
