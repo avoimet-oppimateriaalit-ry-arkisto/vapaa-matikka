@@ -13,6 +13,7 @@ if __name__ == '__main__':
 	outfile.write("import sys\n")
 	outfile.write("sys.path.append(\"../commons/kuva/\")\n")
 	outfile.write("from kuva import *\n")
+	outfile.write("from kuvaaja import *\n")
 	outfile.write("aloitaKuva()\n")
 	outfile.write("if True:\n")
 	for line in infile:

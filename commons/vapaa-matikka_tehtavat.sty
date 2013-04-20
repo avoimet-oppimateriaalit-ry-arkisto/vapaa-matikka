@@ -9,6 +9,9 @@
 	%\addcontentsline{toc}{section}{Harjoitustehtäviä}
 }
 
+\AtBeginEnvironment{tehtava}{\begin{minipage}{68.5mm}}
+\AtEndEnvironment{tehtava}{\end{minipage}}
+
 % Käytä tätä ympäristöä tehtäville
 \newenvironment{tehtavasivu}
 {
@@ -27,6 +30,7 @@
   \begin{multicols}{2}
   %\begin{flushleft}
   %\mbox{}
+  \widowpenalty=30000
   \raggedright
 }
 {
