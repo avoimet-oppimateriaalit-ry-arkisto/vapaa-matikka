@@ -75,8 +75,14 @@
 %   {\par}}
 % \makeatother
 
-\newcommand{\laatikko}[1]{%
+%\newcommand{\laatikko}[1]{%
+%  \begin{mdframed}[style=laatikkotyyli] #1 \end{mdframed}
+%}
+
+\newcommand{\laatikko}[2][]{%
 %\begin{\widepar}
-  \begin{mdframed}[style=laatikkotyyli] #1 \end{mdframed}
+  \begin{mdframed}[style=laatikkotyyli]
+  \ifthenelse{\equal{#1}{}}{#2}{\textbf{#1}\\ \\ #2}%
+  \end{mdframed}
 %\end{widepar}
 }
