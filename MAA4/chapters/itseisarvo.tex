@@ -43,23 +43,19 @@ negatiivisen luvun itseisarvo on luvun vastaluku.
 
 \laatikko{
 	\textbf{Itseisarvon määritelmä}\\
-	$|x|= \left\{
-		\begin{array}{rcl}
-			x, & \textnormal{kun} \; x \geq 0 \\
-			-x, & \textnormal{kun} \; x < 0
-		\end{array}
-	\right.$
+	$|x|= \begin{cases}
+			x, & \kun x \geq 0 \\
+			-x, & \kun x < 0
+	\end{cases}$
 }
 
 Itseisarvo on funktio
 \[
 ||: \mathbb{R} \rightarrow \mathbb{R}, \;
-|x| = \left\{
-	\begin{array}{rcl}
-		x, & \textnormal{kun} \; x \geq 0 \\
-		-x, & \textnormal{kun} \; x < 0.
-	\end{array}
-\right.
+|x| = \begin{cases}
+		x, & \kun x \geq 0 \\
+		-x, & \kun x < 0.
+	\end{cases}
 \]
 
 \begin{esimerkki}
@@ -72,11 +68,10 @@ Esitä ilman itseisarvomerkkejä
 	\begin{alakohdat}
 		\alakohta{Koska $3-\pi\approx-0,14<0$, niin $|3-\pi|=-(3-\pi)=\pi-3$}
 		\alakohta{Koska $x-3\geq 0$, kun $x\geq3$, niin\\
-			$|x-3|= \left \{
-				\begin{array}{rcl}
-					x-3, & \textnormal{kun} \; x \geq 3 \\
-					-x+3, & \textnormal{kun} \; x < 3
-				\end{array}\right.$
+			$|x-3|= \begin{cases}
+				x-3, & \kun x \geq 3 \\
+				-x+3, & \kun x < 3
+			\end{cases}$
 		}
 	\end{alakohdat}
 \end{esimerkki}
@@ -147,10 +142,13 @@ Kun $x\leq-4$ tai $x\geq4$, on $x^2-16\geq0$, ja tällöin
 \[
 |x^2-16|+3x =x^2-16+3x=x^2+3x-16
 \]
+
 Siis:
-			$|x^2-16|+3x= \begin{cases}
-			-x^2+3x+16, & \text{kun $-4<x<4$} \\
-			x^2+3x-16, & \text{kun $x\leq -4$ tai $x\geq 4$}\end{cases}$
+			$|x^2-16|+3x=
+			\begin{cases}
+				-x^2+3x+16, & \kun -4<x<4 \\
+				x^2+3x-16, & \kun x\leq -4 \tai x\geq 4
+			\end{cases}$
 
 \end{esimerkki}
 
@@ -166,22 +164,22 @@ Tehtävissä 1--n esitä lauseke ilman itseisarvomerkkejä.
 	\begin{vastaus}
 		\begin{alakohdat}
 			\alakohta{$-(\pi-4)=-\pi+4=4-\pi$}
-			\alakohta{$\left \{ \begin{array}{rcl}
-					-2x+6, & jos & x<3 \\
-					2x-6, & jos & x \geq 3
-				\end{array}\right.$}
-			\alakohta{$\left \{ \begin{array}{rcl}
-					x+(6-3x), & jos & 6-3x \geq0 \\
-					x-(6-3x), & jos & 6-3x <0 
-				\end{array}\right.
-				=\left \{ \begin{array}{rcl}
-					x+6-3x, & jos & -3x \geq-6 \\
-					x-6+3x, & jos & -3x <-6 
-				\end{array}\right.\\
-				=\left\{\begin{array}{rcl}
-					-2x+6, & jos & x \leq2 \\
-					4x-6, & jos & x >2 
-				\end{array}\right.$}
+			\alakohta{$\begin{cases}
+					-2x+6, & \jos x<3 \\
+					2x-6, & \jos x \geq 3
+				\end{cases}$}
+			\alakohta{$\begin{cases}
+					x+(6-3x), & \jos 6-3x \geq0 \\
+					x-(6-3x), & \jos 6-3x <0 
+				\end{cases}\\
+				=\begin{cases}
+					x+6-3x, & \jos -3x \geq-6 \\
+					x-6+3x, & \jos -3x <-6 
+				\end{cases}\\
+				=\begin{cases}
+					-2x+6, & \jos x \leq2 \\
+					4x-6, & \jos x >2 
+				\end{cases}$}
 		\end{alakohdat}
 	\end{vastaus}
 \end{tehtava}
@@ -194,15 +192,15 @@ Tehtävissä 1--n esitä lauseke ilman itseisarvomerkkejä.
 	\end{alakohdat}
 	\begin{vastaus}
 		\begin{alakohdat}
-			\alakohta{$\left \{ \begin{array}{l c l}
-					\ \ \ x^2, & jos & x \leq2 \\
-					-x^2+4x, & jos & x>2 
-				\end{array}\right.$}
+			\alakohta{$\begin{cases}
+					x^2, & \jos x \leq2 \\
+					-x^2+4x, & \jos x>2 
+				\end{cases}$}
 			\alakohta{$x^2+3$}
-			\alakohta{$\left \{ \begin{array}{rcl}
-					x^2-4, & jos & x \leq-2 \ \ tai\ \ x\geq2 \\
-					-x^2+4, & jos & -2<x<2 
-				\end{array}\right.$}
+			\alakohta{$\begin{cases}
+					x^2-4, & \jos x \leq -2 \tai x \geq 2 \\
+					-x^2+4, & \jos -2<x<2 
+				\end{cases}$}
 		\end{alakohdat}
 	\end{vastaus}
 \end{tehtava}
