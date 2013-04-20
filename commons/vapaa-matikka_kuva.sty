@@ -2,11 +2,11 @@
 
 \newenvironment{kuva}
 {
-	\VerbatimOut{kuva-tmp.py}
+	\VerbatimOut{kuva-tmp-skripti.py}
 }
 {
 	\endVerbatimOut
-	\immediate\write18{python ../commons/kuva/luo_kuvaskripti.py kuva-tmp.py kuva-tmp2.py}
-	\immediate\write18{python kuva-tmp2.py}
-	\input{kuva-tmp.out}
+	\immediate\write18{python ../commons/kuva/luo_kuvaskripti.py kuva-tmp-skripti.py kuva-tmp-skripti2.py}
+	\immediate\write18{python kuva-tmp-skripti2.py}
+	\input{kuva-tmp-output.txt}
 }

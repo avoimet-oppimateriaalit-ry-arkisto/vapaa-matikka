@@ -50,7 +50,7 @@ def aloitaKuva():
 	ja lopetaKuva-funktioita automaattisesti."""
 	
 	global _out
-	_out = open("kuva-tmp.out", "w")
+	_out = open("kuva-tmp-output.txt", "w")
 	
 	_out.write("\\begin{tikzpicture}\n")
 
@@ -125,7 +125,7 @@ def parametrikayra(x, y, a = 0, b = 1, nimi = "", kohta = None, suunta = (1, 0))
 		if datafp[0] is None:
 			global _data_id
 			_data_id += 1
-			filename[0] = "kuva-data-tmp{}.out".format(_data_id)
+			filename[0] = "kuva-tmp-data{}.txt".format(_data_id)
 			datafp[0] = open(filename[0], "w")
 	
 	while t <= b:
@@ -302,7 +302,7 @@ def kuvaajapohja(minX, maxX, minY, maxY, leveys = None, korkeus = None, nimiX = 
 	siirraY(minY)
 	
 	# Piirretään ruudukko.
-	ruudukkovarit = ["black!50!white", "black!20!white", "black!10!white", "black!4!white", "black!2!white"]
+	ruudukkovarit = ["black!30!white", "black!15!white", "black!8!white", "black!4!white", "black!2!white"]
 	ruudukkovalit = [100.0, 50.0, 10.0, 5.0, 1.0, 0.5, 0.25, 0.125]
 	ruudukkorivit = []
 	
