@@ -28,6 +28,7 @@
 *.tdo
 *.toc
 *.vrb
+*.pyc
 *~
 .DS_Store
 MAA1/*.pdf
