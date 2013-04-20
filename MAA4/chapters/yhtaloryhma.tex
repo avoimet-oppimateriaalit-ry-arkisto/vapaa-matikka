@@ -1,4 +1,4 @@
-\section{Yhtälöryhmät} % FIXME: siirrä
+\section{Lineaariset yhtälöryhmät} % FIXME: siirrä?
 
 \laatikko{
 KIRJOITA TÄHÄN LUKUUN
@@ -12,7 +12,7 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
-\subsection*{Lineaarinen yhtälöpari}
+\subsection*{Lineaariset yhtälöparit}
 
 Yksinkertaisin tapaus yhtälöryhmistä on lineaarinen yhtälöpari, jossa on
 kaksi ensimmäisen asteen yhtälöä. Käyttäen normaalimuotoa:
@@ -40,9 +40,41 @@ mutta eivät sama suora), $1$ (suorat eivät ole yhdensuuntaiset) tai äärettö
 Lineaarisella yhtälöparilla voi olla joko $0$, $1$ tai äärettömän monta ratkaisua.
 }
 
-\subsection*{Lineaarinen yhtälöryhmä}
+\subsection*{Lineaariset yhtälöryhmät}
 
 Lineaarisen yhtälöparin ajatus yleistyy mihin tahansa määrään ensimmäisen asteen yhtälöitä.
-Tällöin puhutaan lineaarisista yhtälöryhmistä. Myös geometrinen tulkinta yleistyy, mutta se on vaikeampi
-visualisoida paperille: lineaarinen kolmen yhtälön ryhmä vastaa kolmen $(x, y)$-tason leikkauspisteitä
+Tällöin puhutaan lineaarisista yhtälöryhmistä.\footnote{Myös lineaarinen yhtälöpari on lineaarinen yhtälöryhmä.}
+Myös geometrinen tulkinta yleistyy, mutta se on vaikeampi visualisoida paperille:
+lineaarinen kolmen yhtälön ryhmä vastaa kolmen $(x, y)$-tason leikkauspisteitä
 kolmiulotteisessa $(x, y, z)$-avaruudessa jne.
+
+Tällä kurssilla tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Neljän yhtälön
+lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. Yleisesti ottaen yhtälöryhmiä
+ei ratkaista tällä kurssilla esitetyin keinoin, vaan likimääräisesti tietokoneella käyttäen numeerista 
+matriisilaskentaa (ei käsitellä lukiossa).
+
+\subsection*{Tehtäviä}
+
+\begin{tehtava}
+    Ratkaise yhtälöryhmä.
+    \begin{align*}
+        2x+3y+5z+8 &= 0 \\
+        3x+5y+8z &=0 \\
+        x+y-1 &=0
+    \end{align*}
+    \begin{vastaus}
+        $x = -\frac{63}{2}, \, y = \frac{65}{2}, \, z = -\frac{17}{2}$
+    \end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+    Ratkaise yhtälöryhmä.
+    \begin{align*}
+        x+y+2z+12 &= 0 \\
+        2x+2y+3z+1 &=0 \\
+        3x-4 &=0
+    \end{align*}
+    \begin{vastaus}
+        $x = \frac{4}{3}, \, y = \frac{98}{3}, \, z = -23$
+    \end{vastaus}
+\end{tehtava}

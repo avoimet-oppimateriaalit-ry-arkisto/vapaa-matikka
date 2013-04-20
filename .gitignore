@@ -26,6 +26,7 @@
 *.snm
 *.synctex.gz
 *.tdo
+*.tex.backup
 *.toc
 *.vrb
 *.pyc
