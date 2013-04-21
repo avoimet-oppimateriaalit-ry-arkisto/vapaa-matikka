@@ -5,10 +5,7 @@
 %  \marginpar{\raggedleft\sffamily\small\selectfont{#1}}}
 
 % muokattava korostus termeille
-\newcommand{\termi}[2][] {%
- \ifthenelse{\isempty{#2}}{\korostettuindeksi{#1}{#1}}%
- {\korostettuindeksi{#1}{#2}}%
-}
+\newcommand{\termi}[2]{\textbf{#2}\index{#1}}
 
 % käytetään kun sovelletaan sama funktio molemmille puolille
 % (pystypalkki kaksoisviivalla)
@@ -16,9 +13,6 @@
 
 % avoin väli, jotta oikeat välistykset
 \newcommand{\avoin}[2]{\mathopen{]}{#1},{#2}\mathclose{[}}
-
-% \lowercase poistettu, aiheutti ongelmia makeindexin kanssa
-\newcommand{\korostettuindeksi}[2]{\textbf{#1}\index{#2}}
 
 \newenvironment{todistus}[0]
 {

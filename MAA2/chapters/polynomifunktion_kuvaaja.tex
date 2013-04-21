@@ -16,9 +16,9 @@ havainnollistaa koordinaatistoon piirretyn kuvaajan avulla:
 % %
 
 \begin{kuva}
-kuvaajapohja(-2, 2, -3, 3, korkeus = 9, nimiX = '$x$')
-kuvaaja("x**2+x", nimi = "$Q(x) = x^2+x$", kohta = 1, suunta = (1, -1))
-kuvaaja("x**3-3*x-1", nimi = "$R(x) = x^3-3x-1$", kohta = 1.8)
+kuvaaja.pohja(-2, 2, -3, 3, korkeus = 9, nimiX = '$x$')
+kuvaaja.piirra("x**2+x", nimi = "$Q(x) = x^2+x$", kohta = 1, suunta = (1, -1))
+kuvaaja.piirra("x**3-3*x-1", nimi = "$R(x) = x^3-3x-1$", kohta = 1.8)
 \end{kuva}
 
 \subsection*{Kuvaajan piirtäminen}
@@ -30,7 +30,7 @@ $xy$-koordinaatistoon ja piirtämällä lopuksi kuvaajaan pisteiden kautta kulke
 
 % Esimerkin kuvat.
 \begin{luoKuva}{esimkuva1}
-kuvaajapohja(-4, 4, -3, 6, leveys = 3.5, nimiX = "$x$")
+kuvaaja.pohja(-4, 4, -3, 6, leveys = 3.5, nimiX = "$x$")
 piste((-3, 5.5))
 piste((-2, 2))
 piste((-1, -0.5))
@@ -40,7 +40,7 @@ piste((2, -2))
 piste((3, -0.5))
 \end{luoKuva}
 \begin{luoKuva}{esimkuva2}
-kuvaajapohja(-4, 4, -3, 6, leveys = 3.5, nimiX = "$x$")
+kuvaaja.pohja(-4, 4, -3, 6, leveys = 3.5, nimiX = "$x$")
 piste((-3, 5.5))
 piste((-2, 2))
 piste((-1, -0.5))
@@ -48,7 +48,7 @@ piste((0, -2))
 piste((1, -2.5))
 piste((2, -2))
 piste((3, -0.5))
-kuvaaja("0.5*x**2-x-2")
+kuvaaja.piirra("0.5*x**2-x-2")
 \end{luoKuva}
 
 \begin{esimerkki}
@@ -138,8 +138,8 @@ Kuvaajasta voi lukea funktion arvoja tai ainakin niiden likiarvoja. Kuvaajan per
 Kuvaajasta ei välttämättä näe tarkkoja arvoja. Seuraavassa on esitetty erään polynomifunktion $P(x)$ kuvaaja. Kuvaajan perusteella näyttäisi siltä, että $P(1)=1$, mutta tarkkaa arvoa kuvaajasta ei voi päätellä.
 
 \begin{kuva}
-kuvaajapohja(-1.9, 1.7, -1.4, 2, leveys = 4, nimiX = "$x$", ruudukko = False)
-kuvaaja("19./20*x**2+19./20*x-1", nimi = "$P(x)$", kohta = 1)
+kuvaaja.pohja(-1.9, 1.7, -1.4, 2, leveys = 4, nimiX = "$x$", ruudukko = False)
+kuvaaja.piirra("19./20*x**2+19./20*x-1", nimi = "$P(x)$", kohta = 1)
 \end{kuva}
 % \begin{kuvaajapohja}[\kuvaajaAsetusEiRuudukkoa]{1}{-2}{2}{-2}{2}
 % \kuvaaja{19./20*x**2+19./20*x-1}{$P(x)$}{black}
@@ -150,7 +150,7 @@ $$\dfrac{19}{20}\cdot 1^2-\dfrac{19}{20} \cdot 1-1=\dfrac{9}{10}$$
 eikä $1$, kuten kuvaajan perusteella voisi luulla. Kuvaajasta ei siis voi lukea tarkkoja tietoja funktiosta.
 \end{esimerkki}
 
-Funktion \termi[nollakohta]{nollakohta} on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $Q(x)=x^2-1$
+Funktion \termi{nollakohta}{nollakohta} on sellainen muuttujan arvo, jolla funktio saa arvon nolla. Esimerkiksi funktiolla $Q(x)=x^2-1$
 on nollakohdat $-1$ ja $1$, sillä $Q(-1)=0$ ja $Q(1)=0$.
 
 Funktion kuvaaja antaa tietoa nollakohdista. Niiden kohdalla kuvaaja leikkaa $x$-akselin.
@@ -159,10 +159,10 @@ Funktion kuvaaja antaa tietoa nollakohdista. Niiden kohdalla kuvaaja leikkaa $x$
 Funktion $P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$ kuvaajasta nähdään, että funktiolla on ainakin kaksi nollakohtaa. Toinen niistä on lähellä lukua $1$ ja toinen lukua $11$.
 
 \begin{kuva}
-kuvaajapohja(-5, 15, -10, 5, korkeus = 6, nimiX = "$x$")
+kuvaaja.pohja(-5, 15, -10, 5, korkeus = 6, nimiX = "$x$")
 piste((0.66146, 0))
 piste((11.3385, 0))
-kuvaaja("1./3*x**2-4*x+5./2", nimi = "$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$", kohta = 11, suunta = (1, -1))
+kuvaaja.piirra("1./3*x**2-4*x+5./2", nimi = "$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$", kohta = 11, suunta = (1, -1))
 \end{kuva}
 % \begin{kuvaajapohja}{0.3}{-5}{15}{-10}{5}
 % \kuvaajapiste{0.66146}{0}
@@ -215,6 +215,8 @@ kuvaaja("1./3*x**2-4*x+5./2", nimi = "$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$",
 %\frac{(x-a)^2}{(1-a)^3} +$ kuvaaja}
 
 \begin{tehtavasivu}
+
+\paragraph*{Opi perusteet}
 
 \begin{tehtava}
     Piirrä polynomien kuvaajat.
@@ -311,6 +313,8 @@ kuvaaja("1./3*x**2-4*x+5./2", nimi = "$P(x) = \dfrac{1}{3}x^2-4x+\dfrac{5}{2}$",
 			  \end{kuvaajapohja}
     \end{vastaus}
 \end{tehtava}
+
+\paragraph*{Hallitse kokonaisuus}
 
 \begin{tehtava}
 	Monia funktioita voidaan esittää likimääräisesti polynomeina (ns.

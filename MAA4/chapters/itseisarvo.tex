@@ -143,7 +143,8 @@ Kun $x\leq-4$ tai $x\geq4$, on $x^2-16\geq0$, ja tällöin
 |x^2-16|+3x =x^2-16+3x=x^2+3x-16
 \]
 
-Siis:
+Siis:\\
+
 			$|x^2-16|+3x=
 			\begin{cases}
 				-x^2+3x+16, & \kun -4<x<4 \\
@@ -152,7 +153,222 @@ Siis:
 
 \end{esimerkki}
 
-\subsection*{Tehtäviä}
+\newpage
+\subsection*{Itseisarvoyhtälö $|f(x)|=a$}
+
+\qrlinkki{http://opetus.tv/maa/maa4/itseisarvoyhtalo/}{Opetus.tv: Itseisarvoyhtälö}
+
+Itseisarvoyhtälössä muuttuja on itseisarvomerkkien sisällä. Itseisarvoyhtälö voidaan ratkaista esittämällä yhtälö ilman itseisarvo merkkejä hyödyntäen itseisarvon määritelmää ja ominaisuuksia, ja ratkaisemalla saadut yhtälöt.
+
+\laatikko{
+\textbf{Yhtälö: \quad $|f(x)|=a$}\\
+Jos $a\geq0$, niin
+\[
+	f(x)=a  \quad \tai \quad f(x)=-a
+\]
+Jos $a<0$, niin yhtälöllä $|f(x)|=a$ ei ole ratkaisuja.
+
+}
+
+\begin{esimerkki}
+
+Ratkaise yhtälö
+	\begin{alakohdat}
+		\alakohta{ $|x|=3$}
+		\alakohta{ $|x|=-2$}
+	\end{alakohdat}
+	\textbf{Ratkaisu} \\
+	\begin{alakohdat}
+		\alakohta{Ainoastaan lukujen $3$ ja $-3$ itseisarvot ovat 3, joten $x=3$ tai $x=-3$. Siis $x=\pm 3$}
+		\alakohta{Itseisarvo ei voi olla negatiivinen, joten yhtälöllä ei ole ratkaisua.}
+	\end{alakohdat}
+
+\end{esimerkki}
+
+
+\begin{esimerkki}
+Ratkaise yhtälö $|3x-4|=2$. \\
+\textbf{Ratkaisu}\\
+Yhtälön ratkaisut saadaan, kun luvun $3x-4$ etäisyys nollasta on 2, eli jos (ja vain jos) luku on $2$ tai $-2$. Saadaan:
+	\begin{align*}
+		3x-4&=2    &\tai  \qquad    \qquad      3x-4&=-2 \\
+		3x&=6      &     \qquad      3x&= 2 \\
+		x&=2       &     \qquad          x&=\frac{2}{3}
+	\end{align*}
+Ratkaisun oikeellisuuden voi tarkistaa sijoittamalla saadut ratkaisut alkupäiseen yhtälöön.
+\[|3\cdot2-4|=|6-4|=|2|=2 \quad \text{ ja } \quad \vert3\cdot\dfrac{2}{3}-4\vert=|2-4|=|-2|=2\text{.}\]
+
+\textbf{Vastaus: } $x=2$  tai  $x=\dfrac{2}{3}$.
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaise yhtälö $3x=3+|2x-3|$. (YO S82/1)\\
+\textbf{Ratkaisu}\\
+\begin{align*}
+	3x&=3+|2x-3|  \\
+	3x-3&=\underbrace{|2x-3|}_{\geq0}  \\
+\end{align*}
+Koska $|2x-3|\geq0$ aina, niin on oltava myös $3x-3\geq0$. Tällöin
+\begin{align*}
+	3x-3&\geq0 \\
+	3x&\geq3 \\
+	x&\geq1
+\end{align*}
+Itseisarvoyhtälöstä saadaan:
+\begin{align*}
+	2x-3&=3x-3   &\tai  \qquad \qquad 2x-3&=-(3x-3) \\
+	-x&=0        &\ \                  2x-3&=-3x+3 \\
+	x&=0         &\ \                  5x&=6 \\
+	\text{ei kelpaa,}&\text{ oltava}x\geq1  &\ \  x&=\frac{6}{5} \\
+	&\ \         &\ \                 &\text{kelpaa}
+\end{align*}
+\textbf{Vastaus: }$x=\dfrac{6}{5}=1\dfrac{1}{5}$.
+
+\end{esimerkki}
+
+
+Edellisen esimerkin tilannetta $3x-3=|2x-3|$ voidaan tarkastella myös piirtämällä kuvaajat $y=3x-3$ ja $y=|2x-3|$. Lausekkeet ovat yhtäsuuret, kun niiden saamat $y$:n arvot ovat yhtäsuuret, siis kohdissa, joissa kuvaajat leikkaavat toisensa.
+
+
+\begin{kuva}
+    kuvaaja.pohja(-1.5, 4.5, -2, 3, nimiX = "$x$", nimiY = "$y$")
+    piste((1.2, 0.6), "",(-1,0))
+    vari("red")
+    kuvaaja.piirra("3*x-3", nimi = "$y=3x - 3$",suunta = (1, 0), kohta=0.7)
+    vari("blue")
+    kuvaaja.piirra("abs(2*x-3)", nimi = "$y=|2x - 3|$", kohta = 2.2)
+\end{kuva}
+
+Huomaamme, että lausekkeet saavat saman arvon kohdassa, jossa \mbox{$x=\frac{6}{5}$}. Esimerkkiä ratkaistaessa vastaan tullut epäkelpo ratkaisu $x=0$ olisi vastannut suoran $y=2x-3$ (ilman itseisarvoa) leikkauspistettä suoran $y=3x-3$ kanssa, eli tilannetta, jossa sininen suora olisi kulkenut myös $x$-akselin alapuolella.
+
+\subsection*{Yhtälö $|f(x)|=|g(x)|$}
+
+Merkintä $|a|=|b|$ tarkoittaa, että luvut $a$ ja $b$ ovat lukusuoralla yhtä kaukana nollasta. Tällöin lukujen $a$ ja $b$ täytyy olla joko samat tai toistensa vastaluvut.
+
+\laatikko{
+$|f(x)|=|g(x)| \quad \ekvi \quad f(x)=g(x) \quad \tai \quad f(x)=-g(x)$.}
+
+Tällaisen yhtälön voi ratkaista myös neliöön korottamalla ominaisuuden $|a|^2=a^2$ avulla. Jos yhtälön molemmat puolet ovat ei-negatiivisia, niin yhtälön yhtäsuuruus säilyy neliöön korotettaessa.
+
+\laatikko {$|f(x)|=|g(x)| \quad \ekvi \quad f(x)^2=g(x)^2$.}
+
+\begin{esimerkki}
+	Ratkaise yhtälö $|2x-4|=|3-x|$ \\
+	\textbf{Ratkaisu (tapa 1)} \\
+	Lukujen $2x-4$ ja $3-x$ tulee olla yhtäsuuret tai toistensa vastaluvut.
+	\begin{align*}
+		|2x-4|&=|3-x|  &\quad   &\ \ \\
+		&\quad \  &\quad \ &\quad \ \\
+		2x-4&=3-x  &\tai \qquad \qquad 2x-4&=-(3-x) \\
+		3x&=7 \quad   &\quad     2x-4&=-3+x \\
+		x&=\frac{7}{3} \quad  &\quad    x&=1
+	\end{align*}
+
+	\textbf{Vastaus: } $x=\frac{7}{3}$ \quad tai \quad $x=1$
+
+	\textbf{Ratkaisu (tapa 2)} \\
+	Yhtälön molemmat puolet voidaan korottaa neliöön.
+				
+	\begin{align*}
+		\underbrace{|2x-4|}_{\geq0} &= \underbrace{|3-x|}_{\geq0}    \\
+		|2x-4|^2 &= |3-x|^2   \\
+		(2x-4)^2 &= (3-x)^2   \\
+		4x^2-16x+16 &= 9 -6x + x^2   \\
+		3x^2-10x+7 &= 0   \\
+		x &= \frac{10\pm\sqrt{(-10)^2-4\cdot 3\cdot 7}}{2\cdot 3}   \\
+		x &= \frac{10\pm\sqrt{16}}{6}   \\		
+		x &= \frac{10\pm4}{6}     \\
+		x=\frac{14}{6}=\frac{7}{3} \quad  &\tai \quad x=\frac{6}{6}=1 \\
+	\end{align*}
+	\textbf{Vastaus: } $x=\frac{7}{3}$ \quad tai \quad $x=1$
+
+\end{esimerkki} 
+
+\begin{esimerkki}
+	Ratkaise yhtälö $|2x-4|=|3-x|+2x$.
+	
+	\textbf{Ratkaisu} \\
+	Huomataan, ettei edellisen esimerkin ratkaisutavat toimi, sillä yhtälö ei ole muotoa $|f(x)|=|g(x)|$. Neliöön korotuskaan ei toimi, sillä yhtälön vasen puoli voi saada negatiivisia arvoja. Ratkaistaan yhtälö poistamalla epäyhtälömerkit ja ratkaisemalla syntyvät yhtälöt alueittain. Ratkaisun apuna voidaan hyödyntää merkkikaaviota.\\
+	
+	
+\begin{lukusuora}{0}{4}{4}
+	\lukusuorakuvaaja{2*x-4}
+	\lukusuoranimi{1}{$2x-4$}
+	\lukusuoraalanimi{1}{$-$}
+	\lukusuoranimi{3}{$+$}
+	\lukusuorapiste{2}{$2$}
+\end{lukusuora}
+\begin{lukusuora}{1}{5}{4}
+	\lukusuorakuvaaja{3-x}
+	\lukusuoraalanimi{2}{$3-x$}
+	\lukusuoranimi{2}{$+$}
+	\lukusuoraalanimi{4}{$-$}
+	\lukusuorapiste{3}{$3$}
+\end{lukusuora}
+
+\begin{center}
+\begin{merkkikaavio}{2}
+\merkkikaavioKohta{$2$}
+\merkkikaavioKohta{$3$}
+
+	\merkkikaavioFunktio{$2x-4$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+
+\merkkikaavioUusirivi
+	\merkkikaavioFunktio{$3-x$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$-$}
+
+\end{merkkikaavio}
+\end{center}
+
+Ratkaistaan yhtälö alueittain\\
+(1.) \quad Jos $x<2$, niin saadaan:
+\begin{align*}
+	|\underbrace{2x-4}_{<0}|&=|\underbrace{3-x}_{>0}|+2x \quad \Vert x<2  \\
+	-(2x-4)&=(3-x)+2x \\
+	-2x+4&=3-x+2x \\
+	-3x &= -1 \\
+	x &= \frac{1}{3} \quad \text{kelpaa}
+\end{align*}
+
+(2.) \quad Jos $2\leq x\leq 3$, niin saadaan:
+\begin{align*}
+	|\underbrace{2x-4}_{\geq0}|&=|\underbrace{3-x}_{\geq0}|+2x \quad \Vert 2\leq x\leq 3  \\
+	(2x-4)&=(3-x)+2x \\
+	2x-4&=3-x+2x \\
+	x &= 7 \quad \text{ei kelpaa, sillä ei ole välillä $2\leq x\leq 3$.}
+\end{align*}
+
+(3.)\quad Jos $x>3$, niin saadaan:
+\begin{align*}
+	|\underbrace{2x-4}_{>0}|&=|\underbrace{3-x}_{<0}|+2x \quad \Vert x>3  \\
+	(2x-4)&=-(3-x)+2x \\
+	2x-4&=-3+x+2x \\
+	-x &= 1 \\
+	x &= -1  \quad \text{ei kelpaa, sillä ei ole välillä $x>3$.}
+\end{align*}
+
+\textbf{Vastaus: }\quad $x=\dfrac{1}{3}$.
+
+\end{esimerkki}
+
+
+
+
+\begin{tehtavasivu}
+
+\subsubsection*{Opi perusteet}
+
+\subsubsection*{Hallitse kokonaisuus}
+
+\subsubsection*{Sekalaisia tehtäviä}
+
+TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
+
 Tehtävissä 1--n esitä lauseke ilman itseisarvomerkkejä.
 
 \begin{tehtava}
@@ -231,3 +447,5 @@ Tehtävissä 1--n esitä lauseke ilman itseisarvomerkkejä.
 		\end{alakohdat}
 	\end{vastaus}
 \end{tehtava}
+
+\end{tehtavasivu}
