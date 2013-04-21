@@ -7,13 +7,13 @@
 	%\addcontentsline{toc}{section}{Harjoitustehtäviä}
 }
 
-\AtBeginEnvironment{tehtava}{\begin{minipage}{68.5mm}}
+\AtBeginEnvironment{tehtava}{\begin{minipage}{73mm}}
 \AtEndEnvironment{tehtava}{\end{minipage}}
 
 % Käytä tätä ympäristöä tehtäville
 \newenvironment{tehtavasivu}
 {
-  \begin{adjustwidth}{-13mm}{0mm}
+  \begin{adjustwidth}{-24mm}{0mm}
   \newpage
 
   \titleformat{\subsection}[hang]
@@ -25,10 +25,8 @@
 
   \subsection*{Tehtäviä}%
   %\addcontentsline{toc}{section}{Tehtäviä}
+  \setlength{\columnsep}{7mm}
   \begin{multicols}{2}
-  %\begin{flushleft}
-  %\mbox{}
-  \widowpenalty=30000
   \raggedright
 }
 {
