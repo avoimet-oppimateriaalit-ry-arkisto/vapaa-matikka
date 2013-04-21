@@ -24,6 +24,7 @@
 *.pgf-plot.*
 *.ps
 *.snm
+*.sty.backup
 *.synctex.gz
 *.tdo
 *.tex.backup
