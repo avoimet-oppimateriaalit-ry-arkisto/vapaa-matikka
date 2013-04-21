@@ -22,6 +22,11 @@ def pohja(a, b, n = 1, leveys = None, nimi = ""):
 	skaalaaY(1.3)
 	siirraY(0.5)
 	
+	# Pakotetaan bounding boxi ottamaan mukaan koko alue.
+	alku = muunna((a, -0.5))
+	loppu = muunna((a, n - 0.5))
+	tila.out.write("\\draw[opacity=0] {} -- {};".format(tikzPiste(alku), tikzPiste(loppu)))
+	
 	# Tallennetaan asetuksiin ympäristön tiedot.
 	tila.asetukset['lukusuora_n'] = n
 	tila.asetukset['lukusuora_a'] = a
