@@ -253,7 +253,7 @@ Tällaisen yhtälön voi ratkaista myös neliöön korottamalla ominaisuuden $|a
 
 \begin{esimerkki}
 	Ratkaise yhtälö $|2x-4|=|3-x|$ \\
-	\textbf{Ratkaisu (tapa 1} \\
+	\textbf{Ratkaisu (tapa 1)} \\
 	Lukujen $2x-4$ ja $3-x$ tulee olla yhtäsuuret tai toistensa vastaluvut.
 	\begin{align*}
 		|2x-4|&=|3-x|  &\quad   &\ \ \\
@@ -265,7 +265,7 @@ Tällaisen yhtälön voi ratkaista myös neliöön korottamalla ominaisuuden $|a
 
 	\textbf{Vastaus: } $x=\frac{7}{3}$ \quad tai \quad $x=1$
 
-	\textbf{Ratkaisu (tapa 2} \\
+	\textbf{Ratkaisu (tapa 2)} \\
 	Yhtälön molemmat puolet voidaan korottaa neliöön.
 				
 	\begin{align*}
@@ -290,17 +290,68 @@ Tällaisen yhtälön voi ratkaista myös neliöön korottamalla ominaisuuden $|a
 	Huomataan, ettei edellisen esimerkin ratkaisutavat toimi, sillä yhtälö ei ole muotoa $|f(x)|=|g(x)|$. Neliöön korotuskaan ei toimi, sillä yhtälön vasen puoli voi saada negatiivisia arvoja. Ratkaistaan yhtälö poistamalla epäyhtälömerkit ja ratkaisemalla syntyvät yhtälöt alueittain. Ratkaisun apuna voidaan hyödyntää merkkikaaviota.\\
 	
 	
-	tähän suorien kuvaajat
-	
-	% \begin{lukusuora}{-1}{1}{10}
-% \lukusuoraparaabeli{0.2}{0.8}{1}
-% \lukusuoravalisa{0.2}{0.8}{x}{y}
-% \lukusuoravaliaa{-0.5}{-0.3}{a}{b}
-% \lukusuorapiste{0}{$x^2+y^2$}
-% \lukusuoranimi{0.5}{$+$}
-% \lukusuoraalanimi{0.05}{$-$}
-% \end{lukusuora}
-% \lukusuorakuvaaja(kaava)
+\begin{lukusuora}{0}{4}{4}
+	\lukusuorakuvaaja{2*x-4}
+	\lukusuoranimi{1}{$2x-4$}
+	\lukusuoraalanimi{1}{$-$}
+	\lukusuoranimi{3}{$+$}
+	\lukusuorapiste{2}{$2$}
+\end{lukusuora}
+\begin{lukusuora}{1}{5}{4}
+	\lukusuorakuvaaja{3-x}
+	\lukusuoraalanimi{2}{$3-x$}
+	\lukusuoranimi{2}{$+$}
+	\lukusuoraalanimi{4}{$-$}
+	\lukusuorapiste{3}{$3$}
+\end{lukusuora}
+
+\begin{center}
+\begin{merkkikaavio}{2}
+\merkkikaavioKohta{$2$}
+\merkkikaavioKohta{$3$}
+
+	\merkkikaavioFunktio{$2x-4$}
+	\merkkikaavioMerkki{$-$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+
+\merkkikaavioUusirivi
+	\merkkikaavioFunktio{$3-x$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$+$}
+	\merkkikaavioMerkki{$-$}
+
+\end{merkkikaavio}
+\end{center}
+
+Ratkaistaan yhtälö alueittain\\
+(1.) \quad Jos $x<2$, niin saadaan:
+\begin{align*}
+	|\underbrace{2x-4}_{<0}|&=|\underbrace{3-x}_{>0}|+2x \quad \Vert x<2  \\
+	-(2x-4)&=(3-x)+2x \\
+	-2x+4&=3-x+2x \\
+	-3x &= -1 \\
+	x &= \frac{1}{3} \quad \text{kelpaa}
+\end{align*}
+
+(2.) \quad Jos $2\leq x\leq 3$, niin saadaan:
+\begin{align*}
+	|\underbrace{2x-4}_{\geq0}|&=|\underbrace{3-x}_{\geq0}|+2x \quad \Vert 2\leq x\leq 3  \\
+	(2x-4)&=(3-x)+2x \\
+	2x-4&=3-x+2x \\
+	x &= 7 \quad \text{ei kelpaa, sillä ei ole välillä $2\leq x\leq 3$.}
+\end{align*}
+
+(3.)\quad Jos $x>3$, niin saadaan:
+\begin{align*}
+	|\underbrace{2x-4}_{>0}|&=|\underbrace{3-x}_{<0}|+2x \quad \Vert x>3  \\
+	(2x-4)&=-(3-x)+2x \\
+	2x-4&=-3+x+2x \\
+	-x &= 1 \\
+	x &= -1  \quad \text{ei kelpaa, sillä ei ole välillä $x>3$.}
+\end{align*}
+
+\textbf{Vastaus: }\quad $x=\dfrac{1}{3}$.
 
 \end{esimerkki}
 
