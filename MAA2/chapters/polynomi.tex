@@ -162,9 +162,11 @@ Ensisilmäyksellä polynomin asteen voisi ajatella olevan 2, mutta tässä tapau
     Täydennä taulukko.
         
     \begin{tabular}{|c|c|c|c|c|}
-                                                                                           \hline
-             & termien   & korkeimman asteen & polynomin &            \\
-polynomi     & lukumäärä & termin kerroin    & asteluku  & vakiotermi \\ \hline
+                                                                         \hline
+polynomi     & \begin{sideways}\begin{minipage}{3.5cm}termien\\lukumäärä\end{minipage}\end{sideways}%
+& \begin{sideways}\begin{minipage}{3.5cm}korkeimman asteen\\termin kerroin\end{minipage}\end{sideways}%
+& \begin{sideways}\begin{minipage}{3.5cm}polynomin\\asteluku\end{minipage}\end{sideways}%
+& \begin{sideways}vakiotermi\end{sideways} \\ \hline
 $-2x^2+6x$   &        2  &         $-2$      &       2   &    0       \\ \hline 
 $7x^3-x-15$  &           &                   &           &            \\ \hline 
              &        2  &          $-9$     &       2   &    5       \\ \hline 
@@ -172,13 +174,42 @@ $7x^3-x-15$  &           &                   &           &            \\ \hline
              &        4  &                   &       3   &            \\ \hline 
              &        1  &          -5       &       99  &            \\ \hline                           
     \end{tabular}
+
+%      \begin{tabular}{|l|c|c|c|c|c|c|}
+%                                                                                            \hline
+% polynomi     & \begin{sideways}$-2x^2+6x$\end{sideways} & \begin{sideways}$7x^3-x-15$\end{sideways}    &     &          &     &     \\ \hline
+% termien      &            &                &     &          &     &     \\ \hline 
+% lukumäärä    &        2   &                & 2   &    3     &  4  &  1  \\ \hline 
+% korkeimman & & & & & & \\  
+% asteen & & & & & & \\  
+% termin & & & & & & \\  
+% kerroin      &    $-2$    &                &$-9$ &   $-1$   &     &$-5$ \\ \hline 
+% polynomin & & & & & & \\  
+% asteluku     &        2   &                & 2   &    5     &  3  & 99  \\ \hline 
+% vakiotermi   &        0   &                & 5   &    $-17$ &     &     \\ \hline 
+%     \end{tabular}
+%      \begin{tabular}{|c|c|c|c|c|}
+%                                                                                           \hline
+%              & termien   & korkeimman asteen & polynomin &            \\
+% polynomi     & lukumäärä & termin kerroin    & asteluku  & vakiotermi \\ \hline
+% $-2x^2+6x$   &        2  &         $-2$      &       2   &    0       \\ \hline 
+% $7x^3-x-15$  &           &                   &           &            \\ \hline 
+%              &        2  &          $-9$     &       2   &    5       \\ \hline 
+%              &        3  &          $-1$     &       5   &    $-17$   \\ \hline 
+%              &        4  &                   &       3   &            \\ \hline 
+%              &        1  &          -5       &       99  &            \\ \hline                           
+%     \end{tabular}
+
+    
     \begin{vastaus}
     Värilliset kohdat voivat olla jotain muutakin.
     
     \begin{tabular}{|c|c|c|c|c|}
                                                                                            \hline
-             &                   & korkeimman asteen &                     &            \\
-polynomi     & termien lukumäärä & termin kerroin    & polynomin asteluku  & vakiotermi \\ \hline
+polynomi     & \begin{sideways}\begin{minipage}{3.5cm}termien\\lukumäärä\end{minipage}\end{sideways}%
+& \begin{sideways}\begin{minipage}{3.5cm}korkeimman asteen\\termin kerroin\end{minipage}\end{sideways}%
+& \begin{sideways}\begin{minipage}{3.5cm}polynomin\\asteluku\end{minipage}\end{sideways}%
+& \begin{sideways}vakiotermi\end{sideways} \\ \hline
 $-2x^2+6x$   &        2          &         $-2$      &       2             &    0       \\ \hline 
 $7x^3-x-15$  &        3          &           7       &       3             &    $-15$   \\ \hline 
 $-9x^2+5$    &        2          &          $-9$     &       2             &    5       \\ \hline 

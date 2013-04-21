@@ -13,13 +13,17 @@
 
 \fancypagestyle{plain}{%
  \fancyhf{}
- \fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
- \fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
+ \fancyfoot[RO]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
+ \fancyfoot[LE]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
+ \fancyhfoffset[RO]{0mm}
+ \fancyhfoffset[LE]{24mm}
 }
 
 \fancyhf{}
-\fancyfoot[RE]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
-\fancyfoot[LO]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
+\fancyfoot[RO]{{\alatunnistefontti\leftmark}\hspace{1em}\thepage}
+\fancyfoot[LE]{\thepage\hspace{1em}{\alatunnistefontti\leftmark}}
+\fancyhfoffset[RO]{0mm}
+\fancyhfoffset[LE]{24mm}
 
 \newcommand{\liitetyyli}{
 \chapter*{Liitteet}
@@ -35,12 +39,12 @@
 
 \fancypagestyle{plain}{%
  \fancyhf{}
- \fancyfoot[RE]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
- \fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
+ \fancyfoot[RO]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
+ \fancyfoot[LE]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
 }
 \fancyhf{}
-\fancyfoot[RE]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
-\fancyfoot[LO]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
+\fancyfoot[RO]{{\sffamily\fontsize{9}{7} Liitteet}\hspace{1em}\thepage}
+\fancyfoot[LE]{\thepage\hspace{1em}{\sffamily\fontsize{9}{7} Liitteet}}
 
 \setcounter{section}{0}
 }

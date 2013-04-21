@@ -11,6 +11,55 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
+Piirretään koordinaatistoon kaksi eri suoraa ja tutkitaan niiden leikkauspisteitä.
+On kaksi eri vaihtoehtoa:
+\begin{enumerate}
+ \item Suorat eivät leikkaa.
+ \item Suorat leikkaavat täsmälleen yhdessä pisteessä.
+\end{enumerate}
+
+Ensimmäisessä tapauksessa suorilla on sama kulmakerroin. Sanotaan, että ne ovat yhdensuuntaiset.
+
+\begin{kuva}
+    kuvaaja.pohja(-3, 3, -3, 3, nimiX = "$x$", nimiY = "$y$")
+    kuvaaja.piirra("2*x+1", nimi = "$y=2x+1$")
+    kuvaaja.piirra("2*x-3", nimi = "$y=2x-3$")
+\end{kuva}
+
+Jos suorat ovat pystysuoria, ei niiden kulmakerrointa ole määritelty. Myös tällöin suorat ovat yhdensuuntaisia.
+
+\begin{kuva}
+    kuvaaja.pohja(-3, 3, -2, 2, nimiX = "$x$", nimiY = "$y$")
+    kuvaaja.piirraParametri("1", "t", -2, 2, nimi = "$x=-1$")
+    kuvaaja.piirraParametri("-2", "t", -2, 2, nimi = "$x=2$")
+\end{kuva}
+
+\laatikko{
+Jos kahdella suoralla on sama kulmakerroin tai molemmat suorat ovat pystysuoria, ovat suorat yhdensuuntaiset.
+}
+
+Jos suorilla on eri kulmakerroin, on niillä täsmälleen yksi leikkauspiste. 
+
+\begin{kuva}
+    kuvaaja.pohja(-3, 3, -3, 3, nimiX = "$x$", nimiY = "$y$")
+    kuvaaja.piirra("2*x+1", nimi = "$y=2x+1$")
+    kuvaaja.piirra("-3*x+4", nimi = "$y=-3x+4$")
+\end{kuva}
+
+Kulmakertoimien perusteella voidaan myös päätellä, ovatko suorat toisiaan vastaan kohtisuorassa.
+
+\begin{kuva}
+    kuvaaja.pohja(-2, 4, -2, 4, nimiX = "$x$", nimiY = "$y$")
+    kuvaaja.piirra("2*x+1", nimi = "$y=2x+1$")
+    kuvaaja.piirra("-0.5*x+2", nimi = "$y=-(1/2)x+2$")
+\end{kuva}
+
+(Tähän kuvaan voisi hahmotella kolmiot, joiden avulla suorien kulmakertoimet nähdään kuvasta.)
+
+\laatikko{
+Kaksi suoraa ovat toisiaan vastaan kohtisuorassa täsmälleen silloin, jos niiden kulmakertoimien tulo on $-1$
+}
+
 
 \begin{tehtavasivu}
 
