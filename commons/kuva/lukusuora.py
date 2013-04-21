@@ -46,29 +46,51 @@ def pohja(a, b, leveys = None, nimi = "", n = 1, varaa_tila = True):
 	
 	return ret
 
-def piste(X, nimi = "", i = 0):
+def nimio(X, nimi = "", i = 0, nimi_ylos = True):
+	"""Merkitse ylhäältä lukien i:nteen lukusuoraan kohtaan 'X' teksti 'nimi'.
+	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""
+	
+	if nimi_ylos:
+		suunta = "above"
+	else:
+		suunta = "below"
+	
+	if i is None or i == 0:
+		for i in range(tila.asetukset['lukusuora_n']):
+			nimio(X, nimi, i + 1, nimi_ylos)
+		return
+	
+	Y = tila.asetukset['lukusuora_n'] - i
+	vari = tila.asetukset['piirtovari']
+	
+	keski = muunna((X, Y))
+	
+	tila.out.write("\\draw[color={}] {} node[{}] {{\\phantom{{$\\int$}}{}\\phantom{{$\\int$}}}};\n".format(vari, tikzPiste(keski), suunta, nimi))
+
+def piste(X, nimi = "", i = 0, nimi_ylos = True):
 	"""Piirrä ylhäältä lukien i:nteen lukusuoraan piste kohtaan 'X', nimellä 'nimi'.
 	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""
 	
 	if i is None or i == 0:
 		for i in range(tila.asetukset['lukusuora_n']):
-			piste(X, nimi, i + 1)
+			piste(X, nimi, i + 1, nimi_ylos)
 		return
 	
 	P = muunna((X, tila.asetukset['lukusuora_n'] - i))
 	vari = tila.asetukset['piirtovari']
 	
 	tila.out.write("\\fill[color={}] {} circle (0.1);\n".format(vari, tikzPiste(P)))
-	tila.out.write("\\draw[color={}] {} node[above] {{\\phantom{{$\\int$}}{}\\phantom{{$\\int$}}}};\n".format(vari, tikzPiste(P), nimi))
+	
+	nimio(X, nimi, i, nimi_ylos)
 
-def kohta(X, nimi = "", i = 0):
+def kohta(X, nimi = "", i = 0, nimi_ylos = True):
 	"""Merkitse ylhäältä lukien i:nteen lukusuoraan kohta 'X' pienellä
 	pystyviivalla, nimellä 'nimi'.
 	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""
 	
 	if i is None or i == 0:
 		for i in range(tila.asetukset['lukusuora_n']):
-			kohta(X, nimi, i + 1)
+			kohta(X, nimi, i + 1, nimi_ylos)
 		return
 	
 	Y = tila.asetukset['lukusuora_n'] - i
@@ -79,7 +101,8 @@ def kohta(X, nimi = "", i = 0):
 	loppu = vekSumma(keski, (0, 0.1))
 	
 	tila.out.write("\\draw[color={}, line width=1.2pt] {} -- {};\n".format(vari, tikzPiste(alku), tikzPiste(loppu)))
-	tila.out.write("\\draw[color={}] {} node[above] {{\\phantom{{$\\int$}}{}\\phantom{{$\\int$}}}};\n".format(vari, tikzPiste(keski), nimi))
+	
+	nimio(X, nimi, i, nimi_ylos)
 
 def piirraKuvaaja(f, i = 1):
 	"""Piirrä i:nteen lukusuoraan funktion f (voi olla myös merkkijonokuvaus
@@ -87,15 +110,20 @@ def piirraKuvaaja(f, i = 1):
 	
 	with palautin():
 		siirraY(tila.asetukset['lukusuora_n'] - i)
-		skaalaaY(0.5)
+		skaalaaY(0.7)
 		rajaa(minX = tila.asetukset['lukusuora_a'], maxX = tila.asetukset['lukusuora_b'], minY = -1, maxY = 1)
 		kuvaaja.piirra(f)
 
-def vali(a = None, b = None, a_kuuluu = False, b_kuuluu = False, a_nimi = "", b_nimi = "", i = 1):
+def vali(a = None, b = None, a_kuuluu = False, b_kuuluu = False, a_nimi = "", b_nimi = "", i = 1, nimi_ylos = True):
 	"""Piirrä i:nteen lukusuoraan väli kohdasta 'a' kohtaan 'b'. Välin
 	päätepisteen pois jättäminen tarkoittaa rajoittamatonta väliä.
 	Päätepisteet voidaan saada mukaan muuttamalla a_kuuluu tai b_kuuluu Trueksi.
 	Alku- ja loppupisteelle voidaan antaa nimet a_nimi ja b_nimi."""
+	
+	if nimi_ylos:
+		suunta = "above"
+	else:
+		suunta = "below"
 	
 	Y = tila.asetukset['lukusuora_n'] - i
 	
@@ -113,19 +141,19 @@ def vali(a = None, b = None, a_kuuluu = False, b_kuuluu = False, a_nimi = "", b_
 	
 	tila.out.write("\\draw[color={},line width=0.6mm] {} -- {}\n;".format(vari, tikzPiste(ap), tikzPiste(bp)))
 	
-	nimiformat = "\\draw[color={}] {} node[above] {{\phantom{{$\\int$}}{}\phantom{{$\\int$}}}};\n"
+	nimiformat = "\\draw[color={}] {} node[{}] {{\phantom{{$\\int$}}{}\phantom{{$\\int$}}}};\n"
 	
 	if a is not None:
 		tila.out.write("\\fill[color={}] {} circle (0.1)\n;".format(vari, tikzPiste(ap)))
 		if not a_kuuluu:
 			tila.out.write("\\fill[color=white] {} circle (0.08)\n;".format(tikzPiste(ap)))
-		tila.out.write(nimiformat.format(vari, tikzPiste(ap), a_nimi))
+		tila.out.write(nimiformat.format(vari, tikzPiste(ap), suunta, a_nimi))
 	
 	if b is not None:
 		tila.out.write("\\fill[color={}] {} circle (0.1)\n;".format(vari, tikzPiste(bp)))
 		if not b_kuuluu:
 			tila.out.write("\\fill[color=white] {} circle (0.08)\n;".format(tikzPiste(bp)))
-		tila.out.write(nimiformat.format(vari, tikzPiste(bp), b_nimi))
+		tila.out.write(nimiformat.format(vari, tikzPiste(bp), suunta, b_nimi))
 
 def nuoli(a, b, a_i = 1, b_i = 1):
 	"""Piirrä nuoli lukusuoran 'a_i' kohdasta 'a' lukusuoran 'b_i' kohtaan 'b'."""
