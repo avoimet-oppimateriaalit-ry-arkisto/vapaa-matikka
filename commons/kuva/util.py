@@ -27,3 +27,8 @@ def vekSumma(P, V):
 	X2, Y2 = V
 	
 	return (X1 + X2, Y1 + Y2)
+
+def vekSkaalaa(V, c):
+	"""Laske vektori V skaalattuna kertoimella c."""
+	
+	return (c * V[0], c * V[1])
