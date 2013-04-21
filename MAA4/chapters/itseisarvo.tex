@@ -153,7 +153,7 @@ Siis:\\
 
 \end{esimerkki}
 
-
+\newpage
 \subsection*{Itseisarvoyhtälö $|f(x)|=a$}
 
 
@@ -247,12 +247,64 @@ Merkintä $|a|=|b|$ tarkoittaa, että luvut $a$ ja $b$ ovat lukusuoralla yhtä k
 \laatikko{
 $|f(x)|=|g(x)| \quad \ekvi \quad f(x)=g(x) \quad \tai \quad f(x)=-g(x)$.}
 
-Tällaisen yhtälön voi ratkaista myös neliöön korottamalla ominaisuuden $|a|^2=a^2$ avulla. Jos yhtälön molemmat puolet ovat ei-negatiivisia, 
+Tällaisen yhtälön voi ratkaista myös neliöön korottamalla ominaisuuden $|a|^2=a^2$ avulla. Jos yhtälön molemmat puolet ovat ei-negatiivisia, niin yhtälön yhtäsuuruus säilyy neliöön korotettaessa.
+
+\laatikko {$|f(x)|=|g(x)| \quad \ekvi \quad f(x)^2=g(x)^2$.}
 
 \begin{esimerkki}
+	Ratkaise yhtälö $|2x-4|=|3-x|$ \\
+	\textbf{Ratkaisu (tapa 1} \\
+	Lukujen $2x-4$ ja $3-x$ tulee olla yhtäsuuret tai toistensa vastaluvut.
+	\begin{align*}
+		|2x-4|&=|3-x|  &\quad   &\ \ \\
+		&\quad \  &\quad \ &\quad \ \\
+		2x-4&=3-x  &\tai \qquad \qquad 2x-4&=-(3-x) \\
+		3x&=7 \quad   &\quad     2x-4&=-3+x \\
+		x&=\frac{7}{3} \quad  &\quad    x&=1
+	\end{align*}
 
+	\textbf{Vastaus: } $x=\frac{7}{3}$ \quad tai \quad $x=1$
+
+	\textbf{Ratkaisu (tapa 2} \\
+	Yhtälön molemmat puolet voidaan korottaa neliöön.
+				
+	\begin{align*}
+		\underbrace{|2x-4|}_{\geq0} &= \underbrace{|3-x|}_{\geq0}    \\
+		|2x-4|^2 &= |3-x|^2   \\
+		(2x-4)^2 &= (3-x)^2   \\
+		4x^2-16x+16 &= 9 -6x + x^2   \\
+		3x^2-10x+7 &= 0   \\
+		x &= \frac{10\pm\sqrt{(-10)^2-4\cdot 3\cdot 7}}{2\cdot 3}   \\
+		x &= \frac{10\pm\sqrt{16}}{6}   \\		
+		x &= \frac{10\pm4}{6}     \\
+		x=\frac{14}{6}=\frac{7}{3} \quad  &\tai \quad x=\frac{6}{6}=1 \\
+	\end{align*}
+	\textbf{Vastaus: } $x=\frac{7}{3}$ \quad tai \quad $x=1$
+
+\end{esimerkki} 
+
+\begin{esimerkki}
+	Ratkaise yhtälö $|2x-4|=|3-x|+2x$.
+	
+	\textbf{Ratkaisu} \\
+	Huomataan, ettei edellisen esimerkin ratkaisutavat toimi, sillä yhtälö ei ole muotoa $|f(x)|=|g(x)|$. Neliöön korotuskaan ei toimi, sillä yhtälön vasen puoli voi saada negatiivisia arvoja. Ratkaistaan yhtälö poistamalla epäyhtälömerkit ja ratkaisemalla syntyvät yhtälöt alueittain. Ratkaisun apuna voidaan hyödyntää merkkikaaviota.\\
+	
+	
+	tähän suorien kuvaajat
+	
+	% \begin{lukusuora}{-1}{1}{10}
+% \lukusuoraparaabeli{0.2}{0.8}{1}
+% \lukusuoravalisa{0.2}{0.8}{x}{y}
+% \lukusuoravaliaa{-0.5}{-0.3}{a}{b}
+% \lukusuorapiste{0}{$x^2+y^2$}
+% \lukusuoranimi{0.5}{$+$}
+% \lukusuoraalanimi{0.05}{$-$}
+% \end{lukusuora}
+% \lukusuorakuvaaja(kaava)
 
 \end{esimerkki}
+
+
 
 
 \begin{tehtavasivu}
