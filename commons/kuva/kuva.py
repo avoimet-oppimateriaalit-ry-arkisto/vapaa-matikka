@@ -184,13 +184,6 @@ def paksuus(kerroin):
 	ret = AsetusPalautin()
 	tila.asetukset['piirtopaksuus'] = kerroin
 	return ret
-	
-def muutaPaksuus(kerroin):
-	"""Kerro nykyistä käyrien viivan paksuutta luvulla 'kerroin'."""
-	
-	ret = AsetusPalautin()
-	tila.asetukset['piirtopaksuus'] *= kerroin
-	return ret
 
 def palautin():
 	"""Ei tee mitään, mutta palauttaa AsetusPalauttimen, joten voidaan käyttää
