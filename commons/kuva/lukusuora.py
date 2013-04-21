@@ -4,9 +4,11 @@ import kuva
 from kuva import *
 import kuvaaja
 
-def pohja(a, b, leveys = None, nimi = "", n = 1):
+def pohja(a, b, leveys = None, nimi = "", n = 1, varaa_tila = True):
 	"""Luo lukusuorapohja, jossa on 'n' lukusuoraa välille [a, b], kaikkien
-	nimenä 'nimi'. Välin [a, b] pituudeksi tulee 'leveys' (oletuksena b - a)."""
+	nimenä 'nimi'. Välin [a, b] pituudeksi tulee 'leveys' (oletuksena b - a).
+	Jos varaa_tila on True, lukusuorien ympärille varataan heti suurin
+	mahdollinen tila."""
 	
 	ret = AsetusPalautin()
 	
@@ -23,9 +25,10 @@ def pohja(a, b, leveys = None, nimi = "", n = 1):
 	siirraY(0.5)
 	
 	# Pakotetaan bounding boxi ottamaan mukaan koko alue.
-	alku = muunna((a, -0.5))
-	loppu = muunna((a, n - 0.5))
-	tila.out.write("\\draw[opacity=0] {} -- {};".format(tikzPiste(alku), tikzPiste(loppu)))
+	if varaa_tila:
+		alku = muunna((a, -0.5))
+		loppu = muunna((a, n - 0.5))
+		tila.out.write("\\draw[opacity=0] {} -- {};".format(tikzPiste(alku), tikzPiste(loppu)))
 	
 	# Tallennetaan asetuksiin ympäristön tiedot.
 	tila.asetukset['lukusuora_n'] = n
@@ -33,7 +36,6 @@ def pohja(a, b, leveys = None, nimi = "", n = 1):
 	tila.asetukset['lukusuora_b'] = b
 	tila.asetukset['lukusuora_alkux'] = vekSumma(muunna((a, 0)), (-0.2, 0))[0]
 	tila.asetukset['lukusuora_loppux'] = vekSumma(muunna((b, 0)), (0.6, 0))[0]
-	
 	
 	# Piirretään lukusuorat.
 	for i in range(n):
@@ -44,7 +46,7 @@ def pohja(a, b, leveys = None, nimi = "", n = 1):
 	
 	return ret
 
-def piste(X, nimi = "", i = 1):
+def piste(X, nimi = "", i = 0):
 	"""Piirrä ylhäältä lukien i:nteen lukusuoraan piste kohtaan 'X', nimellä 'nimi'.
 	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""
 	
@@ -59,7 +61,7 @@ def piste(X, nimi = "", i = 1):
 	tila.out.write("\\fill[color={}] {} circle (0.1);\n".format(vari, tikzPiste(P)))
 	tila.out.write("\\draw[color={}] {} node[above] {{\\phantom{{$\\int$}}{}\\phantom{{$\\int$}}}};\n".format(vari, tikzPiste(P), nimi))
 
-def kohta(X, nimi = "", i = 1):
+def kohta(X, nimi = "", i = 0):
 	"""Merkitse ylhäältä lukien i:nteen lukusuoraan kohta 'X' pienellä
 	pystyviivalla, nimellä 'nimi'.
 	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""

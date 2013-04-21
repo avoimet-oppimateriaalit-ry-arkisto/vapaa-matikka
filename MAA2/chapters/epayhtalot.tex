@@ -165,33 +165,75 @@ Reaalilukuvälejä merkitään usein laittamalla välin ala- ja ylärajat hakasu
 
 Väli voidaan piirtää lukusuoralle kahden luvun välisenä janana. Päätepisteet merkitään täytetyllä ympyrällä, mikäli luku kuuluu väliin, ja muuten tyhjällä ympyrällä. Esimerkiksi väli $[a, b[$ piirretään seuraavasti:
 
-\begin{lukusuora}{0}{10}{6}
-	\lukusuoravalisa{2}{8}{$a$}{$b$}
-\end{lukusuora}
+\begin{kuva}
+lukusuora.pohja(0, 10, 8)
+lukusuora.vali(2, 8, True, False, "$a$", "$b$")
+\end{kuva}
 
 Jos halutaan, että väli ei ole alhaalta tai ylhäältä rajoitettu, merkitään rajaksi $-\infty$ tai $\infty$. Koska ääretön ei ole luku eikä näin ollen kuulu väliin, on sitä vastaava hakasulku käännettävä, ja siten esimerkiksi väli $]{-\infty}, a[$ on avoin. 
 
 Seuraavaan taulukkoon on koottu reaalilukuvälien olennainen käsitteistö ja merkinnät.
 
+\begin{luoKuva}{vali1}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(-3, 5, False, False, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali2}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(-3, 5, False, True, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali3}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(-3, 5, True, False, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali4}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(-3, 5, True, True, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali5}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(-3, None, True, False, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali6}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(-3, None, False, False, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali7}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(None, 5, False, True, "$-3$", "$5$")
+\end{luoKuva}
+\begin{luoKuva}{vali8}
+lukusuora.pohja(-5, 7, 3, varaa_tila = False)
+lukusuora.kohta(0, "$0$")
+lukusuora.vali(None, 5, False, False, "$-3$", "$5$")
+\end{luoKuva}
+
 \begin{tabular}{|c|p{2.0cm}|p{2.1cm}|c|}
 \hline
 Välin nimitys & Epäyhtälö\-merkintä & Joukko-opillinen merkintä & Esitys lukusuoralla \\
 \hline
-Avoin väli & $-3<x<5$ & $x \in {]-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Avoin väli & $-3<x<5$ & $x \in {]-3, 5[}$ & \naytaKuva{vali1} \\
 \hline
-Puoliavoin väli & $-3<x \leq 5$ & $x \in {]-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $-3<x \leq 5$ & $x \in {]-3, 5]}$ & \naytaKuva{vali2} \\
 \hline
-Puoliavoin väli & $-3\leq x < 5$ & $x \in {[-3, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $-3\leq x < 5$ & $x \in {[-3, 5[}$ & \naytaKuva{vali3} \\
 \hline
-Suljettu väli & $-3\leq x \leq 5$ & $x \in {[-3, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliss{-3}{5}{$-3$}{$5$}\end{lukusuora}\\
+Suljettu väli & $-3\leq x \leq 5$ & $x \in {[-3, 5]}$ & \naytaKuva{vali4} \\
 \hline
-Puoliavoin väli & $-3\leq x$ & $x \in {[-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalisa{-3}{}{$-3$}{}\end{lukusuora}\\
+Puoliavoin väli & $-3\leq x$ & $x \in {[-3, \infty[}$ & \naytaKuva{vali5} \\
 \hline
-Avoin väli & $-3<x$ & $x \in {]-3, \infty[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{-3}{}{$-3$}{}\end{lukusuora}\\
+Avoin väli & $-3<x$ & $x \in {]-3, \infty[}$ & \naytaKuva{vali6} \\
 \hline
-Puoliavoin väli & $x \leq 5$ & $x \in {]{-\infty}, 5]}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravalias{}{5}{}{$5$}\end{lukusuora}\\
+Puoliavoin väli & $x \leq 5$ & $x \in {]{-\infty}, 5]}$ & \naytaKuva{vali7} \\
 \hline
-Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \begin{lukusuora}{-6}{10}{4}\lukusuorapystyviiva{0}{$0$}\lukusuoravaliaa{}{5}{}{$5$}\end{lukusuora}\\
+Avoin väli & $x < 5$ & $x \in {]{-\infty}, 5[}$ & \naytaKuva{vali8} \\
 \hline
 \end{tabular}
 
