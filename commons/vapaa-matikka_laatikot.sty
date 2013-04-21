@@ -75,22 +75,17 @@
 %   {\par}}
 % \makeatother
 
-<<<<<<< HEAD
-%\newcommand{\laatikko}[1]{%
-%  \begin{mdframed}[style=laatikkotyyli] #1 \end{mdframed}
-%}
-
 \newcommand{\laatikko}[2][]{%
-%\begin{\widepar}
   \begin{mdframed}[style=laatikkotyyli]
   \ifthenelse{\equal{#1}{}}{#2}{\textbf{#1}\\ \\ #2}%
   \end{mdframed}
-=======
-\newcommand{\laatikko}[2][]{%
-%\begin{\widepar}
- \marginpar{\raggedleft\sffamily\fontsize{10}{14}\selectfont{#1}}
-% \end{\widepar}
-  \begin{mdframed}[style=laatikkotyyli]#2\end{mdframed}
->>>>>>> 9787ecf64049ba48086eef9922c684f230e36208
-%\end{widepar}
 }
+
+% EI TOIMI:
+%\newcommand{\laatikko}[2][]{%
+%%\begin{\widepar}
+% \marginpar{\raggedleft\sffamily\fontsize{10}{14}\selectfont{#1}}
+%% \end{\widepar}
+%  \begin{mdframed}[style=laatikkotyyli]#2\end{mdframed}
+%%\end{widepar}
+%}
