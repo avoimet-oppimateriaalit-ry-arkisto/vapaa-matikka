@@ -28,18 +28,20 @@ Kuten yhtälöitä, myös epäyhtälöitä voidaan ratkaista muokkaamalla niitä
 
 Kahden luvun kasvattaminen saman verran siirtää lukuja lukusuoralla, mutta säilyttää niiden keskinäisen järjestyksen:
 
-\begin{lukusuora}{-1}{10}{12}
-	\lukusuoranuolialas{2}{6}
-	\lukusuoranuolialas{3}{7}
+\begin{kuva}
+lukusuora.pohja(-1, 10, 11.5, n = 2)
+lukusuora.kohta(0, "$0$", 0)
 
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{3}{$3$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuorapiste{6}{$2\!+\!4$}
-	\lukusuorapiste{7}{$3\!+\!4$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
+with vari("red"):
+	lukusuora.nuoli(2, 2+4, 1, 2)
+	lukusuora.nuoli(3, 3+4, 1, 2)
+
+lukusuora.piste(2, "$2$", 1)
+lukusuora.piste(3, "$3$", 1)
+
+lukusuora.piste(2+4, "$2\!+\!4$", 2)
+lukusuora.piste(3+4, "$3\!+\!4$", 2)
+\end{kuva}
 
 Tämän perusteella epäyhtälö, joka saadaan lisäämällä epäyhtälön molemmille puolille sama lauseke, on yhtäpitävä alkuperäisen epäyhtälön kanssa.
 
@@ -54,33 +56,37 @@ Luvun lisääminen epäyhtälöön.
 
 Myös lukujen kertominen samalla positiivisella kertoimella säilyttää niiden keskinäisen järjestyksen. Jos kerroin on pienempi kuin yksi, luvut lähenevät toisiaan:
 
-\begin{lukusuora}{-1}{10}{12}
-	\lukusuoranuolialas{2}{1}
-	\lukusuoranuolialas{4}{2}
+\begin{kuva}
+lukusuora.pohja(-1, 10, 11.5, n = 2)
+lukusuora.kohta(0, "$0$", 0)
 
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{4}{$4$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuorapiste{1}{$2 \cdot \frac{1}{2}$}
-	\lukusuorapiste{2}{$4 \cdot \frac{1}{2}$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
+with vari("red"):
+	lukusuora.nuoli(2, 1, 1, 2)
+	lukusuora.nuoli(4, 2, 1, 2)
+
+lukusuora.piste(2, "$2$", 1)
+lukusuora.piste(4, "$4$", 1)
+
+lukusuora.piste(1, r"$2 \cdot \frac{1}{2}$", 2)
+lukusuora.piste(2, r"$4 \cdot \frac{1}{2}$", 2)
+\end{kuva}
 
 Jos kerroin on suurempi kuin yksi, luvut etääntyvät toisistaan:
 
-\begin{lukusuora}{-1}{10}{12}
-	\lukusuoranuolialas{2}{4}
-	\lukusuoranuolialas{4}{8}
+\begin{kuva}
+lukusuora.pohja(-1, 10, 11.5, n = 2)
+lukusuora.kohta(0, "$0$", 0)
 
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{4}{$4$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuorapiste{4}{$2\cdot 2$}
-	\lukusuorapiste{8}{$4\cdot 2$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
+with vari("red"):
+	lukusuora.nuoli(2, 4, 1, 2)
+	lukusuora.nuoli(2*2, 4*2, 1, 2)
+
+lukusuora.piste(2, "$2$", 1)
+lukusuora.piste(4, "$4$", 1)
+
+lukusuora.piste(2*2, r"$2 \cdot 2$", 2)
+lukusuora.piste(4*2, r"$4 \cdot 2$", 2)
+\end{kuva}
 
 Luvulla jakaminen on sama asia kuin jakajan käänteisluvulla kertominen, joten positiivisella luvulla jakaminen säilyttää järjestyksen kertolaskun tavoin. Näin ollen alkuperäisen epäyhtälön kanssa yhtäpitävä epäyhtälö saadaan kertomalla tai jakamalla molemmat puolet positiivisella luvulla.
 
@@ -104,18 +110,20 @@ Epäyhtälön kertominen lukua yksi suuremmalla luvulla.
 
 Sen sijaan negatiivisella luvulla kertominen ei säilytä suuruusjärjestystä. Esimerkiksi kun lukuja 2 ja 5 kerrotaan luvulla $-1$, niiden suuruusjärjestys kääntyy:
 
-\begin{lukusuora}{-6}{6}{12}
-	\lukusuoranuolialas{2}{-2}
-	\lukusuoranuolialas{5}{-5}
+\begin{kuva}
+lukusuora.pohja(-6, 6, 11.5, n = 2)
+lukusuora.kohta(0, "$0$", 0)
 
-	\lukusuorapiste{2}{$2$}
-	\lukusuorapiste{5}{$5$}
-	\lukusuorapystyviiva{0}{$0$}
-\lukusuorauusi
-	\lukusuorapiste{-2}{$2 \cdot (-1)$}
-	\lukusuorapiste{-5}{$5 \cdot (-1)$}
-	\lukusuorapystyviiva{0}{$0$}
-\end{lukusuora}
+with vari("red"):
+	lukusuora.nuoli(2, -2, 1, 2)
+	lukusuora.nuoli(5, -5, 1, 2)
+
+lukusuora.piste(2, "$2$", 1)
+lukusuora.piste(5, "$5$", 1)
+
+lukusuora.piste(-2, r"$2 \cdot (-1)$", 2)
+lukusuora.piste(-5, r"$5 \cdot (-1)$", 2)
+\end{kuva}
 
 Jos epäyhtälöä kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömerkin suunta täytyy kääntää, jotta saataisiin yhtäpitävä epäyhtälö.
 %: esimerkissä $2 < 5$ muuttuu muotoon $-2 > -5$.

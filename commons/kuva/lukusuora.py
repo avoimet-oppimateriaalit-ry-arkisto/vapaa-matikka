@@ -46,9 +46,9 @@ def pohja(a, b, leveys = None, nimi = "", n = 1):
 
 def piste(X, nimi = "", i = 1):
 	"""Piirrä ylhäältä lukien i:nteen lukusuoraan piste kohtaan 'X', nimellä 'nimi'.
-	Jos i on None, piste piirretään kaikkiin lukusuoriin."""
+	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""
 	
-	if i is None:
+	if i is None or i == 0:
 		for i in range(tila.asetukset['lukusuora_n']):
 			piste(X, nimi, i + 1)
 		return
@@ -62,9 +62,9 @@ def piste(X, nimi = "", i = 1):
 def kohta(X, nimi = "", i = 1):
 	"""Merkitse ylhäältä lukien i:nteen lukusuoraan kohta 'X' pienellä
 	pystyviivalla, nimellä 'nimi'.
-	Jos i on None, piste piirretään kaikkiin lukusuoriin."""
+	Jos i on 0, piste piirretään kaikkiin lukusuoriin."""
 	
-	if i is None:
+	if i is None or i == 0:
 		for i in range(tila.asetukset['lukusuora_n']):
 			kohta(X, nimi, i + 1)
 		return
