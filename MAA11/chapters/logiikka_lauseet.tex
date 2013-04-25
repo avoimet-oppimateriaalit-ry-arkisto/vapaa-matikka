@@ -30,7 +30,7 @@ Saara (19 v.) on suorittanut ylioppilastutkinnon. Hän kirjoitti mm. pitkän eng
 
 \bigskip
 
-Yksinkertaisimpia loogisia lauseita kutsutaan {\em atomilauseiksi}. Atomilauseita käytetään ilmaisemaan asioiden tilaa. Esimeriksi seuraavat lauseet ovat atomilauseita:
+Yksinkertaisimpia loogisia lauseita kutsutaan \termi{atomilause}{atomilauseiksi}. Atomilauseita käytetään ilmaisemaan asioiden tilaa. Esimeriksi seuraavat lauseet ovat atomilauseita:
 \begin{itemize}
 \item[$A:$] On yö.
 \item[$B:$] Aurinko paistaa.
@@ -39,13 +39,13 @@ Yksinkertaisimpia loogisia lauseita kutsutaan {\em atomilauseiksi}. Atomilauseit
 \end{itemize}
 Atomilauseita ajatellaan eräänlaisina totuusmuuttujina, jotka voivat saada kaksi arvoa: tosi tai epätosi. Yllä olevista lauseista $C$ on epätosi, $D$ on tosi ja kaksi ensimmäistä voivat olla tosia tai epätosia ajankohdasta riippuen. Tässä kurssissa atomilauseita merkitään isoilla kirjaimilla $A$, $B$, $C$, jne. Todelle ja epätodelle käytetään tietotekniikasta tuttuja merkintöjä $1$ ja $0$.
 
-Loogisia lauseita voidaan myös muodostaa yhdistelemällä atomilauseita {\em konnektiivien} avulla. Konnektiiveja ovat esimerkiksi \emph{ei}, \emph{ja}, \emph{tai} sekä \emph{jos ... niin}. Näillä sanoilla on myös arkikielessä merkityksiä, jotka joskus eivät täysin vastaa niiden merkitystä logiikassa. Lausetta, jossa on vähintään yksi konnektiivi, kutsutaan {\em yhdistetyksi lauseeksi}. Yhdistetyn lauseen totuusarvoa tutkitaan \emph{totuustaulujen} avulla.
+Loogisia lauseita voidaan myös muodostaa yhdistelemällä atomilauseita \termi{konnektiivi}{konnektiivien} avulla. Konnektiiveja ovat esimerkiksi \termi{ei}{ei}, \termi{ja}{ja}, \termi{tai}{tai} sekä \termi{jos ... niin}{jos ... niin}. Näillä sanoilla on myös arkikielessä merkityksiä, jotka joskus eivät täysin vastaa niiden merkitystä logiikassa. Lausetta, jossa on vähintään yksi konnektiivi, kutsutaan \termi{yhdistetty lause}{yhdistetyksi lauseeksi}. Yhdistetyn lauseen totuusarvoa tutkitaan \termi{totuustaulu}{totuustaulujen} avulla.
 
-\subsection*{Negaatio} Yksinkertaisin esimerkki konnektiivista on looginen ei, jota kutsutaan {\em negaatioksi}. Lauseen $A$ negaatiota merkitään $\lnot A$. Negaation totuusarvo on vastakkainen sille lauseelle, johon negaatio liittyy. Jos $A$ on tosi, niin $\lnot A$ on epätosi. Jos $A$ on epätosi, niin $\lnot A$ on tosi.
+\subsection*{Negaatio} Yksinkertaisin esimerkki konnektiivista on looginen ei, jota kutsutaan \termi{negaatio}{negaatioksi}. Lauseen $A$ negaatiota merkitään $\lnot A$. Negaation totuusarvo on vastakkainen sille lauseelle, johon negaatio liittyy. Jos $A$ on tosi, niin $\lnot A$ on epätosi. Jos $A$ on epätosi, niin $\lnot A$ on tosi.
 
 Esimerkiksi lauseen $A$: ''uimahalli on auki'' negaatio on $\lnot A$: ''uimahalli on suljettu''.
 
-%Logiikassa on tapana esittää rakenteita {\em totuustaulun} avulla. 
+%Logiikassa on tapana esittää rakenteita \termi{totuustaulu}{totuustaulun} avulla. 
 Negaation totuustaulu on seuraava:
 
 %\bigskip
@@ -78,7 +78,7 @@ $0$ & $1$ \\ \hline
 \bigskip
 
 \subsection*{Konjunktio}
-Loogista ja-konnektiivia sanotaan {\em konjunktioksi}. Kahden lauseen $A$ ja $B$ konjunktio $A\land B$ on tosi vain silloin, kun molemmat kyseisistä lauseista ovat tosia. Muussa tapauksessa se on epätosi.
+Loogista ja-konnektiivia sanotaan \termi{konjunktio}{konjunktioksi}. Kahden lauseen $A$ ja $B$ konjunktio $A\land B$ on tosi vain silloin, kun molemmat kyseisistä lauseista ovat tosia. Muussa tapauksessa se on epätosi.
 
 Esimerkiksi lauseiden $A$: ''olen vaaleatukkainen'' ja $B$: ''olen ruskeasilmäinen'' konjunktio on $A \land B$: ''olen vaaleatukkainen ja ruskeasilmäinen''. 
 
@@ -99,7 +99,7 @@ $0$ & $0$ & $0$\\
 
 \bigskip
 
-\subsection*{Disjunktio} Loogista tai-konnektiivia sanotaan {\em disjunktioksi}. Lauseiden $A$ ja $B$ disjunktio $A\lor B$ on tosi silloin, kun ainakin toinen lauseista $A$ ja $B$ on tosi.
+\subsection*{Disjunktio} Loogista tai-konnektiivia sanotaan \termi{disjunktio}{disjunktioksi}. Lauseiden $A$ ja $B$ disjunktio $A\lor B$ on tosi silloin, kun ainakin toinen lauseista $A$ ja $B$ on tosi.
 
 
 Esimerkiksi lauseiden $A$: ''henkilöllä on B-ajokortti'' ja $B$: ''henkilöllä on moottoripyöräkortti'' disjunktio on $A \lor B$: ''henkilöllä on B-ajokortti tai hänellä on moottoripyöräkortti''. 
@@ -145,7 +145,7 @@ Olkoot lauseet $A$: ''on kesä'', $B$: ''käyn töissä'' ja $C$: ''pelaan jalka
 
 
 \subsection*{Formalisointi}
-{\em Formalisoinnilla} tarkoitetaan luonnollisen kielen, esimerkiksi suomen kielen, lauseiden kääntämistä logiikan kielelle. Tällöin on esimerkiksi valittava, mitkä ovat atomilauseita. Samalla ilmaisulla voi olla useita mielekkäitä formalisointeja. Formalisoinnin tarkoituksena on löytää vastaavuuksia logiikan ja arkielämän tilanteiden välille. Näin voidaan esimerkiksi tutkia erilaisia väitelauseita ja päätelmiä. Formalisointi on tärkeä väline eräiden filosofian ja tietojenkäsittelyn ongelmien tutkimuksessa.
+\termi{formalisointi}{Formalisoinnilla} tarkoitetaan luonnollisen kielen, esimerkiksi suomen kielen, lauseiden kääntämistä logiikan kielelle. Tällöin on esimerkiksi valittava, mitkä ovat atomilauseita. Samalla ilmaisulla voi olla useita mielekkäitä formalisointeja. Formalisoinnin tarkoituksena on löytää vastaavuuksia logiikan ja arkielämän tilanteiden välille. Näin voidaan esimerkiksi tutkia erilaisia väitelauseita ja päätelmiä. Formalisointi on tärkeä väline eräiden filosofian ja tietojenkäsittelyn ongelmien tutkimuksessa.
 
 Arkikielen lauseiden kääntäminen logiikan kielelle ei ole aina helppoa ja tulkinnanvaraisuuttakin voi esiintyä. Erityisen ongelmallisia ovat paljon konnektiiveja sisältävät lauseet, koska luonnollisessa kielessä konnektiivien suoritusjärjestystä ei määritellä eikä tavallisesti käytetä sulkeita.
 
@@ -529,7 +529,7 @@ Kissoilla lyhyen karvan aiheuttaa dominoiva geeni ja pitkän karvan resessiivine
 
 
 \section{Implikaatio ja ekvivalenssi}
-Tässä kappaleessa esitellään kaksi usein käytettyä konnektiivia: {\em implikaatio} eli {\em looginen seuraus} sekä {\em ekvivalenssi} eli {\em looginen yhtäpitävyys}.
+Tässä kappaleessa esitellään kaksi usein käytettyä konnektiivia: \termi{implikaatio}{implikaatio} eli \termi{looginen seuraus}{looginen seuraus} sekä \termi{ekvivalenssi}{ekvivalenssi} eli \termi{looginen yhtäpitävyys}{looginen yhtäpitävyys}.
 
 \subsection*{Tutkimustehtävä}
 
@@ -750,7 +750,7 @@ Ensin suoritetaan negaatio. Sen jälkeen tulevat sulkeissa olevat ekvivalenssi j
 \end{esimerkki}
 
 \subsection*{Harvinaisempia konnektiiveja}% (Lisämateriaalia).}
-Logiikassa ja tietotekniikassa esiintyy myös muita, harvinaisempia loogisia konnektiiveja. Esimerkki tällaisesta on {\em poissulkeva tai} (engl. exclusive or), josta usein käytetään tietotekniikasta tulevaa lyhennettä {\em xor}. Poissulkevan tain totuustaulu on seuraava:
+Logiikassa ja tietotekniikassa esiintyy myös muita, harvinaisempia loogisia konnektiiveja. Esimerkki tällaisesta on \termi{poissulkeva tai}{poissulkeva tai} (engl. exclusive or), josta usein käytetään tietotekniikasta tulevaa lyhennettä \termi{xor}{xor}. Poissulkevan tain totuustaulu on seuraava:
 
 \bigskip
 
@@ -973,7 +973,7 @@ Peircen nuoli on konnektiivi, joka luonnollisessa kielessä tarkoittaa samaa kui
 
 \section{Monimutkaisempia loogisia rakenteita}
 \label{monimloog}
-Seuraavaksi tarkastellaan eräitä usein esiintyviä loogisia rakenteita. Tällaisia rakenteita ovat {\em tautologiat}, {\em loogisesti ekvivalentit} ja {\em ristiriitaiset lauseet}. On tärkeää oppia tunnistamaan nämä rakenteet, koska niitä käytetään usein logiikan yhteydessä.
+Seuraavaksi tarkastellaan eräitä usein esiintyviä loogisia rakenteita. Tällaisia rakenteita ovat \termi{tautologia}{tautologiat}, \termi{loogisesti ekvivalentti lause}{loogisesti ekvivalentit} ja \termi{ristiriitainen lause}{ristiriitaiset lauseet}. On tärkeää oppia tunnistamaan nämä rakenteet, koska niitä käytetään usein logiikan yhteydessä.
 
 \subsection*{Tutkimustehtävä}
 Turisti tapasi kaksi saarelaista, Hipsun ja Vipsun. Hän kyseli heiltä, kuinka hyvin kala syö, ja sai seuraavat vastaukset.
@@ -1039,7 +1039,7 @@ Koska lauseiden $A\to B$ ja $\lnot A \lor B$ totuusarvot
 ovat aina samat, lauseet ovat loogisesti ekvivalentit.
 \end{esimerkki}
 
-{\em Kolmannen poissulkevan laki} sanoo, että kaikki lauseet ovat joko tosia tai epätosia. Formaalilla kielellä kolmannen poissulkevan laki tarkoittaa, että lause $A \lor \lnot A$ on tautologia. Tämä voidaan nähdä seuraavasta totuustaulusta:
+\termi{kolmannen poissulkevan laki}{Kolmannen poissulkevan laki} sanoo, että kaikki lauseet ovat joko tosia tai epätosia. Formaalilla kielellä kolmannen poissulkevan laki tarkoittaa, että lause $A \lor \lnot A$ on tautologia. Tämä voidaan nähdä seuraavasta totuustaulusta:
 
 \bigskip
 
@@ -1055,7 +1055,7 @@ $0$ & $1$ & $1$\\ \hline
 
 
 \subsection*{Moniarvoiset logiikat}% (lisämateriaalia).}
-Lauseen $A \lor \lnot A$ tautologisuus liittyy klassisen logiikan kaksiarvoisuuteen. Voidaan ajatella myös sellaisia päättelymalleja, joissa lause $A \lor \lnot A$ ei ole tautologia. Esimerkki tällaisesta on {\em kolmiarvoinen logiikka}, jossa mahdollisia totuusarvoja ovat tosi, epätosi ja epävarma.  Toinen esimerkki on niin kutsuttu {\em sumean logiikka}, jossa on äärettömän monta totuusarvoa. Erilaiset päättelyjärjestelmät eivät kuitenkaan kumoa toisiaan, vaan logiikkaa sovellettaessa käytetään kuhunkin tilanteeseen sopivaa päättelyjärjestelmää. Esimerkiksi kolmiarvoinen logiikka soveltuu tilanteisiin, joissa käytössä oleva informaatio ajatellaan epätäydelliseksi.
+Lauseen $A \lor \lnot A$ tautologisuus liittyy klassisen logiikan kaksiarvoisuuteen. Voidaan ajatella myös sellaisia päättelymalleja, joissa lause $A \lor \lnot A$ ei ole tautologia. Esimerkki tällaisesta on \termi{kolmiarvoinen logiikka}{kolmiarvoinen logiikka}, jossa mahdollisia totuusarvoja ovat tosi, epätosi ja epävarma.  Toinen esimerkki on niin kutsuttu \termi{sumean logiikka}{sumean logiikka}, jossa on äärettömän monta totuusarvoa. Erilaiset päättelyjärjestelmät eivät kuitenkaan kumoa toisiaan, vaan logiikkaa sovellettaessa käytetään kuhunkin tilanteeseen sopivaa päättelyjärjestelmää. Esimerkiksi kolmiarvoinen logiikka soveltuu tilanteisiin, joissa käytössä oleva informaatio ajatellaan epätäydelliseksi.
 
 
 \subsection*{Ristiriitainen lause}
@@ -1078,7 +1078,7 @@ $0$ & $1$ & $0$\\ \hline
 
 \subsection*{Päättelysääntöjä} Logiikassa esiintyy monia hyödyllisiksi havaittuja päättelysääntöjä, joille on annettu nimi. Nämä päättelysäännöt ovat esimerkkejä tautologioista, ja niiden tautologisuus voidaan osoittaa esimerkiksi totuustaulua käyttämällä.
 
-Tärkeitä päättelysääntöjä ovat esimerkiksi {\em De Morganin lait}
+Tärkeitä päättelysääntöjä ovat esimerkiksi \termi{De Morganin lait}{De Morganin lait}
 \[
 \lnot(A \land B) \lequiv \lnot A \lor \lnot B
 \]
@@ -1089,11 +1089,11 @@ ja
 jotka liittävät toisiinsa loogiset ja- sekä tai-konnektiivit.
 %{\bf de Morganin lait.}
 
-{\em Kaksoisnegaation laki} sanoo, että lauseen $A$ kaksinkertainen negaatio $\lnot \lnot A$ on loogisesti ekvivalentti lauseen $A$ kanssa:
+\termi{kaksoisnegaation laki}{Kaksoisnegaation laki} sanoo, että lauseen $A$ kaksinkertainen negaatio $\lnot \lnot A$ on loogisesti ekvivalentti lauseen $A$ kanssa:
 \[
 \lnot \lnot A \lequiv A.
 \]
-{\em Kontraposition laki} puolestaan sanoo, että lauseet $A\to B$ ja $\lnot B \to \lnot A$ ovat loogisesti ekvivalentit. Tämän voi osoittaa paitsi totuustauluja käyttämällä myös soveltamalla De Morganin lakeja.
+\termi{kontraposition laki}{Kontraposition laki} puolestaan sanoo, että lauseet $A\to B$ ja $\lnot B \to \lnot A$ ovat loogisesti ekvivalentit. Tämän voi osoittaa paitsi totuustauluja käyttämällä myös soveltamalla De Morganin lakeja.
 Matematiikassa tärkeä todistusmenetelmä, niin sanottu käänteinen todistus, perustuu kontraposition lakiin. Käänteistä todistusta käsitellään luvussa 4.
 
 %	{\bf Laita perustelu esimerkiksi. Myös mieti mahdollista viittausta käänteiseen todistukseen (Antti/AM).}
@@ -1108,13 +1108,13 @@ Seuraavaan taulukkoon on koottu edellisten lisäksi muutamia muita tunnetuimpia 
 \begin{tabular}{|l|c|}
 \hline
 {\bf Päättelysääntöjä} & \\\hline
-{\em De Morganin 1. laki} & $\lnot(A \land B) \lequiv \lnot A \lor \lnot B$\\\hline
-{\em De Morganin 2. laki} & $\lnot(A \lor B) \lequiv \lnot A \land \lnot B$\\\hline
-{\em Kaksoisnegaation laki} & $\lnot \lnot A \lequiv A$\\\hline
-{\em Kontraposition laki} & $(A\to B)\lequiv (\lnot B \to \lnot A)$\\\hline
-{\em Modus ponens} & $(A\land (A\to B)) \to B$ \\\hline
-{\em Modus tollens} & $((A\to B) \land \lnot B) \to \lnot A$ \\\hline
-{\em Reductio ad absurdum} & $(\lnot A \to (B \land \lnot B))\to A$\\\hline
+\termi{De Morganin 1. laki}{De Morganin 1. laki} & $\lnot(A \land B) \lequiv \lnot A \lor \lnot B$\\\hline
+\termi{De Morganin 2. laki}{De Morganin 2. laki} & $\lnot(A \lor B) \lequiv \lnot A \land \lnot B$\\\hline
+\termi{Kaksoisnegaation laki}{Kaksoisnegaation laki} & $\lnot \lnot A \lequiv A$\\\hline
+\termi{Kontraposition laki}{Kontraposition laki} & $(A\to B)\lequiv (\lnot B \to \lnot A)$\\\hline
+\termi{Modus ponens}{Modus ponens} & $(A\land (A\to B)) \to B$ \\\hline
+\termi{Modus tollens}{Modus tollens} & $((A\to B) \land \lnot B) \to \lnot A$ \\\hline
+\termi{Reductio ad absurdum}{Reductio ad absurdum} & $(\lnot A \to (B \land \lnot B))\to A$\\\hline
 \end{tabular}
 %\end{center}
 }
