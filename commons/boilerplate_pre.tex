@@ -170,6 +170,8 @@
 
 % Tämä paketti lisää PDF:ään mm. klikattavat linkit sisällysluetteloon
 \usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true}
+\hypersetup{linkcolor=black}
 
 % Kertoo mathtoolsin olevan käytössä. Muuttuu turhaksi, jos LaTeX-pakettienhallinnat saadaan kaikilla kuntoon.
 \newif\iftools
@@ -190,13 +192,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % MAA11
-\usepackage{fancybox}
 \usepackage{graphicx}
-\hypersetup{colorlinks=true}
-\hypersetup{linkcolor=black}
 \newcommand{\lequiv}{\leftrightarrow}
 \newcommand{\compl}{\complement}
-
 \DeclareMathOperator{\xor}{xor}
 \DeclareMathOperator{\syt}{syt}
 \DeclareMathOperator{\pyj}{pyj}
