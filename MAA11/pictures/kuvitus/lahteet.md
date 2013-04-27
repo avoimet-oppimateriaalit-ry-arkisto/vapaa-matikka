@@ -7,3 +7,5 @@ http://commons.wikimedia.org/wiki/File:Rollercoaster_Tornado_Avonturenpark_Helle
 http://commons.wikimedia.org/wiki/File:Finnish_police_car.jpg
 
 http://commons.wikimedia.org/wiki/File:Berlin_marathon.jpg
+
+http://commons.wikimedia.org/wiki/File:Finlandia_1_markka.JPG
