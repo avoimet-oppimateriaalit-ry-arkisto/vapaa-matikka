@@ -319,18 +319,24 @@ Loogisilla piireillä suoritetaan digitaalisissa laitteissa erilaisia loogisia o
 \medskip
 
 \begin{center}
-sisäänmenot \hskip0.5cm looginen piiri \hskip0.5cm
-ulostulo
+\begin{tikzpicture}
+\node [rectangle, draw, fill=gray!20, text width=5em, text centered, rounded corners, minimum height=4em] at (4.1,1) {looginen piiri};
+\draw [->] (0,0.5) -- (3,0.5);
+\draw [->] (0,1.5) -- (3,1.5);
+\draw [->] (5.2,1) -- (7.5,1);
 
-\medskip
 
-\includegraphics[width=5cm]{pictures/digi}
+\node at (1,2) {sisäänmenot};
+\node at (6.4,2) {ulostulo};
+\end{tikzpicture}
 \end{center}
 
 \medskip
 
 Loogisella piirillä on yksi tai useampi sisäänmeno ja
-yksi ulostulo. Sisäänmenojen ja ulostulon signaalin arvo
+yksi tai useampi ulostulo. Tämän kirjan esimerkeissä ja
+tehtävissä käsitellään vain yhden ulostulon piirejä.
+Sisäänmenojen ja ulostulon signaalin arvo
 voi olla 1 tai 0. Edellisessä tapauksessa johtimessa on
 jännite, jälkimmäisessä tapauksessa ei ole.
 
