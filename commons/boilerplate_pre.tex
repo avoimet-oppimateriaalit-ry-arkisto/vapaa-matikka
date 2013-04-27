@@ -170,6 +170,8 @@
 
 % Tämä paketti lisää PDF:ään mm. klikattavat linkit sisällysluetteloon
 \usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true}
+\hypersetup{linkcolor=black}
 
 % Kertoo mathtoolsin olevan käytössä. Muuttuu turhaksi, jos LaTeX-pakettienhallinnat saadaan kaikilla kuntoon.
 \newif\iftools
@@ -190,18 +192,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % MAA11
-\usepackage{fancybox}
 \usepackage{graphicx}
-\hypersetup{colorlinks=true}
-\hypersetup{linkcolor=black}
 \newcommand{\lequiv}{\leftrightarrow}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
 \newcommand{\compl}{\complement}
-
 \DeclareMathOperator{\xor}{xor}
 \DeclareMathOperator{\syt}{syt}
 \DeclareMathOperator{\pyj}{pyj}
@@ -226,6 +219,7 @@
 \usepackage{../commons/vapaa-matikka_mikro}
 \usepackage{../commons/vapaa-matikka_misc}
 \usepackage{../commons/vapaa-matikka_otsikkotyylit}
+\usepackage{../commons/vapaa-matikka_paattely}
 \usepackage{../commons/vapaa-matikka_projekti}
 \usepackage{../commons/vapaa-matikka_qrlinkki}
 \usepackage{../commons/vapaa-matikka_tehtavat}
@@ -233,12 +227,11 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\let\cleardoublepage\clearpage
 
 \begin{document}
 
 \newdateformat{finshortdate}{\THEDAY.\THEMONTH.\THEYEAR}
-
-\Opensolutionfile{ans}[appendices/vastaukset]
 
 \selectlanguage{finnish}
 \finshortdate

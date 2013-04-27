@@ -22,7 +22,7 @@ ilmaistua osamäärän, jakajan ja jakojäännöksen avulla.
 \end{enumerate}
 
 
-Alakoulun matematiikassa esimerkiksi kokonaislukujen jakolasku $17/3$ ratkaistaan seuraavasti: $17/3 = 5$, jää $2$. Tämä tarkoittaa, että luku $3$ menee $5$ kertaa lukuun $17$ ja jää $2$. Yleisesti kokonaislukujen $a$ ja $b \neq 0$ jakolaskusta $a/b$ saadaan tulokseksi {\em osamäärä} ja {\em jakojäännös}. Edellisessä jakolaskussa osamäärä on $5$ ja jakojäännös on $2$. Mikäli jakojäännös on nolla eli jako menee tasan, sanotaan, että luku $a$ on {\em jaollinen} luvulla $b$ tai että luku $b$ {\em jakaa} luvun $a$. Tällöin merkitään $b|a$. Jos $b|a$, niin luku $a$ voidaan kirjoittaa osamäärän $q$ ja luvun $b$ avulla $a = qb$. Itse asiassa nämä ehdot ovat yhtäpitäviä. Jos luku $a$ ei ole jaollinen luvulla $b$, merkitään $b \nmid a$.
+Alakoulun matematiikassa esimerkiksi kokonaislukujen jakolasku $17/3$ ratkaistaan seuraavasti: $17/3 = 5$, jää $2$. Tämä tarkoittaa, että luku $3$ menee $5$ kertaa lukuun $17$ ja jää $2$. Yleisesti kokonaislukujen $a$ ja $b \neq 0$ jakolaskusta $a/b$ saadaan tulokseksi \termi{osamäärä}{osamäärä} ja \termi{jakojäännös}{jakojäännös}. Edellisessä jakolaskussa osamäärä on $5$ ja jakojäännös on $2$. Mikäli jakojäännös on nolla eli jako menee tasan, sanotaan, että luku $a$ on \termi{jaollisuus}{jaollinen} luvulla $b$ tai että luku $b$ \termi{jaollisuus}{jakaa} luvun $a$. Tällöin merkitään $b|a$. Jos $b|a$, niin luku $a$ voidaan kirjoittaa osamäärän $q$ ja luvun $b$ avulla $a = qb$. Itse asiassa nämä ehdot ovat yhtäpitäviä. Jos luku $a$ ei ole jaollinen luvulla $b$, merkitään $b \nmid a$.
 
 \begin{esimerkki}
 %{\bf Esimerkki 1.}
@@ -310,14 +310,14 @@ Todista jakoyhtälö, kun $a<0$.
 
 \item *
 %(Lisämateriaalia.) 
-{\em Lukujärjestelmä} tarkoittaa tapaa, jolla luvut kirjoitetaan numeroiden avulla. {\em Kantaluku} kertoo, kuinka monta eri numeroa lukujärjestelmän luvuissa voi esiintyä. Esimerkiksi {\em kymmenjärjestelmässä} kantaluku on $10$ ja käytössä ovat numerot $0,1,2,3,4,5,6,7,8$ ja $9$. Kymmenjärjestelmän luku $3258$ muodostuu numeroista $3,2,5$ ja $8$ kantaluvun $10$ potenssien avulla seuraavasti:
+\termi{lukujärjestelmä}{Lukujärjestelmä} tarkoittaa tapaa, jolla luvut kirjoitetaan numeroiden avulla. \termi{kantaluku}{Kantaluku} kertoo, kuinka monta eri numeroa lukujärjestelmän luvuissa voi esiintyä. Esimerkiksi \termi{kymmenjärjestelmä}{kymmenjärjestelmässä} kantaluku on $10$ ja käytössä ovat numerot $0,1,2,3,4,5,6,7,8$ ja $9$. Kymmenjärjestelmän luku $3258$ muodostuu numeroista $3,2,5$ ja $8$ kantaluvun $10$ potenssien avulla seuraavasti:
 \begin{eqnarray*}
 3258 &=&3\cdot 1000+2\cdot 100+5\cdot 10+8\\
 &=& 3\cdot 10^3+2\cdot 10^2+5\cdot 10^1+8\cdot 10^0.
 \end{eqnarray*}
 Kymmenjärjestelmässä siis luvun viimeinen numero on luvun $10^0$ kerroin, toiseksi viimeinen luvun $10^1$ kerroin, kolmanneksi viimeinen luvun $10^2$ kerroin jne.
 
-{\em Kaksijärjestelmän} eli {\em binäärijärjestelmän} luvut taas muodostuvat numeroista $0$ ja $1$. Esimerkiksi binääriluku $101101$ voidaan ilmaista kymmenjärjestelmässä kirjoittamalla luku kantaluvun $2$ potenssien avulla seuraavasti:
+\termi{kaksijärjestelmä}{Kaksijärjestelmän} eli \termi{binäärijärjestelmä}{binäärijärjestelmän} luvut taas muodostuvat numeroista $0$ ja $1$. Esimerkiksi binääriluku $101101$ voidaan ilmaista kymmenjärjestelmässä kirjoittamalla luku kantaluvun $2$ potenssien avulla seuraavasti:
 \begin{eqnarray*}
 101101&=&1\cdot2^5+0\cdot2^4+1\cdot2^3+1\cdot2^2+0\cdot2^1+1\cdot2^0 \\
 &=& 1\cdot32+0\cdot16+1\cdot8+1\cdot4+0\cdot2+1=45.
@@ -350,7 +350,7 @@ Kirjoittamalla nyt jakojäännökset lopusta alkuun saadaan luku $10010$. Se on 
 
 
 \section{Kongruenssi} 
-Luonnonilmiöitä mallinnettaessa tulee usein vastaan tilanteita, joissa on hyödyllistä samastaa keskenään jaksollisesti toistuvat ilmiöt. Tällaisia ilmiöitä ovat esimerkiksi vuodenajat, viikonpäivät ja kellonajat. Samaan tapaan kokonaislukujen jonossa esimerkiksi parilliset tai yhdellätoista jaolliset luvut esiintyvät jaksollisesti. Lukujonossa toistuvien ominaisuuksien tutkimisessa käytetään {\em kongruenssin} käsitettä.
+Luonnonilmiöitä mallinnettaessa tulee usein vastaan tilanteita, joissa on hyödyllistä samastaa keskenään jaksollisesti toistuvat ilmiöt. Tällaisia ilmiöitä ovat esimerkiksi vuodenajat, viikonpäivät ja kellonajat. Samaan tapaan kokonaislukujen jonossa esimerkiksi parilliset tai yhdellätoista jaolliset luvut esiintyvät jaksollisesti. Lukujonossa toistuvien ominaisuuksien tutkimisessa käytetään \termi{kongruenssi}{kongruenssin} käsitettä.
 
 \subsection*{Tutkimustehtävä}
 \begin{enumerate}
@@ -370,7 +370,7 @@ Kokonaislukujen $a$ ja $b$ kongruenssi tarkoittaa, että niillä on sama jakojä
 \laatikko{
 {\bf Kongruenssi.}
 %\medskip
-Kokonaisluvut $a$ ja $b$ ovat {\em kongruentteja modulo} $k$, jos erotus\newline
+Kokonaisluvut $a$ ja $b$ ovat \termi{kongruentti modulo $k$}{kongruentteja modulo} $k$, jos erotus\newline
  $a-b$ on jaollinen positiivisella kokonaisluvulla $k$. Tällöin merkitään
 \[
 a \equiv b \quad (\mod k).
@@ -452,7 +452,7 @@ $b \equiv d\quad (\mod k)$. Tällöin:
 \begin{todistus}
 Todistetaan kohdat 1 ja 3. Kohdan 2 todistus on kotitehtävänä, ja potenssisääntö 4 todistetaan lisämateriaalina olevan kappaleen 5.4 tehtävässä XX.
 
-Kongruenssin määritelmän perusteella $a=c + mk$ ja $b= d + nk$, missä $m,n\in \mathbb{Z}$.
+Kongruenssin määritelmän perusteella $a=c + mk$ ja $b= d + nk$, missä $m,n\in \Z$.
 
 Siten
 \begin{eqnarray*}
@@ -706,7 +706,7 @@ Olkoot $a$ ja $b$ kokonaislukuja. Osoita väite todeksi tai epätodeksi: jos $ab
 Olkoot $a$ ja $b$ kokonaislukuja. Osoita väite todeksi tai epätodeksi: jos $a^2 \equiv b^2 \quad (\mod m)$, niin $a \equiv b \quad (\mod m)$.
 
 \item * %(Lisämateriaalia)
-Luvun $a$ määräämä {\em jäännösluokka modulo} $m$ on luvun $a$ kanssa kongruenttien lukujen joukko. Luvun $a$ jäännösluokkaa merkitään $\underline{a}$. Siis $\underline{a} = \{a + km\, |\, k\in \mathbb{Z}\}$. Esimerkiksi jäännösluokat modulo $4$ ovat $\underline{0}=\{4k\, |\, k\in \mathbb{Z}\}$, $\underline{1}=\{1+4k\, |\, k\in \mathbb{Z}\}$, $\underline{2}=\{2+4k\, |\, k\in \mathbb{Z}\}$ ja $\underline{3}=\{3+4k\, |\, k\in \mathbb{Z}\}$.
+Luvun $a$ määräämä \termi{jäännösluokka modulo $m$}{jäännösluokka modulo} $m$ on luvun $a$ kanssa kongruenttien lukujen joukko. Luvun $a$ jäännösluokkaa merkitään $\underline{a}$. Siis $\underline{a} = \{a + km\, |\, k\in \Z\}$. Esimerkiksi jäännösluokat modulo $4$ ovat $\underline{0}=\{4k\, |\, k\in \Z\}$, $\underline{1}=\{1+4k\, |\, k\in \Z\}$, $\underline{2}=\{2+4k\, |\, k\in \Z\}$ ja $\underline{3}=\{3+4k\, |\, k\in \Z\}$.
 \begin{itemize}
 \item[a)] Määritä jäännösluokat modulo $5$.
 \item[b)] Jäännösluokkien yhteenlasku ja kertolasku määritellään seuraavasti: $\underline{a} + \underline{b} = \underline{a + b}$ ja $\underline{a} \cdot \underline{b} = \underline{a\cdot b}$. Täydennä seuraavat jäännösluokkien yhteen- ja kertolaskutaulut modulo $5$.
@@ -1040,7 +1040,7 @@ henkilöllä on siniset silmät, niin myös seuraavalla henkilöllä on siniset 
 Tarkastellaan positiivisten kokonaislukujen jonoa $1, 2, 3, 4, 5, 6,\ldots$. Voidaan osoittaa, että jos jollakin positiivisella kokonaisluvulla $k$ pätee $3^k \ge 1+2k$, niin silloin pätee myös $3^{k+1} \ge 1+2(k+1)$. Tiedetään, että $3^1 \ge 1 + 2 \cdot 1$. Mitä voidaan päätellä? Vertaa tämän ja edellisen kohdan tilanteita.
 \end{enumerate}
 
-Lukuteorian yhteydessä on tarpeellista määritellä täsmällisesti, mitä luonnolliset luvut ovat. Tämä johtaa matemaattiseen {\em induktioperiaatteeseen}. Asetetaan seuraavat ehdot:
+Lukuteorian yhteydessä on tarpeellista määritellä täsmällisesti, mitä luonnolliset luvut ovat. Tämä johtaa matemaattiseen \termi{induktioperiaate}{induktioperiaatteeseen}. Asetetaan seuraavat ehdot:
 \begin{enumerate}
 \item Luvut $0$ ja $1$ ovat luonnollisia lukuja.
 \item Jos $n$ on luonnollinen luku, niin luku $n+1$ on myös luonnollinen luku.
@@ -1051,7 +1051,7 @@ Kohtaa (2) kutsutaan induktioperiaatteeksi. Vaikka joukko
 \]
 on ääretön, jokainen luku $n\in \N\setminus \{0\}$ on kuitenkin muotoa $n=1+\ldots + 1$, missä yhteenlaskettavia lukuja on äärellisen monta.
 
-Luonnollisten lukujen määritteleminen induktioperiaatteen avulla johtaa tärkeään todistustyyppiin, jota sanotaan {\em induktiotodistukseksi}. Induktiotodistuksen ideana on palauttaa luonnollista lukua $n+1$ koskeva väite luonnollista lukua $n$ koskevaksi väitteeksi. Jos lukua $n+1$ koskevan väitteen totuus voidaan päätellä lukua $n$ koskevan väitteen totuudesta, väite pätee  edelleen kaikille luonnollisille luvuille, mikäli se pätee luvulle $0$. 
+Luonnollisten lukujen määritteleminen induktioperiaatteen avulla johtaa tärkeään todistustyyppiin, jota sanotaan \termi{induktiotodistus}{induktiotodistukseksi}. Induktiotodistuksen ideana on palauttaa luonnollista lukua $n+1$ koskeva väite luonnollista lukua $n$ koskevaksi väitteeksi. Jos lukua $n+1$ koskevan väitteen totuus voidaan päätellä lukua $n$ koskevan väitteen totuudesta, väite pätee  edelleen kaikille luonnollisille luvuille, mikäli se pätee luvulle $0$. 
 
 Induktiotodistuksen muoto on yleensä seuraava.
 \begin{itemize}
@@ -1059,7 +1059,7 @@ Induktiotodistuksen muoto on yleensä seuraava.
 \item[2.] Kiinnitetään $k\in \N$. Oletetaan, että tulos on tosi luvulla $n=k$. Osoitetaan, että tulos on tosi luvulla $n=k+1$.
 \item[3.] Nyt induktioperiaatteesta seuraa, että tulos on tosi kaikilla $n\in \N$.
 \end{itemize}
-Todistuksen toista vaihetta kutsutaan {\em induktioaskeleeksi}, siinä esiintyvää oletusta {\em induktio-oletukseksi} ja väitettä {\em induktioväitteeksi}.
+Todistuksen toista vaihetta kutsutaan \termi{induktioaskel}{induktioaskeleeksi}, siinä esiintyvää oletusta \termi{induktio-oletus}{induktio-oletukseksi} ja väitettä \termi{induktioväite}{induktioväitteeksi}.
 
 \begin{esimerkki}
 %{\bf Esimerkki 1.} 
@@ -1159,7 +1159,7 @@ $n=1,2,\ldots$.
 
 %{\bf Esimerkki 4.}
 \begin{esimerkki}
-Monikulmion sanotaan olevan {\em kupera} eli {\em konveksi}, jos sen kaikki kulmat ovat pienempiä kuin $180^\circ$.
+Monikulmion sanotaan olevan \termi{kupera}{kupera} eli \termi{konveksi}{konveksi}, jos sen kaikki kulmat ovat pienempiä kuin $180^\circ$.
 
 Osoita matemaattisella induktiolla, että $n$-sivuisen kuperan monikulmion lävistäjien
 lukumäärä on
@@ -1235,7 +1235,7 @@ Induktioperiaatteen nojalla kaava on tosi, kun $n=3,4,5,\ldots$.
 
 \item Osoita induktiolla, että luku $7^n - 6n + 8$ on jaollinen luvulla $9$, kun $n$ on positiivinen kokonaisluku.
 
-\item Osoita induktiolla, että $n! > n^2$, kun $n$ on kokonaisluku ja $n \ge 4$. Merkintä $n!$ tarkoittaa luvun $n$ {\em kertomaa}. Se on tulo $n! = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 3 \cdot 2 \cdot 1$.
+\item Osoita induktiolla, että $n! > n^2$, kun $n$ on kokonaisluku ja $n \ge 4$. Merkintä $n!$ tarkoittaa luvun $n$ \termi{kertoma}{kertomaa}. Se on tulo $n! = n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot 3 \cdot 2 \cdot 1$.
 
 \item Olkoot $n$ positiivinen kokonaisluku ja $r$ reaaliluku, jolle pätee $r \neq 1$. Osoita induktiolla, että 
 \[
@@ -1323,7 +1323,7 @@ Osoita induktiolla, että
 \]
 Muodosta kaava, jolla voidaan laskea summa $2^0 + 2^1 + 2^2 + \ldots + 2^n$, missä $n$ on luonnollinen luku. Todista kaava induktiolla.
 
-\item Olkoot $n$ luonnollinen luku ja $x$ reaaliluku, jolle pätee $x > -1$. Osoita, että $(1 + x)^n \ge 1 + nx$. Kyseessä on niin sanottu {\em Bernoullin epäyhtälö}.
+\item Olkoot $n$ luonnollinen luku ja $x$ reaaliluku, jolle pätee $x > -1$. Osoita, että $(1 + x)^n \ge 1 + nx$. Kyseessä on niin sanottu \termi{Bernoullin epäyhtälö}{Bernoullin epäyhtälö}.
 
 \item Olkoon $n$ positiivinen kokonaisluku. Todista, että
 \[

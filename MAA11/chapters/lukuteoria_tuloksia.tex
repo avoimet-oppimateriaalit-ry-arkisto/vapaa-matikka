@@ -3,7 +3,7 @@
 %Tässä luvussa käsitellään joitakin lukuteorian tunnetuimpia tuloksia ja niiden todistuksia.
 
 \section{Suurin yhteinen tekijä ja Eukleideen algoritmi}
-Seuraavaksi käsitellään kahden positiivisen kokonaisluvun yhteisiä tekijöitä ja esitetään käytännöllinen menetelmä {\em suurimman yhteisen tekijän} etsimiseksi.
+Seuraavaksi käsitellään kahden positiivisen kokonaisluvun yhteisiä tekijöitä ja esitetään käytännöllinen menetelmä \termi{suurin yhteinen tekijä}{suurimman yhteisen tekijän} etsimiseksi.
 
 \subsection*{Tutkimustehtävä}
 \begin{enumerate}
@@ -37,14 +37,14 @@ Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Positiivista kokonaislukua $d$ sa
 \item Luku $d$ on lukujen $a$ ja $b$ tekijä, eli $d| a$ ja $d | b$. 
 \item Luku $d$ on suurin lukujen $a$ ja $b$ tekijöistä.
 \end{enumerate}
-Lukujen $a$ ja $b$ suurinta yhteistä tekijää merkitään $\syt(a,b)$ tai joskus $\gcd(a,b)$. Lyhenne gcd tulee englanninkielisestä ilmaisusta {\em greatest common divisor}.
+Lukujen $a$ ja $b$ suurinta yhteistä tekijää merkitään $\syt(a,b)$ tai joskus $\gcd(a,b)$. Lyhenne gcd tulee englanninkielisestä ilmaisusta \termi{greatest common divisor}{greatest common divisor}.
 %---
 \end{minipage}
 }
 
 Kahden luvun suurin yhteinen tekijä voidaan ainakin periaatteessa aina löytää luettelemalla näiden lukujen tekijät, etsimällä lukujen yhteiset tekijät ja valitsemalla lopuksi yhteisistä tekijöistä suurin. Tämä menettelytapa muuttuu kuitenkin hankalaksi suurten lukujen kohdalla, vaikka käytössä olisi tietokone.
 
-Tehokkaan algoritmin suurimman yhteisen tekijän etsimiseksi esitti aleksandrialainen matemaatikko Eukleides (n. 300 eaa.) teoksessaan Stoikheia (Alkeet, latinaksi Elementa). Alkeet on yksi matematiikan historian tärkeimmistä teoksista, ja se säilyi käytetyimpänä geometrian oppikirjana aina 1800-luvulle saakka. Teoksessa esitettyä algoritmia kutsutaan {\em Eukleideen algoritmiksi}, ja se perustuu seuraavaan lemmaan:
+Tehokkaan algoritmin suurimman yhteisen tekijän etsimiseksi esitti aleksandrialainen matemaatikko Eukleides (n. 300 eaa.) teoksessaan Stoikheia (Alkeet, latinaksi Elementa). Alkeet on yksi matematiikan historian tärkeimmistä teoksista, ja se säilyi käytetyimpänä geometrian oppikirjana aina 1800-luvulle saakka. Teoksessa esitettyä algoritmia kutsutaan \termi{Eukleideen algoritmi}{Eukleideen algoritmiksi}, ja se perustuu seuraavaan lemmaan:
 
 %{\bf Lause (Jaollisuuden peruslause, s.108 / Pitkä matematiikka)}
 
@@ -210,7 +210,7 @@ Määritä lukujen $188\, 000\, 100$ ja $188$ suurin yhteinen tekijä.
 \item[c)] $\syt(a^2,a)$
 \item[d)] $\syt((a+1)!,a!)$.
 \end{itemize}
-Merkintä $a!$ tarkoittaa luvun $a$ {\em kertomaa}. Se on tulo $a! = a \cdot (a-1) \cdot (a-2) \cdot \ldots \cdot 3 \cdot 2 \cdot 1$.
+Merkintä $a!$ tarkoittaa luvun $a$ \termi{kertoma}{kertomaa}. Se on tulo $a! = a \cdot (a-1) \cdot (a-2) \cdot \ldots \cdot 3 \cdot 2 \cdot 1$.
 
 \item Olkoon $n$ positiivinen kokonaisluku. Osoita Eukleideen algoritmia käyttäen, että $\syt(n+1,n)=1$.
 
@@ -288,7 +288,7 @@ Diofantoksesta ei tiedetä kovinkaan paljon, mutta hänen tarkka \hbox{elin}\-ik
 \]
 josta Diofantoksen elinvuodet voidaan ratkaista. Ratkaisu on $x=84$.
 
-{\em Diofantoksen yhtälöiksi} kutsutaan muotoa
+\termi{Diofantoksen yhtälö}{Diofantoksen yhtälöiksi} kutsutaan muotoa
 \[
 ax + by = c
 \]
@@ -417,7 +417,7 @@ Tämä osoittaa, että $x=tx_1$ ja $y=ty_1$ on alkuperäisen Diofantoksen yhtäl
 
 Itse asiassa jos $x_0$ ja $y_0$ ovat yhtälön $ax + by = c$ jokin ratkaisu, niin sen kaikki ratkaisut saadaan kaavoista
 \[
-x= x_0 + n\frac{b}{d}, \textrm{ ja } y=y_0 - n\frac{a}{d}, \textrm{ missä } \qquad n\in\mathbb{Z} \textrm{ ja } d=\syt(a,b).
+x= x_0 + n\frac{b}{d}, \textrm{ ja } y=y_0 - n\frac{a}{d}, \textrm{ missä } \qquad n\in\Z \textrm{ ja } d=\syt(a,b).
 \]
 Erityisesti siis jokaisella ratkeavalla Diofantoksen yhtälöllä on äärettömän monta ratkaisua. Ratkaisussa esiintyvät kertoimet saattavat kuitenkin olla negatiivisia lukuja.
 
@@ -550,8 +550,7 @@ jälkeensä seuraavan ongelman.
 
 \begin{center}
 \includegraphics[width=4cm]{pictures/wikimarkka.jpg}
-
-Markan kolikko vuodelta 1983.
+%Markan kolikko vuodelta 1983.
 \end{center}
 
 \medskip
@@ -751,7 +750,7 @@ Osoita, että Kexleruksen viiniongelmalla ei ole ratkaisuja, jos asetetaan $a=0$
 \item Esitä luku $60$ mahdollisimman pienten positiivisten kokonaislukujen tulona.
 \end{enumerate}
 
-{\em Alkuluvuksi} sanotaan luonnollista lukua $p\ge 2$, joka ei ole jaollinen muilla positiivisilla kokonaisluvuilla kuin itsellään sekä luvulla $1$. Esimerkiksi luku $13$ on alkuluku. Luku $14$ ei ole alkuluku, koska se on jaollinen myös luvuilla $2$ ja $7$.
+\termi{alkuluku}{Alkuluvuksi} sanotaan luonnollista lukua $p\ge 2$, joka ei ole jaollinen muilla positiivisilla kokonaisluvuilla kuin itsellään sekä luvulla $1$. Esimerkiksi luku $13$ on alkuluku. Luku $14$ ei ole alkuluku, koska se on jaollinen myös luvuilla $2$ ja $7$.
 
 \begin{esimerkki}
 %{\bf Esimerkki 1.}
@@ -792,7 +791,7 @@ nähdään myös siitä, että luvun $357$ numeroiden summa $3 + 5 + 7
 {\bf Vastaus:} a) On. b) Ei ole.
 \end{esimerkki}
 
-Alkulukuja voidaan etsiä helpommin esimerkiksi yksinkertaisella algoritmilla, joka tunnetaan {\em Eratostheneen seulana}. Eratosthenes oli kreikkalainen matemaatikko, filosofi, runoilija, tähtitieteilijä ja historioitsija. Bysanttilaisten historioitsijoiden mukaan hän syntyi vuonna 276 eaa. nykyisessä Libyassa ja kuoli 81-vuotiaana vuonna 195 eaa. Eratosthenes vaikutti tuon ajan sivistyksen keskuksessa Aleksandriassa. Hänen kuuluisin keksintönsä lienee menetelmä maapallon ympärysmitan laskemiseksi. %Itse hän kuvaili itseään viisauden ystäväksi.
+Alkulukuja voidaan etsiä helpommin esimerkiksi yksinkertaisella algoritmilla, joka tunnetaan \termi{Eratostheneen seula}{Eratostheneen seulana}. Eratosthenes oli kreikkalainen matemaatikko, filosofi, runoilija, tähtitieteilijä ja historioitsija. Bysanttilaisten historioitsijoiden mukaan hän syntyi vuonna 276 eaa. nykyisessä Libyassa ja kuoli 81-vuotiaana vuonna 195 eaa. Eratosthenes vaikutti tuon ajan sivistyksen keskuksessa Aleksandriassa. Hänen kuuluisin keksintönsä lienee menetelmä maapallon ympärysmitan laskemiseksi. %Itse hän kuvaili itseään viisauden ystäväksi.
 
 Algoritmin idea on seuraava. Halutaan löytää alkuluvut välillä $2,\ldots,n$.
 \begin{enumerate}
@@ -834,7 +833,7 @@ Luku $2$ on alkuluku. Poistetaan listasta muut luvulla $2$ jaolliset luvut. Seur
 {\bf Vastaus:} $2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53$ ja $59$
 \end{esimerkki}
 
-\subsection*{Alkutekijä} Kokonaisluvun $n$ {\em alkutekijöiksi} sanotaan niitä alkulukuja, joilla $n$ on jaollinen. Toisin sanoen, $p$ on luvun $n$ alkutekijä, jos ja vain jos $p|n$ ja $p$ on alkuluku.  Esimerkiksi luvun $12$ tekijät ovat $1, 2, 3, 4, 6$ ja $12$. Näistä alkutekijöitä ovat $2$ ja $3$.
+\subsection*{Alkutekijä} Kokonaisluvun $n$ \termi{alkutekijä}{alkutekijöiksi} sanotaan niitä alkulukuja, joilla $n$ on jaollinen. Toisin sanoen, $p$ on luvun $n$ alkutekijä, jos ja vain jos $p|n$ ja $p$ on alkuluku.  Esimerkiksi luvun $12$ tekijät ovat $1, 2, 3, 4, 6$ ja $12$. Näistä alkutekijöitä ovat $2$ ja $3$.
 
 %{\bf Esimerkki.} Etsi kaikki alkutekijät... (AM).
 
@@ -848,7 +847,7 @@ n= p_1^{m_1} \cdot p_2^{m_2} \cdot \ldots \cdot p_k^{m_k},
 \]
 missä $p_1,\ldots,p_k$ ovat luvun $n$ alkutekijät ja $m_1,\ldots,m_k$ ovat positiivisia kokonaislukuja.
 
-Esitystä kutsutaan luvun $n$ {\em alkutekijähajotelmaksi}. Esimerkiksi luvun $750$ alkutekijähajotelma on $2\cdot 3\cdot 5^3$.
+Esitystä kutsutaan luvun $n$ \termi{alkutekijähajotelma}{alkutekijähajotelmaksi}. Esimerkiksi luvun $750$ alkutekijähajotelma on $2\cdot 3\cdot 5^3$.
 \end{minipage}
 }
 
@@ -979,9 +978,9 @@ Voidaan siis olettaa, että $q$ ei ole alkuluku. Tällöin on olemassa jokin alk
 
 
 \subsection*{Pienin yhteinen jaettava}
-Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Lukujen $a$ ja $b$ {\em pienin yhteinen jaettava} $\pyj(a,b)$ on pienin positiivinen kokonaisluku, joka on jaollinen molemmilla luvuista $a$ ja $b$. Esimerkiksi luvulla $12$ jaollisia lukuja ovat $12, 24, 36, 48, 60, 72, 84, 96, 108, 120, \ldots$ ja luvulla $15$ jaollisia lukuja ovat $15, 30, 45, 60, 75, 90, 105, 120, \ldots$. Huomataan, että luku $60$ on pienin positiivinen kokonaisluku, joka on jaollinen sekä luvulla $12$ että luvulla $15$. Siten $\pyj(12, 15) = 60$.
+Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Lukujen $a$ ja $b$ \termi{pienin yhteinen jaettava}{pienin yhteinen jaettava} $\pyj(a,b)$ on pienin positiivinen kokonaisluku, joka on jaollinen molemmilla luvuista $a$ ja $b$. Esimerkiksi luvulla $12$ jaollisia lukuja ovat $12, 24, 36, 48, 60, 72, 84, 96, 108, 120, \ldots$ ja luvulla $15$ jaollisia lukuja ovat $15, 30, 45, 60, 75, 90, 105, 120, \ldots$. Huomataan, että luku $60$ on pienin positiivinen kokonaisluku, joka on jaollinen sekä luvulla $12$ että luvulla $15$. Siten $\pyj(12, 15) = 60$.
 
-Lukujen $a$ ja $b$ pienintä yhteistä jaettavaa kutsutaan toisinaan {\em pienimmäksi yhteiseksi monikerraksi}, jota merkitään $\pym(a,b)$. Voidaan käyttää myös merkintää $\mathrm{lcm}(a,b)$, joka tulee englanninkielisistä sanoista {\em least common multiple}.
+Lukujen $a$ ja $b$ pienintä yhteistä jaettavaa kutsutaan toisinaan \termi{pienin yhteinen monikerta}{pienimmäksi yhteiseksi monikerraksi}, jota merkitään $\pym(a,b)$. Voidaan käyttää myös merkintää $\mathrm{lcm}(a,b)$, joka tulee englanninkielisistä sanoista \termi{least common multiple}{least common multiple}.
 
 Lukujen $a$ ja $b$ suurin yhteinen tekijä sekä pienin yhteinen jaettava voidaan määrittää lukujen alkutekijähajotelmien avulla. Suurimman yhteisen tekijän alkutekijöitä ovat kaikki lukujen $a$ ja $b$ yhteiset alkutekijät. Kunkin yhteisen alkutekijän eksponentiksi valitaan lukujen $a$ ja $b$ alkutekijähajotelmissa esiintyvistä eksponenteista pienempi. Vastaavasti pienimmän yhteisen jaettavan alkutekijöitä ovat kaikki ne alkuluvut, jotka ovat luvun $a$ tai luvun $b$ tekijöitä. Kunkin alkutekijän eksponentiksi valitaan lukujen $a$ ja $b$ alkutekijähajotelmissa esiintyvistä eksponenteista suurempi.
 
@@ -1061,24 +1060,24 @@ joten myös luku $n^3 - n$ on jaollinen luvulla $3$. Luvut 2 ja
 $2 \cdot 3 = 6$. Väite on tosi.
 \end{esimerkki}
 
-\subsection*{Fermat'n pieni lause} {\em Fermat'n pieni lause} sanoo, että jos $a\in\Z$ ja $p$ on alkuluku, niin 
+\subsection*{Fermat'n pieni lause} \termi{Fermat'n pieni lause}{Fermat'n pieni lause} sanoo, että jos $a\in\Z$ ja $p$ on alkuluku, niin 
 \[
 a^p \equiv a \qquad (\mod p).
 \]
 Lauseen esitti Pierre de Fermat vuonna 1640 kirjeessään, valittaen kuitenkin väitteen todistusta liian pitkäksi. Ensimmäisen todistuksen julkaisi Leonhard Euler, mutta käytännössä sama todistus oli esiintynyt Gottfried Leibnizin julkaisemattomissa muistiinpanoissa.
 
 \subsection*{Kiinalainen alkulukutesti}
-Useat matemaatikot ovat toisistaan riippumatta esittäneet virheellisen {\em otaksuman} eli {\em konjektuurin}, jonka mukaan luku $p$ on alkuluku, jos ja vain jos
+Useat matemaatikot ovat toisistaan riippumatta esittäneet virheellisen \termi{otaksuma}{otaksuman} eli \termi{konjektuuri}{konjektuurin}, jonka mukaan luku $p$ on alkuluku, jos ja vain jos
 \[
 2^p \equiv 2 \qquad (\mod p).
 \]
-Väitteessä esiintyvä kaava on sama kuin Fermat'n pienessä lauseessa, kun $a=2$. Väitettä kutsutaan usein {\em kiinalaiseksi alkulukutestiksi}. Sen on väitetty esiintyneen jo filosofi Kungfutseen liitetyissä matemaattisissa teksteissä noin 2500 vuotta sitten. Kysymyksessä on kuitenkin ilmeisesti 1800-luvulla syntynyt väärinkäsitys, joka johtui  kään\-nös\-vir\-hees\-tä.
+Väitteessä esiintyvä kaava on sama kuin Fermat'n pienessä lauseessa, kun $a=2$. Väitettä kutsutaan usein \termi{kiinalainen alkulukutesti}{kiinalaiseksi alkulukutestiksi}. Sen on väitetty esiintyneen jo filosofi Kungfutseen liitetyissä matemaattisissa teksteissä noin 2500 vuotta sitten. Kysymyksessä on kuitenkin ilmeisesti 1800-luvulla syntynyt väärinkäsitys, joka johtui  kään\-nös\-vir\-hees\-tä.
 
 Pienin vastaesimerkki konjektuurille on suhteellisen suuri luku $p=341 = 11\cdot 31$. Tämä esimerkki valaisee sitä, miksi matemaattista todistamista tarvitaan eikä pelkkä lukujen kokeileminen edes laskimella tai tietokoneella riitä osoittamaan tulosta.
 
 
 \subsection*{Goldbachin konjektuuri}
-{\em Goldbachin konjektuuri} on yksi lukuteorian ja samalla matematiikan vanhimmista sekä kuuluisimmista avoimista ongelmista. Konjektuurin esitti vuonna 1742 saksalainen mate\-maa\-tik\-ko Christian Goldbach. Konjektuuri sanoo, että jokainen parillinen kokonaisluku, joka on suurempi kuin $2$, voidaan esittää kahden alkuluvun summana. 
+\termi{Goldbachin konjektuuri}{Goldbachin konjektuuri} on yksi lukuteorian ja samalla matematiikan vanhimmista sekä kuuluisimmista avoimista ongelmista. Konjektuurin esitti vuonna 1742 saksalainen mate\-maa\-tik\-ko Christian Goldbach. Konjektuuri sanoo, että jokainen parillinen kokonaisluku, joka on suurempi kuin $2$, voidaan esittää kahden alkuluvun summana. 
 
 Lukuja voidaan esittää kahden alkuluvun summana useilla eri tavoilla. Esimerkiksi
 \[
@@ -1102,17 +1101,17 @@ Lukuja voidaan esittää kahden alkuluvun summana useilla eri tavoilla. Esimerki
 
 \subsection*{Eulerin $\varphi$-funktio.} 
 Olkoot $n$ ja $k$ positiivisia kokonaislukuja. Funktio $\varphi(n)$ ilmaisee niiden kokonaislukujen $k$ lukumäärän, joille pätee 
-$\syt(n, k) = 1$, kun $1\le k \le n$. Sen laskemisessa voidaan käyttää esimerkiksi {\em Eulerin tulokaavaa}
+$\syt(n, k) = 1$, kun $1\le k \le n$. Sen laskemisessa voidaan käyttää esimerkiksi \termi{Eulerin tulokaava}{Eulerin tulokaavaa}
 \[
 \varphi(n)=n \prod_{p|n} \bigg(1-\frac{1}{p}\bigg),
 \]
 missä $p$ on alkuluku. Funktiolla $\varphi(n)$ on monia teoreettisia ja käy\-tän\-nöl\-li\-siä sovelluksia, kuten seuraavaksi esiteltävä RSA-algoritmi.
 
-\subsection*{RSA-algoritmi} Tällä hetkellä ehkä merkittävin lukuteorian käy\-tän\-nöl\-li\-nen sovellus on niin kutsuttu {\em julkisen avaimen salakirjoitus}. Julkisen avaimen salakirjoituksen esittelivät MIT:n (Massachusetts Institute of Technology) tutkijat Ron Rivest, Adi Shamir ja Leonard Adleman vuonna 1978. Algoritmia kutsutaan sitä koskevan alkuperäisen tutkimusartikkelin kirjoittajien sukunimien alkukirjaimista muodostetulla lyhenteellä RSA. Aihepiiri on edelleen aktiivisen tutkimuksen kohteena, mutta algoritmin teoreettinen perusta on klassisissa lukuteorian tuloksissa. Siksi RSA-algoritmi osoittaa, että puhtaan matematiikan tutkimuksella voi olla uusia yllättäviä ja merkittäviä sovelluksia jopa satoja vuosia tutkimuksen julkaisemisen jälkeenkin.
+\subsection*{RSA-algoritmi} Tällä hetkellä ehkä merkittävin lukuteorian käy\-tän\-nöl\-li\-nen sovellus on niin kutsuttu \termi{julkisen avaimen salakirjoitus}{julkisen avaimen salakirjoitus}. Julkisen avaimen salakirjoituksen esittelivät MIT:n (Massachusetts Institute of Technology) tutkijat Ron Rivest, Adi Shamir ja Leonard Adleman vuonna 1978. Algoritmia kutsutaan sitä koskevan alkuperäisen tutkimusartikkelin kirjoittajien sukunimien alkukirjaimista muodostetulla lyhenteellä RSA. Aihepiiri on edelleen aktiivisen tutkimuksen kohteena, mutta algoritmin teoreettinen perusta on klassisissa lukuteorian tuloksissa. Siksi RSA-algoritmi osoittaa, että puhtaan matematiikan tutkimuksella voi olla uusia yllättäviä ja merkittäviä sovelluksia jopa satoja vuosia tutkimuksen julkaisemisen jälkeenkin.
 
-RSA-algoritmi perustuu lukuteoriaan ja alkulukujen ominaisuuksiin. Algoritmin keskeisiä käsitteitä ovat {\em julkinen avain} ja {\em salainen avain}. Julkista avainta käytetään viestin salakirjoittamisessa, mutta sen avulla salakirjoitusta ei voi purkaa. Salakirjoituksen purkamisessa käytetään salaista avainta, jonka vain viestin vastaanottaja tietää. Julkisen avaimen salakirjoitusmenetelmät poistavat siten kaikkien aikaisempien salakirjoitusmenetelmien keskeisen heikkouden. Niitä käytettäessä viestin lähettäjän ei koskaan tarvitse saada viestin purkamisessa tarvittavaa tietoa. 
+RSA-algoritmi perustuu lukuteoriaan ja alkulukujen ominaisuuksiin. Algoritmin keskeisiä käsitteitä ovat \termi{julkinen avain}{julkinen avain} ja \termi{salainen avain}{salainen avain}. Julkista avainta käytetään viestin salakirjoittamisessa, mutta sen avulla salakirjoitusta ei voi purkaa. Salakirjoituksen purkamisessa käytetään salaista avainta, jonka vain viestin vastaanottaja tietää. Julkisen avaimen salakirjoitusmenetelmät poistavat siten kaikkien aikaisempien salakirjoitusmenetelmien keskeisen heikkouden. Niitä käytettäessä viestin lähettäjän ei koskaan tarvitse saada viestin purkamisessa tarvittavaa tietoa. 
 
-Salakirjoituksessa käytetään hyväksi kappaleen 5.2 lisämateriaalissa esiteltyjen jään\-nös\-luok\-kien ominaisuuksia, erityisesti {\em multiplikatiivista käänteislukua}. Luvun $a$ multiplikatiivisella käänteisluvulla modulo $m$ tarkoitetaan sellaista kokonaislukua $a^{-1}$, jolle pätee $a\cdot a^{-1} \equiv 1 \ (\mod m)$.
+Salakirjoituksessa käytetään hyväksi kappaleen 5.2 lisämateriaalissa esiteltyjen jään\-nös\-luok\-kien ominaisuuksia, erityisesti \termi{multiplikatiivinen käänteisluku}{multiplikatiivista käänteislukua}. Luvun $a$ multiplikatiivisella käänteisluvulla modulo $m$ tarkoitetaan sellaista kokonaislukua $a^{-1}$, jolle pätee $a\cdot a^{-1} \equiv 1 \ (\mod m)$.
 
 RSA-algoritmin matemaattinen idea on seuraava:
 \begin{itemize}
@@ -1148,7 +1147,7 @@ Nyt $p = 47$ ja $q = 59$. Siten $n=pq=2773$ ja kaavalla $\varphi(n)=(p-1)(q-1)$ 
 \]
 Seuraavaksi valitaan jokin luku $e$ siten, että $1<e<2668$ ja $\syt(e,2668)=1$. Esimerkiksi $e=13$ käy.
 
-Salaisen avaimen $d$ löytämiseksi on laskettava multiplikatiivinen käänteisluku $13^{-1}\ (\mod 2668)$. Käyttämällä esimerkiksi niin kutsuttua {\em laajennettua Eukleideen algoritmia} tai tietokonetta saadaan $d=821$. Tuloksen voi tarkistaa laskemalla:
+Salaisen avaimen $d$ löytämiseksi on laskettava multiplikatiivinen käänteisluku $13^{-1}\ (\mod 2668)$. Käyttämällä esimerkiksi niin kutsuttua \termi{laajennettu Eukleideen algoritmi}{laajennettua Eukleideen algoritmia} tai tietokonetta saadaan $d=821$. Tuloksen voi tarkistaa laskemalla:
 \[
 d \cdot e = 821 \cdot 13 = 10673 = 4\cdot 2668 + 1 \equiv 1 \quad (\mod 2668),
 \]
@@ -1269,7 +1268,7 @@ Osoita lauseen tämän muodon avulla, että $n^{19}\equiv n \quad
 
 \item
 Muotoa $F_n = 2^{2^n}+1$, $n=0,1,2,\ldots$ olevia lukuja sanotaan
-{\em Fermat'n luvuiksi}. Euler tutki 1700-luvulla, ovatko kaikki
+\termi{Fermat'n luvut}{Fermat'n luvuiksi}. Euler tutki 1700-luvulla, ovatko kaikki
 Fermat'n luvut alkulukuja. Ratkaise tämä Eulerin ongelma laskinta
 käyttäen.
 
@@ -1429,7 +1428,7 @@ Esimerkiksi Texas Instrumentsin TI-Nspire CX CAS -laskin sisältää
 toiminnon {\tt numtheory$\backslash$primecount(a,b)}, joka antaa
 alkulukujen määrän välillä $[a,b]$.
 
-\item {\em Mersennen alkulukuja} ovat alkuluvut, jotka ovat
+\item \termi{Mersennen alkuluvut}{Mersennen alkulukuja} ovat alkuluvut, jotka ovat
 muotoa $2^p - 1$, missä $p$ on alkuluku.
 \begin{itemize}
 \item[a)] Etsi neljä pienintä Mersennen alkulukua.
@@ -1473,7 +1472,7 @@ Mod[a\^{}p,n]}, esim. {\tt Mod[660\^{}821, 2773]}.
 
 \item * %(Lisämateriaalia.)
 Osoita, että Eulerin $\varphi$-funktio
-on {\em multiplikatiivinen} eli $\varphi(mn) = \varphi(m)
+on \termi{multiplikatiivinen funktio}{multiplikatiivinen} eli $\varphi(mn) = \varphi(m)
 \varphi(n)$, kun $\syt(m,n)=1$.
 
 Vihje: Tutki Eulerin tulokaavaa. Mitä tapahtuu, kun $\syt(m,n)
