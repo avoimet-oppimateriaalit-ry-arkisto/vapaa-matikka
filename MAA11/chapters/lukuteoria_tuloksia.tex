@@ -1273,6 +1273,21 @@ Muotoa $F_n = 2^{2^n}+1$, $n=0,1,2,\ldots$ olevia lukuja sanotaan
 Fermat'n luvut alkulukuja. Ratkaise tämä Eulerin ongelma laskinta
 käyttäen.
 
+\item Fermat'n luvut $F_0, F_1, F_2, F_3, F_4$ ovat alkulukuja. Tämän perusteella Fermat oletti, että loputkin luvut $F_n$, $n=5,6,\ldots$, ovat alkulukuja. Vuonna 1732 Euler kuitenkin havaitsi, että $5^4 + 2^4 = 641$
+ja $1 + 5\cdot 2^7 = 641$ ja onnistui näiden yhtälöiden avulla todistamaan, että $641 | F_5$. Todista tämä tulos.
+
+Vihje: Eulerin havaitsemat yhtälöt voi kirjoittaa muodossa
+\[
+2^4 \equiv -5^4\ (\mod\ 641)\quad\text{ ja }\quad5\cdot 2^7 \equiv -1\ (\mod\ 641).
+\]
+
+\item  Osoita, että kaikilla $n\in\Z_{+}=1,2,3,\ldots$ pätee
+\[
+F_{0}F_{1}\cdot \ldots \cdot F_{n-1} = F_{n} - 2.
+\]
+Esitä tämän yhtälön perusteella uusi todistus sille,
+että alkulukuja on äärettömän monta.
+
 \item Päättele, kuinka monta nollaa on luvun $50!$ lopussa.
 
 \end{enumerate}
@@ -1436,7 +1451,7 @@ $\syt(a,b)\cdot \pyj(a,b)$.
 \item[c)] Miten Eukleideen algoritmia ja saamaasi tulosta voidaan
 hyödyntää pienimmän yhteisen jaettavan määrittämisessä?
 \item[d)] Määritä Eukleideen algoritmin ja saamasi tuloksen
-avulla $\pyj(496125,9450)$.
+avulla\\ $\pyj(496125,9450)$.
 \item[e)] Texas Instrumentsin TI-Nspire CX CAS -laskimesta löytyy
 ohjelma {\tt numtheory$\backslash$gcdstep(a,b)}, joka määrittää
 lukujen $a$ ja $b$ suurimman yhteisen tekijän Eukleideen
