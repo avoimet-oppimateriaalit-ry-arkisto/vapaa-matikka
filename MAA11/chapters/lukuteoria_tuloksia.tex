@@ -1100,12 +1100,8 @@ Lukuja voidaan esittää kahden alkuluvun summana useilla eri tavoilla. Esimerki
 \]
 
 \subsection*{Eulerin $\varphi$-funktio.} 
-Olkoot $n$ ja $k$ positiivisia kokonaislukuja. Funktio $\varphi(n)$ ilmaisee niiden kokonaislukujen $k$ lukumäärän, joille pätee 
-$\syt(n, k) = 1$, kun $1\le k \le n$. Sen laskemisessa voidaan käyttää esimerkiksi \termi{Eulerin tulokaava}{Eulerin tulokaavaa}
-\[
-\varphi(n)=n \prod_{p|n} \bigg(1-\frac{1}{p}\bigg),
-\]
-missä $p$ on alkuluku. Funktiolla $\varphi(n)$ on monia teoreettisia ja käy\-tän\-nöl\-li\-siä sovelluksia, kuten seuraavaksi esiteltävä RSA-algoritmi.
+Olkoot $n$ ja $k$ positiivisia kokonaislukuja. Funktio $\varphi(n)$ ilmaisee niiden kokonaislukujen $k$ lukumäärän, joille pätee  $\syt(n, k) = 1$, kun $1\le k \le n$. Selvästi $\varphi(n)=n-1$, jos ja vain jos $n$ on alkuluku. Hieman vaikeammalla päättelyllä voidaan osoittaa, että $\varphi(n)$ on \termi{Multiplikatiivinen funktio}{multiplikatiivinen funktio} eli $\varphi(mn)=\varphi(m)\varphi(n)$, kun $\syt(m,n)=1$.
+Eulerin $\varphi$-funktion laskemisessa voidaan käyttää esimerkiksi harjoitustehtävissä esiteltävää \termi{Eulerin tulokaava}{Eulerin tulokaavaa}. Funktiolla $\varphi(n)$ on monia teoreettisia ja käy\-tän\-nöl\-li\-siä sovelluksia, kuten seuraavaksi esiteltävä RSA-algoritmi.
 
 \subsection*{RSA-algoritmi} Tällä hetkellä ehkä merkittävin lukuteorian käy\-tän\-nöl\-li\-nen sovellus on niin kutsuttu \termi{julkisen avaimen salakirjoitus}{julkisen avaimen salakirjoitus}. Julkisen avaimen salakirjoituksen esittelivät MIT:n (Massachusetts Institute of Technology) tutkijat Ron Rivest, Adi Shamir ja Leonard Adleman vuonna 1978. Algoritmia kutsutaan sitä koskevan alkuperäisen tutkimusartikkelin kirjoittajien sukunimien alkukirjaimista muodostetulla lyhenteellä RSA. Aihepiiri on edelleen aktiivisen tutkimuksen kohteena, mutta algoritmin teoreettinen perusta on klassisissa lukuteorian tuloksissa. Siksi RSA-algoritmi osoittaa, että puhtaan matematiikan tutkimuksella voi olla uusia yllättäviä ja merkittäviä sovelluksia jopa satoja vuosia tutkimuksen julkaisemisen jälkeenkin.
 
@@ -1470,12 +1466,41 @@ purkamalla viesti.
 Vihje: Voit antaa syötteen Wolfram Alphalle muodossa {\tt
 Mod[a\^{}p,n]}, esim. {\tt Mod[660\^{}821, 2773]}.
 
-\item * %(Lisämateriaalia.)
-Osoita, että Eulerin $\varphi$-funktio
-on \termi{multiplikatiivinen funktio}{multiplikatiivinen} eli $\varphi(mn) = \varphi(m)
-\varphi(n)$, kun $\syt(m,n)=1$.
 
-Vihje: Tutki Eulerin tulokaavaa. Mitä tapahtuu, kun $\syt(m,n)
-=1$?
+\item * %(Lisämateriaalia.)
+Osoita, että Eulerin $\varphi$-funktio on multiplikatiivinen
+eli $\varphi(mn) = \varphi(m) \varphi(n)$, kun $\syt(m,n)=1$.
+\begin{itemize}
+\item[a)] Käyttäen Eulerin tulokaavaa
+\[
+\varphi(n)=n \prod_{p|n} \bigg(1-\frac{1}{p}\bigg),
+\]
+missä $p$ on alkuluku. 
+\item[b)]
+Suoraan $\varphi$-funktion määritelmästä.
+%Vihje: Tutki Eulerin tulokaavaa. Mitä tapahtuu, kun $\syt(m,n) =1$?
+\end{itemize}
+
+\item *  Osoita seuraavat $\varphi$-funktion ominaisuudet:
+\begin{itemize}
+\item[a)]
+Jos $n$ on pariton, niin $\varphi(2n)=\varphi(n)$.
+\item[b)]
+Jos $n$ on parillinen, niin $\varphi(2n)=2\varphi(n)$
+\end{itemize}
+
+\item * Laske $\varphi(1001)$, $\varphi(5040)$ ja $\varphi(36\,000)$.
+
+\item * Osoita, että $\varphi(n)$ on parillinen, kun $n>2$. Vihje: Oleta ensin, että $n$ on muotoa $n=2^k$, $k\ge 2$. 
+
+\item * Osoita edellisen tehtävän tulosta käyttäen, että alkulukuja on äärettömän monta.
+
+\item * Osoita Eulerin tulokaava käyttäen hyväksi  $\varphi$-funktion multiplikatiivisuutta.
+
+
+
+
 
 \end{enumerate}
+
+
