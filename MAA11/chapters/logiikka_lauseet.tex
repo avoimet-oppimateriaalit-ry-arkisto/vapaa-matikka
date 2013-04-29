@@ -31,12 +31,12 @@ Saara (19 v.) on suorittanut ylioppilastutkinnon. Hän kirjoitti mm. pitkän eng
 \bigskip
 
 Yksinkertaisimpia loogisia lauseita kutsutaan \termi{atomilause}{atomilauseiksi}. Atomilauseita käytetään ilmaisemaan asioiden tilaa. Esimeriksi seuraavat lauseet ovat atomilauseita:
-\begin{itemize}
-\item[$A:$] On yö.
-\item[$B:$] Aurinko paistaa.
-\item[$C:$] Pariisi on Italiassa.
-\item[$D:$] Oulu on Suomessa.
-\end{itemize}
+\begin{enumerate}[$A:$]
+\item On yö.
+\item Aurinko paistaa.
+\item Pariisi on Italiassa.
+\item Oulu on Suomessa.
+\end{enumerate}
 Atomilauseita ajatellaan eräänlaisina totuusmuuttujina, jotka voivat saada kaksi arvoa: tosi tai epätosi. Yllä olevista lauseista $C$ on epätosi, $D$ on tosi ja kaksi ensimmäistä voivat olla tosia tai epätosia ajankohdasta riippuen. Tässä kurssissa atomilauseita merkitään isoilla kirjaimilla $A$, $B$, $C$, jne. Todelle ja epätodelle käytetään tietotekniikasta tuttuja merkintöjä $1$ ja $0$.
 
 Loogisia lauseita voidaan myös muodostaa yhdistelemällä atomilauseita \termi{konnektiivi}{konnektiivien} avulla. Konnektiiveja ovat esimerkiksi \termi{ei}{ei}, \termi{ja}{ja}, \termi{tai}{tai} sekä \termi{jos ... niin}{jos ... niin}. Näillä sanoilla on myös arkikielessä merkityksiä, jotka joskus eivät täysin vastaa niiden merkitystä logiikassa. Lausetta, jossa on vähintään yksi konnektiivi, kutsutaan \termi{yhdistetty lause}{yhdistetyksi lauseeksi}. Yhdistetyn lauseen totuusarvoa tutkitaan \termi{totuustaulu}{totuustaulujen} avulla.
@@ -127,20 +127,20 @@ Esimerkiksi hampurilaisateriaan voi valita ranskalaiset perunat tai minisalaatin
 %{\bf Esimerkki 1.}
 \begin{esimerkki}
 Olkoot lauseet $A$: ''on kesä'', $B$: ''käyn töissä'' ja $C$: ''pelaan jalkapalloliigassa''. Suomenna lauseet
-\begin{itemize}
-\item[a)] $\lnot A$, 
-\item[b)] $B\lor C$,
-\item[c)] $\lnot A\land B$,
-\item[d)] $B\lor (A\land C)$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $\lnot A$, 
+\item $B\lor C$,
+\item $\lnot A\land B$,
+\item $B\lor (A\land C)$.
+\end{enumerate}
 
 {\bf Ratkaisu:}
-\begin{itemize}
-\item[a)] Ei ole kesä.
-\item[b)] Käyn töissä tai pelaan jalkapalloliigassa.
-\item[c)] Ei ole kesä ja käyn töissä.
-\item[d)] Käyn töissä, tai sitten on kesä ja pelaan jalkapalloliigassa.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Ei ole kesä.
+\item Käyn töissä tai pelaan jalkapalloliigassa.
+\item Ei ole kesä ja käyn töissä.
+\item Käyn töissä, tai sitten on kesä ja pelaan jalkapalloliigassa.
+\end{enumerate}
 \end{esimerkki}
 
 
@@ -152,22 +152,22 @@ Arkikielen lauseiden kääntäminen logiikan kielelle ei ole aina helppoa ja tul
 \begin{esimerkki}
 %{\bf Esimerkki 2.}  
 Formalisoi lauseet
-\begin{itemize}
-\item[a)] Liisalla ei ole alibia. 
-\item[b)] Liisalla on alibi tai hänellä ei ole motiivia.
-\item[c)] Liisalla on motiivi, mutta hänellä on myös alibi.
-\item[d)] Alibin puuttuessa Liisalla ei ole motiivia. 
-\end{itemize}
+\begin{enumerate}[a)]
+\item Liisalla ei ole alibia. 
+\item Liisalla on alibi tai hänellä ei ole motiivia.
+\item Liisalla on motiivi, mutta hänellä on myös alibi.
+\item Alibin puuttuessa Liisalla ei ole motiivia. 
+\end{enumerate}
 
 {\bf Ratkaisu:}
 Käytetään atomilauseita $A$: ''Liisalla on alibi'' ja $M$: ''Liisalla on motiivi''.	
 Formalisoidut lauseet ovat:
-\begin{itemize}
-\item[a)] $\lnot A$.
-\item[b)] $A \lor \lnot M$.
-\item[c)] $M\land A$.
-\item[d)] Lause voidaan ymmärtää niin, että Liisalla ei ole alibia eikä hänellä myöskään ole motiivia. Silloin sen formalisointi on $\lnot A \land \lnot M$. Toisaalta lause voidaan tulkita niin, että alibin puuttumisesta seuraa se, että Liisalla ei ole motiivia. Tätä lausetta ei ole suoraviivaista formalisoida negaation, konjunktion ja disjunktion avulla. Siihen tarvitaan niiden lisäksi seuraavassa kappaleessa esiteltävä implikaatio. 
-\end{itemize}
+\begin{enumerate}[a)]
+\item $\lnot A$.
+\item $A \lor \lnot M$.
+\item $M\land A$.
+\item Lause voidaan ymmärtää niin, että Liisalla ei ole alibia eikä hänellä myöskään ole motiivia. Silloin sen formalisointi on $\lnot A \land \lnot M$. Toisaalta lause voidaan tulkita niin, että alibin puuttumisesta seuraa se, että Liisalla ei ole motiivia. Tätä lausetta ei ole suoraviivaista formalisoida negaation, konjunktion ja disjunktion avulla. Siihen tarvitaan niiden lisäksi seuraavassa kappaleessa esiteltävä implikaatio. 
+\end{enumerate}
 
 {\bf Vastaus:}
 a) $\lnot A$, b) $A \lor \lnot M$, c) $M\land A$, d) esimerkiksi 
@@ -192,8 +192,8 @@ Formalisoinnin jälkeen lauseen totuusarvoa voidaan tutkia esimerkiksi totuustau
 Laadi totuustaulu lauseelle a) $\lnot(A\land \lnot B)$, b) $(A\land B)\lor \lnot C$.
 
 {\bf Ratkaisu:}
-\begin{itemize}
-\item[a)] Lauseessa $\lnot(A\land \lnot B)$ on kaksi atomilausetta. Totuustauluun merkitään kaikki lauseiden $A$ ja $B$ eri totuusarvojen yhdistelmät. Sen jälkeen kirjoitetaan sarakkeet lauseiden $\lnot B$, $A\land \lnot B$ sekä $\lnot(A\land \lnot B)$  totuusarvoille.
+\begin{enumerate}[a)]
+\item Lauseessa $\lnot(A\land \lnot B)$ on kaksi atomilausetta. Totuustauluun merkitään kaikki lauseiden $A$ ja $B$ eri totuusarvojen yhdistelmät. Sen jälkeen kirjoitetaan sarakkeet lauseiden $\lnot B$, $A\land \lnot B$ sekä $\lnot(A\land \lnot B)$  totuusarvoille.
 \bigskip
 
 \begin{center}
@@ -208,7 +208,7 @@ $0$ & $0$ & $1$       & $0$ & $1$ \\ \hline
 
 \bigskip
 
-\item[b)] Lauseessa $(A\land B)\lor \lnot C$ on kolme atomilausetta. Kaikkia lauseiden $A$, $B$ ja $C$ totuusarvojen yhdistelmiä varten tarvitaan kahdeksan riviä.
+\item Lauseessa $(A\land B)\lor \lnot C$ on kolme atomilausetta. Kaikkia lauseiden $A$, $B$ ja $C$ totuusarvojen yhdistelmiä varten tarvitaan kahdeksan riviä.
 
 \bigskip
 
@@ -226,7 +226,7 @@ $0$ & $0$ & $0$ & $1$ & $0$ & $1$ \\ \hline
 \end{tabular}
 \end{center}
 
-\end{itemize}
+\end{enumerate}
 \end{esimerkki}
 
 \Harjoitustehtavat
@@ -237,14 +237,14 @@ a) Tampere on Pirkanmaalla. b) Kajaani on Suomen pääkaupunki. c) Hattu pois p�
 e) Onko avaruudessa elämää? f) $5 + 12 = 18$.
 
 \item Kirjoita lauseen negaatio.
-\begin{itemize}
-\item[a)] Tänään on maanantai.
-\item[b)] $2+3=5$.
-\item[c)] Luku on negatiivinen.
-\item[d)] Ainakin yhdellä ryhmämme opiskelijalla on ruskeat silmät.
-\item[e)] Kymmenessä sivussa tekstiä on vähintään seitsemän virhettä.
-\item[f)] Kesä Välimerellä on kuuma ja aurinkoinen.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Tänään on maanantai.
+\item $2+3=5$.
+\item Luku on negatiivinen.
+\item Ainakin yhdellä ryhmämme opiskelijalla on ruskeat silmät.
+\item Kymmenessä sivussa tekstiä on vähintään seitsemän virhettä.
+\item Kesä Välimerellä on kuuma ja aurinkoinen.
+\end{enumerate}
 
 \item Olkoot lause $A$: ''veikkasin lottorivin'' ja lause $B$: ''voitin miljoona euroa''. Kirjoita suomen kielellä lauseet
 a) $\lnot A$, b) $A\lor B$, c) $A\land B$, d) $A\land \lnot B$,  
@@ -262,39 +262,39 @@ d) $(A\land C)\lor (B\land
 lunta''. Formalisoi seuraavat lauseet eli kirjoita ne
 lauseiden $A$ ja $B$ sekä konnektiivien $\lnot$, $\land$
 ja $\lor$ avulla.
-\begin{itemize}
-\item[a)] On pilvistä ja sataa lunta.
-\item[b)] On pilvistä, mutta ei sada lunta.
-\item[c)] Ei ole pilvistä eikä sada lunta.
-\item[d)] On pilvistä tai sataa lunta.
-\item[e)] On pilvistä ja sataa lunta tai ei ole pilvistä
+\begin{enumerate}[a)]
+\item On pilvistä ja sataa lunta.
+\item On pilvistä, mutta ei sada lunta.
+\item Ei ole pilvistä eikä sada lunta.
+\item On pilvistä tai sataa lunta.
+\item On pilvistä ja sataa lunta tai ei ole pilvistä
 eikä sada lunta.
-\end{itemize}
+\end{enumerate}
 
 \item Formalisoi lauseet:
-\begin{itemize}
-\item[a)] Mustikat polun varrella ovat kypsiä tai
+\begin{enumerate}[a)]
+\item Mustikat polun varrella ovat kypsiä tai
 alueella ei ole nähty karhuja.
-\item[b)] Ei ole totta, että mustikat polun varrella ovat
+\item Ei ole totta, että mustikat polun varrella ovat
 kypsiä tai alueella on nähty karhuja.
-\item[c)] Mustikat polun varrella ovat kypsiä, mutta
+\item Mustikat polun varrella ovat kypsiä, mutta
 alueella ei ole nähty karhuja, tai sitten mustikat eivät
 ole kypsiä ja alueella on nähty karhuja.
-\item[d)] Karhuja ei ole nähty alueella ja polulla
+\item Karhuja ei ole nähty alueella ja polulla
 vaeltaminen on turvallista, mutta mustikat ovat kypsiä.
-\end{itemize}
+\end{enumerate}
 
 \item
-\begin{itemize}
-\item[a)] Laadi totuustaulu lauseelle $\lnot A\lor \lnot
+\begin{enumerate}[a)]
+\item Laadi totuustaulu lauseelle $\lnot A\lor \lnot
 B$. Millä atomilauseiden $A$ ja $B$ totuusarvoilla lause
 on tosi?
-\item[b)] Laadi totuustaulu lauseelle $\lnot(A\land B)$.
+\item Laadi totuustaulu lauseelle $\lnot(A\land B)$.
 Millä atomilauseiden $A$ ja $B$ totuusarvoilla lause on
 tosi? Vertaa a-kohdan tulokseen.
-\item[c)] Keksi atomilauseet $A$ ja $B$ ja ilmaise a- ja
+\item Keksi atomilauseet $A$ ja $B$ ja ilmaise a- ja
 b-kohtien lauseet suomen kielellä.
-\end{itemize}
+\end{enumerate}
 
 \item Laadi totuustaulu lauseelle $(A\land B)\lor \lnot (B\lor C)$.
 
@@ -448,49 +448,49 @@ vastaava looginen piiri.
 \begin{enumerate}
 
 \item  Kirjoita lauseen negaatio.
-\begin{itemize}
-\item[a)] $100 > 101$.
-\item[b)] Lompakossani on rahaa korkeintaan 10 euroa.
-\item[c)] Kaikki ryhmämme opiskelijat ovat Facebookissa.
-\item[d)] Koulussamme on täsmälleen kaksi vasenkätistä opettajaa.
-\item[e)] En opiskele latinaa enkä kreikkaa.
-\item[f)] Maarit pitää lumilautailusta tai käsitöistä muttei molemmista.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $100 > 101$.
+\item Lompakossani on rahaa korkeintaan 10 euroa.
+\item Kaikki ryhmämme opiskelijat ovat Facebookissa.
+\item Koulussamme on täsmälleen kaksi vasenkätistä opettajaa.
+\item En opiskele latinaa enkä kreikkaa.
+\item Maarit pitää lumilautailusta tai käsitöistä muttei molemmista.
+\end{enumerate}
 
 \item Olkoot lauseet $A$: ''puutarhan portti on auki'', $B$: ''ruusut kukkivat'' ja $C$: ''menen puutarhaan''. Kirjoita suomen kielellä lauseet a) $\lnot A$,  b)  $B\land C$,  c)  $A\lor B$,
 d) $\lnot B \land \lnot C$,  e)  $\lnot(A\land B)$  f)  $A \lor \lnot B$,   g)  $(A \land C) \lor (\lnot B \land C)$. 
 
 \item Formalisoi lause.
-\begin{itemize}
-\item[a)] Kaino ei ole vanha ja Kaino on mies.
-\item[b)] Kaino on vanha tai Kaino ei ole mies.
-\item[c)] Kaino ei ole vanha mies. 
-\item[d)] Kaino ei ole vanha eikä hän ole mies.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Kaino ei ole vanha ja Kaino on mies.
+\item Kaino on vanha tai Kaino ei ole mies.
+\item Kaino ei ole vanha mies. 
+\item Kaino ei ole vanha eikä hän ole mies.
+\end{enumerate}
 
 \item Formalisoi lause.
-\begin{itemize}
-\item[a)] Amadeus kuuntelee klassista tai Klaus kuuntelee jazzia.
-\item[b)] Amadeus ei kuuntele klassista, mutta Klaus kuuntelee jazzia.
-\item[c)] Amadeus kuuntelee klassista, mutta Klaus ei kuuntele jazzia, tai sitten Hassinen kuuntelee progea.
-\item[d)] Ei ole niin, että Amadeus kuuntelisi klassista, Klaus jazzia ja Hassinen progea.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Amadeus kuuntelee klassista tai Klaus kuuntelee jazzia.
+\item Amadeus ei kuuntele klassista, mutta Klaus kuuntelee jazzia.
+\item Amadeus kuuntelee klassista, mutta Klaus ei kuuntele jazzia, tai sitten Hassinen kuuntelee progea.
+\item Ei ole niin, että Amadeus kuuntelisi klassista, Klaus jazzia ja Hassinen progea.
+\end{enumerate}
 
 \item 
-\begin{itemize}
-\item[a)] Laadi totuustaulu lauseille $A\land \lnot A$ ja $A\lor \lnot A$.
-\item[b)] Keksi atomilause $A$ ja ilmaise kohdan a) lauseet suomen kielellä.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Laadi totuustaulu lauseille $A\land \lnot A$ ja $A\lor \lnot A$.
+\item Keksi atomilause $A$ ja ilmaise kohdan a) lauseet suomen kielellä.
+\end{enumerate}
 
 \item
 Laadi totuustaulu lauseille a) $\lnot(A\lor B)$,  b)  $\lnot A\land B$,  c) $ (\lnot A\lor B)\land (A\lor \lnot B)$. Millä atomilauseiden $A$ ja  $B$ totuusarvojen yhdistelmillä lauseet ovat tosia?
 
 \item
-\begin{itemize}
-\item[a)] Laadi totuustaulu lauseelle $A\lor (B\land C)$.  
-\item[b)] Laadi totuustaulu lauseelle $(A\lor B)\land C$. 
-\item[c)] Vertaa kohtien a) ja b) lauseiden totuusarvoja. Mitä voit päätellä?
-\end{itemize}
+\begin{enumerate}[a)]
+\item Laadi totuustaulu lauseelle $A\lor (B\land C)$.  
+\item Laadi totuustaulu lauseelle $(A\lor B)\land C$. 
+\item Vertaa kohtien a) ja b) lauseiden totuusarvoja. Mitä voit päätellä?
+\end{enumerate}
 
 \item Olkoot lauseet $A$: ''$x\in [-3,1]$'' ja $B$: ''$ x \in [-1,5]$''. Formalisoi lause.
 a) $x\in [-3,5]$, b) $x\in [-1,1]$,   c)  $x\in [-3,-1[$  d)  $x\in ]-\infty,-3[$  tai $x\in ]1,\infty[$, 
@@ -499,10 +499,10 @@ e) $x\in]-\infty,-3[$  tai $x\in ]5,\infty[$.
 \item Kolme koiranpentua, Alli, Buh ja Caesar ovat epäiltyinä isännän tohvelin repimisestä. Luotettava henkilö, joka puhuu aina totta, antaa seuraavan todistuksen: ''Ei ole totta, että Alli on syyllinen tai Buh ei ole syyllinen. Mutta kuitenkin Alli on syyllinen tai Caesar on syyllinen.'' Käytä atomilauseita $A$: ''Alli on syyllinen'', $B$: ''Buh on syyllinen'' ja $C$: ''Caesar on syyllinen'' ja formalisoi luotettavan henkilön lausunto. Muodosta sille totuustaulu ja päättele, mikä tai mitkä koiranpennuista ovat syyllisiä. 
 
 \item Tutkitaan lausetta ''Suomen kuningas ei ole viiksekäs''. Lause voidaan tulkita ainakin kahdella eri tavalla:
-\begin{itemize}
-\item[a)] Suomella on kuningas, joka ei ole viiksekäs.
-\item[b)] Ei ole niin, että olisi olemassa Suomen viiksekästä kuningasta.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Suomella on kuningas, joka ei ole viiksekäs.
+\item Ei ole niin, että olisi olemassa Suomen viiksekästä kuningasta.
+\end{enumerate}
 Oletetaan, että Suomessa ei ole kuningasta. Onko lause tosi vai epätosi?
 
 \item
@@ -591,8 +591,8 @@ Formalisoi lause. Missä tilanteissa lause on tosi? a) On kesä, ja jos on kesä
 {\bf Ratkaisu:}
 Käytetään atomilauseita $A$: ''on kesä'',
 $B$: ''järvivesi on lämmintä'' ja $C$: ''uin''.
-\begin{itemize}
-\item[a)] Lause on $A \land (A \to B)$. Muodostetaan
+\begin{enumerate}[a)]
+\item Lause on $A \land (A \to B)$. Muodostetaan
 lauseen totuustaulu.
 
 \bigskip
@@ -611,7 +611,7 @@ $0$ & $0$ & $1$ & $0$\\ \hline
 
 Lause on tosi täsmälleen silloin, kun $A$ ja $B$ ovat
 molemmat tosia eli kun on kesä ja järvivesi on lämmintä.
-\item[b)] Lause on $C \lequiv (A \land B)$. Muodostetaan
+\item Lause on $C \lequiv (A \land B)$. Muodostetaan
 lauseen totuustaulu.
 
 \bigskip
@@ -641,7 +641,7 @@ seuraavia tilanteita: on kesä, järvivesi on lämmintä ja
 uin; on kesä, järvivesi ei ole lämmintä enkä ui; ei ole
 kesä, järvivesi on lämmintä, mutta en ui; ei ole kesä,
 järvivesi ei ole lämmintä enkä ui.
-\end{itemize}
+\end{enumerate}
 
 {\bf Vastaus: } a) Lause on tosi, kun on kesä ja järvivesi on lämmintä.
 
@@ -704,8 +704,8 @@ Mikä on lauseiden a) $B \lequiv \lnot A\lor B \land A \to B$, ja  b)  $(B\lequi
 
 {\bf Ratkaisu:}
 
-%\begin{itemize}
-%\item[a)]
+%\begin{enumerate}[a)]
+%\item
 
 a) Muodostetaan totuustaulu:
 
@@ -718,7 +718,7 @@ $1$ & $0$ & $0$ & $0$ & $0$ & $1$ & $0$\\ \hline
 
 Ensin suoritetaan negaatio. Sen jälkeen tulevat konjunktio ja disjunktio. Implikaatio 	suoritetaan ennen ekvivalenssia. 	Kun $A$ on tosi ja $B$ epätosi, lause on epätosi.
 
-%\item[b)]
+%\item
 
 b) Muodostetaan totuustaulu:
 
@@ -766,57 +766,57 @@ Lisää loogisia konnektiiveja esitellään harjoitustehtävissä.
 \begin{enumerate}
 \item Olkoot $A$: ''Matti on insinööri'' ja $B$: ''Matilla on hyvä työpaikka''.
 Suomenna lause.
-\begin{itemize}
-\item[a)] $A\land B$,
-\item[b)] $\lnot A \lor B$,
-\item[c)] $A\to B$,
-\item[d)] $\lnot B\to A$,
-\item[e)] $\lnot( B \to A )$.
-\item[f)] $ B \lequiv A$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $A\land B$,
+\item $\lnot A \lor B$,
+\item $A\to B$,
+\item $\lnot B\to A$,
+\item $\lnot( B \to A )$.
+\item $ B \lequiv A$.
+\end{enumerate}
 
 \item Olkoot $A$: ''Liisa on lomalla'' ja $B$: ''Liisa on iloinen''. Formalisoi lauseet:
-\begin{itemize}
-\item[a)] Jos Liisa on lomalla, hän on iloinen.
-\item[b)] Liisa on lomalla, mutta hän ei ole iloinen.
-\item[c)] Liisa on iloinen silloin ja vain silloin, kun hän on lomalla.
-\item[d)] Jos Liisa ei ole iloinen, hän ei ole lomalla.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Jos Liisa on lomalla, hän on iloinen.
+\item Liisa on lomalla, mutta hän ei ole iloinen.
+\item Liisa on iloinen silloin ja vain silloin, kun hän on lomalla.
+\item Jos Liisa ei ole iloinen, hän ei ole lomalla.
+\end{enumerate}
 
 \item Onko lause tosi?
-\begin{itemize}
-\item[a)] Jos Tallinna on Norjan pääkaupunki, niin Tukholma on Ruotsin pääkaupunki.
-\item[b)] Jos Tallinna on Norjan pääkaupunki, niin Budapest on Ruotsin pääkaupunki.
-\item[c)] Jos Leonardo da Vinci on kuollut, niin Aleksis Kivi on saksalainen ralliautoilija.
-\item[d)] Jos Leonardo da Vinci on kuollut, niin Leo Tolstoi on venäläinen kirjailija.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Jos Tallinna on Norjan pääkaupunki, niin Tukholma on Ruotsin pääkaupunki.
+\item Jos Tallinna on Norjan pääkaupunki, niin Budapest on Ruotsin pääkaupunki.
+\item Jos Leonardo da Vinci on kuollut, niin Aleksis Kivi on saksalainen ralliautoilija.
+\item Jos Leonardo da Vinci on kuollut, niin Leo Tolstoi on venäläinen kirjailija.
+\end{enumerate}
 
 \item Laadi lauseen totuustaulu.
-\begin{itemize}
-\item[a)] $\lnot A \to B$
-\item[b)] $A\lequiv \lnot B$
-\item[c)] $\lnot( A\land B )\to A$
-\end{itemize}
+\begin{enumerate}[a)]
+\item $\lnot A \to B$
+\item $A\lequiv \lnot B$
+\item $\lnot( A\land B )\to A$
+\end{enumerate}
 
 \item Laadi lauseen totuustaulu.
-\begin{itemize}
-\item[a)] $\lnot A \lor B \to C \land A$
-\item[b)] $( A\to B ) \lequiv (C\to B)$
-\end{itemize}
+\begin{enumerate}[a)]
+\item $\lnot A \lor B \to C \land A$
+\item $( A\to B ) \lequiv (C\to B)$
+\end{enumerate}
 
 \item Formalisoi lause. Missä tilanteissa lause on tosi?
-\begin{itemize}
-\item[a)]
+\begin{enumerate}[a)]
+\item
 Jos mustikat polun varrella eivät ole kypsiä, niin polulla vaeltaminen on turvallista.
-\item[b)] Jos mustikat polun varrella ovat kypsiä, niin silloin polulla vaeltaminen on turvallista, jos ja vain jos karhuja ei ole nähty alueella. 
-\item[c)] Polulla vaeltaminen on turvallista silloin ja vain silloin, kun mustikat eivät ole kypsiä tai alueella ei ole nähty karhuja.
-\end{itemize}
+\item Jos mustikat polun varrella ovat kypsiä, niin silloin polulla vaeltaminen on turvallista, jos ja vain jos karhuja ei ole nähty alueella. 
+\item Polulla vaeltaminen on turvallista silloin ja vain silloin, kun mustikat eivät ole kypsiä tai alueella ei ole nähty karhuja.
+\end{enumerate}
 
 \item Formalisoi lause ja laadi lauseen totuustaulu. Mitä huomaat? Kertooko lause mitään siitä, onko logiikan opiskelu oikeasti hauskaa juuri tällä hetkellä? 
-\begin{itemize}
-\item[a)] Jos sataa ja ei sada, niin logiikan opiskelu on hauskaa.
-\item[b)] Jos sataa ja ei sada, niin logiikan opiskelu ei ole hauskaa.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Jos sataa ja ei sada, niin logiikan opiskelu on hauskaa.
+\item Jos sataa ja ei sada, niin logiikan opiskelu ei ole hauskaa.
+\end{enumerate}
 
 \item Perheen lapsia Annaa ja Markusta epäillään kaappiin piilotetun suklaalevyn katoamisesta. Luotettava todistaja kertoo tiedot:
 Anna on syyllinen tai Markus on syyllinen.
@@ -834,10 +834,10 @@ Esitä sanoin lause $A \to B \lor C$. Onko lauseen tulkinta $A \to (B \lor C)$ v
 
 \item
 Vertaa lauseiden totuusarvoja atomilauseiden $A$, $B$ ja $C$ eri totuusarvoilla. Onko sulkeiden muuttamisella vaikutusta lauseen totuusarvoon?
-\begin{itemize}
-\item[a)] $(A\to B)\to C$ ja $A\to (B\to C)$.
-\item[b)] $(A\land B)\land C$ ja $A\land (B\land C)$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $(A\to B)\to C$ ja $A\to (B\to C)$.
+\item $(A\land B)\land C$ ja $A\land (B\land C)$.
+\end{enumerate}
 
 \item (Lisämateriaalia)  Tietokoneet käsittelevät tietoa käyttäen bittejä. Bitillä on kaksi mahdollista arvoa, $0$ ja $1$.
 Bittijono on jono, jossa on yksi tai useampia bittejä. Esimerkiksi $1001\, 0010$ on bittijono, jonka pituus on $8$ bittiä. Samanpituisille bittijonoille määritellään bittikohtaiset tai, ja sekä poissulkeva tai (or, and sekä xor). Esimerkiksi bittijonojen $1100$ ja $1010$ bittikohtainen tai on jono $1110$, bittikohtainen ja on jono $1000$ sekä bittikohtainen poissulkeva tai on jono $0110$. Muodosta a) bittikohtainen tai  b) bittikohtainen ja c) bittikohtainen poissulkeva tai jonoille $1111\, 0000$ ja $1010\, 1010$.
@@ -852,46 +852,46 @@ Bittijono on jono, jossa on yksi tai useampia bittejä. Esimerkiksi $1001\, 0010
 
 \item
 Olkoot $A$: ''Timo opiskelee matematiikkaa'', $B$: ''Timo osallistuu logiikan kurssille'' ja $C$: ''Timo opiskelee filosofiaa''. Suomenna lause.
-\begin{itemize}
-\item[a)] $\lnot A \to \lnot B$.
-\item[b)] $A\lequiv B$.
-\item[c)] $A\lor C \to B$.
-\item[d)] $C\lequiv (B\to \lnot A)$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $\lnot A \to \lnot B$.
+\item $A\lequiv B$.
+\item $A\lor C \to B$.
+\item $C\lequiv (B\to \lnot A)$.
+\end{enumerate}
 
 \item Onko lause tosi?
-\begin{itemize}
-\item[a)] Jos $(-2)^3= -8$, niin $(-2)^3= -8$.
-\item[b)] Jos $(-2)^3= -8$, niin $(-2)^3=  8$.
-\item[c)] Jos luku $8$ on pariton, niin luku $8$ on pariton.
-\item[d)] Jos luku $8$ on pariton, niin luku $8$ on parillinen.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Jos $(-2)^3= -8$, niin $(-2)^3= -8$.
+\item Jos $(-2)^3= -8$, niin $(-2)^3=  8$.
+\item Jos luku $8$ on pariton, niin luku $8$ on pariton.
+\item Jos luku $8$ on pariton, niin luku $8$ on parillinen.
+\end{enumerate}
 
 \item
 Formalisoi lause.
-\begin{itemize}
-\item[a)] Jos opettaja on pirteä, niin televisiosta ei ole tullut illalla jalkapalloa.
-\item[b)] Suomi voittaa jalkapallon maailmanmestaruuden silloin ja vain silloin, kun lehmät lentävät ja vaaleanpunaiset norsut kävelevät kadulla.
-\item[c)] En seuraa jalkapalloa eikä Suomen maajoukkue menesty. 
-\item[d)] Jos ottelu ei pääty tasapeliin, niin joko kotijoukkue tai vierasjoukkue voittaa pelin.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Jos opettaja on pirteä, niin televisiosta ei ole tullut illalla jalkapalloa.
+\item Suomi voittaa jalkapallon maailmanmestaruuden silloin ja vain silloin, kun lehmät lentävät ja vaaleanpunaiset norsut kävelevät kadulla.
+\item En seuraa jalkapalloa eikä Suomen maajoukkue menesty. 
+\item Jos ottelu ei pääty tasapeliin, niin joko kotijoukkue tai vierasjoukkue voittaa pelin.
+\end{enumerate}
 
 \item Laadi lauseen totuustaulu.
-\begin{itemize}
-\item[a)] $A\land B\to \lnot B$
-\item[b)] $(A\lequiv B)\land B\to C\lor A$
-\item[c)] $(\lnot A\to B)\lequiv (C\to B\land A)$
-\end{itemize}
+\begin{enumerate}[a)]
+\item $A\land B\to \lnot B$
+\item $(A\lequiv B)\land B\to C\lor A$
+\item $(\lnot A\to B)\lequiv (C\to B\land A)$
+\end{enumerate}
 
 
 \item
 Olkoot $A$: ''Timo opiskelee matematiikkaa'', $B$: ''Timo osallistuu logiikan kurssille'' ja $C$: ''Timo opiskelee filosofiaa''. Formalisoi lause. Missä tilanteissa lause on tosi?
-\begin{itemize}
-\item[a)] Timo opiskelee matematiikkaa ja filosofiaa.
-\item[b)] Jos Timo opiskelee matematiikkaa, hän osallistuu logiikan kurssille.
-\item[c)] Timo osallistuu logiikan kurssille silloin ja vain silloin, kun hän opiskelee filosofiaa tai matematiikkaa.
-\item[d)] Jos Timo osallistuu logiikan kurssille, opiskelee hän joko matematiikka tai filosofiaa, muttei molempia.
-\end{itemize}
+\begin{enumerate}[a)]
+\item Timo opiskelee matematiikkaa ja filosofiaa.
+\item Jos Timo opiskelee matematiikkaa, hän osallistuu logiikan kurssille.
+\item Timo osallistuu logiikan kurssille silloin ja vain silloin, kun hän opiskelee filosofiaa tai matematiikkaa.
+\item Jos Timo osallistuu logiikan kurssille, opiskelee hän joko matematiikka tai filosofiaa, muttei molempia.
+\end{enumerate}
 
 \bigskip
 
@@ -924,31 +924,31 @@ Henkilö saa työpaikan matkamuistomyymälässä silloin ja vain silloin, kun h�
 \item
 Vertaa lauseiden totuusarvoja atomilauseiden $A$, $B$ ja $C$ eri totuusarvoilla. Onko sulkeiden muuttamisella vaikutusta lauseen totuusarvoon?
 
-\begin{itemize}
+\begin{enumerate}[a)]
 
-\item[a)] $(A\lor B)\lor C$ ja $A\lor (B\lor C)$.
+\item $(A\lor B)\lor C$ ja $A\lor (B\lor C)$.
 
-\item[b)] $(A\lequiv B)\lequiv C$ ja $A\lequiv (B\lequiv C)$.
+\item $(A\lequiv B)\lequiv C$ ja $A\lequiv (B\lequiv C)$.
 
-\item[c)] $\lnot A \lequiv (B \land C)$ ja $\lnot (A \lequiv B) \land C$.
+\item $\lnot A \lequiv (B \land C)$ ja $\lnot (A \lequiv B) \land C$.
 
-\end{itemize}
+\end{enumerate}
 
 %\item Muodosta
-%\begin{itemize}
-%\item[a)] lauseen $A$ ja lauseen $B$ negaation konjunktio,
-%\item[b)] lauseiden $A$ ja $B$ disjunktion negaatio,
-%\item[c)] lauseen $A$ negaation ekvivalenssi lauseiden $B$ ja $C$ konjunktion kanssa.
-%\end{itemize}
+%\begin{enumerate}[a)]
+%\item lauseen $A$ ja lauseen $B$ negaation konjunktio,
+%\item lauseiden $A$ ja $B$ disjunktion negaatio,
+%\item lauseen $A$ negaation ekvivalenssi lauseiden $B$ ja $C$ konjunktion kanssa.
+%\end{enumerate}
 
 \item
 Olkoon $v$ sellainen funktio, että $v(A) = 1$, jos lause $A$ on tosi, ja $v(A) = 0$, jos lause $A$ on epätosi. Osoita, että yhtälö pätee kaikilla lauseiden $A$ ja $B$ totuusarvojen yhdistelmillä.
 
-\begin{itemize}
-\item[a)] $v(A\land B)=v(A)v(B)$,
-\item[b)] $v(A\lor B)=v(A)+v(B)- v(A)v(B)$,
-\item[c)] $v(A\to B)=1-v(A)(1-v(B))$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $v(A\land B)=v(A)v(B)$,
+\item $v(A\lor B)=v(A)+v(B)- v(A)v(B)$,
+\item $v(A\to B)=1-v(A)(1-v(B))$.
+\end{enumerate}
 
 \item
 Peircen nuoli on konnektiivi, joka luonnollisessa kielessä tarkoittaa samaa kuin ''ei $A$ eikä $B$''. Shefferin viiva on konnektiivi, joka luonnollisessa kielessä tarkoittaa samaa kuin ''ei molemmat $A$ ja $B$''. Laadi näiden konnektiivien totuustaulut. 
@@ -963,8 +963,8 @@ Seuraavaksi tarkastellaan eräitä usein esiintyviä loogisia rakenteita. Tälla
 \subsection*{Tutkimustehtävä}
 Turisti tapasi kaksi saarelaista, Hipsun ja Vipsun. Hän kyseli heiltä, kuinka hyvin kala syö, ja sai seuraavat vastaukset.
 \begin{enumerate}
-\item[a)] On pilvistä, tai sitten jos kala ei syö, niin ei ole pilvistä.
-\item[b)] On pilvistä tai kala syö, mutta ei ole pilvistä eikä kala syö.
+\item On pilvistä, tai sitten jos kala ei syö, niin ei ole pilvistä.
+\item On pilvistä tai kala syö, mutta ei ole pilvistä eikä kala syö.
 \end{enumerate}
 Formalisoi lauseet käyttäen atomilauseita $P$: ''on pilvistä'' ja $K$: ''kala syö''. Tutki totuustaulun avulla, milloin väitteet ovat tosia. Mitä huomaat?
 
@@ -1197,18 +1197,18 @@ Lauseet $\lnot C\to A \lor B$ ja $\lnot A \land \lnot B \to C$ ovat loogisesti e
 
 \begin{enumerate}
 \item Tutki, onko lause tautologia.
-\begin{itemize}
-\item[a)] $A\lor \lnot A$,
-\item[b)] $A \land \lnot A$,
-\item[c)] $A \to B \lor A$,
-\item[d)] $A \to B \land A$,
-\end{itemize}
+\begin{enumerate}[a)]
+\item $A\lor \lnot A$,
+\item $A \land \lnot A$,
+\item $A \to B \lor A$,
+\item $A \to B \land A$,
+\end{enumerate}
 
 \item Osoita lause tautologiaksi.
-\begin{itemize}
-\item[a)] $A\to B\land \lnot B \lequiv \lnot A$.
-\item[b)] $(A\to B) \land (B\to C)\to (A\to C)$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $A\to B\land \lnot B \lequiv \lnot A$.
+\item $(A\to B) \land (B\to C)\to (A\to C)$.
+\end{enumerate}
 
 \item Olkoot $A$: ''kello soi'' ja $B$: ''tunti loppuu''.
 Kirjoita luonnollisella kielellä lauseet $A\to B$ ja
@@ -1216,24 +1216,24 @@ $\lnot(A \land \lnot B )$. Tarkoittavatko ne samaa?
 
 \item Osoita lauseet loogisesti ekvivalenteiksi
 totuustaulujen avulla.
-\begin{itemize}
-\item[a)] $A\land B$ ja $\lnot(\lnot A\lor \lnot B )$.
-\item[b)] $A\lequiv B$ ja $(A\to B)\land (B \to A)$.
-\item[c)] $A\lequiv B$ ja $(A\land B) \lor (\lnot A\land
+\begin{enumerate}[a)]
+\item $A\land B$ ja $\lnot(\lnot A\lor \lnot B )$.
+\item $A\lequiv B$ ja $(A\to B)\land (B \to A)$.
+\item $A\lequiv B$ ja $(A\land B) \lor (\lnot A\land
 \lnot B )$.
-\end{itemize}
+\end{enumerate}
 
 \item Osoita vaihdantalait
-\begin{itemize}
-\item[a)]
+\begin{enumerate}[a)]
+\item
 \[
 A \land B \lequiv B \land A,
 \]
-\item[b)]
+\item
 \[
 A \lor B \lequiv B \lor A
 \]
-\end{itemize}
+\end{enumerate}
 oikeaksi totuustaulujen avulla.
 
 \item Muodosta atomilauseista $A$ ja $B$ lause, joka on
@@ -1249,11 +1249,11 @@ $0$ & $0$ & $1$\\ \hline
 \end{center}
 
 \item Tutki, onko lause loogisesti ristiriitainen.
-\begin{itemize}
-\item[a)] $\lnot (A \lor B) \land \lnot (A\land B)$,
-\item[b)] $(\lnot A \land B) \land (A \lequiv B)$,
-\item[c)] $(\lnot (A \to B) \land C) \land B$.
-\end{itemize}
+\begin{enumerate}[a)]
+\item $\lnot (A \lor B) \land \lnot (A\land B)$,
+\item $(\lnot A \land B) \land (A \lequiv B)$,
+\item $(\lnot (A \to B) \land C) \land B$.
+\end{enumerate}
 
 \item Tulkitse sanallisesti a)
 De Morganin 2. laki
@@ -1272,11 +1272,11 @@ reductio ad absurdum -päättelysääntö.
 \]
 
 \item Osoita
-\begin{itemize}
-\item[a)] kaksoisnegaation laki,
-\item[b)] De Morganin 1. laki,
-\item[c)] modus ponens -päättelysääntö
-\end{itemize}
+\begin{enumerate}[a)]
+\item kaksoisnegaation laki,
+\item De Morganin 1. laki,
+\item modus ponens -päättelysääntö
+\end{enumerate}
 oikeaksi totuustaulujen avulla.
 
 \item Osoita kontraposition laki oikeaksi ilman
@@ -1290,13 +1290,13 @@ loogisesti ekvivalenttia lausetta.
 
 \item Osoita lauseet loogisesti ekvivalenteiksi
 päättelysääntöjen avulla ilman totuustauluja.
-\begin{itemize}
-\item[a)] $A\land B$ ja $\lnot(\lnot A \lor \lnot B)$,
-\item[b)] $C\to (\lnot A \land B)$ ja $(A\lor \lnot B)\to
+\begin{enumerate}[a)]
+\item $A\land B$ ja $\lnot(\lnot A \lor \lnot B)$,
+\item $C\to (\lnot A \land B)$ ja $(A\lor \lnot B)\to
 \lnot C$.
-\item[c)] $A \land (A\to \lnot B)\to \lnot B$ ja $B\to
+\item $A \land (A\to \lnot B)\to \lnot B$ ja $B\to
 \lnot A\lor \lnot (B\to \lnot A)$.
-\end{itemize}
+\end{enumerate}
 
 \item (Lisämateriaalia) Kolmiarvologiikassa on kolme totuusarvoa $1$
 tosi, $0$ epätosi ja $u$ epävarma. Kleenen totuustaulut
@@ -1352,19 +1352,19 @@ $u$ & $u$ & \\ \hline
 \begin{enumerate}
 
 \item Osoita lause tautologiaksi.
-\begin{itemize}
-\item[a)] $A\to A$.
-\item[b)] $A\land B \to A$.
-\item[c)] $(A\lequiv B) \to (B\to A)$.
+\begin{enumerate}[a)]
+\item $A\to A$.
+\item $A\land B \to A$.
+\item $(A\lequiv B) \to (B\to A)$.
 
-\end{itemize}
+\end{enumerate}
 
 \item Tutki, onko lause tautologia.
-\begin{itemize}
-\item[a)] $(A\land B \to \lnot C)\lequiv (A\to(B\to C))$.
-\item[b)] $(\lnot A \lequiv (B \land C)) \lequiv \lnot (A
+\begin{enumerate}[a)]
+\item $(A\land B \to \lnot C)\lequiv (A\to(B\to C))$.
+\item $(\lnot A \lequiv (B \land C)) \lequiv \lnot (A
 \lequiv B \land C)$.
-\end{itemize}
+\end{enumerate}
 
 \item Olkoot $A$: ''tunti jatkuu'' ja $B$: ''kello soi''.
 Kirjoita luonnollisella kielellä lauseet $A\to \lnot B$
@@ -1372,36 +1372,36 @@ ja $B\to \lnot A$. Osoita totuustaulujen avulla, että
 lauseet ovat loogisesti ekvivalentit.
 
 \item Osoita, että lauseet ovat loogisesti ekvivalentit.
-\begin{itemize}
-\item[a)] ''Tero soittaa kitaraa, mutta Suvi ei
+\begin{enumerate}[a)]
+\item ''Tero soittaa kitaraa, mutta Suvi ei
 laskettele'' ja ''ei ole niin, että jos Tero soittaa
 kitaraa, niin Suvi laskettelee''.
-\item[b)] ''Jos Tero soittaa kitaraa tai Suvi laskettelee,
+\item ''Jos Tero soittaa kitaraa tai Suvi laskettelee,
 niin Anni kirjoittaa runoja'' ja ''jos Tero soittaa
 kitaraa, niin Anni kirjoittaa runoja, ja jos Suvi
 laskettelee, niin Anni kirjoittaa runoja''.
-\end{itemize}
+\end{enumerate}
 
 \item Sievennä lause eli muodosta mahdollisimman
 yksinkertainen lause, joka on loogisesti ekvivalentti
 alkuperäisen lauseen kanssa.
-\begin{itemize}
-\item[a)] $(A\land B) \lor A$.
-\item[b)] $(A\lor B) \land A$.
-\item[c)] $(A\lor B) \land (A\lor \lnot B)$
-\end{itemize}
+\begin{enumerate}[a)]
+\item $(A\land B) \lor A$.
+\item $(A\lor B) \land A$.
+\item $(A\lor B) \land (A\lor \lnot B)$
+\end{enumerate}
 
 \item Osoita osittelulait
-\begin{itemize}
-\item[a)]
+\begin{enumerate}[a)]
+\item
 \[
 A \land (B \lor C) \lequiv (A \land B) \lor (A\land C),
 \]
-\item[b)]
+\item
 \[
 A \lor (B \land C) \lequiv (A \lor B) \land (A\lor C)
 \]
-\end{itemize}
+\end{enumerate}
 oikeaksi totuustaulujen avulla.
 
 \item Muodosta atomilauseista $A$ ja $B$ lause, joka on
@@ -1421,28 +1421,28 @@ $0$ & $0$ & $1$\\ \hline
 öljyvarat ehtyvät, niin länsimaiset demokratiat romahtavat. Miten ennusteeseen pitäisi suhtautua?
 
 \item Mainitse esimerkki tilanteesta, jossa olet käyttänyt
-\begin{itemize}
-\item[a)] modus ponens -päättelysääntöä
-\item[b)] modus tollens -päättelysääntöä.
-\end{itemize}
+\begin{enumerate}[a)]
+\item modus ponens -päättelysääntöä
+\item modus tollens -päättelysääntöä.
+\end{enumerate}
 
 \item Osoita
-\begin{itemize}
-\item[a)] De Morganin 2. laki,
-\item[b)] modus tollens -päättelysääntö,
-\item[c)] reductio ad absurdum -päättelysääntö
-\end{itemize}
+\begin{enumerate}[a)]
+\item De Morganin 2. laki,
+\item modus tollens -päättelysääntö,
+\item reductio ad absurdum -päättelysääntö
+\end{enumerate}
 oikeaksi totuustaulujen avulla.
 
 \item Osoita lauseet loogisesti ekvivalenteiksi
 päättelysääntöjen avulla ilman totuustauluja.
-\begin{itemize}
-\item[a)] $\lnot \lnot \lnot \lnot \lnot A$ ja $\lnot A$,
-\item[b)] $A \to (B \to C)$ ja $\lnot (\lnot C \to \lnot
+\begin{enumerate}[a)]
+\item $\lnot \lnot \lnot \lnot \lnot A$ ja $\lnot A$,
+\item $A \to (B \to C)$ ja $\lnot (\lnot C \to \lnot
 B) \to \lnot A$.
-\item[c)] $\lnot (A \land B \land \lnot C)$ ja $\lnot A
+\item $\lnot (A \land B \land \lnot C)$ ja $\lnot A
 \lor \lnot B \lor C$.
-\end{itemize}
+\end{enumerate}
 
 \item Shefferin viivaan ja Peircen nuoleen on tutustuttu
 edellisen kappaleen kotitehtävässä 12. Esitä negaatio,
@@ -1467,18 +1467,18 @@ A\to B
 missä $\min$ tarkoittaa luvuista pienempää ja $\max$
 suurempaa.
 
-\begin{itemize}
-\item[a)] Olkoot lauseen $A$ totuusarvo $0,3$ ja lauseen
+\begin{enumerate}[a)]
+\item Olkoot lauseen $A$ totuusarvo $0,3$ ja lauseen
 $B$ totuusarvo $0,5$. Laske lauseiden $\lnot A$, $A\land
 B$, $A\lor B$ ja $A \to B$ totuusarvot.
-\item[b)] Osoita, että jos lauseet $A$ ja $B$ saavat
+\item Osoita, että jos lauseet $A$ ja $B$ saavat
 vain arvoja $0$ ja $1$, niin edellä mainitut määritelmät johtavat
 klassisen kaksiarvoisen logiikan totuustauluihin.
-\item[c)] Osoita, että sumean logiikassa $\lnot(A\land B)
+\item Osoita, että sumean logiikassa $\lnot(A\land B)
 \lequiv \lnot A \lor \lnot B$.
-\item[d)] Etsi Internetistä sumean logiikan
+\item Etsi Internetistä sumean logiikan
 käyttökohteita.
-\end{itemize}
+\end{enumerate}
 
 \item * %(Lisämateriaalia?) 
 Tutustu Wolfram Alphan
