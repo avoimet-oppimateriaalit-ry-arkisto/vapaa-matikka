@@ -37,7 +37,7 @@ Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Positiivista kokonaislukua $d$ sa
 \item Luku $d$ on lukujen $a$ ja $b$ tekijä, eli $d| a$ ja $d | b$. 
 \item Luku $d$ on suurin lukujen $a$ ja $b$ tekijöistä.
 \end{enumerate}
-Lukujen $a$ ja $b$ suurinta yhteistä tekijää merkitään $\syt(a,b)$ tai joskus $\gcd(a,b)$. Lyhenne gcd tulee englanninkielisestä ilmaisusta \termi{greatest common divisor}{greatest common divisor}.
+Lukujen $a$ ja $b$ suurinta yhteistä tekijää merkitään $\syt(a, b)$ tai joskus $\gcd(a, b)$. Lyhenne gcd tulee englanninkielisestä ilmaisusta \termi{greatest common divisor}{greatest common divisor}.
 %---
 \end{minipage}
 }
@@ -69,7 +69,7 @@ Oletetaan, että $c$ on jokin lukujen $b$ ja $r$ yhteinen tekijä. Koska $a=qb+r
 
 \laatikko{
 \begin{minipage}{12cm}
-{\bf Seuraus.} Jos $a$ ja $b$ ovat positiivisia kokonaislukija ja $a=qb+r$, missä $q$ sekä $r$ ovat kokonaislukija ja $0<r<b$, niin $\syt(a,b)=\syt(b,r)$.
+{\bf Seuraus.} Jos $a$ ja $b$ ovat positiivisia kokonaislukija ja $a=qb+r$, missä $q$ sekä $r$ ovat kokonaislukija ja $0<r<b$, niin $\syt(a, b)=\syt(b, r)$.
 \end{minipage}
 }
 
@@ -85,7 +85,7 @@ Eukleideen algoritmin idea on seuraava: Lähdetään liikkeelle kahdesta positii
 a=q_1b + r_1, \qquad 0 \le r_1 < b.
 \]
 
-Jos jakojäännös $r_1=0$, niin $b|a$ ja $\syt(a,b)=b$. Jos $r_1\neq 0$, jaetaan $b$ luvulla $r_1$, jolloin saadaan esitys
+Jos jakojäännös $r_1=0$, niin $b|a$ ja $\syt(a, b)=b$. Jos $r_1\neq 0$, jaetaan $b$ luvulla $r_1$, jolloin saadaan esitys
 \[
 b= q_2r_1+r_2, \qquad 0 \le r_2 < r_1,
 \]
@@ -131,7 +131,7 @@ tulos kuin esimerkissä 1.
 
 \begin{esimerkki}
 %{\bf Esimerkki 3.}
-Määritä $\syt(16515,3951)$ Eukleideen
+Määritä $\syt(16515, 3951)$ Eukleideen
 algoritmia käyttäen.
 
 {\bf Ratkaisu:}
@@ -160,7 +160,7 @@ Eukleideen algoritmi johtaa yhtälöihin:
 Suurin yhteinen tekijä on viimeinen nollasta eroava
 jakojäännös, siis tässä tapauksessa $9$. Siten
 \[
-\syt(16515,3951) = 9.
+\syt(16515, 3951) = 9.
 \]
 
 {\bf Vastaus:} $\syt(16515, 3951) = 9$.
@@ -183,14 +183,14 @@ jakojäännös, siis tässä tapauksessa $9$. Siten
 
 \item Määritä Eukleideen algoritmia käyttäen
 \begin{enumerate}[a)]
-\item $\syt(184,152)$
-\item $\syt(227,143)$.
+\item $\syt(184, 152)$
+\item $\syt(227, 143)$.
 \end{enumerate}
 
 \item Määritä Eukleideen algoritmia käyttäen
 \begin{enumerate}[a)]
-\item $\syt(272,1479)$
-\item $\syt(4719,18207)$.
+\item $\syt(272, 1479)$
+\item $\syt(4719, 18207)$.
 \end{enumerate}
 
 \item Esitä murtoluku  a) $\frac{143}{605}$  b) $\frac{5989}{30899}$  supistetussa muodossa. Vihje: Määritä osoittajan ja nimittäjän suurin yhteinen tekijä.
@@ -204,20 +204,20 @@ Määritä lukujen $188\, 000\, 100$ ja $188$ suurin yhteinen tekijä.
 
 \item Olkoon $a$ positiivinen kokonaisluku. Määritä
 \begin{enumerate}[a)]
-\item $\syt(a,a)$
-\item $\syt(a,1)$
-\item $\syt(a^2,a)$
-\item $\syt((a+1)!,a!)$.
+\item $\syt(a, a)$
+\item $\syt(a, 1)$
+\item $\syt(a^2, a)$
+\item $\syt((a+1)!, a!)$.
 \end{enumerate}
 Merkintä $a!$ tarkoittaa luvun $a$ \termi{kertoma}{kertomaa}. Se on tulo $a! = a \cdot (a-1) \cdot (a-2) \cdot \ldots \cdot 3 \cdot 2 \cdot 1$.
 
-\item Olkoon $n$ positiivinen kokonaisluku. Osoita Eukleideen algoritmia käyttäen, että $\syt(n+1,n)=1$.
+\item Olkoon $n$ positiivinen kokonaisluku. Osoita Eukleideen algoritmia käyttäen, että $\syt(n+1, n)=1$.
 
 \item Olkoon $n$ positiivinen kokonaisluku. Määritä lukujen $n^2 + 2n$ ja $n + 1$ suurin yhteinen tekijä.
 
 \item Olkoon $n$ positiivinen kokonaisluku. Osoita, että
 \[
-\syt(3^{n+1} + 10,3^n + 2)=1.
+\syt(3^{n+1} + 10, 3^n + 2)=1.
 \]
 
 \end{enumerate}
@@ -239,9 +239,9 @@ Merkintä $a!$ tarkoittaa luvun $a$ \termi{kertoma}{kertomaa}. Se on tulo $a! = 
 
 \item Määritä Eukleideen algoritmia käyttäen
 \begin{enumerate}[a)]
-\item $\syt(657,306)$
-\item $\syt(2197,4641)$
-\item $\syt(15787,4111)$.
+\item $\syt(657, 306)$
+\item $\syt(2197, 4641)$
+\item $\syt(15787, 4111)$.
 \end{enumerate}
 
 \item
@@ -251,20 +251,20 @@ Esitä murtoluku  a) $\frac{182}{299}$  b) $\frac{7697}{32041}$  supistetussa mu
 
 \item Määritä lukujen $468\, 468\, 468\, 108$ ja $234$ suurin yhteinen tekijä.
 
-\item Olkoot $a$, $b$ ja $c$ positiivisia kokonaislukuja. Lukujen $a$, $b$ ja $c$ suurin yhteinen tekijä eli $\syt(a,b,c)$ voidaan määrittää siten, että ensin määritetään kahden luvun suurin yhteinen tekijä ja sitten tämän ja kolmannen luvun suurin yhteinen tekijä. Määritä
+\item Olkoot $a$, $b$ ja $c$ positiivisia kokonaislukuja. Lukujen $a$, $b$ ja $c$ suurin yhteinen tekijä eli $\syt(a, b, c)$ voidaan määrittää siten, että ensin määritetään kahden luvun suurin yhteinen tekijä ja sitten tämän ja kolmannen luvun suurin yhteinen tekijä. Määritä
 \begin{enumerate}[a)]
-\item $\syt(15,30,40)$
-\item $\syt(6,9,11)$
-\item $\syt(171,456,665)$.
+\item $\syt(15, 30, 40)$
+\item $\syt(6, 9, 11)$
+\item $\syt(171, 456, 665)$.
 \end{enumerate}
 
-\item Olkoot $a$ ja $b$ positiivisia kokonaislukuja ja $\syt(a,b)=9$. Voiko tällöin yhtälö $a + b = 186$ olla tosi?
+\item Olkoot $a$ ja $b$ positiivisia kokonaislukuja ja $\syt(a, b)=9$. Voiko tällöin yhtälö $a + b = 186$ olla tosi?
 
-\item Olkoon $n$ positiivinen kokonaisluku. Tutki, mitä arvoja $\syt(n+4,n)$ voi saada.
+\item Olkoon $n$ positiivinen kokonaisluku. Tutki, mitä arvoja $\syt(n+4, n)$ voi saada.
 
 \item Olkoon $n$ positiivinen kokonaisluku. Määritä lukujen $n^2 + 3n$ ja $n + 2$ suurin yhteinen tekijä.
 
-\item Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Osoita, että $\syt(a,b)$ on jaollinen kaikilla lukujen $a$ ja $b$ yhteisillä tekijöillä.
+\item Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Osoita, että $\syt(a, b)$ on jaollinen kaikilla lukujen $a$ ja $b$ yhteisillä tekijöillä.
 
 \end{enumerate}
 
@@ -294,7 +294,7 @@ josta Diofantoksen elinvuodet voidaan ratkaista. Ratkaisu on $x=84$.
 \[
 ax + by = c
 \]
-olevia yhtälöitä, missä $x$ ja $y$ ovat kokonaislukuja. Yhtälössä esiintyvät vakiot $a,b$ ja $c$ ovat myös kokonaislukuja ja ainakin toinen luvuista $a,b$ on nollasta poikkeava. 
+olevia yhtälöitä, missä $x$ ja $y$ ovat kokonaislukuja. Yhtälössä esiintyvät vakiot $a$, $b$ ja $c$ ovat myös kokonaislukuja ja ainakin toinen luvuista $a$, $b$ on nollasta poikkeava. 
 Tässä kurssissa käsitellään vain kyseistä muotoa olevia yhtälöitä, mutta nykyään matematiikassa sanotaan Diofantoksen yhtälöiksi myös muita yhtälöitä, joissa ratkaistavana on yksi tai useampi kokonaisluku. Diofantos ei itse tutkinut tällaisia yhtälöitä.
 
 Diofantoksen yhtälöllä voi olla useita ratkaisuja tai ei yhtään ratkaisua. Esimerkiksi
@@ -309,9 +309,9 @@ voidaan löytää ainakin seuraavat ratkaisut:
 Toisaalta esimerkiksi yhtälöllä $2x+10 y =17$ ei ole ratkaisua.
 
 Ratkaisujen etsimisessä on hyötyä tiedosta, että jos on annettu positiiviset kokonaisluvut $a$ ja $b$, niin on aina olemassa kokonaisluvut $x$ ja $y$ siten, että
-%positiivisille kokonaisluvuille $a,b$ on aina olemassa kokonaisluvut $x$ ja $y$, joille
+%positiivisille kokonaisluvuille $a, b$ on aina olemassa kokonaisluvut $x$ ja $y$, joille
 \[
-\syt(a,b) = ax + by.
+\syt(a, b) = ax + by.
 \]
 Käytännössä kertoimien etsiminen ei ole vaikeaa, sillä siinä voidaan käyttää hyväksi Eukleideen algoritmia.
 % Tästä esitysmuodosta ja Eukleideen algoritmista hyötyä Diofantoksen yhtälöiden ratkaisemisessa.
@@ -319,7 +319,7 @@ Käytännössä kertoimien etsiminen ei ole vaikeaa, sillä siinä voidaan käyt
 \begin{esimerkki}
 %{\bf Esimerkki 1.}
 Ratkaise Diofantoksen yhtälö
-$\syt(84,30) = 84x + 30y$.
+$\syt(84, 30) = 84x + 30y$.
 
 {\bf Ratkaisu:} Lukujen $84$ ja $30$ suurin yhteinen tekijä
 ratkaistiin edellisen kappaleen esimerkissä 2. Eukleideen
@@ -329,7 +329,7 @@ algoritmi johti yhtälöihin
 30 &=& 1 \cdot 24 + 6,\\
 24 &=& 4 \cdot 6,
 \end{eqnarray*}
-joten $\syt(84,30) = 6$. Ratkaistavana on siis yhtälö $6
+joten $\syt(84, 30) = 6$. Ratkaistavana on siis yhtälö $6
 = 84x + 30y$.
 
 Pyritään nyt ilmaisemaan luku 6 lukujen 84 ja 30 avulla.
@@ -359,7 +359,7 @@ Diofantoksen yhtälöitä voidaan usein ratkaista esimerkiksi tietokoneella, mut
 \[
 a x + b y = c
 \]
-on ratkaisu, jos ja vain jos $d|c$, kun $d=\syt(a,b)$.
+on ratkaisu, jos ja vain jos $d|c$, kun $d=\syt(a, b)$.
 }
 
 \begin{todistus}
@@ -370,7 +370,7 @@ Osoitetaan aluksi epäsuoraa todistusta käyttämällä, että ratkaisun olemass
 
 On vielä osoitettava ekvivalenssiväitteen toinen suunta: Jos $d|c$, niin kyseisellä Diofantoksen yhtälöllä on ratkaisu. Jos $d|c$, niin $c=dt$ jollakin kokonaisluvulla $t$. Aikaisemmin todettiin, että lukujen $a$ ja $b$ suurin yhteinen tekijä voidaan kirjoittaa muodossa
 \[
-d=\syt(a,b)=a x_1 + b y_1
+d=\syt(a, b)=a x_1 + b y_1
 \]
 joillekin luvuille $x_1$ ja $y_1$. Koska
 \[
@@ -388,7 +388,7 @@ a x + b y = c
 \]
 on ratkeava Diofantoksen yhtälö, sen yksi ratkaisu on $x=tx_1$ ja $y=ty_1$, missä kertoimet $x_1$ ja $y_1$ määräytyvät yhtälöstä
 \[
-d=\syt(a,b)=a x_1 + b y_1 \textrm{ ja } t=c/d.
+d=\syt(a, b)=a x_1 + b y_1 \textrm{ ja } t=c/d.
 \]
 \end{minipage}
 }
@@ -398,7 +398,7 @@ Edellisen lauseen nojalla Diofantoksen yhtälöllä
 \[
 d= a x + b y,
 \]
-missä $d=\syt(a,b)$, on ratkaisu. Merkitään jotakin kyseisen yhtälön ratkaisua $x_1,y_1$.
+missä $d=\syt(a, b)$, on ratkaisu. Merkitään jotakin kyseisen yhtälön ratkaisua $x_1, y_1$.
 
 On osoitettava, että tämän ratkaisun avulla voidaan löytää haluttua muotoa oleva ratkaisu alkuperäiselle yhtälölle
 \[
@@ -419,7 +419,7 @@ Tämä osoittaa, että $x=tx_1$ ja $y=ty_1$ on alkuperäisen Diofantoksen yhtäl
 
 Itse asiassa jos $x_0$ ja $y_0$ ovat yhtälön $ax + by = c$ jokin ratkaisu, niin sen kaikki ratkaisut saadaan kaavoista
 \[
-x= x_0 + n\frac{b}{d}, \textrm{ ja } y=y_0 - n\frac{a}{d}, \textrm{ missä } \qquad n\in\Z \textrm{ ja } d=\syt(a,b).
+x= x_0 + n\frac{b}{d}, \textrm{ ja } y=y_0 - n\frac{a}{d}, \textrm{ missä } \qquad n\in\Z \textrm{ ja } d=\syt(a, b).
 \]
 Erityisesti siis jokaisella ratkeavalla Diofantoksen yhtälöllä on äärettömän monta ratkaisua. Ratkaisussa esiintyvät kertoimet saattavat kuitenkin olla negatiivisia lukuja.
 
@@ -431,7 +431,7 @@ Määritä Diofantoksen yhtälön
 \]
 jokin ratkaisu.
 
-{\bf Ratkaisu:} Tutkitaan ensin, onko Diofantoksen yhtälöllä $172x + 20y = 1000$ ratkaisua. Määritetään $\syt(172,20)$ Eukleideen algoritmia käyttäen:
+{\bf Ratkaisu:} Tutkitaan ensin, onko Diofantoksen yhtälöllä $172x + 20y = 1000$ ratkaisua. Määritetään $\syt(172, 20)$ Eukleideen algoritmia käyttäen:
 \[
 172 = 8 \cdot 20 +12,
 \]
@@ -444,7 +444,7 @@ jokin ratkaisu.
 \[
 8=2\cdot 4.
 \]
-Siten $\syt(172,20)=4$. Koska $4|1000$, Diofantoksen yhtälöllä on ratkaisu.
+Siten $\syt(172, 20)=4$. Koska $4|1000$, Diofantoksen yhtälöllä on ratkaisu.
 
 Ratkaisun löytämiseksi täytyy esittää luku $4$ lukujen $172$ ja $20$ avulla muodossa 
 \[
@@ -481,7 +481,7 @@ kaavoista
 x=x_0+n\frac{b}{d}\textrm{ ja }y=y_0-n\frac{a}{d},
 \]
 missä $x_0$ ja $y_0$ ovat yhtälön jokin ratkaisu,
-$d=\syt(a,b)$ ja $n$ on mikä tahansa
+$d=\syt(a, b)$ ja $n$ on mikä tahansa
 kokonaisluku. Diofantoksen yhtälössä $172x+20y=1000$ on
 $a=172$, $b=20$, ja edellisen
 esimerkin nojalla $x_0=500$, $y_0=-4250$ ja $d=4$.
@@ -563,7 +563,7 @@ tee niistä sekoitus, joka maksaa $6$ markkaa pullolta.
 Kuinka monta pulloa kutakin viinilajia on otettava?
 
 {\bf Ratkaisu:} Merkitään tarvittavien pullojen määrää
-$a,b,c$ ja $d$. Ongelma johtaa kahteen Diofantoksen
+$a, b, c$ ja $d$. Ongelma johtaa kahteen Diofantoksen
 yhtälöön,
 \[
 a+b+c+d = 10
@@ -573,10 +573,10 @@ ja
 3a+5b+8c+10d = 60.
 \]
 Selvästi tehtävän ratkaisut ovat kokonaislukuja välillä
-$0,\ldots,10$. Tehtävä ei ole aikaisemmin esitettyä
+$0, \ldots, 10$. Tehtävä ei ole aikaisemmin esitettyä
 muotoa. Siitä kuitenkin saadaan sellainen, jos oletetaan,
 että käytetään vain kahta eri viiniä. Toisin sanoen,
-asetetaan kaksi kertoimista $a,b,c,d$ nollaksi.
+asetetaan kaksi kertoimista $a, b, c, d$ nollaksi.
 
 Kahden ensimmäisen viinin hinta on tavoitehintaa
 alhaisempi ja kahden jälkimmäisen vastaavasti
@@ -588,7 +588,7 @@ saadaan
 \[
 5b + 10d = 60.
 \]
-Koska $\syt(5,10)=5$ ja $5|60$, ratkaisu on olemassa.
+Koska $\syt(5, 10)=5$ ja $5|60$, ratkaisu on olemassa.
 Esitetään aluksi luku $5$ lukujen $10$ ja $5$ avulla:
 \[
 5 = -1 \cdot 5 + 1\cdot 10.
@@ -644,8 +644,8 @@ Ei ole tiedossa, miten Kexlerus itse ratkaisi ongelmansa.
 
 \item Määritä Diofantoksen yhtälön jokin ratkaisu.
 \begin{enumerate}[a)]
-\item $14x + 49y = \syt(14,49)$
-\item $56x + 72y = \syt(56,72)$
+\item $14x + 49y = \syt(14, 49)$
+\item $56x + 72y = \syt(56, 72)$
 \end{enumerate}
 
 \item Määritä Diofantoksen yhtälön jokin ratkaisu.
@@ -679,7 +679,7 @@ pisteitä, joiden molemmat koordinaatit ovat kokonaislukuja.
 
 \item Ruhtinas jakoi $63$ yhtä suurta kekoa hedelmiä sekä $7$ erillistä hedelmää tasan $23$ matkalaiselle. Kuinka monta hedelmää kussakin keossa oli? Vihje: Tutki yhtälöä $63x + 7 = 23y$. (Mahavira, v. 850)
 
-\item Olkoot $a$, $b$, $c$ ja $d$ positiivisia kokonaislukuja. Osoita, että yhtälöllä $ax+by+cz=d$ on kokonaislukuratkaisu, jos ja vain jos luku $d$ on jaollinen lukujen $a,b$ ja $c$ suurimmalla yhteisellä tekijällä. 
+\item Olkoot $a$, $b$, $c$ ja $d$ positiivisia kokonaislukuja. Osoita, että yhtälöllä $ax+by+cz=d$ on kokonaislukuratkaisu, jos ja vain jos luku $d$ on jaollinen lukujen $a, b$ ja $c$ suurimmalla yhteisellä tekijällä. 
 
 \end{enumerate}
 
@@ -699,8 +699,8 @@ pisteitä, joiden molemmat koordinaatit ovat kokonaislukuja.
 
 \item Määritä Diofantoksen yhtälön jokin ratkaisu.
 \begin{enumerate}[a)]
-\item $59x + 12y = \syt(59,12)$
-\item $119x + 272y = \syt(119,272)$
+\item $59x + 12y = \syt(59, 12)$
+\item $119x + 272y = \syt(119, 272)$
 \end{enumerate}
 
 \item Määritä Diofantoksen yhtälön jokin ratkaisu.
@@ -795,7 +795,7 @@ nähdään myös siitä, että luvun $357$ numeroiden summa $3 + 5 + 7
 
 Alkulukuja voidaan etsiä helpommin esimerkiksi yksinkertaisella algoritmilla, joka tunnetaan \termi{Eratostheneen seula}{Eratostheneen seulana}. Eratosthenes oli kreikkalainen matemaatikko, filosofi, runoilija, tähtitieteilijä ja historioitsija. Bysanttilaisten historioitsijoiden mukaan hän syntyi vuonna 276 eaa. nykyisessä Libyassa ja kuoli 81-vuotiaana vuonna 195 eaa. Eratosthenes vaikutti tuon ajan sivistyksen keskuksessa Aleksandriassa. Hänen kuuluisin keksintönsä lienee menetelmä maapallon ympärysmitan laskemiseksi. %Itse hän kuvaili itseään viisauden ystäväksi.
 
-Algoritmin idea on seuraava. Halutaan löytää alkuluvut välillä $2,\ldots,n$.
+Algoritmin idea on seuraava. Halutaan löytää alkuluvut välillä $2, \ldots, n$.
 \begin{enumerate}
 \item Tehdään aluksi lista tutkittavista luvuista. 
 \item Listan ensimmäinen luku $2$ on alkuluku. Aluksi poistetaan listasta kaikki lukua $2$ suuremmat luvut, jotka ovat jaollisia luvulla $2$.
@@ -815,7 +815,7 @@ Eratostheneen seula on käyttö\-kelpoinen etsittäessä suhteellisen pieniä al
 
 \begin{esimerkki}
 %{\bf Esimerkki 2.}
-Etsi Eratostheneen seulaa käyttäen alkuluvut välillä $2,\ldots,60$.
+Etsi Eratostheneen seulaa käyttäen alkuluvut välillä $2, \ldots, 60$.
 
 {\bf Ratkaisu:} Tehdään aluksi lista tutkittavista luvuista.
 
@@ -847,7 +847,7 @@ Lukuteorian keskeisimpiä tuloksia on aritmetiikan peruslause, jonka todistuksen
 \[
 n= p_1^{m_1} \cdot p_2^{m_2} \cdot \ldots \cdot p_k^{m_k},
 \]
-missä $p_1,\ldots,p_k$ ovat luvun $n$ alkutekijät ja $m_1,\ldots,m_k$ ovat positiivisia kokonaislukuja.
+missä $p_1, \ldots, p_k$ ovat luvun $n$ alkutekijät ja $m_1, \ldots, m_k$ ovat positiivisia kokonaislukuja.
 
 Esitystä kutsutaan luvun $n$ \termi{alkutekijähajotelma}{alkutekijähajotelmaksi}. Esimerkiksi luvun $750$ alkutekijähajotelma on $2\cdot 3\cdot 5^3$.
 \end{minipage}
@@ -864,7 +864,7 @@ Aritmetiikan peruslauseen todistuksessa tarvitaan seuraavaa aputulosta.
 \begin{todistus}
 {\it Eukleideen lemma:} Oletetaan, että $p\nmid a$. Osoitettavaksi jää, että $p|b$.
 
-Koska $p$ on alkuluku ja $p \nmid a$, pätee $\syt(p,a)=1$. Aikaisemmin osoitettiin, että tällöin on olemassa kokonaisluvut $x,y$ siten, että
+Koska $p$ on alkuluku ja $p \nmid a$, pätee $\syt(p, a)=1$. Aikaisemmin osoitettiin, että tällöin on olemassa kokonaisluvut $x, y$ siten, että
 \[
 ax+py = 1.
 \]
@@ -878,9 +878,9 @@ Oletuksen nojalla $p|n$ eli $p|(ab)$. Nyt $p$ jakaa molemmat yhtälön vasemmall
 {\it Aritmetiikan peruslauseen todistus:}
 Aloitetaan osoittamalla \\ ristiriita-argumentilla, että tällainen hajotelma on aina olemassa.
 
-Tehdään vastaoletus, että $n$ on pienin sellainen luku, jolla kyseistä hajotelmaa ei ole. Koska luvulla $n$ ei ole alkutekijähajotelmaa, $n$ ei voi olla alkuluku. Siten $n=a\cdot b$ joillakin kokonaisluvuilla $a,b> 1$.
+Tehdään vastaoletus, että $n$ on pienin sellainen luku, jolla kyseistä hajotelmaa ei ole. Koska luvulla $n$ ei ole alkutekijähajotelmaa, $n$ ei voi olla alkuluku. Siten $n=a\cdot b$ joillakin kokonaisluvuilla $a, b> 1$.
 
-Nyt kuitenkin $a,b<n$, ja siten luvuilla $a$ ja $b$ on kummallakin alkutekijähajotelmat, koska $n$ oli oletuksen mukaan pienin luku, jolla kyseistä hajotelmaa ei ole. Tämä on ristiriita, joten jokaisella kokonaisluvulla $n>1$ on alkutekijähajotelma.
+Nyt kuitenkin $a, b<n$, ja siten luvuilla $a$ ja $b$ on kummallakin alkutekijähajotelmat, koska $n$ oli oletuksen mukaan pienin luku, jolla kyseistä hajotelmaa ei ole. Tämä on ristiriita, joten jokaisella kokonaisluvulla $n>1$ on alkutekijähajotelma.
 
 Osoitetaan vielä, että hajotelma on yksikäsitteinen. Tämä seuraa Eukleideen lemmasta seuraavalla päättelyllä. Oletetaan, että $n$ on alkuluku, jolla on kaksi eri esitystä alkutekijähajotelmana:
 \[
@@ -967,22 +967,22 @@ Lukuteorian kuuluisimpia tuloksia on seuraava lause, jonka todisti ensimmäisen�
 
 \begin{todistus}
 Tehdään vastaoletus, että alkulukuja olisi äärellisen monta. Olkoot listassa
-$p_1,p_2,p_3,\ldots,p_n$ kaikki alkuluvut. Tarkastellaan lukua
+$p_1, p_2, p_3, \ldots, p_n$ kaikki alkuluvut. Tarkastellaan lukua
 \[
 m = p_1\cdot p_2\cdot p_3 \cdots p_{n-1}\cdot p_n.
 \]
 Merkitään $q=m+1$.
 
-Nyt joko $q$ on alkuluku tai $q$ ei ole alkuluku. Mikäli $q$ on alkuluku, on päädytty ristiriitaan, koska luku $q$ ei ollut listassa $p_1,p_2,p_3,\ldots,p_n$, jonka piti sisältää kaikki alkuluvut.
+Nyt joko $q$ on alkuluku tai $q$ ei ole alkuluku. Mikäli $q$ on alkuluku, on päädytty ristiriitaan, koska luku $q$ ei ollut listassa $p_1, p_2, p_3, \ldots, p_n$, jonka piti sisältää kaikki alkuluvut.
 
 Voidaan siis olettaa, että $q$ ei ole alkuluku. Tällöin on olemassa jokin alkuluku $p$ siten, että $1<p<q$ ja $p|q$. Toisaalta $p|m$, koska $m$ on kaikkien alkulukujen tulo. Edelleen, koska $p|q$ ja $p|m$, täytyy päteä $p|(q-m)$ eli $p|(m+1-m)$. Siten $p|1$, mikä on ristiriita. Alkulukuja on siis äärettömän monta.
 \end{todistus}
 
 
 \subsection*{Pienin yhteinen jaettava}
-Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Lukujen $a$ ja $b$ \termi{pienin yhteinen jaettava}{pienin yhteinen jaettava} $\pyj(a,b)$ on pienin positiivinen kokonaisluku, joka on jaollinen molemmilla luvuista $a$ ja $b$. Esimerkiksi luvulla $12$ jaollisia lukuja ovat $12, 24, 36, 48, 60, 72, 84, 96, 108, 120, \ldots$ ja luvulla $15$ jaollisia lukuja ovat $15, 30, 45, 60, 75, 90, 105, 120, \ldots$. Huomataan, että luku $60$ on pienin positiivinen kokonaisluku, joka on jaollinen sekä luvulla $12$ että luvulla $15$. Siten $\pyj(12, 15) = 60$.
+Olkoot $a$ ja $b$ positiivisia kokonaislukuja. Lukujen $a$ ja $b$ \termi{pienin yhteinen jaettava}{pienin yhteinen jaettava} $\pyj(a, b)$ on pienin positiivinen kokonaisluku, joka on jaollinen molemmilla luvuista $a$ ja $b$. Esimerkiksi luvulla $12$ jaollisia lukuja ovat $12, 24, 36, 48, 60, 72, 84, 96, 108, 120, \ldots$ ja luvulla $15$ jaollisia lukuja ovat $15, 30, 45, 60, 75, 90, 105, 120, \ldots$. Huomataan, että luku $60$ on pienin positiivinen kokonaisluku, joka on jaollinen sekä luvulla $12$ että luvulla $15$. Siten $\pyj(12, 15) = 60$.
 
-Lukujen $a$ ja $b$ pienintä yhteistä jaettavaa kutsutaan toisinaan \termi{pienin yhteinen monikerta}{pienimmäksi yhteiseksi monikerraksi}, jota merkitään $\pym(a,b)$. Voidaan käyttää myös merkintää $\mathrm{lcm}(a,b)$, joka tulee englanninkielisistä sanoista \termi{least common multiple}{least common multiple}.
+Lukujen $a$ ja $b$ pienintä yhteistä jaettavaa kutsutaan toisinaan \termi{pienin yhteinen monikerta}{pienimmäksi yhteiseksi monikerraksi}, jota merkitään $\pym(a, b)$. Voidaan käyttää myös merkintää $\mathrm{lcm}(a, b)$, joka tulee englanninkielisistä sanoista \termi{least common multiple}{least common multiple}.
 
 Lukujen $a$ ja $b$ suurin yhteinen tekijä sekä pienin yhteinen jaettava voidaan määrittää lukujen alkutekijähajotelmien avulla. Suurimman yhteisen tekijän alkutekijöitä ovat kaikki lukujen $a$ ja $b$ yhteiset alkutekijät. Kunkin yhteisen alkutekijän eksponentiksi valitaan lukujen $a$ ja $b$ alkutekijähajotelmissa esiintyvistä eksponenteista pienempi. Vastaavasti pienimmän yhteisen jaettavan alkutekijöitä ovat kaikki ne alkuluvut, jotka ovat luvun $a$ tai luvun $b$ tekijöitä. Kunkin alkutekijän eksponentiksi valitaan lukujen $a$ ja $b$ alkutekijähajotelmissa esiintyvistä eksponenteista suurempi.
 
@@ -1017,18 +1017,18 @@ saadaan
 
 \laatikko{
 \begin{minipage}{12cm}
-{\bf Lause.} Olkoot $a$ ja $b$ positiivisia kokonaislukuja ja $\syt(a,b)=1$. Jos $c$ on sellainen luku, että $a|c$ ja $b|c$, niin $(ab) | c$.
+{\bf Lause.} Olkoot $a$ ja $b$ positiivisia kokonaislukuja ja $\syt(a, b)=1$. Jos $c$ on sellainen luku, että $a|c$ ja $b|c$, niin $(ab) | c$.
 \end{minipage}
 }
 
 \begin{todistus}
-Tutkitaan aluksi tapausta, että $a$ ja $b$ ovat alkulukuja. Koska $\syt(a,b)=1$, välttämättä $a\neq b$.
+Tutkitaan aluksi tapausta, että $a$ ja $b$ ovat alkulukuja. Koska $\syt(a, b)=1$, välttämättä $a\neq b$.
 
 Kirjoitetaan luvulle $c$ alkutekijähajotelma
 \[
 c=  p_1^{m_1} \cdot p_2^{m_2} \cdot \ldots \cdot p_k^{m_k}.
 \]
-Koska $a|c$ ja $b|c$, seuraa alkutekijähajotelman yksikäsitteisyydestä sekä Eukleideen lemmasta, että $a=p_i$ ja $b=p_j$ jollakin indekseillä $i,j$. Nyt $p_i\neq p_j$, koska $a\neq b$, ja siten luku $ab=p_ip_j$ jakaa luvun $c$.
+Koska $a|c$ ja $b|c$, seuraa alkutekijähajotelman yksikäsitteisyydestä sekä Eukleideen lemmasta, että $a=p_i$ ja $b=p_j$ jollakin indekseillä $i, j$. Nyt $p_i\neq p_j$, koska $a\neq b$, ja siten luku $ab=p_ip_j$ jakaa luvun $c$.
 
 Todistetaan lopuksi yleinen tapaus. Kirjoitetaan luvuille $a$ ja $b$ alkutekijähajotelmat
 \[
@@ -1038,7 +1038,7 @@ ja
 \[
 b=r_1^{t_1} \cdot r_2^{t_2} \cdot \ldots \cdot r_v^{t_v}.
 \]
-Koska $\syt(a,b)=1$, täytyy päteä $q_i\neq r_j$ kaikilla indekseillä $i,j$. Kuten ensimmäisessä kohdassa, nähdään, että kaikkien lukujen $q_i^{s_i}$ ja $r_j^{t_j}$ täytyy esiintyä luvun $c$ alkutekijähajotelmassa. Siten $(ab)|c$.
+Koska $\syt(a, b)=1$, täytyy päteä $q_i\neq r_j$ kaikilla indekseillä $i, j$. Kuten ensimmäisessä kohdassa, nähdään, että kaikkien lukujen $q_i^{s_i}$ ja $r_j^{t_j}$ täytyy esiintyä luvun $c$ alkutekijähajotelmassa. Siten $(ab)|c$.
 \end{todistus}
 
 Edellisen lauseen tulos pätee siis erityisesti silloin, kun luvut $a$ ja $b$ ovat alkulukuja. Jos esimerkiksi luku on jaollinen alkuluvuilla $3$ ja $5$, niin se on myös jaollinen niiden tulolla $15$. Lausetta ei voida kuitenkaan soveltaa tilanteessa, jossa lukujen $a$ ja $b$ suurin yhteinen tekijä ei ole yksi. Esimerkiksi luku $12$ on jaollinen sekä luvulla $4$ että luvulla $6$, mutta se ei ole jaollinen niiden tulolla $24$.
@@ -1102,7 +1102,7 @@ Lukuja voidaan esittää kahden alkuluvun summana useilla eri tavoilla. Esimerki
 \]
 
 \subsection*{Eulerin $\varphi$-funktio.} 
-Olkoot $n$ ja $k$ positiivisia kokonaislukuja. Funktio $\varphi(n)$ ilmaisee niiden kokonaislukujen $k$ lukumäärän, joille pätee  $\syt(n, k) = 1$, kun $1\le k \le n$. Selvästi $\varphi(n)=n-1$, jos ja vain jos $n$ on alkuluku. Hieman vaikeammalla päättelyllä voidaan osoittaa, että $\varphi(n)$ on \termi{Multiplikatiivinen funktio}{multiplikatiivinen funktio} eli $\varphi(mn)=\varphi(m)\varphi(n)$, kun $\syt(m,n)=1$.
+Olkoot $n$ ja $k$ positiivisia kokonaislukuja. Funktio $\varphi(n)$ ilmaisee niiden kokonaislukujen $k$ lukumäärän, joille pätee  $\syt(n, k) = 1$, kun $1\le k \le n$. Selvästi $\varphi(n)=n-1$, jos ja vain jos $n$ on alkuluku. Hieman vaikeammalla päättelyllä voidaan osoittaa, että $\varphi(n)$ on \termi{Multiplikatiivinen funktio}{multiplikatiivinen funktio} eli $\varphi(mn)=\varphi(m)\varphi(n)$, kun $\syt(m, n)=1$.
 Eulerin $\varphi$-funktion laskemisessa voidaan käyttää esimerkiksi harjoitustehtävissä esiteltävää \termi{Eulerin tulokaava}{Eulerin tulokaavaa}. Funktiolla $\varphi(n)$ on monia teoreettisia ja käy\-tän\-nöl\-li\-siä sovelluksia, kuten seuraavaksi esiteltävä RSA-algoritmi.
 
 \subsection*{RSA-algoritmi} Tällä hetkellä ehkä merkittävin lukuteorian käy\-tän\-nöl\-li\-nen sovellus on niin kutsuttu \termi{julkisen avaimen salakirjoitus}{julkisen avaimen salakirjoitus}. Julkisen avaimen salakirjoituksen esittelivät MIT:n (Massachusetts Institute of Technology) tutkijat Ron Rivest, Adi Shamir ja Leonard Adleman vuonna 1978. % vuonna 1977?
@@ -1123,7 +1123,7 @@ RSA-algoritmin matemaattinen idea on seuraava:
 d\cdot e \equiv 1\quad (\mod\varphi(n)) %\ vai \ d \cdot e \equiv 1 \ (\mod\varphi(n)).
 \]
 \end{enumerate}
-Salakirjoituksessa julkinen avain on lukupari $(n,e)$. Salainen avain on lukupari $(n,d)$. 
+Salakirjoituksessa julkinen avain on lukupari $(n, e)$. Salainen avain on lukupari $(n, d)$. 
 
 Viesti voidaan lähettää turvallisesti seuraavasti. Olkoon lähetettävä viesti kokonaisluku $m$, jolle $0<m<n$. Lasketaan
 \[
@@ -1144,7 +1144,7 @@ Nyt $p = 47$ ja $q = 59$. Siten $n=pq=2773$ ja kaavalla $\varphi(n)=(p-1)(q-1)$ 
 \[
 \varphi(2773)=(47-1)(59-1)=46\cdot 58 =2668.
 \]
-Seuraavaksi valitaan jokin luku $e$ siten, että $1<e<2668$ ja $\syt(e,2668)=1$. Esimerkiksi $e=13$ käy.
+Seuraavaksi valitaan jokin luku $e$ siten, että $1<e<2668$ ja $\syt(e, 2668)=1$. Esimerkiksi $e=13$ käy.
 
 Salaisen avaimen $d$ löytämiseksi on laskettava multiplikatiivinen käänteisluku $13^{-1}\ (\mod 2668)$. Käyttämällä esimerkiksi niin kutsuttua \termi{laajennettu Eukleideen algoritmi}{laajennettua Eukleideen algoritmia} tai tietokonetta saadaan $d=821$. Tuloksen voi tarkistaa laskemalla:
 \[
@@ -1266,12 +1266,12 @@ Osoita lauseen tämän muodon avulla, että $n^{19}\equiv n \quad
 (\mod 19)$ kaikilla luonnollisilla luvuilla $n$.
 
 \item
-Muotoa $F_n = 2^{2^n}+1$, $n=0,1,2,\ldots$ olevia lukuja sanotaan
+Muotoa $F_n = 2^{2^n}+1$, $n=0, 1, 2, \ldots$ olevia lukuja sanotaan
 \termi{Fermat'n luvut}{Fermat'n luvuiksi}. Euler tutki 1700-luvulla, ovatko kaikki
 Fermat'n luvut alkulukuja. Ratkaise tämä Eulerin ongelma laskinta
 käyttäen.
 
-\item Fermat'n luvut $F_0, F_1, F_2, F_3, F_4$ ovat alkulukuja. Tämän perusteella Fermat oletti, että loputkin luvut $F_n$, $n=5,6,\ldots$, ovat alkulukuja. Vuonna 1732 Euler kuitenkin havaitsi, että $5^4 + 2^4 = 641$
+\item Fermat'n luvut $F_0, F_1, F_2, F_3, F_4$ ovat alkulukuja. Tämän perusteella Fermat oletti, että loputkin luvut $F_n$, $n=5, 6, \ldots$, ovat alkulukuja. Vuonna 1732 Euler kuitenkin havaitsi, että $5^4 + 2^4 = 641$
 ja $1 + 5\cdot 2^7 = 641$ ja onnistui näiden yhtälöiden avulla todistamaan, että $641 | F_5$. Todista tämä tulos.
 
 Vihje: Eulerin havaitsemat yhtälöt voi kirjoittaa muodossa
@@ -1279,7 +1279,7 @@ Vihje: Eulerin havaitsemat yhtälöt voi kirjoittaa muodossa
 2^4 \equiv -5^4\ (\mod\ 641)\quad\text{ ja }\quad5\cdot 2^7 \equiv -1\ (\mod\ 641).
 \]
 
-\item  Osoita, että kaikilla $n\in\Z_{+}=1,2,3,\ldots$ pätee
+\item  Osoita, että kaikilla $n\in\Z_{+}=1, 2, 3, \ldots$ pätee
 \[
 F_{0}F_{1}\cdot \ldots \cdot F_{n-1} = F_{n} - 2.
 \]
@@ -1354,7 +1354,7 @@ $2^{11} \cdot 3^8 \cdot 11 \cdot 17^{10}$
 suurin yhteinen tekijä ja pienin yhteinen jaettava.
 
 \item
-Määritä $\syt(117325,16625)$ ja $\pyj(117325,16625)$.
+Määritä $\syt(117325, 16625)$ ja $\pyj(117325, 16625)$.
 
 \item Pulsarit ovat nopeasti pyöriviä ja rytmisiä radiopulsseja
 säteileviä tähtiä. Pulsari X lähettää radiopulssin $510$
@@ -1381,7 +1381,7 @@ Osoita, että luku $5n^3 - 5n$ on jaollinen luvulla $30$, kun $n$
 on luonnollinen luku.
 
 \item Osoita, että muotoa $p^2 - 1$ oleva luku on jaollinen
-luvulla $12$, kun $p$ on alkuluku ja suurempi kuin $3$. [YO 2010
+luvulla $12$, kun $p$ on alkuluku ja suurempi kuin $3$. [YO kevät 2010
 tehtävä 12]
 
 \item Erään maan olympiajoukkueessa oli vain yleisurheilijoita ja
@@ -1405,15 +1405,15 @@ $. Tulos osoittaa, että kiinalaiseen alkulukutestiin liittyvä
 otaksuma on epätosi eikä testi siten toimi kaikilla luvuilla.
 
 \item
-Alkulukujen lukumääräfunktio $\pi(x)$ kertoo välillä $[0,x]$
-olevien alkulukujen lukumäärän. Alkulukujen tiheys välillä $[0,x]
+Alkulukujen lukumääräfunktio $\pi(x)$ kertoo välillä $[0, x]$
+olevien alkulukujen lukumäärän. Alkulukujen tiheys välillä $[0, x]
 $ saadaan jakamalla $\pi(x)$ välin pituudella $x$.
 \begin{enumerate}[a)]
-\item Laske $\pi(10^n)$, kun $n=1,2,3,4,5$.
+\item Laske $\pi(10^n)$, kun $n=1, 2, 3, 4, 5$.
 \item Mitä alkulukujen määrälle $\pi(x)$ näyttää tapahtuvan,
 kun $x$ kasvaa? Miksi?
-\item Laske alkulukujen tiheys väleillä $[0,10^n]$, kun
-$n=1,2,3,4,5$.
+\item Laske alkulukujen tiheys väleillä $[0, 10^n]$, kun
+$n=1, 2, 3, 4, 5$.
 \item Mitä alkulukujen tiheydelle
 \[
 \frac{\pi(x)}{x}
@@ -1425,7 +1425,7 @@ Käytä tehtävässä laskinta tai matemaattisia ohjelmistoja, kuten
 verkosta ilmaiseksi ladattavissa olevaa Maxima-ohjelmistoa.
 Esimerkiksi Texas Instrumentsin TI-Nspire CX CAS -laskin sisältää
 toiminnon {\tt numtheory$\backslash$primecount(a,b)}, joka antaa
-alkulukujen määrän välillä $[a,b]$.
+alkulukujen määrän välillä $[a, b]$.
 
 \item \termi{Mersennen alkuluvut}{Mersennen alkulukuja} ovat alkuluvut, jotka ovat
 muotoa $2^p - 1$, missä $p$ on alkuluku.
@@ -1444,17 +1444,17 @@ x^n-1 = (x-1)(x^{n-1}+\ldots+x+1).
 \item
 \begin{enumerate}[a)]
 \item Selvitä kokeilemalla pienillä luvuilla, mitä on
-$\syt(a,b)\cdot \pyj(a,b)$.
+$\syt(a, b)\cdot \pyj(a, b)$.
 \item Todista saamasi tulos.
 \item Miten Eukleideen algoritmia ja saamaasi tulosta voidaan
 hyödyntää pienimmän yhteisen jaettavan määrittämisessä?
 \item Määritä Eukleideen algoritmin ja saamasi tuloksen
-avulla\\ $\pyj(496125,9450)$.
+avulla\\ $\pyj(496125, 9450)$.
 \item Texas Instrumentsin TI-Nspire CX CAS -laskimesta löytyy
 ohjelma {\tt numtheory$\backslash$gcdstep(a,b)}, joka määrittää
 lukujen $a$ ja $b$ suurimman yhteisen tekijän Eukleideen
 algoritmilla välivaiheet näyttäen. Tutustu ohjelman toimintaan ja
-määritä sen avulla $\pyj(7856,678)$. Kirjoita ylös Eukleideen
+määritä sen avulla $\pyj(7856, 678)$. Kirjoita ylös Eukleideen
 algoritmin välivaiheet käyttäen tämän oppikirjan mukaisia
 merkintöjä.
 \end{enumerate}
@@ -1467,12 +1467,12 @@ www.wolframalpha.com}{Wolfram Alphaa}. Tarkasta tuloksesi
 purkamalla viesti.
 
 Vihje: Voit antaa syötteen Wolfram Alphalle muodossa {\tt
-Mod[a\^{}p,n]}, esim. {\tt Mod[660\^{}821, 2773]}.
+Mod[a\^{}p,n]}, esim. {\tt Mod[660\^{}821,2773]}.
 
 
 \item * %(Lisämateriaalia.)
 Osoita, että Eulerin $\varphi$-funktio on multiplikatiivinen
-eli $\varphi(mn) = \varphi(m) \varphi(n)$, kun $\syt(m,n)=1$.
+eli $\varphi(mn) = \varphi(m) \varphi(n)$, kun $\syt(m, n)=1$.
 \begin{enumerate}[a)]
 \item Käyttäen Eulerin tulokaavaa
 \[
@@ -1481,7 +1481,7 @@ eli $\varphi(mn) = \varphi(m) \varphi(n)$, kun $\syt(m,n)=1$.
 missä $p$ on alkuluku. 
 \item
 Suoraan $\varphi$-funktion määritelmästä.
-%Vihje: Tutki Eulerin tulokaavaa. Mitä tapahtuu, kun $\syt(m,n) =1$?
+%Vihje: Tutki Eulerin tulokaavaa. Mitä tapahtuu, kun $\syt(m, n) =1$?
 \end{enumerate}
 
 \item *  Osoita seuraavat $\varphi$-funktion ominaisuudet:
