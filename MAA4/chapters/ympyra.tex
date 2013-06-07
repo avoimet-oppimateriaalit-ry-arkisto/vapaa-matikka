@@ -33,6 +33,13 @@ Jos erityisesti $(x_{0},y_{0})= (0,0)$, eli ympyrän keskipiste on origo, saa yh
 x^{2}+y^{2} = r^{2}.
 \]
 
+\laatikko{
+$(x_{0},y_{0})$-keskisen ja r-säteisen ympyrän yhtälö on
+\[
+(x-x_{0})^{2}+(y-y_{0})^{2} = r^{2}.
+\]
+}
+
 \begin{esimerkki}
 Ympyrän $\Gamma_{1}$\footnote{sdf} keskipiste on $(3,-4)$ ja säde $\sqrt{2}$, ja ympyrän $\Gamma_{2}$ keskipiste origo ja säde 1. Määritä ympyröiden yhtälöt. Hahmottele ympyrät koordinaatistoon.
 
@@ -49,7 +56,7 @@ $\Gamma_{2}$:n yhtälö saadaan vastaavasti:
 \[
 x^{2}+y^{2} = 1.
 \]
-Edelliselle yksikkösäteiselle origokeskeiselle ympyrälle on vakiintunut nimitys \emph{yksikköympyrä}.
+Edelliselle yksikkösäteiselle origokeskiselle ympyrälle on vakiintunut nimitys \emph{yksikköympyrä}.
 
 Tähän kuva ympyröistä.
 
@@ -60,14 +67,33 @@ Usein myös käänteinen päättely voi olla hyödyllistä. Esimerkiksi yhtälö
 \[
 (x-1)^2+(x+1)^2=4
 \]
-nähdään heti kuvaavan 2-säteistä $(1,-1)$ keskeistä ympyrää, mutta mitä käyrää kuvaa esimerkiksi yhtälö
+nähdään heti kuvaavan 2-säteistä $(1,-1)$ keskistä ympyrää, mutta mitä käyrää kuvaa esimerkiksi yhtälö
 \[
 x^2+6x+y^2-4y=3.
 \]
 Yhtälö muistuttaa tavallista ympyrän yhtälöä, auki kerrottuna, ja se voidaankin saattaa normaaliin muotoon täydentämällä binomit $x^2+6x$ ja $y^2-4y$ binomien neliöiksi:
+\begin{align*}
+x^2+6x+y^2-4y &= 3 && \ppalkki +9+4 \\
+(x^2+6x+9)+(y^2-4y+4) &= 3+9+4 \\
+(x+3)^2+(y-2)^2 &= 16
+\end{align*}
+Mutta tämä havaitaan $(-3,2)$-keskisen $\sqrt{16} = 4$ säteisin ympyrän yhtälöksi. Sama päättely voidaan suorittaa myös yleisesti muotoa
+\[
+x^2+ax+y^2+by+c = 0
+\]
+olevien yhtälöiden kanssa. Täydentämällä $x^2+ax$ ja $y^2+by$ neliöiksi saadaan
+\begin{align*}
+x^2+ax+y^2+by+c &= 0 && \ppalkki +\frac{a^2}{4}+\frac{b^2}{4}-c \\
+\Big(x^2+ax+\frac{a^2}{4}\Big)+\Big(y^2+by+\frac{b^2}{4}\Big) &= \frac{a^2}{4}+\frac{b^2}{4}-c  \\
+\Big(x+\frac{a}{2}\Big)^2+\Big(y+\frac{b}{2}\Big)^2 &= \frac{a^2}{4}+\frac{b^2}{4}-c
+\end{align*}
+Jos yhtälön oikea puoli eli $\frac{a^2}{4}+\frac{b^2}{4}-c \geq 0$ yhtälö kuvaa $\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$-säteistä $(-\frac{a}{2},-\frac{b}{2})$-keskistä ympyrää. Jos oikea puoli on nolla, yhtälö kuvaa vastaavaa pistettä. Jos se on negatiivinen, yhtälön vasen puoli on aina positiivinen, joten yhtälön toteuttavia lukupareja ei ole, ts. yhtälö kuvaa tyhjää joukkoa.
 
-
-
+\laatikko{Yhtälöt muotoa
+\[
+x^2+ax+y^2+by+c = 0
+\]
+kuvaavat ympyrää, pistettä tai tyhjää joukkoa.}
 
 
 
