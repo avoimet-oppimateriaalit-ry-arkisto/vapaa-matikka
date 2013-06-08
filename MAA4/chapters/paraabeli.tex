@@ -44,11 +44,11 @@ Merkitään nämä etäisyydet yhtäsuuriksi ja ratkaistaan saatu yhtälö $y$:n
 |y+3| & = \sqrt{x^2+(y-3)^2} &&\ppalkki \text{neliöönkorotus, kumpikin puoli $>0$}\\
 (y+3)^2  &= x^2+(y-3)^2 \\
 y^2+6y+9 &=  x^2+y^2-6y+9\\
-12y &= x^2 &&\ppalkki,: 12\\
+12y &= x^2 &&\ppalkki : 12\\
 y &= \frac{1}{12}x^2
 \end{align*}
 
-Pistejoukon yhtälö on $y=frac{1}{12}x^2$.
+Pistejoukon yhtälö on $y=\frac{1}{12}x^2$.
 
 \end{esimratk}
 \end{esimerkki}
@@ -64,6 +64,41 @@ y-y_0 = a(x-x_0)^2
 \]
 
 %%%%% FIX ME Mikä on tämän alaluvun suhde MAA1-kirjan liitteenä olevaan alalukuun "Toisen asteen polynomin kuvaaja"
+
+
+\begin{esimerkki}
+Mitkä ovat paraabelin $y=3x^2-12x+13$ huipun koordinaatit?
+\begin{esimratk}
+Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa lienee kuitenkin muuttaa huippumuoitoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi.
+
+\begin{align*}
+y-y_0 &= a(x-x_0)^2 \\
+y       &= a(x^2-2x_0x+x_0^2)+y_0\\
+y       &= ax^2-2ax_0x+(ax_0^2+y_0) &&\ppalkki a=3\\
+y       &= 3x^2-6x_0x+(3x_0^2+y_0)
+\end{align*}
+
+
+
+Merkitään $x$:n kertoimet ja vakiotermit samoiksi.
+
+\begin{align*}
+&\begin{cases}
+-6x_0=-12 \\
+3x_0^2+y_0 =13
+\end{cases}\\
+&\begin{cases}
+x_0=2 \\
+y_0 =1
+\end{cases}
+\end{align*}
+
+Paraabelin huippu on pisteessä $(2, 1)$.
+
+\end{esimratk}
+\end{esimerkki}
+
+
 
 \begin{tehtavasivu}
 
