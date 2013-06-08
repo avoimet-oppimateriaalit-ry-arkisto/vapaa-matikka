@@ -34,6 +34,34 @@ Kun tämän yhtälön molemmat puolet korotetaan toiseen potenssiin, saadaan
 \]
 }
 
+\emph{Ympyrä} on klassisesti kaikkien kiinteästä pisteestä, \emph{keskipisteestä}, vakioetäisyydellä olevien pisteiden joukko. Tätä vakioetäisyyttä kutsutaan ympyrän \emph{säteeksi}. Jos ympyrän keskipiste on $(x_{0},y_{0})$, ja säde $r$, voidaan ympyrän pisteille muodostaa Pythagoraan lauseen avulla yhtälö.
+
+Määritelmän nojalla mielivaltainen tason piste $(x,y)$ on ympyrällä, jos ja vain jos pisteiden $(x,y)$ ja $(x_{0},y_{0})$ etäisyys on $r$. Pythagoraan lauseella siis
+
+\[
+\sqrt{(x-x_{0})^{2}+(y-y_{0})^{2}} = r.
+\]
+
+Kun nyt vielä huomioidaan, että $r > 0$, voidaan yhtälö yhtä hyvin kirjottaa muodossa
+
+\[
+(x-x_{0})^{2}+(y-y_{0})^{2} = r^{2}.
+\]
+Tapauksessa $r=0$ yhtälön toteuttaa vain pisteestä $(x_{0},y_{0})$ etäisyydellä 0 olevat pisteet, eli piste itse, joten se kuvaa itse keskipistettä. Myös tämä voidaan ajatella surkastuneena, nollasäteisenä ympyränä.
+
+Jos erityisesti $(x_{0},y_{0})= (0,0)$, eli ympyrän keskipiste on origo, saa yhtälö muodon
+
+\[
+x^{2}+y^{2} = r^{2}.
+\]
+
+\laatikko{
+$(x_{0},y_{0})$-keskisen ja r-säteisen ympyrän yhtälö on
+\[
+(x-x_{0})^{2}+(y-y_{0})^{2} = r^{2}.
+\]
+}
+
 \begin{esimerkki}
 Ympyrän keskipiste on $(-4,1)$ ja säde $5$. Määritä ympyrän yhtälö.
 \begin{esimratk}
@@ -54,6 +82,61 @@ x^2+8x+16+y^2-2y+1&=25 \\
 x^2+y^2+8x-2y-8&=0.
 \end{align*}
 
+\begin{esimerkki}
+Ympyrän $\Gamma_{1}$\footnote{sdf} keskipiste on $(3,-4)$ ja säde $\sqrt{2}$, ja ympyrän $\Gamma_{2}$ keskipiste origo ja säde 1. Määritä ympyröiden yhtälöt. Hahmottele ympyrät koordinaatistoon.
+
+\begin{esimratk}
+Edellisen mukaan ympyrän $\Gamma_{1}$ yhtälö on
+\[
+(x-3)^{2}+(y-(-4))^{2} = (\sqrt{2})^{2}
+\]
+eli sievennettynä
+\[
+(x-3)^{2}+(y+4)^{2} = 2.
+\]
+$\Gamma_{2}$:n yhtälö saadaan vastaavasti:
+\[
+x^{2}+y^{2} = 1.
+\]
+Edelliselle yksikkösäteiselle origokeskiselle ympyrälle on vakiintunut nimitys \emph{yksikköympyrä}.
+
+Tähän kuva ympyröistä.
+
+\end{esimratk}
+\end{esimerkki}
+
+Usein myös käänteinen päättely voi olla hyödyllistä. Esimerkiksi yhtälön
+\[
+(x-1)^2+(x+1)^2=4
+\]
+nähdään heti kuvaavan 2-säteistä $(1,-1)$ keskistä ympyrää, mutta mitä käyrää kuvaa esimerkiksi yhtälö
+\[
+x^2+6x+y^2-4y=3.
+\]
+Yhtälö muistuttaa tavallista ympyrän yhtälöä, auki kerrottuna, ja se voidaankin saattaa normaaliin muotoon täydentämällä binomit $x^2+6x$ ja $y^2-4y$ binomien neliöiksi:
+\begin{align*}
+x^2+6x+y^2-4y &= 3 && \ppalkki +9+4 \\
+(x^2+6x+9)+(y^2-4y+4) &= 3+9+4 \\
+(x+3)^2+(y-2)^2 &= 16
+\end{align*}
+Mutta tämä havaitaan $(-3,2)$-keskisen $\sqrt{16} = 4$ säteisin ympyrän yhtälöksi. Sama päättely voidaan suorittaa myös yleisesti muotoa
+\[
+x^2+ax+y^2+by+c = 0
+\]
+olevien yhtälöiden kanssa. Täydentämällä $x^2+ax$ ja $y^2+by$ neliöiksi saadaan
+\begin{align*}
+x^2+ax+y^2+by+c &= 0 && \ppalkki +\frac{a^2}{4}+\frac{b^2}{4}-c \\
+\Big(x^2+ax+\frac{a^2}{4}\Big)+\Big(y^2+by+\frac{b^2}{4}\Big) &= \frac{a^2}{4}+\frac{b^2}{4}-c  \\
+\Big(x+\frac{a}{2}\Big)^2+\Big(y+\frac{b}{2}\Big)^2 &= \frac{a^2}{4}+\frac{b^2}{4}-c
+\end{align*}
+Jos yhtälön oikea puoli eli $\frac{a^2}{4}+\frac{b^2}{4}-c \geq 0$ yhtälö kuvaa $\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$-säteistä $(-\frac{a}{2},-\frac{b}{2})$-keskistä ympyrää. Jos oikea puoli on nolla, yhtälö kuvaa vastaavaa pistettä. Jos se on negatiivinen, yhtälön vasen puoli on aina positiivinen, joten yhtälön toteuttavia lukupareja ei ole, ts. yhtälö kuvaa tyhjää joukkoa.
+
+\laatikko{Yhtälöt muotoa
+\[
+x^2+ax+y^2+by+c = 0
+\]
+kuvaavat ympyrää, pistettä tai tyhjää joukkoa.}
+
 \begin{tehtavasivu}
 
 \paragraph*{Opi perusteet}
@@ -72,7 +155,7 @@ $x^2+y^2=5$
 \end{tehtava}
 
 \begin{tehtava}
-Märitä keskipiste ja säde.
+Määritä keskipiste ja säde.
 \begin{alakohdat}
   \alakohta{$(x-3)^2+(y+7)^2=12$}
 	\alakohta{$x^2+y^2=49$}
@@ -86,7 +169,7 @@ Märitä keskipiste ja säde.
 \end{tehtava}
 
 \begin{tehtava}
-Märitä keskipiste ja säde.
+Määritä keskipiste ja säde.
 \begin{alakohdat}
 	\alakohta{$x^2+y^2-10x+16y+72=0$}
 	\alakohta{$x^2+y^2+8x-22y+129=0$}
