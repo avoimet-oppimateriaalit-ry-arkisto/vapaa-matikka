@@ -12,9 +12,9 @@ lukusuoralle rationaalilukujen tapaan.
 lukusuora.pohja(1.3, 3.3, 11)
 for i in range(13, 34):
 	lukusuora.kohta(i / 10., "\\footnotesize " + str(i // 10) + "," + str(i % 10), nimi_ylos = False)
-with lukusuora.vari("red"):
-	lukusuora.kohta(pi, "$\pi$")
-	lukusuora.kohta(sqrt(2), "$\sqrt{2}$")
+with vari("red"):
+	lukusuora.kohta(pi, r"$\pi$")
+	lukusuora.kohta(sqrt(2), r"$\sqrt{2}$")
 \end{kuva}
 
 
@@ -22,37 +22,33 @@ with lukusuora.vari("red"):
 Rationaalilukuja ja irrationaalilukuja kutsutaan yhdessä \emph{reaaliluvuiksi}. Reaalilukujen joukkoja merkitään $\R$.
 Havainnollisesti reaalilukujen joukko sisältää kaikki lukusuoran luvut.
 
-Rationaaliluvut eivät täytä koko koko reaalilukusuoraa, mutta niitä on niin tiheässä, että jokaisen kahden eri reaaliluvun välissä on rationaalilukuja. Jokaiselle irrationaaliluvulle voidaan löytää mielivaltaisen lähellä olevia rationaalilukuarvioita. Tätä kutsutaan irrationaalilukujen approksimoinniksi rationaaliluvuilla. Esimerkiksi lukua $\pi$ voidaan halutusta tarkkuudesta riippuen approksimoida rationaaliluvuilla:
+Rationaaliluvut eivät täytä koko koko reaalilukusuoraa, mutta niitä on niin tiheässä, että jokaisen kahden eri reaaliluvun välissä on rationaalilukuja. Jokaiselle irrationaaliluvulle voidaan löytää mielivaltaisen lähellä olevia rationaalilukuarvioita. Tätä kutsutaan irrationaalilukujen approksimoinniksi rationaaliluvuilla. Esimerkiksi lukua $\pi$ voidaan halutusta tarkkuudesta riippuen approksimoida rationaaliluvuilla
 \[
 3; \quad 3,1; \quad 3,14; \quad 3,142; \quad 3,1416; \quad 3,14159; \quad 3,141593; \quad \ldots 
 \]
 
+tai lukua $\sqrt{2}$ rationaaliluvuilla
+\[
+1; \quad \frac{3}{2}; \quad \frac{5}{4}; \quad \frac{11}{8}; \quad \frac{23}{16}; \quad \frac{45}{32}; \quad \ldots 
+\]
 
-
-%\missingfigure{kuva tähän lukusuorasta, jolla on neliöjuuri 2 ja sen vieressä rationaalilukuja yhä lähempänä ja lähempänä -- ne approksimoivat neliöjuuri kakkosta}
-\begin{center}
-    \begin{lukusuora}{1.405}{1.425}{15}
-    	\lukusuorapystyviiva{1.41}{$1,41$}
-    	
-    	\lukusuorapystyviiva{1.42}{$1,42$}
-{\color{red}	\lukusuorapiste{1.414213562373}{$\sqrt{2}\ \ $}}
-        \lukusuorapiste{1.413}{$\frac{1413}{1000}$}
-        \lukusuorapiste{1.412}{$\frac{353}{250}$}
-        \lukusuorapiste{1.415}{$\frac{283}{200}$}
-        \lukusuorapiste{1.416}{$\frac{177}{125}$}
-        \lukusuorapiste{1.418}{$\frac{709}{500}$}
-      \end{lukusuora}
-      
-    \end{center}
-
-Vaikka menisimme kuinka lähelle tahansa jotain irrationaalilukua lukusuoralla, välistä löytyisi vielä jokin rationaaliluku.
-
+\begin{kuva}
+lukusuora.pohja(1, 1.5, 11)
+lukusuora.kohta(1, r"\footnotesize $1$", nimi_ylos = False)
+lukusuora.kohta(3./2, r"\footnotesize $\frac{3}{2}$", nimi_ylos = False)
+lukusuora.kohta(5./4, r"\footnotesize $\frac{5}{4}$", nimi_ylos = False)
+lukusuora.kohta(11./8, r"\footnotesize $\frac{11}{8}$", nimi_ylos = False)
+lukusuora.kohta(23./16, r"\footnotesize $\frac{23}{16}$", nimi_ylos = False)
+lukusuora.kohta(45./32, r"\footnotesize $\frac{45}{32}$", nimi_ylos = False)
+with vari("red"):
+	lukusuora.kohta(sqrt(2), r"$\sqrt{2}$")
+\end{kuva}
 
 \laatikko{
 Kaikki rationaalilukuja koskevat laskusäännöt pätevät myös reaaliluvuille.
 }
 
-Tämän perusteleminen on valitettavasti liian pitkällinen asia lukion ykköskurssille.
+Väite on uskottava, sillä reaalilukuja voi aina approksimoida mielivaltaisen tarkasti rationaaliluvuilla. Väitteen tarkempi perusteleminen ei tämän kurssin työkaluilla vielä onnistu.
 
 Siinä missä rationaalilukujen desimaaliesitykset ovat päättyviä tai jaksollisia, ovat irrationaalilukujen desimaaliesitykset päättymättömiä ja
 jaksottomia. Monissa tapauksissa on hyvin vaikeaa osoittaa luku irrationaaliseksi. Tällöin vaaditaan keinoja, jotka eivät kuulu tämän kurssin laajuuteen.
