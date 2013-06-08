@@ -12,6 +12,48 @@ ja ympyrän keskipisteen ja säteen selvittäminen siitä
 
 KIITOS!}
 
+Ympyrä muodostuu pisteistä, jotka ovat kaikki jonkin saman etäisyyden päässä jostakin annetusta pisteestä. Tutkitaan vaikkapa niiden pisteiden joukkoa, joiden etäisyys origosta on 3. Toisin sanoen tutkitaan ympyrää, jonka keskipiste on origo ja säde 3. Pisteen $(x,y)$ etäisyys origosta on $\sqrt{x^2+y^2}$. (Miksi?) Jotta etäisyys olisi 3, täytyy päteä $\sqrt{x^2+y^2}=3$. Korotetaan vielä yhtälön molemmat puolet toiseen potenssiin, jolloin saadaan $x^2+y^2=9$. Tutkitun ympyrän yhtälö on siis $x^2+y^2=9$.
+
+TÄHÄN KUVA.
+
+Samalla tavalla voidaan johtaa yhtälö ympyrälle, jonka keskispiste on origo ja säde $r$.
+\laatikko{Jos ympyrän keskipiste on origo ja säde $r$, ympyrän yhtälö on $x^2+y^2=r^2$.}
+
+Jos ympyrän keskipiste ei ole origo, tulee yhtälöstä hieman monimutkaisempi. Oletetaan, että ympyrän keskipiste on $(x_0,y_0)$ ja säde $r$. Määritetään ympyrän yhtälö. Piste $(x,y)$ on ympyrälllä täsmälleen silloin, jos se etäisyys pisteestä $(x_0,y_0)$ on $r$. Luvun ?? perusteella pisteiden $(x,y)$ ja $(x_0,y_0)$ välinen etäisyys on $\sqrt{(x-x_0)^2+(y-y_0)^2}$. Tuloksena on siis yhtälö
+\[
+\sqrt{(x-x_0)^2+(y-y_0)^2}=r.
+\]
+Kun tämän yhtälön molemmat puolet korotetaan toiseen potenssiin, saadaan
+\[
+(x-x_0)^2+(y-y_0)^2=r^2.
+\]
+
+\laatikko{Jos ympyrän keskipiste on $(x_0,y_0)$ ja säde $r$, ympyrän yhtälö on
+\[
+(x-x_0)^2+(y-y_0)^2=r^2.
+\]
+}
+
+\begin{esimerkki}
+Ympyrän keskipiste on $(-4,1)$ ja säde $5$. Määritä ympyrän yhtälö.
+\begin{esimratk}
+Ympyrän yhtälö saadaan käyttämällä edellä annettua kaavaa. Nyt $x_0=-4$, $y_0=1$ ja $r=5$. Ympyrän yhtälöksi saadaan
+\[
+(x+4)^2+(y-1)^2=25.
+\]
+\end{esimratk}
+\begin{esimvast}
+Ympyrän yhtälö on $(x+4)^2+(y-1)^2=25$.
+\end{esimvast}
+\end{esimerkki}
+
+Edellisen esimerkin ympyrän yhtälö voidaan kirjoittaa myös toisenlaisessa muodossa.
+\begin{align*}
+(x+4)^2+(y-1)^2&=25 \\
+x^2+8x+16+y^2-2y+1&=25 \\
+x^2+y^2+8x-2y-8&=0.
+\end{align*}
+
 \begin{tehtavasivu}
 
 \paragraph*{Opi perusteet}
