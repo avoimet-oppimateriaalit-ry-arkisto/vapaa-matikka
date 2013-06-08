@@ -12,130 +12,176 @@ ja ympyrän keskipisteen ja säteen selvittäminen siitä
 
 KIITOS!}
 
-Ympyrä muodostuu pisteistä, jotka ovat kaikki jonkin saman etäisyyden päässä jostakin annetusta pisteestä. Tutkitaan vaikkapa niiden pisteiden joukkoa, joiden etäisyys origosta on 3. Toisin sanoen tutkitaan ympyrää, jonka keskipiste on origo ja säde 3. Pisteen $(x,y)$ etäisyys origosta on $\sqrt{x^2+y^2}$. (Miksi?) Jotta etäisyys olisi 3, täytyy päteä $\sqrt{x^2+y^2}=3$. Korotetaan vielä yhtälön molemmat puolet toiseen potenssiin, jolloin saadaan $x^2+y^2=9$. Tutkitun ympyrän yhtälö on siis $x^2+y^2=9$.
+TÄHÄN TARVITAAN KUVA. (Origokeskinen ympyrä, jonka säde on kolme. Kuvaan voisi laittaa myös yhden ympyrän pisteen, jota merkitään $(x,y)$).
 
-TÄHÄN KUVA.
+Kuvaan on piirretty käyrä, jonka pisteiden etäisyys origosta on 3. Huomataan, että näin muodostuva käyrä on ympyrä. Piste $(x,y)$ on ympyrällä täsmälleen silloin, jos sen etäisyys origosta on 3. Toisin sanoen täytyy päteä $\sqrt{x^2+y^2}=3$. Kun yhtälön molemmat puolet korotetaan vielä toiseen potenssiin, saadaan $x^2+y^2=9$. Ympyrän yhtälö on siis $x^2+y^2=9$.
 
-Samalla tavalla voidaan johtaa yhtälö ympyrälle, jonka keskispiste on origo ja säde $r$.
-\laatikko{Jos ympyrän keskipiste on origo ja säde $r$, ympyrän yhtälö on $x^2+y^2=r^2$.}
+\termi{ympyrä}{Ympyrä} muodostuu pisteistä, jotka ovat vakioetäisyydellä jostakin kiinteästä pisteestä, \termi{keskipiste}{keskipisteestä}. Tätä vakioetäisyyttä kutsutaan ympyrän \termi{säde}{säteeksi}.
 
-Jos ympyrän keskipiste ei ole origo, tulee yhtälöstä hieman monimutkaisempi. Oletetaan, että ympyrän keskipiste on $(x_0,y_0)$ ja säde $r$. Määritetään ympyrän yhtälö. Piste $(x,y)$ on ympyrälllä täsmälleen silloin, jos se etäisyys pisteestä $(x_0,y_0)$ on $r$. Luvun ?? perusteella pisteiden $(x,y)$ ja $(x_0,y_0)$ välinen etäisyys on $\sqrt{(x-x_0)^2+(y-y_0)^2}$. Tuloksena on siis yhtälö
+Johdetaan yhtälö ympyrälle, jonka keskipiste on $(x_0,y_0)$ ja säde $r$. Piste $(x,y)$ on ympyrälllä täsmälleen silloin, jos sen etäisyys pisteestä $(x_0,y_0)$ on $r$. Luvun ?? perusteella pisteiden $(x,y)$ ja $(x_0,y_0)$ välinen etäisyys on $\sqrt{(x-x_0)^2+(y-y_0)^2}$. Tuloksena on siis yhtälö
 \[
 \sqrt{(x-x_0)^2+(y-y_0)^2}=r.
 \]
-Kun tämän yhtälön molemmat puolet korotetaan toiseen potenssiin, saadaan
+Koska säde $r$ ei voi olla negatiivinen, voidaan yhtälön molemmat puolet korottaa toiseen potenssiin ja saadaan yhtäpitävä yhtälö
 \[
 (x-x_0)^2+(y-y_0)^2=r^2.
 \]
 
-\laatikko{Jos ympyrän keskipiste on $(x_0,y_0)$ ja säde $r$, ympyrän yhtälö on
-\[
-(x-x_0)^2+(y-y_0)^2=r^2.
-\]
-}
+%Jos erityisesti $(x_{0},y_{0})= (0,0)$, eli ympyrän keskipiste on origo, saa yhtälö muodon
 
-\emph{Ympyrä} on klassisesti kaikkien kiinteästä pisteestä, \emph{keskipisteestä}, vakioetäisyydellä olevien pisteiden joukko. Tätä vakioetäisyyttä kutsutaan ympyrän \emph{säteeksi}. Jos ympyrän keskipiste on $(x_{0},y_{0})$, ja säde $r$, voidaan ympyrän pisteille muodostaa Pythagoraan lauseen avulla yhtälö.
-
-Määritelmän nojalla mielivaltainen tason piste $(x,y)$ on ympyrällä, jos ja vain jos pisteiden $(x,y)$ ja $(x_{0},y_{0})$ etäisyys on $r$. Pythagoraan lauseella siis
-
-\[
-\sqrt{(x-x_{0})^{2}+(y-y_{0})^{2}} = r.
-\]
-
-Kun nyt vielä huomioidaan, että $r > 0$, voidaan yhtälö yhtä hyvin kirjottaa muodossa
-
-\[
-(x-x_{0})^{2}+(y-y_{0})^{2} = r^{2}.
-\]
-Tapauksessa $r=0$ yhtälön toteuttaa vain pisteestä $(x_{0},y_{0})$ etäisyydellä 0 olevat pisteet, eli piste itse, joten se kuvaa itse keskipistettä. Myös tämä voidaan ajatella surkastuneena, nollasäteisenä ympyränä.
-
-Jos erityisesti $(x_{0},y_{0})= (0,0)$, eli ympyrän keskipiste on origo, saa yhtälö muodon
-
-\[
-x^{2}+y^{2} = r^{2}.
-\]
+%\[
+%x^{2}+y^{2} = r^{2}.
+%\]
 
 \laatikko{
-$(x_{0},y_{0})$-keskisen ja r-säteisen ympyrän yhtälö on
+Jos ympyrän keskipiste on $(x_{0},y_{0})$ ja säde $r$, ympyrän yhtälö on
 \[
 (x-x_{0})^{2}+(y-y_{0})^{2} = r^{2}.
 \]
 }
 
+Jos edellä säde $r$ on nolla, yhtälön toteuttaa vain piste $(x_{0},y_{0})$. Nollasäteinen ympyrä onkin pelkkä piste.
+
+%\begin{esimerkki}
+%Ympyrän keskipiste on $(-4,1)$ ja säde $5$. Määritä ympyrän yhtälö ja hahmottele ympyrä koordinaatistoon.
+%\begin{esimratk}
+%Ympyrän yhtälö saadaan käyttämällä edellä annettua kaavaa. Nyt $x_0=-4$, $y_0=1$ ja $r=5$. Ympyrän yhtälöksi saadaan $(x-(-4))^2+(y-1)^2=25$ eli
+%\[
+%(x+4)^2+(y-1)^2=25.
+%\]
+%\end{esimratk}
+%\begin{esimvast}
+%Ympyrän yhtälö on $(x+4)^2+(y-1)^2=25$.
+%\end{esimvast}
+%\end{esimerkki}
+
+%Tähän kuva ympyrästä.
+
+%Edellisen esimerkin ympyrän yhtälö voidaan kirjoittaa myös toisenlaisessa muodossa.
+%\begin{align*}
+%(x+4)^2+(y-1)^2&=25 \\
+%x^2+8x+16+y^2-2y+1&=25 \\
+%x^2+y^2+8x-2y-8&=0.
+%\end{align*}
+
 \begin{esimerkki}
-Ympyrän keskipiste on $(-4,1)$ ja säde $5$. Määritä ympyrän yhtälö.
-\begin{esimratk}
-Ympyrän yhtälö saadaan käyttämällä edellä annettua kaavaa. Nyt $x_0=-4$, $y_0=1$ ja $r=5$. Ympyrän yhtälöksi saadaan
+Piirrä kuva ympyrästä, jonka yhtälö on
 \[
-(x+4)^2+(y-1)^2=25.
+(x-1)^2+(x+1)^2=4.
 \]
+\begin{esimratk}
+Muokataan ympyrän yhtälöä niin, että keskipiste ja säde näkyvät suoraan:
+\[
+(x-1)^2+(x-(-1))^2=2^2.
+\]
+Tästä nähdään, että keskipiste on $(1,-1)$ ja säde 2. Nyt kuva on helppo piirtää.
+
+TÄHÄN TARVITAAN KUVA.
+\end{esimratk}
+\end{esimerkki}
+
+%\begin{esimerkki}
+%Ympyrän $\Gamma_{1}$\footnote{sdf} keskipiste on $(3,-4)$ ja säde $\sqrt{2}$, ja ympyrän $\Gamma_{2}$ keskipiste origo ja säde 1. Määritä ympyröiden yhtälöt. Hahmottele ympyrät koordinaatistoon.
+
+%\begin{esimratk}
+%Edellisen mukaan ympyrän $\Gamma_{1}$ yhtälö on
+%\[
+%(x-3)^{2}+(y-(-4))^{2} = (\sqrt{2})^{2}
+%\]
+%eli sievennettynä
+%\[
+%(x-3)^{2}+(y+4)^{2} = 2.
+%\]
+%$\Gamma_{2}$:n yhtälö saadaan vastaavasti:
+%\[
+%x^{2}+y^{2} = 1.
+%\]
+%Edelliselle yksikkösäteiselle origokeskiselle ympyrälle on vakiintunut nimitys \emph{yksikköympyrä}.
+
+%\end{esimratk}
+%\end{esimerkki}
+
+Aina keskipiste ja säde eivät näy ympyrän yhtälöstä suoraan.
+Esimerkiksi yhtälö
+\[
+x^2+6x+y^2-4y=3
+\]
+on erään ympyrän yhtälö.
+Tämä nähdään täydentämällä summattavat $x^2+6x$ ja $y^2-4y$ neliöiksi.
+
+Neliöksi täydentäminen opittiin kurssissa MAA2, mutta kerrataan se tässä vielä.
+Aloitetaan lausekkeesta $x^2+6x$. Se on lähes sama kuin binomin $x+3$ neliö, sillä $(x+3)^2=x^2+6x+9$. Ainoastaan vakiotermit poikkeavat toisistaan ja tämän voi korvata lisäämällä ympyrän yhtälön molemmille puolille luvun $9$: 
+\begin{align*}
+x^2+6x+y^2-4y &= 3 && \ppalkki +9 \\
+(x^2+6x+9)+(y^2-4y) &= 12 && \\
+(x+3)^2+(y^2-4y) &= 12.&& 
+\end{align*}
+
+Siirrytään sitten tarkastelemaan summattavaa $y^2-4y$. Se on puolestaan melkein binomin $y-2$ neliö, sillä $(y-2)^2=y^2-4y+4$. Binomin neliö saadaan näkyviin lisäämällä yhtälön molemmille puolille luku $4$:
+\begin{align*}
+(x+3)^2+(y^2-4y) &= 12 && \ppalkki +4\\
+(x+3)^2+(y^2-4y+4) &= 16 && \\
+(x+3)^2+(y-2)^2 &= 16 && \\
+(x+3)^2+(y-2)^2 &= 4^2.&& 
+\end{align*}
+
+Nyt huomataan, että kyseessä on $(-3,2)$-keskisen $4$-säteisen ympyrän yhtälö.
+
+\begin{esimerkki}
+Ympyrän yhtälö on $x^2-8x+y^2+5y+3=0$. Määritä ympyrän keskipiste ja säde.
+\begin{esimratk}
+Yhtälö muuttuu muotoon $x^2-8x+y^2+5y=-3$. Suoritetaan sitten neliöksi täydentäminen:
+\begin{align*}
+x^2-8x+y^2+5y&=-3 && \ppalkki +16\\
+x^2-8x+16+y^2+5y&=-3+16 && \\
+(x^2-4)^2+y^2+5y&=13 && \ppalkki +\frac{25}{4}\\
+(x^2-4)^2+y^2+5y+\frac{25}{4}&=\frac{77}{4} && \ppalkki +\frac{25}{4}\\
+(x^2-4)^2+\left(y+\frac{5}{4}\right)^2&=\frac{102}{4} && \\
+(x^2-4)^2+\left(y+\frac{5}{4}\right)^2&=\frac{51}{2} && 
+\end{align*}
+Nähdään, että keskipiste on $(4,-5/4)$ ja säde $\sqrt{51/2}$.
 \end{esimratk}
 \begin{esimvast}
-Ympyrän yhtälö on $(x+4)^2+(y-1)^2=25$.
+Keskipiste on $(4,-5/4)$ ja säde $\sqrt{51/2}$.
 \end{esimvast}
 \end{esimerkki}
 
-Edellisen esimerkin ympyrän yhtälö voidaan kirjoittaa myös toisenlaisessa muodossa.
-\begin{align*}
-(x+4)^2+(y-1)^2&=25 \\
-x^2+8x+16+y^2-2y+1&=25 \\
-x^2+y^2+8x-2y-8&=0.
-\end{align*}
-
 \begin{esimerkki}
-Ympyrän $\Gamma_{1}$\footnote{sdf} keskipiste on $(3,-4)$ ja säde $\sqrt{2}$, ja ympyrän $\Gamma_{2}$ keskipiste origo ja säde 1. Määritä ympyröiden yhtälöt. Hahmottele ympyrät koordinaatistoon.
-
+Onko yhtälö $x^2-4x+y^2+2y+6=0$ ympyrän yhtälö?
 \begin{esimratk}
-Edellisen mukaan ympyrän $\Gamma_{1}$ yhtälö on
-\[
-(x-3)^{2}+(y-(-4))^{2} = (\sqrt{2})^{2}
-\]
-eli sievennettynä
-\[
-(x-3)^{2}+(y+4)^{2} = 2.
-\]
-$\Gamma_{2}$:n yhtälö saadaan vastaavasti:
-\[
-x^{2}+y^{2} = 1.
-\]
-Edelliselle yksikkösäteiselle origokeskiselle ympyrälle on vakiintunut nimitys \emph{yksikköympyrä}.
-
-Tähän kuva ympyröistä.
-
+Suoritetaan neliöksitäydennys:
+\begin{align*}
+x^2-4x+y^2+2y+6&=0 && \ppalkki -6\\
+x^2-4x+y^2+2y&=-6 && \ppalkki +4\\
+x^2-4x+4+y^2+2y&=-2 && \\
+(x^2-2)^2+y^2+2y&=-2 && \ppalkki +1\\
+(x^2-2)^2+y^2+2y+1&=-1 && \\
+(x^2-2)^2+(y+1)^2&=-1. &&
+\end{align*}
+Nyt nähdään, että kyseessä ei voi olla ympyrän yhtälö, sillä säteeksi tulisi $\sqrt{-1}$.
 \end{esimratk}
+\begin{esimvast}
+Kyseessä ei ole ympyrän yhtälö.
+\end{esimvast}
 \end{esimerkki}
 
-Usein myös käänteinen päättely voi olla hyödyllistä. Esimerkiksi yhtälön
-\[
-(x-1)^2+(x+1)^2=4
-\]
-nähdään heti kuvaavan 2-säteistä $(1,-1)$ keskistä ympyrää, mutta mitä käyrää kuvaa esimerkiksi yhtälö
-\[
-x^2+6x+y^2-4y=3.
-\]
-Yhtälö muistuttaa tavallista ympyrän yhtälöä, auki kerrottuna, ja se voidaankin saattaa normaaliin muotoon täydentämällä binomit $x^2+6x$ ja $y^2-4y$ binomien neliöiksi:
-\begin{align*}
-x^2+6x+y^2-4y &= 3 && \ppalkki +9+4 \\
-(x^2+6x+9)+(y^2-4y+4) &= 3+9+4 \\
-(x+3)^2+(y-2)^2 &= 16
-\end{align*}
-Mutta tämä havaitaan $(-3,2)$-keskisen $\sqrt{16} = 4$ säteisin ympyrän yhtälöksi. Sama päättely voidaan suorittaa myös yleisesti muotoa
+Edellä tehty neliöön korotus voidaan voidaan suorittaa yleisesti muotoa
 \[
 x^2+ax+y^2+by+c = 0
 \]
-olevien yhtälöiden kanssa. Täydentämällä $x^2+ax$ ja $y^2+by$ neliöiksi saadaan
+oleville yhtälöille. Täydentämällä $x^2+ax$ ja $y^2+by$ neliöiksi saadaan
 \begin{align*}
 x^2+ax+y^2+by+c &= 0 && \ppalkki +\frac{a^2}{4}+\frac{b^2}{4}-c \\
 \Big(x^2+ax+\frac{a^2}{4}\Big)+\Big(y^2+by+\frac{b^2}{4}\Big) &= \frac{a^2}{4}+\frac{b^2}{4}-c  \\
 \Big(x+\frac{a}{2}\Big)^2+\Big(y+\frac{b}{2}\Big)^2 &= \frac{a^2}{4}+\frac{b^2}{4}-c
 \end{align*}
-Jos yhtälön oikea puoli eli $\frac{a^2}{4}+\frac{b^2}{4}-c \geq 0$ yhtälö kuvaa $\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$-säteistä $(-\frac{a}{2},-\frac{b}{2})$-keskistä ympyrää. Jos oikea puoli on nolla, yhtälö kuvaa vastaavaa pistettä. Jos se on negatiivinen, yhtälön vasen puoli on aina positiivinen, joten yhtälön toteuttavia lukupareja ei ole, ts. yhtälö kuvaa tyhjää joukkoa.
+Jos yhtälön oikea puoli eli $\frac{a^2}{4}+\frac{b^2}{4}-c \geq 0$ yhtälö kuvaa $\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$-säteistä $(-\frac{a}{2},-\frac{b}{2})$-keskistä ympyrää. Jos oikea puoli on nolla, yhtälö kuvaa vastaavaa pistettä. Jos se on negatiivinen, yhtälön vasen puoli on aina positiivinen, joten yhtälön toteuttavia lukupareja ei ole. Yhtälö ei siis kuvaa mitään käyrää.
 
-\laatikko{Yhtälöt muotoa
-\[
-x^2+ax+y^2+by+c = 0
-\]
-kuvaavat ympyrää, pistettä tai tyhjää joukkoa.}
+%\laatikko{Yhtälöt muotoa
+%\[
+%x^2+ax+y^2+by+c = 0
+%\]
+%kuvaavat ympyrää, pistettä tai tyhjää joukkoa.}
 
 \begin{tehtavasivu}
 
