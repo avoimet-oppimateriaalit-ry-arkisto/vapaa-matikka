@@ -22,8 +22,11 @@ Esimerkiksi seuraavat lausekkeet ovat polynomeja:
 \item $y^2+1$, muuttujana $y$
 \item $xy^2+x^2y$, muuttujina $x$ ja $y$
 \end{itemize}
-Polynomeissa on muuttujien potenssien ($\in\N$) lisäksi ainoastaan vakiolla kertomista sekä yhteen- ja vähennyslaskua.
-Polynomin yleinen muoto on $a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0$, missä $n\in\N$ ja $a_i\in\R, i \in\{0, 1, \ldots, n-1, n\}$.
+Polynomeissa on muuttujien potenssien (eksponentit luonnollisia lukuja) lisäksi ainoastaan vakiolla kertomista sekä yhteen- ja vähennyslaskua.
+Polynomin yleinen muoto on
+\[
+a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0 \; \textnormal{jollakin} \; n\in\N; \; a_0, a_1, \ldots, a_{n-1}, a_n \; \textnormal{ovat vakioita}.
+\] % miten nollapolynomin laita? asteista ei puhuta tässä, joten a_n \neq 0 ei välttämätön
 Jokainen lauseke, joka on esitettävissä polynomin yleisessä muodossa, on polynomi.
 Esimerkiksi seuraavat muuttujan $x$ lausekkeet \emph{eivät ole} polynomeja:
 \begin{itemize}
@@ -43,128 +46,119 @@ Yhden ja kahden termin polynomeja kutsutaan \termi{monomi}{monomeiksi} ja \termi
 
 Muuttujan eksponenttia kutsutaan termin \termi{aste}{asteeksi} tai \termi{asteluku}{asteluvuksi}.
 Vakiotermin aste on nolla. Polynomin aste on suurin sen termien asteista.
+On tärkeää huomata, että polynomin asteen saaminen selville voi vaatia polynomin sieventämistä.
+Esimerkiksi $2x^2-x^2+1-x^2 = 1$ ei ole toisen, vaan nollannen asteen polynomi.
 
 Koska yhteenlasku on vaihdannainen, polynomin termit voi kirjoittaa missä tahansa järjestyksessä.
-Siksi esimerkiksi polynomi $y^4+y^2-1$ voidaan kirjoittaa myös järjestyksessä $-1+y^4+y^2$.
-
+Esimerkiksi polynomi $y^4+y^2-1$ voidaan kirjoittaa myös järjestyksessä $-1+y^4+y^2$.
 Yleensä polynomien termit kirjoitetaan niiden asteen perusteella laskevaan järjestykseen niin, että korkeimman asteen termi kirjoitetaan ensin.
 
 \begin{esimerkki}
-Polynomilausekkeen $x^4-2x^3+5$ termit ovat $x^4$, $-2x^3$ ja $5$.
-Ensimmäinen termi $x^4$ on neljännen asteen termi. Termin $-2x^3$ aste on kolme, ja vakiotermin $5$ aste on nolla.
-Koko polynomin aste on neljä, koska se on termien asteista suurin.
+    Mitkä ovat polynomin $x^4-2x^3+5$ termit ja niiden asteet? Mikä on polynomin aste?
+    \begin{esimvast}
+        Polynomin $x^4-2x^3+5$ termit ovat $x^4$, $-2x^3$ ja $5$ ja niiden asteet ovat
+        neljä, kolme ja nolla, vastaavasti. Polynomin aste on sama kuin sama kuin
+        korkein termien asteista, eli neljä.
+    \end{esimvast}
 \end{esimerkki}
-
-%Huomaa, että polynomilauseke pitää sieventää ennen asteen määrittämistä.
-%Määritetään vaikkapa polynomin $x^5-4x^2+6x^3+3-x^5-x$ aste.
-%Summataan ensin termejä niin, että
-%polynomissa on vain yksi termi jokaista astetta:
-%\[x^5-4x^2+6x^3+3-x^5-x = 6x^3-4x^2-x+3.\]
-%Nyt nähdään, että polynomin aste on 3.
-
-%\laatikko{
-%Polynomi $P$, joka on astetta $n$, voidaan aina sieventää muotoon
-%\[P(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0,\]
-%missä $a_0, a_1, \ldots, a_n$ ovat vakioita ja $a_n \neq 0$.
-%}
 
 \subsection*{Polynomifunktion arvo}
 
 \qrlinkki{http://opetus.tv/maa/maa2/polynomiesimerkkeja/}
 {Opetus.tv: \emph{polynomiesimerkkejä} (7:43 ja 6:59)}
 
-Polynomi määrittää funktion, jota kutsutaan \termi{polynomifunktio}{polynomifunktioksi}. Esimerkiksi polynomi $2x^2+2x-1$ määrittää funktion $P(x)=2x^2+2x-1$. Tämän funktion arvoja voidaan laskea sijoittamalla lukuja muuttujan $x$ paikalle:
+Polynomi määrittää funktion, jota kutsutaan \termi{polynomifunktio}{polynomifunktioksi}.
+Esimerkiksi polynomi $2x^2+2x-1$ määrittää funktion $P(x)=2x^2+2x-1$.
+Tämän funktion arvoja voidaan laskea sijoittamalla lukuja muuttujan $x$ paikalle:
 \begin{align*}
-P(2) & = 5\cdot 2^2-3\cdot 2+2 = 20 - 6 + 2 = 16 \\
-P(-1) & = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
-P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
+    P(2) & = 5\cdot 2^2-3\cdot 2+2 = 20 - 6 + 2 = 16 \\
+    P(-1) & = 5(-1)^2-3(-1)+2 = 5 + 3 + 2 = 10 \\
+    P(-3) & = 5(-3)^2-3(-3)+2 = 45 + 9 + 2 = 56.
 \end{align*}
 
-Toisinaan polynomeja ja polynomifunktioita käsitellään kuin ne olisivat sama asia.
-Voidaan esimerkiksi sanoa ''polynomi $P(x)=2x+1$'', vaikka yleensä $P(x)$-merkintää käytetään funktioista.
-
-%Samalla polynomifunktiolla voi olla useampia esityksiä polynomilausekkeena.
-%Esimerkiksi jos $P(x) = x^2-x^2+x+1$ ja $Q(x) = x+1$, $P$ ja $Q$ ovat samat
-%funktiot koska $x^2 - x^2 = 0$ kaikilla reaaliluvuilla x. Siis saman
-%polynomifunktion eri esityksissä lausekkeina suurimman termin aste voi olla
-%eri, esimerkiksi $P$:ssä se on 2 ja $Q$:ssa 1. Useimmiten kiinnostavin on
-%kuitenkin pienin mahdollinen aste, jolloin polynomifunktion $P$ aste olisi
-%myös 1.
+Polynomeja ja polynomifunktioita käsitellään usein yhtäläisesti;
+voidaan esimerkiksi sanoa ''polynomi $P(x)=2x+1$'',
+vaikka tarkoitetaan vastaavaa polynomifunktiota.
 
 \subsection*{Polynomien yhteen- ja vähennyslasku}
 
 \qrlinkki{http://opetus.tv/maa/maa2/polynomien-yhteen-ja-vahennyslasku/}
 {Opetus.tv: \emph{polynomien yhteen- ja vähennyslasku} (7:36)}
 
-Polynomeja voidaan laskea yhteen summaamalla samanasteiset termit. Tätä varten on kätevää ensin ryhmitellä polynomin samanasteiset termit vierekkäin.
+Polynomeja voidaan laskea yhteen summaamalla samanasteiset termit.
+On kätevää aloittaa ryhmittelemällä samanasteiset termit vierekkäin.
 
 \begin{esimerkki}
 Laske polynomien $5x^2-x+5$ ja $3x^2-1$ summa.
-   \begin{align*}
-        (\textcolor{blue}{5x^2} \textcolor{red}{{}-x} + 5) + (\textcolor{blue}{+3x^2} -1) 
-        &=\textcolor{blue}{5x^2} \textcolor{red}{{}-x} + 5  \textcolor{blue}{{}+3x^2} -1 \\
-        &=\textcolor{blue}{5x^2+3x^2} \textcolor{red}{{}-x} +5-1\\
-        &=\textcolor{blue}{(5+3)x^2} \textcolor{red}{{}-x}+(5-1)\\
-        &=\textcolor{blue}{8x^2} \textcolor{red}{{}-x}+4.
-    \end{align*}
+    \begin{esimratk}
+        \begin{align*}
+            (\textcolor{blue}{5x^2} \textcolor{red}{{}-x} + 5) + (\textcolor{blue}{+3x^2} -1) 
+            &=\textcolor{blue}{5x^2} \textcolor{red}{{}-x} + 5  \textcolor{blue}{{}+3x^2} -1 \\
+            &=\textcolor{blue}{5x^2+3x^2} \textcolor{red}{{}-x} +5-1\\
+            &=\textcolor{blue}{(5+3)x^2} \textcolor{red}{{}-x}+(5-1)\\
+            &=\textcolor{blue}{8x^2} \textcolor{red}{{}-x}+4.
+        \end{align*}
+    \end{esimratk}
+    \begin{esimvast}
+        Polynomien summa on $8x^2-x+4$.
+    \end{esimvast}
 \end{esimerkki}
 
-Samalla tavalla polynomeja voidaan vähentää toisistaan.
+Polynomeja voidaan vastaavalla tavalla vähentää toisistaan.
 
 \begin{esimerkki}
     Laske polynomien $14x^3+69$ ja $3x^3+2x^2+x$ erotus.
-    \begin{align*}
-        (\textcolor{green}{14x^3} + 69) - (\textcolor{green}{3x^3} \textcolor{blue}{{}+ 2x^2} \textcolor{red}{{}+x})
-        &= \textcolor{green}{14x^3} + 69 \textcolor{green}{{}-3x^3} - 
-            \textcolor{blue}{2x^2} \textcolor{red}{{}-x} \\
-        &= \textcolor{green}{14x^3{}-3x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69 \\
-        &= \textcolor{green}{(14{}-3)x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69 \\
-        &= \textcolor{green}{11x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69
-    \end{align*}
+    \begin{esimratk}
+        \begin{align*}
+            (\textcolor{green}{14x^3} + 69) - (\textcolor{green}{3x^3} \textcolor{blue}{{}+ 2x^2} \textcolor{red}{{}+x})
+            &= \textcolor{green}{14x^3} + 69 \textcolor{green}{{}-3x^3} - \textcolor{blue}{2x^2} \textcolor{red}{{}-x} \\
+            &= \textcolor{green}{14x^3{}-3x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69 \\
+            &= \textcolor{green}{(14{}-3)x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69 \\
+            &= \textcolor{green}{11x^3} \textcolor{blue}{{}-2x^2} \textcolor{red}{{}-x} + 69
+        \end{align*}
+    \end{esimratk}
+    \begin{esimvast}
+        Polynomien erotus on $11x^3-2x^2-x+69$.
+    \end{esimvast}
 \end{esimerkki}
-    
-Samanasteisten termien yhteen- ja vähennyslasku perustuu siihen, että reaalilukujen osittelulain (ks. Vapaa matikka 1) nojalla vakiokerroin voidaan
-ottaa yhteiseksi tekijäksi:
+
+Samanasteisten termien yhteen- ja vähennyslasku perustuu siihen,
+että reaalilukujen osittelulain (ks. Vapaa matikka 1) nojalla vakiokerroin voidaan ottaa yhteiseksi tekijäksi:
 \[
 ax^n+bx^n=(a+b)x^n.
 \]
 
-  
-\begin{esimerkki}
-Olkoon polynomit $P(x)=x+1$ ja $Q(x)=3x^2-2x+5$. Määritä summa $P(x)+Q(x)$.
-   \begin{align*}
-        P(x)+Q(x)&=(x+1)+(3x^2-2x+5) = x+1+3x^2-2x+5 \\
-                 &= 3x^2+x-2x+1+5 =3x^2-x+6.
-    \end{align*}
-\end{esimerkki}
-
-Kun laskurutiinia eli varmuutta on tarpeeksi, voi yllä olevasta esimerkistä jättää yksi tai kaksi välivaihetta pois.
-
-% \begin{esimerkki}
-% Määritä polynomien $R(x)=-4x^4+3x^3-x$ ja $S(x)=-3x^3+5x^2+2x$ summa.
-%    \begin{align*}
-%         R(x)+S(x)=(-4x^4+3x^3-x)+(-3x^3+5x^2+2x) =-4x^4+5x^2+x.
-%     \end{align*}
-% \end{esimerkki}
+Polynomifunktioita nimetään tyypillisesti isoilla kirjaimilla, kuten $P$, $Q$ tai $R$.
 
 \begin{esimerkki}
-    Laske polynomien $P(x)$ ja $R(x)$ erotus, kun $P(x)=x+1$ ja $R(x)=-4x^4+3x^3-x$.
-   \begin{align*}
-        P(x)-R(x) & =(x+1)-(-4x^4+3x^3-x) =x+1+4x^4-3x^3+x \\
-        & =4x^4-3x^3+x+x+1 = 4x^4-3x^3+2x+1.
-    \end{align*}
+    Olkoot polynomit $P(x)=2x+1$ ja $Q(x)=3x^2-2x+5$. Määritä summa $R(x)=P(x)+Q(x)$.
+    \begin{esimratk}
+        \begin{align*}
+            R(x) = P(x)+Q(x) &= (2x+1)+(3x^2-2x+5) = 2x+1+3x^2-2x+5 \\
+                             &= 3x^2+2x-2x+1+5 = 3x^2+6.
+        \end{align*}
+    \end{esimratk}
+    \begin{esimvast}
+        $R(x) = 3x^2+6$.
+    \end{esimvast}
 \end{esimerkki}
 
-Yhteenlasketut ja vähennetyt polynomit sievennetään yleensä perusmuotoon, jossa on vain yksi termi kutakin astetta kohti. Tämä tehdään esimerkiksi silloin, kun selvitetään polynomin aste.
+Polynomit sievennetään yleensä yleiseen muotoon, jossa on vain yksi termi kutakin astetta kohti.
+Tämä tehdään esimerkiksi silloin, kun selvitetään polynomin aste.
 
-\begin{esimerkki} Mikä on polynomin $P(x)=(x^2+2x+1)-(x^2+2)$ aste?
-
-\[
-P(x)=x^2+2x+1-x^2-2=2x-1.
-\]
-Ensisilmäyksellä polynomin asteen voisi ajatella olevan 2, mutta tässä tapauksessa toisen asteen termit häviävät sievennettäessä ja asteluku onkin 1.
+\begin{esimerkki}
+    Laske polynomien $P$ ja $Q$ erotus $R$, kun $P(x)=-3x^4+x^2+1$ ja $Q(x)=-3x^4+3x^3-x$.
+    Mikä on polynomin $R$ aste?
+   \begin{esimratk}
+        \begin{align*}
+            R(x) = P(x)-Q(x) &= (-3x^4+x^2+1)-(-3x^4+3x^3-x) = -3x^4+x^2+1+3x^4-3x^3+x \\
+                             &= -3x^4+3x^4-3x^3+x^2+x+1 = -3x^3+x^2+x+1.
+        \end{align*}
+    \end{esimratk}
+    \begin{esimvast}
+        $R(x) = -3x^3+x^2+x+1$. Polynomin $R$ aste on kolme.
+    \end{esimvast}
 \end{esimerkki}
-
 
 \begin{tehtavasivu}
 
