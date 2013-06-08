@@ -42,67 +42,74 @@ Epänegatiivisen luvun itseisarvo on luku itse ja
 negatiivisen luvun itseisarvo on luvun vastaluku.
 
 \laatikko{
-	\textbf{Itseisarvon määritelmä}\\
-	$|x|= \begin{cases}
-			x, & \kun x \geq 0 \\
-			-x, & \kun x < 0
-	\end{cases}$
+\textbf{Itseisarvon määritelmä}
+
+\[
+|x|=\begin{cases}
+	x, & \kun x \geq 0 \\
+	-x, & \kun x < 0
+\end{cases} 
+\]
 }
 
-Itseisarvo on funktio
-\[
-||: \R \rightarrow \R, \;
-|x| = \begin{cases}
-		x, & \kun x \geq 0 \\
-		-x, & \kun x < 0.
-	\end{cases}
-\]
+% TÄMÄ oli minusta tällaisenaan hyvin epäselvä (Jokke) eikä kovin tarpeellinen
+% Itseisarvo on funktio
+% \[
+% ||: \R \rightarrow \R, \;
+% |x| = \begin{cases}
+% 		x, & \kun x \geq 0 \\
+% 		-x, & \kun x < 0.
+% 	\end{cases}
+% \]
 
 \begin{esimerkki}
 Esitä ilman itseisarvomerkkejä
-	\begin{alakohdat}
-		\alakohta{$|3-\pi|$}
-		\alakohta{$|x-3|$}
-	\end{alakohdat}
-	\textbf{Ratkaisu}
-	\begin{alakohdat}
-		\alakohta{Koska $3-\pi\approx-0,14<0$, niin $|3-\pi|=-(3-\pi)=\pi-3$}
-		\alakohta{Koska $x-3\geq 0$, kun $x\geq3$, niin\\
-			$|x-3|= \begin{cases}
-				x-3, & \kun x \geq 3 \\
-				-x+3, & \kun x < 3
-			\end{cases}$
-		}
-	\end{alakohdat}
+\begin{alakohdat}
+	\alakohta{$|3-\pi|$}
+	\alakohta{$|x-3|$}
+\end{alakohdat}
+
+\begin{esimratk}
+\begin{alakohdat}
+\alakohta{Koska $3-\pi\approx-0,14<0$, niin $|3-\pi|=-(3-\pi)=\pi-3$}
+\alakohta{Koska $x-3\geq 0$, kun $x\geq3$, niin
+\[
+|x-3|= \begin{cases}
+x-3, & \kun x \geq 3 \\
+-x+3, & \kun x < 3
+\end{cases}
+\]
+}
+\end{alakohdat}
+\end{esimratk}
 \end{esimerkki}
 
-\vspace{10 mm}
-
 \laatikko{
-\textbf{Itseisarvon ominaisuuksia}\\ \\
-	\begin{tabular}{l l}
-		$|a|\geq0$ & Itseisarvo on aina epänegatiivinen \\
-		$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
-		$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
-		$|ab|=|a||b|$ & Tulon itseisarvo \\
-		$\Bigl|\dfrac{a}{b}\Bigr|=\dfrac{|a|}{|b|}$ & Osamäärän itseisarvo
+\textbf{Itseisarvon ominaisuuksia}
 
-	\end{tabular}
+\begin{tabular}{ll}
+	$|a|\geq0$ & Itseisarvo on aina epänegatiivinen \\
+	$|a|=|-a|$ & Luvun ja sen vastaluvun itseisarvot ovat yhtäsuuret \\
+	$|a|^2=a^2$ & Luvun itseisarvon neliö on yhtäsuuri kuin luvun neliö \\
+	$|ab|=|a||b|$ & Tulon itseisarvo on tekijöiden itseisarvojen tulo \\
+	$\Bigl|\dfrac{a}{b}\Bigr|=\dfrac{|a|}{|b|}$ & Osamäärän itseisarvo on tekijöiden itseisarvojen osamäärä
+\end{tabular}
 }
 
 \begin{esimerkki}
-	Esitä lauseke $|x^2-16|+3x$ ilman itseisarvomerkkejä.\\
-	\textbf{Ratkaisu} \\
-	Tutkitaan ensin lausekkeen $x^2-16$ merkit.
-	
-	\begin{align*}
-		\text{Nollakohdat: } \qquad	x^2-16 &=0 \\
-			x^2 &=16 \\
-			x &=\pm\sqrt{16} \\
-			x &=\pm 4
-	\end{align*}
-	
-	Lausekkeen $x^2-16$ kuvaaja on ylöspäin aukeneva paraabeli, joka leikkaa x-akselin kohdissa $-4$ ja $4$.
+Esitä lauseke $|x^2-16|+3x$ ilman itseisarvomerkkejä.
+
+\begin{esimratk}
+Tutkitaan ensin lausekkeen $x^2-16$ merkit. Aloitetaan etsimällä lausekkeen nollakohdat:
+
+\begin{align*}
+x^2-16 & =0 \\
+x^2 & =16 \\
+x & =\pm\sqrt{16} \\
+x & =\pm 4
+\end{align*}
+
+Lausekkeen $x^2-16$ kuvaaja on ylöspäin aukeneva paraabeli, joka leikkaa $x$-akselin kohdissa $-4$ ja $4$.
 	
 % Käyttö:
 % \begin{lukusuora}{-1}{1}{10}
@@ -140,73 +147,82 @@ Kun $-4<x<4$, niin $x^2-16<0$. Tällöin
 \]
 Kun $x\leq-4$ tai $x\geq4$, on $x^2-16\geq0$, ja tällöin
 \[
-|x^2-16|+3x =x^2-16+3x=x^2+3x-16
+|x^2-16|+3x =x^2-16+3x=x^2+3x-16.
 \]
+\end{esimratk}
 
-Siis:\\
-
-			$|x^2-16|+3x=
-			\begin{cases}
-				-x^2+3x+16, & \kun -4<x<4 \\
-				x^2+3x-16, & \kun x\leq -4 \tai x\geq 4
-			\end{cases}$
-
+\begin{esimvast}
+\[
+|x^2-16|+3x=
+\begin{cases}
+-x^2+3x+16, & \kun -4<x<4 \\
+x^2+3x-16, & \text{kun $x\leq -4$ tai $x\geq 4$}
+\end{cases}
+\]
+\end{esimvast}
 \end{esimerkki}
 
-\newpage
 \subsection*{Itseisarvoyhtälö $|f(x)|=a$}
 
 \qrlinkki{http://opetus.tv/maa/maa4/itseisarvoyhtalo/}{Opetus.tv: Itseisarvoyhtälö}
 
-Itseisarvoyhtälössä muuttuja on itseisarvomerkkien sisällä. Itseisarvoyhtälö voidaan ratkaista esittämällä yhtälö ilman itseisarvo merkkejä hyödyntäen itseisarvon määritelmää ja ominaisuuksia, ja ratkaisemalla saadut yhtälöt.
+Itseisarvoyhtälössä muuttuja on itseisarvomerkkien sisällä. Itseisarvoyhtälö voidaan ratkaista esittämällä yhtälö ensin ilman itseisarvomerkkejä. Tässä voi hyödyntää itseisarvon määritelmää ja ominaisuuksia. Sen jälkeen ratkaistaan saadut yhtälöt tavalliseen tapaan.
 
 \laatikko{
-\textbf{Yhtälö: \quad $|f(x)|=a$}\\
-Jos $a\geq0$, niin
-\[
-	f(x)=a  \quad \tai \quad f(x)=-a
-\]
-Jos $a<0$, niin yhtälöllä $|f(x)|=a$ ei ole ratkaisuja.
+\textbf{Yhtälö:} $|f(x)|=a$
 
+\textbf{Ratkaisu:} Jos $a\geq0$, niin
+\[
+f(x)=a  \quad \tai \quad f(x)=-a
+\]
+Jos $a<0$, niin yhtälöllä ei ole ratkaisuja.
 }
 
 \begin{esimerkki}
 
 Ratkaise yhtälö
-	\begin{alakohdat}
-		\alakohta{ $|x|=3$}
-		\alakohta{ $|x|=-2$}
-	\end{alakohdat}
-	\textbf{Ratkaisu} \\
-	\begin{alakohdat}
-		\alakohta{Ainoastaan lukujen $3$ ja $-3$ itseisarvot ovat 3, joten $x=3$ tai $x=-3$. Siis $x=\pm 3$}
-		\alakohta{Itseisarvo ei voi olla negatiivinen, joten yhtälöllä ei ole ratkaisua.}
-	\end{alakohdat}
+\begin{alakohdat}
+	\alakohta{ $|x|=3$}
+	\alakohta{ $|x|=-2$}
+\end{alakohdat}
 
-\end{esimerkki}
-
-
-\begin{esimerkki}
-Ratkaise yhtälö $|3x-4|=2$. \\
-\textbf{Ratkaisu}\\
-Yhtälön ratkaisut saadaan, kun luvun $3x-4$ etäisyys nollasta on 2, eli ainoastaan jos luku on $2$ tai $-2$. Saadaan:
-	\begin{align*}
-		3x-4&=2    &\tai  \qquad    \qquad      3x-4&=-2 \\
-		3x&=6      &     \qquad      3x&= 2 \\
-		x&=2       &     \qquad          x&=\frac{2}{3}
-	\end{align*}
-Ratkaisun oikeellisuuden voi tarkistaa sijoittamalla saadut ratkaisut alkupäiseen yhtälöön.
-\[|3\cdot2-4|=|6-4|=|2|=2 \quad \text{ ja } \quad \vert3\cdot\dfrac{2}{3}-4\vert=|2-4|=|-2|=2\text{.}\]
-
-\textbf{Vastaus: } $x=2$  tai  $x=\dfrac{2}{3}$.
+\begin{esimratk}
+\begin{alakohdat}
+	\alakohta{Ainoastaan lukujen $3$ ja $-3$ itseisarvot ovat 3, joten $x=3$ tai $x=-3$. Siis $x=\pm 3$}
+	\alakohta{Itseisarvo ei voi olla negatiivinen, joten yhtälöllä ei ole ratkaisua.}
+\end{alakohdat}
+\end{esimratk}
 \end{esimerkki}
 
 \begin{esimerkki}
-Ratkaise yhtälö $3x=3+|2x-3|$. (YO S82/1)\\
-\textbf{Ratkaisu}\\
+Ratkaise yhtälö $|3x-4|=2$.
+
+\begin{esimratk}
+Yhtälön toteutuu, kun luvun $3x-4$ etäisyys nollasta on 2, eli ainoastaan jos luku on $2$ tai $-2$. Saadaan:
 \begin{align*}
-	3x&=3+|2x-3|  \\
-	3x-3&=\underbrace{|2x-3|}_{\geq0}  \\
+3x-4 & =2 & & \tai & 3x-4 & =-2 \\
+3x & =6 && & 3x & = 2 \\
+x & =2 && & x & =\frac{2}{3}
+\end{align*}
+Ratkaisun oikeellisuuden voi tarkistaa sijoittamalla saadut ratkaisut alkupäiseen yhtälöön.
+\[
+|3\cdot2-4|=|6-4|=|2|=2 \quad \text{ja} \quad
+\left|3\cdot\frac{2}{3}-4\right|=|2-4|=|-2|=2.
+\]
+\end{esimratk}
+
+\begin{esimvast}
+$x=2$ tai $x=\dfrac{2}{3}$.
+\end{esimvast}
+\end{esimerkki}
+
+\begin{esimerkki}
+Ratkaise yhtälö $3x=3+|2x-3|$. (YO S82/1)
+
+\begin{esimratk}
+\begin{align*}
+3x & =3+|2x-3|  \\
+3x-3 & =\underbrace{|2x-3|}_{\geq 0}
 \end{align*}
 Koska $|2x-3|\geq0$ aina, niin on oltava myös $3x-3\geq0$. Tällöin
 \begin{align*}
@@ -216,19 +232,19 @@ Koska $|2x-3|\geq0$ aina, niin on oltava myös $3x-3\geq0$. Tällöin
 \end{align*}
 Itseisarvoyhtälöstä saadaan:
 \begin{align*}
-	2x-3&=3x-3   &\tai  \qquad \qquad 2x-3&=-(3x-3) \\
-	-x&=0        &\ \                  2x-3&=-3x+3 \\
-	x&=0         &\ \                  5x&=6 \\
-	\text{ei kelpaa,}&\text{ oltava}x\geq1  &\ \  x&=\frac{6}{5} \\
-	&\ \         &\ \                 &\text{kelpaa}
+	2x-3&=3x-3   & &\tai & 2x-3 & =-(3x-3) \\
+	-x&=0        && & 2x-3&=-3x+3 \\
+	x&=0         && & 5x&=6 \\
+	\text{ei kelpaa, } & \text{oltava $x\geq1$}  && & x&=\frac{6}{5}, \text{kelpaa}
 \end{align*}
-\textbf{Vastaus: }$x=\dfrac{6}{5}=1\dfrac{1}{5}$.
+\end{esimratk}
 
+\begin{esimvast}
+$x=\dfrac{6}{5}=1\dfrac{1}{5}$.
+\end{esimvast}
 \end{esimerkki}
 
-
 Edellisen esimerkin tilannetta $3x-3=|2x-3|$ voidaan tarkastella myös piirtämällä kuvaajat $y=3x-3$ ja $y=|2x-3|$. Lausekkeet ovat yhtäsuuret, kun niiden saamat $y$:n arvot ovat yhtäsuuret, siis kohdissa, joissa kuvaajat leikkaavat toisensa.
-
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 4.5, -2, 3, nimiX = "$x$", nimiY = "$y$")
