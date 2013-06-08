@@ -27,7 +27,6 @@ Kussilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli
     kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = (-1, 1))
 \end{kuva}
 
-
 \begin{esimerkki}
 Määritä pistejoukon yhtälö, jolla on seuraava ominaisuus: Jokainen pistejoukon piste on yhtä etäällä pisteestä $(0, 3)$ ja suorasta $y=-3$
 \begin{esimratk}
@@ -53,7 +52,6 @@ Pistejoukon yhtälö on $y=\frac{1}{12}x^2$.
 \end{esimratk}
 \end{esimerkki}
 
-
 %%% FIX ME ONKO HUIPPUMUOTOINEN HYVÄ TERMI? %%%%%%%%%%%
 \subsection{Paraabelin huippumuotoinen yhtälö}
 
@@ -65,11 +63,10 @@ y-y_0 = a(x-x_0)^2
 
 %%%%% FIX ME Mikä on tämän alaluvun suhde MAA1-kirjan liitteenä olevaan alalukuun "Toisen asteen polynomin kuvaaja"
 
-
 \begin{esimerkki}
 Mitkä ovat paraabelin $y=3x^2-12x+13$ huipun koordinaatit?
 \begin{esimratk}
-Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa lienee kuitenkin muuttaa huippumuoitoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi.
+Paraabelin huipun koordinaatit näkisi suoraan huippumuotoiseksi muutetusta yhtälöstä. Helpompaa lienee kuitenkin muuttaa huippumuoitoinen yhtälö $y$:n suhteen ratkaistuksi ja merkitä yhtälöiden kertoimet samoiksi, jolloin saadaan selville $x_0$ ja $y_0$.
 
 \begin{align*}
 y-y_0 &= a(x-x_0)^2 \\
@@ -77,8 +74,6 @@ y       &= a(x^2-2x_0x+x_0^2)+y_0\\
 y       &= ax^2-2ax_0x+(ax_0^2+y_0) &&\ppalkki a=3\\
 y       &= 3x^2-6x_0x+(3x_0^2+y_0)
 \end{align*}
-
-
 
 Merkitään $x$:n kertoimet ja vakiotermit samoiksi.
 
@@ -98,9 +93,25 @@ Paraabelin huippu on pisteessä $(2, 1)$.
 \end{esimratk}
 \end{esimerkki}
 
-
-
 \begin{tehtavasivu}
+
+\begin{tehtava}
+Mikä on sen käyrän yhtälö, jonka kukin piste on yhtä etäällä suorasta $y=0$ ja pisteestä $(-3, 1)$.
+\begin{vastaus}
+% http://www.wolframalpha.com/input/?i=+sqrt%28%28-3-x%29%5E2+%2B+%281-y%29%5E2%29%3D+abs%280-y%29
+$y = \frac{1}{2}x^2+3 x+5$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+%%% ONKO JOHTOSUORA NIIN OLEELLINEN KÄSITE, ETTÄ KÄYTETÄÄN TEHTÄVISSÄ?
+%% tehtävänhän voi kirjoittaa ilman tuota termiä
+Mikä on sen paraabelin yhtälö, jonka polttopiste on $(2, 3)$ ja johtosuora $y=1$?
+\begin{vastaus}
+% http://www.wolframalpha.com/input/?i=+sqrt%28%282-x%29%5E2+%2B+%283-y%29%5E2%29%3D+abs%281-y%29
+$y = \frac{1}{4}x^2-x+3$
+\end{vastaus}
+\end{tehtava}
 
 \subsubsection*{Opi perusteet}
 
