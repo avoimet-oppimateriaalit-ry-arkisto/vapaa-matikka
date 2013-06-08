@@ -11,6 +11,8 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
+Itseisarvoepäyhtälön ratkaiseminen riippuu hyvin paljon epäyhtälön muodosta. Helpointa on hahmotella kutakin tilannetta erikseen lukusuoran avulla ja yrittää palauttaa itseisarvoepäyhtälö yhdeksi tai useammaksi tavalliseksi epäyhtälöksi. Tutustutaan erilaisiin tilanteisiin esimerkkien avulla.
+
 \begin{esimerkki}
 Ratkaise epäyhtälö $|x|<3$.
 
@@ -23,9 +25,8 @@ Siten ratkaisu on $-3<x<3$.
 \end{esimratk}
 
 \begin{esimvast}
-$-3<x<3$
+$-3<x<3$.
 \end{esimvast}
-
 
 \end{esimerkki}
 
@@ -49,20 +50,19 @@ $x<-5$ tai $x>5$
 Ratkaise epäyhtälö $|x+4|<2$.
 
 \begin{esimratk}
-Nyt luvun $x+4$ itseisarvo on pienempi kuin kaksi, joten tiedetään, että $-2<x+4<2$. Nyt saadaan ratkaistavaksi epäyhtälöt $-2<x+4$ ja $x+4<2$. Ratkaistaan nämä kaksi yhtälöä erikseen:
-
+Nyt luvun $x+4$ itseisarvo on pienempi kuin kaksi, joten aikaisemman esimerkin perusteella tiedetään, että $-2<x+4<2$. Näin saadaan ratkaistaviksi epäyhtälöt $-2<x+4$ ja $x+4<2$. Ratkaistaan nämä kaksi epäyhtälöä erikseen:
 \begin{align*}
 -2&<x+4 & \ppalkki{+2} \\
 0&<x+6 & \ppalkki{-6} \\
 -6&<x &
 \end{align*}
-
+ja
 \begin{align*}
 x+4&<2 & \ppalkki{-4} \\
 x&<-2 & \ppalkki{-6}
 \end{align*}
 
-Kun vastaukset yhdistetään saadaan ratkaisuksi $-6<x<-2$.
+Kun vastaukset yhdistetään, saadaan ratkaisuksi $-6<x<-2$.
 
 (Tähän kuva.)
 
@@ -73,6 +73,35 @@ $-6<x<-2$.
 \end{esimvast}
 \end{esimerkki}
 
+\begin{esimerkki} Ratkaise epäyhtälö $|2x-1|>|x+2|$.
+
+\begin{esimratk} Koska molemmat puolet ovat epänegatiivisia, itseisarvomerkit voitaisiin poistaa korottamalla epäyhtälö puolittain toiseen potenssiin. Mutta miten käy epäyhtälön merkille? Jos kaksi epänegatiivista lukua korotetaan toiseen potenssiin, niiden keskinäinen järjestys säilyy. Voimme siis korottaa tehtävän epäyhtälön puolittain toiseen potenssiin, ja epäyhtälömerkin suunta säilyy. Tämän jälkeen epäyhtälöä käsitellään toisen asteen epäyhtälönä.
+
+\begin{align*}
+|2x-1|^2 & >|x+2|^2 \\
+(2x-1)^2 & >(x+2)^2 \\
+4x^2-4x+1 & >x^2+4x+4 \\
+3x^2-8x-3 & >0
+\end{align*}
+
+Toisen asteen epäyhtälö ratkaistaan etsimällä lausekkeen nollakohdat ja päättelemällä merkkikaavion tai kuvaajan avulla, millä alueilla epäyhtälö toteutuu.
+\begin{align*}
+3x^2-8x-3 & =0 \\
+x & =\frac{8\pm\sqrt{8^2-4\cdot3\cdot(-3)}}{2\cdot 3} \\
+x & =\frac{8\pm\sqrt{64+36}}{6} \\
+x & =\frac{8\pm 10}{6} \\
+x=3 \quad & \text{tai} \quad x=-\frac{1}{3}
+\end{align*}
+
+TÄHÄN MERKKIKAAVIO JA KUVAAJA
+
+Epäyhtälö toteutuu lausekkeen $3x^2-8x-3$ nollakohtien välisen alueen ulkopuolella eli silloin, kun $x<-\dfrac{1}{3}$ tai $x>3$.
+\end{esimratk}
+
+\begin{esimvast}
+$x<-\dfrac{1}{3}$ tai $x>3$.
+\end{esimvast}
+\end{esimerkki}
 
 \subsection*{Tehtäviä}
 
