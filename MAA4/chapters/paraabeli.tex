@@ -19,12 +19,12 @@ Kussilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
-    kuvaaja.piirra("0.5*x**2-x+0.25", a = -1.5, b = 3.5, nimi = "$y= 0,5x^2-x+0,25$", kohta = (3.2,2.1), suunta = (-1, 1))
+    kuvaaja.piirra("0.5*x**2-x+0.25", a = -1.5, b = 3.5, nimi = "$y= 0,5x^2-x+0,25$", kohta = (3.2,2.1), suunta = -135)
 \end{kuva}
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
-    kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = (-1, 1))
+    kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = -135)
 \end{kuva}
 
 \begin{esimerkki}
@@ -95,6 +95,25 @@ Paraabelin huippu on pisteessä $(2, 1)$.
 
 \begin{tehtavasivu}
 
+\subsubsection*{Opi perusteet}
+
+\subsubsection*{Hallitse kokonaisuus}
+
+\subsubsection*{Sekalaisia tehtäviä}
+
+TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
+
+\begin{tehtava}
+Millaisella käyrällä ovat ympyröiden keskipisteet, kun ympyrät kulkevat pisteen $(0, 0)$ kautta ja sivuavat suoraa $x=4$?
+\begin{vastaus}
+%keskipiste (x, y)
+% x< 4 
+% kulkee origon kautta, joten (0-x)^2+(0-y)^2=r^2
+% etäisyys suorasta |x-4| = r
+$x=-\frac{1}{8}y^2+2$
+\end{vastaus}
+\end{tehtava}
+
 \begin{tehtava}
 Mikä on sen käyrän yhtälö, jonka kukin piste on yhtä etäällä suorasta $y=0$ ja pisteestä $(-3, 1)$.
 \begin{vastaus}
@@ -113,12 +132,32 @@ $y = \frac{1}{4}x^2-x+3$
 \end{vastaus}
 \end{tehtava}
 
-\subsubsection*{Opi perusteet}
+%%%%%TÄMÄ JA SEURAAVA PITÄISI SIIRTÄÄ VASEMMALLE/OIKEALLE AUKEAVIEN PARAABELIEN JÄLKEEN?
+\begin{tehtava}
+Millaisella käyrällä ovat ympyröiden keskipisteet, kun ympyrät kulkevat pisteen $(0, 0)$ kautta ja sivuavat suoraa $x=4$?
+\begin{vastaus}
+%keskipiste (x, y)
+% x< 4 
+% kulkee origon kautta, joten (0-x)^2+(0-y)^2=r^2
+% etäisyys suorasta |x-4| = r
+$x=-\frac{1}{8}y^2+2$
+\end{vastaus}
+\end{tehtava}
 
-\subsubsection*{Hallitse kokonaisuus}
-
-\subsubsection*{Sekalaisia tehtäviä}
-
-TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
+\begin{tehtava}
+Kuinka monta leikkauspistettä voi olla paraabelilla ja
+\begin{enumerate}[a)]
+\item suoralla,
+\item ympyrällä
+\item toisella paraabelilla?
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}[a)]
+\item 0--2
+\item 0--4
+\item 0--4
+\end{enumerate}
+\end{vastaus}
+\end{tehtava}
 
 \end{tehtavasivu}
