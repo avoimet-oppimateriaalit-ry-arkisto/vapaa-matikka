@@ -52,7 +52,60 @@ Lauseen voi todistaa myös laskemalla pinta-aloja.
 sivujen pituudet, joista $c$ on hypotenuusan pituus. Tarkastellaan neliötä, jonka sivun
 pituus on $a+b$, ja jaetaan se osiin kahdella eri tavalla alla olevien kuvien mukaisesti.
 
-(KUVAT)
+\begin{kuva}
+a = 3
+b = 1.5
+c = sqrt(a**2 + b**2)
+
+A = geom.piste(0, 0, piirra = False)
+B = geom.piste(a, 0, piirra = False)
+C = geom.piste(a + b, 0, piirra = False)
+D = geom.piste(a + b, a, piirra = False)
+E = geom.piste(a + b, a + b, piirra = False)
+F = geom.piste(b, a + b, piirra = False)
+G = geom.piste(0, a + b, piirra = False)
+H = geom.piste(0, b, piirra = False)
+
+geom.jana(A, B, "$a$")
+geom.jana(B, C, "$b$")
+geom.jana(C, D, "$a$")
+geom.jana(D, E, "$b$")
+geom.jana(E, F, "$a$")
+geom.jana(F, G, "$b$")
+geom.jana(G, H, "$a$")
+geom.jana(H, A, "$b$")
+
+geom.jana(B, H, "$c$")
+geom.jana(H, F, "$c$")
+geom.jana(F, D, "$c$")
+geom.jana(D, B, "$c$")
+
+siirraX(a + b + 2)
+
+A = geom.piste(0, 0, piirra = False)
+B = geom.piste(a, 0, piirra = False)
+C = geom.piste(a + b, 0, piirra = False)
+D = geom.piste(a + b, a, piirra = False)
+E = geom.piste(a + b, a + b, piirra = False)
+F = geom.piste(a, a + b, piirra = False)
+G = geom.piste(0, a + b, piirra = False)
+H = geom.piste(0, a, piirra = False)
+X = geom.piste(a, a, piirra = False)
+
+geom.jana(A, B, "$a$")
+geom.jana(B, C, "$b$")
+geom.jana(C, D, "$a$")
+geom.jana(D, E, "$b$")
+geom.jana(E, F, "$b$")
+geom.jana(F, G, "$a$")
+geom.jana(G, H, "$b$")
+geom.jana(H, A, "$a$")
+
+geom.jana(B, X, "$a$")
+geom.jana(D, X, "$b$", puoli = False)
+geom.jana(F, X, "$b$")
+geom.jana(H, X, "$a$", puoli = False)
+\end{kuva}
 
 Ensimmäisessä kuvassa neliön osat ovat neljä yhtenevää suorakulmaista kolmiota, joiden
 sivujen pituudet ovat $a$, $b$ ja $c$, ja kaksi neliötä, joiden sivujen pituudet ovat $a$ ja
