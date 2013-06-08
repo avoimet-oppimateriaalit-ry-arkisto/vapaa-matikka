@@ -12,6 +12,54 @@ sen ulkopuolisen pisteen kautta (kaksi tapaa: pisteen etäisyys suorasta -kaava 
 
 KIITOS!}
 
+\begin{esimerkki}
+Määritä suorien $x+2y-3=0$ ja ympyrän $(x-1)^2+(y+1)^2=4 $ leikkauspisteet.
+
+\begin{esimratk}
+
+Ympyrän ja suoran leikkauspisteet ovat ne pisteet $(x,y)$, jotka ovat sekä suoralla että ympyrällä, eli toteuttavat molempien yhtälöt, eli yhtälöryhmän
+$$\left\{    
+    \begin{array}{rcl}
+        x+2y-3 &=&0 \\
+        (x-1)^2+(y+1)^2 &=&4 \\
+    \end{array}
+    \right.$$
+Vaikka yhtälö ei olekaan tutun lineaarinen, myös sitä voi lähestyä sijoitusmenetelmällä. Ratkaistaan ensimmäisestä yhtälöstä $x$ ja saadaan
+\[
+x = -2y+3
+\]
+Kun tämä sijoitetaan toiseen yhtälöön ja kerrotaan auki syntyy toisen asteen yhtälö $y$:n suhteen:
+\begin{align*}
+(-2y+3-1)^2+(y+1)^2=4 \\
+(-2y+2)^2+(y+1)^2=4 \\
+(-2y)^2-2\cdot 2y\cdot 2 +2^2+y^2+2\cdot y+1^2=4 \\
+4y^2-8y+4+y^2+2y+1-4 = 0 \\
+5y^2-6y+1 = 0
+\end{align*}
+Ratkaisukaavalla
+\[
+y = \frac{-(-6)\pm\sqrt{(-6)^2-4\cdot 5\cdot 1}}{2\cdot5}
+\]
+eli
+\begin{align*}
+y = \frac{6\pm\sqrt{16}}{10} \\
+y = 1 \vee y = \frac{1}{5}
+\end{align*}
+Kun nämä $y$:n arvot sijoitetaan suoran yhtälöön saadaan vastaavast $x$:n arvot:
+\begin{align*}
+x = -2\cdot 1+3 \vee x = -2\cdot\frac{1}{5}+3 \\
+x = 1 \vee x = 2\frac{3}{5}
+\end{align*}
+eli saatiin 2 ratkaisua: $(x,y) = (1,1)$ ja $(x,y) = (2\frac{3}{5},\frac{1}{5})$. Tarkistamalla on hyvä vielä todeta, että pisteet todella ovat leikkauspisteitä.
+
+Tähän kuva tilanteesta.
+\begin{esimvast}
+Leikkauspisteet ovat $(1,1)$ ja $(2\frac{3}{5},\frac{1}{5})$.
+\end{esimvast}
+
+\end{esimratk}
+\end{esimerkki}
+
 \begin{tehtavasivu}
 
 \subsubsection*{Opi perusteet}
