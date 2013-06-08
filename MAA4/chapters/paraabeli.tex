@@ -12,19 +12,21 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
-\emph{Paraabeli} on tason niiden pisteiden joukko, joiden etäisyys kiinteästä pisteestä, \emph{polttopisteestä} on sama kuin etäisyys kiinteästä suorasta, \emph{johtosuorasta}.
+\laatikko{
+\termi{paraabeli}{Paraabeli} on tason niiden pisteiden joukko, joiden etäisyys kiinteästä pisteestä, \termi{polttopiste}{polttopisteestä} on sama kuin etäisyys kiinteästä suorasta, \termi{johtosuora}{johtosuorasta}.
+}
 
 %%%%%%MAA2, luku 3.1 Toisen asteen polynomifunktio
 Kussilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli. Nämä kuvaajat olivat muotoa $y=ax^2+bx+c$ olevia käyriä, joissa $a$ määräsi paraabelin aukeamissuunnan. Jos $a<0$ paraabeli aukeaa alaspäin ja jos $a>0$ ylöspäin.
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
-    kuvaaja.piirra("0.5*x**2-x+0.25", a = -1.5, b = 3.5, nimi = "$y= 0,5x^2-x+0,25$", kohta = (3.2,2.1), suunta = -135)
+    kuvaaja.piirra("0.5*x**2-x+0.25", a = -1.5, b = 3.5, nimi = "$y= 0,5x^2-x+0,25$", kohta = (3.2,2.1), suunta = 135)
 \end{kuva}
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
-    kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = -135)
+    kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = 135)
 \end{kuva}
 
 \begin{esimerkki}
@@ -209,6 +211,16 @@ Määritä sen alaspäin aukeavan paraabelin yhtälö, joka kulkee pisteiden $(-
 \begin{vastaus}
 % http://www.wolframalpha.com/input/?i=y%3D+x%5E2%2B3x-4+at+x%3D%7B-5%2C+0%2C+1%7D
 $y= x^2+3x-4$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+% VAIKEA
+Määritä kaksi sellaista paraabelia, että niillä on täsmälleen kolme yhteistä pistettä
+\begin{vastaus}
+%idea valitaan suora, joka on tangetti kummallekin paraabelille esim. y=x ja kumpikin paraabeli sivuaa suoraa samassa kohtaa
+% http://www.wolframalpha.com/input/?i=y%3Dx%5E2-x%2C+x%3D2y%5E2-y
+Esimerkiksi $y=x^2-x$ ja  $x=2y^2-y$
 \end{vastaus}
 \end{tehtava}
 
