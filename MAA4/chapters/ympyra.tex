@@ -12,7 +12,7 @@ ja ympyrän keskipisteen ja säteen selvittäminen siitä
 
 KIITOS!}
 
-Tähän tarvitaan kuva origokeskisestä ympyrästä, jonka säde on kolme. Kuvaan voisi laittaa myös yhden ympyrän pisteen $(x,y)$.
+TÄHÄN TARVITAAN KUVA. (Origokeskinen ympyrä, jonka säde on kolme. Kuvaan voisi laittaa myös yhden ympyrän pisteen, jota merkitään $(x,y)$).
 
 Kuvaan on piirretty käyrä, jonka pisteiden etäisyys origosta on 3. Huomataan, että näin muodostuva käyrä on ympyrä. Piste $(x,y)$ on ympyrällä täsmälleen silloin, jos sen etäisyys origosta on 3. Toisin sanoen täytyy päteä $\sqrt{x^2+y^2}=3$. Kun yhtälön molemmat puolet korotetaan vielä toiseen potenssiin, saadaan $x^2+y^2=9$. Ympyrän yhtälö on siis $x^2+y^2=9$.
 
@@ -40,7 +40,7 @@ Jos ympyrän keskipiste on $(x_{0},y_{0})$ ja säde $r$, ympyrän yhtälö on
 \]
 }
 
-Jos edellä säde $r$ on nolla, yhtälön toteuttaa vain piste $(x_{0},y_{0})$. Nollasäteinen ympyrä onkin vain piste.
+Jos edellä säde $r$ on nolla, yhtälön toteuttaa vain piste $(x_{0},y_{0})$. Nollasäteinen ympyrä onkin pelkkä piste.
 
 %\begin{esimerkki}
 %Ympyrän keskipiste on $(-4,1)$ ja säde $5$. Määritä ympyrän yhtälö ja hahmottele ympyrä koordinaatistoon.
@@ -113,52 +113,69 @@ Neliöksi täydentäminen opittiin kurssissa MAA2, mutta kerrataan se tässä vi
 Aloitetaan lausekkeesta $x^2+6x$. Se on lähes sama kuin binomin $x+3$ neliö, sillä $(x+3)^2=x^2+6x+9$. Ainoastaan vakiotermit poikkeavat toisistaan ja tämän voi korvata lisäämällä ympyrän yhtälön molemmille puolille luvun $9$: 
 \begin{align*}
 x^2+6x+y^2-4y &= 3 && \ppalkki +9 \\
-(x^2+6x+9)+(y^2-4y) &= 12 \\
-(x+3)^2+(y^2-4y) &= 12.
+(x^2+6x+9)+(y^2-4y) &= 12 && \\
+(x+3)^2+(y^2-4y) &= 12.&& 
 \end{align*}
 
 Siirrytään sitten tarkastelemaan summattavaa $y^2-4y$. Se on puolestaan melkein binomin $y-2$ neliö, sillä $(y-2)^2=y^2-4y+4$. Binomin neliö saadaan näkyviin lisäämällä yhtälön molemmille puolille luku $4$:
 \begin{align*}
-(x+3)^2+(y^2-4y) &= 12 \ppalkki +4\\
-(x+3)^2+(y^2-4y+4) &= 16 \\
-(x+3)^2+(y-2)^2 &= 16 \\
-(x+3)^2+(y-2)^2 &= 4^2.
+(x+3)^2+(y^2-4y) &= 12 && \ppalkki +4\\
+(x+3)^2+(y^2-4y+4) &= 16 && \\
+(x+3)^2+(y-2)^2 &= 16 && \\
+(x+3)^2+(y-2)^2 &= 4^2.&& 
 \end{align*}
 
-Nyt huomataan, että kyseessä on $(-3,2)$-keskisen $4$-säteisen ympyrän yhtälöksi.
+Nyt huomataan, että kyseessä on $(-3,2)$-keskisen $4$-säteisen ympyrän yhtälö.
 
 \begin{esimerkki}
 Ympyrän yhtälö on $x^2-8x+y^2+5y+3=0$. Määritä ympyrän keskipiste ja säde.
 \begin{esimratk}
-Suoritetaan neliöksitäydennys:
+Yhtälö muuttuu muotoon $x^2-8x+y^2+5y=-3$. Suoritetaan sitten neliöksi täydentäminen:
 \begin{align*}
-x^2-8x+y^2+5y+3&=0 \ppalkki +16\\
-x^2-8x+16+y^2+5y&=-3+16 \\
-(x^2-4)^2+y^2+5y&=13 \ppalkki +\frac{25}{4}\\
-(x^2-4)^2+y^2+5y+\frac{25}{4}&=\frac{77}{4} \ppalkki +\frac{25}{4}\\
-(x^2-4)^2+(y+\frac{5}{4})^2&=\frac{102}{4} \\
-(x^2-4)^2+(y+\frac{5}{4})^2&=\frac{51}{2} \\
+x^2-8x+y^2+5y&=-3 && \ppalkki +16\\
+x^2-8x+16+y^2+5y&=-3+16 && \\
+(x^2-4)^2+y^2+5y&=13 && \ppalkki +\frac{25}{4}\\
+(x^2-4)^2+y^2+5y+\frac{25}{4}&=\frac{77}{4} && \ppalkki +\frac{25}{4}\\
+(x^2-4)^2+\left(y+\frac{5}{4}\right)^2&=\frac{102}{4} && \\
+(x^2-4)^2+\left(y+\frac{5}{4}\right)^2&=\frac{51}{2} && 
 \end{align*}
-Nähdään, että keskipiste on $(4,-5/4)$ ja säde on $\sqrt{51/2}$.
+Nähdään, että keskipiste on $(4,-5/4)$ ja säde $\sqrt{51/2}$.
 \end{esimratk}
 \begin{esimvast}
-Keskipiste on $(4,-5/4)$ ja säde on $\sqrt{51/2}$.
+Keskipiste on $(4,-5/4)$ ja säde $\sqrt{51/2}$.
 \end{esimvast}
-
 \end{esimerkki}
 
+\begin{esimerkki}
+Onko yhtälö $x^2-4x+y^2+2y+6=0$ ympyrän yhtälö?
+\begin{esimratk}
+Suoritetaan neliöksitäydennys:
+\begin{align*}
+x^2-4x+y^2+2y+6&=0 && \ppalkki -6\\
+x^2-4x+y^2+2y&=-6 && \ppalkki +4\\
+x^2-4x+4+y^2+2y&=-2 && \\
+(x^2-2)^2+y^2+2y&=-2 && \ppalkki +1\\
+(x^2-2)^2+y^2+2y+1&=-1 && \\
+(x^2-2)^2+(y+1)^2&=-1. &&
+\end{align*}
+Nyt nähdään, että kyseessä ei voi olla ympyrän yhtälö, sillä säteeksi tulisi $\sqrt{-1}$.
+\end{esimratk}
+\begin{esimvast}
+Kyseessä ei ole ympyrän yhtälö.
+\end{esimvast}
+\end{esimerkki}
 
-Sama päättely voidaan suorittaa myös yleisesti muotoa
+Edellä tehty neliöön korotus voidaan voidaan suorittaa yleisesti muotoa
 \[
 x^2+ax+y^2+by+c = 0
 \]
-olevien yhtälöiden kanssa. Täydentämällä $x^2+ax$ ja $y^2+by$ neliöiksi saadaan
+oleville yhtälöille. Täydentämällä $x^2+ax$ ja $y^2+by$ neliöiksi saadaan
 \begin{align*}
 x^2+ax+y^2+by+c &= 0 && \ppalkki +\frac{a^2}{4}+\frac{b^2}{4}-c \\
 \Big(x^2+ax+\frac{a^2}{4}\Big)+\Big(y^2+by+\frac{b^2}{4}\Big) &= \frac{a^2}{4}+\frac{b^2}{4}-c  \\
 \Big(x+\frac{a}{2}\Big)^2+\Big(y+\frac{b}{2}\Big)^2 &= \frac{a^2}{4}+\frac{b^2}{4}-c
 \end{align*}
-Jos yhtälön oikea puoli eli $\frac{a^2}{4}+\frac{b^2}{4}-c \geq 0$ yhtälö kuvaa $\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$-säteistä $(-\frac{a}{2},-\frac{b}{2})$-keskistä ympyrää. Jos oikea puoli on nolla, yhtälö kuvaa vastaavaa pistettä. Jos se on negatiivinen, yhtälön vasen puoli on aina positiivinen, joten yhtälön toteuttavia lukupareja ei ole, ts. yhtälö kuvaa tyhjää joukkoa.
+Jos yhtälön oikea puoli eli $\frac{a^2}{4}+\frac{b^2}{4}-c \geq 0$ yhtälö kuvaa $\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$-säteistä $(-\frac{a}{2},-\frac{b}{2})$-keskistä ympyrää. Jos oikea puoli on nolla, yhtälö kuvaa vastaavaa pistettä. Jos se on negatiivinen, yhtälön vasen puoli on aina positiivinen, joten yhtälön toteuttavia lukupareja ei ole. Yhtälö ei siis kuvaa mitään käyrää.
 
 %\laatikko{Yhtälöt muotoa
 %\[
