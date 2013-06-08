@@ -60,11 +60,64 @@ Leikkauspisteet ovat $(1,1)$ ja $(2\frac{3}{5},\frac{1}{5})$.
 \end{esimratk}
 \end{esimerkki}
 
+Esimerkin avulla huomattiin, että suoralla ja ympyrällä voi olla kaksi leikkauspistettä. Suorasta ja ympyrästä riippuen päädytään toisen asteen yhtälöön, jolla on joko 0, 1 tai 2 ratkaisua. Jos leikkauspisteitä on tasan yksi, sanotaan, että suora sivuaa ympyrää tai suora on ympyrän \termi{tangentti}{tangentti}.
+
+Kuva ympyrästä ja kolmesta suorasta; yksi tangentti, yksi leikkaa kahdessa pisteessä ja yksi ei leikkaa ympyrää.
+
+\laatikko{Suoralla ja ympyrällä on nolla, yksi tai kaksi leikkauspisteitä.
+
+Suora on ympyrän \emph{tangentti}, jos suoralla ja ympyrällä on tasan yksi yhteinen piste.
+}
+
+\begin{esimerkki}
+Määritä $(2,2)$-keskisen 5-säteisen ympyrän pisteen $(-5,3)$ kautta kulkevat tangentit.
+\begin{esimratk}
+Suora on ympyrän tangentti, jos sillä ja ympyrällä on tasan yksi yhteinen piste. Jos pisteen $(-5,3)$ suora ei ole $y$-akselin suuntainen, se voidaan esittää muodossa
+\[
+y-3 = k(x-(-5))
+\]
+eli
+\[
+y = kx+5k+3.
+\]
+Ympyrän yhtälö muistaen suoran ja ympyrän leikkauspisteille saadaan siis yhtälöpari
+$$\left\{    
+    \begin{array}{rcl}
+        y &=&kx+5k+3\\
+        (x-2)^2+(y-2)^2 &=& 25 \\
+    \end{array}
+    \right.$$
+    
+Sijoitetaan ensimmäisen yhtälön lauseke $y$:lle toiseen yhtälöön ja saadaan toisen asteen yhtälö $x$:n suhteen
+\begin{align*}
+(x-2)^2+(kx+5k+3-2)^2&=25 \\
+(x-2)^2+(kx+5k+1)^2&=25 \\
+x^2-2\cdot x\cdot 2 +2^2+(kx)^2+kx\cdot 5k+kx&\\
++5k\cdot kx+(5k)^2+5k+kx+5k+1-25& =0 \\
+(1+k^2)x^2+(10k^2+2k-4)x+25k^2+10k-20& = 0 \\
+\end{align*}
+Tällä yhtälöllä on $x$:n suhteen tasan yksi ratkaisu, jos polynomin diskriminantti on nolla, eli
+\begin{align*}
+(10k^2+2k-4)^2-4*(1+k^2)*(25k^2+10k-20) & = 100k^4+10k^2\cdot 2k+10k^2\cdot (-4) \\
+& + 2k\cdot 10k^2+(2k)^2+2k\cdot (-4)+(-4)\cdot 10k^2+(-4)\cdot 2k+(-4)^2
+\end{align*}
+
+
+\end{esimratk}
+\end{esimerkki}
+
+
 \begin{tehtavasivu}
 
 \subsubsection*{Opi perusteet}
 
 \subsubsection*{Hallitse kokonaisuus}
+\begin{tehtava}
+Määritä yksikköympyrän $x^2+y^2= 1$ pisteeseen $(x_{0},y_{0} )$ piirretyn tangentin normaalimuotoinen yhtälö.
+\begin{vastaus}
+$x_0x+y_0y=1 $
+\end{vastaus}
+\end{tehtava}
 
 \subsubsection*{Sekalaisia tehtäviä}
 
