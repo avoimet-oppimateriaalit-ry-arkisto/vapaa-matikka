@@ -38,7 +38,26 @@ Huomaa, että säännössä (sks) yhtäsuuren vastinkulman on oltava vastinsivuj
 nimittäin mahdollista, että kahdella kolmiolla on kaksi keskenään verrannolista sivua
 ja yhtäsuuri kulma toisen sivun vieressä, mutta kolmiot eivät kuitenkaan ole yhdenmuotoiset.
 
-(KUVA)
+\begin{esimerkki}
+Vaikka kolmioilla $ABC$ ja $ABD$ on yhteinen kulma $\angle BAC = \angle BAD$, yhteinen sivu $AB$ ja yhtä pitkät sivut $BC = BD$, ei voida päätellä että kolmiot olisivat yhdenmuotoiset, sillä kulma ei ole vastinsivujen välissä eli (sks)-sääntöä ei voi käyttää.
+
+\begin{kuva}
+skaalaa(1.6)
+A = geom.piste(0, 0, "$A$", -135)
+B = geom.piste(2, 0, "$B$", -40)
+w = geom.ympyra(B, 1.2, piirra = False)
+s = geom.suora(A, (3, 2), piirra = False)
+C = geom.leikkauspiste(s, w, "$C$", 40)
+D = geom.leikkauspiste(s, w, "$D$", 120, valinta = 1)
+geom.jana(A, B)
+geom.jana(B, C)
+geom.jana(C, D)
+geom.jana(B, D)
+geom.jana(D, A)
+geom.kulma(B, A, C)
+\end{kuva}
+
+\end{esimerkki}
 
 \begin{tehtavasivu}
 
