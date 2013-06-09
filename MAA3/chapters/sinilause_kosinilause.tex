@@ -14,24 +14,50 @@ geom.kulma(A, C, B, r"$\gamma$")
 w = geom.ymparipiirrettyYmpyra(A, B, C)
 O = geom.ympyranKeskipiste(w)
 R = geom.leikkauspiste(w, geom.suora(O, (6, 0), piirra = False), piirra = False)
-geom.jana(O, R, "$r$", kohta = 0.7)
+geom.jana(O, R, "$R$", kohta = 0.7)
 \end{luoKuva}
 
 \laatikko{
-Oletetaan, että kolmion sivut ovat a,b ja c ja niitä vastaavat kulmat ovat $\alpha$, $\beta$ ja $\gamma$. Sinilauseen mukaan
-$$\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} = 2r,$$
-missä r on kolmion ympäri piirretyn ympyrän säde.
+Oletetaan, että kolmion sivut ovat $a$, $b$ ja $c$, ja niitä vastaavat kulmat ovat $\alpha$, $\beta$ ja $\gamma$. \termi{sinilause}{Sinilauseen} mukaan
+$$\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} = 2R,$$
+missä $R$ on kolmion ympäri piirretyn ympyrän säde.
 
 \begin{center}
 \naytaKuva{sinilause}
 \end{center}
 }
 
+\textbf{Sinilauseen todistus.} Tarkastellaan sivulle $c$ piirrettyä korkeusjanaa.
+Sen pituus $h$ on suorakulmaisen kolmion kateettina, joten sen voi ilmoittaa muodossa
+\[
+h = a \sin \beta
+\]
+tai käyttämällä toista suorakulmaista kolmiota, muodossa
+\[
+h = b \sin \alpha .
+\]
+
+Tällöin on voimassa
+\[
+a \sin \beta = b \sin \alpha
+\]
+eli
+\[
+\frac{a}{\sin \alpha} = \frac{b}{\sin \beta}.
+\]
+
+Samalla tavoin päätellään, että
+\[
+\frac{b}{\sin \beta} = \frac{c}{\sin \gamma}.
+\]
+
+Viimeisen yhtäsuuruuden voimassaolo perustellaan kehäkulmalauseen yhteydessä.
+
 Sinilauseesta voidaan johtaa kaava kolmion pinta-alalle. Tämän kaavan avulla voidaan laskea kolmion pinta-ala, kun tiedetään kaksi sivua ja niiden välinen kulma.
 
 \laatikko{
 Oletetaan, että kolmion sivut ovat a,b ja c ja niitä vastaavat kulmat ovat $\alpha$, $\beta$ ja $\gamma$. Kolmion pinta-ala on
-$$A= \frac{1}{2} \cdot a \cdot b \cdot \sin \gamma.$$
+$$A= \frac{1}{2} a b \sin \gamma.$$
 }
 
 \begin{esimerkki}
@@ -56,3 +82,49 @@ Lasketaan lopuksi kolmion pinta-ala:
 $$A = \frac{1}{2} \cdot 5 \cdot 7 \cdot \sin 81,8 \approx 17.$$
 Siis kolmion pinta-ala on noin 17 cm².
 \end{esimerkki}
+
+\laatikko{
+Olkoot kolmion sivut $a$, $b$ ja $c$, ja niitä vastaavat kulmat $\alpha$, $\beta$ ja
+$\gamma$. Tällöin pätee seuraava \termi{kosinilause}{kosinilauseena} tunnettu kaava.
+\[
+c^2 = a^2 + b^2 - 2 a b \cos \gamma
+\]
+}
+
+\textbf{Kosinilauseen todistus}. Olkoon sivulle $a$ piirretty korkeusjana $h$, ja tämän
+korkeusjanan kantapisteen etäisyys kulman $\gamma$ kärjestä $d$ ja kulman $\beta$ kärjestä $e$.
+
+(KUVA)
+
+Pyhtagoraan lauseen nojalla seuraavat yhtälöt ovat voimassa.
+
+\[
+h^2 + d^2 = b^2
+\]
+\[
+h^2 + e^2 = c^2
+\]
+
+Oletetaan ensin, että kulma $\gamma$ ei ole tylppä. Tällöin $d = b \cos \gamma$.
+Lisäksi joko $e = a - d$ tai $e = d - a$ riippuen siitä, onko kulma $\beta$ terävä vai
+tylppä. Joka tapauksessa $e^2 = a^2 - 2ad + d^2$, ja siksi
+
+\begin{align*}
+c^2 = h^2 + e^2 \\
+= b^2 - d^2 + e^2 \\
+= b^2 - d^2 + a^2 - 2 a d + d^2 \\
+= a^2 + b^2 - 2 a b \cos \gamma .
+\end{align*}
+
+Oletetaan sitten, että kulma $\gamma$ on tylppä. Koska $\cos (180^{\circ} - \gamma )
+= - \cos \gamma$, niin $d = -b \cos \gamma$. Lisäksi $e = a + d$. Näin saadaan
+
+\begin{align*}
+c^2 = h^2 + e^2 \\
+= b^2 - d^2 + e^2 \\
+= b^2 - d^2 + a^2 + 2 a d + d^2 \\
+= a^2 + b^2 + 2 a(- b \cos \gamma ) \\
+= a^2 + b^2 - 2 a b \cos \gamma .
+\end{align*}
+
+Kaava on siis voimassa. $\square$
