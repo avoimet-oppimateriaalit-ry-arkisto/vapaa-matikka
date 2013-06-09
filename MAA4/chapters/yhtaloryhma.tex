@@ -12,39 +12,114 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
-\subsection*{Yhtälöryhmä}
+%\subsection*{Yhtälöryhmä}
 
-\termi{yhtälöryhmä}{Yhtälöryhmällä} tarkoitetaan useaa yhtälöä, joiden täytyy
-päteä samanaikaisesti. Englannin kielessä yhtälöryhmä tunnetaankin nimellä
-\textit{simultaneous equations} eli samanaikaiset yhtälöt.
-\footnote{Termi \textit{system of equations} on vähintäänkin yhtä yleinen.}
-Yhtälöryhmän (mahdollisten) ratkaisujen tulee siis toteuttaa kaikki yhtälöt.
+% \termi{yhtälöryhmä}{Yhtälöryhmällä} tarkoitetaan useaa yhtälöä, joiden täytyy
+% päteä samanaikaisesti. Englannin kielessä yhtälöryhmä tunnetaankin nimellä
+% \textit{simultaneous equations} eli samanaikaiset yhtälöt.
+% \footnote{Termi \textit{system of equations} on vähintäänkin yhtä yleinen.}
+% Yhtälöryhmän (mahdollisten) ratkaisujen tulee siis toteuttaa kaikki yhtälöt.
+% 
+% Tässä luvussa käsitellään yhtälöryhmiä, joissa kaikki yhtälöt ovat ensimmäistä
+% astetta. Tällaisia yhtälöryhmiä kutsutaan \termi{lineaarinen yhtälöryhmä}{lineaarisiksi yhtälöryhmiksi}.
+% Lisäksi myöhemmin kirjassa käsitellään erikoistapauksia toisen asteen yhtälöryhmistä
+% ratkaistaessa kahden ympyrän tai ympyrän ja suoran leikkauspisteitä.
 
-Tässä luvussa käsitellään yhtälöryhmiä, joissa kaikki yhtälöt ovat ensimmäistä
-astetta. Tällaisia yhtälöryhmiä kutsutaan \termi{lineaarinen yhtälöryhmä}{lineaarisiksi yhtälöryhmiksi}.
-Lisäksi myöhemmin kirjassa käsitellään erikoistapauksia toisen asteen yhtälöryhmistä
-ratkaistaessa kahden ympyrän tai ympyrän ja suoran leikkauspisteitä.
+\subsection*{Yhtälöpari}
 
-\subsection*{Lineaarinen yhtälöpari}
+% Yksinkertaisin mielenkiintoinen yhtälöryhmä on
+% \termi{lineaarinen yhtälöpari}{lineaarinen yhtälöpari}.
+% Lineaarisessa yhtälöparissa on kaksi ensimmäisen asteen yhtälöä.
+% Lineaarinen yhtälöpari voidaan esittää monella tapaa. Tässä
+% kirjassa käytämme pääasiallisesti ns. normaalimuotoa.
+% 
+% \[
+% \left\{
+% \begin{aligned}
+% a_1x+b_1y+c_1 &= 0 \\
+% a_2x+b_2y+c_2 &= 0
+% \end{aligned}
+% \right.
+% \]
+% 
+% $a_1, a_2, b_1, b_2, c_1, c_2 \in \R$
+% 
+% Lineaarisen yhtälöparin ratkaisu on pari $(x, y) \in \R^2$, joka toteuttaa molemmat yhtälöt.
 
-Yksinkertaisin mielenkiintoinen yhtälöryhmä on
-\termi{lineaarinen yhtälöpari}{lineaarinen yhtälöpari}.
-Lineaarisessa yhtälöparissa on kaksi ensimmäisen asteen yhtälöä.
-Lineaarinen yhtälöpari voidaan esittää monella tapaa. Tässä
-kirjassa käytämme pääasiallisesti ns. normaalimuotoa.
+\begin{esimerkki}
+Ratkaise yhtälöpari
+\[
+\left\{
+\begin{aligned}
+3x-2y&= 1 \\
+-x+5y&= 2.
+\end{aligned}
+\right.
+\]
+\begin{esimratk}
+On löydettävä kaikki ne luvut $x$ ja $y$ jotka toteuttavat molemmat yhtälöt.
 
-\laatikko{
-\textbf{Normaalimuotoinen lineaarinen yhtälöpari}
-
+Käytetään \termi{sijoitusmenetelmä}{sijoitusmenetelmää}. Ratkaistaan muuttuja $x$ alemmasta yhtälöstä ja sijoitetaan se ylempään yhtälöön. Alemmasta yhtälöstä $-x+5y= 2$ saadaan $x=5y-2$. Sijoitetaan tämä ylempään yhtälöön $3x-2y=1$:
 \begin{align*}
-a_1x+b_1y+c_1 &= 0 \\
-a_2x+b_2x+c_2 &= 0
+3x-2y&=1 && \ppalkki \text{Sijoitetaan $x=5y-2$.} \\
+3(5y-2)-2y&=1 && \\
+15y-6-2y&=1 && \\
+13y&=7 && \\
+y&=\frac{13}{7} && \\
 \end{align*}
+Sijoitetaan $y=13/7$ alempaan yhtälöön, jotta voidaan ratkaista $x$:
+\begin{align*}
+-x+5y&= 2 && \ppalkki \text{Sijoitetaan $y=\frac{13}{7}$.} \\
+-x+\frac{65}{7}&= 2 && \\
+-x&= -\frac{51}{7}&& \\
+x&= \frac{51}{7}&&
+\end{align*}
+\end{esimratk}
+\begin{esimvast}
+Yhtälön ratkaisu on $x= 51/7$, $y=13/7$.
+\end{esimvast}
+\end{esimerkki}
 
-$a_1, a_2, b_1, b_2, c_1, c_2 \in \R$
-
-Lineaarisen yhtälöparin ratkaisu on pari $(x, y) \in \R^2$, joka toteuttaa molemmat yhtälöt.
-}
+\begin{esimerkki}
+Määritä suorien $-2x-y= 4$ ja $3x-2y=1$ leikkauspiste.
+\begin{esimratk}
+Saadaan ratkaistavaksi yhtälöpari
+\[
+\left\{
+\begin{aligned}
+-2x-y&= 4 \\
+3x-2y&= 1.
+\end{aligned}
+\right.
+\]
+Käytetään \termi{eliminointimenetelmä}{yhteenlaskumenetelmää}, jolla voidaan eliminoida toinen muuttujista.
+\begin{align*}
+&\left\{
+\begin{aligned}
+2x-y&= 4 && \ppalkki \cdot 3\\
+3x-2y&= 1. && \ppalkki \cdot (-2)
+\end{aligned}
+\right. \\
+&\left\{
+\begin{aligned}
+6x-3y&= 12 && \ppalkki \text{Lasketaan yhtälöt yhteen.}\\
+-6x+4y&= -2.&&
+\end{aligned}
+\right.\\
+& y&= 10 \\
+\end{align*}
+Sijoitetaan $y=10$ jompaan kumpaan alkuperäisistä yhtälöistä, jotta saadaan ratkaistua $x$. Käytetään vaikkapa yhtälöä $3x-2y=1$:
+\begin{align*}
+3x-2y&=1 && \ppalkki \text{Sijoitetaan $x=10$.} \\
+3x-20&=1 && \\
+3x&=21 && \\
+x&=7.
+\end{align*}
+\end{esimratk}
+\begin{esimvast}
+Yhtälön ratkaisu on $x=7$, $y=10$.
+\end{esimvast}
+\end{esimerkki}
 
 Aiemmin on todettu, että normaalimuotoinen ensimmäisen asteen yhtälö voidaan tulkita suorana
 $(x, y)$-tasossa. Näin ollen lineaariselle yhtälöparille on geometrinen tulkinta: sen
@@ -54,30 +129,32 @@ $0$ (suorat ovat yhdensuuntaiset, mutta eivät sama suora),
 $1$ (suorat eivät ole yhdensuuntaiset) tai
 äärettömän monta (suorat ovat sama suora).
 
-\laatikko{
-Lineaarisella yhtälöparilla voi olla joko $0$, $1$ tai äärettömän monta ratkaisua.
-}
-
-\subsection*{Lineaarisen yhtälöparin ratkaisumenetelmiä}
-
 Lineaarisia yhtälöpareja ratkotaan pääasiallisesti kahdella menetelmällä.
 Nämä menetelmät ovat \termi{sijoitusmenetelmä}{sijoitusmenetelmä} ja
 \termi{yhteenlaskumenetelmä}{yhteenlaskumenetelmä}.
 
-% tähän menetelmien käytöstä
 
 \subsection*{Lineaarinen yhtälöryhmä}
 
-Lineaarisen yhtälöparin ajatus yleistyy mihin tahansa määrään ensimmäisen asteen yhtälöitä.
-Tällöin puhutaan lineaarisista yhtälöryhmistä.\footnote{Myös lineaarinen yhtälöpari on lineaarinen yhtälöryhmä.}
-Myös geometrinen tulkinta yleistyy, mutta se on vaikeampi hahmottaa kuin lineaarisen yhtälöparin tapauksessa:
-kolmen yhtälön lineaarinen yhtälöryhmä vastaa kolmen $(x, y)$-tason leikkauspisteitä
-kolmiulotteisessa $(x, y, z)$-avaruudessa jne.
+Ratkaistavia yhtälöitä voi olla useampia kuin kaksi, ja tällöin puhutaan \termi{yhtälöryhmä}{yhtälöryhmästä}. Yhtälöpari on siis yhtälöryhmän erikoistapaus.
 
-Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Neljän yhtälön
-lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. Yleisesti ottaen yhtälöryhmiä
-ei ratkaista tällä kurssilla esitetyin keinoin, vaan likimääräisesti tietokoneella käyttäen numeerista 
-matriisilaskentaa, joka ei kuulu lukion oppimäärään.
+Jos yhtälöt ovat lisäksi ensimmäistä astetta, on kyseessä \termi{lineaarinen yhtälöryhmä}{lineaarinen yhtälöryhmä}.
+Esimerkiksi
+\[
+\left\{
+\begin{aligned}
+3x-2y&= -5 \\
+5x+6y&= 1 \\
+-x+5y&= 0.
+\end{aligned}
+\right.
+\]
+on lineaarinen yhtälöryhmä.
+
+% Tässä tarkastellaan lähinnä kolmen yhtälön lineaarisia yhtälöryhmiä. Neljän yhtälön
+% lineaarisista yhtälöryhmistä esitetään joitakin helppoja esimerkkejä. Yleisesti ottaen yhtälöryhmiä
+% ei ratkaista tällä kurssilla esitetyin keinoin, vaan likimääräisesti tietokoneella käyttäen numeerista 
+% matriisilaskentaa, joka ei kuulu lukion oppimäärään.
 
 \subsection*{Lineaarisen yhtälöryhmän ratkaisumenetelmiä}
 
