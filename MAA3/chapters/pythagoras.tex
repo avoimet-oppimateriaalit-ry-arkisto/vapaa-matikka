@@ -1,0 +1,188 @@
+\section*{Pythagoraan lause}
+
+Pythagoraan lause on eräs vanhimmista matemaattisista lauseista. Sille tunnetaan monia eri
+todistuksia, joista kaksi yksinkertaista esitellään seuraavaksi.
+
+\laatikko{
+	\termi{Pythagoraan lause}{Pythagoraan lause}. Olkoot suorakulmaisen kolmion kateettien
+	pituudet $a$ ja $b$, ja hypotenuusan pituus $c$. Tällöin pätee
+	\[
+	a^2 + b^2 = c^2
+	\] 
+}
+
+\textbf{Pythagoraan lauseen todistus 1}. Olkoot $A$, $B$ ja $C$ suorakulmaisen kolmion
+kärjet niin, että kulma $\angle ACB$ on suora. Olkoon piste $D$ sellainen janan $AB$ piste,
+jolle $\angle CDA$ on suora.
+
+(KUVA)
+
+Tällöin kolmioilla $ABC$ ja $ACD$ on yhteinen kulma $\angle A$ ja molemmissa on suora kulma, joten ne ovat yhdenmuotoiset (kk). Samoin kolmioilla $ABC$ ja $CBD$ on yhteinen kulma
+$\angle B$ ja molemmissa on suora kulma, joten nekin ovat yhdenmuotoiset (kk)
+
+Yhdenmuotoisuuksista saadaan, että
+\[
+\frac{AB}{AC} = \frac{AC}{AD}
+\]
+ja
+\[
+\frac{AB}{CB} = \frac{CB}{DB}.
+\]
+
+Ristiinkertomalla saadaan, että
+\[
+AB \cdot AD = AC^2
+\]
+ja
+\[
+AB \cdot DB = CB^2.
+\]
+Laskemalla nämä saadut yhtälöt yhteen saadaan
+
+\begin{align*}
+AC^2 + CB^2  = AB \cdot AD + AB \cdot DB \\
+AC^2 + CB^2  = AB(AD + DB) \\
+AC^2 + CB^2  = AB^2.
+\end{align*}
+Tämä on täsmälleen Pythagoraan lause. $\square $
+
+Lauseen voi todistaa myös laskemalla pinta-aloja.
+
+\textbf{Pythagoraan lauseen todistus 2}. Olkoot $a$, $b$ ja $c$ suorakulmaisen kolmion
+sivujen pituudet, joista $c$ on hypotenuusan pituus. Tarkastellaan neliötä, jonka sivun
+pituus on $a+b$, ja jaetaan se osiin kahdella eri tavalla alla olevien kuvien mukaisesti.
+
+\begin{kuva}
+a = 3
+b = 1.5
+c = sqrt(a**2 + b**2)
+
+A = geom.piste(0, 0, piirra = False)
+B = geom.piste(a, 0, piirra = False)
+C = geom.piste(a + b, 0, piirra = False)
+D = geom.piste(a + b, a, piirra = False)
+E = geom.piste(a + b, a + b, piirra = False)
+F = geom.piste(b, a + b, piirra = False)
+G = geom.piste(0, a + b, piirra = False)
+H = geom.piste(0, b, piirra = False)
+
+geom.jana(A, B, "$a$")
+geom.jana(B, C, "$b$")
+geom.jana(C, D, "$a$")
+geom.jana(D, E, "$b$")
+geom.jana(E, F, "$a$")
+geom.jana(F, G, "$b$")
+geom.jana(G, H, "$a$")
+geom.jana(H, A, "$b$")
+
+geom.jana(B, H, "$c$")
+geom.jana(H, F, "$c$")
+geom.jana(F, D, "$c$")
+geom.jana(D, B, "$c$")
+
+siirraX(a + b + 2)
+
+A = geom.piste(0, 0, piirra = False)
+B = geom.piste(a, 0, piirra = False)
+C = geom.piste(a + b, 0, piirra = False)
+D = geom.piste(a + b, a, piirra = False)
+E = geom.piste(a + b, a + b, piirra = False)
+F = geom.piste(a, a + b, piirra = False)
+G = geom.piste(0, a + b, piirra = False)
+H = geom.piste(0, a, piirra = False)
+X = geom.piste(a, a, piirra = False)
+
+geom.jana(A, B, "$a$")
+geom.jana(B, C, "$b$")
+geom.jana(C, D, "$a$")
+geom.jana(D, E, "$b$")
+geom.jana(E, F, "$b$")
+geom.jana(F, G, "$a$")
+geom.jana(G, H, "$b$")
+geom.jana(H, A, "$a$")
+
+geom.jana(B, X, "$a$")
+geom.jana(D, X, "$b$", puoli = False)
+geom.jana(F, X, "$b$")
+geom.jana(H, X, "$a$", puoli = False)
+\end{kuva}
+
+Ensimmäisessä kuvassa neliön osat ovat neljä yhtenevää suorakulmaista kolmiota, joiden
+sivujen pituudet ovat $a$, $b$ ja $c$, ja kaksi neliötä, joiden sivujen pituudet ovat $a$ ja
+$b$.
+
+Toisessa kuvassa neliön osat ovat neljä yhtenevää suorakulmaista kolmiota, joiden
+sivujen pituudet ovat $a$, $b$ ja $c$, ja neliö, jonka sivun pituus on $c$.
+Koska yhteenlaskettujen pinta-alojen on oltava samat, on oltava $a^2 + b^2 = c^2$.
+Pythagoraan lause on todistettu. $\square $
+
+\begin{esimerkki}
+	Maalari maalaa taloa. Hänellä on tikapuut, joiden pituus on 3,0 metriä. Maalarin on
+	noustava 2,5 metrin korkeuteen voidakseen maalata katonrajan sinipunaiseksi. Kuinka
+	lähelle seinää hänen on asetettava tikapuiden alapää?
+	\begin{esimratk}
+		Tikapuut ja seinä muodostavat suorakulmaisen kolmion, jonka hypotenuusa on tikapuut
+		ja toinen kateetti on seinä. Merkitään $x$:llä tikapuiden etäisyyttä seinästä
+		metreinä ja sovelletaan Pythagoraan lausetta.
+		\begin{align*}
+		x^2 + 2,5^2 = 3,0^2 \\
+		x^2 + 6,25 = 9,0 \\
+		x^2 = 2,75 \\
+		x = \pm \sqrt{2,75} \approx \pm 1,7
+		\end{align*}
+		Koska x on etäisyys seinästä, negatiivinen ratkaisu ei kelpaa.
+		\begin{esimvast}
+		Alle $1,7$ metrin päähän seinästä. 
+		\end{esimvast}
+	\end{esimratk}
+\end{esimerkki}
+
+\begin{tehtavasivu}
+
+\paragraph*{Opi perusteet}
+
+\paragraph*{Hallitse kokonaisuus}
+
+\begin{tehtava}
+Todista Pythagoraan lauseen käänteislause: Jos kolmion sivujen pituuksille $a,b$ ja $c$ pätee
+\[
+a^2+b^2 = c^2,
+\]
+niin kolmio on suorakulmainen.
+
+\begin{vastaus}
+Vinkki: Tutki suorakulmaista kolmiota, jonka kateettien pituudet ovat $a$ ja $b$ ja hyödynnä yhtenevyyttä.
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Kolmion ala voidaan esittää myös suoraan kolmion sivujen pituuksien funktiona. Kolmion $ABC$ sivua $BC$ vastaavan korkeusjanan $AD$ pituus voidaan määrittää käyttämällä Pythagoraan lausetta kolmioihin $ABD$ ja $ACD$.
+\begin{alakohdat}
+\alakohta{Lausu sivun $BC$ pituus sivujen $AC$ ja $AB$ ja korkeusjanan $AD$ pituuksien avulla.}
+\alakohta{Ratkaise korkeusjanan pituuden neliö neliöimällä yhtälö ja sieventämällä kahdesti.}
+\alakohta{Nyt voit muodostaa polynomilausekkeen kolmion pinta-alan neliölle.}
+\alakohta{Merkitse vielä $BC = a$, $AC = b$, $AB = c$, sekä $p = \frac{a+b+c}{2}$ ja todista kuuluisa Heronin kaava kolmion pinta-alalle
+\[
+A_{ABC} = \sqrt{p(p-a)(p-b)(p-c)}
+\]
+}
+\end{alakohdat}
+
+\begin{vastaus}
+\begin{alakohdat}
+\alakohta{$BC = \pm\sqrt{AC^2-AD^2}\pm\sqrt{AB^2-AD^2}$. $\pm$-merkit valitaan riippuen kolmion tyypistä.}
+\alakohta{$AD^2 = \frac{4AC^2AB^2-(BC^2-AC^2-AB^2)^2}{BC^2}$}
+\alakohta{$A_{ABC}^2 = \frac{4AC^2AB^2-(BC^2-AC^2-AB^2)^2}{16}$}
+\alakohta{Vinkki: Käytä toistuvasti identiteettiä $x^2-y^2 = (x+y)(x-y)$ tai kerro raa'asti auki.}
+\end{alakohdat}
+\end{vastaus}
+\end{tehtava}
+
+\paragraph*{Sekalaisia tehtäviä}
+
+TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
+
+
+\end{tehtavasivu}
+
+

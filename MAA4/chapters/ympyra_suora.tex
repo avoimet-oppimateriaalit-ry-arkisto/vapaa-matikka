@@ -70,7 +70,9 @@ Suora on ympyrän \emph{tangentti}, jos suoralla ja ympyrällä on tasan yksi yh
 }
 
 \begin{esimerkki}
+
 Määritä $(2,2)$-keskisen 5-säteisen ympyrän pisteen $(-5,3)$ kautta kulkevat tangentit.
+
 \begin{esimratk}
 Suora on ympyrän tangentti, jos sillä ja ympyrällä on tasan yksi yhteinen piste. Jos pisteen $(-5,3)$ suora ei ole $y$-akselin suuntainen, se voidaan esittää muodossa
 \[
@@ -94,15 +96,39 @@ Sijoitetaan ensimmäisen yhtälön lauseke $y$:lle toiseen yhtälöön ja saadaa
 (x-2)^2+(kx+5k+1)^2&=25 \\
 x^2-2\cdot x\cdot 2 +2^2+(kx)^2+kx\cdot 5k+kx&\\
 +5k\cdot kx+(5k)^2+5k+kx+5k+1-25& =0 \\
-(1+k^2)x^2+(10k^2+2k-4)x+25k^2+10k-20& = 0 \\
+(1+k^2)x^2+(10k^2+2k-4)x+25k^2+10k-20& = 0. \\
 \end{align*}
-Tällä yhtälöllä on $x$:n suhteen tasan yksi ratkaisu, jos polynomin diskriminantti on nolla, eli
+Tällä yhtälöllä on $x$:n suhteen tasan yksi ratkaisu, \\ jos polynomin diskriminantti on nolla, eli
 \begin{align*}
-(10k^2+2k-4)^2-4*(1+k^2)*(25k^2+10k-20) & = & 100k^4+10k^2\cdot 2k+10k^2\cdot (-4) \\
-& & + 2k\cdot 10k^2+(2k)^2+2k\cdot (-4)+(-4)\cdot 10k^2+(-4)\cdot 2k+(-4)^2
+& D = (10k^2+2k-4)^2-4\cdot(1+k^2)\cdot(25k^2+10k-20) \\ 
+&= 100k^4+10k^2\cdot 2k+10k^2\cdot (-4) +2k\cdot 10k^2+(2k)^2+2k\cdot (-4) \\
+& +(-4)\cdot 10k^2+(-4)\cdot 2k+(-4)^2+(-4)\cdot 25k^2+(-4)\cdot 10k+(-4)\cdot (-20) \\
+& +(-4k^2)(25k^2)+(-4k^2)(10k)+(-4k^2)(-20) \\
+& = 100k^4+20k^3-40k^2+20k^3+4k^2-8k-40k^2-8k+16-100k^2-40k+80 \\
+& -100k^4-40k^3+80k^2 \\
+& = (100-100)k^4+(20+20-40)k^3+(-40+4-40-100+80)k^2+(-8-8-40)k+(16+80) \\
+& = -96k^2-56k+96 \\
+&=-8(12k^2+7k-12) = 0.
+\end{align*}
+Toisen asteen yhtälön ratkaisukaavalla
+\begin{align*}
+k &= \frac{-7\pm \sqrt{7^2-4\cdot 12\cdot (-12)}}{2\cdot 12} \\
+k &= \frac{-7\pm \sqrt{625}}{24} \\
+k &= \frac{-7\pm 25 }{24}, \\
+\end{align*}
+joten
+\[
+k =  \frac{3}{4} \vee k = -\frac{4}{3}
+\]
+Kulmakertoimia vastaa siis tangenttisuorat
+\begin{align*}
+y = \frac{3}{4}x+5\cdot \frac{3}{4}+3 &\textrm{  ja  } y = -\frac{4}{3}x+5\cdot \Big(-\frac{4}{3}\Big)+3 \\
+y = \frac{3}{4}x+6\frac{3}{4} &\textrm{  ja  } y = -\frac{4}{3}x-3\frac{2}{3}
 \end{align*}
 
-
+\begin{esimvast}
+Suorat $y = \frac{3}{4}x+6\frac{3}{4}$ ja $y = -\frac{4}{3}x-3\frac{2}{3}$
+\end{esimvast}
 \end{esimratk}
 \end{esimerkki}
 

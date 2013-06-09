@@ -10,18 +10,22 @@ Polynomilausekkeiden käsittely on välttämätön taito matematiikassa, ja siks
 Kahden monomin tulo sievennetään kertomalla kertoimet keskenään ja kirjainosat keskenään. Muista potenssien laskusäännöt!
 
 \begin{esimerkki}
-Laske \quad a) $2x\cdot 3x$ \quad b)$-3x^2\cdot (-5x^4)$ \quad 
-c) $5x^2 \cdot (-2x)$
-\begin{esimratk}
-\begin{enumerate}[a)]
-    \item $2x\cdot 3x = 2\cdot 3\cdot x\cdot x = 6x^2$
-    \item $-3x^2\cdot (-5x^4) = (-3)\cdot (-5) \cdot x^2 \cdot x^4 = 15 x^6$
-    \item $5x^2 \cdot (-2x) = -10 x^3$
-\end{enumerate}
-\end{esimratk}
-\begin{esimvast}
-a) $6x^2$ \quad b) $15x^6$ \quad c) $-10x^3$
-\end{esimvast}
+    Laske \quad 
+    a) $2x\cdot 3x$ \quad
+    b)$-3x^2\cdot (-5x^4)$ \quad
+    c) $5x^2 \cdot (-2x)$
+    \begin{esimratk}
+        \begin{alakohdat}
+            \alakohta{$2x\cdot 3x = 2\cdot 3\cdot x\cdot x = 6x^2$}
+            \alakohta{$-3x^2\cdot (-5x^4) = (-3)\cdot (-5) \cdot x^2 \cdot x^4 = 15 x^6$}
+            \alakohta{$5x^2 \cdot (-2x) = -10 x^3$}
+        \end{alakohdat}
+    \end{esimratk}
+    \begin{esimvast}
+        a) $6x^2$ \quad
+        b) $15x^6$ \quad
+        c) $-10x^3$
+    \end{esimvast}
 \end{esimerkki}
 
 \subsubsection*{Polynomin kertominen monomilla}
@@ -32,11 +36,11 @@ käytetään osittelulakia $a(b+c)=ab+ac$.
 \begin{esimerkki}
 Laske \quad a) $5(x+3)$ \quad b) $2x(x-5)$ \quad 
 c) $3(a+b+c)$
-\begin{enumerate}[a)]
-    \item $5(x+3) = 5\cdot x + 5\cdot 3 = 5x+15$
-    \item $2x(x-5)=2x^2-10x$
-    \item $3(a+b+c)=3a+3b+3c$
-\end{enumerate}
+\begin{alakohdat}
+    \alakohta{$5(x+3) = 5\cdot x + 5\cdot 3 = 5x+15$}
+    \alakohta{$2x(x-5)=2x^2-10x$}
+    \alakohta{$3(a+b+c)=3a+3b+3c$}
+\end{alakohdat}
 \end{esimerkki} 
 
 \subsubsection*{Kahden binomin tulo}
@@ -163,13 +167,12 @@ Opetus.tv: \emph{muistikaavat} (8:05, 6:38 ja 9:08)}
 
 Joitakin polynomien kertolaskuja tarvitaan niin usein, että niitä kutsutaan \termi{muistikaavat}{muistikaavoiksi}.
 
-\laatikko{
-    \textbf{Muistikaavat}
-    \begin{itemize}
-        \item $(a+b)^2 = a^2+2ab+b^2$
-        \item $(a-b)^2 = a^2-2ab+b^2$
-        \item $(a+b)(a-b) = a^2-b^2$
-    \end{itemize}
+\laatikko[Muistikaavat]{
+    \begin{description}
+        \item[Summan neliö] $(a+b)^2 = a^2+2ab+b^2$
+        \item[Erotuksen neliö] $(a-b)^2 = a^2-2ab+b^2$
+        \item[Summan ja erotuksen tulo] $(a+b)(a-b) = a^2-b^2$
+    \end{description}
 }
 
 Nämä kaavat voidaan todistaa helposti laskemalla.
@@ -215,10 +218,10 @@ Saadaan
 \begin{esimerkki}
 Laske ilman laskinta a) $995^2$ b) $104 \cdot 96$. \\
 Käytetään ovelasti muistikaavoja $(a-b)^2 = a^2-2ab+b^2$ ja \mbox{$(a+b)(a-b) = a^2-b^2$}.
-\begin{enumerate}[a)]
-\item $995^2 = (1000-5)^2 = 1000^2-2\cdot 1000\cdot 5+5^2 = 1000000-10000+25 = 990025 $
-\item $104\cdot 96 = (100+4)(100-4) = 100^2 - 4^2 = 10000 - 16 = 9984$.
-\end{enumerate}
+\begin{alakohdat}
+\alakohta{$995^2 = (1000-5)^2 = 1000^2-2\cdot 1000\cdot 5+5^2 = 1000000-10000+25 = 990025 $}
+\alakohta{$104\cdot 96 = (100+4)(100-4) = 100^2 - 4^2 = 10000 - 16 = 9984$.}
+\end{alakohdat}
 \end{esimerkki}
 
 \begin{tehtavasivu}
@@ -227,69 +230,69 @@ Käytetään ovelasti muistikaavoja $(a-b)^2 = a^2-2ab+b^2$ ja \mbox{$(a+b)(a-b)
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-        \item $2(x+3)$
-        \item $x(x - 2)$
-        \item $3x(1-2x)$
-        \item $x^2(x + 5)$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$2(x+3)$}
+        \alakohta{$x(x - 2)$}
+        \alakohta{$3x(1-2x)$}
+        \alakohta{$x^2(x + 5)$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $2x+6$
-            \item $x^2 - 2x$
-            \item $3x-6x^2$
-            \item $x^3 + 5x$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$2x+6$}
+            \alakohta{$x^2 - 2x$}
+            \alakohta{$3x-6x^2$}
+            \alakohta{$x^3 + 5x$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-        \item $3(x+2y-4)$
-        \item $(x+2)(x + 3)$
-        \item $(3-x)(2x-1)$
-\end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$3(x+2y-4)$}
+        \alakohta{$(x+2)(x + 3)$}
+        \alakohta{$(3-x)(2x-1)$}
+\end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $3x+6y-12$
-            \item $x^2 +5x+6$
-            \item $-2x^2+7x-3$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$3x+6y-12$}
+            \alakohta{$x^2 +5x+6$}
+            \alakohta{$-2x^2+7x-3$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Kerro sulut auki muistikaavan avulla.
-    \begin{enumerate}[a)]
-        \item $(x+y)^2$
-        \item $(x-y)^2$
-        \item $(x+y)(x-y)$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(x+y)^2$}
+        \alakohta{$(x-y)^2$}
+        \alakohta{$(x+y)(x-y)$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-        \item $x^2 +2xy+y^2$
-        \item $x^2 -2xy +y^2$
-        \item $x^2-y^2$
-        \end{enumerate}
+        \begin{alakohdat}
+        \alakohta{$x^2 +2xy+y^2$}
+        \alakohta{$x^2 -2xy +y^2$}
+        \alakohta{$x^2-y^2$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Kerro sulut auki muistikaavan avulla.
-    \begin{enumerate}[a)]
-        \item $(x+3)^2$
-        \item $(y-5)^2$
-        \item $(x-4)(x+4)$
-        \item $(3x+2)^2$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(x+3)^2$}
+        \alakohta{$(y-5)^2$}
+        \alakohta{$(x-4)(x+4)$}
+        \alakohta{$(3x+2)^2$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-        \item $x^2 +6x+9$
-        \item $y^2 - 10y+25$
-        \item $x^2 -16$
-        \item $9x^2 +12x +4$
-        \end{enumerate}
+        \begin{alakohdat}
+        \alakohta{$x^2 +6x+9$}
+        \alakohta{$y^2 - 10y+25$}
+        \alakohta{$x^2 -16$}
+        \alakohta{$9x^2 +12x +4$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
@@ -304,79 +307,79 @@ Käytetään ovelasti muistikaavoja $(a-b)^2 = a^2-2ab+b^2$ ja \mbox{$(a+b)(a-b)
 
 \begin{tehtava}
     Pohdi ja määritä sulkuja avaamatta lausekkeen $(x^2+1)(x^3-2x)$
-    \begin{enumerate}[a)]
-        \item aste
-        \item vakiotermi.
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{aste}
+        \alakohta{vakiotermi.}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item Polynomin aste on kunkin tekijän korkeimpien asteiden summa, tässä siis $2+3=5$.
-            \item Polynomin vakiotermi on kunkin tekijän vakiotermien tulo, tässä siis $1\cdot 0=0$.
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{Polynomin aste on kunkin tekijän korkeimpien asteiden summa, tässä siis $2+3=5$.}
+            \alakohta{Polynomin vakiotermi on kunkin tekijän vakiotermien tulo, tässä siis $1\cdot 0=0$.}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-        \item $(-2x)(4x - 1)\cdot 3$
-        \item $(-x^3)(10x - 2)$
-        \item $5(-2x + 1)(-9x) $
-        \item $2x(x-3)+1$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(-2x)(4x - 1)\cdot 3$}
+        \alakohta{$(-x^3)(10x - 2)$}
+        \alakohta{$5(-2x + 1)(-9x) $}
+        \alakohta{$2x(x-3)+1$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $-24x^2 + 6x$
-            \item $-10x^4 + 2x^3$
-            \item $90x^2 - 45x$
-            \item $2x^2-6x+1$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$-24x^2 + 6x$}
+            \alakohta{$-10x^4 + 2x^3$}
+            \alakohta{$90x^2 - 45x$}
+            \alakohta{$2x^2-6x+1$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä muistikaavojen avulla.
-    \begin{enumerate}[a)]
-        \item $(5-x)^2$
-        \item $(7x + 4)^2$
-        \item $(9 - 7x)(9 + 7x)$
-        \item $(8x - 8)(8x + 8)$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(5-x)^2$}
+        \alakohta{$(7x + 4)^2$}
+        \alakohta{$(9 - 7x)(9 + 7x)$}
+        \alakohta{$(8x - 8)(8x + 8)$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $x^2 - 10x + 25$
-            \item $49x^2 + 56x + 16$
-            \item $-49x^2 + 81$
-            \item $64x^2 - 64$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$x^2 - 10x + 25$}
+            \alakohta{$49x^2 + 56x + 16$}
+            \alakohta{$-49x^2 + 81$}
+            \alakohta{$64x^2 - 64$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-        \item $(2y+5)(y+7)$
-        \item $(x-1)(x+4)x$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(2y+5)(y+7)$}
+        \alakohta{$(x-1)(x+4)x$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $2y^2 + 19y + 35$
-            \item $x^3 + 3x^2 - 4x$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$2y^2 + 19y + 35$}
+            \alakohta{$x^3 + 3x^2 - 4x$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-        \item $(t+v)^2+(t-v)^2$
-        \item $(t+v)^2-(t-v)^2$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(t+v)^2+(t-v)^2$}
+        \alakohta{$(t+v)^2-(t-v)^2$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $(t+v)^2+(t-v)^2 = t^2+2tv+v^2+t^2-2tv+v^2 = 2t^2+2v^2$
-            \item $(t+v)^2-(t-v)^2 = t^2+2tv+v^2-t^2+2tv-v^2 = 4tv$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$(t+v)^2+(t-v)^2 = t^2+2tv+v^2+t^2-2tv+v^2 = 2t^2+2v^2$}
+            \alakohta{$(t+v)^2-(t-v)^2 = t^2+2tv+v^2-t^2+2tv-v^2 = 4tv$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
@@ -384,63 +387,63 @@ Käytetään ovelasti muistikaavoja $(a-b)^2 = a^2-2ab+b^2$ ja \mbox{$(a+b)(a-b)
 
 \begin{tehtava}
 	Sievennä. 
-	\begin{enumerate}[a)]
-		\item $(x-3)(2x^3-3x+4)$
-		\item $(x^2+1)(x^3-2x-4)$
-		\item $(x-1)(x^4+x^3+x^2+x+1)$
-		\item $(\frac x5-\frac23)(x^2+x+1)$
-	\end{enumerate}
+	\begin{alakohdat}
+		\alakohta{$(x-3)(2x^3-3x+4)$}
+		\alakohta{$(x^2+1)(x^3-2x-4)$}
+		\alakohta{$(x-1)(x^4+x^3+x^2+x+1)$}
+		\alakohta{$(\frac x5-\frac23)(x^2+x+1)$}
+	\end{alakohdat}
 	\begin{vastaus}
-		\begin{enumerate}[a)]
-			\item $2x^4-6x^3-3x^2+13x-12$
-			\item $x^5-x^3-4x^2-2x-4$
-			\item $x^5-1$
-			\item $\frac15x^3-\frac{7}{15}x^2-\frac{7}{15}x-\frac23$
-		\end{enumerate}
+		\begin{alakohdat}
+			\alakohta{$2x^4-6x^3-3x^2+13x-12$}
+			\alakohta{$x^5-x^3-4x^2-2x-4$}
+			\alakohta{$x^5-1$}
+			\alakohta{$\frac15x^3-\frac{7}{15}x^2-\frac{7}{15}x-\frac23$}
+		\end{alakohdat}
 	\end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-            \item $(a+b)^3$
-            \item $(a+b)^4$
-            \item $(a-b)^3$
-        \end{enumerate}
+    \begin{alakohdat}
+            \alakohta{$(a+b)^3$}
+            \alakohta{$(a+b)^4$}
+            \alakohta{$(a-b)^3$}
+        \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$
-            \item $(a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4$
-            \item $(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$}
+            \alakohta{$(a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4$}
+            \alakohta{$(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä. (Ohje: käytä summakaavoja.)
-    \begin{enumerate}[a)]
-        \item $63^2+37^2$
-        \item $101^2+99^2$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$63^2+37^2$}
+        \alakohta{$101^2+99^2$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $63^2+37^2 = (50+13)^2+(50-13)^2 = 2\cdot 50^2 + 2\cdot 13^2 = 2\cdot 2500 +2\cdot 169 = 5000 + 338 = 5338$
-            \item $101^2+99^2 = (100+1)^2+(100-1)^2 = 2\cdot 100^2 + 2\cdot 1^2 = 2\cdot 10000 + 2\cdot 1 = 20000 + 2 = 20002$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$63^2+37^2 = (50+13)^2+(50-13)^2 = 2\cdot 50^2 + 2\cdot 13^2 = 2\cdot 2500 +2\cdot 169 = 5000 + 338 = 5338$}
+            \alakohta{$101^2+99^2 = (100+1)^2+(100-1)^2 = 2\cdot 100^2 + 2\cdot 1^2 = 2\cdot 10000 + 2\cdot 1 = 20000 + 2 = 20002$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Sievennä.
-    \begin{enumerate}[a)]
-        \item $35^2-25^2$
-        \item $170^2-50^2$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$35^2-25^2$}
+        \alakohta{$170^2-50^2$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $35^2-25^2 = (30+5)^2-(30-5)^2 = 4\cdot 30\cdot 5 = 600$
-            \item $170^2-30^2 = (100+70)^2+(100-70)^2 = 4\cdot 100\cdot 70 = 28000$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$35^2-25^2 = (30+5)^2-(30-5)^2 = 4\cdot 30\cdot 5 = 600$}
+            \alakohta{$170^2-30^2 = (100+70)^2+(100-70)^2 = 4\cdot 100\cdot 70 = 28000$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
@@ -453,37 +456,37 @@ Käytetään ovelasti muistikaavoja $(a-b)^2 = a^2-2ab+b^2$ ja \mbox{$(a+b)(a-b)
 
 \begin{tehtava}
     Olkoon $P(x)=-x^4+2x$ reaalifunktio. Sievennä lausekkeet.
-    \begin{enumerate}[a)]
-		\item $P(\sqrt{2})$
-        \item $P(x)^2$
-        \item $P(-x)$
-        \item $P(2t)$
-    \end{enumerate}
+    \begin{alakohdat}
+		\alakohta{$P(\sqrt{2})$}
+        \alakohta{$P(x)^2$}
+        \alakohta{$P(-x)$}
+        \alakohta{$P(2t)$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $-4 + 2\sqrt{2}$
-            \item $x^8 - 4x^5 + 4x^2$
-            \item $-x^4-2x$
-            \item $-16t^4+4t$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$-4 + 2\sqrt{2}$}
+            \alakohta{$x^8 - 4x^5 + 4x^2$}
+            \alakohta{$-x^4-2x$}
+            \alakohta{$-16t^4+4t$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Olkoot $P(x)=x^2$ ja $Q(x)=x+1$ reaalifunktioita. Sievennä lausekkeet.
-    \begin{enumerate}[a)]
-        \item $P(x+1)$
-        \item $Q(x-1)$
-        \item $P(Q(x))$
-        \item $Q(P(x))$
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$P(x+1)$}
+        \alakohta{$Q(x-1)$}
+        \alakohta{$P(Q(x))$}
+        \alakohta{$Q(P(x))$}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $P(x+1) = (x+1)^2 = x^2+2x+1$
-            \item $Q(x-1) = (x-1)+1 = x$
-            \item $P(Q(x)) = P(x+1) = (x+1)^2 = x^2+2x+1$
-            \item $Q(P(x)) = Q(x^2) = x^2+1$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$P(x+1) = (x+1)^2 = x^2+2x+1$}
+            \alakohta{$Q(x-1) = (x-1)+1 = x$}
+            \alakohta{$P(Q(x)) = P(x+1) = (x+1)^2 = x^2+2x+1$}
+            \alakohta{$Q(P(x)) = Q(x^2) = x^2+1$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 

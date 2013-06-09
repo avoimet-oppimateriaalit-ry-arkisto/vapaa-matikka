@@ -12,19 +12,21 @@ KIRJOITA TÄHÄN LUKUUN
 
 KIITOS!}
 
-\emph{Paraabeli} on tason niiden pisteiden joukko, joiden etäisyys kiinteästä pisteestä, \emph{polttopisteestä} on sama kuin etäisyys kiinteästä suorasta, \emph{johtosuorasta}.
+\laatikko{
+\termi{paraabeli}{Paraabeli} on tason niiden pisteiden joukko, joiden etäisyys kiinteästä pisteestä, \termi{polttopiste}{polttopisteestä} on sama kuin etäisyys kiinteästä suorasta, \termi{johtosuora}{johtosuorasta}.
+}
 
 %%%%%%MAA2, luku 3.1 Toisen asteen polynomifunktio
 Kussilla 2 mainittiin, että toisen asteen polynomifunktion kuvaaja on paraabeli. Nämä kuvaajat olivat muotoa $y=ax^2+bx+c$ olevia käyriä, joissa $a$ määräsi paraabelin aukeamissuunnan. Jos $a<0$ paraabeli aukeaa alaspäin ja jos $a>0$ ylöspäin.
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
-    kuvaaja.piirra("0.5*x**2-x+0.25", a = -1.5, b = 3.5, nimi = "$y= 0,5x^2-x+0,25$", kohta = (3.2,2.1), suunta = (-1, 1))
+    kuvaaja.piirra("0.5*x**2-x+0.25", a = -1.5, b = 3.5, nimi = "$y= 0,5x^2-x+0,25$", kohta = (3.2,2.1), suunta = 135)
 \end{kuva}
 
 \begin{kuva}
     kuvaaja.pohja(-1.5, 3.5, -0.5, 2.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
-    kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = (-1, 1))
+    kuvaaja.piirra("-0.5*x**2+x+1.75", a = -1.5, b = 3.5, nimi = "$y= -0,5x^2+x+1,75$", kohta = (3.2,-0.5), suunta = 135)
 \end{kuva}
 
 \begin{esimerkki}
@@ -95,6 +97,25 @@ Paraabelin huippu on pisteessä $(2, 1)$.
 
 \begin{tehtavasivu}
 
+\subsubsection*{Opi perusteet}
+
+\subsubsection*{Hallitse kokonaisuus}
+
+\subsubsection*{Sekalaisia tehtäviä}
+
+TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
+
+\begin{tehtava}
+Millaisella käyrällä ovat ympyröiden keskipisteet, kun ympyrät kulkevat pisteen $(0, 0)$ kautta ja sivuavat suoraa $x=4$?
+\begin{vastaus}
+%keskipiste (x, y)
+% x< 4 
+% kulkee origon kautta, joten (0-x)^2+(0-y)^2=r^2
+% etäisyys suorasta |x-4| = r
+$x=-\frac{1}{8}y^2+2$
+\end{vastaus}
+\end{tehtava}
+
 \begin{tehtava}
 Mikä on sen käyrän yhtälö, jonka kukin piste on yhtä etäällä suorasta $y=0$ ja pisteestä $(-3, 1)$.
 \begin{vastaus}
@@ -113,12 +134,95 @@ $y = \frac{1}{4}x^2-x+3$
 \end{vastaus}
 \end{tehtava}
 
-\subsubsection*{Opi perusteet}
+\begin{tehtava}
+Mitkä ovat suoran $x+y=6$ ja paraabelin $y=4x^2-3x$ leikkauspisteet?
+\begin{vastaus}
+% http://www.wolframalpha.com/input/?i=y%3D4x%5E2-3x%2C+x%2By%3D6
+$x = -1$, $ y = 7$ tai $x = \frac{3}{2}$, $y = \frac{9}{2}$
+\end{vastaus}
+\end{tehtava}
 
-\subsubsection*{Hallitse kokonaisuus}
+%%%%%TÄMÄ JA SEURAAVA PITÄISI SIIRTÄÄ VASEMMALLE/OIKEALLE AUKEAVIEN PARAABELIEN JÄLKEEN?
+\begin{tehtava}
+Millaisella käyrällä ovat ympyröiden keskipisteet, kun ympyrät kulkevat pisteen $(0, 0)$ kautta ja sivuavat suoraa $x=4$?
+\begin{vastaus}
+%keskipiste (x, y)
+% x< 4 
+% kulkee origon kautta, joten (0-x)^2+(0-y)^2=r^2
+% etäisyys suorasta |x-4| = r
+$x=-\frac{1}{8}y^2+2$
+\end{vastaus}
+\end{tehtava}
 
-\subsubsection*{Sekalaisia tehtäviä}
+\begin{tehtava}
+Kuinka monta leikkauspistettä voi olla paraabelilla ja
+\begin{enumerate}[a)]
+\item suoralla,
+\item ympyrällä,
+\item toisella paraabelilla?
+\end{enumerate}
+\begin{vastaus}
+\begin{enumerate}[a)]
+\item 0--2
+\item 0--4
+\item 0--4
+\end{enumerate}
+\end{vastaus}
+\end{tehtava}
 
-TÄHÄN TEHTÄVIÄ SIJOITTAMISTA ODOTTAMAAN
+\begin{tehtava}
+Määritä ne paraabelin $y=x^2-1$ pisteet, jotka ovat yhtä kaukana pisteistä $(4, 4)$ ja $(4, 2)$?
+\begin{vastaus}
+%suoran y=3 ja paraabelin leikkauspisteet
+$x=-2$, $y=3$ ja $x=2$, $y=3$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Määritä ne paraabelin $y=x^2-1$ pisteet, jotka ovat yhtä kaukana pisteistä $(4, 4)$ ja $(3, 3)$?
+\begin{vastaus}
+%pisteiden keskipisteen (3,5; 3,5) kautta kulkeva suora y=-x+7
+%suoran  ja paraabelin leikkauspistee
+% http://www.wolframalpha.com/input/?i=y%3Dx%5E2-1%2C+y%3D-x%2B7
+$x = -\frac{1+\sqrt{33}}{2}$,   $y = \frac{15+\sqrt{33}}{2}$ tai $x = -\frac{\sqrt{33}-1}{2}$,   $y = \frac{15-\sqrt{33}}{2}$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Ratkaise paraabelien $y=5(x-2)^2$  ja $y=-x^2+2x+4$ leikkauspisteet?
+\begin{vastaus}
+%tulee toisen asteen yhtälö ratkaistavaksi
+% http://www.wolframalpha.com/input/?i=y%3D5%28x-2%29%5E2%2C+y%3D-x%5E2%2B2x%2B4
+$(1, 5)$ ja $(\frac{8}{3}, \frac{20}{9})$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+%tehtävä helpottuu, koska vakiotermin saa suoraan
+Määritä sen ylöspäin aukeavan paraabelin yhtälö, joka kulkee pisteiden $(-5, 6)$, $(0, -4)$ ja $(1, 0)$ kautta.
+\begin{vastaus}
+% http://www.wolframalpha.com/input/?i=y%3D+x%5E2%2B3x-4+at+x%3D%7B-5%2C+0%2C+1%7D
+$y= x^2+3x-4$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+Määritä sen alaspäin aukeavan paraabelin yhtälö, joka kulkee pisteiden $(-5, 6)$, $(0, -4)$ ja $(1, 0)$ kautta.
+\begin{vastaus}
+% http://www.wolframalpha.com/input/?i=y%3D+x%5E2%2B3x-4+at+x%3D%7B-5%2C+0%2C+1%7D
+$y= x^2+3x-4$
+\end{vastaus}
+\end{tehtava}
+
+\begin{tehtava}
+% VAIKEA
+Määritä kaksi sellaista paraabelia, että niillä on täsmälleen kolme yhteistä pistettä
+\begin{vastaus}
+%idea valitaan suora, joka on tangetti kummallekin paraabelille esim. y=x ja kumpikin paraabeli sivuaa suoraa samassa kohtaa
+% http://www.wolframalpha.com/input/?i=y%3Dx%5E2-x%2C+x%3D2y%5E2-y
+Esimerkiksi $y=x^2-x$ ja  $x=2y^2-y$
+\end{vastaus}
+\end{tehtava}
 
 \end{tehtavasivu}
+

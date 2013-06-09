@@ -4,7 +4,12 @@
 \termi{ympyrä}{Ympyrä} on sellaisten pisteiden joukko, jotka ovat kiinteällä etäisyydellä tietystä pisteestä. Tätä kiinteää etäisyyttä kutsutaan ympyrän \termi{säde}{säteeksi} ja kyseistä pistettä ympyrän \termi{keskipiste}{keskipisteeksi}.
 }
 
-(KUVA TÄHÄN)
+\begin{kuva}
+keskipiste = geom.piste(0, 0, "keskipiste")
+kehapiste = geom.piste(-1, 2)
+ympyra = geom.ympyra(keskipiste, geom.etaisyys(keskipiste, kehapiste), r"ympyr\"{a}", 30)
+geom.jana(kehapiste, keskipiste, r"s\"{a}de")
+\end{kuva}
 
 \begin{esimerkki}
 Kuu kiertää Maata likimäärin ympyränmuotoisella radalla, jonka keskipiste on Maa ja säde on Kuun ja Maan välinen etäisyys.
