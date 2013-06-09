@@ -18,7 +18,15 @@ Esimerkiksi oheisessa kuvassa on kolmio $ABC$, jonka nurkkapisteiden koordinaati
 A(1, 2), \quad B(-1, -1) \quad \text{ja} \quad C(2, -2).
 \]
 
-[TÄHÄN KUVA]
+\begin{kuva}
+    kuvaaja.pohja(-2, 3, -3, 3, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    geom.jana((1, 2), (-1, -1))
+    geom.jana((-1, -1), (2, -2))
+    geom.jana((2, -2), (1, 2))
+    kuvaaja.piste((1, 2), "$A$", 45)
+    kuvaaja.piste((-1, -1), "$B$", 180)
+    kuvaaja.piste((2, -2), "$C$", -45)
+\end{kuva}
 
 Koordinaattiakselit leikkaavat toisensa kohtisuoraan pisteessä, jota nimitetään \termi{origo}{origoksi}.
 Tuota pistettä voi ajatella koordinaatiston keskuksena.
@@ -35,11 +43,16 @@ Tätä varten on selvitettävä, miten voidaan määrittää kahden koordinaatis
 Aivan kuten tavallisessa geometriassa, emme voi aina turvautua mittaamiseen, sillä siten ei saada täsmällisiä tuloksia.
 Sen sijaan pyritään selvittämään pisteiden väliset etäisyydet niiden koordinaattien perusteella.
 
-[KUVA JOSSA JOTKIN PISTEET VIEREKKÄIN JA TOISET PÄÄLLEKKÄIN]
+\begin{kuva}
+    kuvaaja.pohja(-4, 3, 0, 6, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    piste((1, 2), "$A$")
+    piste((1, 5), "$B$")
+    piste((-3, 2), "$C$")
+\end{kuva}
 
 Helpointa etäisyyden määrittäminen on silloin, kun pisteet ovat samalla vaaka- tai pystysuoralla.
 Toisin sanoen niillä on sama $x$- tai $y$-koordinaatti.
-Tällöin niiden etäisyys saadaan yksinkertaisesti ottamalla toisistaan poikkeavien koordinaattien erotus.
+Tällöin niiden etäisyys saadaan yksinkertaisesti laskemalla toisistaan poikkeavien koordinaattien erotus.
 
 Esimerkiksi yllä olevassa kuvassa pisteiden $A(1, 2)$ ja $B(1, 5)$ välinen etäisyys on $5-2=3$.
 Toisaalta pisteiden $A(1, 2)$ ja $C(-3, 2)$ välinen etäisyys on $1-(-3)=4$.
@@ -52,7 +65,14 @@ Esimerkiksi edellä pisteiden $A$ ja $C$ etäisyys voidaan laskea myös järjest
 % jotkin helpot etäisyydet
 % \end{esimerkki}
 
-[KUVA JOSSA PISTEET VINOITTAIN TOISIINSA NÄHDEN SEKÄ SUORAKULMAINEN KOLMIO]
+\begin{kuva}
+    kuvaaja.pohja(-2, 3, -1, 5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    piste((1, 2), "$A$")
+    piste((4, 3), "$B$")
+    geom.jana((1, 2), (1, 3))
+    geom.jana((1, 3), (4, 3))
+    geom.jana((4, 3), (1, 2))
+\end{kuva}
 
 Kun kahdella pisteellä on sekä eri $x$-koordinaatit että eri $y$-koordinaatit, etäisyys on määritettävä toisella tapaa.
 Nyt voidaan turvautua Pythagoraan lauseeseen ja siihen, että koordinaatisto on suorakulmainen.
@@ -109,7 +129,7 @@ Yhteistä kaikille näille on se, että koordinaatistoon piirrettyä käyrää (
 Alla olevan kuvan suoraa vastaa yhtälö $y=2x-1$.
 Yhtälö tulkitaan siten, että jokaisen suoralla olevan pisteen $(x, y)$ koordinaatit toteuttavat yhtälön.
 Esimerkiksi suoran piste $(2, 3)$ toteuttaa yhtälön, sillä $3=2\cdot 2-1$.
-Toisaalta piste $(5 ,2)$ ei ole suoralla, sillä $2\cdot 5-1=9\neq 2$.
+Toisaalta piste $(5, 2)$ ei ole suoralla, sillä $2\cdot 5-1=9\neq 2$.
 
 [TÄHÄN KUVA SUORASTA, JOHON ON MERKITTY PISTE (1,1)]
 
