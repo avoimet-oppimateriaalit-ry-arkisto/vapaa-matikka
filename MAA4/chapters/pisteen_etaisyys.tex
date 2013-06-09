@@ -85,7 +85,7 @@ Tämä johtuu siitä, että molemmat ovat suorakulmaisia ja lisäksi kulmat $OAB
 \end{kuva}
 
 Kolmion $OAB$ sivut selviävät, kun ratkaistaan, missä pisteissä suora leikkaa $x$- ja $y$-akselit.
-Asettamalla suoran yhtälössä $x=0$ suoran yhtälössä
+Asettamalla suoran yhtälössä $x=0$ saadaan
 \[
 3x-4\cdot 0=12, \quad \text{josta} \quad x=\frac{12}{3}=4.
 \]
@@ -124,7 +124,7 @@ Siispä pisteen $P$ etäisyys suorasta $l$ on $\dfrac{8}{5}$.
 
 Edellä esitetystä tavasta laskea pisteen etäisyys suorasta voidaan johtaa myös kaava.
 Jos suoran yhtälö on annettu normaalimuodossa $Ax+By+C=0$ ja pisteen koordinaatit ovat $(x_0, y_0)$, etäisyys $d$ saadaan seuraavasta kaavasta.
-\laatikko[pisteen etäisyys suorasta]{
+\laatikko[Pisteen etäisyys suorasta]{
 \[
 d=\frac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}
 \]
@@ -207,7 +207,7 @@ Koska $Q$ kuuluu suoralle $l$ ja sen normaalille, sen koordinaattien on toteutet
     \end{array}
     \right.
 \]
-Yhtälöpari voidaan ratkaista yhtäänlaskumenetelmällä kertomalla ylempi yhtälö $a$:lla ja alempi $b$:llä.
+Yhtälöpari voidaan ratkaista yhteenlaskumenetelmällä kertomalla ylempi yhtälö $a$:lla ja alempi $b$:llä.
 \[
 \left\{    
     \begin{array}{rcl}
@@ -216,7 +216,7 @@ Yhtälöpari voidaan ratkaista yhtäänlaskumenetelmällä kertomalla ylempi yht
     \end{array}
     \right.
 \]
-ja laskemalle yhtälöt yhtälöt yhteen
+ja laskemalla yhtälöt puolittain yhteen
 \begin{align*}
  a^2x_q + aby_q + ac + b^2x_q-aby_q+aby_0-b^2x_0 &= 0 \\
  (a^2+b^2)x_q &= -ac-aby_0+b^2x0 \\
@@ -226,14 +226,14 @@ Vastaavasti
 \[
 y_q = \frac{-bc+a^2y_0-abx_0}{(a^2+b^2)}.
 \]
-Mutta nythän
+Nyt
 \begin{align*}
 PQ &= \sqrt{(x_q-x_0)^2+(y_q-y0)^2} \\
 &= \sqrt{\Big(\frac{-ac-aby_0+b^2x_0-(a^2+b^2)x_0}{a^2+b^2}\Big)^2+\Big(\frac{-bc+a^2y_0-abx_0-(a^2+b^2)y_0}{a^2+b^2}\Big)^2} \\
-& = \frac{\sqrt{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2)y_0)^2}}{a^2+b^2} \\
+& = \frac{\sqrt{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2 y_0)^2}}{a^2+b^2} \\
 & = \frac{\sqrt{(a(-c-by_0-ax_0))^2+(b(-c-ax_0-by_0))^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a^2+b^2)((-c-by_0-ax_0))^2}}{a^2+b^2} \\
-& = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0))^2} \\
+& = \frac{\sqrt{(a^2+b^2)(-c-by_0-ax_0)^2}}{a^2+b^2} \\
+& = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0)^2} \\
 & = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}.
 \end{align*}
 \begin{tehtavasivu}
