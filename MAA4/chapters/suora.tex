@@ -135,7 +135,16 @@ y=k\cdot 0+b=b.
 Pisteen $y$-koordinaatti on siis $b$, eli suoran yhtälön vakiotermi. Vakiotermi siis ilmaisee, missä kohtaa suora leikkaa $y$-akselin.
 Alla on esimerkkejä erilaisista vakiotermeistä.
 
-[TÄHÄN KUVIA ERILAISISTA VAKIOTERMEISTÄ]
+%%%% Nyt on samat kulmakertoimet kuin aiemmissa esimerkeissä.
+%%%% Jos kulmakerroin olisi esim. 0.5, niin nimet saisi oikealle puolelle nätisti
+
+\begin{kuva}
+    kuvaaja.pohja(-2, 3, -1, 5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirra("2*x+1", nimi = "$y=2x+1$", suunta = 45)
+    kuvaaja.piirra("2*x+3", nimi = "$y=2x+3$", kohta = -2, suunta = -135)
+    kuvaaja.piirra("2*x-1", nimi = "$y=2x-1$", suunta = -45)
+    kuvaaja.piirra("2*x-5", nimi = "$y=2x-5$", suunta = 0)
+\end{kuva}
 
 \subsubsection*{Suoran yhtälön määrittäminen}
 
