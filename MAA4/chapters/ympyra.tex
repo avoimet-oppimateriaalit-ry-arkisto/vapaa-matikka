@@ -12,7 +12,11 @@ ja ympyrän keskipisteen ja säteen selvittäminen siitä
 
 KIITOS!}
 
-TÄHÄN TARVITAAN KUVA. (Origokeskinen ympyrä, jonka säde on kolme. Kuvaan voisi laittaa myös yhden ympyrän pisteen, jota merkitään $(x,y)$).
+\begin{kuva}
+    kuvaaja.pohja(-3.5, 3.5, -3.5, 3.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirraParametri("3*cos(t)", "3*sin(t)", a = 0, b = 2*pi)
+    piste((3*cos(0.75), 3*sin(0.75)), "(x, y)", -120)
+\end{kuva}
 
 Kuvaan on piirretty käyrä, jonka pisteiden etäisyys origosta on 3. Huomataan, että näin muodostuva käyrä on ympyrä. Piste $(x,y)$ on ympyrällä täsmälleen silloin, jos sen etäisyys origosta on 3. Toisin sanoen täytyy päteä $\sqrt{x^2+y^2}=3$. Kun yhtälön molemmat puolet korotetaan vielä toiseen potenssiin, saadaan $x^2+y^2=9$. Ympyrän yhtälö on siis $x^2+y^2=9$.
 
