@@ -3,83 +3,82 @@
 \qrlinkki{http://opetus.tv/maa/maa2/n-asteinen-polynomiepayhtalo/}{Opetus.tv: \emph{N-asteinen polynomiepäyhtälö} (16:19 ja 12:00)}
 
 Korkeamman asteen epäyhtälö, kuten epäyhtälö
-$$x^3 -6x \leq x^2 $$
-ratkaistaan siirtämällä kaikki termit epäyhtälön toiselle puolelle ja tutkimalla
-syntyvän polynomin merkkiä:
+\[ x^3 -6x \leq x^2 \]
+ratkaistaan siirtämällä kaikki termit epäyhtälön toiselle puolelle ja tutkimalla syntyvän polynomin merkkiä:
 \begin{align*}
-x^3 -6x &\leq x^2 \quad \ppalkki \ \ -x^2 \\
-\underbrace{x^3-x^2 -6x}_{P(x)} &\leq 0.
+    x^3 -6x &\leq x^2 &\ppalkki -x^2 \\
+    \underbrace{x^3-x^2 -6x}_{P(x)} &\leq 0.
 \end{align*}
 Polynomin $P(x)$ merkin selvittämiseksi ratkaistaan sen nollakohdat:
 \begin{align*}
-x^3 - x^2-6x &= 0 \quad \ppalkki \ \ \text{yhteinen tekijä} \\
-x(x^2 -x -6) &= 0 \quad \ppalkki \ \ \text{tulon nollasääntö} \\
-x = 0 \textrm{ tai } x^2 -x -6 &= 0 \quad\ppalkki \ \ \text{ratkaisukaava} \\
-x &=\frac{-(-1) \pm \sqrt{(-1)^2-4\cdot 1 \cdot (-6)}}{2\cdot 1} \\
-x &= -2 \textrm{ tai } x = 3.
+    x^3 - x^2-6x &= 0 &\ppalkki \text{yhteinen tekijä} \\
+    x(x^2 -x -6) &= 0 &\ppalkki \text{tulon nollasääntö} \\
+    x = 0 \tai x^2 -x -6 &= 0 &\ppalkki \text{ratkaisukaava} \\
+    x &=\frac{-(-1) \pm \sqrt{(-1)^2-4\cdot 1 \cdot (-6)}}{2\cdot 1} \\
+    x &= -2 \tai x = 3.
 \end{align*}
 Polynomin $P$ nollakohdat ovat siis $0$, $-2$ ja $3$. Tästä voidaan jatkaa kahdella eri tavalla.
 
-\textbf{Tapa 1:} Tekijöihin jako
+\paragraph{Tapa 1.} Tekijöihin jako
 
 Jaetaan polynomi tekijöihin nollakohtien avulla:
-$$P(x) = x^3 - x^2-6x = x(x^2-x-6) = x(x+2)(x-3).$$
-Tutkitaan kunkin tulon tekijän merkkiä:\\
-\quad \begin{tabular}{ll}
-$x+2>0$ & kun $x > -2$\\
-$x-3>0$ & kun $x > 3$\\
-$x>0$ & kun $x > 0$.
-\end{tabular}
+\[ P(x) = x^3 - x^2-6x = x(x^2-x-6) = x(x+2)(x-3). \]
+Tutkitaan kunkin tulon tekijän merkkiä:
 
-Kootaan tulokset merkkikaavioon, jonka jokainen ruutu vastaa
-yhtä reaalilukuväliä lukusuoralla:
+\begin{align*}
+    x+2>0 &\kun x > -2\\
+    x-3>0 &\kun x > 3\\
+    x>0 &\kun x > 0.
+\end{align*}
+
+Kootaan tulokset merkkikaavioon, jonka jokainen ruutu vastaa yhtä reaalilukuväliä lukusuoralla:
 
 \begin{center}
-\begin{merkkikaavio}{3}
-\merkkikaavioKohta{$-2$}
-\merkkikaavioKohta{$0$}
-\merkkikaavioKohta{$3$}
+    \begin{merkkikaavio}{3}
+        \merkkikaavioKohta{$-2$}
+        \merkkikaavioKohta{$0$}
+        \merkkikaavioKohta{$3$}
 
-	\merkkikaavioFunktio{$x+2$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$+$}
-	\merkkikaavioMerkki{$+$}
-	\merkkikaavioMerkki{$+$}
+        \merkkikaavioFunktio{$x+2$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$+$}
+        \merkkikaavioMerkki{$+$}
+        \merkkikaavioMerkki{$+$}
 
-\merkkikaavioUusirivi
-	\merkkikaavioFunktio{$x-3$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$+$}
+        \merkkikaavioUusirivi
+        \merkkikaavioFunktio{$x-3$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$+$}
 
-\merkkikaavioUusirivi
-	\merkkikaavioFunktio{$x$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$+$}
-	\merkkikaavioMerkki{$+$}
+        \merkkikaavioUusirivi
+        \merkkikaavioFunktio{$x$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$+$}
+        \merkkikaavioMerkki{$+$}
 
-\merkkikaavioUusiriviKaksoisviiva
-	\merkkikaavioFunktio{$x(x+2)(x-3)$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$+$}
-	\merkkikaavioMerkki{$-$}
-	\merkkikaavioMerkki{$+$}
-\end{merkkikaavio}
+        \merkkikaavioUusiriviKaksoisviiva
+        \merkkikaavioFunktio{$x(x+2)(x-3)$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$+$}
+        \merkkikaavioMerkki{$-$}
+        \merkkikaavioMerkki{$+$}
+    \end{merkkikaavio}
 \end{center}
 
-Merkkikaaviosta voidaan lukea vastaus: $x^3-x^2 -6 \leq 0$, \\ kun
-$x\leq -2$ tai $0\leq x \leq 3$.
+Merkkikaaviosta voidaan lukea vastaus: $x^3-x^2-6 \leq 0$, kun $x\leq -2$ tai $0\leq x \leq 3$.
 
-\textbf{Tapa 2:} Testipisteet\\
-Polynomit ovat niin sanottuja jatkuvia funktioita. (Asiasta lisää kurssilla 7, nyt
-riittää, että niiden kuvaajat muodostavat yhtenäisen viivan.) Jos siis polynomilla on positiivinen ja negatiivinen arvo, niiden välissä täytyy olla nollakohta. Polynomi ei voi vaihtaa merkkiä ilman, että sen kuvaaja kulkee nollan kautta.
+\paragraph{Tapa 2.} Testipisteet
 
-Polynomin arvon merkki voi siis muuttua ainoastaan nollakohdassa. Merkin nollakohtien välillä saa selville tarkistamalla väliltä otetun testipisteen merkin.
+Polynomit ovat jatkuvia funktioita. Jatkuvuudesta puhutaan vasta kurssilla MAA7.
+Intuitiivisesti jatkuvuudessa on kyse siitä, että funktion kuvaaja on yhtenäinen viiva.
+Jatkuvuudesta seuraa, että polynomi ei voi vaihtaa merkkiä kulkematta nollakohdan kautta.
+Polynomin merkin nollakohtien välillä saa selville tarkistamalla väliltä otetun testipisteen merkin.
 
 Esimerkissä nollakohdat olivat $-2$, $0$ ja $3$. Valitaan niiden välistä ja
-ympäriltä testipisteiksi vaikkapa $x=-3$, $x=-1$, $x=1$, $x=4$. Tarkistetaan funktion merkki:
+ympäriltä testipisteiksi vaikkapa $x=-3$, $x=-1$, $x=1$ ja $x=4$. Tarkistetaan funktion merkki:
 
 \begin{tabular}{c|l|r|c}
 Väli & Testipiste & $f(x)=x^3-x^2-6x$ & Funktion merkki \\
@@ -98,35 +97,33 @@ Vastaukseksi saadaan taas $x\leq -2$ tai $0\leq x \leq 3$.
 
 \begin{tehtava}
     Ratkaise
-    \begin{enumerate}[a)]
-        \item $(x-1)(x-2)(x-3) \le 0$
-        \item $(x-1)(x-2)(x-3) > 0$
-        \item $3(x-1)(x-2)(x-3) > 0$.
-    \end{enumerate}
+    \begin{alakohdat}
+        \alakohta{$(x-1)(x-2)(x-3) \le 0$}
+        \alakohta{$(x-1)(x-2)(x-3) > 0$}
+        \alakohta{$3(x-1)(x-2)(x-3) > 0$.}
+    \end{alakohdat}
     \begin{vastaus}
-        \begin{enumerate}[a)]
-            \item $x \le 1$ tai $2 \le x \le 3$
-            \item $1 < x < 2$ tai $x>3$
-            \item $1 < x < 2$ tai $x>3$
-        \end{enumerate}
+        \begin{alakohdat}
+            \alakohta{$x \le 1$ tai $2 \le x \le 3$}
+            \alakohta{$1 < x < 2$ tai $x>3$}
+            \alakohta{$1 < x < 2$ tai $x>3$}
+        \end{alakohdat}
     \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
     Ratkaise $x^3-x^2<0$.
     \begin{vastaus}
-    $x<0$ tai $0<x<1$
+        $x<0$ tai $0<x<1$
     \end{vastaus}
 \end{tehtava}
 
-%bikvadraattinen, termin siirto puolelta toiselle ei enää kovin helppo
 \begin{tehtava}
     Ratkaise $x^4 \le 1$.
     \begin{vastaus}
-       $-1 \le x \le 1$
+        $-1 \le x \le 1$
     \end{vastaus}
 \end{tehtava}
-
 
 \paragraph*{Hallitse kokonaisuus}
 
@@ -134,17 +131,15 @@ Vastaukseksi saadaan taas $x\leq -2$ tai $0\leq x \leq 3$.
 \begin{tehtava}
     Ratkaise $(2x^3+4x^2-5x+7)^2 < 0$.
     \begin{vastaus}
-       Ei ratkaisuja
+        Ei ratkaisuja.
     \end{vastaus}
 \end{tehtava}
-
-
 
 %bikvadraattinen
 \begin{tehtava}
     Ratkaise $x^4-3x^2-18 \le 0$.
     \begin{vastaus}
-    $-\sqrt{3}\le x \le \sqrt{3}$
+        $-\sqrt{3}\le x \le \sqrt{3}$
     \end{vastaus}
 \end{tehtava}
 
@@ -152,7 +147,7 @@ Vastaukseksi saadaan taas $x\leq -2$ tai $0\leq x \leq 3$.
 \begin{tehtava}
     Ratkaise $x+2x^6+x^{11}<0$.
     \begin{vastaus}
-    $x<-1$ tai $ -1<x<0$
+        $x<-1$ tai $ -1<x<0$
     \end{vastaus}
 \end{tehtava}
 
@@ -160,7 +155,7 @@ Vastaukseksi saadaan taas $x\leq -2$ tai $0\leq x \leq 3$.
 \begin{tehtava}
     Ratkaise $4 x^5+9 x^3 \le 12 x^4$.
     \begin{vastaus}
-    $x\le0$ tai $x=\frac{2}{3}$
+        $x\le0$ tai $x=\frac{2}{3}$
     \end{vastaus}
 \end{tehtava}
 
