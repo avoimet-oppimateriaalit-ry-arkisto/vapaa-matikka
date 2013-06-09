@@ -1,1 +1,34 @@
 \section{Lisämateriaalia: Kolmioepäyhtälö}
+
+\begin{esimerkki}
+Määrittele, mitä tarkoitetaan reaaliluvun $x$ itseisarvolla. \\
+Todista, että seuraavat epäyhtälöt ovat voimassa kaikille reaaliluvuille $x$ ja $y$:
+\begin{alakohdat}
+\alakohta{$x \leq |x|$}
+\alakohta{$x+y \leq |x|+|y|$}
+\alakohta{$|x+y| \leq |x|+|y|$}
+\alakohta{$||x|-|y|| \leq |x|+|y|$}
+\end{alakohdat}
+(YO syksy08/14)
+\begin{esimratk}
+Itseisarvo määriteltiin kirjan alussa seuraavasti:
+\[
+|x|=\begin{cases}
+	x, & \kun x \geq 0 \\
+	-x, & \kun x < 0
+\end{cases} 
+\]
+\begin{alakohdat}
+\alakohta{Kun $x \geq 0$, väite pätee selvästi muodossa $x \leq x$. Koska $|x| \geq 0$
+kaikilla reaaliluvuilla $x$, niin väite pätee muodossa $x<0 \leq |x|$, kun $x<0$}
+\alakohta{Käytetään edellistä kohtaa: sen mukaan $x+y \leq |x|+y \leq |x|+|y|$.}
+\alakohta{Edellisen kohdan nojalla $-(x+y)=-x+(-y) \leq |-x|+|-y|=|x|+|y|$. Koska
+$x+y \leq |x|+|y|$ ja $-(x+y) \leq |x|+|y|$, niin myös $|x+y| \leq |x|+|y|$.}
+\alakohta{Soveltamalla edellistä kohtaa saadaan suoraan $||x|-|y|| = ||x|+(-|y|)| \leq
+||x||+|-|y|| = |x|+|y|$.}
+\end{alakohdat}
+\end{esimratk}
+\end{esimerkki}
+
+Edellä todistetuista väitteistä c)-kohta kulkee nimellä kolmioepäyhtälö, ja se on erittäin
+kätevä työkalu edistyneessä matematiikassa.
