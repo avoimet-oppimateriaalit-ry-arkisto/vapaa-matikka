@@ -4,7 +4,7 @@
 A = geom.piste(0, 0, piirra = False)
 B = geom.piste(5, 2, piirra = False)
 C = geom.piste(2, 4, piirra = False)
-geom.jana(A, B, "$c$", kohta = 0.4)
+geom.jana(A, B, "$c$", kohta = 0.35)
 geom.jana(B, C, "$a$")
 geom.jana(C, A, "$b$")
 geom.kulma(B, A, C, r"$\alpha$")
@@ -13,8 +13,8 @@ geom.kulma(A, C, B, r"$\gamma$")
 
 w = geom.ymparipiirrettyYmpyra(A, B, C)
 O = geom.ympyranKeskipiste(w)
-R = geom.leikkauspiste(w, geom.suora(O, (6, 0), piirra = False), piirra = False)
-geom.jana(O, R, "$R$", kohta = 0.7)
+R = geom.ympyranKehapiste(w, -20, piirra = False)
+geom.jana(O, R, "$R$", kohta = 0.6)
 \end{luoKuva}
 
 \laatikko{
