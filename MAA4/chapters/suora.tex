@@ -20,7 +20,12 @@ y & =2x \\
 \end{align*}
 Kuten huomataan, kaikki kolme kuvaajaa ovat suoria.
 
-[TÄHÄN KUVAAJAT]
+\begin{kuva}
+    kuvaaja.pohja(-3.5, 3.5, -3.5, 3.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirra("x-1", nimi = "$y=x-1$")
+    kuvaaja.piirra("2*x", nimi = "$y=2x$", suunta = 45)
+    kuvaaja.piirra("-x+2", nimi = "$y=-x+2$", kohta = -0.6, suunta = -135)
+\end{kuva}
 
 \laatikko{
 Yhtälön
@@ -30,6 +35,9 @@ y=kx+b
 määräämä kuvaaja on suora. Lukua $k$ nimitetään suoran \termi{kulmakerroin}{kulmakertoimeksi} ja lukua $b$ \termi{vakiotermi}{vakiotermiksi}.
 }
 
+
+%%%%%%FIX ME Pitäisikö tässä olla kolme pistettä, kun käytännössä aika usein kolmas olisi hyvä, koska huolimattomuusvirhe
+
 \begin{esimerkki} Piirretään koordinaatistoon yhtälön $y=2x-3$ kuvaaja. Koska kyseessä on suoran yhtälö, riittää löytää kaksi pistettä, joiden kautta suora kulkee.
 Valitaan esimerkiksi pisteet, joiden $x$-koordinaatit ovat $0$ ja $2$. Ensimmäisen $y$-koordinaatti on
 \[
@@ -37,18 +45,30 @@ y=2\cdot 0-3=-3
 \]
 ja toisen
 \[
-y=2\cdot 3-3=6-3=3.
+y=2\cdot 2-3=4-3=1.
 \]
-Suoran pisteet ovat siis $(0, -3)$ ja $(2, 3)$. Piirretään nämä koordinaatistoon ja vedetään niiden kautta suora.
+Suoran pisteet ovat siis $(0, -3)$ ja $(2, 1)$. Piirretään nämä koordinaatistoon ja vedetään niiden kautta suora.
 
-[TÄHÄN KUVA SUORASTA]
+\begin{kuva}
+    kuvaaja.pohja(-1.5, 3.5, -3.5, 3.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirra("2*x-3", nimi = "$y=2x-3$")
+    piste((0, -3))
+    piste((2, 1))
+\end{kuva}
+
 \end{esimerkki}
 
 \subsubsection*{Kulmakertoimen tulkinta}
 
 Suoran kulmakerroin kertoo, miten jyrkästi suora nousee tai laskee. Tarkastellaan alla olevaa suoraa, jonka yhtälö on $y=2x$.
 
-[TÄHÄN KUVA]
+\begin{kuva}
+    kuvaaja.pohja(-1, 3, -1, 5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirra("2*x", nimi = "$y=2x$")
+    piste((1, 2))
+    piste((2, 4))
+\end{kuva}
+
 
 Valitaan suoralta kaksi pistettä,
 $A=(1, 2)$ ja $B=(2, 4)$. Siirryttäessä pisteestä $A$ pisteeseen $B$ $x$-koordinaatin arvo kasvaa yhdellä ja $y$-koordinaatin arvo kahdella. Saadaan suhde
@@ -204,7 +224,7 @@ $(2, 0)$
 \begin{tehtava}
 Määritä
 \begin{enumerate}[a)]
-\item $x$-akselin suuntaisen suoran
+\item $x$-akselin suuntaisen suoran,
 \item $y$-akselin suuntaisen suoran kulmakerroin?
 \end{enumerate}
 \begin{vastaus}
@@ -236,7 +256,7 @@ $x=-\frac{1}{10}$
 \begin{tehtava}
 Missä pistessä suora $y=\frac{16x}{25}+\frac{36}{49}$
 \begin{enumerate}[a)]
-\item leikkaa $x$-akselin
+\item leikkaa $x$-akselin,
 \item leikkaa $y$-akselin?
 \end{enumerate}
 \begin{vastaus}
