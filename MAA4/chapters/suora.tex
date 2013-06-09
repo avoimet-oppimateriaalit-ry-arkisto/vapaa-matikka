@@ -106,16 +106,24 @@ Alla on esimerkkejä erilaisista vakiotermeistä.
 Suoran yhtälö voidaan määrittää kuvasta laskemalla suoran kulmakerroin sekä vakiotermi.
 
 \begin{esimerkki} Mikä on alla olevan kuvan suoran yhtälö?
-[TÄHÄN KUVA JOSTAKIN SUORASTA]
+
+\begin{kuva}
+    kuvaaja.pohja(-1, 4.5, -0.5, 3.5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirra("0.5*x+1")
+    piste((0, 1), "(0, 1)", 135)
+    piste((4, 3), "(4, 3)", 135)
+\end{kuva}
+
+
 \begin{esimratk}
-Aloitetaan määrittämällä kulmakerroin. Valitaan suoralta pisteet $???$ ja $???$. Kulmakertoimeksi tulee
+Aloitetaan määrittämällä kulmakerroin. Valitaan suoralta pisteet $(0, 1)$ ja $(4, 3)$. Kulmakertoimeksi tulee
 \[
-k=\frac{???}{???}=\frac{???}{???}=???.
+k=\frac{3-1}{4-0}=\frac{2}{4}=\frac{1}{2}\text{.}
 \]
 \end{esimratk}
-Vakiotermi saadaan kohdasta, jossa suora leikkaa $y$-akselin. Tuossa kohdassa $y$-koordinaatti on ???. Vakiotermi on siis $b=???$.
+Vakiotermi saadaan kohdasta, jossa suora leikkaa $y$-akselin. Tuossa kohdassa $y$-koordinaatti on 1. Vakiotermi on siis $b=1$.
 \begin{esimvast}
-Suoran yhtälö on $y=???$.
+Suoran yhtälö on $y=\frac{1}{2}x+1$.
 \end{esimvast}
 \end{esimerkki}
 
@@ -147,21 +155,22 @@ $x=-\frac{1}{3}$
 \begin{tehtava}
 Ratkaise suorien $y=-5x+3$ ja $y=2x-17$ leikkauspiste.
 \begin{vastaus}
+% http://www.wolframalpha.com/input/?i=y%3D-5x%2B3%2C+y%3D2x-17
 $(\frac{20}{7}, -\frac{79}{70})$
 \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
-Mikä on x-akselin suuntaisen suoran, joka kulkee pisteen $(1, 3)$ kautta, yhtälö?
+Mikä on $x$-akselin suuntaisen suoran, joka kulkee pisteen $(1, 3)$ kautta, yhtälö?
 \begin{vastaus}
 $y=3$
 \end{vastaus}
 \end{tehtava}
 
 \begin{tehtava}
-Mikä on suoran $y=3,14x-10$ yhtälö?
+Mikä on suoran $y=3,14x-10$ yhtälön
 \begin{enumerate}[a)]
-\item vakiotermi
+\item vakiotermi,
 \item kulmakerroin?
 \end{enumerate}
 \begin{vastaus}
@@ -195,8 +204,8 @@ $(2, 0)$
 \begin{tehtava}
 Määritä
 \begin{enumerate}[a)]
-\item x-akselin suuntaisen suoran
-\item y-akselin suuntaisen suoran kulmakerroin?
+\item $x$-akselin suuntaisen suoran
+\item $y$-akselin suuntaisen suoran kulmakerroin?
 \end{enumerate}
 \begin{vastaus}
 a) $0$ b) ei määritelty %(ääretön)
@@ -227,8 +236,8 @@ $x=-\frac{1}{10}$
 \begin{tehtava}
 Missä pistessä suora $y=\frac{16x}{25}+\frac{36}{49}$
 \begin{enumerate}[a)]
-\item leikkaa x-akselin
-\item leikkaa y-akselin?
+\item leikkaa $x$-akselin
+\item leikkaa $y$-akselin?
 \end{enumerate}
 \begin{vastaus}
 a)$(-\frac{225}{196}, 0)$ b) $(0, \frac{36}{49})$
