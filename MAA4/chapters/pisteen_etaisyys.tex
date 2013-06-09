@@ -14,6 +14,7 @@ käytetään yhdenmuotoisia kolmioita
 
 KIITOS!}
 
+Pisteen etäisyydellä suorasta tarkoitetaan pisteen ja mielivaltaisen suoran pisteen pienintä mahdollista etäisyyttä.
 Jos tunnetaan jokin vaaka- tai pystysuora suora ja jokin koordinaatiston piste, kyseisen pisteen etäisyys annetusta suorasta on helppo määrittää.
 
 [TÄHÄN SELITYS JA KUVA]
@@ -127,8 +128,66 @@ Pisteet ovat $\bigl(6, \frac{99}{8}\bigr)$ ja $\bigl(6, -\frac{27}{8}\bigr)$.
 
 \subsection*{Pisteen etäisyys suorasta, kaavan todistus}
 
-Lasketaan pisteen $(x_0, y_0)$ etäisyys suorasta $ax+by+c=0$.
+Lasketaan pisteen $P = (x_0, y_0)$ etäisyys suorasta $l$: $ax+by+c=0$.
 
+Olkoon $Q$ suoralla $l$ siten, että $l$ ja $PQ$ ovat kohtisuorassa. Huomataan, että jos piste $R$ on suoralla $l$, Pythagoraan lauseen mukaan
+\[
+PR^2 = PQ^2+QR^2 \geq PQ^2,
+\]
+jolloin myös $PR \geq PQ$. Siis $PQ$ on määritelmän nojalla pisteen $P$ etäisyys suorasta $l$.
+
+Suorat $PQ$ ja $l$ ovat kohtisuorassa. Jos $l$ ei ole $x$-, eikä $y$-akselin suuntainen, eli $a,b \neq 0$ sen kulmakerroin on $-\frac{a}{b}$. Koska suoran ja normaalin kulmakerrointen tulo on $-1$, suoran $PQ$ kulmakerroin on
+\[
+-\frac{1}{\frac{-a}{b}} = \frac{b}{a}.
+\]
+Se kulkee lisäksi pisteen $(x_0,y_0)$ kautta, joten sen yhtälö on
+\[
+y-y_0 = \frac{b}{a}(x-x0)
+\]
+tai normaalimuodossa
+\[
+bx-ay+ay_0-bx_0 = 0.
+\]
+Toisaalta, jos $a = 0$, suora $PQ$ on muotoa $x+C$, jollain reaaliluvulla $C$; koska se lisäksi kulkee pisteen $P$ kautta, sen on oltava edellistä muotoa. Sama päättely voidaan toistaa kun $b = 0$, jolloin nähdään, että kaava normaalille pätee myös jos $a = 0$ tai $b = 0$.
+
+Koska $Q$ kuuluu suoralle $l$ ja sen normaalille, sen koordinaattien on toteutettava yhtälöpari
+\[
+\left\{    
+    \begin{array}{rcl}
+        ax_q + by_q + c &=&0 \\
+        bx_q-ay_q+ay_0-bx_0 &=& 0 \\
+    \end{array}
+    \right.
+\]
+Yhtälöpari voidaan ratkaista yhtäänlaskumenetelmällä kertomalla ylempi yhtälö $a$:lla ja alempi $b$:llä.
+\[
+\left\{    
+    \begin{array}{rcl}
+        a^2x_q + aby_q + ac &=&0 \\
+        b^2x_q-aby_q+aby_0-b^2x_0 &=& 0 \\
+    \end{array}
+    \right.
+\]
+ja laskemalle yhtälöt yhtälöt yhteen
+\begin{align*}
+ a^2x_q + aby_q + ac + b^2x_q-aby_q+aby_0-b^2x_0 &= 0 \\
+ (a^2+b^2)x_q &= -ac-aby_0+b^2x0 \\
+ x_q = \frac{-ac-aby_0+b^2x0}{(a^2+b^2)}.
+\end{align*}
+Vastaavasti
+\[
+y_q = \frac{-bc+a^2y_0-abx_0}{(a^2+b^2)}.
+\]
+Mutta nythän
+\begin{align*}
+PQ &= \sqrt{(x_q-x_0)^2+(y_q-y0)^2} \\
+&= \sqrt{\Big(\frac{-ac-aby_0+b^2x_0-(a^2+b^2)x_0}{a^2+b^2}\Big)^2+\Big(\frac{-bc+a^2y_0-abx_0-(a^2+b^2)y_0}{a^2+b^2}\Big)^2} \\
+& = \frac{\sqrt{(-ac-aby_0-a^2x_0)^2+(-bc-abx_0-b^2)y_0)^2}}{a^2+b^2} \\
+& = \frac{\sqrt{(a(-c-by_0-ax_0))^2+(b(-c-ax_0-by_0))^2}}{a^2+b^2} \\
+& = \frac{\sqrt{(a^2+b^2)((-c-by_0-ax_0))^2}}{a^2+b^2} \\
+& = \frac{\sqrt{(a^2+b^2)}}{a^2+b^2}\sqrt{(-c-by_0-ax_0))^2} \\
+& = \frac{|ax_0+by_0+c|}{\sqrt{a^2+b^2}}.
+\end{align*}
 \begin{tehtavasivu}
 
 \subsubsection*{Opi perusteet}
