@@ -80,7 +80,11 @@ Muokataan ympyrän yhtälöä niin, että keskipiste ja säde näkyvät suoraan:
 \]
 Tästä nähdään, että keskipiste on $(1, -1)$ ja säde 2. Nyt kuva on helppo piirtää.
 
-TÄHÄN TARVITAAN KUVA.
+\begin{kuva}
+    kuvaaja.pohja(-2, 4, -4, 2, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    kuvaaja.piirraParametri("2*cos(t)+1","2*sin(t)-1", a = 0, b = 2*pi)
+\end{kuva}
+
 \end{esimratk}
 \end{esimerkki}
 
@@ -162,7 +166,7 @@ x^2-4x+4+y^2+2y&=-2 && \\
 (x^2-2)^2+y^2+2y+1&=-1 && \\
 (x^2-2)^2+(y+1)^2&=-1. &&
 \end{align*}
-Nyt nähdään, että kyseessä ei voi olla ympyrän yhtälö, sillä säteeksi tulisi $\sqrt{-1}$.
+Nyt nähdään, että kyseessä ei voi olla ympyrän yhtälö, sillä säteen neliö ei voi olla negatiivinen.
 \end{esimratk}
 \begin{esimvast}
 Kyseessä ei ole ympyrän yhtälö.
