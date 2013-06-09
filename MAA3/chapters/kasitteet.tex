@@ -41,4 +41,69 @@ Koverat kulmat voidaan jakaa kolmeen eri tyyppiin. Kulmaa, joka on suuruudeltaan
 oikokulmasta, kutsutaan suoraksi kulmaksi. Suoraa kulmaa pienemmät kulmat ovat teräviä
 kulmia ja suoraa kulmaa suuremmat kulmat ovat tylppiä kulmia.
 
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+A = (sin(1), cos(1))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering kovera kulma \\$0^\circ < \alpha < 180^\circ$
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+A = (sin(pi-1), cos(pi-1))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering kupera kulma \\$180^\circ < \alpha < 360^\circ$
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+A = (sin(0.5), cos(0.5))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering terävä kulma \\$0^\circ < \alpha < 90^\circ$
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+A = (sin(1), cos(1))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering tylppä kulma \\$90^\circ < \alpha < 180^\circ$
+\end{minipage}
+
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+A = (sin(pi/4), cos(pi/4))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering suora kulma \\$\alpha = 90^\circ$
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+A = (sin(pi/2), cos(pi/2))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering oikokulma \\$\alpha = 180^\circ$
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -0.5, maxX = 1, maxY = 1); varaaRajaus()
+geom.jana((0, 0), (0, 1))
+\end{kuva}
+\centering nollakulma \\$\alpha = 0^\circ$
+\end{minipage}
+\begin{minipage}{3cm}
+\begin{kuva}
+skaalaa(1.5); rajaa(minX = -1, minY = -1, maxX = 1, maxY = 0.5); varaaRajaus()
+A = (sin(pi - 0.001), cos(pi - 0.001))
+B = (0, 0); C = (-A[0], A[1]); geom.jana(B, A); geom.jana(B, C); geom.kulma(A, B, C, r"$\alpha$")
+\end{kuva}
+\centering täysikulma \\$\alpha = 360^\circ$
+\end{minipage}
+
 ...jotain pituuksista ja ehkä pinta-aloista, kuvia myös lisättävä...

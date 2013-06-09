@@ -1,9 +1,30 @@
 \section*{Sinilause ja kosinilause}
 
+\begin{luoKuva}{sinilause}
+A = geom.piste(0, 0, piirra = False)
+B = geom.piste(5, 2, piirra = False)
+C = geom.piste(2, 4, piirra = False)
+geom.jana(A, B, "$c$", kohta = 0.4)
+geom.jana(B, C, "$a$")
+geom.jana(C, A, "$b$")
+geom.kulma(B, A, C, r"$\alpha$")
+geom.kulma(C, B, A, r"$\beta$")
+geom.kulma(A, C, B, r"$\gamma$")
+
+w = geom.ymparipiirrettyYmpyra(A, B, C)
+O = geom.ympyranKeskipiste(w)
+R = geom.leikkauspiste(w, geom.suora(O, (6, 0), piirra = False), piirra = False)
+geom.jana(O, R, "$r$", kohta = 0.7)
+\end{luoKuva}
+
 \laatikko{
 Oletetaan, että kolmion sivut ovat a,b ja c ja niitä vastaavat kulmat ovat $\alpha$, $\beta$ ja $\gamma$. Sinilauseen mukaan
 $$\frac{a}{\sin \alpha} = \frac{b}{\sin \beta} = \frac{c}{\sin \gamma} = 2r,$$
-missä r on kolmion ympärille piirretyn ympyrän säde.
+missä r on kolmion ympäri piirretyn ympyrän säde.
+
+\begin{center}
+\naytaKuva{sinilause}
+\end{center}
 }
 
 Sinilauseesta voidaan johtaa kaava kolmion pinta-alalle. Tämän kaavan avulla voidaan laskea kolmion pinta-ala, kun tiedetään kaksi sivua ja niiden välinen kulma.
