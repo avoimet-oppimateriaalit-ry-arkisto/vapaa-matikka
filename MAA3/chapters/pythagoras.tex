@@ -15,7 +15,26 @@ todistuksia, joista kaksi yksinkertaista esitellään seuraavaksi.
 kärjet niin, että kulma $\angle ACB$ on suora. Olkoon piste $D$ sellainen janan $AB$ piste,
 jolle $\angle CDA$ on suora.
 
-(KUVA)
+\begin{kuva}
+skaalaa(3)
+
+A = geom.piste(0, 0, "$A$", suunta = -135)
+B = geom.piste(2, 0, "$B$")
+C = geom.ympyranKehapiste(geom.ympyra((1, 0), 1, piirra = False), 70, "$C$", suunta = 90)
+
+AB = geom.jana(A, B)
+geom.jana(B, C)
+geom.jana(C, A)
+
+geom.suorakulma(A, C, B)
+
+D = geom.projektio(C, AB, "$D$", suunta = -90)
+geom.jana(C, D)
+
+geom.suorakulma(C, D, A)
+
+
+\end{kuva}
 
 Tällöin kolmioilla $ABC$ ja $ACD$ on yhteinen kulma $\angle A$ ja molemmissa on suora kulma, joten ne ovat yhdenmuotoiset (kk). Samoin kolmioilla $ABC$ ja $CBD$ on yhteinen kulma
 $\angle B$ ja molemmissa on suora kulma, joten nekin ovat yhdenmuotoiset (kk)
