@@ -16,7 +16,28 @@ KIITOS!}
 
 Jos tunnetaan jokin vaaka- tai pystysuora suora ja jokin koordinaatiston piste, kyseisen pisteen etäisyys annetusta suorasta on helppo määrittää.
 
-[TÄHÄN SELITYS JA KUVA]
+\begin{minipage}{0.45\textwidth}
+\begin{kuva}
+    kuvaaja.pohja(-2, 3, -1, 5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    with palautin():
+        vari("lightgray")
+        kuvaaja.piirraParametri("1.7", "t", a = 1, b = 3.3)
+    kuvaaja.piirra("1", nimi = "$y=1$", suunta = 0)
+    kuvaaja.piste((1.7, 3.3), "$(1,7; 3,3)$", 95)
+\end{kuva}
+Etäisyys on $3,3-1=2,3$.
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{kuva}
+    kuvaaja.pohja(-2, 3, -1, 5, korkeus = 4, nimiX = "$x$", nimiY = "$y$", ruudukko = True)
+    with palautin():
+        vari("lightgray")
+        kuvaaja.piirraParametri("t", "3.3", a = -1, b = 1.7)
+    kuvaaja.piirraParametri("-1", "t", a = -1, b = 5, nimi = "$x = -1$", suunta = 90)
+    kuvaaja.piste((1.7, 3.3), "$(1,7; 3,3)$", 90)
+\end{kuva}
+Etäisyys on $1,7-(-1)=2,7$.
+\end{minipage}
 
 Jos suora on kalteva, etäisyyden määrittäminen ei ole näin suoraviivaisesti.
 Seuraavaksi tutustutaan kahteen tapaan tämän pulman ratkaisemiseksi.
