@@ -22,7 +22,7 @@ Kirjojen kehityshistoria: / Development history of the books:
 
 > MAA2 (Polynomifunktiot): 14.12.2012 -->
 
-> MAA3 (Geometria): suunnitteilla / planned
+> MAA3 (Geometria): 7.6.2013 -->
 
 > MAA4 (Analyyttinen geometria): 19.4.2013 -->
 
